@@ -16,6 +16,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "prettier-eslint": "^8.8.1",
     "react-test-renderer": "^16.3.2"
   }
 }
