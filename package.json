@@ -13,10 +13,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
     "prettier-eslint": "^8.8.1",
-    "react-test-renderer": "^16.3.2"
+    "react-test-renderer": "^16.3.2",
+    "@storybook/react": "^3.4.5",
+    "@storybook/addon-actions": "^3.4.5",
+    "@storybook/addon-links": "^3.4.5",
+    "@storybook/addons": "^3.4.5",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0"
   }
 }
