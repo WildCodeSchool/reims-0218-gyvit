@@ -15,7 +15,7 @@ const DashboardCard = ({ contenu }) => (
       <CardBody>
         <CardTitle>{contenu.titre}</CardTitle>
         <CardText>{contenu.bio}</CardText>
-        <Button>{contenu.buttonText}</Button>
+        <Button src={contenu.link}>{contenu.buttonText}</Button>
       </CardBody>
     </Card>
   </div>

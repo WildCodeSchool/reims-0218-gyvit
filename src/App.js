@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 
 import "./App.css"
-import { Container, Row, Col } from "reactstrap"
 
 import Content from "./components/Content"
 
@@ -13,33 +12,30 @@ const toto = [
     titre: "Documents requests",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
-    buttonText: "Create first request"
+    buttonText: "Create first request",
+    link: "lien0"
   },
   {
     image: "",
     titre: "Share documents",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
-    buttonText: "Share documents"
+    buttonText: "Share documents",
+    link: "lien1"
   },
   {
     image: "",
     titre: "Store files",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
-    buttonText: "Upload documents"
+    buttonText: "Upload documents",
+    link: "lien2"
   }
 ]
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <h1>Welcome to Gyvit, {name}.</h1>
-        <h2>What would you like to do ?</h2>
-        <Content elements={toto} />
-      </div>
-    )
+    return <Content elements={toto} name={name} />
   }
 }
 
