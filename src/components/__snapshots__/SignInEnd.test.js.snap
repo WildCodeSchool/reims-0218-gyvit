@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div>
+  <p>
+    Don't have an account? Get started 
+  </p>
+</div>
+`;
