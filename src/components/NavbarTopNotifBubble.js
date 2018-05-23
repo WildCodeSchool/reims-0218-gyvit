@@ -3,7 +3,7 @@
 import React from "react"
 import { FormGroup, Input, NavItem } from "reactstrap"
 
-const NavbarTopSearch = () => (
+const NavbarTopNotif = () => (
   <NavItem>
     <FormGroup>
       <Input
@@ -16,4 +16,4 @@ const NavbarTopSearch = () => (
   </NavItem>
 )
 
-export default NavbarTopSearch
+export default NavbarTopNotif

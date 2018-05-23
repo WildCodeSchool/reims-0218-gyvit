@@ -4,6 +4,16 @@ exports[`renders correctly 1`] = `
 <li
   className="nav-item"
 >
-  Search
+  <div
+    className="form-group"
+  >
+    <input
+      className="form-control"
+      id="exampleSearch"
+      name="search"
+      placeholder="Search..."
+      type="search"
+    />
+  </div>
 </li>
 `;
