@@ -1,17 +1,17 @@
-//TODO: test: create component notif
+//TODO TEST link
 
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import NavbarTopNotif from "./NavbarTopNotif"
+import link from "./Link"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<NavbarTopNotif />, div)
+  ReactDOM.render(<link />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
-it("renders correctly", () => {
-  const tree = renderer.create(<NavbarTopNotif />).toJSON()
+it("renders link html", () => {
+  const tree = renderer.create(<link />).toJSON()
   expect(tree).toMatchSnapshot()
 })

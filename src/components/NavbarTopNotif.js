@@ -5,6 +5,7 @@ import { NavItem } from "reactstrap"
 import NavbarTopNotifBubble from "./NavbarTopNotifBubble"
 
 const NavbarTopNotif = ({ displayNumberNotifs }) => {
+  console.log(displayNumberNotifs)
   return (
     <NavItem>
       <img src={process.env.PUBLIC_URL + "img/iconNotif.ico"} alt="iconNotif" />
