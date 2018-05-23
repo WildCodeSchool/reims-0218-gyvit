@@ -60,6 +60,50 @@ exports[`renders link html 1`] = `
         >
           <img
             alt=""
+            src="/img/share.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Shares
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/templates.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Templates
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
             src="/img/request.ico"
           />
           <a
@@ -112,6 +156,28 @@ exports[`renders link html 1`] = `
             onClick={[Function]}
           >
             Contacts
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/settings.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Settings
           </a>
         </li>
       </ul>

@@ -14,6 +14,14 @@ const dataLinks = [
     icon: process.env.PUBLIC_URL + "/img/files.ico"
   },
   {
+    nameLink: "Shares",
+    icon: process.env.PUBLIC_URL + "/img/share.ico"
+  },
+  {
+    nameLink: "Templates",
+    icon: process.env.PUBLIC_URL + "/img/templates.ico"
+  },
+  {
     nameLink: "Requests",
     icon: process.env.PUBLIC_URL + "/img/request.ico"
   },
@@ -24,6 +32,10 @@ const dataLinks = [
   {
     nameLink: "Contacts",
     icon: process.env.PUBLIC_URL + "/img/contact.ico"
+  },
+  {
+    nameLink: "Settings",
+    icon: process.env.PUBLIC_URL + "/img/settings.ico"
   }
 ]
 
