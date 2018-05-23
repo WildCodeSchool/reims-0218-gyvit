@@ -1,23 +1,48 @@
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
-import { action } from "@storybook/addon-actions"
-import { linkTo } from "@storybook/addon-links"
+import "bootstrap/dist/css/bootstrap.min.css"
 
-import { Button, Welcome } from "@storybook/react/demo"
+import { Container, Media, FormGroup, Input, Badge } from "reactstrap"
 
-storiesOf("Page d'accueil", module).add("Button", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
-
-storiesOf("Button", module)
-  .add("with text", () => (
-    <Button onClick={action("clicked")}>Hello Button</Button>
+storiesOf("Page Dashboard", module)
+  .add("Search", () => (
+    <Container>
+      <FormGroup>
+        <Input
+          type="search"
+          name="search"
+          id="exampleSearch"
+          placeholder="Search..."
+        />
+      </FormGroup>
+    </Container>
   ))
-  .add("with some emoji", () => (
-    <Button onClick={action("clicked")}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
+
+  .add("Profil", () => (
+    <Container>
+      <Media>
+        <Media rounded-circle href="#">
+          <Media
+            object
+            src="http://via.placeholder.com/64x64"
+            alt="Kevin Marlot"
+          />
+        </Media>
+        <Media body>
+          <Media heading>Kevin Marlot</Media>
+          Meduza
+        </Media>
+      </Media>
+    </Container>
+  ))
+  .add("Notification icon", () => (
+    <Container>
+      <img src={process.env.PUBLIC_URL + "img/iconNotif.ico"} alt="iconNotif" />
+    </Container>
+  ))
+  .add("Notification badge", () => (
+    <Badge color="danger" pill>
+      4
+    </Badge>
   ))
