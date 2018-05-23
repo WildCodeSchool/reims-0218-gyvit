@@ -7,6 +7,8 @@ import { NavItem, Nav, NavLink } from "reactstrap"
 import { Button, Welcome } from "@storybook/react/demo"
 import "bootstrap/dist/css/bootstrap.min.css"
 
+import NavbarTop from "../components/NavbarTop"
+
 storiesOf("Page home", module).add("navbar", () => (
   <div>
     <Nav vertical>
@@ -29,3 +31,5 @@ storiesOf("Button", module)
       </span>
     </Button>
   ))
+
+storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
