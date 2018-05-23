@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li
+  className="nav-item"
+>
+  <div
+    className="form-group"
+  >
+    <input
+      className="form-control"
+      id="exampleSearch"
+      name="search"
+      placeholder="Search..."
+      type="search"
+    />
+  </div>
+</li>
+`;

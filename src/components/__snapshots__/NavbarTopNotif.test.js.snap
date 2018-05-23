@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li
+  className="nav-item"
+>
+  <img
+    alt="iconNotif"
+    src="img/iconNotif.ico"
+  />
+  <span
+    className="badge badge-danger badge-pill"
+  >
+    4
+  </span>
+</li>
+`;
