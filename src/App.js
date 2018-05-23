@@ -9,21 +9,24 @@ import Content from "./components/Content"
 const toto = [
   {
     image: "",
-    titre: "hello word !",
-    bio: "",
-    buttonText: "click me"
+    titre: "Documents requests",
+    bio:
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+    buttonText: "Create first request"
   },
   {
     image: "",
-    titre: "hello word !",
-    bio: "",
-    buttonText: "click me"
+    titre: "Share documents",
+    bio:
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+    buttonText: "Share documents"
   },
   {
     image: "",
-    titre: "hello word !",
+    titre:
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
     bio: "",
-    buttonText: "click me"
+    buttonText: "Upload documents"
   }
 ]
 

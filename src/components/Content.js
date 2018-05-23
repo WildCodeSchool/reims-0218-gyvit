@@ -1,12 +1,21 @@
 import React from "react"
 import DashboardCard from "./DashboardCard"
-import { Container } from "reactstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Container, Row, Col } from "reactstrap"
 
-const Content = ({ ...toto }) => (
+const Content = ({ ...props }) => (
   <Container>
-    <DashboardCard arrayCard={toto[0]} />
-    <DashboardCard arrayCard={toto[1]} />
-    <DashboardCard arrayCard={toto[2]} />
+    <Row>
+      <Col xs="4">
+        <DashboardCard arrayCard={props.elements[0]} />
+      </Col>
+      <Col xs="4">
+        <DashboardCard arrayCard={props.elements[0]} />
+      </Col>
+      <Col xs="4">
+        <DashboardCard arrayCard={props.elements[0]} />
+      </Col>
+    </Row>
   </Container>
 )
 export default Content
