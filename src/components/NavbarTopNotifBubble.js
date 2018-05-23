@@ -3,10 +3,12 @@
 import React from "react"
 import { Badge } from "reactstrap"
 
-const NavbarTopNotifBubble = () => (
-  <Badge color="danger" pill>
-    4
-  </Badge>
-)
+const NavbarTopNotifBubble = ({ numberNotifs }) => {
+  return (
+    <Badge color="danger" pill>
+      {numberNotifs}
+    </Badge>
+  )
+}
 
 export default NavbarTopNotifBubble
