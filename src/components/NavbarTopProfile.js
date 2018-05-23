@@ -4,19 +4,15 @@ import React from "react"
 import { NavItem, Media } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-const NavbarTopProfile = () => (
+const NavbarTopProfile = ({ name, imgSrc, business }) => (
   <NavItem>
     <Media>
       <Media rounded-circle="true" href="#">
-        <Media
-          object
-          src="http://via.placeholder.com/64x64"
-          alt="Kevin Marlot"
-        />
+        <Media object src={imgSrc} />
       </Media>
       <Media body>
-        <Media heading>Kevin Marlot</Media>
-        Meduza
+        <Media heading>{name}</Media>
+        {business}
       </Media>
     </Media>
   </NavItem>
