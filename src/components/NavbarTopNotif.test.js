@@ -1,17 +1,17 @@
-//TODO: test : component notif bubble icon
+//TODO: test: create component notif icon
 
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import NavbarTopNotifBubble from "./NavbarTopNotifBubble"
+import NavbarTopNotif from "./NavbarTopNotif"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<NavbarTopNotifBubble />, div)
+  ReactDOM.render(<NavbarTopNotif />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
 it("renders correctly", () => {
-  const tree = renderer.create(<NavbarTopNotifBubble />).toJSON()
+  const tree = renderer.create(<NavbarTopNotif />).toJSON()
   expect(tree).toMatchSnapshot()
 })

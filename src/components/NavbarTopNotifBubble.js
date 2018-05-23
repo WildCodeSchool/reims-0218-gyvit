@@ -1,19 +1,12 @@
-//TODO: create component search bar
+//TODO: create component notif bubble icon
 
 import React from "react"
-import { FormGroup, Input, NavItem } from "reactstrap"
+import { Badge } from "reactstrap"
 
-const NavbarTopNotif = () => (
-  <NavItem>
-    <FormGroup>
-      <Input
-        type="search"
-        name="search"
-        id="exampleSearch"
-        placeholder="Search..."
-      />
-    </FormGroup>
-  </NavItem>
+const NavbarTopNotifBubble = () => (
+  <Badge color="danger" pill>
+    4
+  </Badge>
 )
 
-export default NavbarTopNotif
+export default NavbarTopNotifBubble

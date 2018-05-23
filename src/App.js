@@ -1,8 +1,7 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
-import Article from "./components/Article"
-import NavbarTopSearch from "./components/NavbarTopSearch"
+import NavbarTop from "./components/NavbarTop"
 
 class App extends Component {
   render() {
@@ -17,8 +16,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <NavbarTopSearch />
-        <Article />
+        <NavbarTop />
       </div>
     )
   }

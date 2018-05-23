@@ -1,18 +1,13 @@
 //TODO: create component search bar
 
 import React from "react"
-import { FormGroup, Input, NavItem } from "reactstrap"
+import { NavItem } from "reactstrap"
+import NavbarTopNotifBubble from "./NavbarTopNotifBubble"
 
 const NavbarTopNotif = () => (
   <NavItem>
-    <FormGroup>
-      <Input
-        type="search"
-        name="search"
-        id="exampleSearch"
-        placeholder="Search..."
-      />
-    </FormGroup>
+    <img src={process.env.PUBLIC_URL + "img/iconNotif.ico"} alt="iconNotif" />
+    <NavbarTopNotifBubble />
   </NavItem>
 )
 
