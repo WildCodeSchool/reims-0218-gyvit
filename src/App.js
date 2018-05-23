@@ -23,9 +23,9 @@ const toto = [
   },
   {
     image: "",
-    titre:
+    titre: "Store files",
+    bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
-    bio: "",
     buttonText: "Upload documents"
   }
 ]
