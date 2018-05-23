@@ -25,6 +25,7 @@ storiesOf("Button", module)
 
 const actionHome = [
   {
+    id: 0,
     image: "",
     titre: "Documents requests",
     bio:
@@ -33,6 +34,7 @@ const actionHome = [
     link: "lien0"
   },
   {
+    id: 1,
     image: "",
     titre: "Share documents",
     bio:
@@ -41,6 +43,7 @@ const actionHome = [
     link: "lien1"
   },
   {
+    id: 2,
     image: "",
     titre: "Store files",
     bio:

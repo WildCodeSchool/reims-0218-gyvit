@@ -16,15 +16,13 @@ const Content = ({ elements, name }) => (
       </Col>
     </Row>
     <Row>
-      <Col xs="4">
-        <DashboardCard contenu={elements[0]} />
-      </Col>
-      <Col xs="4">
-        <DashboardCard contenu={elements[1]} />
-      </Col>
-      <Col xs="4">
-        <DashboardCard contenu={elements[2]} />
-      </Col>
+      {elements.map((element, index) => {
+        return (
+          <Col xs="4">
+            <DashboardCard contenu={element} />
+          </Col>
+        )
+      })}
     </Row>
   </Container>
 )
