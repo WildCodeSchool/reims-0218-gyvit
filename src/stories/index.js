@@ -9,19 +9,19 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 
-const NavbarTopNotifBubble0 = {
+const Bubble0 = {
   numberNotifs: 0
 }
 
-const NavbarTopNotifBubble6 = {
+const Bubble6 = {
   numberNotifs: 6
 }
 
-const NavbarTopNotifBubble16 = {
+const Bubble16 = {
   numberNotifs: 16
 }
 
-const NavbarTopNotifBubble116 = {
+const Bubble116 = {
   numberNotifs: 116
 }
 
@@ -33,37 +33,29 @@ storiesOf("NavbarTop", module)
   .add("NavbarTopProfile", () => <NavbarTopProfile />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
-  <NavbarTopNotif displayNumberNotifs={NavbarTopNotifBubble0.numberNotifs} />
+  <NavbarTopNotif displayNumberNotifs={Bubble0.numberNotifs} />
 ))
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif116", () => (
-  <NavbarTopNotif displayNumberNotifs={NavbarTopNotifBubble116.numberNotifs} />
+  <NavbarTopNotif displayNumberNotifs={Bubble116.numberNotifs} />
 ))
 
 storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 0 notif",
-  () => (
-    <NavbarTopNotifBubble numberNotifs={NavbarTopNotifBubble0.numberNotifs} />
-  )
+  () => <NavbarTopNotifBubble numberNotifs={Bubble0.numberNotifs} />
 )
 
 storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 6 notifs",
-  () => (
-    <NavbarTopNotifBubble numberNotifs={NavbarTopNotifBubble6.numberNotifs} />
-  )
+  () => <NavbarTopNotifBubble numberNotifs={Bubble6.numberNotifs} />
 )
 
 storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 16 notifs",
-  () => (
-    <NavbarTopNotifBubble numberNotifs={NavbarTopNotifBubble16.numberNotifs} />
-  )
+  () => <NavbarTopNotifBubble numberNotifs={Bubble16.numberNotifs} />
 )
 
 storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 116 notifs",
-  () => (
-    <NavbarTopNotifBubble numberNotifs={NavbarTopNotifBubble116.numberNotifs} />
-  )
+  () => <NavbarTopNotifBubble numberNotifs={Bubble116.numberNotifs} />
 )
