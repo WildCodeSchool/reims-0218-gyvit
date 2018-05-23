@@ -1,29 +1,12 @@
 import React from "react"
 import DashboardCard from "./DashboardCard"
+import { Container } from "reactstrap"
 
-const Content = () => {
-  const toto = [
-    {
-      image: "",
-      titre: "hello word !",
-      bio: "",
-      buttonText: "click me"
-    },
-    {
-      image: "",
-      titre: "hello word !",
-      bio: "",
-      buttonText: "click me"
-    },
-    {
-      image: "",
-      titre: "hello word !",
-      bio: "",
-      buttonText: "click me"
-    }
-  ]
-  return
-  ;<DashboardCard arrayCard={toto[0]} />
-}
-
+const Content = ({ ...toto }) => (
+  <Container>
+    <DashboardCard arrayCard={toto[0]} />
+    <DashboardCard arrayCard={toto[1]} />
+    <DashboardCard arrayCard={toto[2]} />
+  </Container>
+)
 export default Content

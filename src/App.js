@@ -6,6 +6,27 @@ import "./App.css"
 import Article from "./components/Article"
 import Content from "./components/Content"
 
+const toto = [
+  {
+    image: "",
+    titre: "hello word !",
+    bio: "",
+    buttonText: "click me"
+  },
+  {
+    image: "",
+    titre: "hello word !",
+    bio: "",
+    buttonText: "click me"
+  },
+  {
+    image: "",
+    titre: "hello word !",
+    bio: "",
+    buttonText: "click me"
+  }
+]
+
 class App extends Component {
   render() {
     return (
@@ -18,7 +39,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Article />
-        <Content />
+        <Content elements={toto} />
       </div>
     )
   }
