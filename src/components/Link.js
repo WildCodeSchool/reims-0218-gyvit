@@ -3,15 +3,15 @@
 import React from "react"
 import { Nav, NavItem, NavLink } from "reactstrap"
 
-const Navbarleftlink = () => (
+const Link = ({ icon, nameLink }) => (
   <div>
     <Nav vertical>
       <NavItem>
-        <NavLink href="#">Link</NavLink>
+        <NavLink href="#">Home</NavLink>
       </NavItem>
     </Nav>
     <hr />
   </div>
 )
 
-export default Navbarleftlink
+export default Link

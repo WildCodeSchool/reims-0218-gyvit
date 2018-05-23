@@ -1,15 +1,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import Navbarleftlink from "./Navbarleftlink"
+import link from "./Link"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<Navbarleftlink />, div)
+  ReactDOM.render(<link />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
-it("renders Navbarleftlink html", () => {
-  const tree = renderer.create(<Navbarleftlink />).toJSON()
+it("renders NavbarLeftLink html", () => {
+  const tree = renderer.create(<link />).toJSON()
   expect(tree).toMatchSnapshot()
 })

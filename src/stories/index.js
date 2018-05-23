@@ -3,16 +3,19 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 import { linkTo } from "@storybook/addon-links"
-import { Navbarleftlink } from "./components/Navbarleftlink"
-
+import { NavItem, Nav, NavLink } from "reactstrap"
 import { Button, Welcome } from "@storybook/react/demo"
+import "bootstrap/dist/css/bootstrap.min.css"
 
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
-
-storiesOf("Navbarleftlink", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
+storiesOf("Page home", module).add("navbar", () => (
+  <div>
+    <Nav vertical>
+      <NavItem>
+        <NavLink href="#">Link</NavLink>
+      </NavItem>
+    </Nav>
+    <hr />
+  </div>
 ))
 
 storiesOf("Button", module)
