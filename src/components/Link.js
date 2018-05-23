@@ -7,7 +7,8 @@ const Link = ({ icon, nameLink }) => (
   <div>
     <Nav vertical>
       <NavItem>
-        <NavLink href="#">Home</NavLink>
+        <img alt="" src={icon} />
+        <NavLink href="#">{nameLink}</NavLink>
       </NavItem>
     </Nav>
     <hr />
