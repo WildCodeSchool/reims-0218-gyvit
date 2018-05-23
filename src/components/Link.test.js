@@ -1,3 +1,5 @@
+//TODO TEST link
+
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
@@ -9,7 +11,7 @@ it("renders without crashing", () => {
   ReactDOM.unmountComponentAtNode(div)
 })
 
-it("renders NavbarLeftLink html", () => {
+it("renders link html", () => {
   const tree = renderer.create(<link />).toJSON()
   expect(tree).toMatchSnapshot()
 })

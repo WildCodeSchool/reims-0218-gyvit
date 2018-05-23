@@ -1,3 +1,5 @@
+// TODO list of links to navbar
+
 import React from "react"
 import Link from "./Link"
 import { Nav, NavItem, NavLink } from "reactstrap"
