@@ -25,7 +25,7 @@ const dataLinks = [
   }
 ]
 
-const listLink = () => (
+const ListLink = () => (
   <Nav vertical>
     <NavItem>
       {dataLinks.map((link, index) => <Link key={index} {...link} />)}
@@ -33,4 +33,4 @@ const listLink = () => (
   </Nav>
 )
 
-export default listLink
+export default ListLink
