@@ -1,7 +1,10 @@
 import React, { Component } from "react"
+
 import logo from "./logo.svg"
 import "./App.css"
+
 import Article from "./components/Article"
+import Content from "./components/Content"
 
 class App extends Component {
   render() {
@@ -15,6 +18,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Article />
+        <Content />
       </div>
     )
   }
