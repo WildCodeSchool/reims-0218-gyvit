@@ -1,11 +1,11 @@
 //TODO: create component Profile
 
 import React from "react"
-import { Media } from "reactstrap"
+import { NavItem, Media } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-const NavbarTopProfile = () => {
-  return (
+const NavbarTopProfile = () => (
+  <NavItem>
     <Media>
       <Media rounded-circle="true" href="#">
         <Media
@@ -19,7 +19,7 @@ const NavbarTopProfile = () => {
         Meduza
       </Media>
     </Media>
-  )
-}
+  </NavItem>
+)
 
 export default NavbarTopProfile

@@ -1,4 +1,4 @@
-//TODO: test : component notif bubble icon
+//TODO: test : component Profile
 
 import React from "react"
 import ReactDOM from "react-dom"
