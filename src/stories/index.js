@@ -9,21 +9,17 @@ import { Button, Welcome } from "@storybook/react/demo"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Content from "../components/Content"
-
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
-
-import { storiesOf } from "@storybook/react"
-
-import "bootstrap/dist/css/bootstrap.min.css"
-
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
+import { Nav, NavItem, NavLink } from "reactstrap"
+
+storiesOf("Welcome", module).add("to Storybook", () => (
+  <Welcome showApp={linkTo("Button")} />
+))
 
 storiesOf("Page home", module).add("navbar", () => (
   <div>
