@@ -8,7 +8,7 @@ import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
-import FoldersFilters from "../components/FoldersFilters"
+import Folders from "../components/Folders"
 
 storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 
@@ -22,4 +22,4 @@ storiesOf("NavbarTopNotif", module).add("NavbarTopNotifBubble", () => (
 ))
 storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
 
-storiesOf("Page Dashboard").add("FoldersFilters", () => <FoldersFilters />)
+storiesOf("Page Dashboard").add("Folders", () => <Folders />)
