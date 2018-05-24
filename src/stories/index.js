@@ -7,6 +7,9 @@ import { linkTo } from "@storybook/addon-links"
 import { Button, Welcome } from "@storybook/react/demo"
 import Content from "../components/Content"
 
+// for having bootstrap styles
+import "bootstrap/dist/css/bootstrap.min.css"
+
 storiesOf("Welcome", module).add("to Storybook", () => (
   <Welcome showApp={linkTo("Button")} />
 ))
@@ -23,7 +26,7 @@ storiesOf("Button", module)
     </Button>
   ))
 
-const actionHome = [
+const listCardsInHome = [
   {
     id: 0,
     image: "",
@@ -56,5 +59,5 @@ const actionHome = [
 const name = "Kevin"
 
 storiesOf("Content", module).add("with array of actions", () => (
-  <Content elements={actionHome} name={name} />
+  <Content elements={listCardsInHome} name={name} />
 ))
