@@ -6,6 +6,7 @@ import NavbarTop from "./components/NavbarTop"
 import SignInTitle from "./components/SignInTitle"
 import SignInGetStarted from "./components/SignInGetStarted"
 import SignInButton from "./components/SignInButton"
+import Folders from "./components/Folders"
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         <SignInEmail />
         <SignInButton />
         <SignInGetStarted />
+        <Folders />
       </div>
     )
   }
