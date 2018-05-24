@@ -2,7 +2,7 @@
 
 import React from "react"
 import Link from "./Link"
-import { Nav, NavItem, NavLink } from "reactstrap"
+import { Nav, NavItem } from "reactstrap"
 
 const dataLinks = [
   {
