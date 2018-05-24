@@ -8,6 +8,8 @@ import { Button, Welcome } from "@storybook/react/demo"
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
+import ContentFile from "../components/ContentFile"
+
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
@@ -104,3 +106,10 @@ storiesOf("NavbarTopNotif", module).add("NavbarTopNotifBubble", () => (
   <NavbarTopNotifBubble />
 ))
 storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
+
+const files = []
+const dirs = []
+
+storiesOf("Content of Files").add("ContentFile", () => (
+  <ContentFile files={files} dirs={dirs} />
+))
