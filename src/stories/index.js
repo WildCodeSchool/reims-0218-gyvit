@@ -8,22 +8,19 @@ import { Button, Welcome } from "@storybook/react/demo"
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import Content from "../components/Content"
-
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
-
-import { storiesOf } from "@storybook/react"
-
-import "bootstrap/dist/css/bootstrap.min.css"
-
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
+import Content from "../components/Content"
+import DashboardCard from "../components/DashboardCard"
+import { Nav, NavItem, NavLink } from "reactstrap"
+
+storiesOf("Welcome", module).add("to Storybook", () => (
+  <Welcome showApp={linkTo("Button")} />
+))
 
 storiesOf("Page home", module).add("navbar", () => (
   <div>
@@ -47,6 +44,16 @@ storiesOf("Button", module)
       </span>
     </Button>
   ))
+
+const cardInHome = {
+  id: 0,
+  image: "",
+  titre: "Documents requests",
+  bio:
+    "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+  buttonText: "Create first request",
+  link: "lien0"
+}
 
 const listCardsInHome = [
   {
@@ -82,6 +89,9 @@ const name = "Kevin"
 
 storiesOf("Content", module).add("with array of actions", () => (
   <Content elements={listCardsInHome} name={name} />
+))
+storiesOf("DashboardCard", module).add("with single object for a card", () => (
+  <DashboardCard contenu={cardInHome} key="0" />
 ))
 storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 

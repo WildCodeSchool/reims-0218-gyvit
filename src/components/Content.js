@@ -15,10 +15,11 @@ const Content = ({ elements, name }) => (
       </Col>
     </Row>
     <Row>
-      {elements.map((element, index) => {
+      {elements.map(element => {
+        console.log(element)
         return (
           <Col xs="4">
-            <DashboardCard contenu={element} />
+            <DashboardCard key={element.id} contenu={element} />
           </Col>
         )
       })}
