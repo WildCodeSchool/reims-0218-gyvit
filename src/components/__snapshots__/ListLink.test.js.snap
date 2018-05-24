@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<ul
+  className="nav flex-column"
+>
+  <li
+    className="nav-item"
+  >
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/house_38533.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/files.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Files
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/share.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Shares
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/templates.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Templates
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/request.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Requests
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/links.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Public links
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/contact.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Contacts
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+    <div>
+      <ul
+        className="nav flex-column"
+      >
+        <li
+          className="nav-item"
+        >
+          <img
+            alt=""
+            src="/img/settings.ico"
+          />
+          <a
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Settings
+          </a>
+        </li>
+      </ul>
+      <hr />
+    </div>
+  </li>
+</ul>
+`;
