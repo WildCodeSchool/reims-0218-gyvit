@@ -1,6 +1,6 @@
 //TODO: create a email input
 import React from "react"
-import { Button, Form, FormGroup, Label, Input } from "reactstrap"
+import { Form, FormGroup, Label, Input, NavLink } from "reactstrap"
 
 export default class SignInEmail extends React.Component {
   render() {
@@ -16,7 +16,7 @@ export default class SignInEmail extends React.Component {
             id="exampleEmail"
             placeholder="Email"
           />
-        </FormGroup>{" "}
+        </FormGroup>
         <FormGroup>
           <Label for="examplePassword" hidden>
             Password
@@ -27,8 +27,8 @@ export default class SignInEmail extends React.Component {
             id="examplePassword"
             placeholder="Password"
           />
-        </FormGroup>{" "}
-        <Button>Sign in </Button>
+          <NavLink href="#">Forgot password?</NavLink>
+        </FormGroup>
       </Form>
     )
   }

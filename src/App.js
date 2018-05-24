@@ -4,7 +4,8 @@ import SignInEmail from "./components/SignInEmail"
 import Listlink from "./components/ListLink"
 import NavbarTop from "./components/NavbarTop"
 import SignInTitle from "./components/SignInTitle"
-import SignInEnd from "./components/SignInEnd"
+import SignInGetStarted from "./components/SignInGetStarted"
+import SignInButton from "./components/SignInButton"
 
 class App extends Component {
   render() {
@@ -14,7 +15,8 @@ class App extends Component {
         <NavbarTop />
         <SignInTitle />
         <SignInEmail />
-        <SignInEnd />
+        <SignInButton />
+        <SignInGetStarted />
       </div>
     )
   }

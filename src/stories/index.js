@@ -2,7 +2,7 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 
 import "bootstrap/dist/css/bootstrap.min.css"
-
+import NavLink from "reactstrap"
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"

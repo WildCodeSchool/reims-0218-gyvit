@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div>
+  <button
+    className="btn btn-info"
+    onClick={[Function]}
+    type={undefined}
+  >
+    Sign in
+  </button>
+</div>
+`;
