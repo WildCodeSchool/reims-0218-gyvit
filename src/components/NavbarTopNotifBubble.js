@@ -3,10 +3,10 @@
 import React from "react"
 import { Badge } from "reactstrap"
 
-const NavbarTopNotifBubble = ({ numberNotifs }) => {
+const NavbarTopNotifBubble = ({ notifsCount }) => {
   return (
     <Badge color="danger" pill>
-      {numberNotifs}
+      {notifsCount}
     </Badge>
   )
 }
