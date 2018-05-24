@@ -10,19 +10,19 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 
-const Bubble0 = {
+const bubble0 = {
   numberNotifs: 0
 }
 
-const Bubble6 = {
+const bubble6 = {
   numberNotifs: 6
 }
 
-const Bubble16 = {
+const bubble16 = {
   numberNotifs: 16
 }
 
-const Bubble116 = {
+const bubble116 = {
   numberNotifs: 116
 }
 
@@ -34,30 +34,30 @@ storiesOf("NavbarTop", module)
   .add("NavbarTopProfile", () => <NavbarTopProfile />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
-  <NavbarTopNotif displayNumberNotifs={Bubble0.numberNotifs} />
+  <NavbarTopNotif displayNumberNotifs={bubble0.numberNotifs} />
 ))
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif116", () => (
-  <NavbarTopNotif displayNumberNotifs={Bubble116.numberNotifs} />
+  <NavbarTopNotif displayNumberNotifs={bubble116.numberNotifs} />
 ))
 
 storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 0 notif",
-  () => <NavbarTopNotifBubble numberNotifs={Bubble0.numberNotifs} />
+  () => <NavbarTopNotifBubble numberNotifs={bubble0.numberNotifs} />
 )
 
 storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 6 notifs",
-  () => <NavbarTopNotifBubble numberNotifs={Bubble6.numberNotifs} />
+  () => <NavbarTopNotifBubble numberNotifs={bubble6.numberNotifs} />
 )
 
 storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 16 notifs",
-  () => <NavbarTopNotifBubble numberNotifs={Bubble16.numberNotifs} />
+  () => <NavbarTopNotifBubble numberNotifs={bubble16.numberNotifs} />
 )
 
 storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 116 notifs",
-  () => <NavbarTopNotifBubble numberNotifs={Bubble116.numberNotifs} />
+  () => <NavbarTopNotifBubble numberNotifs={bubble116.numberNotifs} />
 )
 storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
