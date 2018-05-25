@@ -19,7 +19,7 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 
-const contentOfProfil = {
+const propsContentOfProfil = {
   lastname: "Duflot",
   firstname: "Romain",
   business: "Notoriety"
@@ -79,7 +79,7 @@ storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
   .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile {...contentOfProfil} />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
   <NavbarTopNotif {...propsWith0notif} />
