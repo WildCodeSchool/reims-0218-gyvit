@@ -1,28 +1,30 @@
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
-import { action } from "@storybook/addon-actions"
-import { linkTo } from "@storybook/addon-links"
-import { Button, Welcome } from "@storybook/react/demo"
 
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Content from "../components/Content"
-
-import "bootstrap/dist/css/bootstrap.min.css"
-import NavLink from "reactstrap"
+import Link from "../components/Link"
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
-import SignInButton from "../components/SignInButton"
-import SignInEmail from "../components/SignInEmail"
-import SignInGetStarted from "../components/SignInGetStarted"
-import SignInTitle from "../components/SignInTitle"
 import FoldersBarTop from "../components/FoldersBarTop"
+
+storiesOf("Page Dashboard", module)
+  .add("NavbarTop", () => <NavbarTop />)
+  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
+  .add("DashboardContent", () => (
+    <Content elements={listCardsInHome} name={name} />
+  ))
+
+storiesOf("NavbarLeft", module)
+  .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
+  .add("NavbarLink", () => <Link {...homeLinkProps} />)
 
 const propsContentOfProfil = {
   lastname: "Duflot",
@@ -76,10 +78,6 @@ const listCardsInHome = [
   }
 ]
 const name = "Romain"
-storiesOf("Content", module).add("with array of actions", () => (
-  <Content elements={listCardsInHome} name={name} />
-))
-storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
@@ -113,24 +111,14 @@ storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 116 notifs",
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
-storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
-
-storiesOf("SignIn", module)
-  .add("SignInEmail", () => <SignInEmail />)
-  .add("SignInButton", () => <SignInButton />)
-  .add("SignInGetStarted", () => <SignInGetStarted />)
-  .add("SignInTitle", () => <SignInTitle />)
-storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
-import { linkTo } from "@storybook/addon-links"
-import { Welcome } from "@storybook/react/demo"
-import "bootstrap/dist/css/bootstrap.min.css"
-
-import Link from "../components/Link"
-import Listlink from "../components/ListLink"
-
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
+storiesOf("DashboardContent", module).add("with array of actions", () => (
+  <Content elements={listCardsInHome} name={name} />
 ))
+
+storiesOf("Page Folders", module)
+  .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
+  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
+  .add("FoldersBarTop", () => <FoldersBarTop />)
 
 const listLinksProps = {
   dataLinks: [
@@ -173,7 +161,3 @@ const homeLinkProps = {
   nameLink: "Home",
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
-
-storiesOf("Page Dashboard")
-  .add("Listlink", () => <Listlink {...listLinksProps} />)
-  .add("Link", () => <Link {...homeLinkProps} />)
