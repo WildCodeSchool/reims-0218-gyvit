@@ -7,10 +7,10 @@ import NavbarTopNotif from "./NavbarTopNotif"
 import NavbarTopSearch from "./NavbarTopSearch"
 import NavbarTopProfile from "./NavbarTopProfile"
 
-const NavbarTop = () => (
+const NavbarTop = ({ ...propsWith116notif }) => (
   <Nav>
     <NavbarTopSearch />
-    <NavbarTopNotif />
+    <NavbarTopNotif {...propsWith116notif} />
     <NavbarTopProfile />
   </Nav>
 )
