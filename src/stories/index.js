@@ -6,6 +6,7 @@ import { storiesOf } from "@storybook/react"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Content from "../components/Content"
+import DashboardCard from "../components/DashboardCard"
 import Link from "../components/Link"
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
@@ -111,9 +112,11 @@ storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 116 notifs",
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
-storiesOf("DashboardContent", module).add("with array of actions", () => (
-  <Content elements={listCardsInHome} name={name} />
-))
+storiesOf("DashboardContent", module)
+  .add("card", () => <DashboardCard />)
+  .add("with array of actions", () => (
+    <Content elements={listCardsInHome} name={name} />
+  ))
 
 storiesOf("Page Folders", module)
   .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
