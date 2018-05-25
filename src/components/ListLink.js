@@ -10,7 +10,7 @@ const ListLink = ({ dataLinks }) => (
       <Navbar color="dark" light expand="md">
         <Nav vertical>
           <NavItem>
-            {/* {dataLinks.map((link, index) => <Link key={index} {...link} />)} */}
+            {dataLinks.map((link, index) => <Link key={index} {...link} />)}
           </NavItem>
         </Nav>
       </Navbar>
