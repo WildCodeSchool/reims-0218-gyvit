@@ -1,29 +1,19 @@
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
-import { action } from "@storybook/addon-actions"
-import { linkTo } from "@storybook/addon-links"
-import { Button, Welcome } from "@storybook/react/demo"
 
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import Content from "../components/Content"
-
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
-
-import { storiesOf } from "@storybook/react"
-
 import "bootstrap/dist/css/bootstrap.min.css"
-
+import Content from "../components/Content"
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
+import FoldersTableThead from "../components/FoldersTableThead"
 
 const propsWith0notif = {
   notifsCount: 0
@@ -111,3 +101,7 @@ storiesOf("NavbarTopNotifBubble", module).add(
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
 storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
+
+storiesOf("Page Dashboard").add("FoldersTableThead", () => (
+  <FoldersTableThead />
+))
