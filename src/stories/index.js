@@ -113,7 +113,7 @@ storiesOf("NavbarTopNotifBubble", module).add(
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
 storiesOf("DashboardContent", module)
-  .add("card", () => <DashboardCard />)
+  .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
   .add("with array of actions", () => (
     <Content elements={listCardsInHome} name={name} />
   ))
