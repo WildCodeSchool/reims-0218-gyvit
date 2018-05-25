@@ -7,24 +7,19 @@ export default class SignInEmail extends React.Component {
     return (
       <Form inline>
         <FormGroup>
-          <Label for="exampleEmail" hidden>
+          <Label for="email" hidden>
             Email
           </Label>
-          <Input
-            type="email"
-            name="email"
-            id="exampleEmail"
-            placeholder="Email"
-          />
+          <Input type="email" name="email" id="IdEmail" placeholder="Email" />
         </FormGroup>
         <FormGroup>
-          <Label for="examplePassword" hidden>
+          <Label for="password" hidden>
             Password
           </Label>
           <Input
             type="password"
             name="password"
-            id="examplePassword"
+            id="IdPassword"
             placeholder="Password"
           />
           <NavLink href="#">Forgot password?</NavLink>
