@@ -8,7 +8,7 @@ import { Button, Welcome } from "@storybook/react/demo"
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import Content from "../components/Content"
+// import Content from "../components/Content"
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
@@ -16,6 +16,7 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 import { Nav, NavItem, NavLink } from "reactstrap"
+import ContentFile from "../components/ContentFile"
 
 storiesOf("Welcome", module).add("to Storybook", () => (
   <Welcome showApp={linkTo("Button")} />
@@ -76,9 +77,9 @@ const listCardsInHome = [
 
 const name = "Kevin"
 
-storiesOf("Content", module).add("with array of actions", () => (
-  <Content elements={listCardsInHome} name={name} />
-))
+// storiesOf("Content", module).add("with array of actions", () => (
+//   <Content elements={listCardsInHome} name={name} />
+// ))
 storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 
 storiesOf("NavbarTop", module)
@@ -90,3 +91,5 @@ storiesOf("NavbarTopNotif", module).add("NavbarTopNotifBubble", () => (
   <NavbarTopNotifBubble />
 ))
 storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
+
+storiesOf("ContentFile", module).add("ContentFile", () => <ContentFile />)
