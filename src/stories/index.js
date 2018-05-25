@@ -21,7 +21,7 @@ import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
 
 storiesOf("Page Dashboard", module)
-  .add("NavbarTop", () => <NavbarTop />)
+  .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("DashboardContent", () => (
     <Content elements={listCardsInHome} name={name} />
