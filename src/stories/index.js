@@ -18,6 +18,7 @@ import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
+import FoldersBarTop from "../components/FoldersBarTop"
 
 const contentOfProfil = {
   lastname: "Duflot",
@@ -109,3 +110,5 @@ storiesOf("NavbarTopNotifBubble", module).add(
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
 storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
+
+storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
