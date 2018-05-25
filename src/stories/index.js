@@ -10,12 +10,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import Content from "../components/Content"
 
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
-
-import { storiesOf } from "@storybook/react"
-
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Listlink from "../components/ListLink"
@@ -24,6 +18,13 @@ import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
+import FoldersBarTop from "../components/FoldersBarTop"
+
+const propsContentOfProfil = {
+  lastname: "Duflot",
+  firstname: "Romain",
+  business: "Notoriety"
+}
 
 const propsWith0notif = {
   notifsCount: 0
@@ -70,9 +71,7 @@ const listCardsInHome = [
     link: "lien2"
   }
 ]
-
-const name = "Kevin"
-
+const name = "Romain"
 storiesOf("Content", module).add("with array of actions", () => (
   <Content elements={listCardsInHome} name={name} />
 ))
@@ -81,7 +80,7 @@ storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
   .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
   <NavbarTopNotif {...propsWith0notif} />
@@ -111,3 +110,61 @@ storiesOf("NavbarTopNotifBubble", module).add(
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
 storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
+
+storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
+import { linkTo } from "@storybook/addon-links"
+import { Welcome } from "@storybook/react/demo"
+import "bootstrap/dist/css/bootstrap.min.css"
+
+import Link from "../components/Link"
+import Listlink from "../components/ListLink"
+
+storiesOf("Welcome", module).add("to Storybook", () => (
+  <Welcome showApp={linkTo("Button")} />
+))
+
+const listLinksProps = {
+  dataLinks: [
+    {
+      nameLink: "Home",
+      icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+    },
+    {
+      nameLink: "Files",
+      icon: process.env.PUBLIC_URL + "/img/files.ico"
+    },
+    {
+      nameLink: "Shares",
+      icon: process.env.PUBLIC_URL + "/img/share.ico"
+    },
+    {
+      nameLink: "Templates",
+      icon: process.env.PUBLIC_URL + "/img/templates.ico"
+    },
+    {
+      nameLink: "Requests",
+      icon: process.env.PUBLIC_URL + "/img/request.ico"
+    },
+    {
+      nameLink: "Public links",
+      icon: process.env.PUBLIC_URL + "/img/links.ico"
+    },
+    {
+      nameLink: "Contacts",
+      icon: process.env.PUBLIC_URL + "/img/contact.ico"
+    },
+    {
+      nameLink: "Settings",
+      icon: process.env.PUBLIC_URL + "/img/settings.ico"
+    }
+  ]
+}
+
+const homeLinkProps = {
+  nameLink: "Home",
+  icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+}
+
+storiesOf("Page Dashboard")
+  .add("Listlink", () => <Listlink {...listLinksProps} />)
+  .add("Link", () => <Link {...homeLinkProps} />)
