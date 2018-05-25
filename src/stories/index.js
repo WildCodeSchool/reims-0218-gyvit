@@ -10,12 +10,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import Content from "../components/Content"
 
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
-
-import { storiesOf } from "@storybook/react"
-
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Listlink from "../components/ListLink"
@@ -24,6 +18,12 @@ import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
+
+const propsContentOfProfil = {
+  lastname: "Duflot",
+  firstname: "Romain",
+  business: "Notoriety"
+}
 
 const propsWith0notif = {
   notifsCount: 0
@@ -70,9 +70,7 @@ const listCardsInHome = [
     link: "lien2"
   }
 ]
-
-const name = "Kevin"
-
+const name = "Romain"
 storiesOf("Content", module).add("with array of actions", () => (
   <Content elements={listCardsInHome} name={name} />
 ))
@@ -81,7 +79,7 @@ storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
   .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
   <NavbarTopNotif {...propsWith0notif} />
