@@ -71,9 +71,9 @@ const listCardsInHome = [
     link: "lien2"
   }
 ]
-
+const name = "Romain"
 storiesOf("Content", module).add("with array of actions", () => (
-  <Content elements={listCardsInHome} name={contentOfProfil.firstname} />
+  <Content elements={listCardsInHome} name={name} />
 ))
 storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 
