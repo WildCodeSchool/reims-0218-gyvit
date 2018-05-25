@@ -9,7 +9,7 @@ const FoldersTableThead = () => (
       <th>Name</th>
       <th>Last update</th>
       <th>Users</th>
-      <th />
+      <th /> {/* it is the col for the burger menu*/}
     </tr>
   </thead>
 )
