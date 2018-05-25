@@ -4,18 +4,22 @@ const ContentFile = ({ files, dirs }) => {
   console.log(dirs)
   return (
     <tbody>
-      <tr>
-        {dirs.map((dir, index) => {
-          return (
-            <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
-            </tr>
-          )
-        })}
-      </tr>
+      {dirs.map((dir, index) => {
+        return (
+          <tr>
+            <th>
+              <i src="" alt="Directory Icon" />
+            </th>
+            <th>{dir.name}</th>
+            <th>{dir.modified}</th>
+            <th>
+              {dir.shares.map((share, index) => (
+                <i src="" alt={`icone Share n° ${index}`} />
+              ))}
+            </th>
+          </tr>
+        )
+      })}
     </tbody>
   )
 }
