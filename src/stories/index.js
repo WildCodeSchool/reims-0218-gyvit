@@ -9,40 +9,43 @@ import { Button, Welcome } from "@storybook/react/demo"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Content from "../components/Content"
+
+import "bootstrap/dist/css/bootstrap.min.css"
+import NavLink from "reactstrap"
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
-import { Nav, NavItem, NavLink } from "reactstrap"
+import SignInButton from "../components/SignInButton"
+import SignInEmail from "../components/SignInEmail"
+import SignInGetStarted from "../components/SignInGetStarted"
+import SignInTitle from "../components/SignInTitle"
+import FoldersBarTop from "../components/FoldersBarTop"
+import Link from "../components/Link"
 
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
+const propsContentOfProfil = {
+  lastname: "Duflot",
+  firstname: "Romain",
+  business: "Notoriety"
+}
 
-storiesOf("Page home", module).add("navbar", () => (
-  <div>
-    <Nav vertical>
-      <NavItem>
-        <NavLink href="#">Link</NavLink>
-      </NavItem>
-    </Nav>
-    <hr />
-  </div>
-))
+const propsWith0notif = {
+  notifsCount: 0
+}
 
-storiesOf("Button", module)
-  .add("with text", () => (
-    <Button onClick={action("clicked")}>Hello Button</Button>
-  ))
-  .add("with some emoji", () => (
-    <Button onClick={action("clicked")}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ))
+const propsWith6notif = {
+  notifsCount: 6
+}
+
+const propsWith16notif = {
+  notifsCount: 16
+}
+
+const propsWith116notif = {
+  notifsCount: 116
+}
 
 const listCardsInHome = [
   {
@@ -73,9 +76,7 @@ const listCardsInHome = [
     link: "lien2"
   }
 ]
-
-const name = "Kevin"
-
+const name = "Romain"
 storiesOf("Content", module).add("with array of actions", () => (
   <Content elements={listCardsInHome} name={name} />
 ))
@@ -83,10 +84,90 @@ storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
-  .add("NavbarTopNotif", () => <NavbarTopNotif />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile />)
+  .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
 
-storiesOf("NavbarTopNotif", module).add("NavbarTopNotifBubble", () => (
-  <NavbarTopNotifBubble />
+storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
+  <NavbarTopNotif {...propsWith0notif} />
 ))
-storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
+
+storiesOf("NavbarTopNotif", module).add("NavbarTopNotif116", () => (
+  <NavbarTopNotif {...propsWith116notif} />
+))
+
+storiesOf("NavbarTopNotifBubble", module).add(
+  "NavbarTopNotifBubble pour 0 notif",
+  () => <NavbarTopNotifBubble {...propsWith0notif} />
+)
+
+storiesOf("NavbarTopNotifBubble", module).add(
+  "NavbarTopNotifBubble pour 6 notifs",
+  () => <NavbarTopNotifBubble {...propsWith6notif} />
+)
+
+storiesOf("NavbarTopNotifBubble", module).add(
+  "NavbarTopNotifBubble pour 16 notifs",
+  () => <NavbarTopNotifBubble {...propsWith16notif} />
+)
+
+storiesOf("NavbarTopNotifBubble", module).add(
+  "NavbarTopNotifBubble pour 116 notifs",
+  () => <NavbarTopNotifBubble {...propsWith116notif} />
+)
+
+storiesOf("SignIn", module)
+  .add("SignInEmail", () => <SignInEmail />)
+  .add("SignInButton", () => <SignInButton />)
+  .add("SignInGetStarted", () => <SignInGetStarted />)
+  .add("SignInTitle", () => <SignInTitle />)
+storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
+
+storiesOf("Welcome", module).add("to Storybook", () => (
+  <Welcome showApp={linkTo("Button")} />
+))
+
+const listLinksProps = {
+  dataLinks: [
+    {
+      nameLink: "Home",
+      icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+    },
+    {
+      nameLink: "Files",
+      icon: process.env.PUBLIC_URL + "/img/files.ico"
+    },
+    {
+      nameLink: "Shares",
+      icon: process.env.PUBLIC_URL + "/img/share.ico"
+    },
+    {
+      nameLink: "Templates",
+      icon: process.env.PUBLIC_URL + "/img/templates.ico"
+    },
+    {
+      nameLink: "Requests",
+      icon: process.env.PUBLIC_URL + "/img/request.ico"
+    },
+    {
+      nameLink: "Public links",
+      icon: process.env.PUBLIC_URL + "/img/links.ico"
+    },
+    {
+      nameLink: "Contacts",
+      icon: process.env.PUBLIC_URL + "/img/contact.ico"
+    },
+    {
+      nameLink: "Settings",
+      icon: process.env.PUBLIC_URL + "/img/settings.ico"
+    }
+  ]
+}
+
+const homeLinkProps = {
+  nameLink: "Home",
+  icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+}
+
+storiesOf("Page Dashboard")
+  .add("Listlink", () => <Listlink {...listLinksProps} />)
+  .add("Link", () => <Link {...homeLinkProps} />)
