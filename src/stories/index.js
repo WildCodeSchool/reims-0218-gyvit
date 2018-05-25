@@ -14,6 +14,10 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 import FoldersBarTop from "../components/FoldersBarTop"
+import SignInButton from "../components/SignInButton"
+import SignInEmail from "../components/SignInEmail"
+import SignInTitle from "../components/SignInTitle"
+import SignInGetStarted from "../components/SignInGetStarted"
 
 storiesOf("Page Dashboard", module)
   .add("NavbarTop", () => <NavbarTop />)
@@ -161,3 +165,9 @@ const homeLinkProps = {
   nameLink: "Home",
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
+
+storiesOf("Sign In", module)
+  .add("SignInTitle", () => <SignInTitle />)
+  .add("SignInButton", () => <SignInButton />)
+  .add("SignInEmail", () => <SignInEmail />)
+  .add("SignInGetStarted", () => <SignInGetStarted />)
