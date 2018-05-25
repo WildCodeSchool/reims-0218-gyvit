@@ -19,7 +19,7 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 
-const contentOfProfil = {
+const propsContentOfProfil = {
   lastname: "Duflot",
   firstname: "Romain",
   business: "Notoriety"
@@ -70,16 +70,16 @@ const listCardsInHome = [
     link: "lien2"
   }
 ]
-
+const name = "Romain"
 storiesOf("Content", module).add("with array of actions", () => (
-  <Content elements={listCardsInHome} name={contentOfProfil.firstname} />
+  <Content elements={listCardsInHome} name={name} />
 ))
 storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
   .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile {...contentOfProfil} />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
   <NavbarTopNotif {...propsWith0notif} />
