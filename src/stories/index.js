@@ -16,7 +16,7 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 import { Nav, NavItem, NavLink } from "reactstrap"
-import ContentFile from "../components/ContentFile"
+import ListFile from "../components/ListFile"
 
 storiesOf("Welcome", module).add("to Storybook", () => (
   <Welcome showApp={linkTo("Button")} />
@@ -92,4 +92,4 @@ storiesOf("NavbarTopNotif", module).add("NavbarTopNotifBubble", () => (
 ))
 storiesOf("Page Dashboard").add("Listlink", () => <Listlink />)
 
-storiesOf("ContentFile", module).add("ContentFile", () => <ContentFile />)
+storiesOf("ListFile", module).add("ContentFile", () => <ListFile />)

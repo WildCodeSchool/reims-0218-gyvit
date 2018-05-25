@@ -1,7 +1,7 @@
 import React from "react"
 import { Table } from "reactstrap"
 
-const oneFile = () => (
+const listFile = () => (
   <div>
     <Table>
       <thead>
@@ -137,4 +137,4 @@ const oneFile = () => (
   </div>
 )
 
-export default oneFile
+export default listFile

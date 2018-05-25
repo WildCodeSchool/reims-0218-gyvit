@@ -3,7 +3,7 @@ import "./App.css"
 
 import Listlink from "./components/ListLink"
 import NavbarTop from "./components/NavbarTop"
-import ContentFile from "./components/ContentFile"
+import ListFile from "./components/ListFile"
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Listlink />
         <NavbarTop />
-        <ContentFile />
+        <ListFile />
       </div>
     )
   }
