@@ -1,21 +1,28 @@
 import React from "react"
 import { DateTime } from "luxon"
 
+const transformDate = dateToTransform => {
+  const dateMilli = Date.parse(dateToTransform)
+  const dateToDisplay = DateTime.fromMillis(dateMilli).toLocaleString(
+    DateTime.DATETIME_SHORT
+  )
+  const dateEnMorceaux = dateToDisplay.split("à")
+  const dateComplete = dateEnMorceaux[0] + dateEnMorceaux[1]
+
+  return dateComplete
+}
+
 const ContentFile = ({ files, dirs }) => {
   return (
     <tbody>
       {dirs.map((dir, index) => {
-        const dateMilli = Date.parse(dir.modified)
-        const dateToDisplay = DateTime.fromMillis(dateMilli).toLocaleString(
-          DateTime.DATETIME_SHORT
-        )
         return (
           <tr>
             <th>
               <i src="" alt="Directory Icon" />
             </th>
             <th>{dir.name}</th>
-            <th>{dir.modified + "   " + dateToDisplay}</th>
+            <th>{transformDate(dir.modified)}</th>
             <th>
               {dir.shares.map((share, index) => (
                 <i src="" alt={`icone Share n° ${index}`} />
@@ -25,14 +32,13 @@ const ContentFile = ({ files, dirs }) => {
         )
       })}
       {files.map((file, index) => {
-        const dateMilli = Date.parse(file.modified)
         return (
           <tr>
             <th>
               <i src="" alt="file Icon" />
             </th>
             <th>{file.name}</th>
-            <th>{file.modified + "   " + dateMilli.toLocaleString("fr-fr")}</th>
+            <th>{transformDate(file.modified)}</th>
             <th>
               {file.shares.map((share, index) => (
                 <i src="" alt={`icone Share n° ${index}`} />
