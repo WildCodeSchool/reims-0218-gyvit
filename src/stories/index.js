@@ -6,6 +6,7 @@ import { storiesOf } from "@storybook/react"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Content from "../components/Content"
+import DashboardCard from "../components/DashboardCard"
 import Link from "../components/Link"
 import Listlink from "../components/ListLink"
 import NavbarTop from "../components/NavbarTop"
@@ -14,9 +15,13 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 import FoldersBarTop from "../components/FoldersBarTop"
+import SignInButton from "../components/SignInButton"
+import SignInEmail from "../components/SignInEmail"
+import SignInTitle from "../components/SignInTitle"
+import SignInGetStarted from "../components/SignInGetStarted"
 
 storiesOf("Page Dashboard", module)
-  .add("NavbarTop", () => <NavbarTop />)
+  .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("DashboardContent", () => (
     <Content elements={listCardsInHome} name={name} />
@@ -111,9 +116,11 @@ storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 116 notifs",
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
-storiesOf("DashboardContent", module).add("with array of actions", () => (
-  <Content elements={listCardsInHome} name={name} />
-))
+storiesOf("DashboardContent", module)
+  .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
+  .add("with array of actions", () => (
+    <Content elements={listCardsInHome} name={name} />
+  ))
 
 storiesOf("Page Folders", module)
   .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
@@ -161,3 +168,9 @@ const homeLinkProps = {
   nameLink: "Home",
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
+
+storiesOf("Sign In", module)
+  .add("SignInTitle", () => <SignInTitle />)
+  .add("SignInButton", () => <SignInButton />)
+  .add("SignInEmail", () => <SignInEmail />)
+  .add("SignInGetStarted", () => <SignInGetStarted />)
