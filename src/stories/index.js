@@ -1,30 +1,37 @@
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
-import { action } from "@storybook/addon-actions"
-import { linkTo } from "@storybook/addon-links"
-import { Button, Welcome } from "@storybook/react/demo"
 
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
+import ContentFile from "../components/ContentFile"
 import Content from "../components/Content"
-
-import "bootstrap/dist/css/bootstrap.min.css"
-import NavLink from "reactstrap"
+import DashboardCard from "../components/DashboardCard"
+import Link from "../components/Link"
 import Listlink from "../components/ListLink"
+import ListFile from "../components/ListFile"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
+import FoldersBarTop from "../components/FoldersBarTop"
 import SignInButton from "../components/SignInButton"
 import SignInEmail from "../components/SignInEmail"
-import SignInGetStarted from "../components/SignInGetStarted"
 import SignInTitle from "../components/SignInTitle"
-import FoldersBarTop from "../components/FoldersBarTop"
-import Link from "../components/Link"
-import ListFile from "../components/ListFile"
+import SignInGetStarted from "../components/SignInGetStarted"
+
+storiesOf("Page Dashboard", module)
+  .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
+  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
+  .add("DashboardContent", () => (
+    <Content elements={listCardsInHome} name={name} />
+  ))
+
+storiesOf("NavbarLeft", module)
+  .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
+  .add("NavbarLink", () => <Link {...homeLinkProps} />)
 
 const propsContentOfProfil = {
   lastname: "Duflot",
@@ -77,11 +84,63 @@ const listCardsInHome = [
     link: "lien2"
   }
 ]
+
 const name = "Romain"
+
+const dirs = [
+  {
+    _id: "dir_DOl2kN3n9lMeedN90kL9",
+    object: "directory",
+    name: "SammTrading",
+    created: "2018-03-29T00:00:00+00:00",
+    modified: "2018-03-29T00:00:00+00:00",
+    shares: [],
+    files: [],
+    dirs: [
+      {
+        _id: "dir_EoeInRgUgzMPh0aLN2nz",
+        object: "directory",
+        name: "Webshop",
+        created: "2018-03-29T11:36:42+00:00",
+        modified: "2018-03-29T11:36:42+00:00",
+        shares: []
+      }
+    ]
+  }
+]
+
+const files = [
+  {
+    _id: "file_7F2jhzx5RlO8u5C1SP3c",
+    object: "file",
+    name: "TEST FOR POST",
+    size: 0,
+    ext: "",
+    type: "",
+    remove: 0,
+    created: "2018-04-22T08:34:26+00:00",
+    modified: "2018-04-22T08:34:26+00:00",
+    removed: null,
+    shares: [],
+    dir: {
+      _id: "dir_r4V13RVeHFFVvOLctpPe",
+      object: "directory",
+      name: "Sketchs & Photoshops",
+      created: "2018-03-30T11:53:23+00:00",
+      modified: "2018-03-30T12:11:15+00:00"
+    }
+  }
+]
+
 storiesOf("Content", module).add("with array of actions", () => (
   <Content elements={listCardsInHome} name={name} />
 ))
-storiesOf("Page Dashboard", module).add("NavbarTop", () => <NavbarTop />)
+// storiesOf("DashboardCard", module).add("with single object for a card", () => (
+//   <DashboardCard contenu={cardInHome} key="0" />
+// ))
+storiesOf("ContentFile", module).add("with maps in a th for a tbody", () => (
+  <ContentFile files={files} dirs={dirs} />
+))
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
@@ -122,10 +181,6 @@ storiesOf("SignIn", module)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInTitle", () => <SignInTitle />)
 storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
-
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-))
 
 const listLinksProps = {
   dataLinks: [
@@ -168,9 +223,5 @@ const homeLinkProps = {
   nameLink: "Home",
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
-
-storiesOf("Page Dashboard")
-  .add("Listlink", () => <Listlink {...listLinksProps} />)
-  .add("Link", () => <Link {...homeLinkProps} />)
 
 storiesOf("ListFile", module).add("ListFile", () => <ListFile />)
