@@ -15,20 +15,21 @@ updateFileAction
 
 ## burger menu actions
 
-addAShareMethodAction
+addShareAction
 addCreatePublicAccessAction
 addCreatePrivateAccessAction
-deleteShareAction
-updateShareAction
+informationsAction
+renameAction
+deleteAction
 
 ## filters actions
 
-setFilterByNameDecreasingly
-setFilterByNameIncreasingly
-setFilterByLastUpdateDecreasingly
-setFilterByLastUpdateIncreasingly
-setFilterByUsersDecreasingly
-setFilterByUsersIncreasingly
+setOrderByNameDescendent
+setOrderByNameAscendent
+setOrderByLastUpdateDescendent
+setOrderByLastUpdateAscendent
+setOrderByUsersDescendent
+setOrderByUsersAscendent
 
 ## searching actions
 
