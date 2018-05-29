@@ -8,7 +8,7 @@ import NavbarTopSearch from "./NavbarTopSearch"
 import NavbarTopProfile from "./NavbarTopProfile"
 
 const NavbarTop = () => (
-  <Nav>
+  <Nav className="row">
     <NavbarTopSearch />
     <NavbarTopNotif />
     <NavbarTopProfile />
