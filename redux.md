@@ -1,19 +1,38 @@
 # actions
 
-## addDirectoryAction
+## general actions
 
-## deleteDirectoryAction
+connectionAction
 
-## updateDirectoryAction
+## files and directory actions
 
-## addFileAction
+addDirectoryAction
+deleteDirectoryAction
+updateDirectoryAction
+addFileAction
+deleteFileAction
+updateFileAction
 
-## deleteFileAction
+## burger menu actions
 
-## updateFileAction
+addAShareMethodAction
+addCreatePublicAccessAction
+addCreatePrivateAccessAction
+deleteShareAction
+updateShareAction
 
-## addShareAction
+## filters actions
 
-## deleteShareAction
+setFilterByNameDecreasingly
+setFilterByNameIncreasingly
+setFilterByLastUpdateDecreasingly
+setFilterByLastUpdateIncreasingly
+setFilterByUsersDecreasingly
+setFilterByUsersIncreasingly
 
-## updateShareAction
+## searching actions
+
+setCompletionOfCriterions
+startSearchAction
+
+# reducers
