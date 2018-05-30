@@ -192,7 +192,6 @@ storiesOf("SignIn", module)
   .add("SignInButton", () => <SignInButton />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInTitle", () => <SignInTitle />)
-storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
 storiesOf("DashboardContent", module)
   .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
   .add("with array of actions", () => (

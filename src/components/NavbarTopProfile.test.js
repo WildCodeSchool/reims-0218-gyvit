@@ -11,9 +11,9 @@ it("renders without crashing", () => {
   ReactDOM.unmountComponentAtNode(div)
 })
 
-const profile = { firstname: "", lastname: "", business: "" }
+const profile = { firstname: "kevin", lastname: "Marlot", business: "Meduza" }
 
 it("renders correctly", () => {
-  const tree = renderer.create(<NavbarTopProfile />).toJSON()
+  const tree = renderer.create(<NavbarTopProfile {...profile} />).toJSON()
   expect(tree).toMatchSnapshot()
 })
