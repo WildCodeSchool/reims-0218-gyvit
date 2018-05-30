@@ -131,15 +131,15 @@ const listLinksProps = {
   dataLinks: [
     {
       nameLink: "Home",
-      icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_home.png"
     },
     {
       nameLink: "Files",
-      icon: process.env.PUBLIC_URL + "/img/files.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_files.png"
     },
     {
       nameLink: "Shares",
-      icon: process.env.PUBLIC_URL + "/img/share.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
     },
     {
       nameLink: "Templates",
@@ -147,15 +147,15 @@ const listLinksProps = {
     },
     {
       nameLink: "Requests",
-      icon: process.env.PUBLIC_URL + "/img/request.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_requests.png"
     },
     {
       nameLink: "Public links",
-      icon: process.env.PUBLIC_URL + "/img/links.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
     },
     {
       nameLink: "Contacts",
-      icon: process.env.PUBLIC_URL + "/img/contact.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_contacts.png"
     },
     {
       nameLink: "Settings",

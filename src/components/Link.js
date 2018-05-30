@@ -9,14 +9,14 @@ const Link = ({ icon, nameLink }) => (
       href="#"
       style={{
         color: "white",
-        opacity: 0.2
+        opacity: 0.6
       }}
     >
       <img
         alt=""
         src={icon}
         style={{
-          opacity: 0.2
+          opacity: 0.6
         }}
       />
 
