@@ -1,8 +1,11 @@
 import React from "react"
-import ReactDOM from "react-dom"
-import Content from "./Content"
+import { storiesOf } from "@storybook/react"
 
-const elements = [
+import "bootstrap/dist/css/bootstrap.min.css"
+
+import Content from "../components/Content"
+
+const actionHome = [
   {
     id: 0,
     image: "",
@@ -34,8 +37,6 @@ const elements = [
 
 const name = "Kevin"
 
-it("renders without crashing", () => {
-  const div = document.createElement("div")
-  ReactDOM.render(<Content elements={elements} name={name} />, div)
-  ReactDOM.unmountComponentAtNode(div)
-})
+storiesOf("Content", module).add("with array of actions", () => (
+  <Content elements={actionHome} name={name} />
+))
