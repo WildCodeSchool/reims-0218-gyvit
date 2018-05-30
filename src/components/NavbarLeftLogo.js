@@ -2,24 +2,19 @@ import React from "react"
 
 const NavbarLeftLogo = () => {
   return (
-    <div
+    <p
+      className="my-auto d-flex align-items-center"
       style={{
         color: "white",
-        textAlign: "center",
-        fontWeight: "bold"
+        fontWeight: "bold",
+        width: "220px",
+        height: "90px",
+        backgroundColor: "#181048"
       }}
     >
-      <p
-        style={{
-          color: "white",
-          textAlign: "center",
-          fontWeight: "bold"
-        }}
-      >
-        {" "}
-        GYVIT{" "}
-      </p>
-    </div>
+      {" "}
+      GYVIT{" "}
+    </p>
   )
 }
 
