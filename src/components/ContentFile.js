@@ -1,47 +1,41 @@
 import React from "react"
 import { DateTime } from "luxon"
 
-const transformDate = dateToTransform => {
-  const dateMilli = Date.parse(dateToTransform)
-  const dateToDisplay = DateTime.fromMillis(dateMilli).toLocaleString(
-    DateTime.DATETIME_SHORT
-  )
-  const dateEnMorceaux = dateToDisplay.split("à")
-  const dateComplete = dateEnMorceaux[0] + dateEnMorceaux[1]
-
-  return dateComplete
-}
+const convertDateFromJsonToFrench = dateToTransform =>
+  DateTime.fromMillis(Date.parse(dateToTransform))
+    .setLocale("fr-fr")
+    .toLocaleString(DateTime.DATETIME_SHORT)
 
 const ContentFile = ({ files, dirs }) => {
   return (
     <tbody>
-      {dirs.map((dir, index) => {
+      {dirs.map(dir => {
         return (
-          <tr>
+          <tr key>
             <th>
               <i src="" alt="Directory Icon" />
             </th>
             <th>{dir.name}</th>
-            <th>{transformDate(dir.modified)}</th>
+            <th>{convertDateFromJsonToFrench(dir.modified)}</th>
             <th>
-              {dir.shares.map((share, index) => (
-                <i src="" alt={`icone Share n° ${index}`} />
+              {dir.shares.map((share, key) => (
+                <i src="" alt={`icone Share n° ${key}`} />
               ))}
             </th>
           </tr>
         )
       })}
-      {files.map((file, index) => {
+      {files.map(file => {
         return (
-          <tr>
+          <tr key>
             <th>
               <i src="" alt="file Icon" />
             </th>
             <th>{file.name}</th>
-            <th>{transformDate(file.modified)}</th>
+            <th>{convertDateFromJsonToFrench(file.modified)}</th>
             <th>
-              {file.shares.map((share, index) => (
-                <i src="" alt={`icone Share n° ${index}`} />
+              {file.shares.map((share, key) => (
+                <i src="" alt={`icone Share n° ${key}`} />
               ))}
             </th>
           </tr>
