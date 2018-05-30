@@ -7,10 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import ContentFile from "../components/ContentFile"
 import Content from "../components/Content"
-<<<<<<< HEAD
-=======
 import DashboardCard from "../components/DashboardCard"
->>>>>>> origin
 import Link from "../components/Link"
 import Listlink from "../components/ListLink"
 import ListFile from "../components/ListFile"
@@ -88,8 +85,7 @@ const listCardsInHome = [
   }
 ]
 
-const name = "Romain"
-<<<<<<< HEAD
+const name = "Kevin"
 
 const dirs = [
   {
@@ -145,8 +141,6 @@ storiesOf("Content", module).add("with array of actions", () => (
 storiesOf("ContentFile", module).add("with maps in a th for a tbody", () => (
   <ContentFile files={files} dirs={dirs} />
 ))
-=======
->>>>>>> origin
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
@@ -180,7 +174,6 @@ storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 116 notifs",
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
-<<<<<<< HEAD
 
 storiesOf("SignIn", module)
   .add("SignInEmail", () => <SignInEmail />)
@@ -188,18 +181,6 @@ storiesOf("SignIn", module)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInTitle", () => <SignInTitle />)
 storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
-=======
-storiesOf("DashboardContent", module)
-  .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
-  .add("with array of actions", () => (
-    <Content elements={listCardsInHome} name={name} />
-  ))
-
-storiesOf("Page Folders", module)
-  .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
-  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
-  .add("FoldersBarTop", () => <FoldersBarTop />)
->>>>>>> origin
 
 const listLinksProps = {
   dataLinks: [
@@ -243,12 +224,4 @@ const homeLinkProps = {
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
 
-<<<<<<< HEAD
 storiesOf("ListFile", module).add("ListFile", () => <ListFile />)
-=======
-storiesOf("Sign In", module)
-  .add("SignInTitle", () => <SignInTitle />)
-  .add("SignInButton", () => <SignInButton />)
-  .add("SignInEmail", () => <SignInEmail />)
-  .add("SignInGetStarted", () => <SignInGetStarted />)
->>>>>>> origin

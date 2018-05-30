@@ -8,19 +8,35 @@ const Content = ({ elements, name }) => (
   <Container>
     <Row className="App">
       <Col sm="12" md={{ size: 4, offset: 4 }}>
-        <h1>Welcome to Gyvit, {name}.</h1>
+        <p
+          style={{
+            "font-size": "24px",
+            height: "33px",
+            "margin-top": "120px",
+            "text-align": "center"
+          }}
+        >
+          Welcome to Gyvit, {name}.
+        </p>
       </Col>
       <Col sm="12" md={{ size: 4, offset: 4 }}>
-        <h2>What would you like to do ?</h2>
+        <p
+          style={{
+            "font-size": "18px",
+            height: "24px",
+            "text-align": "center",
+            color: "#000000",
+            opacity: 0.45,
+            "margin-bottom": "60px"
+          }}
+        >
+          What would you like to do ?
+        </p>
       </Col>
     </Row>
     <Row>
       {elements.map(element => {
-        return (
-          <Col xs="6" sm="4">
-            <DashboardCard key={element.id} contenu={element} />
-          </Col>
-        )
+        return <DashboardCard key={element.id} contenu={element} />
       })}
     </Row>
   </Container>
