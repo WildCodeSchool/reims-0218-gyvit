@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <li
-  className="nav-item"
+  className="col-8 nav-item"
 >
   <div
     className="form-group"

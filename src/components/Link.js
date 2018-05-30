@@ -17,7 +17,7 @@ const Link = ({ icon, nameLink }) => (
         src={icon}
         style={{
           opacity: 0.8,
-          "padding-right": 10
+          paddingRight: 10
         }}
       />
 

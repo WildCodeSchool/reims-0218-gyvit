@@ -11,7 +11,7 @@ const ListLink = ({ dataLinks }) => (
     style={{
       width: "220px",
       height: "1024px",
-      "background-color": "#231b56",
+      backgroundColor: "#231b56",
       color: "white"
     }}
   >
