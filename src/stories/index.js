@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import ContentFile from "../components/ContentFile"
 import Content from "../components/Content"
-import DashboardCard from "../components/DashboardCard"
 import Link from "../components/Link"
 import Listlink from "../components/ListLink"
 import ListFile from "../components/ListFile"
