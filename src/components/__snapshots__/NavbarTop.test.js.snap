@@ -1,15 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<li
-  className="col-1 nav-item"
+<ul
+  className="row nav"
 >
-  <img
-    alt="iconNotif"
-    src="img/iconNotif.ico"
-  />
-  <span
-    className="badge badge-danger badge-pill"
-  />
-</li>
+  <li
+    className="col-8 nav-item"
+  >
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        id="exampleSearch"
+        name="search"
+        placeholder="Search..."
+        type="search"
+      />
+    </div>
+  </li>
+  <li
+    className="col-1 nav-item"
+  >
+    <img
+      alt="iconNotif"
+      src="img/iconNotif.ico"
+    />
+    <span
+      className="badge badge-danger badge-pill"
+    />
+  </li>
+  <li
+    className="col-3 nav-item"
+  >
+    <div
+      className="media"
+    >
+      <div
+        className="media"
+        href="#"
+        rounded-circle="true"
+      >
+        <img
+          alt={undefined}
+          className="media-object"
+          src="http://via.placeholder.com/64x64"
+        />
+      </div>
+      <div
+        className="media-body"
+      >
+        <h4
+          className="media-heading"
+        >
+          <span />
+           
+          <span />
+        </h4>
+      </div>
+    </div>
+  </li>
+</ul>
 `;
