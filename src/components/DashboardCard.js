@@ -20,13 +20,24 @@ const DashboardCard = ({ contenu }) => {
             style={{
               width: "288px",
               height: "423px",
-              "margin-right": "32px",
-              padding: "0px"
+              "margin-right": "32px"
             }}
           >
             <CardImg top width="100%" src={image} alt="Card image cap" />
-            <CardBody>
-              <CardTitle style={{ size: "18px", "text-align": "center" }}>
+            <CardBody
+              style={{
+                "padding-left": "0px",
+                "padding-right": "0px"
+              }}
+            >
+              <CardTitle
+                style={{
+                  size: "18px",
+                  "text-align": "center",
+                  "padding-left": "0px",
+                  "padding-right": "0px"
+                }}
+              >
                 {titre}
               </CardTitle>
               <CardText
@@ -35,13 +46,15 @@ const DashboardCard = ({ contenu }) => {
                   height: "96px",
                   size: "15px",
                   opacity: 0.45,
-                  "text-align": "center"
+                  "text-align": "center",
+                  "margin-top": "13px",
+                  "margin-left": "30px",
+                  "margin-right": "30px"
                 }}
               >
                 {bio}
               </CardText>
               <Button
-                color="link"
                 style={{
                   width: "170px",
                   height: "44px",
@@ -49,6 +62,7 @@ const DashboardCard = ({ contenu }) => {
                   "margin-right": "59px",
                   "margin-left": "59px ",
                   "border-radius": "2px",
+                  "margin-top": "50px",
                   padding: "0px"
                 }}
                 src={link}
