@@ -14,7 +14,8 @@ const NavbarTopSearch = () => (
           width: "1020px",
           height: "46px",
           "background-color": "#fbfcfd",
-          "border-radius": "2px"
+          "border-radius": "2px",
+          border: "none"
         }}
         type="search"
         name="search"
