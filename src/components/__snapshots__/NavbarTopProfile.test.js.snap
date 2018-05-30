@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
       rounded-circle="true"
     >
       <img
-        alt="Kevin Marlot"
+        alt={undefined}
         className="media-object"
         src="http://via.placeholder.com/64x64"
       />
@@ -24,9 +24,10 @@ exports[`renders correctly 1`] = `
       <h4
         className="media-heading"
       >
-        Kevin Marlot
+        <span />
+         
+        <span />
       </h4>
-      Meduza
     </div>
   </div>
 </li>
