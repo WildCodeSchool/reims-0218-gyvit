@@ -16,7 +16,6 @@ const Content = ({ elements, name }) => (
     </Row>
     <Row>
       {elements.map(element => {
-        console.log(element)
         return (
           <Col xs="4">
             <DashboardCard key={element.id} contenu={element} />

@@ -141,7 +141,7 @@ storiesOf("Content", module).add("with array of actions", () => (
 storiesOf("DashboardCard", module).add("with single object for a card", () => (
   <DashboardCard contenu={cardInHome} key="0" />
 ))
-storiesOf("ContentFile", module).add("with maps in a th for a tbody", () => (
+storiesOf("ContentFile", module).add("with maps in a tr for a tbody", () => (
   <ContentFile files={files} dirs={dirs} />
 ))
 
