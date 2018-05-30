@@ -7,11 +7,11 @@ import NavbarTopNotif from "./NavbarTopNotif"
 import NavbarTopSearch from "./NavbarTopSearch"
 import NavbarTopProfile from "./NavbarTopProfile"
 
-const NavbarTop = () => (
-  <Nav>
+const NavbarTop = (propsWith116notif, propsContentOfProfil) => (
+  <Nav className="row">
     <NavbarTopSearch />
-    <NavbarTopNotif />
-    <NavbarTopProfile />
+    <NavbarTopNotif {...propsWith116notif} />
+    <NavbarTopProfile {...propsContentOfProfil} />
   </Nav>
 )
 

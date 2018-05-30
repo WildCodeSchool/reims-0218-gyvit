@@ -15,9 +15,9 @@ const Content = ({ elements, name }) => (
       </Col>
     </Row>
     <Row>
-      {elements.map((element, index) => {
+      {elements.map(element => {
         return (
-          <Col xs="4">
+          <Col key={element.id} xs="4">
             <DashboardCard contenu={element} />
           </Col>
         )
