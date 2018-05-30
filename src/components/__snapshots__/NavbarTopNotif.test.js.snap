@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <li
-  className="nav-item"
+  className="col-1 nav-item"
 >
   <img
     alt="iconNotif"
@@ -10,8 +10,6 @@ exports[`renders correctly 1`] = `
   />
   <span
     className="badge badge-danger badge-pill"
-  >
-    4
-  </span>
+  />
 </li>
 `;
