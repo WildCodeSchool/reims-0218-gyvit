@@ -13,7 +13,10 @@ const ContentFile = ({ files, dirs }) => {
         return (
           <tr key={dir._id}>
             <th>
-              <i src="" alt="Directory Icon" />
+              <img
+                src={process.env.PUBLIC_URL + "img/folder.ico"}
+                alt="Directory Icon"
+              />
             </th>
             <th>{dir.name}</th>
             <th>{convertDateFromJsonToFrench(dir.modified)}</th>

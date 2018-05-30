@@ -1,136 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders link html 1`] = `
-<div
-  className="row"
+<nav
+  className="navbar navbar-expand-md navbar-light"
+  style={
+    Object {
+      "backgroundColor": "#231b56",
+      "height": "1024px",
+      "width": "220px",
+    }
+  }
 >
-  <div
-    className="col-3"
+  <ul
+    className="nav flex-column"
   >
-    <nav
-      className="navbar navbar-expand-md navbar-light bg-dark"
+    <li
+      className="nav-item"
     >
-      <ul
-        className="nav flex-column"
-      >
-        <li
-          className="nav-item"
+      <div>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
         >
-          <div>
-            <a
-              className="nav-link"
-              href="#"
-              onClick={[Function]}
-            >
-              <img
-                alt=""
-                src="/img/house_38533.ico"
-              />
-              Home
-            </a>
-            <hr />
-          </div>
-          <div>
-            <a
-              className="nav-link"
-              href="#"
-              onClick={[Function]}
-            >
-              <img
-                alt=""
-                src="/img/files.ico"
-              />
-              Files
-            </a>
-            <hr />
-          </div>
-          <div>
-            <a
-              className="nav-link"
-              href="#"
-              onClick={[Function]}
-            >
-              <img
-                alt=""
-                src="/img/share.ico"
-              />
-              Shares
-            </a>
-            <hr />
-          </div>
-          <div>
-            <a
-              className="nav-link"
-              href="#"
-              onClick={[Function]}
-            >
-              <img
-                alt=""
-                src="/img/templates.ico"
-              />
-              Templates
-            </a>
-            <hr />
-          </div>
-          <div>
-            <a
-              className="nav-link"
-              href="#"
-              onClick={[Function]}
-            >
-              <img
-                alt=""
-                src="/img/request.ico"
-              />
-              Requests
-            </a>
-            <hr />
-          </div>
-          <div>
-            <a
-              className="nav-link"
-              href="#"
-              onClick={[Function]}
-            >
-              <img
-                alt=""
-                src="/img/links.ico"
-              />
-              Public links
-            </a>
-            <hr />
-          </div>
-          <div>
-            <a
-              className="nav-link"
-              href="#"
-              onClick={[Function]}
-            >
-              <img
-                alt=""
-                src="/img/contact.ico"
-              />
-              Contacts
-            </a>
-            <hr />
-          </div>
-          <div>
-            <a
-              className="nav-link"
-              href="#"
-              onClick={[Function]}
-            >
-              <img
-                alt=""
-                src="/img/settings.ico"
-              />
-              Settings
-            </a>
-            <hr />
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
+          <img
+            alt=""
+            src="/img/house_38533.ico"
+          />
+          Home
+        </a>
+        <hr />
+      </div>
+      <div>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="/img/files.ico"
+          />
+          Files
+        </a>
+        <hr />
+      </div>
+      <div>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="/img/share.ico"
+          />
+          Shares
+        </a>
+        <hr />
+      </div>
+      <div>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="/img/templates.ico"
+          />
+          Templates
+        </a>
+        <hr />
+      </div>
+      <div>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="/img/request.ico"
+          />
+          Requests
+        </a>
+        <hr />
+      </div>
+      <div>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="/img/links.ico"
+          />
+          Public links
+        </a>
+        <hr />
+      </div>
+      <div>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="/img/contact.ico"
+          />
+          Contacts
+        </a>
+        <hr />
+      </div>
+      <div>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="/img/settings.ico"
+          />
+          Settings
+        </a>
+        <hr />
+      </div>
+    </li>
+  </ul>
+</nav>
 `;
