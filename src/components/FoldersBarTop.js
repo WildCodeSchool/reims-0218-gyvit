@@ -11,14 +11,36 @@ import {
 
 const FoldersBarTop = () => {
   return (
-    <Navbar expand="md">
-      <NavbarBrand>Folders</NavbarBrand>
+    <Navbar
+      expand="xs"
+      style={{
+        "margin-top": "54px"
+      }}
+    >
+      <NavbarBrand
+        style={{
+          width: "45px",
+          height: "24px",
+          "margin-left": "215px"
+        }}
+      >
+        Folders
+      </NavbarBrand>
       <NavbarToggler onClick={this.toggle} />
       <Collapse navbar>
         <Nav className="ml-auto" navbar>
-          <NavItem />
           <NavItem>
-            <Button color="primary">+</Button>
+            <Button
+              style={{
+                width: "50px",
+                height: "50px",
+                "margin-right": "235px",
+                "border-radius": "50%",
+                "background-color": "#725fe3"
+              }}
+            >
+              +
+            </Button>
           </NavItem>
         </Nav>
       </Collapse>
