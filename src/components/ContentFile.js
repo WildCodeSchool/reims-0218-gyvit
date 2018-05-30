@@ -1,7 +1,11 @@
 import React from "react"
 import { DateTime } from "luxon"
 
+<<<<<<< HEAD
 const convertDateFromJsonToFrench = dateToTransform =>
+=======
+const convertDate = dateToTransform =>
+>>>>>>> contentFile
   DateTime.fromMillis(Date.parse(dateToTransform))
     .setLocale("fr-fr")
     .toLocaleString(DateTime.DATETIME_SHORT)
@@ -16,7 +20,11 @@ const ContentFile = ({ files, dirs }) => {
               <i src="" alt="Directory Icon" />
             </th>
             <th>{dir.name}</th>
+<<<<<<< HEAD
             <th>{convertDateFromJsonToFrench(dir.modified)}</th>
+=======
+            <th>{convertDate(dir.modified)}</th>
+>>>>>>> contentFile
             <th>
               {dir.shares.map((share, key) => (
                 <i src="" alt={`icone Share n° ${key}`} />
@@ -32,7 +40,11 @@ const ContentFile = ({ files, dirs }) => {
               <i src="" alt="file Icon" />
             </th>
             <th>{file.name}</th>
+<<<<<<< HEAD
             <th>{convertDateFromJsonToFrench(file.modified)}</th>
+=======
+            <th>{convertDate(file.modified)}</th>
+>>>>>>> contentFile
             <th>
               {file.shares.map((share, key) => (
                 <i src="" alt={`icone Share n° ${key}`} />

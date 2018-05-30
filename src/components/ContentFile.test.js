@@ -3,7 +3,11 @@ import ReactDOM from "react-dom"
 import ContentFile from "./ContentFile"
 import { DateTime } from "luxon"
 
+<<<<<<< HEAD
 const convertDateFromJsonToFrench = dateToTransform =>
+=======
+const convertDate = dateToTransform =>
+>>>>>>> contentFile
   DateTime.fromMillis(Date.parse(dateToTransform))
     .setLocale("fr-fr")
     .toLocaleString(DateTime.DATETIME_SHORT)
@@ -56,7 +60,11 @@ const files = [
 it("formats the date string from Json to display in a correct way", () => {
   const dateJson = "2018-03-29T00:00:00+00:00"
   const expected = "2018-3-29 02:00"
+<<<<<<< HEAD
   expect(convertDateFromJsonToFrench(dateJson)).toEqual(expected)
+=======
+  expect(convertDate(dateJson)).toEqual(expected)
+>>>>>>> contentFile
 })
 
 it("contentFile renders without crashing", () => {
