@@ -22,7 +22,7 @@ import SignInEmail from "../components/SignInEmail"
 import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
 
-storiesOf("Page Dashboard", module)
+storiesOf("Dashboard", module)
   .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("DashboardContent", () => (
@@ -192,7 +192,6 @@ storiesOf("SignIn", module)
   .add("SignInButton", () => <SignInButton />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInTitle", () => <SignInTitle />)
-storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
 storiesOf("DashboardContent", module)
   .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
   .add("with array of actions", () => (
@@ -208,35 +207,35 @@ const listLinksProps = {
   dataLinks: [
     {
       nameLink: "Home",
-      icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_home.png"
     },
     {
       nameLink: "Files",
-      icon: process.env.PUBLIC_URL + "/img/files.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_files.png"
     },
     {
       nameLink: "Shares",
-      icon: process.env.PUBLIC_URL + "/img/share.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
     },
     {
       nameLink: "Templates",
-      icon: process.env.PUBLIC_URL + "/img/templates.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_templates.png"
     },
     {
       nameLink: "Requests",
-      icon: process.env.PUBLIC_URL + "/img/request.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_requests.png"
     },
     {
       nameLink: "Public links",
-      icon: process.env.PUBLIC_URL + "/img/links.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
     },
     {
       nameLink: "Contacts",
-      icon: process.env.PUBLIC_URL + "/img/contact.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_contacts.png"
     },
     {
       nameLink: "Settings",
-      icon: process.env.PUBLIC_URL + "/img/settings.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_settings.png"
     }
   ]
 }

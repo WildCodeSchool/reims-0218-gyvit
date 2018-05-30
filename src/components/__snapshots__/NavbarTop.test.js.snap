@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <li
-  className="nav-item"
+  className="col-1 nav-item"
 >
   <img
     alt="iconNotif"
