@@ -6,19 +6,28 @@ const SignInContent = () => (
     style={{
       width: "980px",
       height: "1067px",
-      background: "green"
+      background: "green",
+      display: "inline"
     }}
   >
+    <p
+      style={{
+        float: "left",
+        "margin-top": "18px"
+      }}
+    >
+      Don't have an account ?
+    </p>
     <Button
       style={{
-        width: "192px",
+        width: "156px",
         height: "54px",
         "border-radius": "100px",
-        "background-image": "linear-gradient(to left, #57aad1, #7a57d1)"
+        border: "solid 1px #7a57d1",
+        color: "#7a57d1"
       }}
-      color="info"
     >
-      Sign in
+      Get Started
     </Button>
   </div>
 )

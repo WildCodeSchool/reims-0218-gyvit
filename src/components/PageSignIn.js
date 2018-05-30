@@ -4,6 +4,7 @@ import SignInButton from "./SignInButton"
 import SignInTitle from "./SignInTitle"
 import SignInEmail from "./SignInEmail"
 import SignInGetStarted from "./SignInGetStarted"
+import SignInContent from "./SignInContent"
 
 const PageSignIn = () => (
   <Container
@@ -21,6 +22,7 @@ const PageSignIn = () => (
           <SignInEmail />
           <SignInButton />
           <SignInGetStarted />
+          <SignInContent />
         </div>
       </Col>
     </Row>

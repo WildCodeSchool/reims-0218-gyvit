@@ -30,7 +30,7 @@ export default class SignInEmail extends React.Component {
               "letter-spacing": "normal",
               "text-align": "right",
               color: "#7a57d1",
-              "padding-left": "100px"
+              "padding-left": "110px"
             }}
             href="#"
           >
