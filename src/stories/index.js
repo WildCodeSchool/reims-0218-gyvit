@@ -193,6 +193,16 @@ storiesOf("SignIn", module)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInTitle", () => <SignInTitle />)
 storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
+storiesOf("DashboardContent", module)
+  .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
+  .add("with array of actions", () => (
+    <Content elements={listCardsInHome} name={name} />
+  ))
+
+storiesOf("Page Folders", module)
+  .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
+  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
+  .add("FoldersBarTop", () => <FoldersBarTop />)
 
 const listLinksProps = {
   dataLinks: [
@@ -237,3 +247,8 @@ const homeLinkProps = {
 }
 
 storiesOf("ListFile", module).add("ListFile", () => <ListFile />)
+storiesOf("Sign In", module)
+  .add("SignInTitle", () => <SignInTitle />)
+  .add("SignInButton", () => <SignInButton />)
+  .add("SignInEmail", () => <SignInEmail />)
+  .add("SignInGetStarted", () => <SignInGetStarted />)
