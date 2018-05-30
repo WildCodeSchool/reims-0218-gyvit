@@ -20,7 +20,7 @@ import SignInEmail from "../components/SignInEmail"
 import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
 
-storiesOf("Page Dashboard", module)
+storiesOf("Dashboard", module)
   .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("DashboardContent", () => (

@@ -2,7 +2,7 @@
 
 import React from "react"
 import Link from "./Link"
-import { Nav, NavItem, Navbar, Row } from "reactstrap"
+import { Nav, NavItem, Navbar } from "reactstrap"
 
 const ListLink = ({ dataLinks }) => (
   <Navbar
@@ -11,7 +11,8 @@ const ListLink = ({ dataLinks }) => (
     style={{
       width: "220px",
       height: "1024px",
-      "background-color": "#231b56"
+      "background-color": "#231b56",
+      color: "white"
     }}
   >
     <Nav vertical>
