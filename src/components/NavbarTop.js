@@ -7,12 +7,7 @@ import NavbarTopNotif from "./NavbarTopNotif"
 import NavbarTopSearch from "./NavbarTopSearch"
 import NavbarTopProfile from "./NavbarTopProfile"
 
-const propsContentOfProfil = {
-  lastname: "Duflot",
-  firstname: "Romain",
-  business: "Notoriety"
-}
-const NavbarTop = (propsWith116notif, firstname, lastname, business) => (
+const NavbarTop = ({ notif, profile }) => (
   <Nav
     style={{
       height: "90px",
@@ -22,8 +17,8 @@ const NavbarTop = (propsWith116notif, firstname, lastname, business) => (
     className="row"
   >
     <NavbarTopSearch />
-    <NavbarTopNotif {...propsWith116notif} />
-    <NavbarTopProfile {...propsContentOfProfil} />
+    <NavbarTopNotif {...notif} />
+    <NavbarTopProfile {...profile} />
   </Nav>
 )
 

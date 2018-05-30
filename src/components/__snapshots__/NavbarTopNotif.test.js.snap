@@ -2,14 +2,26 @@
 
 exports[`renders correctly 1`] = `
 <li
-  className="nav-item"
+  className="col-1 nav-item"
 >
   <img
     alt="iconNotif"
-    src="img/iconNotif.ico"
+    src="img/icon_notification.png"
+    style={
+      Object {
+        "marginTop": "37px",
+      }
+    }
   />
   <span
-    className="badge badge-danger badge-pill"
+    className="badge badge-secondary badge-pill"
+    style={
+      Object {
+        "background-color": "#ff007e",
+        "height": "20px",
+        "width": "20px",
+      }
+    }
   />
 </li>
 `;

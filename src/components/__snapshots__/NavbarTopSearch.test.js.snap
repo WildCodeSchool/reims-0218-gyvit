@@ -7,11 +7,25 @@ exports[`renders correctly 1`] = `
   <div
     className="form-group"
   >
+    <span
+      class="fa fa-search"
+    />
     <input
       className="form-control"
       id="exampleSearch"
       name="search"
       placeholder="Search..."
+      style={
+        Object {
+          "background-color": "#fbfcfd",
+          "border": "none",
+          "border-radius": "2px",
+          "height": "46px",
+          "marginLeft": "46px",
+          "marginTop": "22px",
+          "width": "1020px",
+        }
+      }
       type="search"
     />
   </div>
