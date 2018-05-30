@@ -143,7 +143,7 @@ const listLinksProps = {
     },
     {
       nameLink: "Templates",
-      icon: process.env.PUBLIC_URL + "/img/templates.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_templates.png"
     },
     {
       nameLink: "Requests",
@@ -159,7 +159,7 @@ const listLinksProps = {
     },
     {
       nameLink: "Settings",
-      icon: process.env.PUBLIC_URL + "/img/settings.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_settings.png"
     }
   ]
 }
