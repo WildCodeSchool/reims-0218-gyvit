@@ -3,7 +3,7 @@ import { DateTime } from "luxon"
 
 const convertDateFromJsonToFrench = dateToTransform =>
   DateTime.fromMillis(Date.parse(dateToTransform))
-    .setLocale("fr-fr")
+    .setLocale("fr-FR")
     .toLocaleString(DateTime.DATETIME_SHORT)
 
 const ContentFile = ({ files, dirs }) => {
@@ -11,7 +11,7 @@ const ContentFile = ({ files, dirs }) => {
     <tbody>
       {dirs.map(dir => {
         return (
-          <tr key>
+          <tr key={dir._id}>
             <th>
               <i src="" alt="Directory Icon" />
             </th>
@@ -27,7 +27,7 @@ const ContentFile = ({ files, dirs }) => {
       })}
       {files.map(file => {
         return (
-          <tr key>
+          <tr key={file._id}>
             <th>
               <i src="" alt="file Icon" />
             </th>

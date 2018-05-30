@@ -17,8 +17,8 @@ const Content = ({ elements, name }) => (
     <Row>
       {elements.map(element => {
         return (
-          <Col xs="4">
-            <DashboardCard key={element.id} contenu={element} />
+          <Col key={element.id} xs="4">
+            <DashboardCard contenu={element} />
           </Col>
         )
       })}
