@@ -20,6 +20,8 @@ import SignInEmail from "../components/SignInEmail"
 import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
 
+import PageSignIn from "../components/PageSignIn"
+
 storiesOf("Page Dashboard", module)
   .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
@@ -174,3 +176,5 @@ storiesOf("Sign In", module)
   .add("SignInButton", () => <SignInButton />)
   .add("SignInEmail", () => <SignInEmail />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
+
+storiesOf("PageSignIn", module).add("PageSignIn", () => <PageSignIn />)
