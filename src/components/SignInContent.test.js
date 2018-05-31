@@ -1,17 +1,17 @@
-//TODO: test:  navbar top with search bar, notification icon and profile.
+//TODO CREATE TEST
 
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import NavbarTop from "./NavbarTop"
+import SignInContent from "./SignInButton"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<NavbarTop />, div)
+  ReactDOM.render(<SignInContent />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
-it("renders correctly", () => {
-  const tree = renderer.create(<NavbarTop />).toJSON()
+it("renders link html", () => {
+  const tree = renderer.create(<SignInContent />).toJSON()
   expect(tree).toMatchSnapshot()
 })

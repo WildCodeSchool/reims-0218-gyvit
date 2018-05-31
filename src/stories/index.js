@@ -15,7 +15,10 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 import FoldersBarTop from "../components/FoldersBarTop"
+import PageSignIn from "../components/PageSignIn"
+import SignInBarLeft from "../components/SignInBarLeft"
 import SignInButton from "../components/SignInButton"
+import SignInContent from "../components/SignInContent"
 import SignInEmail from "../components/SignInEmail"
 import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
@@ -174,3 +177,8 @@ storiesOf("Sign In", module)
   .add("SignInButton", () => <SignInButton />)
   .add("SignInEmail", () => <SignInEmail />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
+  .add("SignInContent", () => <SignInContent />)
+
+storiesOf("SignInBarLeft", module).add("SignInBarLeft", () => <SignInBarLeft />)
+
+storiesOf("Page SignIn", module).add("PageSignIn", () => <PageSignIn />)

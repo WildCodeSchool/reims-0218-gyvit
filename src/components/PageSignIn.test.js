@@ -3,15 +3,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import NavbarTop from "./NavbarTop"
+import SignInBarLeft from "./SignInBarLeft"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<NavbarTop />, div)
+  ReactDOM.render(<SignInBarLeft />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
 it("renders correctly", () => {
-  const tree = renderer.create(<NavbarTop />).toJSON()
+  const tree = renderer.create(<SignInBarLeft />).toJSON()
   expect(tree).toMatchSnapshot()
 })
