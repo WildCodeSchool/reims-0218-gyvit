@@ -10,7 +10,7 @@ const NavbarTopSearch = () => (
       <Input
         style={{
           marginTop: "22px",
-          marginLeft: "46px",
+          marginLeft: "6px",
           height: "46px",
           "background-color": "#fbfcfd",
           "border-radius": "2px",

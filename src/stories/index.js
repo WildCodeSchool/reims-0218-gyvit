@@ -30,18 +30,9 @@ import ForgotPasswordBackToSignIn from "../components/ForgotPasswordBackToSignIn
 import PageForgotPassword from "../components/PageForgotPassword"
 import ForgotPasswordGetStarted from "../components/ForgotPasswordGetStarted"
 import PageFolders from "../components/PageFolders"
+import ContentFile from "../components/ContentFile"
 
-storiesOf("Page Dashboard", module)
-  .add("NavbarTop", () => <NavbarTop {...props} />)
-  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
-  .add("DashboardContent", () => (
-    <Content elements={listCardsInHome} name={name} />
-  ))
-
-storiesOf("NavbarLeft", module)
-  .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
-  .add("NavbarLink", () => <Link {...homeLinkProps} />)
-
+//data for NavbarBarTop
 const props = {
   notif: {
     notifsCount: 6
@@ -53,6 +44,7 @@ const props = {
   }
 }
 
+//data for NavBarTopNotif
 const propsWith0notif = {
   notifsCount: 0
 }
@@ -111,6 +103,18 @@ const listCardsInHome = [
 
 const name = "Kevin"
 
+//list of all general components
+storiesOf("Components", module)
+  .add("NavbarTop", () => <NavbarTop {...props} />)
+  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
+  .add("DashboardContent", () => (
+    <Content elements={listCardsInHome} name={name} />
+  ))
+  .add("ContentFile", () => <ContentFile />)
+
+storiesOf("NavbarLeft", module)
+  .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
+  .add("NavbarLink", () => <Link {...homeLinkProps} />)
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
   .add("NavbarTopNotif", () => <NavbarTopNotif {...props.notif} />)
