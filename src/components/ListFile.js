@@ -1,6 +1,7 @@
 import React from "react"
 import { Table } from "reactstrap"
 import ContentFile from "./ContentFile"
+import Category from "./Category"
 
 const ListFile = ({ files = [], dirs = [] }) => (
   <div>
@@ -9,22 +10,13 @@ const ListFile = ({ files = [], dirs = [] }) => (
         <tr>
           <th />
           <th>
-            Name<img
-              src={process.env.PUBLIC_URL + "Assets/icon_double_arrow.png"}
-              alt="upDown"
-            />
+            <Category name="Name" direction={null} />
           </th>
           <th>
-            Last Update<img
-              src={process.env.PUBLIC_URL + "Assets/icon_double_arrow.png"}
-              alt="upDown"
-            />
+            <Category name="Last update" direction={null} />
           </th>
           <th>
-            Users<img
-              src={process.env.PUBLIC_URL + "Assets/icon_double_arrow.png"}
-              alt="upDown"
-            />
+            <Category name="Users" direction={"asc"} />
           </th>
           <th />
         </tr>
