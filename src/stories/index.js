@@ -29,6 +29,7 @@ import ForgotPasswordContent from "../components/ForgotPasswordContent"
 import ForgotPasswordBackToSignIn from "../components/ForgotPasswordBackToSignIn"
 import PageForgotPassword from "../components/PageForgotPassword"
 import ForgotPasswordGetStarted from "../components/ForgotPasswordGetStarted"
+import PageFolders from "../components/PageFolders"
 
 storiesOf("Page Dashboard", module)
   .add("NavbarTop", () => <NavbarTop {...props} />)
@@ -154,7 +155,7 @@ storiesOf("DashboardContent", module)
     <Content elements={listCardsInHome} name={name} />
   ))
 
-storiesOf("Page Folders", module)
+storiesOf("Components Folders", module)
   .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("FoldersBarTop", () => <FoldersBarTop />)
@@ -223,3 +224,5 @@ storiesOf("Components Forgot Password", module)
 storiesOf("Page Forgot Password", module).add("PageForgotPassword", () => (
   <PageForgotPassword />
 ))
+
+storiesOf("Page Folders", module).add("PageFolders", () => <PageFolders />)
