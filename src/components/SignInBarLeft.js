@@ -9,10 +9,9 @@ const PageSignIn = () => (
   <Container
     style={{
       "padding-top": "290px",
-      "margin-left": "60px",
+      "margin-left": "30px",
       "background-color": "#ffffff",
-      height: "1067px",
-      width: "460px"
+      "margin-right": "50px"
     }}
   >
     <SignInTitle />
