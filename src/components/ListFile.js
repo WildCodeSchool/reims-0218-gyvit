@@ -21,7 +21,12 @@ const ListFile = ({ files = [], dirs = [] }) => (
           <th />
         </tr>
       </thead>
-      <ContentFile files={files} dirs={dirs} />
+      <ContentFile
+        files={files}
+        dirs={dirs}
+        direction={null}
+        category={"name"}
+      />
     </Table>
   </div>
 )

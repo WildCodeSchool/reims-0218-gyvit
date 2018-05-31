@@ -6,9 +6,12 @@ const convertDateFromJsonToFrench = dateToTransform =>
     .setLocale("fr-FR")
     .toLocaleString(DateTime.DATETIME_SHORT)
 
-const ContentFile = ({ files, dirs }) => {
+const ContentFile = ({ files, dirs, direction = null, category = "name" }) => {
   return (
     <tbody>
+      {dirs.sort((dira, dirb) => {
+        return dira.name - dirb.name
+      })}
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
