@@ -1,19 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders link html 1`] = `
-<nav
-  className="navbar navbar-expand-md navbar-light"
-  style={
-    Object {
-      "backgroundColor": "#231b56",
-      "color": "white",
-      "height": "1024px",
-      "width": "220px",
+<div>
+  <p
+    className="my-auto d-flex align-items-center"
+    style={
+      Object {
+        "backgroundColor": "#181048",
+        "color": "white",
+        "fontWeight": "bold",
+        "height": "90px",
+        "width": "220px",
+      }
     }
-  }
->
+  >
+     
+    GYVIT
+     
+  </p>
   <ul
     className="nav flex-column"
+    expand="md"
+    light={true}
+    style={
+      Object {
+        "backgroundColor": "#231b56",
+        "color": "white",
+        "height": "1024px",
+        "width": "220px",
+      }
+    }
   >
     <li
       className="nav-item"
@@ -228,5 +244,5 @@ exports[`renders link html 1`] = `
       </div>
     </li>
   </ul>
-</nav>
+</div>
 `;

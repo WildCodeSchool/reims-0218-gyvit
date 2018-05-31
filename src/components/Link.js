@@ -2,6 +2,7 @@
 
 import React from "react"
 import { NavLink } from "reactstrap"
+import NavbarLeftLogo from "./NavbarLeftLogo"
 
 const Link = ({ icon, nameLink }) => (
   <div>
