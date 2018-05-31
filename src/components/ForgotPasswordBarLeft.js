@@ -1,5 +1,5 @@
 import React from "react"
-import { Container } from "reactstrap"
+import { Container, Form } from "reactstrap"
 import ForgotPasswordBackToSignIn from "./ForgotPasswordBackToSignIn"
 import ForgotPasswordTitle from "./ForgotPasswordTitle"
 import ForgotPasswordEmail from "./ForgotPasswordEmail"
@@ -14,11 +14,13 @@ const ForgotPasswordBarLeft = () => (
       "margin-right": "10px"
     }}
   >
-    <ForgotPasswordBackToSignIn />
-    <ForgotPasswordTitle />
-    <ForgotPasswordEmail />
-    <ForgotPasswordButton />
-    <ForgotPasswordGetStarted />
+    <Form>
+      <ForgotPasswordBackToSignIn />
+      <ForgotPasswordTitle />
+      <ForgotPasswordEmail />
+      <ForgotPasswordButton />
+      <ForgotPasswordGetStarted />
+    </Form>
   </Container>
 )
 
