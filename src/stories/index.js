@@ -22,6 +22,13 @@ import SignInContent from "../components/SignInContent"
 import SignInEmail from "../components/SignInEmail"
 import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
+import ForgotPasswordTitle from "../components/ForgotPasswordTitle"
+import ForgotPasswordEmail from "../components/ForgotPasswordEmail"
+import ForgotPasswordButton from "../components/ForgotPasswordButton"
+import ForgotPasswordContent from "../components/ForgotPasswordContent"
+import ForgotPasswordBackToSignIn from "../components/ForgotPasswordBackToSignIn"
+import PageForgotPassword from "../components/PageForgotPassword"
+import ForgotPasswordGetStarted from "../components/ForgotPasswordGetStarted"
 
 storiesOf("Page Dashboard", module)
   .add("NavbarTop", () => <NavbarTop {...props} />)
@@ -204,3 +211,15 @@ storiesOf("Sign In", module)
 storiesOf("SignInBarLeft", module).add("SignInBarLeft", () => <SignInBarLeft />)
 
 storiesOf("Page SignIn", module).add("PageSignIn", () => <PageSignIn />)
+
+storiesOf("Components Forgot Password", module)
+  .add("ForgotPasswordTitle", () => <ForgotPasswordTitle />)
+  .add("ForgotPasswordEmail", () => <ForgotPasswordEmail />)
+  .add("ForgotPasswordButton", () => <ForgotPasswordButton />)
+  .add("ForgotPasswordGetStarted", () => <ForgotPasswordGetStarted />)
+  .add("ForgotPasswordBackToSignIn", () => <ForgotPasswordBackToSignIn />)
+  .add("ForgotPasswordContent", () => <ForgotPasswordContent />)
+
+storiesOf("Page Forgot Password", module).add("PageForgotPassword", () => (
+  <PageForgotPassword />
+))
