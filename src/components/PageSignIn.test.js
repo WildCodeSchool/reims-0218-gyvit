@@ -3,26 +3,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import NavbarTop from "./NavbarTop"
-
-const props = {
-  notif: {
-    notifsCount: 6
-  },
-  profile: {
-    lastname: "Duflot",
-    firstname: "Romain",
-    business: "Notoriety"
-  }
-}
+import SignInBarLeft from "./SignInBarLeft"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<NavbarTop {...props} />, div)
+  ReactDOM.render(<SignInBarLeft />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
 it("renders correctly", () => {
-  const tree = renderer.create(<NavbarTop {...props} />).toJSON()
+  const tree = renderer.create(<SignInBarLeft />).toJSON()
   expect(tree).toMatchSnapshot()
 })

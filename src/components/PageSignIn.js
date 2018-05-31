@@ -1,13 +1,17 @@
 import React from "react"
-import { Container, Row } from "reactstrap"
+import { Row, Col, Container } from "reactstrap"
 import SignInBarLeft from "../components/SignInBarLeft"
 import SignInContent from "./SignInContent"
 
 const PageSignIn = () => (
-  <Container>
+  <Container fluid>
     <Row>
-      <SignInBarLeft />
-      <SignInContent />
+      <Col md="4">
+        <SignInBarLeft />
+      </Col>
+      <Col md="8">
+        <SignInContent />
+      </Col>
     </Row>
   </Container>
 )

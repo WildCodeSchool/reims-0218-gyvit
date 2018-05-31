@@ -5,25 +5,26 @@ import { storiesOf } from "@storybook/react"
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import DashboardCard from "../components/DashboardCard"
-import ContentFile from "../components/ContentFile"
 import Content from "../components/Content"
+import DashboardCard from "../components/DashboardCard"
 import Link from "../components/Link"
 import Listlink from "../components/ListLink"
-import ListFile from "../components/ListFile"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
 import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 import FoldersBarTop from "../components/FoldersBarTop"
+import PageSignIn from "../components/PageSignIn"
+import SignInBarLeft from "../components/SignInBarLeft"
 import SignInButton from "../components/SignInButton"
+import SignInContent from "../components/SignInContent"
 import SignInEmail from "../components/SignInEmail"
 import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
 
-storiesOf("Dashboard", module)
-  .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
+storiesOf("Page Dashboard", module)
+  .add("NavbarTop", () => <NavbarTop {...props} />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("DashboardContent", () => (
     <Content elements={listCardsInHome} name={name} />
@@ -33,10 +34,15 @@ storiesOf("NavbarLeft", module)
   .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
   .add("NavbarLink", () => <Link {...homeLinkProps} />)
 
-const propsContentOfProfil = {
-  lastname: "Duflot",
-  firstname: "Romain",
-  business: "Notoriety"
+const props = {
+  notif: {
+    notifsCount: 6
+  },
+  profile: {
+    lastname: "Duflot",
+    firstname: "Romain",
+    business: "Notoriety"
+  }
 }
 
 const propsWith0notif = {
@@ -53,16 +59,6 @@ const propsWith16notif = {
 
 const propsWith116notif = {
   notifsCount: 116
-}
-
-const cardInHome = {
-  id: 0,
-  image: "",
-  titre: "Documents requests",
-  bio:
-    "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
-  buttonText: "Create first request",
-  link: "lien0"
 }
 
 const listCardsInHome = [
@@ -94,70 +90,12 @@ const listCardsInHome = [
     link: "lien2"
   }
 ]
-
 const name = "Romain"
-
-const dirs = [
-  {
-    _id: "dir_DOl2kN3n9lMeedN90kL9",
-    object: "directory",
-    name: "SammTrading",
-    created: "2018-03-29T00:00:00+00:00",
-    modified: "2018-03-29T00:00:00+00:00",
-    shares: [],
-    files: [],
-    dirs: [
-      {
-        _id: "dir_EoeInRgUgzMPh0aLN2nz",
-        object: "directory",
-        name: "Webshop",
-        created: "2018-03-29T11:36:42+00:00",
-        modified: "2018-03-29T11:36:42+00:00",
-        shares: []
-      }
-    ]
-  }
-]
-
-const files = [
-  {
-    _id: "file_7F2jhzx5RlO8u5C1SP3c",
-    object: "file",
-    name: "TEST FOR POST",
-    size: 0,
-    ext: "",
-    type: "",
-    remove: 0,
-    created: "2018-04-22T08:34:26+00:00",
-    modified: "2018-04-22T08:34:26+00:00",
-    removed: null,
-    shares: [],
-    dir: {
-      _id: "dir_r4V13RVeHFFVvOLctpPe",
-      object: "directory",
-      name: "Sketchs & Photoshops",
-      created: "2018-03-30T11:53:23+00:00",
-      modified: "2018-03-30T12:11:15+00:00"
-    }
-  }
-]
-
-storiesOf("Content", module).add("with array of actions", () => (
-  <Content elements={listCardsInHome} name={name} />
-))
-storiesOf("DashboardCard", module).add("with single object for a card", () => (
-  <DashboardCard contenu={cardInHome} key="0" />
-))
-storiesOf("ContentFile", module).add("with maps in a tr for a tbody", () => (
-  <table>
-    <ContentFile files={files} dirs={dirs} />
-  </table>
-))
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
-  .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
+  .add("NavbarTopNotif", () => <NavbarTopNotif {...props.notif} />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...props.profile} />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
   <NavbarTopNotif {...propsWith0notif} />
@@ -245,9 +183,13 @@ const homeLinkProps = {
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
 
-storiesOf("ListFile", module).add("ListFile", () => <ListFile />)
 storiesOf("Sign In", module)
   .add("SignInTitle", () => <SignInTitle />)
   .add("SignInButton", () => <SignInButton />)
   .add("SignInEmail", () => <SignInEmail />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
+  .add("SignInContent", () => <SignInContent />)
+
+storiesOf("SignInBarLeft", module).add("SignInBarLeft", () => <SignInBarLeft />)
+
+storiesOf("Page SignIn", module).add("PageSignIn", () => <PageSignIn />)
