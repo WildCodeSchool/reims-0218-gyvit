@@ -1,23 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders link html 1`] = `
-<nav
-  className="navbar navbar-expand-md navbar-light"
-  style={
-    Object {
-<<<<<<< HEAD
-      "backgroundColor": "#231b56",
-      "color": "white",
-=======
-      "background-color": "#231b56",
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
-      "height": "1024px",
-      "width": "220px",
+<div>
+  <p
+    className="my-auto d-flex align-items-center"
+    style={
+      Object {
+        "backgroundColor": "#181048",
+        "color": "white",
+        "fontWeight": "bold",
+        "height": "90px",
+        "width": "220px",
+      }
     }
-  }
->
+  >
+     
+    GYVIT
+     
+  </p>
   <ul
     className="nav flex-column"
+    expand="md"
+    light={true}
+    style={
+      Object {
+        "backgroundColor": "#231b56",
+        "color": "white",
+        "height": "1024px",
+        "width": "220px",
+      }
+    }
   >
     <li
       className="nav-item"
@@ -27,28 +39,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
-<<<<<<< HEAD
           style={
             Object {
               "color": "white",
               "opacity": 0.5,
             }
           }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
         >
           <img
             alt=""
             src="/img/house_38533.ico"
-<<<<<<< HEAD
             style={
               Object {
                 "opacity": 0.8,
                 "paddingRight": 10,
               }
             }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
           />
           Home
         </a>
@@ -59,28 +65,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
-<<<<<<< HEAD
           style={
             Object {
               "color": "white",
               "opacity": 0.5,
             }
           }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
         >
           <img
             alt=""
             src="/img/files.ico"
-<<<<<<< HEAD
             style={
               Object {
                 "opacity": 0.8,
                 "paddingRight": 10,
               }
             }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
           />
           Files
         </a>
@@ -91,28 +91,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
-<<<<<<< HEAD
           style={
             Object {
               "color": "white",
               "opacity": 0.5,
             }
           }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
         >
           <img
             alt=""
             src="/img/share.ico"
-<<<<<<< HEAD
             style={
               Object {
                 "opacity": 0.8,
                 "paddingRight": 10,
               }
             }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
           />
           Shares
         </a>
@@ -123,28 +117,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
-<<<<<<< HEAD
           style={
             Object {
               "color": "white",
               "opacity": 0.5,
             }
           }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
         >
           <img
             alt=""
             src="/img/templates.ico"
-<<<<<<< HEAD
             style={
               Object {
                 "opacity": 0.8,
                 "paddingRight": 10,
               }
             }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
           />
           Templates
         </a>
@@ -155,28 +143,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
-<<<<<<< HEAD
           style={
             Object {
               "color": "white",
               "opacity": 0.5,
             }
           }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
         >
           <img
             alt=""
             src="/img/request.ico"
-<<<<<<< HEAD
             style={
               Object {
                 "opacity": 0.8,
                 "paddingRight": 10,
               }
             }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
           />
           Requests
         </a>
@@ -187,28 +169,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
-<<<<<<< HEAD
           style={
             Object {
               "color": "white",
               "opacity": 0.5,
             }
           }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
         >
           <img
             alt=""
             src="/img/links.ico"
-<<<<<<< HEAD
             style={
               Object {
                 "opacity": 0.8,
                 "paddingRight": 10,
               }
             }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
           />
           Public links
         </a>
@@ -219,28 +195,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
-<<<<<<< HEAD
           style={
             Object {
               "color": "white",
               "opacity": 0.5,
             }
           }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
         >
           <img
             alt=""
             src="/img/contact.ico"
-<<<<<<< HEAD
             style={
               Object {
                 "opacity": 0.8,
                 "paddingRight": 10,
               }
             }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
           />
           Contacts
         </a>
@@ -251,28 +221,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
-<<<<<<< HEAD
           style={
             Object {
               "color": "white",
               "opacity": 0.5,
             }
           }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
         >
           <img
             alt=""
             src="/img/settings.ico"
-<<<<<<< HEAD
             style={
               Object {
                 "opacity": 0.8,
                 "paddingRight": 10,
               }
             }
-=======
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
           />
           Settings
         </a>
@@ -280,5 +244,5 @@ exports[`renders link html 1`] = `
       </div>
     </li>
   </ul>
-</nav>
+</div>
 `;

@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<<<<<<< HEAD
-<li
-  className="col-1 nav-item"
->
-  <img
-    alt="iconNotif"
-    src="img/iconNotif.ico"
-  />
-  <span
-    className="badge badge-danger badge-pill"
-  />
-</li>
-=======
 <ul
   className="row nav"
 >
@@ -74,5 +61,4 @@ exports[`renders correctly 1`] = `
     </div>
   </li>
 </ul>
->>>>>>> 1071bdf1f7a402d1ca8091a2d20e12273d78d82a
 `;
