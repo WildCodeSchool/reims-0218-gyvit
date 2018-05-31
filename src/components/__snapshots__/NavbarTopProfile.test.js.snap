@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <li
-  className="col-3 nav-item"
+  className="nav-item"
 >
   <div
     className="media"
@@ -10,12 +10,16 @@ exports[`renders correctly 1`] = `
     <div
       className="media"
       href="#"
-      rounded-circle="true"
     >
       <img
-        alt={undefined}
-        className="media-object"
-        src="http://via.placeholder.com/64x64"
+        alt="kevin"
+        className="rounded-circle media-object"
+        src="http://via.placeholder.com/40x40"
+        style={
+          Object {
+            "marginTop": "25px",
+          }
+        }
       />
     </div>
     <div
@@ -23,11 +27,36 @@ exports[`renders correctly 1`] = `
     >
       <h4
         className="media-heading"
+        style={
+          Object {
+            "color": "#231b56",
+            "font-size": "16px",
+            "marginLeft": "21px",
+            "marginTop": "28px",
+          }
+        }
       >
-        <span />
-         
-        <span />
+        <span>
+          kevin
+        </span>
+         
+        <span>
+          Marlot
+        </span>
       </h4>
+      <div
+        className="media"
+        style={
+          Object {
+            "color": "#372c78",
+            "font-size": "14px",
+            "marginLeft": "21px",
+            "marginTop": "5px",
+          }
+        }
+      >
+        Meduza
+      </div>
     </div>
   </div>
 </li>

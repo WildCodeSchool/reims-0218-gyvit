@@ -6,10 +6,22 @@ exports[`renders link html 1`] = `
     className="nav-link"
     href="#"
     onClick={[Function]}
+    style={
+      Object {
+        "color": "white",
+        "opacity": 0.5,
+      }
+    }
   >
     <img
       alt=""
       src="/img/house_38533.ico"
+      style={
+        Object {
+          "opacity": 0.8,
+          "paddingRight": 10,
+        }
+      }
     />
     Home
   </a>
