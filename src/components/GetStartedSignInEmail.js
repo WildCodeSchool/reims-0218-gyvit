@@ -4,7 +4,7 @@ import { Form, FormGroup, Label, Input } from "reactstrap"
 export default class GetStartedSignInEmail extends React.Component {
   render() {
     return (
-      <Form
+      <div
         style={{
           "margin-bottom": "40px",
           "margin-top": "60px"
@@ -72,7 +72,7 @@ export default class GetStartedSignInEmail extends React.Component {
             placeholder="Password"
           />
         </FormGroup>
-      </Form>
+      </div>
     )
   }
 }

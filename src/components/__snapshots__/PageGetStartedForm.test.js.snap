@@ -12,7 +12,9 @@ exports[`renders correctly 1`] = `
     }
   }
 >
-  <div>
+  <form
+    className=""
+  >
     <div>
       <p
         style={
@@ -48,8 +50,7 @@ exports[`renders correctly 1`] = `
         Free forever. No credit card needed.
       </p>
     </div>
-    <form
-      className=""
+    <div
       style={
         Object {
           "margin-bottom": "40px",
@@ -149,7 +150,7 @@ exports[`renders correctly 1`] = `
           type="password"
         />
       </div>
-    </form>
+    </div>
     <div>
       <button
         className="btn btn-info"
@@ -198,6 +199,6 @@ exports[`renders correctly 1`] = `
         </a>
       </p>
     </div>
-  </div>
+  </form>
 </div>
 `;

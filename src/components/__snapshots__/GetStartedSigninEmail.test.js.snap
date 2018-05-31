@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders link html 1`] = `
-<form
-  className=""
+<div
   style={
     Object {
       "margin-bottom": "40px",
@@ -102,5 +101,5 @@ exports[`renders link html 1`] = `
       type="password"
     />
   </div>
-</form>
+</div>
 `;
