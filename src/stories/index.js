@@ -5,9 +5,10 @@ import { storiesOf } from "@storybook/react"
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
+import DashboardCard from "../components/DashboardCard"
 import ContentFile from "../components/ContentFile"
 import Content from "../components/Content"
-import DashboardCard from "../components/DashboardCard"
+
 import Link from "../components/Link"
 import Listlink from "../components/ListLink"
 import ListFile from "../components/ListFile"
@@ -55,13 +56,23 @@ const propsWith116notif = {
   notifsCount: 116
 }
 
+const cardInHome = {
+  id: 0,
+  image: "",
+  titre: "Documents requests",
+  bio:
+    "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
+  buttonText: "Create first request",
+  link: "lien0"
+}
+
 const listCardsInHome = [
   {
     id: 0,
     image: "",
     titre: "Documents requests",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Create first request",
     link: "lien0"
   },
@@ -70,7 +81,7 @@ const listCardsInHome = [
     image: "",
     titre: "Share documents",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Share documents",
     link: "lien1"
   },
@@ -79,7 +90,7 @@ const listCardsInHome = [
     image: "",
     titre: "Store files",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Upload documents",
     link: "lien2"
   }
@@ -135,11 +146,13 @@ const files = [
 storiesOf("Content", module).add("with array of actions", () => (
   <Content elements={listCardsInHome} name={name} />
 ))
-// storiesOf("DashboardCard", module).add("with single object for a card", () => (
-//   <DashboardCard contenu={cardInHome} key="0" />
-// ))
-storiesOf("ContentFile", module).add("with maps in a th for a tbody", () => (
-  <ContentFile files={files} dirs={dirs} />
+storiesOf("DashboardCard", module).add("with single object for a card", () => (
+  <DashboardCard contenu={cardInHome} key="0" />
+))
+storiesOf("ContentFile", module).add("with maps in a tr for a tbody", () => (
+  <table>
+    <ContentFile files={files} dirs={dirs} />
+  </table>
 ))
 
 storiesOf("NavbarTop", module)
@@ -180,7 +193,16 @@ storiesOf("SignIn", module)
   .add("SignInButton", () => <SignInButton />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInTitle", () => <SignInTitle />)
-storiesOf("Page Folders", module).add("FoldersBarTop", () => <FoldersBarTop />)
+storiesOf("DashboardContent", module)
+  .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
+  .add("with array of actions", () => (
+    <Content elements={listCardsInHome} name={name} />
+  ))
+
+storiesOf("Page Folders", module)
+  .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
+  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
+  .add("FoldersBarTop", () => <FoldersBarTop />)
 
 const listLinksProps = {
   dataLinks: [
@@ -225,3 +247,8 @@ const homeLinkProps = {
 }
 
 storiesOf("ListFile", module).add("ListFile", () => <ListFile />)
+storiesOf("Sign In", module)
+  .add("SignInTitle", () => <SignInTitle />)
+  .add("SignInButton", () => <SignInButton />)
+  .add("SignInEmail", () => <SignInEmail />)
+  .add("SignInGetStarted", () => <SignInGetStarted />)

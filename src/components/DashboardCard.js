@@ -23,19 +23,33 @@ const DashboardCard = ({ contenu }) => {
               "margin-right": "32px"
             }}
           >
-            <CardImg top width="100%" src={image} alt="Card image cap" />
+            <CardImg
+              src={process.env.PUBLIC_URL + "img/folder.ico"}
+              alt="folder"
+              style={{
+                width: "151.2px",
+                height: "120px",
+                "margin-top": "31px",
+                "margin-left": "72px",
+                "margin-right": "64.8px"
+              }}
+            />
             <CardBody
               style={{
-                "padding-left": "0px",
-                "padding-right": "0px"
+                padding: "0px"
               }}
             >
               <CardTitle
                 style={{
-                  size: "18px",
+                  width: "175px",
+                  height: "24px",
+                  "font-size": "18px",
                   "text-align": "center",
                   "padding-left": "0px",
-                  "padding-right": "0px"
+                  "padding-right": "0px",
+                  "margin-top": "15px",
+                  "margin-left": "57px",
+                  "margin-right": "56px"
                 }}
               >
                 {titre}
@@ -44,12 +58,14 @@ const DashboardCard = ({ contenu }) => {
                 style={{
                   width: "228px",
                   height: "96px",
-                  size: "15px",
+                  "font-size": "15px",
                   opacity: 0.45,
                   "text-align": "center",
                   "margin-top": "13px",
                   "margin-left": "30px",
-                  "margin-right": "30px"
+                  "margin-right": "30px",
+                  "margin-bottom": "50px",
+                  "line-height": "24px"
                 }}
               >
                 {bio}
@@ -58,11 +74,11 @@ const DashboardCard = ({ contenu }) => {
                 style={{
                   width: "170px",
                   height: "44px",
-                  size: "16px",
+                  "font-size": "16px",
+                  "border-radius": "2px",
                   "margin-right": "59px",
                   "margin-left": "59px ",
-                  "border-radius": "2px",
-                  "margin-top": "50px",
+                  "margin-bottom": "30px",
                   padding: "0px"
                 }}
                 src={link}

@@ -7,7 +7,7 @@ import DashboardCard from "./DashboardCard"
 const Content = ({ elements, name }) => (
   <Container>
     <Row className="App">
-      <Col sm="12" md={{ size: 4, offset: 4 }}>
+      <Col sm="12" md={{ size: 4, offset: 3 }}>
         <p
           style={{
             "font-size": "24px",
@@ -19,7 +19,7 @@ const Content = ({ elements, name }) => (
           Welcome to Gyvit, {name}.
         </p>
       </Col>
-      <Col sm="12" md={{ size: 4, offset: 4 }}>
+      <Col sm="12" md={{ size: 4, offset: 3 }}>
         <p
           style={{
             "font-size": "18px",

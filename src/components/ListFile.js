@@ -1,7 +1,7 @@
 import React from "react"
 import { Table } from "reactstrap"
 
-const listFile = () => (
+const ListFile = () => (
   <div>
     <Table>
       <thead>
@@ -50,4 +50,4 @@ const listFile = () => (
   </div>
 )
 
-export default listFile
+export default ListFile
