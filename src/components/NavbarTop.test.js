@@ -3,15 +3,26 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import NavbarTopNotif from "./NavbarTopNotif"
+import NavbarTop from "./NavbarTop"
+
+const props = {
+  notif: {
+    notifsCount: 6
+  },
+  profile: {
+    lastname: "Duflot",
+    firstname: "Romain",
+    business: "Notoriety"
+  }
+}
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<NavbarTopNotif />, div)
+  ReactDOM.render(<NavbarTop {...props} />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
 it("renders correctly", () => {
-  const tree = renderer.create(<NavbarTopNotif />).toJSON()
+  const tree = renderer.create(<NavbarTop {...props} />).toJSON()
   expect(tree).toMatchSnapshot()
 })

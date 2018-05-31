@@ -4,9 +4,19 @@ import React from "react"
 import { FormGroup, Input, NavItem } from "reactstrap"
 
 const NavbarTopSearch = () => (
-  <NavItem className="col-8">
+  <NavItem>
     <FormGroup>
+      <span class="fa fa-search" />
       <Input
+        style={{
+          marginTop: "22px",
+          marginLeft: "46px",
+          width: "1020px",
+          height: "46px",
+          "background-color": "#fbfcfd",
+          "border-radius": "2px",
+          border: "none"
+        }}
         type="search"
         name="search"
         id="exampleSearch"
