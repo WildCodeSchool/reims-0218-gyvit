@@ -5,7 +5,8 @@ exports[`renders link html 1`] = `
   className="navbar navbar-expand-md navbar-light"
   style={
     Object {
-      "background-color": "#231b56",
+      "backgroundColor": "#231b56",
+      "color": "white",
       "height": "1024px",
       "width": "220px",
     }
@@ -22,10 +23,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/house_38533.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Home
         </a>
@@ -36,10 +49,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/files.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Files
         </a>
@@ -50,10 +75,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/share.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Shares
         </a>
@@ -64,10 +101,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/templates.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Templates
         </a>
@@ -78,10 +127,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/request.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Requests
         </a>
@@ -92,10 +153,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/links.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Public links
         </a>
@@ -106,10 +179,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/contact.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Contacts
         </a>
@@ -120,10 +205,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/settings.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Settings
         </a>

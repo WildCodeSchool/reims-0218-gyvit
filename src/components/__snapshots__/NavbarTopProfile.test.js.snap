@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
       href="#"
     >
       <img
-        alt={undefined}
+        alt="kevin"
         className="rounded-circle media-object"
         src="http://via.placeholder.com/40x40"
         style={
@@ -36,9 +36,13 @@ exports[`renders correctly 1`] = `
           }
         }
       >
-        <span />
+        <span>
+          kevin
+        </span>
          
-        <span />
+        <span>
+          Marlot
+        </span>
       </h4>
       <div
         className="media"
@@ -50,7 +54,9 @@ exports[`renders correctly 1`] = `
             "marginTop": "5px",
           }
         }
-      />
+      >
+        Meduza
+      </div>
     </div>
   </div>
 </li>
