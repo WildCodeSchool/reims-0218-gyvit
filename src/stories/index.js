@@ -61,13 +61,23 @@ const propsWith116notif = {
   notifsCount: 116
 }
 
+const cardInHome = {
+  id: 0,
+  image: "",
+  titre: "Documents requests",
+  bio:
+    "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
+  buttonText: "Create first request",
+  link: "lien0"
+}
+
 const listCardsInHome = [
   {
     id: 0,
     image: "",
     titre: "Documents requests",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Create first request",
     link: "lien0"
   },
@@ -76,7 +86,7 @@ const listCardsInHome = [
     image: "",
     titre: "Share documents",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Share documents",
     link: "lien1"
   },
@@ -85,12 +95,13 @@ const listCardsInHome = [
     image: "",
     titre: "Store files",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Upload documents",
     link: "lien2"
   }
 ]
-const name = "Romain"
+
+const name = "Kevin"
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
