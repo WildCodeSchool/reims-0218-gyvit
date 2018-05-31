@@ -3,18 +3,39 @@
 exports[`renders correctly 1`] = `
 <ul
   className="row nav"
+  style={
+    Object {
+      "background-color": "#ffffff",
+      "border": "solid 1px #e5e8f4",
+      "height": "90px",
+    }
+  }
 >
   <li
-    className="col-8 nav-item"
+    className="nav-item"
   >
     <div
       className="form-group"
     >
+      <span
+        class="fa fa-search"
+      />
       <input
         className="form-control"
         id="exampleSearch"
         name="search"
         placeholder="Search..."
+        style={
+          Object {
+            "background-color": "#fbfcfd",
+            "border": "none",
+            "border-radius": "2px",
+            "height": "46px",
+            "marginLeft": "46px",
+            "marginTop": "22px",
+            "width": "1020px",
+          }
+        }
         type="search"
       />
     </div>
@@ -24,14 +45,28 @@ exports[`renders correctly 1`] = `
   >
     <img
       alt="iconNotif"
-      src="img/iconNotif.ico"
+      src="img/icon_notification.png"
+      style={
+        Object {
+          "marginTop": "37px",
+        }
+      }
     />
     <span
-      className="badge badge-danger badge-pill"
-    />
+      className="badge badge-secondary badge-pill"
+      style={
+        Object {
+          "background-color": "#ff007e",
+          "height": "20px",
+          "width": "20px",
+        }
+      }
+    >
+      6
+    </span>
   </li>
   <li
-    className="col-3 nav-item"
+    className="nav-item"
   >
     <div
       className="media"
@@ -39,12 +74,16 @@ exports[`renders correctly 1`] = `
       <div
         className="media"
         href="#"
-        rounded-circle="true"
       >
         <img
-          alt={undefined}
-          className="media-object"
-          src="http://via.placeholder.com/64x64"
+          alt="Romain"
+          className="rounded-circle media-object"
+          src="http://via.placeholder.com/40x40"
+          style={
+            Object {
+              "marginTop": "25px",
+            }
+          }
         />
       </div>
       <div
@@ -52,11 +91,36 @@ exports[`renders correctly 1`] = `
       >
         <h4
           className="media-heading"
+          style={
+            Object {
+              "color": "#231b56",
+              "font-size": "16px",
+              "marginLeft": "21px",
+              "marginTop": "28px",
+            }
+          }
         >
-          <span />
-           
-          <span />
+          <span>
+            Romain
+          </span>
+           
+          <span>
+            Duflot
+          </span>
         </h4>
+        <div
+          className="media"
+          style={
+            Object {
+              "color": "#372c78",
+              "font-size": "14px",
+              "marginLeft": "21px",
+              "marginTop": "5px",
+            }
+          }
+        >
+          Notoriety
+        </div>
       </div>
     </div>
   </li>

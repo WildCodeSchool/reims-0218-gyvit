@@ -23,8 +23,8 @@ import SignInEmail from "../components/SignInEmail"
 import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
 
-storiesOf("Dashboard", module)
-  .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
+storiesOf("Page Dashboard", module)
+  .add("NavbarTop", () => <NavbarTop {...props} />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("DashboardContent", () => (
     <Content elements={listCardsInHome} name={name} />
@@ -34,10 +34,15 @@ storiesOf("NavbarLeft", module)
   .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
   .add("NavbarLink", () => <Link {...homeLinkProps} />)
 
-const propsContentOfProfil = {
-  lastname: "Duflot",
-  firstname: "Romain",
-  business: "Notoriety"
+const props = {
+  notif: {
+    notifsCount: 6
+  },
+  profile: {
+    lastname: "Duflot",
+    firstname: "Romain",
+    business: "Notoriety"
+  }
 }
 
 const propsWith0notif = {
@@ -89,8 +94,8 @@ const name = "Romain"
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
-  .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
+  .add("NavbarTopNotif", () => <NavbarTopNotif {...props.notif} />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...props.profile} />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
   <NavbarTopNotif {...propsWith0notif} />
@@ -119,6 +124,12 @@ storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 116 notifs",
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
+
+storiesOf("SignIn", module)
+  .add("SignInEmail", () => <SignInEmail />)
+  .add("SignInButton", () => <SignInButton />)
+  .add("SignInGetStarted", () => <SignInGetStarted />)
+  .add("SignInTitle", () => <SignInTitle />)
 storiesOf("DashboardContent", module)
   .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
   .add("with array of actions", () => (
