@@ -13,7 +13,6 @@ const ListLink = ({ dataLinks }) => (
       light
       expand="md"
       style={{
-        width: "220px",
         height: "1024px",
         backgroundColor: "#231b56",
         color: "white"
