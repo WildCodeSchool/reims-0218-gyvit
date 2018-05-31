@@ -245,7 +245,11 @@ const homeLinkProps = {
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
 
-storiesOf("ListFile", module).add("ListFile", () => <ListFile />)
+storiesOf("ListFile", module)
+  .add("ListFile", () => <ListFile />)
+  .add("ListFile with ContentFile in tbody", () => (
+    <ListFile files={files} dirs={dirs} />
+  ))
 storiesOf("Sign In", module)
   .add("SignInTitle", () => <SignInTitle />)
   .add("SignInButton", () => <SignInButton />)
