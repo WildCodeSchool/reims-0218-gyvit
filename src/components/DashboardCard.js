@@ -11,7 +11,7 @@ import {
 } from "reactstrap"
 
 const DashboardCard = ({ contenu }) => {
-  const { image, titre, bio, buttonText, link } = { ...contenu }
+  const { titre, bio, buttonText, link } = { ...contenu }
   return (
     <div>
       <Container>
