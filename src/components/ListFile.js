@@ -1,51 +1,32 @@
 import React from "react"
 import { Table } from "reactstrap"
+import ContentFile from "./ContentFile"
+import Category from "./Category"
 
-const ListFile = () => (
+const ListFile = ({ files = [], dirs = [] }) => (
   <div>
     <Table>
       <thead>
         <tr>
           <th />
           <th>
-            Name<img
-              src={process.env.PUBLIC_URL + "img/upDown.ico"}
-              alt="upDown"
-            />
+            <Category name="Name" direction={null} />
           </th>
           <th>
-            Last Update<img
-              src={process.env.PUBLIC_URL + "img/upDown.ico"}
-              alt="upDown"
-            />
+            <Category name="Last update" direction={null} />
           </th>
           <th>
-            Users<img
-              src={process.env.PUBLIC_URL + "img/upDown.ico"}
-              alt="upDown"
-            />
+            <Category name="Users" direction={"asc"} />
           </th>
           <th />
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th />
-          <td>
-            <img src={process.env.PUBLIC_URL + "img/folder.ico"} alt="folder" />Applications
-          </td>
-          <td>23/04/2017 9:12</td>
-          <td>
-            <img src={process.env.PUBLIC_URL + "img/avatar.ico"} alt="avatar" />
-          </td>
-          <td>
-            <img
-              src={process.env.PUBLIC_URL + "img/menuPopup.ico"}
-              alt="menuPopup"
-            />
-          </td>
-        </tr>
-      </tbody>
+      <ContentFile
+        files={files}
+        dirs={dirs}
+        direction={null}
+        category={"name"}
+      />
     </Table>
   </div>
 )
