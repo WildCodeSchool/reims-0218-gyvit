@@ -6,14 +6,14 @@ exports[`renders link html 1`] = `
     style={
       Object {
         "color": "#3b425d",
-        "font-size": "24px",
-        "font-stretch": "normal",
-        "font-style": "normal",
-        "font-weight": "normal",
+        "fontSize": "24px",
+        "fontStretch": "normal",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
         "height": "24px",
-        "letter-spacing": "normal",
-        "line-height": "normal",
-        "text-align": "left",
+        "letterSpacing": "normal",
+        "lineHeight": "normal",
+        "textAlign": "left",
       }
     }
   >
@@ -23,15 +23,15 @@ exports[`renders link html 1`] = `
     style={
       Object {
         "color": "#9da5c9",
-        "font-size": "18px",
-        "font-stretch": "normal",
-        "font-style": "normal",
-        "font-weight": "normal",
+        "fontSize": "18px",
+        "fontStretch": "normal",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
         "height": "18px",
-        "letter-spacing": "normal",
-        "line-height": "normal",
-        "margin-top": "15px",
-        "text-align": "left",
+        "letterSpacing": "normal",
+        "lineHeight": "normal",
+        "marginTop": "15px",
+        "textAlign": "left",
         "width": "200px",
       }
     }

@@ -8,10 +8,10 @@ import SignInGetStarted from "./SignInGetStarted"
 const PageSignIn = () => (
   <Container
     style={{
-      "padding-top": "290px",
-      "margin-left": "30px",
-      "background-color": "#ffffff",
-      "margin-right": "50px"
+      paddingTop: "290px",
+      marginLeft: "30px",
+      backgroundColor: "#ffffff",
+      marginRight: "50px"
     }}
   >
     <SignInTitle />

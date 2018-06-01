@@ -10,7 +10,7 @@ const NavbarLeft = ({ dataLinks }) => (
     <NavbarLeftLogo />
     <Nav
       vertical
-      light
+      light="true"
       expand="md"
       style={{
         height: "1024px",

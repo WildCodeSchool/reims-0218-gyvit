@@ -22,7 +22,7 @@ const NavbarTopProfile = ({ firstname, lastname, business }) => (
         <Media
           style={{
             color: "#231b56",
-            "font-size": "16px",
+            fontSize: "16px",
             marginTop: "28px",
             marginLeft: "21px"
           }}
@@ -36,7 +36,7 @@ const NavbarTopProfile = ({ firstname, lastname, business }) => (
             color: "#372c78",
             marginTop: "5px",
             marginLeft: "21px",
-            "font-size": "14px"
+            fontSize: "14px"
           }}
         >
           {business}

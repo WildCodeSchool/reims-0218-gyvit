@@ -5,14 +5,14 @@ import { NavLink } from "reactstrap"
 const GetStartedSignInLinkHaveAnAccount = () => (
   <div
     style={{
-      "margin-top": "120px",
+      marginTop: "120px",
       width: "300px",
       height: "16px",
       fontSize: "16px",
       fontWeight: "normal",
       fontStyle: "normal",
-      "letter-spacing": "normal",
-      "text-align": "left",
+      letterSpacing: "normal",
+      textAlign: "left",
       color: "#3b425d"
     }}
   >

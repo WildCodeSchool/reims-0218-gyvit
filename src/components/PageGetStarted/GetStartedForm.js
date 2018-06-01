@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Form } from "reactstrap"
+import { Container } from "reactstrap"
 import GetStartedSignInEmail from "./GetStartedSignInEmail"
 import GetStartedSignInTitle from "./GetStartedSignInTitle"
 import GetStartedSignInButton from "./GetStartedSignInButton"
@@ -8,18 +8,16 @@ import GetStartedSignInLinkHaveAnAccount from "./GetStartedSignInLinkHaveAnAccou
 const GetStartedForm = () => (
   <Container
     style={{
-      "padding-top": "25%",
-      "margin-left": "30px",
-      "background-color": "#ffffff",
-      "margin-right": "50px"
+      paddingTop: "25%",
+      marginLeft: "30px",
+      backgroundColor: "#ffffff",
+      marginRight: "50px"
     }}
   >
-    <Form>
-      <GetStartedSignInTitle />
-      <GetStartedSignInEmail />
-      <GetStartedSignInButton />
-      <GetStartedSignInLinkHaveAnAccount />
-    </Form>
+    <GetStartedSignInTitle />
+    <GetStartedSignInEmail />
+    <GetStartedSignInButton />
+    <GetStartedSignInLinkHaveAnAccount />
   </Container>
 )
 

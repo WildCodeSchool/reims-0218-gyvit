@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="badge badge-secondary badge-pill"
   style={
     Object {
-      "background-color": "#ff007e",
+      "backgroundColor": "#ff007e",
       "height": "20px",
       "width": "20px",
     }

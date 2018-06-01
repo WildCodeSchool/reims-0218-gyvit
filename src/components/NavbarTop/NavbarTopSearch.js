@@ -6,15 +6,15 @@ import { FormGroup, Input, NavItem } from "reactstrap"
 const NavbarTopSearch = () => (
   <NavItem>
     <FormGroup>
-      <span class="fa fa-search" />
+      <span className="fa fa-search" />
       <Input
         style={{
           marginTop: "22px",
           marginLeft: "46px",
           width: "1020px",
           height: "46px",
-          "background-color": "#fbfcfd",
-          "border-radius": "2px",
+          backgroundColor: "#fbfcfd",
+          borderRadius: "2px",
           border: "none"
         }}
         type="search"

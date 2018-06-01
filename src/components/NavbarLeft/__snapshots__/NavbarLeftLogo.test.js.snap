@@ -12,8 +12,6 @@ exports[`renders correctly 1`] = `
     }
   }
 >
-   
   GYVIT
-   
 </p>
 `;
