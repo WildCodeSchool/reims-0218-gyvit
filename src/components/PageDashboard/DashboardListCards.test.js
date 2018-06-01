@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
 
-import Content from "./Content"
+import DashboardListCards from "./DashboardListCards"
 
 const elements = [
   {
@@ -38,12 +38,12 @@ const name = "Kevin"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<Content elements={elements} name={name} />, div)
+  ReactDOM.render(<DashboardListCards elements={elements} name={name} />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 it("renders link html", () => {
   const tree = renderer
-    .create(<Content elements={elements} name={name} />)
+    .create(<DashboardListCards elements={elements} name={name} />)
     .toJSON()
   expect(tree).toMatchSnapshot()
 })
