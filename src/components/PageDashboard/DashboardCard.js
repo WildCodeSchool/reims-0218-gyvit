@@ -9,6 +9,7 @@ import {
   Container,
   Row
 } from "reactstrap"
+import PropTypes from "prop-types"
 
 const DashboardCard = ({ contenu }) => {
   const { titre, bio, buttonText, link } = { ...contenu }
@@ -92,4 +93,16 @@ const DashboardCard = ({ contenu }) => {
     </div>
   )
 }
+
+DashboardCard.propTypes = {
+  contenu: {
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    titre: PropTypes.string.isRequired,
+    bio: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
+  }
+}
+
 export default DashboardCard

@@ -1,6 +1,7 @@
 //TODO: create navbar top with search bar, notification icon and profile.
 
 import React from "react"
+import PropTypes from "prop-types"
 import { Nav } from "reactstrap"
 import NavbarTopNotif from "./NavbarTopNotif"
 import NavbarTopSearch from "./NavbarTopSearch"
@@ -20,5 +21,16 @@ const NavbarTop = ({ notif, profile }) => (
     <NavbarTopProfile {...profile} />
   </Nav>
 )
+
+NavbarTop.propTypes = {
+  notif: {
+    notifsCount: PropTypes.number.isRequired
+  },
+  profile: {
+    lastname: PropTypes.string.isRequired,
+    firstname: PropTypes.string.isRequired,
+    business: PropTypes.string.isRequired
+  }
+}
 
 export default NavbarTop

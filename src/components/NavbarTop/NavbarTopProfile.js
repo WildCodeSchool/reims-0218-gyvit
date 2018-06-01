@@ -1,6 +1,7 @@
 //TODO: create component Profile
 
 import React from "react"
+import PropTypes from "prop-types"
 import { NavItem, Media } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -45,5 +46,11 @@ const NavbarTopProfile = ({ firstname, lastname, business }) => (
     </Media>
   </NavItem>
 )
+
+NavbarTopProfile.propTypes = {
+  lastname: PropTypes.string.isRequired,
+  firstname: PropTypes.string.isRequired,
+  business: PropTypes.string.isRequired
+}
 
 export default NavbarTopProfile

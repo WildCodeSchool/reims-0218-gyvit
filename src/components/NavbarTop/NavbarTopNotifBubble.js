@@ -1,6 +1,7 @@
 //TODO: create component notif bubble icon
 
 import React from "react"
+import PropTypes from "prop-types"
 import { Badge } from "reactstrap"
 
 const NavbarTopNotifBubble = ({ notifsCount }) => {
@@ -16,6 +17,10 @@ const NavbarTopNotifBubble = ({ notifsCount }) => {
       {notifsCount}
     </Badge>
   )
+}
+
+NavbarTopNotifBubble.propTypes = {
+  notifscount: PropTypes.number.isRequired
 }
 
 export default NavbarTopNotifBubble
