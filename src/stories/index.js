@@ -30,7 +30,7 @@ import SignInEmail from "../components/PageSignIn/SignInEmail"
 import SignInTitle from "../components/PageSignIn/SignInTitle"
 import SignInGetStarted from "../components/PageSignIn/SignInGetStarted"
 import DashboardListCards from "../components/PageDashboard/DashboardListCards"
-import GetStartedSignInLinkHaveAnAccount from "../components/PageGetStarted/GetStartedSignInButton"
+import GetStartedSignInLinkHaveAnAccount from "../components/PageGetStarted/GetStartedSignInLinkHaveAnAccount"
 import ForgotPasswordTitle from "../components/PageForgotPassword/ForgotPasswordTitle"
 import ForgotPasswordEmail from "../components/PageForgotPassword/ForgotPasswordEmail"
 import ForgotPasswordButton from "../components/PageForgotPassword/ForgotPasswordButton"
@@ -38,6 +38,7 @@ import ForgotPasswordContent from "../components/PageForgotPassword/ForgotPasswo
 import ForgotPasswordBackToSignIn from "../components/PageForgotPassword/ForgotPasswordBackToSignIn"
 import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassword"
 import ForgotPasswordGetStarted from "../components/PageForgotPassword/ForgotPasswordGetStarted"
+import GetStartedSignInContent from "../components/PageGetStarted/GetStartedSignInContent"
 
 const props = {
   notif: {
@@ -260,17 +261,16 @@ storiesOf("Components Page Folders", module)
 
 storiesOf("Page Folders", module).add("PageFolders", () => <PageFolders />)
 
-storiesOf("GetStarted", module)
+storiesOf("Component GetStarted", module)
   .add("GetStartedSignInEmail", () => <GetStartedSignInEmail />)
   .add("GetStartedSignInTitle", () => <GetStartedSignInTitle />)
   .add("GetStartedSignInButton", () => <GetStartedSignInButton />)
   .add("GetStartedSignInLinkHaveAnAccount", () => (
     <GetStartedSignInLinkHaveAnAccount />
   ))
+  .add("GetStartedForm", () => <GetStartedForm />)
+  .add("GetStartedSignInContent", () => <GetStartedSignInContent />)
 
-storiesOf("PageGetStartedForm", module).add("PageGetStartedForm", () => (
-  <PageGetStartedForm />
-))
 storiesOf("Page GetStarted", module).add("PageGetStarted", () => (
   <PageGetStarted />
 ))
