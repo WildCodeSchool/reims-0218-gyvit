@@ -4,8 +4,8 @@ exports[`renders link html 1`] = `
 <div
   style={
     Object {
-      "margin-bottom": "40px",
-      "margin-top": "60px",
+      "marginBottom": "40px",
+      "marginTop": "60px",
     }
   }
 >
@@ -22,9 +22,9 @@ exports[`renders link html 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
           "height": "12px",
-          "letter-spacing": "normal",
-          "margin-top": "30px",
-          "text-align": "left",
+          "letterSpacing": "normal",
+          "marginTop": "30px",
+          "textAlign": "left",
           "width": "33px",
         }
       }
@@ -53,9 +53,9 @@ exports[`renders link html 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
           "height": "12px",
-          "letter-spacing": "normal",
-          "margin-top": "30px",
-          "text-align": "left",
+          "letterSpacing": "normal",
+          "marginTop": "30px",
+          "textAlign": "left",
           "width": "33px",
         }
       }
@@ -84,9 +84,9 @@ exports[`renders link html 1`] = `
           "fontStyle": "normal",
           "fontWeight": "normal",
           "height": "12px",
-          "letter-spacing": "normal",
-          "margin-top": "30px",
-          "text-align": "left",
+          "letterSpacing": "normal",
+          "marginTop": "30px",
+          "textAlign": "left",
           "width": "75px",
         }
       }

@@ -13,14 +13,12 @@ exports[`renders link html 1`] = `
       }
     }
   >
-     
     GYVIT
-     
   </p>
   <ul
     className="nav flex-column"
     expand="md"
-    light={true}
+    light="true"
     style={
       Object {
         "backgroundColor": "#231b56",

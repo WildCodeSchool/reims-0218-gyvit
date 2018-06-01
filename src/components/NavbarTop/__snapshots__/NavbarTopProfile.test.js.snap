@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
         style={
           Object {
             "color": "#231b56",
-            "font-size": "16px",
+            "fontSize": "16px",
             "marginLeft": "21px",
             "marginTop": "28px",
           }
@@ -49,7 +49,7 @@ exports[`renders correctly 1`] = `
         style={
           Object {
             "color": "#372c78",
-            "font-size": "14px",
+            "fontSize": "14px",
             "marginLeft": "21px",
             "marginTop": "5px",
           }

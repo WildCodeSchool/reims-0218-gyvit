@@ -1,26 +1,26 @@
 import React from "react"
-import { Form, FormGroup, Label, Input } from "reactstrap"
+import { FormGroup, Label, Input } from "reactstrap"
 
 export default class GetStartedSignInEmail extends React.Component {
   render() {
     return (
       <div
         style={{
-          "margin-bottom": "40px",
-          "margin-top": "60px"
+          marginBottom: "40px",
+          marginTop: "60px"
         }}
       >
         <FormGroup>
           <Label
             style={{
-              "margin-top": "30px",
+              marginTop: "30px",
               width: "33px",
               height: "12px",
               fontSize: "12px",
               fontWeight: "normal",
               fontStyle: "normal",
-              "letter-spacing": "normal",
-              "text-align": "left",
+              letterSpacing: "normal",
+              textAlign: "left",
               color: "#9da5c9"
             }}
             for="email"
@@ -32,14 +32,14 @@ export default class GetStartedSignInEmail extends React.Component {
         <FormGroup>
           <Label
             style={{
-              "margin-top": "30px",
+              marginTop: "30px",
               width: "33px",
               height: "12px",
               fontSize: "12px",
               fontWeight: "normal",
               fontStyle: "normal",
-              "letter-spacing": "normal",
-              "text-align": "left",
+              letterSpacing: "normal",
+              textAlign: "left",
               color: "#9da5c9"
             }}
             for="email"
@@ -51,14 +51,14 @@ export default class GetStartedSignInEmail extends React.Component {
         <FormGroup>
           <Label
             style={{
-              "margin-top": "30px",
+              marginTop: "30px",
               width: "75px",
               height: "12px",
               fontSize: "12px",
               fontWeight: "normal",
               fontStyle: "normal",
-              "letter-spacing": "normal",
-              "text-align": "left",
+              letterSpacing: "normal",
+              textAlign: "left",
               color: "#9da5c9"
             }}
             for="password"

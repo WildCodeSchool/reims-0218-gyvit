@@ -6,13 +6,13 @@ const GetStartedSignInTitle = () => (
     <p
       style={{
         height: "24px",
-        "font-size": "24px",
-        "font-weight": "normal",
-        "font-style": "normal",
-        "font-stretch": "normal",
-        "line-height": "normal",
-        "letter-spacing": "normal",
-        "text-align": "left",
+        fontSize: "24px",
+        fontWeight: "normal",
+        fontStyle: "normal",
+        fontStretch: "normal",
+        lineHeight: "normal",
+        letterSpacing: "normal",
+        textAlign: "left",
         color: "#3b425d"
       }}
     >
@@ -25,8 +25,8 @@ const GetStartedSignInTitle = () => (
         fontSize: "18px",
         fontWeight: "normal",
         fontStyle: "normal",
-        "letter-spacing": "normal",
-        "text-align": "left",
+        letterSpacing: "normal",
+        textAlign: "left",
         color: "#9da5c9"
       }}
     >

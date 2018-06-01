@@ -9,9 +9,9 @@ import ForgotPasswordGetStarted from "./ForgotPasswordGetStarted"
 const ForgotPasswordBarLeft = () => (
   <Container
     style={{
-      "margin-left": "30px",
-      "background-color": "#ffffff",
-      "margin-right": "10px"
+      marginLeft: "30px",
+      backgroundColor: "#ffffff",
+      marginRight: "10px"
     }}
   >
     <Form>

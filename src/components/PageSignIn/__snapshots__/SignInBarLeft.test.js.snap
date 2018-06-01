@@ -5,10 +5,10 @@ exports[`renders correctly 1`] = `
   className="container"
   style={
     Object {
-      "background-color": "#ffffff",
-      "margin-left": "30px",
-      "margin-right": "50px",
-      "padding-top": "290px",
+      "backgroundColor": "#ffffff",
+      "marginLeft": "30px",
+      "marginRight": "50px",
+      "paddingTop": "290px",
     }
   }
 >
@@ -17,14 +17,14 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "color": "#3b425d",
-          "font-size": "24px",
-          "font-stretch": "normal",
-          "font-style": "normal",
-          "font-weight": "normal",
+          "fontSize": "24px",
+          "fontStretch": "normal",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
           "height": "24px",
-          "letter-spacing": "normal",
-          "line-height": "normal",
-          "text-align": "left",
+          "letterSpacing": "normal",
+          "lineHeight": "normal",
+          "textAlign": "left",
         }
       }
     >
@@ -34,15 +34,15 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "color": "#9da5c9",
-          "font-size": "18px",
-          "font-stretch": "normal",
-          "font-style": "normal",
-          "font-weight": "normal",
+          "fontSize": "18px",
+          "fontStretch": "normal",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
           "height": "18px",
-          "letter-spacing": "normal",
-          "line-height": "normal",
-          "margin-top": "15px",
-          "text-align": "left",
+          "letterSpacing": "normal",
+          "lineHeight": "normal",
+          "marginTop": "15px",
+          "textAlign": "left",
           "width": "200px",
         }
       }
@@ -55,8 +55,8 @@ exports[`renders correctly 1`] = `
     className=""
     style={
       Object {
-        "margin-bottom": "40px",
-        "margin-top": "60px",
+        "marginBottom": "40px",
+        "marginTop": "60px",
       }
     }
   >
@@ -85,7 +85,7 @@ exports[`renders correctly 1`] = `
         htmlFor="password"
         style={
           Object {
-            "margin-top": "30px",
+            "marginTop": "30px",
           }
         }
       >
@@ -99,14 +99,14 @@ exports[`renders correctly 1`] = `
           Object {
             "color": "#7a57d1",
             "display": "inline",
-            "font-size": "14px",
-            "font-stretch": "normal",
-            "font-style": "normal",
-            "font-weight": "normal",
-            "letter-spacing": "normal",
-            "line-height": "normal",
-            "padding-left": "130px",
-            "text-align": "right",
+            "fontSize": "14px",
+            "fontStretch": "normal",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "paddingLeft": "130px",
+            "textAlign": "right",
           }
         }
       >
@@ -127,8 +127,8 @@ exports[`renders correctly 1`] = `
       onClick={[Function]}
       style={
         Object {
-          "background-image": "linear-gradient(to left, #57aad1, #7a57d1)",
-          "border-radius": "100px",
+          "backgroundImage": "linear-gradient(to left, #57aad1, #7a57d1)",
+          "borderRadius": "100px",
           "height": "54px",
           "width": "192px",
         }
@@ -141,7 +141,7 @@ exports[`renders correctly 1`] = `
   <div
     style={
       Object {
-        "margin-top": "120px",
+        "marginTop": "120px",
       }
     }
   >
