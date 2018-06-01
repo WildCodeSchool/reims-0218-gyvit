@@ -10,10 +10,10 @@ const DashboardListCards = ({ elements, name }) => (
       <Col sm="12" md={{ size: 4, offset: 3 }}>
         <p
           style={{
-            "font-size": "24px",
+            fontSize: "24px",
             height: "33px",
-            "margin-top": "120px",
-            "text-align": "center"
+            marginTop: "120px",
+            textAlign: "center"
           }}
         >
           Welcome to Gyvit, {name}.
@@ -22,12 +22,12 @@ const DashboardListCards = ({ elements, name }) => (
       <Col sm="12" md={{ size: 4, offset: 3 }}>
         <p
           style={{
-            "font-size": "18px",
+            fontSize: "18px",
             height: "24px",
-            "text-align": "center",
+            textAlign: "center",
             color: "#000000",
             opacity: 0.45,
-            "margin-bottom": "60px"
+            marginBottom: "60px"
           }}
         >
           What would you like to do ?

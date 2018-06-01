@@ -2,18 +2,22 @@
 
 exports[`renders correctly 1`] = `
 <p
-  className="my-auto d-flex align-items-center"
+  className="d-flex align-items-center"
   style={
     Object {
       "backgroundColor": "#181048",
       "color": "white",
       "fontWeight": "bold",
       "height": "90px",
+      "margin-bottom": "0px",
+      "textAlign": "center",
     }
   }
 >
-   
-  GYVIT
-   
+  <div
+    className="col"
+  >
+    GYVIT 
+  </div>
 </p>
 `;

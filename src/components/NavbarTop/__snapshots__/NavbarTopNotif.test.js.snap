@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<li
-  className="col-1 nav-item"
+<div
+  className="col-1"
 >
   <img
     alt="iconNotif"
@@ -17,11 +17,11 @@ exports[`renders correctly 1`] = `
     className="badge badge-secondary badge-pill"
     style={
       Object {
-        "background-color": "#ff007e",
+        "backgroundColor": "#ff007e",
         "height": "20px",
         "width": "20px",
       }
     }
   />
-</li>
+</div>
 `;

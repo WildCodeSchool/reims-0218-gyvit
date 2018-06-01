@@ -1,14 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<li
-  className="nav-item"
->
+<div>
   <div
     className="form-group"
   >
     <span
-      class="fa fa-search"
+      className="fa fa-search"
     />
     <input
       className="form-control"
@@ -17,17 +15,16 @@ exports[`renders correctly 1`] = `
       placeholder="Search..."
       style={
         Object {
-          "background-color": "#fbfcfd",
+          "backgroundColor": "#fbfcfd",
           "border": "none",
-          "border-radius": "2px",
+          "borderRadius": "2px",
           "height": "46px",
-          "marginLeft": "46px",
+          "marginLeft": "6px",
           "marginTop": "22px",
-          "width": "1020px",
         }
       }
       type="search"
     />
   </div>
-</li>
+</div>
 `;

@@ -7,8 +7,8 @@ export default class SignInEmail extends React.Component {
     return (
       <Form
         style={{
-          "margin-bottom": "40px",
-          "margin-top": "60px"
+          marginBottom: "40px",
+          marginTop: "60px"
         }}
       >
         <FormGroup>
@@ -16,21 +16,21 @@ export default class SignInEmail extends React.Component {
           <Input type="email" name="email" id="IdEmail" placeholder="Email" />
         </FormGroup>
         <FormGroup>
-          <Label style={{ "margin-top": "30px" }} for="password">
+          <Label style={{ marginTop: "30px" }} for="password">
             Password
           </Label>
           <NavLink
             style={{
               display: "inline",
-              "font-size": "14px",
-              "font-weight": "normal",
-              "font-style": "normal",
-              "font-stretch": "normal",
-              "line-height": "normal",
-              "letter-spacing": "normal",
-              "text-align": "right",
+              fontSize: "14px",
+              fontWeight: "normal",
+              fontStyle: "normal",
+              fontStretch: "normal",
+              lineHeight: "normal",
+              letterSpacing: "normal",
+              textAlign: "right",
               color: "#7a57d1",
-              "padding-left": "130px"
+              paddingLeft: "130px"
             }}
             href="#"
           >

@@ -16,15 +16,15 @@ const SignInContent = () => (
         <Col xs="9">
           <p
             style={{
-              "margin-top": "8%",
-              "font-size": "16px",
-              "font-weight": "normal",
-              "font-style": "normal",
-              "letter-spacing": "normal",
-              "text-align": "left",
+              marginTop: "49px",
+              fontSize: "16px",
+              fontWeight: "normal",
+              fontStyle: "normal",
+              letterSpacing: "normal",
+              textAlign: "left",
               color: "#3b425d",
               position: "absolute",
-              "margin-left": "68%"
+              marginLeft: "470px"
             }}
           >
             Don't have an account ?
@@ -36,10 +36,10 @@ const SignInContent = () => (
             style={{
               width: "156px",
               height: "54px",
-              "border-radius": "100px",
+              borderRadius: "100px",
               border: "solid 1px #7a57d1",
               color: "#7a57d1",
-              "margin-top": "30px"
+              marginTop: "30px"
             }}
           >
             Get Started

@@ -7,8 +7,8 @@ const GetStartedSignInButton = () => (
       style={{
         width: "192px",
         height: "54px",
-        "border-radius": "100px",
-        "background-image": "linear-gradient(to left, #57aad1, #7a57d1)"
+        borderRadius: "100px",
+        backgroundImage: "linear-gradient(to left, #57aad1, #7a57d1)"
       }}
       color="info"
     >

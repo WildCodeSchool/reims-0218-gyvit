@@ -11,7 +11,7 @@ exports[`renders link html 1`] = `
       className="navbar navbar-expand"
       style={
         Object {
-          "margin-top": "54px",
+          "marginTop": "54px",
         }
       }
     >
@@ -43,8 +43,8 @@ exports[`renders link html 1`] = `
               onClick={[Function]}
               style={
                 Object {
-                  "background-color": "#725fe3",
-                  "border-radius": "50%",
+                  "backgroundColor": "#725fe3",
+                  "borderRadius": "50%",
                 }
               }
               type={undefined}

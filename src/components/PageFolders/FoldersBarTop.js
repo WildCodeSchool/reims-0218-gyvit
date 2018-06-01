@@ -18,7 +18,7 @@ const FoldersBarTop = () => {
         <Navbar
           expand="xs"
           style={{
-            "margin-top": "54px"
+            marginTop: "54px"
           }}
         >
           <NavbarBrand>Folders</NavbarBrand>
@@ -28,8 +28,8 @@ const FoldersBarTop = () => {
               <NavItem>
                 <Button
                   style={{
-                    "border-radius": "50%",
-                    "background-color": "#725fe3"
+                    borderRadius: "50%",
+                    backgroundColor: "#725fe3"
                   }}
                 >
                   +
