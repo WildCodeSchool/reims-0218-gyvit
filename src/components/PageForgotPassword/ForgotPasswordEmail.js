@@ -1,6 +1,6 @@
 //TODO: create a email input
 import React from "react"
-import { Form, FormGroup, Label, Input } from "reactstrap"
+import { FormGroup, Label, Input } from "reactstrap"
 
 export default class ForgotPasswordEmail extends React.Component {
   render() {
