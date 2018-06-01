@@ -13,9 +13,7 @@ exports[`renders link html 1`] = `
       }
     }
   >
-     
     GYVIT
-     
   </p>
   <ul
     className="nav flex-column"

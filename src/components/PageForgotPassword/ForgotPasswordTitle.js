@@ -2,17 +2,17 @@
 import React from "react"
 
 const ForgotPasswordTitle = () => (
-  <div style={{ "padding-top": "40%" }}>
+  <div style={{ paddingTop: "40%" }}>
     <p
       style={{
         height: "24px",
-        "font-size": "24px",
-        "font-weight": "normal",
-        "font-style": "normal",
-        "font-stretch": "normal",
-        "line-height": "normal",
-        "letter-spacing": "normal",
-        "text-align": "left",
+        fontSize: "24px",
+        fontWeight: "normal",
+        fontStyle: "normal",
+        fontStretch: "normal",
+        lineHeight: "normal",
+        letterSpacing: "normal",
+        textAlign: "left",
         color: "#3b425d"
       }}
     >
@@ -20,15 +20,15 @@ const ForgotPasswordTitle = () => (
     </p>
     <p
       style={{
-        "font-size": "18px",
-        "font-weight": "normal",
-        "font-style": "normal",
-        "font-stretch": "normal",
-        "line-height": "normal",
-        "letter-spacing": "normal",
-        "text-align": "left",
+        fontSize: "18px",
+        fontWeight: "normal",
+        fontStyle: "normal",
+        fontStretch: "normal",
+        lineHeight: "normal",
+        letterSpacing: "normal",
+        textAlign: "left",
         color: "#9da5c9",
-        "margin-top": "15px"
+        marginTop: "15px"
       }}
     >
       Enter your email address below and we'll get you back on track.{" "}

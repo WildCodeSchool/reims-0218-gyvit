@@ -11,7 +11,7 @@ const NavbarTop = ({ notif, profile }) => (
   <Nav
     style={{
       height: "90px",
-      "background-color": "#ffffff",
+      backgroundColor: "#ffffff",
       border: "solid 1px #e5e8f4"
     }}
     className="row"

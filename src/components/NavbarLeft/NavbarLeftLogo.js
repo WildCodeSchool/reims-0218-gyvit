@@ -11,8 +11,7 @@ const NavbarLeftLogo = () => {
         backgroundColor: "#181048"
       }}
     >
-      {" "}
-      GYVIT{" "}
+      GYVIT
     </p>
   )
 }

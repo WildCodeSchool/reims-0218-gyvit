@@ -7,7 +7,6 @@ exports[`renders link html 1`] = `
       "backgroundImage": "url('https://www.onecomputer.fr/wp-content/uploads/2016/01/blurred-background-81.jpg')",
       "height": "100vh",
       "position": "relative",
-      "width": "max-width",
     }
   }
 >
@@ -24,14 +23,14 @@ exports[`renders link html 1`] = `
           style={
             Object {
               "color": "#3b425d",
-              "font-size": "16px",
-              "font-style": "normal",
-              "font-weight": "normal",
-              "letter-spacing": "normal",
-              "margin-left": "43vh",
-              "margin-top": "49px",
+              "fontSize": "16px",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "letterSpacing": "normal",
+              "marginLeft": "43vh",
+              "marginTop": "49px",
               "position": "absolute",
-              "text-align": "left",
+              "textAlign": "left",
             }
           }
         >
@@ -50,7 +49,7 @@ exports[`renders link html 1`] = `
               "borderRadius": "100px",
               "color": "#7a57d1",
               "height": "54px",
-              "margin-top": "30px",
+              "marginTop": "30px",
               "width": "156px",
             }
           }

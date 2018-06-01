@@ -9,9 +9,9 @@ exports[`renders link html 1`] = `
       "fontStyle": "normal",
       "fontWeight": "normal",
       "height": "16px",
-      "letter-spacing": "normal",
-      "margin-top": "120px",
-      "text-align": "left",
+      "letterSpacing": "normal",
+      "marginTop": "120px",
+      "textAlign": "left",
       "width": "300px",
     }
   }
