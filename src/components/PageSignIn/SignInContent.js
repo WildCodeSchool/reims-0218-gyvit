@@ -16,7 +16,7 @@ const SignInContent = () => (
         <Col xs="9">
           <p
             style={{
-              "margin-top": "49px",
+              "margin-top": "8%",
               "font-size": "16px",
               "font-weight": "normal",
               "font-style": "normal",
@@ -24,7 +24,7 @@ const SignInContent = () => (
               "text-align": "left",
               color: "#3b425d",
               position: "absolute",
-              "margin-left": "470px"
+              "margin-left": "68%"
             }}
           >
             Don't have an account ?

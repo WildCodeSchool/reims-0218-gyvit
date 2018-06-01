@@ -4,7 +4,6 @@ import { Button, Row, Container, Col } from "reactstrap"
 const GetStartedSignInContent = () => (
   <div
     style={{
-      width: "max-width",
       height: "100vh",
       backgroundImage:
         "url('https://www.onecomputer.fr/wp-content/uploads/2016/01/blurred-background-81.jpg')",
@@ -24,7 +23,7 @@ const GetStartedSignInContent = () => (
               "text-align": "left",
               color: "#3b425d",
               position: "absolute",
-              "margin-left": "43vh"
+              "margin-left": "70%"
             }}
           >
             Already have an account ?
