@@ -18,7 +18,7 @@ const ListLink = ({ dataLinks }) => (
         color: "white"
       }}
     >
-      <NavItem>
+      <NavItem className="text-center">
         {dataLinks.map((link, index) => <Link key={index} {...link} />)}
       </NavItem>
     </Nav>
