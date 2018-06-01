@@ -5,50 +5,38 @@ import { storiesOf } from "@storybook/react"
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import Content from "../components/Content"
-import DashboardCard from "../components/DashboardCard"
-import Link from "../components/Link"
-import Listlink from "../components/ListLink"
+import DashboardCard from "../components/PageDashboard/DashboardCard"
+import NavbarLeft from "../components/NavbarLeft/NavbarLeft"
 
-import ListFile from "../components/ListFile"
-import NavbarTop from "../components/NavbarTop"
-import NavbarTopSearch from "../components/NavbarTopSearch"
-import NavbarTopNotif from "../components/NavbarTopNotif"
-import NavbarTopProfile from "../components/NavbarTopProfile"
-import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
-import FoldersBarTop from "../components/FoldersBarTop"
-import GetStartedSignInEmail from "../components/GetStartedSignInEmail"
-import GetStartedSignInTitle from "../components/GetStartedSignInTitle"
-import GetStartedSignInButton from "../components/GetStartedSignInButton"
-import GetStartedSignInLinkHaveAnAccount from "../components/GetStartedSignInLinkHaveAnAccount"
-import PageGetStartedForm from "../components/PageGetStartedForm"
-import PageGetStarted from "../components/PageGetStarted"
+import NavbarTop from "../components/NavbarTop/NavbarTop"
+import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 
-import PageSignIn from "../components/PageSignIn"
-import SignInBarLeft from "../components/SignInBarLeft"
-import SignInButton from "../components/SignInButton"
-import SignInContent from "../components/SignInContent"
-import SignInEmail from "../components/SignInEmail"
-import SignInTitle from "../components/SignInTitle"
-import SignInGetStarted from "../components/SignInGetStarted"
-import ForgotPasswordTitle from "../components/ForgotPasswordTitle"
-import ForgotPasswordEmail from "../components/ForgotPasswordEmail"
-import ForgotPasswordButton from "../components/ForgotPasswordButton"
-import ForgotPasswordContent from "../components/ForgotPasswordContent"
-import ForgotPasswordBackToSignIn from "../components/ForgotPasswordBackToSignIn"
-import PageForgotPassword from "../components/PageForgotPassword"
-import ForgotPasswordGetStarted from "../components/ForgotPasswordGetStarted"
+import NavbarTopNotif from "../components/NavbarTop/NavbarTopNotif"
+import NavbarTopProfile from "../components/NavbarTop/NavbarTopProfile"
+import NavbarTopNotifBubble from "../components/NavbarTop/NavbarTopNotifBubble"
 
-storiesOf("Page Dashboard", module)
-  .add("NavbarTop", () => <NavbarTop {...props} />)
-  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
-  .add("DashboardContent", () => (
-    <Content elements={listCardsInHome} name={name} />
-  ))
+import FoldersBarTop from "../components/PageFolders/FoldersBarTop"
+import GetStartedSignInEmail from "../components/PageGetStarted/GetStartedSignInEmail"
+import GetStartedSignInTitle from "../components/PageGetStarted/GetStartedSignInTitle"
+import GetStartedSignInButton from "../components/PageGetStarted/GetStartedSignInButton"
+import GetStartedForm from "../components/PageGetStarted/GetStartedForm"
+import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 
-storiesOf("NavbarLeft", module)
-  .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
-  .add("NavbarLink", () => <Link {...homeLinkProps} />)
+import PageSignIn from "../components/PageSignIn/PageSignIn"
+import SignInBarLeft from "../components/PageSignIn/SignInBarLeft"
+import SignInButton from "../components/PageSignIn/SignInButton"
+import SignInContent from "../components/PageSignIn/SignInContent"
+import SignInEmail from "../components/PageSignIn/SignInEmail"
+import SignInTitle from "../components/PageSignIn/SignInTitle"
+import SignInGetStarted from "../components/PageSignIn/SignInGetStarted"
+
+import ForgotPasswordTitle from "../components/PageForgotPassword/ForgotPasswordTitle"
+import ForgotPasswordEmail from "../components/PageForgotPassword/ForgotPasswordEmail"
+import ForgotPasswordButton from "../components/PageForgotPassword/ForgotPasswordButton"
+import ForgotPasswordContent from "../components/PageForgotPassword/ForgotPasswordContent"
+import ForgotPasswordBackToSignIn from "../components/PageForgotPassword/ForgotPasswordBackToSignIn"
+import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassword"
+import ForgotPasswordGetStarted from "../components/PageForgotPassword/ForgotPasswordGetStarted"
 
 const props = {
   notif: {
@@ -164,6 +152,62 @@ const files = [
   }
 ]
 
+const listLinksProps = {
+  dataLinks: [
+    {
+      nameLink: "Home",
+      icon: process.env.PUBLIC_URL + "/img/icon_home.png"
+    },
+    {
+      nameLink: "Files",
+      icon: process.env.PUBLIC_URL + "/img/icon_files.png"
+    },
+    {
+      nameLink: "Shares",
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
+    },
+    {
+      nameLink: "Templates",
+      icon: process.env.PUBLIC_URL + "/img/icon_templates.png"
+    },
+    {
+      nameLink: "Requests",
+      icon: process.env.PUBLIC_URL + "/img/icon_requests.png"
+    },
+    {
+      nameLink: "Public links",
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
+    },
+    {
+      nameLink: "Contacts",
+      icon: process.env.PUBLIC_URL + "/img/icon_contacts.png"
+    },
+    {
+      nameLink: "Settings",
+      icon: process.env.PUBLIC_URL + "/img/icon_settings.png"
+    }
+  ]
+}
+
+const homeLinkProps = {
+  nameLink: "Home",
+  icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+}
+storiesOf(" Main Components", module)
+  .add("NavbarTop", () => <NavbarTop {...props} />)
+  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
+
+storiesOf(" Dashboard Components", module)
+  .add("NavbarTop", () => <NavbarTop {...props} />)
+  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
+  .add("DashboardContent", () => (
+    <Content elements={listCardsInHome} name={name} />
+  ))
+
+storiesOf("NavbarLeft", module)
+  .add("NavbarListLink", () => <NavbarLeft {...listLinksProps} />)
+  .add("NavbarLink", () => <Link {...homeLinkProps} />)
+
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
   .add("NavbarTopNotif", () => <NavbarTopNotif {...props.notif} />)
@@ -210,50 +254,8 @@ storiesOf("DashboardContent", module)
 
 storiesOf("Page Folders", module)
   .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
-  .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
+  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
   .add("FoldersBarTop", () => <FoldersBarTop />)
-
-const listLinksProps = {
-  dataLinks: [
-    {
-      nameLink: "Home",
-      icon: process.env.PUBLIC_URL + "/img/icon_home.png"
-    },
-    {
-      nameLink: "Files",
-      icon: process.env.PUBLIC_URL + "/img/icon_files.png"
-    },
-    {
-      nameLink: "Shares",
-      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
-    },
-    {
-      nameLink: "Templates",
-      icon: process.env.PUBLIC_URL + "/img/icon_templates.png"
-    },
-    {
-      nameLink: "Requests",
-      icon: process.env.PUBLIC_URL + "/img/icon_requests.png"
-    },
-    {
-      nameLink: "Public links",
-      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
-    },
-    {
-      nameLink: "Contacts",
-      icon: process.env.PUBLIC_URL + "/img/icon_contacts.png"
-    },
-    {
-      nameLink: "Settings",
-      icon: process.env.PUBLIC_URL + "/img/icon_settings.png"
-    }
-  ]
-}
-
-const homeLinkProps = {
-  nameLink: "Home",
-  icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
-}
 
 storiesOf("ListFile", module)
   .add("ListFile", () => <ListFile />)
