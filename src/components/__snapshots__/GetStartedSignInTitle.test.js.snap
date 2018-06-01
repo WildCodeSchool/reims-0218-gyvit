@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div>
+  <p
+    style={
+      Object {
+        "color": "#3b425d",
+        "font-size": "24px",
+        "font-stretch": "normal",
+        "font-style": "normal",
+        "font-weight": "normal",
+        "height": "24px",
+        "letter-spacing": "normal",
+        "line-height": "normal",
+        "text-align": "left",
+      }
+    }
+  >
+    Get started absolutely free
+  </p>
+  <p
+    style={
+      Object {
+        "color": "#9da5c9",
+        "fontSize": "18px",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+        "height": "18px",
+        "letter-spacing": "normal",
+        "text-align": "left",
+        "width": "300px",
+      }
+    }
+  >
+    Free forever. No credit card needed.
+  </p>
+</div>
+`;
