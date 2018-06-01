@@ -20,7 +20,7 @@ const NavbarTopNotifBubble = ({ notifsCount }) => {
 }
 
 NavbarTopNotifBubble.propTypes = {
-  notifscount: PropTypes.number.isRequired
+  notifsCount: PropTypes.number.isRequired
 }
 
 export default NavbarTopNotifBubble

@@ -20,7 +20,6 @@ exports[`renders link html 1`] = `
   <ul
     className="nav flex-column"
     expand="md"
-    light={true}
     style={
       Object {
         "backgroundColor": "#231b56",

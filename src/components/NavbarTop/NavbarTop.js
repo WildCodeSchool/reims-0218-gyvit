@@ -23,14 +23,8 @@ const NavbarTop = ({ notif, profile }) => (
 )
 
 NavbarTop.propTypes = {
-  notif: {
-    notifsCount: PropTypes.number.isRequired
-  },
-  profile: {
-    lastname: PropTypes.string.isRequired,
-    firstname: PropTypes.string.isRequired,
-    business: PropTypes.string.isRequired
-  }
+  notif: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired
 }
 
 export default NavbarTop

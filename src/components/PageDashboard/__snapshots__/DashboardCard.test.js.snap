@@ -55,7 +55,9 @@ exports[`renders link html 1`] = `
                 "width": "175px",
               }
             }
-          />
+          >
+            Documents requests
+          </h5>
           <p
             className="card-text"
             style={
@@ -72,11 +74,13 @@ exports[`renders link html 1`] = `
                 "width": "228px",
               }
             }
-          />
+          >
+            Take the first step to launching your store. Add physical items, digital downloads you can dream up.
+          </p>
           <button
             className="btn btn-secondary"
             onClick={[Function]}
-            src={undefined}
+            src="lien0"
             style={
               Object {
                 "border-radius": "2px",
@@ -90,7 +94,9 @@ exports[`renders link html 1`] = `
               }
             }
             type={undefined}
-          />
+          >
+            Create first request
+          </button>
         </div>
       </div>
     </div>

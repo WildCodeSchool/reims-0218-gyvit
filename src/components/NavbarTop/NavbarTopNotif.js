@@ -22,7 +22,7 @@ const NavbarTopNotif = ({ notifsCount }) => {
 }
 
 NavbarTopNotif.propTypes = {
-  notifscount: PropTypes.number.isRequired
+  notifsCount: PropTypes.number.isRequired
 }
 
 export default NavbarTopNotif
