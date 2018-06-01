@@ -8,10 +8,10 @@ import GetStartedSignInLinkHaveAnAccount from "./GetStartedSignInLinkHaveAnAccou
 const GetStartedForm = () => (
   <Container
     style={{
-      "padding-top": "25%",
-      "margin-left": "30px",
+      "padding-top": "75%",
+      "margin-left": "5%",
       "background-color": "#ffffff",
-      "margin-right": "50px"
+      "margin-right": "10%"
     }}
   >
     <Form>

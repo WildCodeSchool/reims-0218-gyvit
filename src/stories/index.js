@@ -24,7 +24,7 @@ import GetStartedSignInLinkHaveAnAccount from "../components/GetStartedSignInLin
 import PageGetStartedForm from "../components/PageGetStartedForm"
 import PageGetStarted from "../components/PageGetStarted"
 
-import PageSignIn from "../components/PageSignIn"
+import PageSignIn from "../components/PageSignIn/PageSignIn"
 import SignInBarLeft from "../components/SignInBarLeft"
 import SignInButton from "../components/SignInButton"
 import SignInContent from "../components/SignInContent"
