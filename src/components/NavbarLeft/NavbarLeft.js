@@ -13,6 +13,7 @@ const NavbarLeft = ({ dataLinks }) => (
       light="true"
       expand="md"
       style={{
+        width: "220px",
         height: "1024px",
         backgroundColor: "#231b56",
         color: "white"
