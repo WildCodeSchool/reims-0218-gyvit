@@ -31,7 +31,7 @@ import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
 
 storiesOf("Page Dashboard", module)
-  .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
+  .add("NavbarTop", () => <NavbarTop {...props} />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("DashboardContent", () => (
     <Content elements={listCardsInHome} name={name} />
@@ -41,10 +41,15 @@ storiesOf("NavbarLeft", module)
   .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
   .add("NavbarLink", () => <Link {...homeLinkProps} />)
 
-const propsContentOfProfil = {
-  lastname: "Duflot",
-  firstname: "Romain",
-  business: "Notoriety"
+const props = {
+  notif: {
+    notifsCount: 6
+  },
+  profile: {
+    lastname: "Duflot",
+    firstname: "Romain",
+    business: "Notoriety"
+  }
 }
 
 const propsWith0notif = {
@@ -63,13 +68,23 @@ const propsWith116notif = {
   notifsCount: 116
 }
 
+const cardInHome = {
+  id: 0,
+  image: "",
+  titre: "Documents requests",
+  bio:
+    "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
+  buttonText: "Create first request",
+  link: "lien0"
+}
+
 const listCardsInHome = [
   {
     id: 0,
     image: "",
     titre: "Documents requests",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Create first request",
     link: "lien0"
   },
@@ -78,7 +93,7 @@ const listCardsInHome = [
     image: "",
     titre: "Share documents",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Share documents",
     link: "lien1"
   },
@@ -87,17 +102,18 @@ const listCardsInHome = [
     image: "",
     titre: "Store files",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Upload documents",
     link: "lien2"
   }
 ]
-const name = "Romain"
+
+const name = "Kevin"
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
-  .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
+  .add("NavbarTopNotif", () => <NavbarTopNotif {...props.notif} />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...props.profile} />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
   <NavbarTopNotif {...propsWith0notif} />
@@ -126,6 +142,12 @@ storiesOf("NavbarTopNotifBubble", module).add(
   "NavbarTopNotifBubble pour 116 notifs",
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
+
+storiesOf("SignIn", module)
+  .add("SignInEmail", () => <SignInEmail />)
+  .add("SignInButton", () => <SignInButton />)
+  .add("SignInGetStarted", () => <SignInGetStarted />)
+  .add("SignInTitle", () => <SignInTitle />)
 storiesOf("DashboardContent", module)
   .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
   .add("with array of actions", () => (
@@ -141,35 +163,35 @@ const listLinksProps = {
   dataLinks: [
     {
       nameLink: "Home",
-      icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_home.png"
     },
     {
       nameLink: "Files",
-      icon: process.env.PUBLIC_URL + "/img/files.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_files.png"
     },
     {
       nameLink: "Shares",
-      icon: process.env.PUBLIC_URL + "/img/share.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
     },
     {
       nameLink: "Templates",
-      icon: process.env.PUBLIC_URL + "/img/templates.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_templates.png"
     },
     {
       nameLink: "Requests",
-      icon: process.env.PUBLIC_URL + "/img/request.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_requests.png"
     },
     {
       nameLink: "Public links",
-      icon: process.env.PUBLIC_URL + "/img/links.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
     },
     {
       nameLink: "Contacts",
-      icon: process.env.PUBLIC_URL + "/img/contact.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_contacts.png"
     },
     {
       nameLink: "Settings",
-      icon: process.env.PUBLIC_URL + "/img/settings.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_settings.png"
     }
   ]
 }

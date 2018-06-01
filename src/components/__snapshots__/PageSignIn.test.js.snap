@@ -6,10 +6,9 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "background-color": "#ffffff",
-      "height": "1067px",
-      "margin-left": "60px",
+      "margin-left": "30px",
+      "margin-right": "50px",
       "padding-top": "290px",
-      "width": "460px",
     }
   }
 >
@@ -106,7 +105,7 @@ exports[`renders correctly 1`] = `
             "font-weight": "normal",
             "letter-spacing": "normal",
             "line-height": "normal",
-            "padding-left": "110px",
+            "padding-left": "130px",
             "text-align": "right",
           }
         }

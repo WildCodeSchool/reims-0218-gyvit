@@ -1,18 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders link html 1`] = `
-<nav
-  className="navbar navbar-expand-md navbar-light"
-  style={
-    Object {
-      "background-color": "#231b56",
-      "height": "1024px",
-      "width": "220px",
+<div>
+  <p
+    className="my-auto d-flex align-items-center"
+    style={
+      Object {
+        "backgroundColor": "#181048",
+        "color": "white",
+        "fontWeight": "bold",
+        "height": "90px",
+      }
     }
-  }
->
+  >
+     
+    GYVIT
+     
+  </p>
   <ul
     className="nav flex-column"
+    expand="md"
+    light={true}
+    style={
+      Object {
+        "backgroundColor": "#231b56",
+        "color": "white",
+        "height": "1024px",
+      }
+    }
   >
     <li
       className="nav-item"
@@ -22,10 +37,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/house_38533.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Home
         </a>
@@ -36,10 +63,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/files.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Files
         </a>
@@ -50,10 +89,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/share.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Shares
         </a>
@@ -64,10 +115,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/templates.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Templates
         </a>
@@ -78,10 +141,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/request.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Requests
         </a>
@@ -92,10 +167,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/links.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Public links
         </a>
@@ -106,10 +193,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/contact.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Contacts
         </a>
@@ -120,10 +219,22 @@ exports[`renders link html 1`] = `
           className="nav-link"
           href="#"
           onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            }
+          }
         >
           <img
             alt=""
             src="/img/settings.ico"
+            style={
+              Object {
+                "opacity": 0.8,
+                "paddingRight": 10,
+              }
+            }
           />
           Settings
         </a>
@@ -131,5 +242,5 @@ exports[`renders link html 1`] = `
       </div>
     </li>
   </ul>
-</nav>
+</div>
 `;

@@ -1,14 +1,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import DashboardCard from "./DashboardCard"
 import renderer from "react-test-renderer"
+import NavbarLeftLogo from "./NavbarLeftLogo"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<DashboardCard />, div)
+  ReactDOM.render(<NavbarLeftLogo />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
-it("renders link html", () => {
-  const tree = renderer.create(<DashboardCard />).toJSON()
+
+it("renders correctly", () => {
+  const tree = renderer.create(<NavbarLeftLogo />).toJSON()
   expect(tree).toMatchSnapshot()
 })
