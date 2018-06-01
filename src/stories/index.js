@@ -7,14 +7,14 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import DashboardCard from "../components/PageDashboard/DashboardCard"
 import NavbarLeft from "../components/NavbarLeft/NavbarLeft"
-
+import NavbarLeftItem from "../components/NavbarLeft/NavbarLeftItem"
 import NavbarTop from "../components/NavbarTop/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
-
+import NavbarLeftLogo from "../components/NavbarLeft/NavbarLeftLogo"
 import NavbarTopNotif from "../components/NavbarTop/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTop/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTop/NavbarTopNotifBubble"
-
+import FoldersTable from "../components/PageFolders/FoldersTable"
 import FoldersBarTop from "../components/PageFolders/FoldersBarTop"
 import GetStartedSignInEmail from "../components/PageGetStarted/GetStartedSignInEmail"
 import GetStartedSignInTitle from "../components/PageGetStarted/GetStartedSignInTitle"
@@ -29,6 +29,7 @@ import SignInContent from "../components/PageSignIn/SignInContent"
 import SignInEmail from "../components/PageSignIn/SignInEmail"
 import SignInTitle from "../components/PageSignIn/SignInTitle"
 import SignInGetStarted from "../components/PageSignIn/SignInGetStarted"
+import DashboardListCards from "../components/PageDashboard/DashboardListCards"
 
 import ForgotPasswordTitle from "../components/PageForgotPassword/ForgotPasswordTitle"
 import ForgotPasswordEmail from "../components/PageForgotPassword/ForgotPasswordEmail"
@@ -198,15 +199,14 @@ storiesOf(" Main Components", module)
   .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
 
 storiesOf(" Dashboard Components", module)
-  .add("NavbarTop", () => <NavbarTop {...props} />)
-  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
   .add("DashboardContent", () => (
-    <Content elements={listCardsInHome} name={name} />
+    <DashboardListCards elements={listCardsInHome} name={name} />
   ))
+  .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
 
 storiesOf("NavbarLeft", module)
-  .add("NavbarListLink", () => <NavbarLeft {...listLinksProps} />)
-  .add("NavbarLink", () => <Link {...homeLinkProps} />)
+  .add("NavbarLeftItem", () => <NavbarLeftItem {...homeLinkProps} />)
+  .add("NavBarLeftLogo", () => <NavbarLeftLogo />)
 
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
@@ -241,37 +241,26 @@ storiesOf("NavbarTopNotifBubble", module).add(
   () => <NavbarTopNotifBubble {...propsWith116notif} />
 )
 
-storiesOf("SignIn", module)
-  .add("SignInEmail", () => <SignInEmail />)
-  .add("SignInButton", () => <SignInButton />)
-  .add("SignInGetStarted", () => <SignInGetStarted />)
-  .add("SignInTitle", () => <SignInTitle />)
-storiesOf("DashboardContent", module)
-  .add("card", () => <DashboardCard contenu={listCardsInHome[2]} />)
-  .add("with array of actions", () => (
-    <Content elements={listCardsInHome} name={name} />
-  ))
-
-storiesOf("Page Folders", module)
-  .add("NavbarTop", () => <NavbarTop {...propsWith116notif} />)
-  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
-  .add("FoldersBarTop", () => <FoldersBarTop />)
-
-storiesOf("ListFile", module)
-  .add("ListFile", () => <ListFile />)
-  .add("ListFile with ContentFile in tbody", () => (
-    <ListFile files={files} dirs={dirs} />
-  ))
-storiesOf("Sign In", module)
+storiesOf("Components Page Sign In", module)
   .add("SignInTitle", () => <SignInTitle />)
   .add("SignInButton", () => <SignInButton />)
   .add("SignInEmail", () => <SignInEmail />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInContent", () => <SignInContent />)
 
-storiesOf("SignInBarLeft", module).add("SignInBarLeft", () => <SignInBarLeft />)
+storiesOf("Component SignInBarLeft", module).add("SignInBarLeft", () => (
+  <SignInBarLeft />
+))
 
 storiesOf("Page SignIn", module).add("PageSignIn", () => <PageSignIn />)
+
+storiesOf("Components Page Folders", module)
+  .add("FoldersBarTop", () => <FoldersBarTop />)
+  .add("FoldersTable", () => <FoldersTable files={files} dirs={dirs} />)
+
+storiesOf("Page Folders", module)
+  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
+  .add("NavbarTop", () => <NavbarTop />)
 
 storiesOf("GetStarted", module)
   .add("GetStartedSignInEmail", () => <GetStartedSignInEmail />)
