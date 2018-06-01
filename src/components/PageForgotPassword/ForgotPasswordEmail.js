@@ -11,7 +11,6 @@ export default class ForgotPasswordEmail extends React.Component {
           marginTop: "60px"
         }}
       >
-        >
         <Label for="email">Email </Label>
         <Input type="email" name="email" id="IdEmail" placeholder="Email" />
       </FormGroup>
