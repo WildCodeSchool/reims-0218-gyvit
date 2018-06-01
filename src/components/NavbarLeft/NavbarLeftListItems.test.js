@@ -3,7 +3,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import ListLink from "./ListLink"
+import NavbarLeftListItems from "./NavbarLeftListItems"
 
 const listLinksProps = {
   dataLinks: [
@@ -44,11 +44,13 @@ const listLinksProps = {
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<ListLink {...listLinksProps} />, div)
+  ReactDOM.render(<NavbarLeftListItems {...listLinksProps} />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
 it("renders link html", () => {
-  const tree = renderer.create(<ListLink {...listLinksProps} />).toJSON()
+  const tree = renderer
+    .create(<NavbarLeftListItems {...listLinksProps} />)
+    .toJSON()
   expect(tree).toMatchSnapshot()
 })

@@ -3,7 +3,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import Link from "./Link"
+import NavbarLeftItem from "./NavbarLeftItem"
 
 const homeLinkProps = {
   nameLink: "Home",
@@ -12,11 +12,11 @@ const homeLinkProps = {
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<Link />, div)
+  ReactDOM.render(<NavbarLeftItem />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
 it("renders link html", () => {
-  const tree = renderer.create(<Link {...homeLinkProps} />).toJSON()
+  const tree = renderer.create(<NavbarLeftItem {...homeLinkProps} />).toJSON()
   expect(tree).toMatchSnapshot()
 })

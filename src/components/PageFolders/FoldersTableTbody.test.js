@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import ContentFile from "./ContentFile"
+import FoldersTableTbody from "./FoldersTableTbody"
 import { DateTime } from "luxon"
 
 const convertDateFromJsonToFrench = dateToTransform =>
@@ -61,6 +61,6 @@ it("formats the date string from Json to display in a correct way", () => {
 
 it("contentFile renders without crashing", () => {
   const table = document.createElement("table")
-  ReactDOM.render(<ContentFile files={files} dirs={dirs} />, table)
+  ReactDOM.render(<FoldersTableTbody files={files} dirs={dirs} />, table)
   ReactDOM.unmountComponentAtNode(table)
 })

@@ -5,7 +5,7 @@ import Link from "./Link"
 import { Nav, NavItem } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
 
-const ListLink = ({ dataLinks }) => (
+const NavbarLeftListItems = ({ dataLinks }) => (
   <div>
     <NavbarLeftLogo />
     <Nav
@@ -25,4 +25,4 @@ const ListLink = ({ dataLinks }) => (
   </div>
 )
 
-export default ListLink
+export default NavbarLeftListItems
