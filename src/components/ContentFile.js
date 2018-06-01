@@ -9,9 +9,6 @@ const convertDateFromJsonToFrench = dateToTransform =>
 const ContentFile = ({ files, dirs, direction = null, category = "name" }) => {
   return (
     <tbody>
-      {dirs.sort((dira, dirb) => {
-        return dira.name - dirb.name
-      })}
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
