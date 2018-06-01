@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<span
+  className="badge badge-secondary badge-pill"
+  style={
+    Object {
+      "backgroundColor": "#ff007e",
+      "height": "20px",
+      "width": "20px",
+    }
+  }
+/>
+`;

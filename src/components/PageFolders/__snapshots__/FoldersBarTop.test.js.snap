@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-12"
+  >
+    <nav
+      className="navbar navbar-expand"
+      style={
+        Object {
+          "marginTop": "54px",
+        }
+      }
+    >
+      <a
+        className="navbar-brand"
+      >
+        Folders
+      </a>
+      <button
+        className="navbar-toggler"
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        className="collapse navbar-collapse"
+        style={Object {}}
+      >
+        <ul
+          className="ml-auto navbar-nav"
+        >
+          <li
+            className="nav-item"
+          >
+            <button
+              className="btn btn-secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#725fe3",
+                  "borderRadius": "50%",
+                }
+              }
+              type={undefined}
+            >
+              +
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+`;

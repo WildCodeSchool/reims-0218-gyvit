@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="card"
+        style={
+          Object {
+            "height": "423px",
+            "marginRight": "32px",
+            "width": "288px",
+          }
+        }
+      >
+        <img
+          alt="folder"
+          className="card-img"
+          src="img/folder.ico"
+          style={
+            Object {
+              "height": "120px",
+              "marginLeft": "72px",
+              "marginRight": "64.8px",
+              "marginTop": "31px",
+              "width": "151.2px",
+            }
+          }
+        />
+        <div
+          className="card-body"
+          style={
+            Object {
+              "padding": "0px",
+            }
+          }
+        >
+          <h5
+            className="card-title"
+            style={
+              Object {
+                "fontSize": "18px",
+                "height": "24px",
+                "marginLeft": "57px",
+                "marginRight": "56px",
+                "marginTop": "15px",
+                "paddingLeft": "0px",
+                "paddingRight": "0px",
+                "textAlign": "center",
+                "width": "175px",
+              }
+            }
+          />
+          <p
+            className="card-text"
+            style={
+              Object {
+                "fontSize": "15px",
+                "height": "96px",
+                "lineHeight": "24px",
+                "marginBottom": "50px",
+                "marginLeft": "30px",
+                "marginRight": "30px",
+                "marginTop": "13px",
+                "opacity": 0.45,
+                "textAlign": "center",
+                "width": "228px",
+              }
+            }
+          />
+          <button
+            className="btn btn-secondary"
+            onClick={[Function]}
+            src={undefined}
+            style={
+              Object {
+                "borderRadius": "2px",
+                "fontSize": "16px",
+                "height": "44px",
+                "marginBottom": "30px",
+                "marginLeft": "59px ",
+                "marginRight": "59px",
+                "padding": "0px",
+                "width": "170px",
+              }
+            }
+            type={undefined}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
