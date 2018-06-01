@@ -5,11 +5,11 @@ import { storiesOf } from "@storybook/react"
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import DashboardCard from "../components/DashboardCard"
-import ContentFile from "../components/ContentFile"
 import Content from "../components/Content"
+import DashboardCard from "../components/DashboardCard"
 import Link from "../components/Link"
 import Listlink from "../components/ListLink"
+
 import ListFile from "../components/ListFile"
 import NavbarTop from "../components/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTopSearch"
@@ -17,13 +17,30 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 import FoldersBarTop from "../components/FoldersBarTop"
+import GetStartedSignInEmail from "../components/GetStartedSignInEmail"
+import GetStartedSignInTitle from "../components/GetStartedSignInTitle"
+import GetStartedSignInButton from "../components/GetStartedSignInButton"
+import GetStartedSignInLinkHaveAnAccount from "../components/GetStartedSignInLinkHaveAnAccount"
+import PageGetStartedForm from "../components/PageGetStartedForm"
+import PageGetStarted from "../components/PageGetStarted"
+
+import PageSignIn from "../components/PageSignIn"
+import SignInBarLeft from "../components/SignInBarLeft"
 import SignInButton from "../components/SignInButton"
+import SignInContent from "../components/SignInContent"
 import SignInEmail from "../components/SignInEmail"
 import SignInTitle from "../components/SignInTitle"
 import SignInGetStarted from "../components/SignInGetStarted"
+import ForgotPasswordTitle from "../components/ForgotPasswordTitle"
+import ForgotPasswordEmail from "../components/ForgotPasswordEmail"
+import ForgotPasswordButton from "../components/ForgotPasswordButton"
+import ForgotPasswordContent from "../components/ForgotPasswordContent"
+import ForgotPasswordBackToSignIn from "../components/ForgotPasswordBackToSignIn"
+import PageForgotPassword from "../components/PageForgotPassword"
+import ForgotPasswordGetStarted from "../components/ForgotPasswordGetStarted"
 
 storiesOf("Page Dashboard", module)
-  .add("NavbarTop", () => <NavbarTop notifsCount="0" />)
+  .add("NavbarTop", () => <NavbarTop {...props} />)
   .add("NavbarLeft", () => <Listlink {...listLinksProps} />)
   .add("DashboardContent", () => (
     <Content elements={listCardsInHome} name={name} />
@@ -33,10 +50,15 @@ storiesOf("NavbarLeft", module)
   .add("NavbarListLink", () => <Listlink {...listLinksProps} />)
   .add("NavbarLink", () => <Link {...homeLinkProps} />)
 
-const propsContentOfProfil = {
-  lastname: "Duflot",
-  firstname: "Romain",
-  business: "Notoriety"
+const props = {
+  notif: {
+    notifsCount: 6
+  },
+  profile: {
+    lastname: "Duflot",
+    firstname: "Romain",
+    business: "Notoriety"
+  }
 }
 
 const propsWith0notif = {
@@ -60,7 +82,7 @@ const cardInHome = {
   image: "",
   titre: "Documents requests",
   bio:
-    "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+    "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
   buttonText: "Create first request",
   link: "lien0"
 }
@@ -71,7 +93,7 @@ const listCardsInHome = [
     image: "",
     titre: "Documents requests",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Create first request",
     link: "lien0"
   },
@@ -80,7 +102,7 @@ const listCardsInHome = [
     image: "",
     titre: "Share documents",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Share documents",
     link: "lien1"
   },
@@ -89,13 +111,13 @@ const listCardsInHome = [
     image: "",
     titre: "Store files",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
     buttonText: "Upload documents",
     link: "lien2"
   }
 ]
 
-const name = "Romain"
+const name = "Kevin"
 
 const dirs = [
   {
@@ -142,22 +164,10 @@ const files = [
   }
 ]
 
-storiesOf("Content", module).add("with array of actions", () => (
-  <Content elements={listCardsInHome} name={name} />
-))
-storiesOf("DashboardCard", module).add("with single object for a card", () => (
-  <DashboardCard contenu={cardInHome} key="0" />
-))
-storiesOf("ContentFile", module).add("with maps in a tr for a tbody", () => (
-  <table>
-    <ContentFile files={files} dirs={dirs} />
-  </table>
-))
-
 storiesOf("NavbarTop", module)
   .add("NavbarTopSearch", () => <NavbarTopSearch />)
-  .add("NavbarTopNotif", () => <NavbarTopNotif {...propsWith116notif} />)
-  .add("NavbarTopProfile", () => <NavbarTopProfile {...propsContentOfProfil} />)
+  .add("NavbarTopNotif", () => <NavbarTopNotif {...props.notif} />)
+  .add("NavbarTopProfile", () => <NavbarTopProfile {...props.profile} />)
 
 storiesOf("NavbarTopNotif", module).add("NavbarTopNotif0", () => (
   <NavbarTopNotif {...propsWith0notif} />
@@ -207,35 +217,35 @@ const listLinksProps = {
   dataLinks: [
     {
       nameLink: "Home",
-      icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_home.png"
     },
     {
       nameLink: "Files",
-      icon: process.env.PUBLIC_URL + "/img/files.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_files.png"
     },
     {
       nameLink: "Shares",
-      icon: process.env.PUBLIC_URL + "/img/share.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
     },
     {
       nameLink: "Templates",
-      icon: process.env.PUBLIC_URL + "/img/templates.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_templates.png"
     },
     {
       nameLink: "Requests",
-      icon: process.env.PUBLIC_URL + "/img/request.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_requests.png"
     },
     {
       nameLink: "Public links",
-      icon: process.env.PUBLIC_URL + "/img/links.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
     },
     {
       nameLink: "Contacts",
-      icon: process.env.PUBLIC_URL + "/img/contact.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_contacts.png"
     },
     {
       nameLink: "Settings",
-      icon: process.env.PUBLIC_URL + "/img/settings.ico"
+      icon: process.env.PUBLIC_URL + "/img/icon_settings.png"
     }
   ]
 }
@@ -255,3 +265,34 @@ storiesOf("Sign In", module)
   .add("SignInButton", () => <SignInButton />)
   .add("SignInEmail", () => <SignInEmail />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
+  .add("SignInContent", () => <SignInContent />)
+
+storiesOf("SignInBarLeft", module).add("SignInBarLeft", () => <SignInBarLeft />)
+
+storiesOf("Page SignIn", module).add("PageSignIn", () => <PageSignIn />)
+
+storiesOf("GetStarted", module)
+  .add("GetStartedSignInEmail", () => <GetStartedSignInEmail />)
+  .add("GetStartedSignInTitle", () => <GetStartedSignInTitle />)
+  .add("GetStartedSignInButton", () => <GetStartedSignInButton />)
+  .add("GetStartedSignInLinkHaveAnAccount", () => (
+    <GetStartedSignInLinkHaveAnAccount />
+  ))
+
+storiesOf("PageGetStartedForm", module).add("PageGetStartedForm", () => (
+  <PageGetStartedForm />
+))
+storiesOf("Page GetStarted", module).add("PageGetStarted", () => (
+  <PageGetStarted />))
+
+storiesOf("Components Forgot Password", module)
+  .add("ForgotPasswordTitle", () => <ForgotPasswordTitle />)
+  .add("ForgotPasswordEmail", () => <ForgotPasswordEmail />)
+  .add("ForgotPasswordButton", () => <ForgotPasswordButton />)
+  .add("ForgotPasswordGetStarted", () => <ForgotPasswordGetStarted />)
+  .add("ForgotPasswordBackToSignIn", () => <ForgotPasswordBackToSignIn />)
+  .add("ForgotPasswordContent", () => <ForgotPasswordContent />)
+
+storiesOf("Page Forgot Password", module).add("PageForgotPassword", () => (
+  <PageForgotPassword />
+))
