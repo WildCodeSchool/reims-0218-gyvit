@@ -1,21 +1,19 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
 
-import NavbarLeft from "./components/NavbarLeft/NavbarLeft"
-import NavbarLeftLogo from "/components/NavbarLeftLogo/NavbarLeftLogo"
-import DashboardListCards from "./components/DashboardListCards/DashboardListCards"
-import NavbarTop from "./components/NavbarTop/NavbarTop"
+import NavbarLeft from "../NavbarLeft/NavbarLeft"
+import DashboardListCards from "../PageDashboard/DashboardListCards"
+import NavbarTop from "../NavbarTop/NavbarTop"
 
-const PageDashboard = () => (
-  <Container>
+const PageDashboard = ({ dataLinks, notif, profile, elements, name }) => (
+  <Container fluid>
     <Row>
       <Col xs="2">
-        <NavbarLeftLogo />
-        <NavbarLeft />
+        <NavbarLeft dataLinks={dataLinks} />
       </Col>
       <Col xs="10">
-        <NavbarTop />
-        <DashboardListCards />
+        <NavbarTop notif={notif} profile={profile} />
+        <DashboardListCards elements={elements} name={name} />
       </Col>
     </Row>
   </Container>
