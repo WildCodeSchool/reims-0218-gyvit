@@ -1,6 +1,6 @@
 import React from "react"
 import { Row, Col, Container, Form } from "reactstrap"
-import PageGetStartedForm from "./PageGetStartedForm"
+import GetStartedForm from "./GetStartedForm"
 import GetStartedSignInContent from "./GetStartedSignInContent"
 
 const PageGetStarted = () => (
@@ -8,7 +8,7 @@ const PageGetStarted = () => (
     <Form>
       <Row>
         <Col md="4">
-          <PageGetStartedForm />
+          <GetStartedForm />
         </Col>
         <Col md="8">
           <GetStartedSignInContent />

@@ -1,6 +1,6 @@
 import React from "react"
 
-const Category = ({ name = "", direction = null }) => {
+const FoldersTableCategory = ({ name = "", direction = null }) => {
   let source, alter
   switch (direction) {
     case "asc":
@@ -24,4 +24,4 @@ const Category = ({ name = "", direction = null }) => {
   )
 }
 
-export default Category
+export default FoldersTableCategory

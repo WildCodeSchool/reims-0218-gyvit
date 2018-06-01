@@ -1,15 +1,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import PageGetStartedForm from "./PageGetStartedForm"
+import FoldersTableCategory from "./FoldersTableCategory"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<PageGetStartedForm />, div)
+  ReactDOM.render(<FoldersTableCategory />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
-it("renders correctly", () => {
-  const tree = renderer.create(<PageGetStartedForm />).toJSON()
+it("renders link html", () => {
+  const tree = renderer.create(<FoldersTableCategory />).toJSON()
   expect(tree).toMatchSnapshot()
 })

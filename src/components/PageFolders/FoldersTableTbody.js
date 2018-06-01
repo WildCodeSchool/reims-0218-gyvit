@@ -6,7 +6,12 @@ const convertDateFromJsonToFrench = dateToTransform =>
     .setLocale("fr-FR")
     .toLocaleString(DateTime.DATETIME_SHORT)
 
-const ContentFile = ({ files, dirs, direction = null, category = "name" }) => {
+const FoldersTableTbody = ({
+  files,
+  dirs,
+  direction = null,
+  category = "name"
+}) => {
   return (
     <tbody>
       {dirs.map(dir => {
@@ -53,4 +58,4 @@ const ContentFile = ({ files, dirs, direction = null, category = "name" }) => {
   )
 }
 
-export default ContentFile
+export default FoldersTableTbody

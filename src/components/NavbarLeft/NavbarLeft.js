@@ -1,11 +1,11 @@
 // TODO list of links to navbar
 
 import React from "react"
-import Link from "./Link"
+import NavbarLeftItem from "./NavbarLeftItem"
 import { Nav, NavItem } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
 
-const ListLink = ({ dataLinks }) => (
+const NavbarLeft = ({ dataLinks }) => (
   <div>
     <NavbarLeftLogo />
     <Nav
@@ -19,10 +19,12 @@ const ListLink = ({ dataLinks }) => (
       }}
     >
       <NavItem>
-        {dataLinks.map((link, index) => <Link key={index} {...link} />)}
+        {dataLinks.map((link, index) => (
+          <NavbarLeftItem key={index} {...link} />
+        ))}
       </NavItem>
     </Nav>
   </div>
 )
 
-export default ListLink
+export default NavbarLeft

@@ -21,8 +21,8 @@ const FoldersBarTop = () => {
             "margin-top": "54px"
           }}
         >
-          <NavbarBrand style={{}}>Folders</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarBrand>Folders</NavbarBrand>
+          <NavbarToggler />
           <Collapse navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>

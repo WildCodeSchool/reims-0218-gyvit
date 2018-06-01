@@ -1,11 +1,10 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
+import ReactDOM from "react-dom"
+import renderer from "react-test-renderer"
 
-import "bootstrap/dist/css/bootstrap.min.css"
+import DashboardListCards from "./DashboardListCards"
 
-import Content from "../components/Content"
-
-const actionHome = [
+const elements = [
   {
     id: 0,
     image: "",
@@ -37,6 +36,14 @@ const actionHome = [
 
 const name = "Kevin"
 
-storiesOf("Content", module).add("with array of actions", () => (
-  <Content elements={actionHome} name={name} />
-))
+it("renders without crashing", () => {
+  const div = document.createElement("div")
+  ReactDOM.render(<DashboardListCards elements={elements} name={name} />, div)
+  ReactDOM.unmountComponentAtNode(div)
+})
+it("renders link html", () => {
+  const tree = renderer
+    .create(<DashboardListCards elements={elements} name={name} />)
+    .toJSON()
+  expect(tree).toMatchSnapshot()
+})

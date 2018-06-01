@@ -283,7 +283,8 @@ storiesOf("PageGetStartedForm", module).add("PageGetStartedForm", () => (
   <PageGetStartedForm />
 ))
 storiesOf("Page GetStarted", module).add("PageGetStarted", () => (
-  <PageGetStarted />))
+  <PageGetStarted />
+))
 
 storiesOf("Components Forgot Password", module)
   .add("ForgotPasswordTitle", () => <ForgotPasswordTitle />)
