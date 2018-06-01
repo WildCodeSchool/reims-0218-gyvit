@@ -1,7 +1,7 @@
 import React from "react"
 import { Button, Row, Container, Col } from "reactstrap"
 
-const SignInContent = () => (
+const GetStartedSignInContent = () => (
   <div
     style={{
       width: "max-width",
@@ -24,10 +24,10 @@ const SignInContent = () => (
               "text-align": "left",
               color: "#3b425d",
               position: "absolute",
-              "margin-left": "470px"
+              "margin-left": "43vh"
             }}
           >
-            Don't have an account ?
+            Already have an account ?
           </p>
         </Col>
         <Col xs="3">
@@ -36,13 +36,13 @@ const SignInContent = () => (
             style={{
               width: "156px",
               height: "54px",
-              "border-radius": "100px",
+              borderRadius: "100px",
               border: "solid 1px #7a57d1",
               color: "#7a57d1",
               "margin-top": "30px"
             }}
           >
-            Get Started
+            Sign in
           </Button>
         </Col>
       </Row>
@@ -50,4 +50,4 @@ const SignInContent = () => (
   </div>
 )
 
-export default SignInContent
+export default GetStartedSignInContent

@@ -15,6 +15,13 @@ import NavbarTopNotif from "../components/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTopNotifBubble"
 import FoldersBarTop from "../components/FoldersBarTop"
+import GetStartedSignInEmail from "../components/GetStartedSignInEmail"
+import GetStartedSignInTitle from "../components/GetStartedSignInTitle"
+import GetStartedSignInButton from "../components/GetStartedSignInButton"
+import GetStartedSignInLinkHaveAnAccount from "../components/GetStartedSignInLinkHaveAnAccount"
+import PageGetStartedForm from "../components/PageGetStartedForm"
+import PageGetStarted from "../components/PageGetStarted"
+
 import PageSignIn from "../components/PageSignIn"
 import SignInBarLeft from "../components/SignInBarLeft"
 import SignInButton from "../components/SignInButton"
@@ -211,6 +218,20 @@ storiesOf("Sign In", module)
 storiesOf("SignInBarLeft", module).add("SignInBarLeft", () => <SignInBarLeft />)
 
 storiesOf("Page SignIn", module).add("PageSignIn", () => <PageSignIn />)
+
+storiesOf("GetStarted", module)
+  .add("GetStartedSignInEmail", () => <GetStartedSignInEmail />)
+  .add("GetStartedSignInTitle", () => <GetStartedSignInTitle />)
+  .add("GetStartedSignInButton", () => <GetStartedSignInButton />)
+  .add("GetStartedSignInLinkHaveAnAccount", () => (
+    <GetStartedSignInLinkHaveAnAccount />
+  ))
+
+storiesOf("PageGetStartedForm", module).add("PageGetStartedForm", () => (
+  <PageGetStartedForm />
+))
+storiesOf("Page GetStarted", module).add("PageGetStarted", () => (
+  <PageGetStarted />))
 
 storiesOf("Components Forgot Password", module)
   .add("ForgotPasswordTitle", () => <ForgotPasswordTitle />)

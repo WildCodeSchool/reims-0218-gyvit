@@ -1,6 +1,6 @@
 import React from "react"
 import { Row, Col, Container } from "reactstrap"
-import SignInBarLeft from "../components/SignInBarLeft"
+import SignInBarLeft from "./SignInBarLeft"
 import SignInContent from "./SignInContent"
 
 const PageSignIn = () => (
