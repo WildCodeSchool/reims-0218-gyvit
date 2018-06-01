@@ -10,7 +10,6 @@ const NavbarLeft = ({ dataLinks }) => (
     <NavbarLeftLogo />
     <Nav
       vertical
-      light
       expand="md"
       style={{
         height: "1024px",
@@ -18,7 +17,7 @@ const NavbarLeft = ({ dataLinks }) => (
         color: "white"
       }}
     >
-      <NavItem>
+      <NavItem className="text-center">
         {dataLinks.map((link, index) => (
           <NavbarLeftItem key={index} {...link} />
         ))}
