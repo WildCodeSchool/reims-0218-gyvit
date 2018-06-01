@@ -21,7 +21,7 @@ import GetStartedSignInTitle from "../components/PageGetStarted/GetStartedSignIn
 import GetStartedSignInButton from "../components/PageGetStarted/GetStartedSignInButton"
 import GetStartedForm from "../components/PageGetStarted/GetStartedForm"
 import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
-
+import PageFolders from "../components/PageFolders/PageFolders"
 import PageSignIn from "../components/PageSignIn/PageSignIn"
 import SignInBarLeft from "../components/PageSignIn/SignInBarLeft"
 import SignInButton from "../components/PageSignIn/SignInButton"
@@ -30,7 +30,7 @@ import SignInEmail from "../components/PageSignIn/SignInEmail"
 import SignInTitle from "../components/PageSignIn/SignInTitle"
 import SignInGetStarted from "../components/PageSignIn/SignInGetStarted"
 import DashboardListCards from "../components/PageDashboard/DashboardListCards"
-
+import GetStartedSignInLinkHaveAnAccount from "../components/PageGetStarted/GetStartedSignInButton"
 import ForgotPasswordTitle from "../components/PageForgotPassword/ForgotPasswordTitle"
 import ForgotPasswordEmail from "../components/PageForgotPassword/ForgotPasswordEmail"
 import ForgotPasswordButton from "../components/PageForgotPassword/ForgotPasswordButton"
@@ -258,9 +258,7 @@ storiesOf("Components Page Folders", module)
   .add("FoldersBarTop", () => <FoldersBarTop />)
   .add("FoldersTable", () => <FoldersTable files={files} dirs={dirs} />)
 
-storiesOf("Page Folders", module)
-  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
-  .add("NavbarTop", () => <NavbarTop />)
+storiesOf("Page Folders", module).add("PageFolders", () => <PageFolders />)
 
 storiesOf("GetStarted", module)
   .add("GetStartedSignInEmail", () => <GetStartedSignInEmail />)
