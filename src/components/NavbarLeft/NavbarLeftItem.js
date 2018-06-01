@@ -2,9 +2,8 @@
 
 import React from "react"
 import { NavLink } from "reactstrap"
-import NavbarLeftLogo from "./NavbarLeftLogo"
 
-const Link = ({ icon, nameLink }) => (
+const NavbarLeftItem = ({ icon, nameLink }) => (
   <div>
     <NavLink
       href="#"
@@ -28,4 +27,4 @@ const Link = ({ icon, nameLink }) => (
   </div>
 )
 
-export default Link
+export default NavbarLeftItem

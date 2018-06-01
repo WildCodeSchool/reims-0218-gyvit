@@ -1,9 +1,8 @@
 import React from "react"
 import { Row, Col, Container } from "reactstrap"
-import ListLink from "./ListLink"
-import DashboardCard from "./DashboardCard"
 import NavbarTop from "./NavbarTop"
-import Content from "./DashboardCard"
+import NavbarLeft from "../NavbarLeft/NavbarLeft"
+import DashboardListCards from "./DashboardListCards"
 
 const listLinksProps = {
   dataLinks: [
@@ -46,11 +45,11 @@ const PageDashboardCards = () => (
   <Container fluid>
     <Row>
       <Col xs="3">
-        <ListLink {...listLinksProps} />
+        <NavbarLeft {...listLinksProps} />
       </Col>
       <Col xs="9">
         <NavbarTop />
-        <DashboardCard />
+        <DashboardListCards />
       </Col>
     </Row>
   </Container>

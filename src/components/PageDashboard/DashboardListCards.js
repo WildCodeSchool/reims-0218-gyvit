@@ -4,7 +4,7 @@ import { Container, Row, Col } from "reactstrap"
 
 import DashboardCard from "./DashboardCard"
 
-const Content = ({ elements, name }) => (
+const DashboardListCards = ({ elements, name }) => (
   <Container>
     <Row className="App">
       <Col sm="12" md={{ size: 4, offset: 3 }}>
@@ -41,4 +41,4 @@ const Content = ({ elements, name }) => (
     </Row>
   </Container>
 )
-export default Content
+export default DashboardListCards

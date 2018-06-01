@@ -5,7 +5,7 @@ import GetStartedSignInTitle from "./GetStartedSignInTitle"
 import GetStartedSignInButton from "./GetStartedSignInButton"
 import GetStartedSignInLinkHaveAnAccount from "./GetStartedSignInLinkHaveAnAccount"
 
-const PageGetStartedForm = () => (
+const GetStartedForm = () => (
   <Container
     style={{
       "padding-top": "25%",
@@ -23,4 +23,4 @@ const PageGetStartedForm = () => (
   </Container>
 )
 
-export default PageGetStartedForm
+export default GetStartedForm
