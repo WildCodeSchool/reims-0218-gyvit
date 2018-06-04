@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<li
-  className="col-1 nav-item"
+<div
+  className="col-1"
 >
   <img
     alt="iconNotif"
@@ -22,6 +22,8 @@ exports[`renders correctly 1`] = `
         "width": "20px",
       }
     }
-  />
-</li>
+  >
+    6
+  </span>
+</div>
 `;

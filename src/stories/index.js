@@ -22,6 +22,7 @@ import GetStartedSignInButton from "../components/PageGetStarted/GetStartedSignI
 import GetStartedForm from "../components/PageGetStarted/GetStartedForm"
 import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageFolders from "../components/PageFolders/PageFolders"
+import PageDashboard from "../components/PageDashboard/PageDashboard"
 import PageSignIn from "../components/PageSignIn/PageSignIn"
 import SignInBarLeft from "../components/PageSignIn/SignInBarLeft"
 import SignInButton from "../components/PageSignIn/SignInButton"
@@ -65,16 +66,6 @@ const propsWith16notif = {
 
 const propsWith116notif = {
   notifsCount: 116
-}
-
-const cardInHome = {
-  id: 0,
-  image: "",
-  titre: "Documents requests",
-  bio:
-    "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
-  buttonText: "Create first request",
-  link: "lien0"
 }
 
 const listCardsInHome = [
@@ -285,4 +276,13 @@ storiesOf("Components Forgot Password", module)
 
 storiesOf("Page Forgot Password", module).add("PageForgotPassword", () => (
   <PageForgotPassword />
+))
+
+storiesOf("PageDashboard", module).add("PageDashboard", () => (
+  <PageDashboard
+    {...listLinksProps}
+    {...props}
+    elements={listCardsInHome}
+    name={name}
+  />
 ))

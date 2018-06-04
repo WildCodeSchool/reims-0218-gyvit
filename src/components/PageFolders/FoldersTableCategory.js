@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const FoldersTableCategory = ({ name = "", direction = null }) => {
   let source, alter
@@ -22,6 +23,11 @@ const FoldersTableCategory = ({ name = "", direction = null }) => {
       <img src={source} alt={alter} />
     </div>
   )
+}
+
+FoldersTableCategory.propTypes = {
+  name: PropTypes.string.isRequired,
+  direction: PropTypes.string
 }
 
 export default FoldersTableCategory

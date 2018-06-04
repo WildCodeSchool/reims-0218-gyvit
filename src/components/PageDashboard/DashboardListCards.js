@@ -1,6 +1,6 @@
 import React from "react"
-
 import { Container, Row, Col } from "reactstrap"
+import PropTypes from "prop-types"
 
 import DashboardCard from "./DashboardCard"
 
@@ -36,9 +36,15 @@ const DashboardListCards = ({ elements, name }) => (
     </Row>
     <Row>
       {elements.map(element => {
-        return <DashboardCard key={element.id} contenu={element} />
+        return <DashboardCard key={element.id} {...element} />
       })}
     </Row>
   </Container>
 )
+
+DashboardListCards.propTypes = {
+  elements: PropTypes.array.isRequired,
+  name: PropTypes.string.isRequired
+}
+
 export default DashboardListCards
