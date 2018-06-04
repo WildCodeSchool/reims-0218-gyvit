@@ -67,16 +67,6 @@ const propsWith116notif = {
   notifsCount: 116
 }
 
-const cardInHome = {
-  id: 0,
-  image: "",
-  titre: "Documents requests",
-  bio:
-    "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
-  buttonText: "Create first request",
-  link: "lien0"
-}
-
 const listCardsInHome = [
   {
     id: 0,

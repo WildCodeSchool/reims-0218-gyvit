@@ -6,6 +6,8 @@ connectionAction
 
 ## files and directory actions
 
+fetchFilesSuccess
+
 addDirectoryAction
 deleteDirectoryAction
 updateDirectoryAction
@@ -22,18 +24,17 @@ informationsAction
 renameAction
 deleteAction
 
-## filters actions
+## sorting actions
 
-setOrderByNameDescendent
-setOrderByNameAscendent
-setOrderByLastUpdateDescendent
-setOrderByLastUpdateAscendent
-setOrderByUsersDescendent
-setOrderByUsersAscendent
+sort
 
 ## searching actions
 
-setCompletionOfCriterions
+setCompletionOfCriterias
 startSearchAction
 
 # reducers
+
+userReducer
+
+filesReducer
