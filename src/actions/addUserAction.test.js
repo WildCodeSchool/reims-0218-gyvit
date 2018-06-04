@@ -1,12 +1,11 @@
-const makeAddUserAction = () => null
-
-const ADD_USER = "ADD_USER"
+import { ADD_USER, makeAddUserAction } from "./addUserAction"
 
 describe("action Add User", () => {
-  const expected = {
-    type: ADD_USER,
-    userId: 1
-  }
-
-  expect(makeAddUserAction(1)).toEqual(expected)
+  it("should return an action ADD_USER", () => {
+    const expected = {
+      type: ADD_USER,
+      userId: 1
+    }
+    expect(makeAddUserAction(1)).toEqual(expected)
+  })
 })
