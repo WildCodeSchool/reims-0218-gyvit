@@ -12,7 +12,7 @@ const homeLinkProps = {
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<NavbarLeftItem />, div)
+  ReactDOM.render(<NavbarLeftItem {...homeLinkProps} />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 

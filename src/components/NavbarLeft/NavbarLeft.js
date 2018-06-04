@@ -1,16 +1,16 @@
 // TODO list of links to navbar
 
 import React from "react"
+import PropTypes from "prop-types"
 import NavbarLeftItem from "./NavbarLeftItem"
 import { Nav, NavItem } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
 
-const NavbarLeft = ({ dataLinks }) => (
+const NavbarLeft = ({ dataLinks = [] }) => (
   <div>
     <NavbarLeftLogo />
     <Nav
       vertical
-      light="true"
       expand="md"
       style={{
         height: "1024px",
@@ -26,5 +26,9 @@ const NavbarLeft = ({ dataLinks }) => (
     </Nav>
   </div>
 )
+
+NavbarLeft.propTypes = {
+  dataLinks: PropTypes.array
+}
 
 export default NavbarLeft

@@ -10,5 +10,7 @@ exports[`renders correctly 1`] = `
       "width": "20px",
     }
   }
-/>
+>
+  6
+</span>
 `;
