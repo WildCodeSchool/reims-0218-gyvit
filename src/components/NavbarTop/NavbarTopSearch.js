@@ -1,17 +1,16 @@
 //TODO: create component search bar
 
 import React from "react"
-import { FormGroup, Input, NavItem } from "reactstrap"
+import { FormGroup, Input } from "reactstrap"
 
 const NavbarTopSearch = () => (
-  <NavItem>
+  <div>
     <FormGroup>
       <span className="fa fa-search" />
       <Input
         style={{
           marginTop: "22px",
-          marginLeft: "46px",
-          width: "1020px",
+          marginLeft: "6px",
           height: "46px",
           backgroundColor: "#fbfcfd",
           borderRadius: "2px",
@@ -23,7 +22,7 @@ const NavbarTopSearch = () => (
         placeholder="Search..."
       />
     </FormGroup>
-  </NavItem>
+  </div>
 )
 
 export default NavbarTopSearch

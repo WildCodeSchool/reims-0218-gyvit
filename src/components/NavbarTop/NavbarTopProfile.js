@@ -1,12 +1,12 @@
 //TODO: create component Profile
 
 import React from "react"
+import { Media } from "reactstrap"
 import PropTypes from "prop-types"
-import { NavItem, Media } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const NavbarTopProfile = ({ firstname, lastname, business }) => (
-  <NavItem>
+  <div>
     <Media>
       <Media href="#">
         <Media
@@ -44,7 +44,7 @@ const NavbarTopProfile = ({ firstname, lastname, business }) => (
         </Media>
       </Media>
     </Media>
-  </NavItem>
+  </div>
 )
 
 NavbarTopProfile.propTypes = {

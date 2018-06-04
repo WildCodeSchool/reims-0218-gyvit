@@ -18,7 +18,7 @@ const NavbarLeft = ({ dataLinks = [] }) => (
         color: "white"
       }}
     >
-      <NavItem>
+      <NavItem className="text-center">
         {dataLinks.map((link, index) => (
           <NavbarLeftItem key={index} {...link} />
         ))}

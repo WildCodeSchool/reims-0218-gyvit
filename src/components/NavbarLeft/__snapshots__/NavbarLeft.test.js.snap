@@ -3,17 +3,23 @@
 exports[`renders link html 1`] = `
 <div>
   <p
-    className="my-auto d-flex align-items-center"
+    className="d-flex align-items-center"
     style={
       Object {
         "backgroundColor": "#181048",
         "color": "white",
         "fontWeight": "bold",
         "height": "90px",
+        "margin-bottom": "0px",
+        "textAlign": "center",
       }
     }
   >
-    GYVIT
+    <div
+      className="col"
+    >
+      GYVIT 
+    </div>
   </p>
   <ul
     className="nav flex-column"
@@ -27,7 +33,7 @@ exports[`renders link html 1`] = `
     }
   >
     <li
-      className="nav-item"
+      className="text-center nav-item"
     >
       <div>
         <a

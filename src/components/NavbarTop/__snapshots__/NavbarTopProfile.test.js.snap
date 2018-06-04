@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<li
-  className="nav-item"
->
+<div>
   <div
     className="media"
   >
@@ -59,5 +57,5 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
   </div>
-</li>
+</div>
 `;

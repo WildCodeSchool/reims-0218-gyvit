@@ -22,6 +22,7 @@ import GetStartedSignInButton from "../components/PageGetStarted/GetStartedSignI
 import GetStartedForm from "../components/PageGetStarted/GetStartedForm"
 import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageFolders from "../components/PageFolders/PageFolders"
+import PageDashboard from "../components/PageDashboard/PageDashboard"
 import PageSignIn from "../components/PageSignIn/PageSignIn"
 import SignInBarLeft from "../components/PageSignIn/SignInBarLeft"
 import SignInButton from "../components/PageSignIn/SignInButton"
@@ -275,4 +276,13 @@ storiesOf("Components Forgot Password", module)
 
 storiesOf("Page Forgot Password", module).add("PageForgotPassword", () => (
   <PageForgotPassword />
+))
+
+storiesOf("PageDashboard", module).add("PageDashboard", () => (
+  <PageDashboard
+    {...listLinksProps}
+    {...props}
+    elements={listCardsInHome}
+    name={name}
+  />
 ))
