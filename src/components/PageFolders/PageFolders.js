@@ -1,10 +1,14 @@
 import React from "react"
 
-import FoldersBarTop from "./FoldersBarTop"
+import NavbarTop from "./components/NavbarTop/NavbarTop"
+import NavbarLeft from "./NavbarLeft"
+import FolderBarTop from "./FoldersTable"
 
 const PageFolders = ({ files = [], dirs = [] }) => (
   <div>
-    <FoldersBarTop />
+    <NavbarTop />
+    <NavbarLeft />
+    <FolderBarTop />
   </div>
 )
 
