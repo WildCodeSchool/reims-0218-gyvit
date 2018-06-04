@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div
+  style={
+    Object {
+      "backgroundImage": "url('https://www.onecomputer.fr/wp-content/uploads/2016/01/blurred-background-81.jpg')",
+      "height": "100vh",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="container-fluid"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-9"
+      >
+        <p
+          style={
+            Object {
+              "color": "#3b425d",
+              "fontSize": "16px",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "letterSpacing": "normal",
+              "marginLeft": "43vh",
+              "marginTop": "49px",
+              "position": "absolute",
+              "textAlign": "left",
+            }
+          }
+        >
+          Already have an account ?
+        </p>
+      </div>
+      <div
+        className="col-3"
+      >
+        <button
+          className="btn btn-outline-secondary"
+          onClick={[Function]}
+          style={
+            Object {
+              "border": "solid 1px #7a57d1",
+              "borderRadius": "100px",
+              "color": "#7a57d1",
+              "height": "54px",
+              "marginTop": "30px",
+              "width": "156px",
+            }
+          }
+          type={undefined}
+        >
+          Sign in
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

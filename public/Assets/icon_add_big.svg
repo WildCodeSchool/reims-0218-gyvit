@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_add_big</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Requests-1/2" transform="translate(-1315.000000, -155.000000)">
+            <g id="icon_add_big" transform="translate(1315.000000, 155.000000)">
+                <circle id="Oval-4" fill="#725FE3" cx="25" cy="25" r="25"></circle>
+                <path d="M32,24 L26,24 L26,18 C26,17.4 25.6,17 25,17 C24.4,17 24,17.4 24,18 L24,24 L18,24 C17.4,24 17,24.4 17,25 C17,25.6 17.4,26 18,26 L24,26 L24,32 C24,32.6 24.4,33 25,33 C25.6,33 26,32.6 26,32 L26,26 L32,26 C32.6,26 33,25.6 33,25 C33,24.4 32.6,24 32,24" id="Fill-172" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

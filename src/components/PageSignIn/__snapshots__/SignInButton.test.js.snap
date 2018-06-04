@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div>
+  <button
+    className="btn btn-info"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundImage": "linear-gradient(to left, #57aad1, #7a57d1)",
+        "borderRadius": "100px",
+        "height": "54px",
+        "width": "192px",
+      }
+    }
+    type={undefined}
+  >
+    Sign in
+  </button>
+</div>
+`;

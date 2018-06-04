@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div>
+  
+  <img
+    alt="upDown"
+    src="Assets/icon_double_arrow.png"
+  />
+</div>
+`;

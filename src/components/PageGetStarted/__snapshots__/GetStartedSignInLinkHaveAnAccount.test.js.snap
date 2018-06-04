@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders link html 1`] = `
+<div
+  style={
+    Object {
+      "color": "#3b425d",
+      "fontSize": "16px",
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "height": "16px",
+      "letterSpacing": "normal",
+      "marginTop": "120px",
+      "textAlign": "left",
+      "width": "300px",
+    }
+  }
+>
+  <p>
+    Already have an account ?
+    <a
+      className="nav-link"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline",
+        }
+      }
+    >
+      Sign in
+    </a>
+  </p>
+</div>
+`;

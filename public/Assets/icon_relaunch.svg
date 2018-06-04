@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="16px" viewBox="0 0 15 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_relaunch</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Files" transform="translate(-1049.000000, -151.000000)" stroke="#909DAA" stroke-width="2">
+            <g id="Group-18" transform="translate(820.000000, 140.000000)">
+                <g id="Group-2" transform="translate(218.000000, 0.000000)">
+                    <g id="icon_relaunch" transform="translate(12.000000, 12.000000)">
+                        <path d="M12.7272727,7 C12.7272727,3.5 9.86363636,0.636363636 6.36363636,0.636363636 C3.88181818,0.636363636 1.71818182,2.03636364 0.7,4.13636364" id="Stroke-965"></path>
+                        <polyline id="Stroke-966" points="0.190909091 0.381818182 0.7 4.13636364 4.51818182 3.62727273"></polyline>
+                        <path d="M10.9836364,11.3813636 C11.4023636,10.934 11.7555455,10.4236364 12.0272727,9.86363636" id="Stroke-967"></path>
+                        <path d="M6.52272727,13.3617273 C7.23672727,13.3445455 7.92209091,13.2115455 8.55972727,12.9792727" id="Stroke-968"></path>
+                        <path d="M1.82381818,11.4481818 C2.31954545,11.9540909 2.89927273,12.3785455 3.53881818,12.698" id="Stroke-969"></path>
+                        <path d="M0,7 C0,7.66309091 0.103090909,8.30327273 0.293363636,8.90527273" id="Stroke-970"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_notification</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Requests-1/2" transform="translate(-1326.000000, -37.000000)" fill="#444444">
+            <g id="Nav-1" transform="translate(220.000000, 0.000000)">
+                <path d="M1114,51 C1110.3,51 1108,49.6 1108,49 C1108,48.5 1109.2,47.7 1111.3,47.3 C1111.8,48.3 1112.8,49 1114,49 C1115.2,49 1116.2,48.3 1116.7,47.3 C1118.8,47.7 1120,48.6 1120,49 C1120,49.6 1117.7,51 1114,51 M1119,44.4 L1119,42 C1119,39.2 1116.8,37 1114,37 C1111.2,37 1109,39.2 1109,42 L1109,44.4 C1107.4,45.3 1106,46.6 1106,49 C1106,51.2 1109.7,53 1114,53 C1118.3,53 1122,51.2 1122,49 C1122,46.6 1120.5,45.2 1119,44.4" id="icon_notification"></path>
+            </g>
+        </g>
+    </g>
+</svg>

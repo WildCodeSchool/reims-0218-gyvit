@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li
+  className="nav-item"
+>
+  <div
+    className="media"
+  >
+    <div
+      className="media"
+      href="#"
+    >
+      <img
+        alt="kevin"
+        className="rounded-circle media-object"
+        src="http://via.placeholder.com/40x40"
+        style={
+          Object {
+            "marginTop": "25px",
+          }
+        }
+      />
+    </div>
+    <div
+      className="media-body"
+    >
+      <h4
+        className="media-heading"
+        style={
+          Object {
+            "color": "#231b56",
+            "fontSize": "16px",
+            "marginLeft": "21px",
+            "marginTop": "28px",
+          }
+        }
+      >
+        <span>
+          kevin
+        </span>
+         
+        <span>
+          Marlot
+        </span>
+      </h4>
+      <div
+        className="media"
+        style={
+          Object {
+            "color": "#372c78",
+            "fontSize": "14px",
+            "marginLeft": "21px",
+            "marginTop": "5px",
+          }
+        }
+      >
+        Meduza
+      </div>
+    </div>
+  </div>
+</li>
+`;
