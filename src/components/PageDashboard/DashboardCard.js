@@ -9,9 +9,9 @@ import {
   Container,
   Row
 } from "reactstrap"
+import PropTypes from "prop-types"
 
-const DashboardCard = ({ contenu }) => {
-  const { titre, bio, buttonText, link } = { ...contenu }
+const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
   return (
     <div>
       <Container>
@@ -24,7 +24,7 @@ const DashboardCard = ({ contenu }) => {
             }}
           >
             <CardImg
-              src={process.env.PUBLIC_URL + "img/folder.ico"}
+              src={process.env.PUBLIC_URL.concat(image)}
               alt="folder"
               style={{
                 width: "151.2px",
@@ -92,4 +92,14 @@ const DashboardCard = ({ contenu }) => {
     </div>
   )
 }
+
+DashboardCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  titre: PropTypes.string.isRequired,
+  bio: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
+}
+
 export default DashboardCard

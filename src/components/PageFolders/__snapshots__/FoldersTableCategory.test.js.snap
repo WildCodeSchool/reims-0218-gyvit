@@ -2,7 +2,7 @@
 
 exports[`renders link html 1`] = `
 <div>
-  
+  Kevin
   <img
     alt="upDown"
     src="Assets/icon_double_arrow.png"

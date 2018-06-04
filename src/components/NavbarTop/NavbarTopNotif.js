@@ -1,6 +1,7 @@
 //TODO: create component notif
 
 import React from "react"
+import PropTypes from "prop-types"
 import { NavItem } from "reactstrap"
 import NavbarTopNotifBubble from "./NavbarTopNotifBubble"
 
@@ -18,6 +19,10 @@ const NavbarTopNotif = ({ notifsCount }) => {
       <NavbarTopNotifBubble notifsCount={notifsCount} />
     </div>
   )
+}
+
+NavbarTopNotif.propTypes = {
+  notifsCount: PropTypes.number.isRequired
 }
 
 export default NavbarTopNotif

@@ -2,6 +2,7 @@
 
 import React from "react"
 import { Media } from "reactstrap"
+import PropTypes from "prop-types"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const NavbarTopProfile = ({ firstname, lastname, business }) => (
@@ -45,5 +46,11 @@ const NavbarTopProfile = ({ firstname, lastname, business }) => (
     </Media>
   </div>
 )
+
+NavbarTopProfile.propTypes = {
+  lastname: PropTypes.string.isRequired,
+  firstname: PropTypes.string.isRequired,
+  business: PropTypes.string.isRequired
+}
 
 export default NavbarTopProfile
