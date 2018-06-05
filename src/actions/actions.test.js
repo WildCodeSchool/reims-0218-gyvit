@@ -1,6 +1,6 @@
 import { FETCH_FILES_SUCCESS, makeFetchFilesSuccess } from "./actions"
 
-const fetchResponse = [
+const prevState = [
   {
     _id: "file_7F2jhzx5RlO8u5C1SP3c",
     object: "file",
@@ -130,6 +130,6 @@ describe("action fetch files success", () => {
         }
       ]
     }
-    expect(makeFetchFilesSuccess(fetchResponse)).toEqual(expected)
+    expect(makeFetchFilesSuccess(prevState)).toEqual(expected)
   })
 })
