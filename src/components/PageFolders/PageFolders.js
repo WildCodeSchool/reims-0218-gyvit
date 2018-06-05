@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap"
 import FoldersBarTop from "./FoldersBarTop"
 import NavbarTop from "../NavbarTop/NavbarTop"
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
+import FoldersTable from "./FoldersTable"
 
 const PageFolders = ({ dataLinks, files = [], dirs = [] }) => (
   <Container fluid>
@@ -11,6 +12,7 @@ const PageFolders = ({ dataLinks, files = [], dirs = [] }) => (
       <Col md="10">
         <NavbarTop />
         <FoldersBarTop />
+        <FoldersTable />
       </Col>
     </Row>
   </Container>
