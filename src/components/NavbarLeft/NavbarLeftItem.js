@@ -1,6 +1,7 @@
 // TODO create navbar
 
 import React from "react"
+import PropTypes from "prop-types"
 import { NavLink } from "reactstrap"
 
 const NavbarLeftItem = ({ icon, nameLink }) => (
@@ -26,5 +27,10 @@ const NavbarLeftItem = ({ icon, nameLink }) => (
     <hr />
   </div>
 )
+
+NavbarLeftItem.propTypes = {
+  icon: PropTypes.string.isRequired,
+  nameLink: PropTypes.string.isRequired
+}
 
 export default NavbarLeftItem

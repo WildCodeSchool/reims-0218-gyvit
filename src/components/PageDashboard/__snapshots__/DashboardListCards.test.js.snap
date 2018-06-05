@@ -67,7 +67,7 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src="img/folder.ico"
+              src=""
               style={
                 Object {
                   "height": "120px",
@@ -168,7 +168,7 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src="img/folder.ico"
+              src=""
               style={
                 Object {
                   "height": "120px",
@@ -269,7 +269,7 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src="img/folder.ico"
+              src=""
               style={
                 Object {
                   "height": "120px",

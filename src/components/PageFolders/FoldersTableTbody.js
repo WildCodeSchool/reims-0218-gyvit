@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { DateTime } from "luxon"
 
 const convertDateFromJsonToFrench = dateToTransform =>
@@ -6,12 +7,7 @@ const convertDateFromJsonToFrench = dateToTransform =>
     .setLocale("fr-FR")
     .toLocaleString(DateTime.DATETIME_SHORT)
 
-const FoldersTableTbody = ({
-  files,
-  dirs,
-  direction = null,
-  category = "name"
-}) => {
+const FoldersTableTbody = ({ files = [], dirs = [] }) => {
   return (
     <tbody>
       {dirs.map(dir => {
@@ -56,6 +52,11 @@ const FoldersTableTbody = ({
       })}
     </tbody>
   )
+}
+
+FoldersTableTbody.propTypes = {
+  files: PropTypes.array,
+  dir: PropTypes.array
 }
 
 export default FoldersTableTbody
