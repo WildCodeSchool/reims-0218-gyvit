@@ -15,7 +15,7 @@ const NavbarLeftItem = ({ icon, nameLink }) => (
     >
       <img
         alt=""
-        src={process.env.PUBLIC_URL.concat(icon)}
+        src={icon}
         style={{
           opacity: 0.8,
           paddingRight: 10
