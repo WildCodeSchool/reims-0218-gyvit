@@ -250,7 +250,9 @@ storiesOf("Components Page Folders", module)
   .add("FoldersBarTop", () => <FoldersBarTop />)
   .add("FoldersTable", () => <FoldersTable files={files} dirs={dirs} />)
 
-storiesOf("Page Folders", module).add("PageFolders", () => <PageFolders />)
+storiesOf("Page Folders", module).add("PageFolders", () => (
+  <PageFolders {...listLinksProps} {...props} files={files} dirs={dirs} />
+))
 
 storiesOf("Component GetStarted", module)
   .add("GetStartedSignInEmail", () => <GetStartedSignInEmail />)

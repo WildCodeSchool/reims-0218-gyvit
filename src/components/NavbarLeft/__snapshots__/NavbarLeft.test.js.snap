@@ -29,6 +29,7 @@ exports[`renders link html 1`] = `
         "backgroundColor": "#231b56",
         "color": "white",
         "height": "1024px",
+        "width": "220px",
       }
     }
   >
