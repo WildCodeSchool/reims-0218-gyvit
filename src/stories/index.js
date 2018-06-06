@@ -71,7 +71,7 @@ const propsWith116notif = {
 const listCardsInHome = [
   {
     id: 0,
-    image: "",
+    image: "/Icons/placeholder.png",
     titre: "Documents requests",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
@@ -80,7 +80,7 @@ const listCardsInHome = [
   },
   {
     id: 1,
-    image: "",
+    image: "/Icons/placeholder.png",
     titre: "Share documents",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
@@ -89,7 +89,7 @@ const listCardsInHome = [
   },
   {
     id: 2,
-    image: "",
+    image: "/Icons/placeholder.png",
     titre: "Store files",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
