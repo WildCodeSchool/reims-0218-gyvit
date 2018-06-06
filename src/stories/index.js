@@ -71,7 +71,7 @@ const propsWith116notif = {
 const listCardsInHome = [
   {
     id: 0,
-    image: "",
+    image: "/Icons/placeholder.png",
     titre: "Documents requests",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
@@ -80,7 +80,7 @@ const listCardsInHome = [
   },
   {
     id: 1,
-    image: "",
+    image: "/Icons/placeholder.png",
     titre: "Share documents",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
@@ -89,7 +89,7 @@ const listCardsInHome = [
   },
   {
     id: 2,
-    image: "",
+    image: "/Icons/placeholder.png",
     titre: "Store files",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
@@ -149,35 +149,35 @@ const listLinksProps = {
   dataLinks: [
     {
       nameLink: "Home",
-      icon: process.env.PUBLIC_URL + "/img/icon_home.png"
+      icon: "/img/icon_home.png"
     },
     {
       nameLink: "Files",
-      icon: process.env.PUBLIC_URL + "/img/icon_files.png"
+      icon: "/img/icon_files.png"
     },
     {
       nameLink: "Shares",
-      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
+      icon: "/img/icon_shares.png"
     },
     {
       nameLink: "Templates",
-      icon: process.env.PUBLIC_URL + "/img/icon_templates.png"
+      icon: "/img/icon_templates.png"
     },
     {
       nameLink: "Requests",
-      icon: process.env.PUBLIC_URL + "/img/icon_requests.png"
+      icon: "/img/icon_requests.png"
     },
     {
       nameLink: "Public links",
-      icon: process.env.PUBLIC_URL + "/img/icon_shares.png"
+      icon: "/img/icon_shares.png"
     },
     {
       nameLink: "Contacts",
-      icon: process.env.PUBLIC_URL + "/img/icon_contacts.png"
+      icon: "/img/icon_contacts.png"
     },
     {
       nameLink: "Settings",
-      icon: process.env.PUBLIC_URL + "/img/icon_settings.png"
+      icon: "/img/icon_settings.png"
     }
   ]
 }
@@ -251,7 +251,7 @@ storiesOf("Components Page Folders", module)
   .add("FoldersTable", () => <FoldersTable files={files} dirs={dirs} />)
 
 storiesOf("Page Folders", module).add("PageFolders", () => (
-  <PageFolders {...listLinksProps} />
+  <PageFolders {...listLinksProps} {...props} files={files} dirs={dirs} />
 ))
 
 storiesOf("Component GetStarted", module)

@@ -1,9 +1,9 @@
 import React from "react"
-import { Col } from "reactstrap"
+import { Row, Col } from "reactstrap"
 
 const NavbarLeftLogo = () => {
   return (
-    <div
+    <Row
       className="d-flex align-items-center"
       style={{
         color: "white",
@@ -15,7 +15,7 @@ const NavbarLeftLogo = () => {
       }}
     >
       <Col>GYVIT </Col>
-    </div>
+    </Row>
   )
 }
 

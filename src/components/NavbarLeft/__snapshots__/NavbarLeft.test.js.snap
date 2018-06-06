@@ -3,7 +3,7 @@
 exports[`renders link html 1`] = `
 <div>
   <div
-    className="d-flex align-items-center"
+    className="d-flex align-items-center row"
     style={
       Object {
         "backgroundColor": "#181048",
