@@ -3,7 +3,7 @@ import { Col } from "reactstrap"
 
 const NavbarLeftLogo = () => {
   return (
-    <p
+    <div
       className="d-flex align-items-center"
       style={{
         color: "white",
@@ -15,7 +15,7 @@ const NavbarLeftLogo = () => {
       }}
     >
       <Col>GYVIT </Col>
-    </p>
+    </div>
   )
 }
 

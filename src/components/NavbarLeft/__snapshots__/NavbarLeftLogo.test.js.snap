@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<p
+<div
   className="d-flex align-items-center"
   style={
     Object {
@@ -19,5 +19,5 @@ exports[`renders correctly 1`] = `
   >
     GYVIT 
   </div>
-</p>
+</div>
 `;

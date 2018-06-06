@@ -2,7 +2,7 @@
 
 exports[`renders link html 1`] = `
 <div>
-  <p
+  <div
     className="d-flex align-items-center"
     style={
       Object {
@@ -20,7 +20,7 @@ exports[`renders link html 1`] = `
     >
       GYVIT 
     </div>
-  </p>
+  </div>
   <ul
     className="nav flex-column"
     expand="md"
