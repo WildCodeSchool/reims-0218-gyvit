@@ -1,3 +1,7 @@
-export const IS_USER = "IS_USER"
+export const FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS"
 
-export const isUserAction = (user, token) => ({ type: IS_USER, user, token })
+export const isUserAction = response => ({
+  type: FETCH_USER_SUCCESS,
+  user: response.data.user,
+  token: response.data.token
+})
