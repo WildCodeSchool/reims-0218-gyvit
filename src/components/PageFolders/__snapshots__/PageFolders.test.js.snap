@@ -1,61 +1,271 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders link html 1`] = `
-<div>
+<div
+  className="container-fluid"
+>
   <div
     className="row"
   >
-    <div
-      className="col-12"
-    >
-      <nav
-        className="navbar navbar-expand"
+    <div>
+      <div
+        className="d-flex align-items-center"
         style={
           Object {
-            "marginTop": "54px",
+            "backgroundColor": "#181048",
+            "color": "white",
+            "fontWeight": "bold",
+            "height": "90px",
+            "marginBottom": "0px",
+            "textAlign": "center",
           }
         }
       >
-        <a
-          className="navbar-brand"
-        >
-          Folders
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-        >
-          <span
-            className="navbar-toggler-icon"
-          />
-        </button>
         <div
-          className="collapse navbar-collapse"
-          style={Object {}}
+          className="col"
         >
-          <ul
-            className="ml-auto navbar-nav"
-          >
-            <li
-              className="nav-item"
+          GYVIT 
+        </div>
+      </div>
+      <ul
+        className="nav flex-column"
+        expand="md"
+        style={
+          Object {
+            "backgroundColor": "#231b56",
+            "color": "white",
+            "height": "1024px",
+            "width": "220px",
+          }
+        }
+      >
+        <li
+          className="text-center nav-item"
+        />
+      </ul>
+    </div>
+    <div
+      className="col-md-10"
+    >
+      <div
+        className="row"
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "border": "solid 1px #E5E8F4",
+            "height": "90px",
+          }
+        }
+      >
+        <div
+          className="col-7"
+        >
+          <div>
+            <div
+              className="form-group"
             >
-              <button
-                className="btn btn-secondary"
-                onClick={[Function]}
+              <span
+                className="fa fa-search"
+              />
+              <input
+                className="form-control"
+                id="exampleSearch"
+                name="search"
+                placeholder="Search..."
                 style={
                   Object {
-                    "backgroundColor": "#725fe3",
-                    "borderRadius": "50%",
+                    "backgroundColor": "#fbfcfd",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "height": "46px",
+                    "marginLeft": "6px",
+                    "marginTop": "22px",
                   }
                 }
-                type={undefined}
-              >
-                +
-              </button>
-            </li>
-          </ul>
+                type="search"
+              />
+            </div>
+          </div>
         </div>
-      </nav>
+        <div
+          className="col-2"
+        >
+          <div
+            className="col-1"
+          >
+            <img
+              alt="iconNotif"
+              src="img/icon_notification.png"
+              style={
+                Object {
+                  "marginTop": "37px",
+                }
+              }
+            />
+            <span
+              className="badge badge-secondary badge-pill"
+              style={
+                Object {
+                  "backgroundColor": "#ff007e",
+                  "height": "20px",
+                  "width": "20px",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          className="col-3"
+        >
+          <div>
+            <div
+              className="media"
+            >
+              <div
+                className="media"
+                href="#"
+              >
+                <img
+                  alt={undefined}
+                  className="rounded-circle media-object"
+                  src="http://via.placeholder.com/40x40"
+                  style={
+                    Object {
+                      "marginTop": "25px",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="media-body"
+              >
+                <h4
+                  className="media-heading"
+                  style={
+                    Object {
+                      "color": "#231b56",
+                      "fontSize": "16px",
+                      "marginLeft": "21px",
+                      "marginTop": "28px",
+                    }
+                  }
+                >
+                  <span />
+                   
+                  <span />
+                </h4>
+                <div
+                  className="media"
+                  style={
+                    Object {
+                      "color": "#372c78",
+                      "fontSize": "14px",
+                      "marginLeft": "21px",
+                      "marginTop": "5px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <nav
+            className="navbar navbar-expand"
+            style={
+              Object {
+                "marginTop": "54px",
+              }
+            }
+          >
+            <a
+              className="navbar-brand"
+            >
+              Folders
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+            >
+              <span
+                className="navbar-toggler-icon"
+              />
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              style={Object {}}
+            >
+              <ul
+                className="ml-auto navbar-nav"
+              >
+                <li
+                  className="nav-item"
+                >
+                  <button
+                    className="btn btn-secondary"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "backgroundColor": "#725fe3",
+                        "borderRadius": "50%",
+                      }
+                    }
+                    type={undefined}
+                  >
+                    +
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <table
+          className="table"
+        >
+          <thead>
+            <tr>
+              <th />
+              <th>
+                <div>
+                  Name
+                  <img
+                    alt="upDown"
+                    src="Assets/icon_double_arrow.png"
+                  />
+                </div>
+              </th>
+              <th>
+                <div>
+                  Last update
+                  <img
+                    alt="upDown"
+                    src="Assets/icon_double_arrow.png"
+                  />
+                </div>
+              </th>
+              <th>
+                <div>
+                  Users
+                  <img
+                    alt="down"
+                    src="Assets/icon_arrow_down.png"
+                  />
+                </div>
+              </th>
+              <th />
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+      </div>
     </div>
   </div>
 </div>

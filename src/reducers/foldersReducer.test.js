@@ -51,10 +51,8 @@ describe("foldersReducer", () => {
         }
       }
     ]
-    const anyAction = {
-      type: "ANY_ACTION"
-    }
+    
 
-    expect(foldersReducer(prevState, anyAction)).toEqual(prevState)
+    expect(foldersReducer(prevState, makeFetchFoldersSuccess)).toEqual(prevState)
   })
 })
