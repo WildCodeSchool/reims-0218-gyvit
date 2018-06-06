@@ -1,15 +1,14 @@
 const urlUser = "https://dev.gyvit.io/api/user/token"
 
-const headersUsers = new Headers({
-  curl: "request POST",
-  url: "https://dev.gyvit.io/api/user/token",
-  header: "Content-Type: application/json",
-  data: {
-    mail: "romain@meduza-studio.com",
-    password: "meduza"
-  }
+fetch(urlUser, {
+  method: "post",
+  headers: new Headers({
+    Authorization:
+      "Bearer " +
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcyNTAyMH0.dgVTGliH4ag6IChVgwsqjctmsMlwalY_3sqoSPQu0c8",
+    "Content-Type": "Content-Type: application/json"
+  })
 })
-fetch(urlUser, headersUsers)
   .then(response => {
     return response.json()
   })
