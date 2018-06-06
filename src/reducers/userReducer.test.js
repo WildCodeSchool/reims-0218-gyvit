@@ -1,4 +1,4 @@
-import { makeUserAction } from "../actions/userAction"
+import { connectUserSuccessAction } from "../actions/userAction"
 
 import userReducer from "./userReducer"
 
@@ -31,7 +31,7 @@ describe("userReducer", () => {
       user: "romain@meduza-studio.com"
     }
 
-    const testUser = makeUserAction(response)
+    const testUser = connectUserSuccessAction(response)
 
     expect(userReducer(prevState, testUser)).toEqual(expectedState)
   })

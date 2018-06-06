@@ -1,12 +1,12 @@
 import {
-  FETCH_USER_CONNECTION_SUCCESS,
+  CONNECT_USER_SUCCESS,
   DISCONNECT_USER_SUCCESS,
-  disconnectUserAction,
-  makeUserAction
+  disconnectUserSuccessAction,
+  connectUserSuccessAction
 } from "./userAction"
 
 describe("action make User in State", () => {
-  it("should return an action FETCH_USER_CONNECTION_SUCCESS", () => {
+  it("should return an action CONNECT_USER_SUCCESS", () => {
     const response = {
       success: true,
       data: {
@@ -16,10 +16,10 @@ describe("action make User in State", () => {
       }
     }
     const expected = {
-      type: FETCH_USER_CONNECTION_SUCCESS,
+      type: CONNECT_USER_SUCCESS,
       user: "romain@meduza-studio.com"
     }
-    expect(makeUserAction(response)).toEqual(expected)
+    expect(connectUserSuccessAction(response)).toEqual(expected)
   })
 })
 
@@ -29,6 +29,6 @@ describe("action emptying user in state", () => {
       type: DISCONNECT_USER_SUCCESS,
       user: ""
     }
-    expect(disconnectUserAction()).toEqual(expected)
+    expect(disconnectUserSuccessAction()).toEqual(expected)
   })
 })

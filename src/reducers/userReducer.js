@@ -1,5 +1,5 @@
 import {
-  FETCH_USER_CONNECTION_SUCCESS,
+  CONNECT_USER_SUCCESS,
   DISCONNECT_USER_SUCCESS
 } from "../actions/userAction"
 
@@ -7,13 +7,8 @@ const initialState = {}
 
 // initialState is the default value of prevState
 const userReducer = (prevState = initialState, action) => {
-  if (action.type === FETCH_USER_CONNECTION_SUCCESS) {
-    return { ...prevState, user: action.user }
-  }
-  if (action.type === DISCONNECT_USER_SUCCESS) {
-    prevState.user = ""
-    return prevState
-  }
+  if (action.type === CONNECT_USER_SUCCESS) prevState.user = action.user
+  if (action.type === DISCONNECT_USER_SUCCESS) prevState.user = ""
   return prevState
 }
 
