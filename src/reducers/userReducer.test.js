@@ -1,17 +1,12 @@
-import { isUserAction } from "../actions/connectionAction"
+import { makeUserAction } from "../actions/userAction"
 
 import userReducer from "./userReducer"
 
 describe("userReducer", () => {
   it("should not change the state for unhandled action", () => {
-    const prevState = [
-      {
-        id: 1,
-        user: "romain@meduza-studio.com",
-        token:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcxMDI4MX0.M1Ce6GdsMovZEqP1JwX4_fWo_O4zRsTUz82aStr4Rak"
-      }
-    ]
+    const prevState = {
+      user: "romain@meduza-studio.com"
+    }
 
     const anyAction = {
       type: "ANY_ACTION"
@@ -21,7 +16,7 @@ describe("userReducer", () => {
   })
 
   it("should handle test user", () => {
-    const prevState = []
+    const prevState = {}
 
     const response = {
       success: true,
@@ -32,15 +27,11 @@ describe("userReducer", () => {
       }
     }
 
-    const expectedState = [
-      {
-        user: "romain@meduza-studio.com",
-        token:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcxMDI4MX0.M1Ce6GdsMovZEqP1JwX4_fWo_O4zRsTUz82aStr4Rak"
-      }
-    ]
+    const expectedState = {
+      user: "romain@meduza-studio.com"
+    }
 
-    const testUser = isUserAction(response)
+    const testUser = makeUserAction(response)
 
     expect(userReducer(prevState, testUser)).toEqual(expectedState)
   })
