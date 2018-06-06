@@ -18,7 +18,7 @@ export const makeFetchFoldersSuccess = response => ({
   response
 })
 
-export const makeDeleteFileAction =  fileId => ({
-  type: DELETE_FILE_ACTION, 
+export const makeDeleteFileAction = fileId => ({
+  type: DELETE_FILE_ACTION,
   fileId
 })
