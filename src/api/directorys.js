@@ -1,4 +1,4 @@
-const urlDirectorys =
+/* const urlDirectorys =
   "https://dev.gyvit.io/api/storage/directorys/list?name=amm"
 
 const headersDirectorys = new Headers({
@@ -16,3 +16,4 @@ fetch(urlDirectorys, headersDirectorys)
   .then(data => {
     console.log(data)
   })
+ */
