@@ -2,11 +2,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { NavItem } from "reactstrap"
 import NavbarTopNotifBubble from "./NavbarTopNotifBubble"
 
 const NavbarTopNotif = ({ notifsCount }) => {
-  //console.log(notifsCount)
   return (
     <div className="col-1">
       <img
