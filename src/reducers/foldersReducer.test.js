@@ -1,4 +1,4 @@
-import { makeFetchFoldersSuccess } from "../actions/actions"
+import { makeFetchFoldersSuccess } from "../actions/foldersActions"
 
 import foldersReducer from "./foldersReducer"
 
@@ -51,8 +51,9 @@ describe("foldersReducer", () => {
         }
       }
     ]
-    
 
-    expect(foldersReducer(prevState, makeFetchFoldersSuccess)).toEqual(prevState)
+    expect(foldersReducer(prevState, makeFetchFoldersSuccess)).toEqual(
+      prevState
+    )
   })
 })

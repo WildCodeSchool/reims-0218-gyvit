@@ -1,4 +1,4 @@
-import { FETCH_FOLDERS_SUCCESS } from "../actions/actions"
+import { FETCH_FOLDERS_SUCCESS } from "../actions/foldersActions"
 
 const initialState = [
   {
