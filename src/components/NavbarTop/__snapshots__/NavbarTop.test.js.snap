@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="row"
   style={
     Object {
-      "background-color": "#ffffff",
+      "backgroundColor": "#ffffff",
       "border": "solid 1px #E5E8F4",
       "height": "90px",
     }
