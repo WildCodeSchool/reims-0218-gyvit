@@ -1,9 +1,11 @@
 import { combineReducers } from "redux"
 
-import foldersReducer from "./foldersReducer"
 import userReducer from "./userReducer"
+import foldersReducers from "./foldersReducer"
+import filesReducers from "./filesReducer"
 
 export default combineReducers({
-  folder: foldersReducer,
+  folders: foldersReducers,
+  files: filesReducers,
   user: userReducer
 })
