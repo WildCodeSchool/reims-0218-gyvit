@@ -4,6 +4,7 @@ import { storiesOf } from "@storybook/react"
 
 // for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
+import PagesFiles from "../components/PagesFiles/PagesFiles"
 
 import DashboardCard from "../components/PageDashboard/DashboardCard"
 import NavbarLeft from "../components/NavbarLeft/NavbarLeft"
@@ -188,7 +189,9 @@ const homeLinkProps = {
 }
 storiesOf(" Main Components", module)
   .add("NavbarTop", () => <NavbarTop {...props} />)
-  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} />)
+  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps} 
+  
+  />)
 
 storiesOf(" Dashboard Components", module)
   .add("DashboardContent", () => (
@@ -250,7 +253,8 @@ storiesOf("Components Page Folders", module)
   .add("FoldersBarTop", () => <FoldersBarTop />)
   .add("FoldersTable", () => <FoldersTable files={files} dirs={dirs} />)
 
-storiesOf("Page Folders", module).add("PageFolders", () => (
+storiesOf("Page Folders", module)
+.add("PageFolders", () => (
   <PageFolders {...listLinksProps} />
 ))
 
@@ -288,3 +292,12 @@ storiesOf("PageDashboard", module).add("PageDashboard", () => (
     name={name}
   />
 ))
+
+storiesOf("PageFiles", module)
+  .add("NavbarLeft", () => <NavbarLeft {...listLinksProps}/>)
+  .add("NavbarTop", ()=> <NavbarTop {...props}/> )
+  .add("FoldersBarTop", ()=> <FoldersBarTop />)
+  .add("FoldersTable", () => <FoldersTable files={files} dirs={dirs} />)
+  .add("PageFiles", () => <PagesFiles {...listLinksProps}/>)
+  
+

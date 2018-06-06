@@ -8,7 +8,9 @@ import FoldersTable from "./FoldersTable"
 const PageFolders = ({ dataLinks, files = [], dirs = [] }) => (
   <Container fluid>
     <Row>
+      <Col md="2">
       <NavbarLeft dataLinks={dataLinks} />
+      </Col>
       <Col md="10">
         <NavbarTop />
         <FoldersBarTop />

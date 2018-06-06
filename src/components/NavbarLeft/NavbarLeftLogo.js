@@ -8,6 +8,7 @@ const NavbarLeftLogo = () => {
       style={{
         color: "white",
         fontWeight: "bold",
+        width: "220px",
         height: "90px",
         marginBottom: "0px",
         textAlign: "center",
