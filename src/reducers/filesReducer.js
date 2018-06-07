@@ -1,6 +1,6 @@
-import { FETCH_FILES_SUCCESS, ADD_FILE_ACTION } from "../actions/filesActions"
+import { FETCH_FILES_SUCCESS, ADD_A_FILE_ACTION } from "../actions/filesActions"
 
-const initialState = {}
+const initialState = []
 
 export const listAllFiles = (prevState = initialState, action) => {
   if (action.type === FETCH_FILES_SUCCESS) {
@@ -10,7 +10,7 @@ export const listAllFiles = (prevState = initialState, action) => {
 }
 
 export const addAFile = (prevState = initialState, action) => {
-  if (action.type === ADD_FILE_ACTION) {
+  if (action.type === ADD_A_FILE_ACTION) {
     return [...prevState, action.response]
   }
   return prevState

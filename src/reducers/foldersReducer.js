@@ -12,7 +12,7 @@ export const listAllFolders = (prevState = initialState, action) => {
 
 export const addAFolder = (prevState = initialState, action) => {
   if (action.type === ADD_A_FOLDER_ACTION) {
-    return action.response
+    return [...prevState, action.response]
   }
   return prevState
 }
