@@ -1,17 +1,17 @@
 import { FETCH_FOLDERS_SUCCESS } from "../actions/foldersActions"
-import { ADD_FOLDERS_SUCCCESS } from "./action/foldersActions"
+import { ADD_A_FOLDER_ACTION } from "../actions/foldersActions"
 
 const initialState = []
 
-export const folders = (prevState = initialState, action) => {
+export const listAllFolders = (prevState = initialState, action) => {
   if (action.type === FETCH_FOLDERS_SUCCESS) {
     return action.response
   }
   return prevState
 }
 
-export const addFolders = (prevState = initialState, action) => {
-  if (action.type === ADD_FOLDERS_SUCCCESS) {
+export const addAFolder = (prevState = initialState, action) => {
+  if (action.type === ADD_A_FOLDER_ACTION) {
     return action.response
   }
   return prevState

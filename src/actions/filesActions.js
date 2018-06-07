@@ -13,7 +13,7 @@ export const makeFetchFilesSuccess = response => ({
   response
 })
 
-export const addFilesSuccess = response => ({
+export const makeAddAFileSuccess = response => ({
   type: ADD_FILE_ACTION,
   response
 })
