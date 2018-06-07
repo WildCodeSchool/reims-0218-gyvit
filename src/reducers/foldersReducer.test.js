@@ -56,3 +56,4 @@ describe("foldersReducer", () => {
     expect(foldersReducer(prevState, makeFetchFoldersSuccess)).toEqual(prevState)
   })
 })
+

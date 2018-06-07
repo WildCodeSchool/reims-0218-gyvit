@@ -1,6 +1,6 @@
 import { makeFetchFilesSuccess } from "../actions/actions"
 
-import filesReducer from "./filesReducer"
+import foldersReducer from "./foldersReducer"
 
 describe("filesReducer", () => {
   it("should not change the state for unhandled action", () => {
@@ -67,6 +67,6 @@ describe("filesReducer", () => {
       }
     ]
 
-    expect(filesReducer(prevState, makeFetchFilesSuccess)).toEqual(prevState)
+    expect(foldersReducer(prevState, makeFetchFilesSuccess)).toEqual(prevState)
   })
 })
