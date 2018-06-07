@@ -1,11 +1,13 @@
 import { combineReducers } from "redux"
 
+import userReducer from "./userReducer"
 import foldersReducers from "./foldersReducer"
 import filesReducers from "./filesReducer"
-import deleteFileReducers from "./deleteFileReducers"
+import deleteFileReducer from "./deleteFileReducer"
 
 export default combineReducers({
   folders: foldersReducers,
   files: filesReducers,
-  deleteFile: deleteFileReducers
+  deleteFile: deleteFileReducer,
+  user: userReducer
 })

@@ -1,12 +1,13 @@
-import { makeDeleteFileAction } from "../actions/actions"
+import { makeFetchFilesSuccess } from "../actions/filesActions"
+import { makeAddAFileSuccess } from "../actions/filesActions"
 
-import deleteFileReducers from "./deleteFileReducers"
+import { listAllFiles, addAFile } from "./filesReducer"
 
-describe("deleteFile", () => {
+describe("listAllFiles", () => {
   it("should not change the state for unhandled action", () => {
     const prevState = [
       {
-        id: "1file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -18,7 +19,7 @@ describe("deleteFile", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -26,7 +27,7 @@ describe("deleteFile", () => {
         }
       },
       {
-        id: "2file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -38,7 +39,7 @@ describe("deleteFile", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -46,7 +47,7 @@ describe("deleteFile", () => {
         }
       },
       {
-        id: "3file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -58,7 +59,7 @@ describe("deleteFile", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -67,17 +68,15 @@ describe("deleteFile", () => {
       }
     ]
 
-    const anyAction = {
-      type: "ANY_ACTION"
-    }
-
-    expect(deleteFileReducers(prevState, anyAction)).toEqual(prevState)
+    expect(listAllFiles(prevState, makeFetchFilesSuccess)).toEqual(prevState)
   })
+})
 
-  it("should handle deleting a file", () => {
+describe("addAFile", () => {
+  it("should not change the state for unhandled action", () => {
     const prevState = [
       {
-        id: "1file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -89,7 +88,7 @@ describe("deleteFile", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -97,7 +96,7 @@ describe("deleteFile", () => {
         }
       },
       {
-        id: "2file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -109,7 +108,7 @@ describe("deleteFile", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -117,7 +116,7 @@ describe("deleteFile", () => {
         }
       },
       {
-        id: "3file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -129,7 +128,7 @@ describe("deleteFile", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -138,9 +137,30 @@ describe("deleteFile", () => {
       }
     ]
 
-    const expectedState = [
+    const addAFileAction = makeAddAFileSuccess({
+      _id: "file_7F2jhzx5RlO8u5C1SP3c",
+      object: "file",
+      name: "TEST FOR POST",
+      size: 0,
+      ext: "",
+      type: "",
+      remove: 0,
+      created: "2018-04-22T08:34:26+00:00",
+      modified: "2018-04-22T08:34:26+00:00",
+      removed: null,
+      shares: [],
+      dir: {
+        _id: "dir_r4V13RVeHFFVvOLctpPe",
+        object: "directory",
+        name: "Sketchs & Photoshops",
+        created: "2018-03-30T11:53:23+00:00",
+        modified: "2018-03-30T12:11:15+00:00"
+      }
+    })
+
+    const expected = [
       {
-        id: "1file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -152,7 +172,7 @@ describe("deleteFile", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -160,7 +180,7 @@ describe("deleteFile", () => {
         }
       },
       {
-        id: "2file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -172,7 +192,47 @@ describe("deleteFile", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
+          object: "directory",
+          name: "Sketchs & Photoshops",
+          created: "2018-03-30T11:53:23+00:00",
+          modified: "2018-03-30T12:11:15+00:00"
+        }
+      },
+      {
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
+        object: "file",
+        name: "TEST FOR POST",
+        size: 0,
+        ext: "",
+        type: "",
+        remove: 0,
+        created: "2018-04-22T08:34:26+00:00",
+        modified: "2018-04-22T08:34:26+00:00",
+        removed: null,
+        shares: [],
+        dir: {
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
+          object: "directory",
+          name: "Sketchs & Photoshops",
+          created: "2018-03-30T11:53:23+00:00",
+          modified: "2018-03-30T12:11:15+00:00"
+        }
+      },
+      {
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
+        object: "file",
+        name: "TEST FOR POST",
+        size: 0,
+        ext: "",
+        type: "",
+        remove: 0,
+        created: "2018-04-22T08:34:26+00:00",
+        modified: "2018-04-22T08:34:26+00:00",
+        removed: null,
+        shares: [],
+        dir: {
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -181,12 +241,6 @@ describe("deleteFile", () => {
       }
     ]
 
-    const deleteOneFileAction = makeDeleteFileAction(
-      "3file_7F2jhzx5RlO8u5C1SP3c"
-    )
-
-    expect(deleteFileReducers(prevState, deleteOneFileAction)).toEqual(
-      expectedState
-    )
+    expect(addAFile(prevState, addAFileAction)).toEqual(expected)
   })
 })

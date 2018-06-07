@@ -9,7 +9,7 @@ exports[`renders link html 1`] = `
   >
     <div>
       <div
-        className="d-flex align-items-center"
+        className="d-flex align-items-center row"
         style={
           Object {
             "backgroundColor": "#181048",
@@ -111,7 +111,9 @@ exports[`renders link html 1`] = `
                   "width": "20px",
                 }
               }
-            />
+            >
+              0
+            </span>
           </div>
         </div>
         <div
@@ -126,7 +128,7 @@ exports[`renders link html 1`] = `
                 href="#"
               >
                 <img
-                  alt={undefined}
+                  alt=""
                   className="rounded-circle media-object"
                   src="http://via.placeholder.com/40x40"
                   style={
@@ -150,9 +152,13 @@ exports[`renders link html 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    
+                  </span>
                    
-                  <span />
+                  <span>
+                    
+                  </span>
                 </h4>
                 <div
                   className="media"
@@ -164,7 +170,9 @@ exports[`renders link html 1`] = `
                       "marginTop": "5px",
                     }
                   }
-                />
+                >
+                  
+                </div>
               </div>
             </div>
           </div>
