@@ -1,6 +1,6 @@
 import {
   makeFetchFilesSuccess,
-  updateFileAction
+  makeUpdateFileSuccess
 } from "../actions/filesActions"
 import { makeAddAFileSuccess } from "../actions/filesActions"
 
@@ -106,7 +106,7 @@ describe("files", () => {
     }
     const expected = response
 
-    expect(filesReducer(prevState, updateFileAction(response))).toEqual(
+    expect(filesReducer(prevState, makeUpdateFileSuccess(response))).toEqual(
       expected
     )
   })
