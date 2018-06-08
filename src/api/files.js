@@ -6,4 +6,6 @@ export const listAllFiles = () =>
       Authorization: "Bearer " + localStorage.getItem("token"),
       "Content-Type": "Content-Type: application/json"
     }
-  }).then(res => res.json())
+  })
+    .then(res => res.json())
+    .then(data => console.log(data))

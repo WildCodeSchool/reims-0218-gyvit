@@ -7,4 +7,6 @@ export const userLogin = () =>
         "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcyNTAyMH0.dgVTGliH4ag6IChVgwsqjctmsMlwalY_3sqoSPQu0c8",
       "Content-Type": "Content-Type: application/json"
     })
-  }).then(res => res.json())
+  })
+    .then(res => res.json())
+    .then(data => console.log(data))
