@@ -1,8 +1,10 @@
 import {
   FETCH_FILES_SUCCESS,
   makeFetchFilesSuccess,
-  ADD_A_FILE_ACTION,
-  makeAddAFileSuccess
+  ADD_A_FILE_SUCCESS,
+  makeAddAFileSuccess,
+  UPDATE_FILE_SUCCESS,
+  makeUpdateFileSuccess
 } from "./filesActions"
 
 //action FETCH_FILES_SUCCESS
@@ -145,7 +147,7 @@ describe("action fetch files success", () => {
 describe("action add a file", () => {
   it("should return a ADD_A_FILE_ACTION with response", () => {
     const expectedAddAFileAction = {
-      type: ADD_A_FILE_ACTION,
+      type: ADD_A_FILE_SUCCESS,
       response: {
         _id: "file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
@@ -189,5 +191,25 @@ describe("action add a file", () => {
         }
       })
     ).toEqual(expectedAddAFileAction)
+  })
+
+  it("should return an action UPDATE_FILE_SUCCESS", () => {
+    const response = {
+      _id: "file_7F2jhzx5RlO8u5C1SP3c",
+      object: "file",
+      name: "Just for tests",
+      size: 0,
+      ext: "",
+      type: "",
+      remove: 0,
+      created: "2018-04-22T08:34:26+00:00",
+      modified: "2018-06-07T07:55:02+00:00",
+      removed: null
+    }
+    const expected = {
+      type: UPDATE_FILE_SUCCESS,
+      response: response
+    }
+    expect(makeUpdateFileSuccess(response)).toEqual(expected)
   })
 })
