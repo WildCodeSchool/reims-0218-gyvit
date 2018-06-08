@@ -8,6 +8,13 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.css"
 import App from "./App"
 import registerServiceWorker from "./registerServiceWorker"
+import { userLogin } from "./api/users"
+import { listAllFiles } from "./api/files"
+import { listAllDir } from "./api/directorys"
+
+userLogin()
+listAllDir()
+listAllFiles()
 
 const store = createStore(
   reducers,
