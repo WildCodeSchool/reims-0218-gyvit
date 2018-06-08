@@ -10,4 +10,4 @@ export const listAllDir = () =>
     }
   })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => console.log("list all directorys", data))

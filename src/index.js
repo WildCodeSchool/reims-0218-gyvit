@@ -7,7 +7,13 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.css"
 import App from "./App"
 import registerServiceWorker from "./registerServiceWorker"
+import { userLogin } from "./api/users"
+import { listAllFiles } from "./api/files"
+import { listAllDir } from "./api/directorys"
 
+listAllFiles()
+userLogin()
+listAllDir()
 ReactDOM.render(<App />, document.getElementById("root"))
 const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

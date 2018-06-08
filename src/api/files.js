@@ -3,9 +3,10 @@ export const listAllFiles = () =>
     method: "GET",
     headers: {
       Accept: "application/json",
-      Authorization: "Bearer " + localStorage.getItem("token"),
+      Authorization:
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcyNTAyMH0.dgVTGliH4ag6IChVgwsqjctmsMlwalY_3sqoSPQu0c8",
       "Content-Type": "Content-Type: application/json"
     }
   })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => console.log("list all files", data))
