@@ -7,9 +7,15 @@ import {
 const initialState = []
 
 const filesReducer = (prevState = initialState, action) => {
-  if (action.type === FETCH_FILES_SUCCESS) return action.response
-  if (action.type === UPDATE_FILE_SUCCESS) return action.response
-  if (action.type === ADD_A_FILE_ACTION) return action.response
+  if (action.type === FETCH_FILES_SUCCESS) {
+    return action.response
+  }
+  if (action.type === UPDATE_FILE_SUCCESS) {
+    return action.response
+  }
+  if (action.type === ADD_A_FILE_ACTION) {
+    return [...prevState, action.response]
+  }
   return prevState
 }
 
