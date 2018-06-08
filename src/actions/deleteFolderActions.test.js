@@ -1,8 +1,9 @@
-import DELETE_FOLDER_ACTION from "./deleteFolderAction"
-import deleteFolderAction from "./deleteFolderAction"
+import {DELETE_FOLDER_ACTION,
+
+deleteFolderAction} from "./deleteFolderAction"
 
 describe("action make User in State", () => {
-  it("should delete one folder", () => {
+  it("should return DELETE_FOLDER_ACTION", () => {
     const prevState = [
             {
               _id: "dir_DOl2kN3n9lMeedN90kL9",
@@ -99,7 +100,8 @@ describe("action make User in State", () => {
             }
           ]
       
-    const expected = [
+    const expected = {type: DELETE_FOLDER_ACTION,
+    response:[
       {
         _id: "dir_DOl2kN3n9lMeedN90kL9",
         object: "directory",
@@ -146,7 +148,7 @@ describe("action make User in State", () => {
         }
       }
     
-    ]
+    ]} 
     expect(deleteFolderAction(prevState)).toEqual(expected)
   })
 })
