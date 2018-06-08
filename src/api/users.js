@@ -1,11 +1,11 @@
-const urlUser = "https://dev.gyvit.io/api/user/token"
+const user = "https://dev.gyvit.io/api/user/token"
 
-fetch(urlUser, {
+fetch(user, {
   method: "post",
   headers: new Headers({
+    Accept: "application/json",
     Authorization:
-      "Bearer " +
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcyNTAyMH0.dgVTGliH4ag6IChVgwsqjctmsMlwalY_3sqoSPQu0c8",
+      "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcyNTAyMH0.dgVTGliH4ag6IChVgwsqjctmsMlwalY_3sqoSPQu0c8",
     "Content-Type": "Content-Type: application/json"
   })
 })
