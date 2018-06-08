@@ -24,7 +24,7 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
             }}
           >
             <CardImg
-              src={process.env.PUBLIC_URL.concat(image)}
+              src={process.env.PUBLIC_URL + image}
               alt="folder"
               style={{
                 width: "151.2px",
