@@ -9,4 +9,4 @@ export const userLogin = () =>
     })
   })
     .then(res => res.json())
-    .then(data => console.log("login of user", data))
+    .then(data => console.log("LOGIN FOR USER===>", data))

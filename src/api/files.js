@@ -9,4 +9,4 @@ export const listAllFiles = () =>
     }
   })
     .then(res => res.json())
-    .then(data => console.log("list all files", data))
+    .then(data => console.log("LIST ALL FILES===>", data))

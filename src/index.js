@@ -11,9 +11,10 @@ import { userLogin } from "./api/users"
 import { listAllFiles } from "./api/files"
 import { listAllDir } from "./api/directorys"
 
-listAllFiles()
 userLogin()
 listAllDir()
+listAllFiles()
+
 ReactDOM.render(<App />, document.getElementById("root"))
 const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
