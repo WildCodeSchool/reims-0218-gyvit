@@ -8,10 +8,10 @@ const initialState = []
 
 const filesReducer = (prevState = initialState, action) => {
   if (action.type === FETCH_FILES_SUCCESS) {
-    return action.response
+    return prevState
   }
   if (action.type === UPDATE_FILE_SUCCESS) {
-    return action.response
+    return [...prevState, action.response]
   }
   if (action.type === ADD_A_FILE_SUCCESS) {
     return [...prevState, action.response]
