@@ -1,12 +1,17 @@
-import { FETCH_FILES_SUCCESS } from "../actions/actions"
+import { FETCH_FILES_SUCCESS, ADD_A_FILE_ACTION } from "../actions/filesActions"
 
 const initialState = []
 
-const files = (prevState = initialState, action) => {
+export const listAllFiles = (prevState = initialState, action) => {
   if (action.type === FETCH_FILES_SUCCESS) {
     return action.response
   }
   return prevState
 }
 
-export default files
+export const addAFile = (prevState = initialState, action) => {
+  if (action.type === ADD_A_FILE_ACTION) {
+    return [...prevState, action.response]
+  }
+  return prevState
+}
