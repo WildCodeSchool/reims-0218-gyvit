@@ -1,7 +1,7 @@
 import { makeFetchFoldersSuccess } from "../actions/foldersActions"
 import { makeAddAFolderSuccess } from "../actions/foldersActions"
 
-import { listAllFolders, addAFolder } from "./foldersReducer"
+import foldersReducer from "./foldersReducer"
 
 describe("listAllFolders", () => {
   it("should not change the state for unhandled action", () => {
@@ -53,7 +53,7 @@ describe("listAllFolders", () => {
       }
     ]
 
-    expect(listAllFolders(prevState, makeFetchFoldersSuccess)).toEqual(
+    expect(foldersReducer(prevState, makeFetchFoldersSuccess)).toEqual(
       prevState
     )
   })
@@ -428,6 +428,6 @@ describe("addAFolder", () => {
       }
     ]
 
-    expect(addAFolder(prevState, addAFolderAction)).toEqual(expected)
+    expect(foldersReducer(prevState, addAFolderAction)).toEqual(expected)
   })
 })

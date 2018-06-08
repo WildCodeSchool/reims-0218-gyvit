@@ -1,4 +1,4 @@
-import { UPDATE_FILE_SUCCESS, updateFileAction } from "./updateFileAction"
+import { UPDATE_FILE_SUCCESS, updateFileAction } from "./filesActions"
 
 describe("action UPDATE_FILE", () => {
   it("should return an action UPDATE_FILE_SUCCESS", () => {
