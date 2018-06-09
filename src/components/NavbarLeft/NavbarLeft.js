@@ -8,7 +8,6 @@ import NavbarLeftLogo from "./NavbarLeftLogo"
 
 const NavbarLeft = ({ dataLinks = [] }) => (
   <div>
-    <NavbarLeftLogo />
     <Nav
       vertical
       expand="md"
@@ -19,6 +18,7 @@ const NavbarLeft = ({ dataLinks = [] }) => (
         color: "white"
       }}
     >
+      <NavbarLeftLogo />
       <NavItem className="text-center">
         {dataLinks.map((link, index) => (
           <NavbarLeftItem key={index} {...link} />
