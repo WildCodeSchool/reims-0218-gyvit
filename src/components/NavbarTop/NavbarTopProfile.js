@@ -1,4 +1,4 @@
-//TODO: create component Profile
+//TODO: Create component Profile
 
 import React from "react"
 import { Media } from "reactstrap"

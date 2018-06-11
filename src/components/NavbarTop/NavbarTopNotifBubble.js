@@ -1,4 +1,4 @@
-//TODO: create component notif bubble icon
+//TODO: Create component notif bubble icon
 
 import React from "react"
 import PropTypes from "prop-types"

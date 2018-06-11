@@ -1,9 +1,11 @@
+//TODO: Test useReducer in connection with userReducer
+
 import { connectUserSuccessAction } from "../actions/userAction"
 
 import userReducer from "./userReducer"
 
 describe("userReducer", () => {
-  it("should not change the state for unhandled action", () => {
+  it("should check the login is good", () => {
     const prevState = {
       user: "romain@meduza-studio.com"
     }

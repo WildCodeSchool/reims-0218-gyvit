@@ -1,4 +1,4 @@
-//TODO: test:  navbar top with search bar, notification icon and profile.
+//TODO: Test navbar top with search bar, notification icon and profile.
 
 import React from "react"
 import ReactDOM from "react-dom"

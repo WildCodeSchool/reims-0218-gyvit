@@ -1,4 +1,4 @@
-//TODO TEST link
+//TODO: Test link
 
 import React from "react"
 import ReactDOM from "react-dom"

@@ -1,3 +1,5 @@
+//TODO: Create link on redux and all reducers
+
 import { combineReducers } from "redux"
 
 import userReducer from "./userReducer"

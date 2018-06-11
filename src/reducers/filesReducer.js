@@ -1,3 +1,5 @@
+//TODO: All reducer in connection with fileAction
+
 import {
   UPDATE_A_FILE_SUCCESS,
   FETCH_FILES_SUCCESS,

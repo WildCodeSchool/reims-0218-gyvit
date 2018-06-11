@@ -1,4 +1,4 @@
-//TODO: test : component Profile
+//TODO: Test component Profile
 
 import React from "react"
 import ReactDOM from "react-dom"

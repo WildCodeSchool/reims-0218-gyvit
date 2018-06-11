@@ -1,3 +1,5 @@
+// TODO: All Action in connection with login
+
 export const CONNECT_USER_SUCCESS = "CONNECT_USER_SUCCESS"
 export const DISCONNECT_USER_SUCCESS = "DISCONNECT_USER_SUCCESS"
 

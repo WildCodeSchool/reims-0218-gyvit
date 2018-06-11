@@ -1,3 +1,5 @@
+//TODO: Test all action of folder
+
 import {
   FETCH_FOLDERS_SUCCESS,
   makeFetchFoldersSuccess,

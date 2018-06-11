@@ -1,4 +1,4 @@
-//TODO: create component search bar
+//TODO: Create component search bar
 
 import React from "react"
 import { FormGroup, Input } from "reactstrap"

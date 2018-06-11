@@ -1,3 +1,5 @@
+//TODO: Create all reducers folder in connection with folderAction
+
 import {
   FETCH_FOLDERS_SUCCESS,
   ADD_A_FOLDER_SUCCESS,

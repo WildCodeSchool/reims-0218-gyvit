@@ -1,3 +1,5 @@
+//TODO: Create logo
+
 import React from "react"
 import { Row, Col } from "reactstrap"
 

@@ -1,4 +1,4 @@
-//TODO test navbar list of links
+//TODO: test navbar list of links
 
 import React from "react"
 import ReactDOM from "react-dom"
