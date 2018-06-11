@@ -1,7 +1,7 @@
 import {
   FETCH_FOLDERS_SUCCESS,
   makeFetchFoldersSuccess,
-  ADD_A_FOLDER_ACTION,
+  ADD_A_FOLDER_SUCCESS,
   makeAddAFolderSuccess
 } from "./foldersActions"
 
@@ -116,7 +116,7 @@ describe("action fetch folders success", () => {
 describe("action add a folder", () => {
   it("should return a ADD_A_FOLDER_ACTION with response", () => {
     const expectedAddAFolderAction = {
-      type: ADD_A_FOLDER_ACTION,
+      type: ADD_A_FOLDER_SUCCESS,
       response: {
         _id: "dir_DOl2kN3n9lMeedN90kL9",
         object: "directory",
