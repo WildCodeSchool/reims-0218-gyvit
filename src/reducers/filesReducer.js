@@ -18,7 +18,7 @@ const filesReducer = (prevState = initialState, action) => {
     return [...prevState, action.response]
   }
   if (action.type === DELETE_A_FILE_SUCCESS) {
-    return prevState.filter(file => action.fileId !== file.id)
+    return prevState.filter(file => action.fileId !== file._id)
   }
   return prevState
 }

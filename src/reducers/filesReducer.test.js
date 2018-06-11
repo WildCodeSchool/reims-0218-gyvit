@@ -74,7 +74,7 @@ describe("filesReducer", () => {
   it("should handle deleting a file", () => {
     const prevState = [
       {
-        id: "1file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "1file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -86,7 +86,7 @@ describe("filesReducer", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -94,7 +94,7 @@ describe("filesReducer", () => {
         }
       },
       {
-        id: "2file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "2file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -106,7 +106,7 @@ describe("filesReducer", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -114,7 +114,7 @@ describe("filesReducer", () => {
         }
       },
       {
-        id: "3file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "3file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -126,7 +126,7 @@ describe("filesReducer", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -137,7 +137,7 @@ describe("filesReducer", () => {
 
     const expectedState = [
       {
-        id: "1file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "1file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -149,7 +149,7 @@ describe("filesReducer", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -157,7 +157,7 @@ describe("filesReducer", () => {
         }
       },
       {
-        id: "2file_7F2jhzx5RlO8u5C1SP3c",
+        _id: "2file_7F2jhzx5RlO8u5C1SP3c",
         object: "file",
         name: "TEST FOR POST",
         size: 0,
@@ -169,7 +169,7 @@ describe("filesReducer", () => {
         removed: null,
         shares: [],
         dir: {
-          id: "dir_r4V13RVeHFFVvOLctpPe",
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
           object: "directory",
           name: "Sketchs & Photoshops",
           created: "2018-03-30T11:53:23+00:00",
@@ -178,11 +178,11 @@ describe("filesReducer", () => {
       }
     ]
 
-    const deleteAFileAction = makeDeleteAFileSuccess(
+    const deleteAFileSuccess = makeDeleteAFileSuccess(
       "3file_7F2jhzx5RlO8u5C1SP3c"
     )
 
-    expect(filesReducer(prevState, deleteAFileAction)).toEqual(expectedState)
+    expect(filesReducer(prevState, deleteAFileSuccess)).toEqual(expectedState)
   })
 
   it("should change the STATE with an updated file (action: UPDATE_A_FILE_SUCCESS)", () => {
@@ -212,7 +212,7 @@ describe("filesReducer", () => {
     const response = {
       _id: "file_7F2jhzx5RlO8u5C1SP3c",
       object: "file",
-      name: "TEST FOR POST",
+      name: "New name",
       size: 0,
       ext: "",
       type: "",
