@@ -1,3 +1,5 @@
+//TODO: All test reducer in connection with filesReducer
+
 import {
   makeFetchFilesSuccess,
   makeUpdateAFileSuccess,
@@ -6,7 +8,9 @@ import {
 
 import filesReducer from "./filesReducer"
 
-describe("files", () => {
+//test of fetchFiles
+
+describe("Fetchfiles", () => {
   it("should change the state for listFiles action", () => {
     const prevState = []
 
@@ -59,7 +63,11 @@ describe("files", () => {
       expected
     )
   })
+})
 
+//test of updtateFiles
+
+describe("Updatefiles", () => {
   it("should change the STATE with an updated file (action: UPDATE_A_FILE_SUCCESS)", () => {
     const prevState = [
       {
@@ -110,7 +118,11 @@ describe("files", () => {
       expected
     )
   })
+})
 
+//test of addFiles
+
+describe("Addfiles", () => {
   it("should change the STATE with a new file (action ADD_A_FILE_SUCCESS)", () => {
     const prevState = []
 

@@ -1,3 +1,5 @@
+// TODO: API connection of "GET List all directorys"
+
 export const listAllDir = () =>
   fetch("https://dev.gyvit.io/api/storage/directorys/list?name=amm", {
     method: "get",

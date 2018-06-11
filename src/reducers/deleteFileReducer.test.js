@@ -1,9 +1,11 @@
+//TODO:  File test of delete reducer
+
 import { makeDeleteFileAction } from "../actions/filesActions"
 
 import deleteFileReducer from "./deleteFileReducer"
 
 describe("deleteFile", () => {
-  it("should not change the state for unhandled action", () => {
+  it("should delete a file in a array with a fileId", () => {
     const prevState = [
       {
         id: "1file_7F2jhzx5RlO8u5C1SP3c",

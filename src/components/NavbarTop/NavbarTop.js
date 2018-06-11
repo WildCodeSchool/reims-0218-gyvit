@@ -1,4 +1,4 @@
-//TODO: create navbar top with search bar, notification icon and profile.
+//TODO: Create navbar top with search bar, notification icon and profile.
 
 import React from "react"
 import { Row, Col } from "reactstrap"

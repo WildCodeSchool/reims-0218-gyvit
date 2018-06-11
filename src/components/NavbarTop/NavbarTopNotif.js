@@ -1,4 +1,4 @@
-//TODO: create component notif
+//TODO: Create component notif
 
 import React from "react"
 import PropTypes from "prop-types"

@@ -1,9 +1,13 @@
+// TODO: Test action login
+
 import {
   CONNECT_USER_SUCCESS,
   DISCONNECT_USER_SUCCESS,
   disconnectUserSuccessAction,
   connectUserSuccessAction
 } from "./userAction"
+
+// Action CONNECT_USER_SUCCESS
 
 describe("action make User in State", () => {
   it("should return an action CONNECT_USER_SUCCESS", () => {
@@ -22,6 +26,8 @@ describe("action make User in State", () => {
     expect(connectUserSuccessAction(response)).toEqual(expected)
   })
 })
+
+//Action DISCONNECT_USER_SUCCESS
 
 describe("action emptying user in state", () => {
   it("should empty user in state", () => {

@@ -1,4 +1,4 @@
-//TODO: test: create component notif
+//TODO: Test create component notif
 
 import React from "react"
 import ReactDOM from "react-dom"

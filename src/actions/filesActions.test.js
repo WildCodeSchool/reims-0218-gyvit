@@ -1,3 +1,5 @@
+//TODO: All test action of file
+
 import {
   FETCH_FILES_SUCCESS,
   makeFetchFilesSuccess,
@@ -174,7 +176,9 @@ describe("action add a file", () => {
     expect(makeAddAFileSuccess(response)).toEqual(expectedAddAFileSuccess)
   })
 
-  it("should return an action UPDATE_A_FILE_SUCCESS", () => {
+  // Action UPDATE_A_FILE_SUCCESS
+
+  it("should return an action UPDATE_A_FILE_SUCCESS with response", () => {
     const response = {
       _id: "file_7F2jhzx5RlO8u5C1SP3c",
       object: "file",

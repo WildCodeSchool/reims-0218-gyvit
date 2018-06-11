@@ -1,3 +1,5 @@
+// TODO: All Action in connection with file
+
 export const FETCH_FILES_SUCCESS = "FETCH_FILES_SUCCESS"
 export const ADD_A_FILE_SUCCESS = "ADD_A_FILE_SUCCESS"
 export const UPDATE_A_FILE_SUCCESS = "UPDATE_A_FILE_SUCCESS"

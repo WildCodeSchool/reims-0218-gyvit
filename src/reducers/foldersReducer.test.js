@@ -1,9 +1,13 @@
+//TODO: All test reducers in connection with foldersReducer
+
 import {
   makeFetchFoldersSuccess,
   makeAddAFolderSuccess
 } from "../actions/foldersActions"
 
 import foldersReducer from "./foldersReducer"
+
+//test of fetchFolders
 
 describe("listAllFolders", () => {
   it("should return a list of folders", () => {
@@ -35,8 +39,10 @@ describe("listAllFolders", () => {
   })
 })
 
+//test of addFolders
+
 describe("addAFolder", () => {
-  it("should  change the state for add folder action", () => {
+  it("should change the state for add folder action", () => {
     const prevState = []
 
     const response = {

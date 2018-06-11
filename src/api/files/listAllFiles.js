@@ -1,3 +1,5 @@
+//TODO: API connection of GET List all files
+
 export const listAllFiles = () =>
   fetch("https://dev.gyvit.io/api/storage/files/list", {
     method: "GET",

@@ -1,4 +1,4 @@
-// TODO list of links to navbar
+// TODO: List of links to navbar
 
 import React from "react"
 import PropTypes from "prop-types"

@@ -1,4 +1,4 @@
-//TODO: test: create component search bar
+//TODO: Test create component search bar
 
 import React from "react"
 import ReactDOM from "react-dom"

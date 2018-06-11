@@ -1,3 +1,5 @@
+//TODO: Delete file reducer in connection with action delete file
+
 import { DELETE_FILE_ACTION } from "../actions/filesActions"
 
 const initialState = []

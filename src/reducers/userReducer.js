@@ -1,3 +1,5 @@
+//TODO: Create reducers user on connection with userAction
+
 import {
   CONNECT_USER_SUCCESS,
   DISCONNECT_USER_SUCCESS
