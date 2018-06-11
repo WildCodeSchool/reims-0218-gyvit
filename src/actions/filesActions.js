@@ -9,7 +9,7 @@ export const UPDATE_FILE_SUCCESS = "UPDATE_FILE_SUCCESS"
 // export const DELETE_FILE_ACTION = "DELETE_FILE_ACTION"
 // export const UPDATE_FILE_ACTION = "UPDATE_FILE_ACTION"
 export const ADD_A_FILE_ACTION = "ADD_A_FILE_ACTION"
-export const DELETE_FILE_ACTION = "DELETE_FILE_ACTION"
+export const DELETE_A_FILE_ACTION = "DELETE_FILE_ACTION"
 
 export const makeFetchFilesSuccess = response => ({
   type: FETCH_FILES_SUCCESS,
@@ -27,6 +27,6 @@ export const makeUpdateFileSuccess = response => ({
 })
 
 export const makeDeleteFileAction = fileId => ({
-  type: DELETE_FILE_ACTION,
+  type: DELETE_A_FILE_ACTION,
   fileId
 })
