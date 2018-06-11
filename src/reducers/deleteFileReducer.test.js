@@ -1,6 +1,6 @@
 //TODO:  File test of delete reducer
 
-import { makeDeleteFileAction } from "../actions/filesActions"
+import { makeDeleteAFileSuccess } from "../actions/filesActions"
 
 import deleteFileReducer from "./deleteFileReducer"
 
@@ -183,7 +183,7 @@ describe("deleteFile", () => {
       }
     ]
 
-    const deleteOneFileAction = makeDeleteFileAction(
+    const deleteOneFileAction = makeDeleteAFileSuccess(
       "3file_7F2jhzx5RlO8u5C1SP3c"
     )
 
