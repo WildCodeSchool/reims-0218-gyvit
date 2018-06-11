@@ -7,8 +7,12 @@ const initialState = {}
 
 // initialState is the default value of prevState
 const userReducer = (prevState = initialState, action) => {
-  if (action.type === CONNECT_USER_SUCCESS) prevState.user = action.user
-  if (action.type === DISCONNECT_USER_SUCCESS) prevState.user = ""
+  if (action.type === CONNECT_USER_SUCCESS) {
+    prevState = action.user
+  }
+  if (action.type === DISCONNECT_USER_SUCCESS) {
+    prevState = ""
+  }
   return prevState
 }
 
