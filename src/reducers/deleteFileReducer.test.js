@@ -76,6 +76,9 @@ describe("deleteFile", () => {
     expect(deleteFileReducer(prevState, anyAction)).toEqual(prevState)
   })
 
+//test of deleteFile
+
+describe("Updatefiles", () => {
   it("should handle deleting a file", () => {
     const prevState = [
       {
@@ -191,4 +194,5 @@ describe("deleteFile", () => {
       expectedState
     )
   })
+})
 })
