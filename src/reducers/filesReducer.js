@@ -1,5 +1,5 @@
 import {
-  UPDATE_FILE_SUCCESS,
+  UPDATE_A_FILE_SUCCESS,
   FETCH_FILES_SUCCESS,
   ADD_A_FILE_SUCCESS,
   DELETE_A_FILE_ACTION
@@ -11,7 +11,7 @@ const filesReducer = (prevState = initialState, action) => {
   if (action.type === FETCH_FILES_SUCCESS) {
     return action.response
   }
-  if (action.type === UPDATE_FILE_SUCCESS) {
+  if (action.type === UPDATE_A_FILE_SUCCESS) {
     return action.response
   }
   if (action.type === ADD_A_FILE_SUCCESS) {
