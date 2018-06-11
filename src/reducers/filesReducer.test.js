@@ -178,11 +178,11 @@ describe("filesReducer", () => {
       }
     ]
 
-    const deleteAFileAction = makeDeleteAFileSuccess(
+    const deleteAFileSuccess = makeDeleteAFileSuccess(
       "3file_7F2jhzx5RlO8u5C1SP3c"
     )
 
-    expect(filesReducer(prevState, deleteAFileAction)).toEqual(expectedState)
+    expect(filesReducer(prevState, deleteAFileSuccess)).toEqual(expectedState)
   })
 
   it("should change the STATE with an updated file (action: UPDATE_A_FILE_SUCCESS)", () => {
@@ -212,7 +212,7 @@ describe("filesReducer", () => {
     const response = {
       _id: "file_7F2jhzx5RlO8u5C1SP3c",
       object: "file",
-      name: "TEST FOR POST",
+      name: "New name",
       size: 0,
       ext: "",
       type: "",
