@@ -1,8 +1,11 @@
-import { makeFetchFoldersSuccess } from "../actions/foldersActions"
-import { makeAddAFolderSuccess } from "../actions/foldersActions"
-import { makeDeleteFolderSucces } from "../actions/foldersActions"
+import {
+  makeFetchFoldersSuccess,
+  makeAddAFolderSuccess,
+  makeDeleteAFolderSuccess
+  
+  } from "../actions/foldersActions"
 
-import { foldersReducer } from "./foldersReducer"
+import  foldersReducer  from "./foldersReducer"
 
 describe("listAllFolders", () => {
   it("should not change the state for unhandled action", () => {
@@ -614,11 +617,11 @@ describe("deleteFolder", () => {
       }
     ]
 
-    const deleteOneFolderAction = makeDeleteFolderSucces(
+    const deleteAFolderSuccess = makeDeleteAFolderSuccess(
       "3file_7F2jhzx5RlO8u5C1SP3c"
     )
 
-    expect(foldersReducer(prevState, deleteOneFolderAction)).toEqual(
+    expect(foldersReducer(prevState, deleteAFolderSuccess)).toEqual(
       expectedState
     )
   })

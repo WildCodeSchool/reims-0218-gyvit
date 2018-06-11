@@ -1,10 +1,10 @@
 import { FETCH_FOLDERS_SUCCESS } from "../actions/foldersActions"
 import { ADD_A_FOLDER_ACTION } from "../actions/foldersActions"
-import { DELETE_FOLDER_ACTION } from "../actions/foldersActions"
+import { DELETE_A_FOLDER_SUCCESS } from "../actions/foldersActions"
 
 const initialState = []
 
-const foldersReducers = (prevState = initialState, action) => {
+const foldersReducer = (prevState = initialState, action) => {
   if (action.type === FETCH_FOLDERS_SUCCESS) {
     return action.response
   }
@@ -18,4 +18,4 @@ const foldersReducers = (prevState = initialState, action) => {
   return prevState
 }
 
-export default foldersReducers
+export default foldersReducer

@@ -14,12 +14,10 @@ export const makeAddAFolderSuccess = response => ({
   response
 })
 
-export const makeDeleteFolderSucces = folderId => ({
+export const makeDeleteAFolderSuccess = folderId => ({
   type: DELETE_A_FOLDER_SUCCESS,
   folderId
  })
 
- export const deleteFolderAction = folderId => ({
-  type: DELETE_FOLDER_ACTION,
-  folderId
- })
+ 
+
