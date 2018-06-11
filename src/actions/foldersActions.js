@@ -1,5 +1,6 @@
 export const FETCH_FOLDERS_SUCCESS = "FETCH_FOLDERS_SUCCESS"
 export const ADD_A_FOLDER_SUCCESS = "ADD_A_FOLDER_SUCCESS"
+export const RETRIEVE_DIR_SUCCESS = "RETRIEVE_DIR_SUCCESS"
 
 export const makeFetchFoldersSuccess = response => ({
   type: FETCH_FOLDERS_SUCCESS,
@@ -8,5 +9,10 @@ export const makeFetchFoldersSuccess = response => ({
 
 export const makeAddAFolderSuccess = response => ({
   type: ADD_A_FOLDER_SUCCESS,
+  response
+})
+
+export const makeRetrieveDirSuccess = response => ({
+  type: RETRIEVE_DIR_SUCCESS,
   response
 })

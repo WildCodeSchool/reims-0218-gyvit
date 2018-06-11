@@ -1,24 +1,25 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import FoldersTable from "../components/PageFolders/FoldersTable"
-import { makeFetchFoldersSuccess } from "../actions/foldersActions"
-import { listAllFiles } from "../api/files/listAllFiles"
+import { makeRetrieveDirSuccess } from "../actions/foldersActions"
+import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 
 const mapStateToProps = state => ({
+  folders: state.folders,
   files: state.files
 })
 
 const mapDispatchToProps = dispatch => ({
-  onAllFilesReceived: response => dispatch(makeFetchFoldersSuccess(response))
+  onAllFilesReceived: response => dispatch(makeRetrieveDirSuccess(response))
 })
 
 class AllFilesReceived extends Component {
   render() {
-    return <FoldersTable files={this.props.files} />
+    return <FoldersTable files={this.props.files} dirs={this.props.folders} />
   }
 
   componentDidMount() {
-    listAllFiles().then(files => this.props.onAllFilesReceived(files))
+    retrieveDir().then(files => this.props.onAllFilesReceived(files))
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(AllFilesReceived)
