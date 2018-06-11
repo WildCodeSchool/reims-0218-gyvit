@@ -1,8 +1,8 @@
 import {
   makeFetchFilesSuccess,
-  makeUpdateFileSuccess
+  makeUpdateAFileSuccess,
+  makeAddAFileSuccess
 } from "../actions/filesActions"
-import { makeAddAFileSuccess } from "../actions/filesActions"
 
 import filesReducer from "./filesReducer"
 
@@ -60,7 +60,7 @@ describe("files", () => {
     )
   })
 
-  it("should change the STATE with an updated file", () => {
+  it("should change the STATE with an updated file (action: UPDATE_A_FILE_SUCCESS)", () => {
     const prevState = [
       {
         _id: "file_7F2jhzx5RlO8u5C1SP3c",
@@ -106,12 +106,12 @@ describe("files", () => {
     }
     const expected = response
 
-    expect(filesReducer(prevState, makeUpdateFileSuccess(response))).toEqual(
+    expect(filesReducer(prevState, makeUpdateAFileSuccess(response))).toEqual(
       expected
     )
   })
 
-  it("should change the STATE with a new file", () => {
+  it("should change the STATE with a new file (action ADD_A_FILE_SUCCESS)", () => {
     const prevState = []
 
     const response = { header: { status: 200 } }
