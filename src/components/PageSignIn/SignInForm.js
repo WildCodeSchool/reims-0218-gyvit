@@ -1,5 +1,5 @@
-//TODO: Rename this SigninForm
-// Add the signin button
+//TODO: Rename this SigninForm done
+// Add the signin button  done
 // Make it a presentational (function) componenent
 // 3 function props onEmailChange, onPasswordChange, onSubmit
 // 2 value props email and password
@@ -10,7 +10,7 @@
 import React from "react"
 import { Form, FormGroup, Label, Input, NavLink,Button } from "reactstrap"
 
-export default class SignInEmail extends React.Component {
+export default class SignInForm extends React.Component {
   render() {
     return (
       <Form

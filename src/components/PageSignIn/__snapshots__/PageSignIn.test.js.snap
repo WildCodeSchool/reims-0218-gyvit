@@ -120,16 +120,15 @@ exports[`renders correctly 1`] = `
         type="password"
       />
     </div>
-  </form>
-  <div>
     <button
-      className="btn btn-info"
+      className="btn btn-secondary"
       onClick={[Function]}
       style={
         Object {
           "backgroundImage": "linear-gradient(to left, #57aad1, #7a57d1)",
           "borderRadius": "100px",
           "height": "54px",
+          "marginTop": "40px",
           "width": "192px",
         }
       }
@@ -137,7 +136,7 @@ exports[`renders correctly 1`] = `
     >
       Sign in
     </button>
-  </div>
+  </form>
   <div
     style={
       Object {

@@ -2,7 +2,7 @@ import React from "react"
 import { Container } from "reactstrap"
 import SignInButton from "./SignInButton"
 import SignInTitle from "./SignInTitle"
-import SignInEmail from "./SignInEmail"
+import SignInForm from "./SignInForm"
 import SignInGetStarted from "./SignInGetStarted"
 
 const PageSignIn = () => (
@@ -15,7 +15,7 @@ const PageSignIn = () => (
     }}
   >
     <SignInTitle />
-    <SignInEmail />
+    <SignInForm />
   
     <SignInGetStarted />
   </Container>
