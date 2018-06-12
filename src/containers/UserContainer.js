@@ -2,16 +2,16 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import NavbarTopProfile from "../components/NavbarTop/NavbarTopProfile"
-import { connectUserSuccessAction } from "../actions/userAction"
+//import { connectUserSuccessAction } from "../actions/userAction"
 
 //Map the prop articles to the state's user branch
-const userStateToProps = state => ({
+const mapStateToProps = state => ({
   profile: state.user
 }) //state.user 'user' it is the name into combineReducers
 
-const userDispatchToProps = dispatch => ({
-  userIsConnected: response => dispatch(connectUserSuccessAction(response))
-})
+// const mapDispatchToProps = dispatch => ({
+//   userIsConnected: response => dispatch(connectUserSuccessAction(response))
+// })
 
 class UserConnected extends Component {
   render() {
@@ -19,4 +19,4 @@ class UserConnected extends Component {
   }
 }
 
-export default connect(userStateToProps, userDispatchToProps)(UserConnected)
+export default connect(mapStateToProps)(UserConnected)
