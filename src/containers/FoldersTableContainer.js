@@ -10,16 +10,16 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  onAllFilesReceived: response => dispatch(makeRetrieveDirSuccess(response))
+  onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response))
 })
 
-class AllFilesReceived extends Component {
+class FoldersTableWrap extends Component {
   render() {
     return <FoldersTable files={this.props.files} dirs={this.props.folders} />
   }
 
   componentDidMount() {
-    retrieveDir().then(files => this.props.onAllFilesReceived(files))
+    retrieveDir().then(files => this.props.onRetrieveDirSuccess(files))
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(AllFilesReceived)
+export default connect(mapStateToProps, mapDispatchToProps)(FoldersTableWrap)
