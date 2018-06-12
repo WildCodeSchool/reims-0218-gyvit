@@ -11,6 +11,16 @@ import React from "react"
 import { Form, FormGroup, Label, Input, NavLink } from "reactstrap"
 
 export default class SignInEmail extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { value: "test@test.fr" }
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value })
+  }
   render() {
     return (
       <Form
@@ -21,7 +31,15 @@ export default class SignInEmail extends React.Component {
       >
         <FormGroup>
           <Label for="email">Email </Label>
-          <Input type="email" name="email" id="IdEmail" placeholder="Email" />
+          <Input
+            value={this.state.value}
+            onChange={this.handleChange}
+            type="email"
+            name="email"
+            id="IdEmail"
+            placeholder="Email"
+          />
+          {this.state.value}
         </FormGroup>
         <FormGroup>
           <Label style={{ marginTop: "30px" }} for="password">
