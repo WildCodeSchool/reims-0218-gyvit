@@ -1,16 +1,18 @@
-//TODO: Rename this SigninForm
-// Add the signin button
-// Make it a presentational (function) componenent
-// 3 function props onEmailChange, onPasswordChange, onSubmit
-// 2 value props email and password
-// Create a SigninContainer that will have a this.state.email and this.state.password value
-// and functions handleEmailChange and handlePasswordChange that will do setState
-// submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
+import React, { Component } from "react"
+import { Form, FormGroup, Label, Input, Button, NavLink } from "reactstrap"
 
-import React from "react"
-import { Form, FormGroup, Button, Label, Input, NavLink } from "reactstrap"
+import { connect } from "react-redux"
+//import { userLogin } from "../api/users/userLogin"
 
-export default class SignInEmail extends React.Component {
+const mapStateToProps = state => {
+  return {
+    profile: state.user
+  }
+}
+
+//const mapDispatchToProps = dispatch => {}
+
+class SignInFormContainer extends Component {
   render() {
     return (
       <Form
@@ -66,3 +68,5 @@ export default class SignInEmail extends React.Component {
     )
   }
 }
+
+export default connect(mapStateToProps)(SignInFormContainer)

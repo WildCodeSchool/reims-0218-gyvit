@@ -1,18 +1,31 @@
-import { recallToken } from "./localStorageToken"
+import { storeToken } from "./localStorageToken"
 
 export const userLogin = (mail, password) => {
-  const token = recallToken()
+  console.log(`email:${mail}`, `motdepasse:${password}`)
 
-  fetch("https://dev.gyvit.io/api/user/token", {
-    method: "post",
-    headers: new Headers({
+  const user = {
+    mail,
+    password
+  }
+  const request = {
+    method: "POST",
+    headers: {
       Accept: "application/json",
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "Content-Type: application/json"
-    }),
-    body: {
-      mail,
-      password
-    }
-  }).then(res => res.json())
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(user)
+  }
+  console.log(request)
+  fetch("https://dev.gyvit.io/api/user/token", request)
+    .then(res => res.json())
+    .then(response => {
+      console.log(response)
+      if (response.success === true) {
+        storeToken(response.data.token)
+      }
+      return response
+    })
 }
+//si success est true => stocker le token dans localStorage
+//retourner le json
+//retrieve me dans signincontainer
