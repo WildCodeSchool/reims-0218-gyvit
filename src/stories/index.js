@@ -25,7 +25,6 @@ import PageFolders from "../components/PageFolders/PageFolders"
 import PageDashboard from "../components/PageDashboard/PageDashboard"
 import PageSignIn from "../components/PageSignIn/PageSignIn"
 import SignInBarLeft from "../components/PageSignIn/SignInBarLeft"
-import SignInButton from "../components/PageSignIn/SignInButton"
 import SignInContent from "../components/PageSignIn/SignInContent"
 import SignInEmail from "../components/PageSignIn/SignInEmail"
 import SignInTitle from "../components/PageSignIn/SignInTitle"
@@ -235,7 +234,6 @@ storiesOf("NavbarTopNotifBubble", module).add(
 
 storiesOf("Components Page Sign In", module)
   .add("SignInTitle", () => <SignInTitle />)
-  .add("SignInButton", () => <SignInButton />)
   .add("SignInEmail", () => <SignInEmail />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInContent", () => <SignInContent />)

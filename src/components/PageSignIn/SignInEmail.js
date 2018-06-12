@@ -50,19 +50,21 @@ export default class SignInEmail extends React.Component {
             id="IdPassword"
             placeholder="Password"
           />
-           <Button
+          
+        </FormGroup>
+        <Button
               style={{
                 width: "192px",
                 height: "54px",
+                marginTop: "40px",
                 borderRadius: "100px",
-                backgroundImage: "linear-gradient(to left, #57aad1, #7a57d1)",
-                paddingTop: "100 px"
+                backgroundImage: "linear-gradient(to left, #57aad1, #7a57d1)"
+              
               }}
-              color="info"
+              //color="info"
             >
               Sign in
             </Button>
-        </FormGroup>
       </Form>
     )
   }
