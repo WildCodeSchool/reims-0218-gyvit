@@ -4,18 +4,6 @@ import { connect } from "react-redux"
 import SignInBarLeft from "./SignInBarLeft"
 import SignInContent from "./SignInContent"
 
-// const mapStateToProps = state => {
-//   return {
-//     connectUserSuccessAction: state.data.user
-//   }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     login: (email, password) => dispatch(userReducer(email, password))
-//   }
-// }
-
 const PageSignIn = () => (
   <Container fluid>
     <Row>
