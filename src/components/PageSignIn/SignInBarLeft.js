@@ -1,6 +1,5 @@
 import React from "react"
 import { Container } from "reactstrap"
-import SignInButton from "./SignInButton"
 import SignInTitle from "./SignInTitle"
 import SignInForm from "./SignInForm"
 import SignInGetStarted from "./SignInGetStarted"

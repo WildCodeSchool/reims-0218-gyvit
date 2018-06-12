@@ -10,9 +10,10 @@
 import React from "react"
 import { Form, FormGroup, Label, Input, NavLink,Button } from "reactstrap"
 
-export default class SignInForm extends React.Component {
-  render() {
-    return (
+
+
+const signInForm = () =>(
+ <div>
       <Form
         style={{
           marginBottom: "40px",
@@ -66,6 +67,7 @@ export default class SignInForm extends React.Component {
               Sign in
             </Button>
       </Form>
+      </div>
     )
-  }
-}
+    
+export default signInForm

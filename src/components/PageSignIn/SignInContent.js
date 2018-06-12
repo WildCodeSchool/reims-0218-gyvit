@@ -5,7 +5,7 @@ const SignInContent = () => (
   <div
     style={{
       width: "max-width",
-      height: "100vh",
+      height: "100%",
       backgroundImage:
         "url('https://www.onecomputer.fr/wp-content/uploads/2016/01/blurred-background-81.jpg')",
       position: "relative"
