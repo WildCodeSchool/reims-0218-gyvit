@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import FoldersTableTbody from "./FoldersTableTbody"
 import FoldersTableCategory from "./FoldersTableCategory"
 
-const FoldersTable = ({ files = [], dirs = [] }) => (
+const FoldersTable = ({ files = [], dirs = [], name }) => (
   <div>
     <Table>
       <thead>
