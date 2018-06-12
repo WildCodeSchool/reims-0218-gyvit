@@ -1,4 +1,7 @@
-import { connectUserSuccessAction } from "../actions/userAction"
+import {
+  connectUserSuccessAction,
+  disconnectUserSuccessAction
+} from "../actions/userAction"
 
 import userReducer from "./userReducer"
 
@@ -32,6 +35,18 @@ describe("userReducer", () => {
     }
 
     const testUser = connectUserSuccessAction(response)
+
+    expect(userReducer(prevState, testUser)).toEqual(expectedState)
+  })
+
+  it("should handle disconnect user", () => {
+    const prevState = { user: "romain@meduza-studio.com" }
+
+    const expectedState = {
+      user: ""
+    }
+
+    const testUser = disconnectUserSuccessAction()
 
     expect(userReducer(prevState, testUser)).toEqual(expectedState)
   })
