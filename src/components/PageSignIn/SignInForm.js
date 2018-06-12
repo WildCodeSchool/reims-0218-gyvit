@@ -1,5 +1,5 @@
-//TODO: Rename this SigninForm
-// Add the signin button
+//TODO: Rename this SigninForm done
+// Add the signin button  done
 // Make it a presentational (function) componenent
 // 3 function props onEmailChange, onPasswordChange, onSubmit
 // 2 value props email and password
@@ -8,11 +8,12 @@
 // submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
 
 import React from "react"
-import { Form, FormGroup, Label, Input, NavLink } from "reactstrap"
+import { Form, FormGroup, Label, Input, NavLink,Button } from "reactstrap"
 
-export default class SignInEmail extends React.Component {
-  render() {
-    return (
+
+
+const signInForm = () =>(
+ <div>
       <Form
         style={{
           marginBottom: "40px",
@@ -50,8 +51,23 @@ export default class SignInEmail extends React.Component {
             id="IdPassword"
             placeholder="Password"
           />
+          
         </FormGroup>
+        <Button
+              style={{
+                width: "192px",
+                height: "54px",
+                marginTop: "40px",
+                borderRadius: "100px",
+                backgroundImage: "linear-gradient(to left, #57aad1, #7a57d1)"
+              
+              }}
+              //color="info"
+            >
+              Sign in
+            </Button>
       </Form>
+      </div>
     )
-  }
-}
+    
+export default signInForm

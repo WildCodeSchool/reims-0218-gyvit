@@ -3,15 +3,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
-import SignInEmail from "./SignInTitle"
+import SignInForm from "./SignInTitle"
 
 it("renders without crashing", () => {
   const div = document.createElement("div")
-  ReactDOM.render(<SignInEmail />, div)
+  ReactDOM.render(<SignInForm />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
 it("renders link html", () => {
-  const tree = renderer.create(<SignInEmail />).toJSON()
+  const tree = renderer.create(<SignInForm />).toJSON()
   expect(tree).toMatchSnapshot()
 })
