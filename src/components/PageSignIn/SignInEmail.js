@@ -1,4 +1,12 @@
-//TODO: create a email input
+//TODO: Rename this SigninForm
+// Add the signin button
+// Make it a presentational (function) componenent
+// 3 function props onEmailChange, onPasswordChange, onSubmit
+// 2 value props email and password
+// Create a SigninContainer that will have a this.state.email and this.state.password value
+// and functions handleEmailChange and handlePasswordChange that will do setState
+// submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
+
 import React from "react"
 import { Form, FormGroup, Label, Input, NavLink } from "reactstrap"
 
