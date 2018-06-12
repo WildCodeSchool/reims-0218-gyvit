@@ -16,7 +16,7 @@ const PageSignIn = () => (
   >
     <SignInTitle />
     <SignInEmail />
-    <SignInButton />
+  
     <SignInGetStarted />
   </Container>
 )

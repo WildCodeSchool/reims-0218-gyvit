@@ -8,7 +8,7 @@
 // submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
 
 import React from "react"
-import { Form, FormGroup, Label, Input, NavLink } from "reactstrap"
+import { Form, FormGroup, Label, Input, NavLink,Button } from "reactstrap"
 
 export default class SignInEmail extends React.Component {
   render() {
@@ -50,6 +50,18 @@ export default class SignInEmail extends React.Component {
             id="IdPassword"
             placeholder="Password"
           />
+           <Button
+              style={{
+                width: "192px",
+                height: "54px",
+                borderRadius: "100px",
+                backgroundImage: "linear-gradient(to left, #57aad1, #7a57d1)",
+                paddingTop: "100 px"
+              }}
+              color="info"
+            >
+              Sign in
+            </Button>
         </FormGroup>
       </Form>
     )
