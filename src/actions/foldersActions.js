@@ -1,5 +1,6 @@
 export const FETCH_FOLDERS_SUCCESS = "FETCH_FOLDERS_SUCCESS"
 export const ADD_A_FOLDER_SUCCESS = "ADD_A_FOLDER_SUCCESS"
+export const RETRIEVE_DIR_SUCCESS = "RETRIEVE_DIR_SUCCESS"
 export const UPDATE_A_FOLDER_SUCCESS = "UPDATE_A_FOLDER_SUCCESS"
 export const DELETE_A_FOLDER_SUCCESS = "DELETE_A_FOLDER_SUCCESS"
 
@@ -13,6 +14,10 @@ export const makeAddAFolderSuccess = response => ({
   response
 })
 
+export const makeRetrieveDirSuccess = response => ({
+  type: RETRIEVE_DIR_SUCCESS,
+  response
+})
 export const makeUpdateAFolderSuccess = response => ({
   type: UPDATE_A_FOLDER_SUCCESS,
   response
