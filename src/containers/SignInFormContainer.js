@@ -7,8 +7,14 @@
 // and functions handleEmailChange and handlePasswordChange that will do setState
 // submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
 import React, { Component } from "react"
+import { connect } from "react-redux"
 
-import SigninForm from "./components/PageSignIn/SignInForm"
+import SignInForm from "../components/PageSignIn/SignInForm"
+import { userLogin } from "../api/users/userLogin"
+
+const mapStateToProps = state => ({
+  profile: state.user
+})
 
 class SignInFormWrap extends Component {
   //add constructor for two input "email" & "password"
@@ -28,14 +34,15 @@ class SignInFormWrap extends Component {
 
   render() {
     return (
-      <SigninForm
+      <SignInForm
         email={this.state.email}
         onEmailChange={this.handleChange}
         password={this.state.password}
         onPasswordChange={this.handleChange}
+        onSubmit={userLogin()}
       />
     )
   }
 }
 
-export default SignInFormWrap
+export default connect(mapStateToProps)(SignInFormWrap)
