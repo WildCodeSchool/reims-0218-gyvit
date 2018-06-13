@@ -10,9 +10,9 @@ const props = {
     notifsCount: 6
   },
   profile: {
-    lastname: "Duflot",
-    firstname: "Romain",
-    business: "Notoriety"
+    lastname: "Marlot",
+    firstname: "Kevin",
+    business: "Meduza"
   }
 }
 

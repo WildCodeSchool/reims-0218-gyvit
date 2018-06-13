@@ -11,11 +11,13 @@ const NavbarTopProfile = ({ firstname, lastname, business }) => (
       <Media href="#">
         <Media
           style={{
-            marginTop: "25px"
+            marginTop: "25px",
+            width: "40px",
+            height: "40px"
           }}
           className="rounded-circle"
           object
-          src="http://via.placeholder.com/40x40"
+          src="img/kevinMarlot.jpeg"
           alt={firstname}
         />
       </Media>

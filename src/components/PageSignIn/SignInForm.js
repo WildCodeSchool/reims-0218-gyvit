@@ -27,9 +27,10 @@ const SignInForm = ({
       <FormGroup>
         <Label for="mail">Email </Label>
         <Input
+          style={{ width: "80%" }}
           value={mail}
           onChange={onMailChange}
-          type="mail"
+          type="email"
           name="mail"
           id="Idmail"
           placeholder="Mail"
@@ -51,13 +52,15 @@ const SignInForm = ({
             letterSpacing: "normal",
             textAlign: "right",
             color: "#7a57d1",
-            paddingLeft: "130px"
+            paddingLeft: "10px",
+            width: "50%"
           }}
           href="#"
         >
           Forgot password?
         </NavLink>
         <Input
+          style={{ width: "80%" }}
           value={password}
           onChange={onPasswordChange}
           type="password"
