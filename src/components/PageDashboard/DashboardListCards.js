@@ -7,7 +7,7 @@ import DashboardCard from "./DashboardCard"
 const DashboardListCards = ({ elements, name }) => (
   <Container>
     <Row className="App">
-      <Col sm="12" md={{ size: 4, offset: 3 }}>
+      <Col md="12" sm="4">
         <p
           style={{
             fontSize: "24px",
