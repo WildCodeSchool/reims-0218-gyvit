@@ -1,19 +1,19 @@
 //TODO: Rename this SigninForm done
 // Add the signin button  done
 // Make it a presentational (function) componenent
-// 3 function props onEmailChange, onPasswordChange, onSubmit
-// 2 value props email and password
-// Create a SigninContainer that will have a this.state.email and this.state.password value
-// and functions handleEmailChange and handlePasswordChange that will do setState
+// 3 function props onMailChange, onPasswordChange, onSubmit
+// 2 value props mail and password
+// Create a SigninContainer that will have a this.state.mail and this.state.password value
+// and functions handlemailChange and handlePasswordChange that will do setState
 // submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
 
 import React from "react"
 import { Form, FormGroup, Label, Input, NavLink, Button } from "reactstrap"
 
 const SignInForm = ({
-  email,
+  mail,
   password,
-  onEmailChange,
+  onMailChange,
   onPasswordChange,
   onSubmit
 }) => (
@@ -25,14 +25,14 @@ const SignInForm = ({
       }}
     >
       <FormGroup>
-        <Label for="email">Email </Label>
+        <Label for="mail">Email </Label>
         <Input
-          value={email}
-          onChange={onEmailChange}
-          type="email"
-          name="email"
-          id="IdEmail"
-          placeholder="Email"
+          value={mail}
+          onChange={onMailChange}
+          type="mail"
+          name="mail"
+          id="Idmail"
+          placeholder="Mail"
         />
       </FormGroup>
 

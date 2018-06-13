@@ -15,7 +15,7 @@ import { connectUserSuccessAction } from "../actions/userAction"
 
 //dispatch connectUserSuccessAction
 const mapDispatchToProps = dispatch => ({
-  userConnected: response => dispatch(connectUserSuccessAction(response))
+  onUserConnected: response => dispatch(connectUserSuccessAction(response))
 })
 
 class SignInFormWrap extends Component {
@@ -24,35 +24,30 @@ class SignInFormWrap extends Component {
     super()
     this.state = {
       //value default of "email" & "password"
-      email: "",
+      mail: "",
       password: ""
     }
     this.handleChange = this.handleChange.bind(this) //create new function identical
-    //    this.componentDidMount = this.componentDidMount.bind(this) //to access this from component did mount
-    console.log(`mail et password ${this.state.email} ${this.state.password}`)
+    console.log(`mail et password ${this.state.mail} ${this.state.password}`)
   }
-
-  // componentDidMount() {
-  //   this.props.onSubmit = userLogin(this.state.email, this.state.password)
-  // }
 
   handleChange(event) {
     event.preventDefault()
     this.setState({ [event.target.name]: event.target.value }) //dynamique value email or password
 
     console.log(
-      `mail et password handle ${this.state.email} ${this.state.password}`
+      `mail et password handle ${this.state.mail} ${this.state.password}`
     )
   }
 
   render() {
     return (
       <SignInForm
-        email={this.state.email}
-        onEmailChange={this.handleChange}
+        mail={this.state.mail}
+        onMailChange={this.handleChange}
         password={this.state.password}
         onPasswordChange={this.handleChange}
-        onSubmit
+        onSubmit={() => userLogin(this.state.mail, this.state.password)}
       />
     )
   }
