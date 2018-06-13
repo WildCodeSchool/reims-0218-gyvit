@@ -12,6 +12,7 @@ import { connect } from "react-redux"
 import SignInForm from "../components/PageSignIn/SignInForm"
 import { userLogin } from "../api/users/userLogin"
 import { connectUserSuccessAction } from "../actions/userAction"
+import { retrieveMe } from "../api/users/retrieveMe"
 
 //dispatch connectUserSuccessAction
 const mapDispatchToProps = dispatch => ({
@@ -28,16 +29,11 @@ class SignInFormWrap extends Component {
       password: ""
     }
     this.handleChange = this.handleChange.bind(this) //create new function identical
-    console.log(`mail et password ${this.state.mail} ${this.state.password}`)
   }
 
   handleChange(event) {
     event.preventDefault()
     this.setState({ [event.target.name]: event.target.value }) //dynamique value email or password
-
-    console.log(
-      `mail et password handle ${this.state.mail} ${this.state.password}`
-    )
   }
 
   render() {
@@ -47,10 +43,14 @@ class SignInFormWrap extends Component {
         onMailChange={this.handleChange}
         password={this.state.password}
         onPasswordChange={this.handleChange}
-        onSubmit={() => userLogin(this.state.mail, this.state.password)}
+        onSubmit={() =>
+          userLogin(this.state.mail, this.state.password).then(() =>
+            retrieveMe().then(response => this.props.onUserConnected(response))
+          )
+        }
       />
     )
   }
 }
 
-export default connect(mapDispatchToProps)(SignInFormWrap)
+export default connect(null, mapDispatchToProps)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
