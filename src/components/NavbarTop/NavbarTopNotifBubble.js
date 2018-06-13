@@ -8,8 +8,9 @@ const NavbarTopNotifBubble = ({ notifsCount }) => {
   return (
     <Badge
       style={{
+        marginTop: "-50px",
         backgroundColor: "#ff007e",
-        width: "20px",
+        width: "35px",
         height: "20px"
       }}
       pill
