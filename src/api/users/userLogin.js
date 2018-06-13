@@ -1,4 +1,5 @@
 import { storeToken } from "./localStorageToken"
+import { retrieveMe } from "./retrieveMe"
 
 export const userLogin = (mail, password) => {
   console.log(`email:${mail}`, `motdepasse:${password}`)
@@ -20,12 +21,18 @@ export const userLogin = (mail, password) => {
     .then(res => res.json())
     .then(response => {
       console.log(response)
+      //stock token in localStorage storeToken()
       if (response.success === true) {
         storeToken(response.data.token)
       }
       return response
     })
+    .then(response => retrieveMe())
+    //.then(response => console.log(response))
+
+    //promise not resolved
+    .catch(response => {})
 }
-//si success est true => stocker le token dans localStorage
+
 //retourner le json
 //retrieve me dans signincontainer

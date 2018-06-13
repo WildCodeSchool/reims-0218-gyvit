@@ -2,6 +2,10 @@ import React, { Component } from "react"
 import { Form, FormGroup, Label, Input, Button, NavLink } from "reactstrap"
 
 import { connect } from "react-redux"
+import {
+  connectUserFailAction,
+  connectUserSuccessAction
+} from "../actions/userAction"
 //import { userLogin } from "../api/users/userLogin"
 
 const mapStateToProps = state => {
@@ -10,7 +14,10 @@ const mapStateToProps = state => {
   }
 }
 
-//const mapDispatchToProps = dispatch => {}
+const mapDispatchToProps = dispatch => ({
+  errorLogin: response => dispatch(connectUserFailAction(response)),
+  successLogin: user => dispatch(connectUserSuccessAction(user))
+})
 
 class SignInFormContainer extends Component {
   render() {
@@ -69,4 +76,4 @@ class SignInFormContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps)(SignInFormContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(SignInFormContainer)
