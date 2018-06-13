@@ -8,7 +8,7 @@ exports[`renders link html 1`] = `
     className="App row"
   >
     <div
-      className="col-sm-12 col-md-4 offset-md-3"
+      className="col-sm-4 col-md-12"
     >
       <p
         style={

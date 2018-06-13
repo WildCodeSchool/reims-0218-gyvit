@@ -8,7 +8,7 @@ const PageSignIn = () => (
   <Container
     style={{
       paddingTop: "290px",
-      marginLeft: "30px",
+      marginLeft: "10%",
       backgroundColor: "#ffffff",
       marginRight: "50px"
     }}
