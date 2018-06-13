@@ -3,77 +3,79 @@ import {
   makeFetchFilesSuccess,
   ADD_A_FILE_SUCCESS,
   makeAddAFileSuccess,
-  UPDATE_FILE_SUCCESS,
-  makeUpdateFileSuccess
+  UPDATE_A_FILE_SUCCESS,
+  makeUpdateAFileSuccess,
+  DELETE_A_FILE_SUCCESS,
+  makeDeleteAFileSuccess
 } from "./filesActions"
 
 //action FETCH_FILES_SUCCESS
 
-const prevState = [
-  {
-    _id: "file_7F2jhzx5RlO8u5C1SP3c",
-    object: "file",
-    name: "TEST FOR POST",
-    size: 0,
-    ext: "",
-    type: "",
-    remove: 0,
-    created: "2018-04-22T08:34:26+00:00",
-    modified: "2018-04-22T08:34:26+00:00",
-    removed: null,
-    shares: [],
-    dir: {
-      _id: "dir_r4V13RVeHFFVvOLctpPe",
-      object: "directory",
-      name: "Sketchs & Photoshops",
-      created: "2018-03-30T11:53:23+00:00",
-      modified: "2018-03-30T12:11:15+00:00"
-    }
-  },
-  {
-    _id: "file_7F2jhzx5RlO8u5C1SP3c",
-    object: "file",
-    name: "TEST FOR POST",
-    size: 0,
-    ext: "",
-    type: "",
-    remove: 0,
-    created: "2018-04-22T08:34:26+00:00",
-    modified: "2018-04-22T08:34:26+00:00",
-    removed: null,
-    shares: [],
-    dir: {
-      _id: "dir_r4V13RVeHFFVvOLctpPe",
-      object: "directory",
-      name: "Sketchs & Photoshops",
-      created: "2018-03-30T11:53:23+00:00",
-      modified: "2018-03-30T12:11:15+00:00"
-    }
-  },
-  {
-    _id: "file_7F2jhzx5RlO8u5C1SP3c",
-    object: "file",
-    name: "TEST FOR POST",
-    size: 0,
-    ext: "",
-    type: "",
-    remove: 0,
-    created: "2018-04-22T08:34:26+00:00",
-    modified: "2018-04-22T08:34:26+00:00",
-    removed: null,
-    shares: [],
-    dir: {
-      _id: "dir_r4V13RVeHFFVvOLctpPe",
-      object: "directory",
-      name: "Sketchs & Photoshops",
-      created: "2018-03-30T11:53:23+00:00",
-      modified: "2018-03-30T12:11:15+00:00"
-    }
-  }
-]
-
 describe("action fetch files success", () => {
   it("should return a FETCH_FILES_SUCCESS action with response", () => {
+    const response = [
+      {
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
+        object: "file",
+        name: "TEST FOR POST",
+        size: 0,
+        ext: "",
+        type: "",
+        remove: 0,
+        created: "2018-04-22T08:34:26+00:00",
+        modified: "2018-04-22T08:34:26+00:00",
+        removed: null,
+        shares: [],
+        dir: {
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
+          object: "directory",
+          name: "Sketchs & Photoshops",
+          created: "2018-03-30T11:53:23+00:00",
+          modified: "2018-03-30T12:11:15+00:00"
+        }
+      },
+      {
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
+        object: "file",
+        name: "TEST FOR POST",
+        size: 0,
+        ext: "",
+        type: "",
+        remove: 0,
+        created: "2018-04-22T08:34:26+00:00",
+        modified: "2018-04-22T08:34:26+00:00",
+        removed: null,
+        shares: [],
+        dir: {
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
+          object: "directory",
+          name: "Sketchs & Photoshops",
+          created: "2018-03-30T11:53:23+00:00",
+          modified: "2018-03-30T12:11:15+00:00"
+        }
+      },
+      {
+        _id: "file_7F2jhzx5RlO8u5C1SP3c",
+        object: "file",
+        name: "TEST FOR POST",
+        size: 0,
+        ext: "",
+        type: "",
+        remove: 0,
+        created: "2018-04-22T08:34:26+00:00",
+        modified: "2018-04-22T08:34:26+00:00",
+        removed: null,
+        shares: [],
+        dir: {
+          _id: "dir_r4V13RVeHFFVvOLctpPe",
+          object: "directory",
+          name: "Sketchs & Photoshops",
+          created: "2018-03-30T11:53:23+00:00",
+          modified: "2018-03-30T12:11:15+00:00"
+        }
+      }
+    ]
+
     const expected = {
       type: FETCH_FILES_SUCCESS,
       response: [
@@ -139,61 +141,42 @@ describe("action fetch files success", () => {
         }
       ]
     }
-    expect(makeFetchFilesSuccess(prevState)).toEqual(expected)
+    expect(makeFetchFilesSuccess(response)).toEqual(expected)
   })
 })
 
-// action ADD_A_FILE_ACTION
+// action ADD_A_FILE_SUCCESS
 describe("action add a file", () => {
-  it("should return a ADD_A_FILE_ACTION with response", () => {
-    const expectedAddAFileAction = {
-      type: ADD_A_FILE_SUCCESS,
-      response: {
-        _id: "file_7F2jhzx5RlO8u5C1SP3c",
-        object: "file",
-        name: "TEST FOR POST",
-        size: 0,
-        ext: "",
-        type: "",
-        remove: 0,
-        created: "2018-04-22T08:34:26+00:00",
-        modified: "2018-04-22T08:34:26+00:00",
-        removed: null,
-        shares: [],
-        dir: {
-          _id: "dir_r4V13RVeHFFVvOLctpPe",
-          object: "directory",
-          name: "Sketchs & Photoshops",
-          created: "2018-03-30T11:53:23+00:00",
-          modified: "2018-03-30T12:11:15+00:00"
-        }
+  it("should return a ADD_A_FILE_SUCCESS with response", () => {
+    const response = {
+      _id: "file_7F2jhzx5RlO8u5C1SP3c",
+      object: "file",
+      name: "TEST FOR POST",
+      size: 0,
+      ext: "",
+      type: "",
+      remove: 0,
+      created: "2018-04-22T08:34:26+00:00",
+      modified: "2018-04-22T08:34:26+00:00",
+      removed: null,
+      shares: [],
+      dir: {
+        _id: "dir_r4V13RVeHFFVvOLctpPe",
+        object: "directory",
+        name: "Sketchs & Photoshops",
+        created: "2018-03-30T11:53:23+00:00",
+        modified: "2018-03-30T12:11:15+00:00"
       }
     }
-    expect(
-      makeAddAFileSuccess({
-        _id: "file_7F2jhzx5RlO8u5C1SP3c",
-        object: "file",
-        name: "TEST FOR POST",
-        size: 0,
-        ext: "",
-        type: "",
-        remove: 0,
-        created: "2018-04-22T08:34:26+00:00",
-        modified: "2018-04-22T08:34:26+00:00",
-        removed: null,
-        shares: [],
-        dir: {
-          _id: "dir_r4V13RVeHFFVvOLctpPe",
-          object: "directory",
-          name: "Sketchs & Photoshops",
-          created: "2018-03-30T11:53:23+00:00",
-          modified: "2018-03-30T12:11:15+00:00"
-        }
-      })
-    ).toEqual(expectedAddAFileAction)
+
+    const expectedAddAFileSuccess = {
+      type: ADD_A_FILE_SUCCESS,
+      response: response
+    }
+    expect(makeAddAFileSuccess(response)).toEqual(expectedAddAFileSuccess)
   })
 
-  it("should return an action UPDATE_FILE_SUCCESS", () => {
+  it("should return an action UPDATE_A_FILE_SUCCESS", () => {
     const response = {
       _id: "file_7F2jhzx5RlO8u5C1SP3c",
       object: "file",
@@ -207,9 +190,20 @@ describe("action add a file", () => {
       removed: null
     }
     const expected = {
-      type: UPDATE_FILE_SUCCESS,
+      type: UPDATE_A_FILE_SUCCESS,
       response: response
     }
-    expect(makeUpdateFileSuccess(response)).toEqual(expected)
+    expect(makeUpdateAFileSuccess(response)).toEqual(expected)
+  })
+
+  // action DELETE_A_FILE_SUCCESS
+  it("should return an action DELETE_A_FILE_SUCCESS", () => {
+    const expected = {
+      type: DELETE_A_FILE_SUCCESS,
+      fileId: "file_7F2jhzx5RlO8u5C1SP3c"
+    }
+    expect(makeDeleteAFileSuccess("file_7F2jhzx5RlO8u5C1SP3c")).toEqual(
+      expected
+    )
   })
 })

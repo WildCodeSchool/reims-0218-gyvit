@@ -8,6 +8,7 @@ const SignInButton = () => (
         width: "192px",
         height: "54px",
         borderRadius: "100px",
+        
         backgroundImage: "linear-gradient(to left, #57aad1, #7a57d1)"
       }}
       color="info"
