@@ -11,10 +11,9 @@ const request = {
 
 /**
  *
- *
  * @returns: JSON.stringify of user connected
- *
  */
+
 export const retrieveMe = () =>
   fetch("https://dev.gyvit.io/api/user/me", request)
     .then(res => res.json())
