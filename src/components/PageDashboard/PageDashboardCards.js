@@ -44,10 +44,10 @@ const listLinksProps = {
 const PageDashboardCards = () => (
   <Container fluid>
     <Row>
-      <Col xs="3">
+      <Col xs="2">
         <NavbarLeft {...listLinksProps} />
       </Col>
-      <Col xs="9">
+      <Col xs="10">
         <NavbarTop />
         <DashboardListCards />
       </Col>
