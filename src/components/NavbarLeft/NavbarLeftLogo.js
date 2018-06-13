@@ -1,21 +1,23 @@
 import React from "react"
-import { Row, Col } from "reactstrap"
+import { NavbarBrand } from "reactstrap"
 
 const NavbarLeftLogo = () => {
   return (
-    <Row
+    <NavbarBrand
+      href="/"
       className="d-flex align-items-center"
       style={{
         color: "white",
         fontWeight: "bold",
         height: "90px",
-        marginBottom: "0px",
-        textAlign: "center",
-        backgroundColor: "#181048"
+        marginBottom: "0%",
+        textAlign: "right",
+        backgroundColor: "#181048",
+        marginRight: "10%"
       }}
     >
-      <Col>GYVIT </Col>
-    </Row>
+      <p>GYVIT</p>
+    </NavbarBrand>
   )
 }
 

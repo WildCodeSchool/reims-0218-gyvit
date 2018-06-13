@@ -6,7 +6,7 @@ import NavbarTopNotifBubble from "./NavbarTopNotifBubble"
 
 const NavbarTopNotif = ({ notifsCount }) => {
   return (
-    <div className="col-1">
+    <div>
       <img
         style={{
           marginTop: "37px"
