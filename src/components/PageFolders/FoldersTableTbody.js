@@ -13,8 +13,7 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
-            <th />
-            <th>
+            <td>
               <img
                 style={{
                   width: "30px",
@@ -27,20 +26,20 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
                 alt="Directory Icon"
               />
               {dir.name}
-            </th>
-            <td
-              style={{
-                width: "170px",
-                height: "14px",
-                fontFamily: "DepotNew",
-                fontSize: "14px",
-                marginTop: "28px",
-                marginBottom: "28px",
-                textAlign: "center",
-                color: "#a5a0c2"
-              }}
-            >
-              {convertDateFromJsonToFrench(dir.modified)}
+            </td>
+            <td>
+              <div
+                style={{
+                  width: "160px",
+                  height: "14px",
+                  fontSize: "14px",
+                  marginTop: "28px",
+                  fontFamily: "DepotNew",
+                  color: "#a5a0c2"
+                }}
+              >
+                {convertDateFromJsonToFrench(dir.modified)}
+              </div>
             </td>
             <td>
               {dir.shares.map((share, key) => (
@@ -48,7 +47,7 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
               ))}
               <img
                 style={{
-                  marginTop: "25px",
+                  marginTop: "20px",
                   width: "30px",
                   height: "30px"
                 }}
@@ -60,7 +59,7 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
             </td>
             <img
               style={{
-                marginTop: "33px"
+                marginTop: "37px"
               }}
               src="Assets/icon_dots_more.png"
               alt=""
@@ -72,8 +71,7 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
       {files.map(file => {
         return (
           <tr key={file._id}>
-            <th />
-            <th>
+            <td>
               <img
                 style={{
                   width: "26.2px",
@@ -86,29 +84,34 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
                 alt="file Icon"
               />
               {file.name}
-            </th>
-            <td
-              style={{
-                width: "104px",
-                height: "14px",
-                fontFamily: "DepotNew",
-                fontSize: "14px",
-                fontWeight: "normal",
-                fontStyle: "normal",
-                fontStretch: "normal",
-                lineHeight: "normal",
-                letterSpacing: "normal",
-                textAlign: "left",
-                color: "#a5a0c2"
-              }}
-            >
-              {convertDateFromJsonToFrench(file.modified)}
+            </td>
+            <td>
+              <div
+                style={{
+                  width: "160px",
+                  height: "14px",
+                  fontFamily: "DepotNew",
+                  fontSize: "14px",
+                  marginTop: "28px",
+                  fontWeight: "normal",
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  lineHeight: "normal",
+                  letterSpacing: "normal",
+                  textAlign: "left",
+                  color: "#a5a0c2"
+                }}
+              >
+                {convertDateFromJsonToFrench(file.modified)}
+              </div>
             </td>
             <td>
               {file.shares.map((share, key) => (
                 <img src="" alt={`icone Share n° ${key}`} />
               ))}
             </td>
+            {/* <td />
+            <td /> */}
           </tr>
         )
       })}
