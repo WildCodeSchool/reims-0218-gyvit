@@ -11,9 +11,11 @@ import { connect } from "react-redux"
 
 import SignInForm from "../components/PageSignIn/SignInForm"
 import { userLogin } from "../api/users/userLogin"
+import { connectUserSuccessAction } from "../actions/userAction"
 
-const mapStateToProps = state => ({
-  profile: state.user
+//dispatch connectUserSuccessAction
+const mapDispatchToProps = dispatch => ({
+  userConnected: response => dispatch(connectUserSuccessAction(response))
 })
 
 class SignInFormWrap extends Component {
@@ -26,10 +28,15 @@ class SignInFormWrap extends Component {
       password: ""
     }
     this.handleChange = this.handleChange.bind(this) //create new function identical
+    console.log(`mail et password ${this.state.email} ${this.state.password}`)
   }
 
   handleChange(event) {
+    event.preventDefault()
     this.setState({ [event.target.name]: event.target.value }) //dynamique value email or password
+    console.log(
+      `mail et password handle ${this.state.email} ${this.state.password}`
+    )
   }
 
   render() {
@@ -39,10 +46,10 @@ class SignInFormWrap extends Component {
         onEmailChange={this.handleChange}
         password={this.state.password}
         onPasswordChange={this.handleChange}
-        onSubmit={userLogin()}
+        onSubmit={userLogin(this.state.email, this.state.password)}
       />
     )
   }
 }
 
-export default connect(mapStateToProps)(SignInFormWrap)
+export default connect(mapDispatchToProps)(SignInFormWrap)

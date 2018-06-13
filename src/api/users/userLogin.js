@@ -2,12 +2,11 @@ import { storeToken } from "./localStorageToken"
 import { retrieveMe } from "./retrieveMe"
 
 export const userLogin = (mail, password) => {
-  console.log(`email:${mail}`, `motdepasse:${password}`)
-
   const user = {
     mail,
     password
   }
+  console.log(user)
   const request = {
     method: "POST",
     headers: {
@@ -16,11 +15,9 @@ export const userLogin = (mail, password) => {
     },
     body: JSON.stringify(user)
   }
-  console.log(request)
   fetch("https://dev.gyvit.io/api/user/token", request)
     .then(res => res.json())
     .then(response => {
-      console.log(response)
       //stock token in localStorage storeToken()
       if (response.success === true) {
         storeToken(response.data.token)
@@ -28,7 +25,6 @@ export const userLogin = (mail, password) => {
       return response
     })
     .then(response => retrieveMe())
-    //.then(response => console.log(response))
 
     //promise not resolved
     .catch(response => {})

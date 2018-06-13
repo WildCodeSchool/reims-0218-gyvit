@@ -67,6 +67,7 @@ const SignInForm = ({
         />
       </FormGroup>
       <Button
+        type="button"
         onClick={onSubmit}
         style={{
           width: "192px",
