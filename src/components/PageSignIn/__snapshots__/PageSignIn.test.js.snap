@@ -51,103 +51,104 @@ exports[`renders correctly 1`] = `
        
     </p>
   </div>
-  <form
-    className=""
-    style={
-      Object {
-        "marginBottom": "40px",
-        "marginTop": "60px",
+  <div>
+    <form
+      className=""
+      style={
+        Object {
+          "marginBottom": "40px",
+          "marginTop": "60px",
+        }
       }
-    }
-  >
-    <div
-      className="form-group"
     >
-      <label
-        className=""
-        htmlFor="email"
+      <div
+        className="form-group"
       >
-        Email
-      </label>
-      <input
-        className="form-control"
-        id="IdEmail"
-        name="email"
-        placeholder="Email"
-        style={
-          Object {
-            "width": "80%",
+        <label
+          className=""
+          htmlFor="email"
+        >
+          Email
+        </label>
+        <input
+          className="form-control"
+          id="IdEmail"
+          name="email"
+          placeholder="Email"
+          style={
+            Object {
+              "width": "80%",
+            }
           }
-        }
-        type="email"
-      />
-    </div>
-    <div
-      className="form-group"
-    >
-      <label
-        className=""
-        htmlFor="password"
-        style={
-          Object {
-            "marginTop": "30px",
-          }
-        }
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group"
       >
-        Password
-      </label>
-      <a
-        className="nav-link"
-        href="#"
+        <label
+          className=""
+          htmlFor="password"
+          style={
+            Object {
+              "marginTop": "30px",
+            }
+          }
+        >
+          Password
+        </label>
+        <a
+          className="nav-link"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "#7a57d1",
+              "display": "inline",
+              "fontSize": "14px",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "letterSpacing": "normal",
+              "lineHeight": "normal",
+              "paddingLeft": "10px",
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          Forgot password?
+        </a>
+        <input
+          className="form-control"
+          id="IdPassword"
+          name="password"
+          placeholder="Password"
+          style={
+            Object {
+              "width": "80%",
+            }
+          }
+          type="password"
+        />
+      </div>
+      <button
+        className="btn btn-secondary"
         onClick={[Function]}
         style={
           Object {
-            "color": "#7a57d1",
-            "display": "inline",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": "normal",
-            "paddingLeft": "10px",
-            "textAlign": "right",
-            "width": "50%",
+            "backgroundImage": "linear-gradient(to left, #57aad1, #7a57d1)",
+            "borderRadius": "100px",
+            "height": "54px",
+            "marginTop": "40px",
+            "width": "192px",
           }
         }
+        type={undefined}
       >
-        Forgot password?
-      </a>
-      <input
-        className="form-control"
-        id="IdPassword"
-        name="password"
-        placeholder="Password"
-        style={
-          Object {
-            "width": "80%",
-          }
-        }
-        type="password"
-      />
-    </div>
-  </form>
-  <div>
-    <button
-      className="btn btn-info"
-      onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "linear-gradient(to left, #57aad1, #7a57d1)",
-          "borderRadius": "100px",
-          "height": "54px",
-          "width": "192px",
-        }
-      }
-      type={undefined}
-    >
-      Sign in
-    </button>
+        Sign in
+      </button>
+    </form>
   </div>
   <div
     style={
