@@ -45,9 +45,9 @@ const props = {
     notifsCount: 6
   },
   profile: {
-    lastname: "Duflot",
-    firstname: "Romain",
-    business: "Notoriety"
+    lastname: "Marlot ",
+    firstname: "Kevin",
+    business: "Meduza"
   }
 }
 
@@ -70,7 +70,7 @@ const propsWith116notif = {
 const listCardsInHome = [
   {
     id: 0,
-    image: "/Icons/placeholder.png",
+    image: "/img/request.png",
     titre: "Documents requests",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
@@ -79,7 +79,7 @@ const listCardsInHome = [
   },
   {
     id: 1,
-    image: "/Icons/placeholder.png",
+    image: "/img/share.png",
     titre: "Share documents",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
@@ -88,7 +88,7 @@ const listCardsInHome = [
   },
   {
     id: 2,
-    image: "/Icons/placeholder.png",
+    image: "/img/store.png",
     titre: "Store files",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
