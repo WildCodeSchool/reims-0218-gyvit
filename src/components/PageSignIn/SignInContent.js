@@ -24,7 +24,7 @@ const SignInContent = () => (
               textAlign: "left",
               color: "#3b425d",
               position: "absolute",
-              marginLeft: "470px"
+              marginLeft: "47%"
             }}
           >
             Don't have an account ?
@@ -39,7 +39,7 @@ const SignInContent = () => (
               borderRadius: "100px",
               border: "solid 1px #7a57d1",
               color: "#7a57d1",
-              marginTop: "30px"
+              marginTop: "30%"
             }}
           >
             Get Started

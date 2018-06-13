@@ -36,6 +36,7 @@ export default class SignInEmail extends React.Component {
           >
             Forgot password?
           </NavLink>
+
           <Input
             type="password"
             name="password"
