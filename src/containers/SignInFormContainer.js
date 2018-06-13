@@ -28,12 +28,18 @@ class SignInFormWrap extends Component {
       password: ""
     }
     this.handleChange = this.handleChange.bind(this) //create new function identical
+    //    this.componentDidMount = this.componentDidMount.bind(this) //to access this from component did mount
     console.log(`mail et password ${this.state.email} ${this.state.password}`)
   }
+
+  // componentDidMount() {
+  //   this.props.onSubmit = userLogin(this.state.email, this.state.password)
+  // }
 
   handleChange(event) {
     event.preventDefault()
     this.setState({ [event.target.name]: event.target.value }) //dynamique value email or password
+
     console.log(
       `mail et password handle ${this.state.email} ${this.state.password}`
     )
@@ -46,7 +52,7 @@ class SignInFormWrap extends Component {
         onEmailChange={this.handleChange}
         password={this.state.password}
         onPasswordChange={this.handleChange}
-        onSubmit={userLogin(this.state.email, this.state.password)}
+        onSubmit
       />
     )
   }

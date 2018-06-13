@@ -15,6 +15,7 @@ export const userLogin = (mail, password) => {
     },
     body: JSON.stringify(user)
   }
+
   fetch("https://dev.gyvit.io/api/user/token", request)
     .then(res => res.json())
     .then(response => {
@@ -22,9 +23,10 @@ export const userLogin = (mail, password) => {
       if (response.success === true) {
         storeToken(response.data.token)
       }
+      console.log(`userLogin`)
       return response
     })
-    .then(response => retrieveMe())
+    .then(response => retrieveMe(), false)
 
     //promise not resolved
     .catch(response => {})
