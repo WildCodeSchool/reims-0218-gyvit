@@ -8,25 +8,6 @@ exports[`renders link html 1`] = `
     className="row"
   >
     <div>
-      <div
-        className="d-flex align-items-center row"
-        style={
-          Object {
-            "backgroundColor": "#181048",
-            "color": "white",
-            "fontWeight": "bold",
-            "height": "90px",
-            "marginBottom": "0px",
-            "textAlign": "center",
-          }
-        }
-      >
-        <div
-          className="col"
-        >
-          GYVIT 
-        </div>
-      </div>
       <ul
         className="nav flex-column"
         expand="md"
@@ -39,6 +20,24 @@ exports[`renders link html 1`] = `
           }
         }
       >
+        <a
+          className="navbar-brand"
+          href="/"
+          style={
+            Object {
+              "backgroundColor": "#181048",
+              "color": "white",
+              "fontWeight": "bold",
+              "height": "90px",
+              "textAlign": "center",
+              "width": "220px",
+            }
+          }
+        >
+          <p>
+            GYVIT
+          </p>
+        </a>
         <li
           className="text-center nav-item"
         />
@@ -90,9 +89,7 @@ exports[`renders link html 1`] = `
         <div
           className="col-2"
         >
-          <div
-            className="col-1"
-          >
+          <div>
             <img
               alt="iconNotif"
               src="img/icon_notification.png"
@@ -107,8 +104,8 @@ exports[`renders link html 1`] = `
               style={
                 Object {
                   "backgroundColor": "#ff007e",
-                  "height": "20px",
-                  "width": "20px",
+                  "height": "25px",
+                  "width": "25px",
                 }
               }
             >

@@ -5,18 +5,18 @@ const SignInContent = () => (
   <div
     style={{
       width: "max-width",
-      height: "100vh",
+      height: "100%",
       backgroundImage:
         "url('https://www.onecomputer.fr/wp-content/uploads/2016/01/blurred-background-81.jpg')",
       position: "relative"
     }}
   >
-    <Container fluid>
+    <Container >
       <Row>
-        <Col xs="9">
+        <Col xs="7">
           <p
             style={{
-              marginTop: "49px",
+              marginTop: "10%",
               fontSize: "16px",
               fontWeight: "normal",
               fontStyle: "normal",
@@ -24,13 +24,13 @@ const SignInContent = () => (
               textAlign: "left",
               color: "#3b425d",
               position: "absolute",
-              marginLeft: "47%"
+              marginLeft: "50%"
             }}
           >
             Don't have an account ?
           </p>
         </Col>
-        <Col xs="3">
+        <Col xs="5">
           <Button
             outline
             style={{
@@ -39,7 +39,7 @@ const SignInContent = () => (
               borderRadius: "100px",
               border: "solid 1px #7a57d1",
               color: "#7a57d1",
-              marginTop: "30%"
+              marginTop: "10%"
             }}
           >
             Get Started

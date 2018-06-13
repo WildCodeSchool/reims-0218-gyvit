@@ -7,10 +7,10 @@ const PageSignIn = () => (
   <Container fluid>
     <Row>
       
-      <Col md="4" lg="4" sm="4">
+      <Col md="6" lg="6" sm="6">
         <SignInBarLeft />
       </Col>
-      <Col md="8" lg="8" sm="8">
+      <Col md="6" lg="6" sm="6">
         <SignInContent />
       </Col>
     </Row>

@@ -6,8 +6,8 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "backgroundColor": "#ff007e",
-      "height": "20px",
-      "width": "20px",
+      "height": "25px",
+      "width": "25px",
     }
   }
 >

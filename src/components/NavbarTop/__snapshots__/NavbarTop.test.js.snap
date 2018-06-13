@@ -44,9 +44,7 @@ exports[`renders correctly 1`] = `
   <div
     className="col-2"
   >
-    <div
-      className="col-1"
-    >
+    <div>
       <img
         alt="iconNotif"
         src="img/icon_notification.png"
@@ -61,8 +59,8 @@ exports[`renders correctly 1`] = `
         style={
           Object {
             "backgroundColor": "#ff007e",
-            "height": "20px",
-            "width": "20px",
+            "height": "25px",
+            "width": "25px",
           }
         }
       >
