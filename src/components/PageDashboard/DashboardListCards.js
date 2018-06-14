@@ -34,11 +34,6 @@ const DashboardListCards = ({ elements, name }) => (
         </p>
       </Col>
     </Row>
-    <Row>
-      {elements.map(element => {
-        return <DashboardCard key={element.id} {...element} />
-      })}
-    </Row>
   </Container>
 )
 
