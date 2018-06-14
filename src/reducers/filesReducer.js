@@ -26,7 +26,7 @@ const filesReducer = (prevState = initialState, action) => {
     return action.response.files
   }
   if (action.type === FILTER_ALL_DIRS) {
-    return action.filter
+    return action.response
   }
   return prevState
 }

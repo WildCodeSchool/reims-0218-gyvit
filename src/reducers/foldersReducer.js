@@ -26,7 +26,7 @@ const foldersReducer = (prevState = initialState, action) => {
     return prevState.filter(folder => action.folderId !== folder._id)
   }
   if (action.type === FILTER_ALL_DIRS) {
-    return action.filter
+    return action.response
   }
   return prevState
 }

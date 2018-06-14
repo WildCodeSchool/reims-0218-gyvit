@@ -29,7 +29,7 @@ export const makeDeleteAFolderSuccess = folderId => ({
   folderId
 })
 
-export const makeFilterDirs = filter => ({
+export const makeFilterDirs = response => ({
   type: FILTER_ALL_DIRS,
-  filter
+  response
 })

@@ -12,11 +12,27 @@ describe("filterFolders", () => {
   it("should return a filterFolders", () => {
     const prevState = []
 
-    const response = []
-
+    const response = [
+      {
+        _id: "dir_DOl2kN3n9lMeedN90kL9",
+        object: "directory",
+        name: "SammTrading",
+        created: "2018-03-29T00:00:00+00:00",
+        modified: "2018-03-29T00:00:00+00:00"
+      }
+    ]
+    const expected = [
+      {
+        _id: "dir_DOl2kN3n9lMeedN90kL9",
+        object: "directory",
+        name: "SammTrading",
+        created: "2018-03-29T00:00:00+00:00",
+        modified: "2018-03-29T00:00:00+00:00"
+      }
+    ]
     const listFoldersAction = makeFilterDirs(response)
 
-    expect(foldersReducer(prevState, listFoldersAction)).toEqual(prevState)
+    expect(foldersReducer(prevState, listFoldersAction)).toEqual(expected)
   })
 })
 
