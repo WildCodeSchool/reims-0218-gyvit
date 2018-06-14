@@ -6,18 +6,31 @@ import PropTypes from "prop-types"
 import NavbarTopProfile from "../components/NavbarTop/NavbarTopProfile"
 
 //map the props profile to the user branch of the state
-const mapStateToProps = state => ({
-  profile: state.user
-})
+const mapStateToProps = state => {
+  console.log("ça passe dans profile container")
+  return {
+    profile: state.user
+  }
+}
 
 class NavbarTopProfileContainer extends Component {
   constructor(props) {
     super(props)
+    this.handleEvent = this.handleEvent.bind(this)
   }
 
-  render(props) {
+  handleEvent() {
+    console.log(this.props)
+    console.log(this.props.profile.user.firstname)
+  }
+
+  render() {
+    console.log(`consolelog du render ${JSON.stringify(this.props)}`)
     return (
       <div>
+        <div className="App">
+          <button onClick={this.handleEvent}>Please Click</button>
+        </div>
         <Media>
           <Media href="#">
             <Media
@@ -29,7 +42,7 @@ class NavbarTopProfileContainer extends Component {
               className="rounded-circle"
               object
               src="img/kevinMarlot.jpeg"
-              alt={props.firstname}
+              alt={this.props.profile.firstname}
             />
           </Media>
           <Media body>
@@ -42,7 +55,8 @@ class NavbarTopProfileContainer extends Component {
               }}
               heading
             >
-              <span>{props.firstname}</span> <span>{props.lastname}</span>
+              <span>{this.props.profile.firstname}</span>{" "}
+              <span>{this.props.profile.lastname}</span>
             </Media>
 
             <Media
@@ -53,7 +67,7 @@ class NavbarTopProfileContainer extends Component {
                 fontSize: "14px"
               }}
             >
-              {business}
+              {this.props.profile.business}
             </Media>
           </Media>
         </Media>
