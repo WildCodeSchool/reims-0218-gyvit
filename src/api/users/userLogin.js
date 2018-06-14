@@ -18,10 +18,11 @@ export const userLogin = (mail, password) => {
     .then(res => res.json())
     .then(response => {
       //stock token in localStorage storeToken()
-      if (response.success === true) {
+      if (response.success) {
         storeToken(response.data.token)
+      } else {
+        storeToken("")
       }
-
       return response
     })
 }

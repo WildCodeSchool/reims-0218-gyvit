@@ -1,7 +1,4 @@
-import {
-  connectUserSuccessAction,
-  CONNECT_USER_SUCCESS
-} from "../actions/userAction"
+import { connectUserSuccessAction } from "../actions/userAction"
 
 import userReducer from "./userReducer"
 

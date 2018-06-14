@@ -11,11 +11,15 @@ import { connect } from "react-redux"
 import { Form, FormGroup, Label, Input, NavLink, Button } from "reactstrap"
 
 import { userLogin } from "../api/users/userLogin"
-import { connectUserSuccessAction } from "../actions/userAction"
+import {
+  connectUserSuccessAction,
+  connectUserFailAction
+} from "../actions/userAction"
 import { retrieveMe } from "../api/users/retrieveMe"
 
 //dispatch connectUserSuccessAction
 const mapDispatchToProps = dispatch => ({
+  onUserFailed: response => dispatch(connectUserFailAction(response)),
   onUserConnected: response => dispatch(connectUserSuccessAction(response))
 })
 
