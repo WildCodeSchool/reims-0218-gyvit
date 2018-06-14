@@ -7,21 +7,22 @@ import NavbarTopProfile from "../components/NavbarTop/NavbarTopProfile"
 
 //map the props profile to the user branch of the state
 const mapStateToProps = state => {
-  console.log("ça passe dans profile container")
+  console.log("ça passe dans mapsToProps")
   return {
     profile: state.user
   }
 }
 
 class NavbarTopProfileContainer extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.handleEvent = this.handleEvent.bind(this)
   }
 
-  handleEvent() {
+  handleEvent(event) {
+    event.preventDefault()
     console.log(this.props)
-    console.log(this.props.profile.user.firstname)
+    console.log("handleEvent " + this.profile.user.firstname)
   }
 
   render() {
