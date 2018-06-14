@@ -3,7 +3,6 @@ export const ADD_A_FILE_SUCCESS = "ADD_A_FILE_SUCCESS"
 export const UPDATE_A_FILE_SUCCESS = "UPDATE_A_FILE_SUCCESS"
 export const DELETE_A_FILE_SUCCESS = "DELETE_A_FILE_SUCCESS"
 export const RETRIEVE_DIR_SUCCESS = "RETRIEVE_DIR_SUCCESS"
-export const FILTER_ALL_DIRS = "FILTER_ALL_DIRS"
 
 export const makeFetchFilesSuccess = response => ({
   type: FETCH_FILES_SUCCESS,
@@ -27,10 +26,5 @@ export const makeDeleteAFileSuccess = fileId => ({
 
 export const makeRetrieveFileSuccess = response => ({
   type: RETRIEVE_DIR_SUCCESS,
-  response
-})
-
-export const makeFilterDirs = response => ({
-  type: FILTER_ALL_DIRS,
   response
 })

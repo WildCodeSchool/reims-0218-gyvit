@@ -3,8 +3,7 @@ import {
   FETCH_FILES_SUCCESS,
   ADD_A_FILE_SUCCESS,
   DELETE_A_FILE_SUCCESS,
-  RETRIEVE_DIR_SUCCESS,
-  FILTER_ALL_DIRS
+  RETRIEVE_DIR_SUCCESS
 } from "../actions/filesActions"
 
 const initialState = []
@@ -25,9 +24,7 @@ const filesReducer = (prevState = initialState, action) => {
   if (action.type === RETRIEVE_DIR_SUCCESS) {
     return action.response.files
   }
-  if (action.type === FILTER_ALL_DIRS) {
-    return action.response
-  }
+
   return prevState
 }
 

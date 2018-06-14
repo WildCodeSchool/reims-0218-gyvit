@@ -3,7 +3,7 @@ export const ADD_A_FOLDER_SUCCESS = "ADD_A_FOLDER_SUCCESS"
 export const RETRIEVE_DIR_SUCCESS = "RETRIEVE_DIR_SUCCESS"
 export const UPDATE_A_FOLDER_SUCCESS = "UPDATE_A_FOLDER_SUCCESS"
 export const DELETE_A_FOLDER_SUCCESS = "DELETE_A_FOLDER_SUCCESS"
-export const FILTER_ALL_DIRS = "FILTER_ALL_DIRS"
+export const LIST_ALL_DIRS = "LIST_ALL_DIRS"
 
 export const makeFetchFoldersSuccess = response => ({
   type: FETCH_FOLDERS_SUCCESS,
@@ -30,6 +30,6 @@ export const makeDeleteAFolderSuccess = folderId => ({
 })
 
 export const makeFilterDirs = response => ({
-  type: FILTER_ALL_DIRS,
+  type: LIST_ALL_DIRS,
   response
 })
