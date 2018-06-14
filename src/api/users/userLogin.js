@@ -22,7 +22,7 @@ export const userLogin = (mail, password) => {
       if (response.success === true) {
         storeToken(response.data.token)
       }
-      console.log(`userLogin`)
+
       return response
     })
 }

@@ -14,23 +14,10 @@ const mapStateToProps = state => {
 }
 
 class NavbarTopProfileContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.handleEvent = this.handleEvent.bind(this)
-  }
-
-  handleEvent() {
-    console.log(this.props)
-    console.log(this.props.profile.user.firstname)
-  }
-
   render() {
-    console.log(`consolelog du render ${JSON.stringify(this.props)}`)
     return (
       <div>
-        <div className="App">
-          <button onClick={this.handleEvent}>Please Click</button>
-        </div>
+        <div className="App" />
         <Media>
           <Media href="#">
             <Media
