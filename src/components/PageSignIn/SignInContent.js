@@ -12,12 +12,12 @@ const SignInContent = () => (
       position: "relative"
     }}
   >
-    <Container fluid>
+    <Container >
       <Row>
-        <Col xs="9">
+        <Col xs="7">
           <p
             style={{
-              marginTop: "49px",
+              marginTop: "10%",
               fontSize: "16px",
               fontWeight: "normal",
               fontStyle: "normal",
@@ -25,13 +25,17 @@ const SignInContent = () => (
               textAlign: "left",
               color: "#3b425d",
               position: "absolute",
+<<<<<<< HEAD
               marginLeft: "70%"
+=======
+              marginLeft: "50%"
+>>>>>>> 05d60f37c8a891e90fab78f937ac9eb1a49906da
             }}
           >
             Don't have an account ?
           </p>
         </Col>
-        <Col xs="3">
+        <Col xs="5">
           <Button
             outline
             style={{
@@ -40,7 +44,7 @@ const SignInContent = () => (
               borderRadius: "100px",
               border: "solid 1px #7a57d1",
               color: "#7a57d1",
-              marginTop: "30px"
+              marginTop: "10%"
             }}
           >
             Get Started

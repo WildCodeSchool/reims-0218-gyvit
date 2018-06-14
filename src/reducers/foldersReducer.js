@@ -11,7 +11,7 @@ const initialState = []
 
 const foldersReducer = (prevState = initialState, action) => {
   if (action.type === FETCH_FOLDERS_SUCCESS) {
-    return action.response
+    return prevState
   }
   if (action.type === ADD_A_FOLDER_SUCCESS) {
     return [...prevState, action.response]

@@ -1,13 +1,14 @@
 //TODO: create navbar top with search bar, notification icon and profile.
 
 import React from "react"
-import { Row, Col } from "reactstrap"
+import { Row, Col,Container } from "reactstrap"
 import PropTypes from "prop-types"
 import NavbarTopNotif from "./NavbarTopNotif"
 import NavbarTopSearch from "./NavbarTopSearch"
 import NavbarTopProfile from "./NavbarTopProfile"
 
 const NavbarTop = ({ notif, profile }) => (
+  <Container>
   <Row
     style={{
       height: "90px",
@@ -18,13 +19,13 @@ const NavbarTop = ({ notif, profile }) => (
     <Col xs="7">
       <NavbarTopSearch />
     </Col>
-    <Col xs="2">
-      <NavbarTopNotif {...notif} />
-    </Col>
+    <NavbarTopNotif {...notif} />
+
     <Col xs="3">
       <NavbarTopProfile {...profile} />
     </Col>
   </Row>
+</Container>
 )
 
 NavbarTop.propTypes = {

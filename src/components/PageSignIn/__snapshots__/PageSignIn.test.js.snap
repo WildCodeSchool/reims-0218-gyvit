@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "backgroundColor": "#ffffff",
-      "marginLeft": "30px",
+      "marginLeft": "10%",
       "marginRight": "50px",
       "paddingTop": "290px",
     }
@@ -68,13 +68,18 @@ exports[`renders correctly 1`] = `
           className=""
           htmlFor="email"
         >
-          Email 
+          Email
         </label>
         <input
           className="form-control"
           id="IdEmail"
           name="email"
           placeholder="Email"
+          style={
+            Object {
+              "width": "80%",
+            }
+          }
           type="email"
         />
       </div>
@@ -106,8 +111,9 @@ exports[`renders correctly 1`] = `
               "fontWeight": "normal",
               "letterSpacing": "normal",
               "lineHeight": "normal",
-              "paddingLeft": "130px",
+              "paddingLeft": "10px",
               "textAlign": "right",
+              "width": "50%",
             }
           }
         >
@@ -118,6 +124,11 @@ exports[`renders correctly 1`] = `
           id="IdPassword"
           name="password"
           placeholder="Password"
+          style={
+            Object {
+              "width": "80%",
+            }
+          }
           type="password"
         />
       </div>
