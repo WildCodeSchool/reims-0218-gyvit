@@ -7,7 +7,6 @@ import NavbarTopProfile from "../components/NavbarTop/NavbarTopProfile"
 
 //map the props profile to the user branch of the state
 const mapStateToProps = state => {
-  console.log("ça passe dans mapsToProps")
   return {
     profile: state.user
   }

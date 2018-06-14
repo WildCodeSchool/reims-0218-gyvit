@@ -5,7 +5,6 @@ export const userLogin = (mail, password) => {
     mail,
     password
   }
-  console.log(user)
   const request = {
     method: "POST",
     headers: {

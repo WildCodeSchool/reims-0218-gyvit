@@ -18,6 +18,5 @@ export const retrieveMe = () =>
   fetch("https://dev.gyvit.io/api/user/me", request)
     .then(res => res.json())
     .then(user => {
-      console.log(`retrieveMe : ${JSON.stringify(user)}`)
       return user
     })
