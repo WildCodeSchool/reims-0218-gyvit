@@ -1,9 +1,6 @@
 import { connect } from "react-redux"
 import React, { Component } from "react"
 import { Media } from "reactstrap"
-import PropTypes from "prop-types"
-
-import NavbarTopProfile from "../components/NavbarTop/NavbarTopProfile"
 
 //map the props profile to the user branch of the state
 const mapStateToProps = state => {
@@ -62,9 +59,4 @@ class NavbarTopProfileContainer extends Component {
   }
 }
 
-NavbarTopProfile.propTypes = {
-  lastname: PropTypes.string.isRequired,
-  firstname: PropTypes.string.isRequired,
-  business: PropTypes.string.isRequired
-}
 export default connect(mapStateToProps)(NavbarTopProfileContainer)

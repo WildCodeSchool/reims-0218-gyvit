@@ -5,7 +5,7 @@ import { Row, Col, Container } from "reactstrap"
 import PropTypes from "prop-types"
 import NavbarTopNotif from "./NavbarTopNotif"
 import NavbarTopSearch from "./NavbarTopSearch"
-import NavbarTopProfile from "./NavbarTopProfile"
+import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContainer"
 
 const NavbarTop = ({ notif, profile }) => (
   <Container>
@@ -22,7 +22,7 @@ const NavbarTop = ({ notif, profile }) => (
       <NavbarTopNotif {...notif} />
 
       <Col xs="3">
-        <NavbarTopProfile {...profile} />
+        <NavbarTopProfileContainer />
       </Col>
     </Row>
   </Container>
