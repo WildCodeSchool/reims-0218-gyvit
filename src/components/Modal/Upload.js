@@ -18,38 +18,50 @@ class ModalCreateDirectory extends React.Component {
     return (
       <div>
         <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}
+        style={{
+          width: "400px",
+          height: "423px",
+          marginRight: "32px",
+          textalign: "center",
+          marginleft: "auto",
+          marginright: "auto"
+        }}
+        
+        
+        
+        >
           <ModalHeader toggle={this.toggle}>Create a new directory</ModalHeader>
           <ModalBody>
           <div>
-    <Container>
-      <Row>
-        <Form>
-          <h1>Upload files</h1>      
-          <FormGroup row>
-            <Label for="exampleText" md={8}>Comments :</Label>
-            <Col sm={10}>
-              <Input type="textarea" name="text" id="exampleText" />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="exampleFile" sm={2}>File</Label>
-            <Col sm={10}>
-              <Input type="file" name="file" id="exampleFile" />
-              <FormText color="muted">
-                Please select a file to upload
-              </FormText>
-            </Col>
-          </FormGroup>  
-          <FormGroup check row>
-            <Col sm={{ size: 10, offset: 2 }}>
-              <Button>Upload this file</Button>
-            </Col>
-          </FormGroup>
-        </Form>
-      </Row>
-    </Container>
-  </div>
+            <Container>
+              <Row>
+                <Form>
+                  <h1>Upload file</h1>      
+                  <FormGroup row>
+                    <Label for="exampleText" md={8}>Comments :</Label>
+                    <Col sm={10}>
+                      <Input type="textarea" name="text" id="exampleText" />
+                    </Col>
+                  </FormGroup>
+                  <FormGroup row>
+                    <Label for="exampleFile" sm={2}>File</Label>
+                    <Col sm={10}>
+                      <Input type="file" name="file" id="exampleFile" />
+                      <FormText color="muted">
+                        Please select a file to upload
+                      </FormText>
+                    </Col>
+                  </FormGroup>  
+                  <FormGroup check row>
+                    <Col sm={{ size: 10, offset: 2 }}>
+                      <Button>Upload this file</Button>
+                    </Col>
+                  </FormGroup>
+                </Form>
+              </Row>
+            </Container>
+          </div>
           </ModalBody>
         </Modal>
       </div>
