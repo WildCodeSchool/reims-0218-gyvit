@@ -3,13 +3,13 @@ import {
   makeAddAFolderSuccess,
   makeUpdateAFolderSuccess,
   makeDeleteAFolderSuccess,
-  makeFilterDirs
+  makeListAllDirs
 } from "../actions/foldersActions"
 
 import foldersReducer from "./foldersReducer"
 
-describe("filterFolders", () => {
-  it("should return a filterFolders", () => {
+describe("listAllDirs", () => {
+  it("should return a list all dirs", () => {
     const prevState = []
 
     const response = [
@@ -30,7 +30,7 @@ describe("filterFolders", () => {
         modified: "2018-03-29T00:00:00+00:00"
       }
     ]
-    const listFoldersAction = makeFilterDirs(response)
+    const listFoldersAction = makeListAllDirs(response)
 
     expect(foldersReducer(prevState, listFoldersAction)).toEqual(expected)
   })

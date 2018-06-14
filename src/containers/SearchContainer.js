@@ -1,12 +1,11 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { makeFilterDirs } from "../actions/foldersActions"
+import { makeListAllDirs } from "../actions/foldersActions"
 import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 import { listAllDir } from "../api/directorys/listAllDirectorys"
 
-// dispatch action to
 const mapDispatchToProps = dispatch => ({
-  onFilesSearch: response => dispatch(makeFilterDirs(response))
+  onFilesSearch: response => dispatch(makeListAllDirs(response))
 })
 
 export class NavbarTopFilter extends Component {
