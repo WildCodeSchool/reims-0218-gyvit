@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./App.css"
 import logo from "./logo.svg"
 import NavbarTopFilter from "./containers/SearchContainer"
+import FoldersTableWrap from "./containers/FoldersTableContainer"
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <NavbarTopFilter />
+        <FoldersTableWrap files={[]} dirs={[]} />
       </div>
     )
   }
