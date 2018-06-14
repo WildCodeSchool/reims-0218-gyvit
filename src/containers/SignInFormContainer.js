@@ -8,8 +8,8 @@
 // submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
 import React, { Component } from "react"
 import { connect } from "react-redux"
+import { Form, FormGroup, Label, Input, NavLink, Button } from "reactstrap"
 
-import SignInForm from "../components/PageSignIn/SignInForm"
 import { userLogin } from "../api/users/userLogin"
 import { connectUserSuccessAction } from "../actions/userAction"
 import { retrieveMe } from "../api/users/retrieveMe"
@@ -38,17 +38,80 @@ class SignInFormWrap extends Component {
 
   render() {
     return (
-      <SignInForm
-        mail={this.state.mail}
-        onMailChange={this.handleChange}
-        password={this.state.password}
-        onPasswordChange={this.handleChange}
-        onSubmit={() =>
-          userLogin(this.state.mail, this.state.password).then(() =>
-            retrieveMe().then(response => this.props.onUserConnected(response))
-          )
-        }
-      />
+      <div>
+        <Form
+          style={{
+            marginBottom: "40px",
+            marginTop: "60px"
+          }}
+        >
+          <FormGroup>
+            <Label for="mail">Email </Label>
+            <Input
+              style={{ width: "80%" }}
+              value={this.state.mail}
+              onChange={this.handleChange}
+              type="email"
+              name="mail"
+              id="Idmail"
+              placeholder="Mail"
+            />
+          </FormGroup>
+
+          <FormGroup>
+            <Label style={{ marginTop: "30px" }} for="password">
+              Password
+            </Label>
+            <NavLink
+              style={{
+                display: "inline",
+                fontSize: "14px",
+                fontWeight: "normal",
+                fontStyle: "normal",
+                fontStretch: "normal",
+                lineHeight: "normal",
+                letterSpacing: "normal",
+                textAlign: "right",
+                color: "#7a57d1",
+                paddingLeft: "10px",
+                width: "50%"
+              }}
+              href="#"
+            >
+              Forgot password?
+            </NavLink>
+            <Input
+              style={{ width: "80%" }}
+              value={this.state.password}
+              onChange={this.handleChange}
+              type="password"
+              name="password"
+              id="IdPassword"
+              placeholder="Password"
+            />
+          </FormGroup>
+          <Button
+            type="button"
+            onClick={() =>
+              userLogin(this.state.mail, this.state.password).then(() =>
+                retrieveMe().then(response =>
+                  this.props.onUserConnected(response)
+                )
+              )
+            }
+            style={{
+              width: "192px",
+              height: "54px",
+              marginTop: "40px",
+              borderRadius: "100px",
+              backgroundImage: "linear-gradient(to left, #57aad1, #7a57d1)"
+            }}
+            //color="info"
+          >
+            Sign in
+          </Button>
+        </Form>
+      </div>
     )
   }
 }
