@@ -97,11 +97,16 @@ class SignInFormWrap extends Component {
           <Button
             type="button"
             onClick={() =>
-              userLogin(this.state.mail, this.state.password).then(() =>
-                retrieveMe().then(response =>
-                  this.props.onUserConnected(response)
-                )
-              )
+              userLogin(this.state.mail, this.state.password)
+                .then(response => {
+                  if (response.success) {
+                    return retrieveMe()
+                  } else {
+                    console.log("log failed")
+                    return response
+                  }
+                })
+                .then(response => this.props.onUserConnected(response))
             }
             style={{
               width: "192px",

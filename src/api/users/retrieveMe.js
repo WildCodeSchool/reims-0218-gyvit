@@ -11,7 +11,7 @@ const request = {
 
 /**
  *
- * @returns: JSON.stringify of user connected
+ * @returns: acct object for user
  */
 
 export const retrieveMe = () =>

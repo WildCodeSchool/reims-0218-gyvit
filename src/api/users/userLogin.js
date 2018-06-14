@@ -17,6 +17,7 @@ export const userLogin = (mail, password) => {
   return fetch("https://dev.gyvit.io/api/user/token", request)
     .then(res => res.json())
     .then(response => {
+      console.log(response)
       //stock token in localStorage storeToken()
       if (response.success) {
         storeToken(response.data.token)

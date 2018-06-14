@@ -15,7 +15,7 @@ const userReducer = (prevState = initialState, action) => {
     action.type === DISCONNECT_USER_SUCCESS ||
     action.type === CONNECT_USER_FAIL
   ) {
-    return action.response
+    return prevState
   }
   return prevState
 }
