@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 import { Nav, NavItem, Container, Row } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import { PageDashboard } from "../PageDashboard/PageDashboard"
+import PageSignIn from "../PageSignIn/PageSignIn"
 
-export const NavbarLeft = ({ dataLinks = [] }) => (
+const NavbarLeft = ({ dataLinks = [] }) => (
   <div>
     <Container>
       <Row>
@@ -29,15 +29,17 @@ export const NavbarLeft = ({ dataLinks = [] }) => (
                     <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/files">Files</Link>
                   </li>
                   <li>
-                    <Link to="/topics">Topics</Link>
+                    <Link to="/requests">Requests</Link>
                   </li>
                 </ul>
 
                 <hr />
                 <Route exact path="/" component={Home} />
+                <Route path="/files" component={Files} />
+                <Route path="/requests" component={Requests} />
               </div>
             </Router>
           </NavItem>
@@ -46,9 +48,19 @@ export const NavbarLeft = ({ dataLinks = [] }) => (
     </Container>
   </div>
 )
-const Home = ({ elements, name }) => (
+const Home = () => (
   <div>
-    <PageDashboard elements={elements} name={name} />
+    <h2>Home</h2>
+  </div>
+)
+const Files = () => (
+  <div>
+    <PageSignIn />
+  </div>
+)
+const Requests = () => (
+  <div>
+    <h2>Requests</h2>
   </div>
 )
 NavbarLeft.propTypes = {
