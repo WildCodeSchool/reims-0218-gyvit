@@ -19,9 +19,8 @@ const NavbarTop = ({ notif, profile }) => (
     <Col xs="7">
       <NavbarTopSearch />
     </Col>
-    <Col xs="2">
-      <NavbarTopNotif {...notif} />
-    </Col>
+    <NavbarTopNotif {...notif} />
+
     <Col xs="3">
       <NavbarTopProfile {...profile} />
     </Col>
