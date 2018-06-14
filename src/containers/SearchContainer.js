@@ -4,7 +4,6 @@ import { makeListAllDirs } from "../actions/foldersActions"
 import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 import { listAllDir } from "../api/directorys/listAllDirectorys"
 
-// dispatch action to
 const mapDispatchToProps = dispatch => ({
   onFilesSearch: response => dispatch(makeListAllDirs(response))
 })

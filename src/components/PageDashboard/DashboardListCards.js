@@ -12,14 +12,13 @@ const DashboardListCards = ({ elements, name }) => (
           style={{
             fontSize: "24px",
             height: "33px",
-            marginTop: "30%",
+            marginTop: "20%",
             textAlign: "center"
           }}
         >
           Welcome to Gyvit, {name}.
         </p>
-      </Col>
-      <Col sm="12" md={{ size: 4, offset: 3 }}>
+
         <p
           style={{
             fontSize: "18px",

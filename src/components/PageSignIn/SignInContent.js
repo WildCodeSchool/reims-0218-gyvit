@@ -12,7 +12,7 @@ const SignInContent = () => (
       position: "relative"
     }}
   >
-    <Container >
+    <Container>
       <Row>
         <Col xs="7">
           <p
@@ -25,11 +25,7 @@ const SignInContent = () => (
               textAlign: "left",
               color: "#3b425d",
               position: "absolute",
-<<<<<<< HEAD
               marginLeft: "70%"
-=======
-              marginLeft: "50%"
->>>>>>> 05d60f37c8a891e90fab78f937ac9eb1a49906da
             }}
           >
             Don't have an account ?
