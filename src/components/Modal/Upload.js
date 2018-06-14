@@ -5,29 +5,17 @@ import {FormGroup, Nav, NavItem, Container, Row, Col, Button, Form, Label, Input
 
 const Upload = () => (
   <div>
+    
     <Container>
       <Row>
      
-        <NavbarLeftLogo/>
 
-         <Form>
-        <FormGroup row>
+      <Form>
+        <h1>Upload files</h1>
+
        
-        </FormGroup>
         <FormGroup row>
-          <Label for="exampleSelect" sm={2}>Select</Label>
-          <Col sm={10}>
-            <Input type="select" name="select" id="exampleSelect" />
-          </Col>
-        </FormGroup>
-        <FormGroup row>
-          <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
-          <Col sm={10}>
-            <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple />
-          </Col>
-        </FormGroup>
-        <FormGroup row>
-          <Label for="exampleText" sm={2}>Text Area</Label>
+          <Label for="exampleText" md={8}>Comments :</Label>
           <Col sm={10}>
             <Input type="textarea" name="text" id="exampleText" />
           </Col>
@@ -40,12 +28,10 @@ const Upload = () => (
               Please select a file to upload
             </FormText>
           </Col>
-        </FormGroup>
-        
-      
+        </FormGroup>  
         <FormGroup check row>
           <Col sm={{ size: 10, offset: 2 }}>
-            <Button>Submit</Button>
+            <Button>Upload this file</Button>
           </Col>
         </FormGroup>
       </Form>
