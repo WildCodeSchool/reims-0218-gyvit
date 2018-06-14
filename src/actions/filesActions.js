@@ -30,7 +30,7 @@ export const makeRetrieveFileSuccess = response => ({
   response
 })
 
-export const makeListAlldirs = filter => ({
+export const makeFilterDirs = filter => ({
   type: FILTER_ALL_DIRS,
   filter
 })

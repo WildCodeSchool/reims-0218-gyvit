@@ -2,15 +2,26 @@ import {
   makeFetchFoldersSuccess,
   makeAddAFolderSuccess,
   makeUpdateAFolderSuccess,
-  makeDeleteAFolderSuccess
+  makeDeleteAFolderSuccess,
+  makeFilterDirs
 } from "../actions/foldersActions"
 
 import foldersReducer from "./foldersReducer"
 
-describe("listAllFolders", () => {
-  it("should return a list of folders", () => {
+describe("filterFolders", () => {
+  it("should return a filterFolders", () => {
     const prevState = []
 
+    const response = []
+
+    const listFoldersAction = makeFilterDirs(response)
+
+    expect(foldersReducer(prevState, listFoldersAction)).toEqual(prevState)
+  })
+})
+
+describe("listAllFolders", () => {
+  it("should return a list of folders", () => {
     const response = [
       {
         _id: "dir_DOl2kN3n9lMeedN90kL9",
@@ -33,7 +44,7 @@ describe("listAllFolders", () => {
 
     const listFoldersAction = makeFetchFoldersSuccess(response)
 
-    expect(foldersReducer(prevState, listFoldersAction)).toEqual(expected)
+    expect(foldersReducer(response, listFoldersAction)).toEqual(expected)
   })
 })
 

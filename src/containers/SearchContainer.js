@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { makeListAllDirs } from "../actions/foldersActions"
+import { makeFilterDirs } from "../actions/foldersActions"
 import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 import { listAllDir } from "../api/directorys/listAllDirectorys"
 
 // dispatch action to
 const mapDispatchToProps = dispatch => ({
-  onFilesSearch: response => dispatch(makeListAllDirs(response))
+  onFilesSearch: response => dispatch(makeFilterDirs(response))
 })
 
 export class NavbarTopFilter extends Component {
@@ -22,7 +22,6 @@ export class NavbarTopFilter extends Component {
   }
 
   render() {
-    console.log(this.state.value)
     return (
       <div>
         <NavbarTopSearch
