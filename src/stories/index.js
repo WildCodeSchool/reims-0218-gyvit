@@ -39,6 +39,7 @@ import ForgotPasswordBackToSignIn from "../components/PageForgotPassword/ForgotP
 import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassword"
 import ForgotPasswordGetStarted from "../components/PageForgotPassword/ForgotPasswordGetStarted"
 import GetStartedSignInContent from "../components/PageGetStarted/GetStartedSignInContent"
+import Upload from "../components/Modal/Upload"
 
 const props = {
   notif: {
@@ -285,4 +286,8 @@ storiesOf("PageDashboard", module).add("PageDashboard", () => (
     elements={listCardsInHome}
     name={name}
   />
+))
+
+storiesOf("PageModalUpload", module).add("PageModalUpload", () => (
+  <Upload />
 ))
