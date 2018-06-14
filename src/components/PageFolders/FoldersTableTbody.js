@@ -110,8 +110,6 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
                 <img src="" alt={`icone Share n° ${key}`} />
               ))}
             </td>
-            {/* <td />
-            <td /> */}
           </tr>
         )
       })}

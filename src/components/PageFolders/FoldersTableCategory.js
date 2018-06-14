@@ -18,42 +18,23 @@ const FoldersTableCategory = ({ name = "", direction = null }) => {
       break
   }
   return (
-    <div>
-      {/* <div>
-        style={{
-          width: "34px",
-
-          height: "14px",
-
-          fontFamily: "DepotNew",
-
-          fontSize: "14px",
-
-          fontWeight: "normal",
-
-          fontStyle: "normal",
-
-          fontStretch: "normal",
-
-          lineHeight: "normal",
-
-          letterSpacing: "normal",
-
-          textAlign: "left",
-
-          color: "#181048"
-        }} */}
+    <div
+      style={{
+        width: "60%",
+        height: "10%",
+        fontFamily: "DepotNew",
+        fontSize: "14px",
+        fontWeight: "normal",
+        fontStyle: "normal",
+        fontStretch: "normal",
+        lineHeight: "normal",
+        letterSpacing: "normal",
+        textAlign: "left",
+        color: "#181048"
+      }}
+    >
       {name}
-      {/* </div> */}
-      <img
-        // style={{
-        //   width: "10px",
-        //   height: "8px",
-        //   backgroundColor: "#a5a0c2"
-        // }}
-        src={source}
-        alt={alter}
-      />
+      <img src={source} alt={alter} />
     </div>
   )
 }
