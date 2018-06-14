@@ -43,9 +43,10 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
               {convertDateFromJsonToFrench(dir.modified)}
             </td>
             <td>
-              {dir.shares.map((share, key) => (
-                <i src="" alt={`icone Share n° ${key}`} />
-              ))}
+              {dir.shares &&
+                dir.shares.map((share, key) => (
+                  <i src="" alt={`icone Share n° ${key}`} />
+                ))}
               <img
                 style={{
                   marginTop: "25px",

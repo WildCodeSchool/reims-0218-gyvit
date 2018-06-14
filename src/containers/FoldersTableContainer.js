@@ -6,8 +6,7 @@ import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 
 const mapStateToProps = state => ({
   folders: state.folders,
-  files: state.files,
-  shares: state.shares
+  files: state.files
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -16,13 +15,7 @@ const mapDispatchToProps = dispatch => ({
 
 class FoldersTableWrap extends Component {
   render() {
-    return (
-      <FoldersTable
-        files={this.props.files}
-        dirs={this.props.folders}
-        shares={this.props.shares}
-      />
-    )
+    return <FoldersTable files={this.props.files} dirs={this.props.folders} />
   }
 
   componentDidMount() {
