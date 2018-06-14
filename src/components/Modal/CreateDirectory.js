@@ -1,24 +1,20 @@
 import React from "react"
-import PropTypes from "prop-types"
 import {Container, Row,  Button, Form,  Input, Modal, ModalHeader, ModalBody } from "reactstrap"
 
 
-class ModalExampleCreateDirectory extends React.Component {
+class ModalCreateDirectory extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       modal: false
     };
-
     this.toggle = this.toggle.bind(this);
   }
-
   toggle() {
     this.setState({
       modal: !this.state.modal
     });
   }
-
   render() {
     return (
       <div>
@@ -27,32 +23,23 @@ class ModalExampleCreateDirectory extends React.Component {
           <ModalHeader toggle={this.toggle}>Create a new directory</ModalHeader>
           <ModalBody>
           <div>
-    
-    <Container>
-      <Row>
-     
-
-      <Form>
-        
-        <Input type="text" name="name" id="text" placeholder="Directory's name" />
-        <Button outline color="primary">Create new directory</Button>{' '}
-        <Button outline color="secondary">Cancel</Button>{' '}
-       
-      </Form>
-      </Row>
-    </Container>
-  </div>
+            <Container>
+              <Row>
+              <Form>
+                <Input type="text" name="name" id="text" placeholder="Directory's name" />
+                <Button outline color="primary">Create new directory</Button>{' '}
+                <Button outline color="secondary">Cancel</Button>{' '}
+              </Form>
+              </Row>
+            </Container>
+           </div>
           </ModalBody>
-          
         </Modal>
       </div>
     );
   }
 }
-
-export default ModalExampleCreateDirectory;
-
-
+export default ModalCreateDirectory;
 // const CreateDirectory = () => (
 //   <div>
     
