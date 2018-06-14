@@ -2,29 +2,37 @@
 
 exports[`renders link html 1`] = `
 <div>
-  <a
-    className="nav-link"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "color": "white",
-        "opacity": 0.5,
-      }
-    }
+  <div
+    className="container"
   >
-    <img
-      alt=""
-      src="/img/house_38533.ico"
-      style={
-        Object {
-          "opacity": 0.8,
-          "paddingRight": 10,
+    <div
+      className="row"
+    >
+      <a
+        className="nav-link"
+        href="#"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+            "opacity": 0.5,
+          }
         }
-      }
-    />
-    Home
-  </a>
+      >
+        <img
+          alt=""
+          src="/img/house_38533.ico"
+          style={
+            Object {
+              "opacity": 0.8,
+              "paddingRight": 10,
+            }
+          }
+        />
+        Home
+      </a>
+    </div>
+  </div>
   <hr />
 </div>
 `;

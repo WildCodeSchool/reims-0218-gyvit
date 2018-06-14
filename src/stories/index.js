@@ -40,6 +40,7 @@ import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassw
 import ForgotPasswordGetStarted from "../components/PageForgotPassword/ForgotPasswordGetStarted"
 import GetStartedSignInContent from "../components/PageGetStarted/GetStartedSignInContent"
 import Upload from "../components/Modal/Upload"
+import ModalCreateDirectory from "../components/Modal/CreateDirectory"
 
 const props = {
   notif: {
@@ -288,6 +289,8 @@ storiesOf("PageDashboard", module).add("PageDashboard", () => (
   />
 ))
 
-storiesOf("PageModalUpload", module).add("PageModalUpload", () => (
-  <Upload />
-))
+
+
+storiesOf("PageModal", module)
+  .add("ModalUpload", () => <Upload />)
+  .add("ModalDirectory", () => <ModalCreateDirectory />)

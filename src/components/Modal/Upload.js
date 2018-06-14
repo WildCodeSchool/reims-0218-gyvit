@@ -1,4 +1,3 @@
-import NavbarLeftLogo from "../NavbarLeft/NavbarLeftLogo"
 import React from "react"
 import PropTypes from "prop-types"
 import {FormGroup, Nav, NavItem, Container, Row, Col, Button, Form, Label, Input, FormText  } from "reactstrap"
@@ -11,9 +10,7 @@ const Upload = () => (
      
 
       <Form>
-        <h1>Upload files</h1>
-
-       
+        <h1>Upload files</h1>      
         <FormGroup row>
           <Label for="exampleText" md={8}>Comments :</Label>
           <Col sm={10}>
@@ -35,9 +32,6 @@ const Upload = () => (
           </Col>
         </FormGroup>
       </Form>
-        
-        
-        
       </Row>
     </Container>
   </div>
