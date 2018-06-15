@@ -2,15 +2,42 @@ import {
   makeFetchFoldersSuccess,
   makeAddAFolderSuccess,
   makeUpdateAFolderSuccess,
-  makeDeleteAFolderSuccess
+  makeDeleteAFolderSuccess,
+  makeListAllDirs
 } from "../actions/foldersActions"
 
 import foldersReducer from "./foldersReducer"
 
-describe("listAllFolders", () => {
-  it("should return a list of folders", () => {
+describe("listAllDirs", () => {
+  it("should return a list all dirs", () => {
     const prevState = []
 
+    const response = [
+      {
+        _id: "dir_DOl2kN3n9lMeedN90kL9",
+        object: "directory",
+        name: "SammTrading",
+        created: "2018-03-29T00:00:00+00:00",
+        modified: "2018-03-29T00:00:00+00:00"
+      }
+    ]
+    const expected = [
+      {
+        _id: "dir_DOl2kN3n9lMeedN90kL9",
+        object: "directory",
+        name: "SammTrading",
+        created: "2018-03-29T00:00:00+00:00",
+        modified: "2018-03-29T00:00:00+00:00"
+      }
+    ]
+    const listFoldersAction = makeListAllDirs(response)
+
+    expect(foldersReducer(prevState, listFoldersAction)).toEqual(expected)
+  })
+})
+
+describe("listAllFolders", () => {
+  it("should return a list of folders", () => {
     const response = [
       {
         _id: "dir_DOl2kN3n9lMeedN90kL9",
@@ -33,7 +60,7 @@ describe("listAllFolders", () => {
 
     const listFoldersAction = makeFetchFoldersSuccess(response)
 
-    expect(foldersReducer(prevState, listFoldersAction)).toEqual(expected)
+    expect(foldersReducer(response, listFoldersAction)).toEqual(expected)
   })
 })
 

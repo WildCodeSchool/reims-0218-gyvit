@@ -10,7 +10,7 @@ const NavbarTopNotifBubble = ({ notifsCount }) => {
       style={{
         marginTop: "-50px",
         backgroundColor: "#ff007e",
-        width: "35px",
+        width: "auto",
         height: "20px"
       }}
       pill

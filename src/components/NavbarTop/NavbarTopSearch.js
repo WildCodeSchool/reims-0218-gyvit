@@ -1,9 +1,12 @@
 //TODO: create component search bar
+// 2 props: search a afficher dans value de l'input
+//          onSearchType a appelé sur l'évenement onchange de l'input
+// faire un SearchContainer, qui stockera dans son state, un search
 
 import React from "react"
 import { FormGroup, Input } from "reactstrap"
 
-const NavbarTopSearch = () => (
+const NavbarTopSearch = ({ search, onSearchType }) => (
   <div>
     <FormGroup>
       <span className="fa fa-search" />
@@ -20,6 +23,8 @@ const NavbarTopSearch = () => (
         name="search"
         id="exampleSearch"
         placeholder="Search..."
+        onChange={onSearchType}
+        value={search}
       />
     </FormGroup>
   </div>
