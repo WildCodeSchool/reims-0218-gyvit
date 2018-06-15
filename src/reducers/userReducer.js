@@ -16,7 +16,7 @@ const userReducer = (prevState = initialState, action) => {
     action.type === CONNECT_USER_FAIL
   ) {
     // if disconnect or failConnect, response has a response.message
-    return action.response
+    return {}
   }
   return prevState
 }
