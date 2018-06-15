@@ -2,39 +2,11 @@ import {
   makeFetchFilesSuccess,
   makeUpdateAFileSuccess,
   makeDeleteAFileSuccess,
-  makeAddAFileSuccess,
-  makeFilterDirs
+  makeAddAFileSuccess
 } from "../actions/filesActions"
 
 import filesReducer from "./filesReducer"
 
-describe("filterFiles", () => {
-  it("should return a filterFiles", () => {
-    const prevState = []
-
-    const response = [
-      {
-        _id: "dir_DOl2kN3n9lMeedN90kL9",
-        object: "directory",
-        name: "SammTrading",
-        created: "2018-03-29T00:00:00+00:00",
-        modified: "2018-03-29T00:00:00+00:00"
-      }
-    ]
-    const expected = [
-      {
-        _id: "dir_DOl2kN3n9lMeedN90kL9",
-        object: "directory",
-        name: "SammTrading",
-        created: "2018-03-29T00:00:00+00:00",
-        modified: "2018-03-29T00:00:00+00:00"
-      }
-    ]
-    const listFoldersAction = makeFilterDirs(response)
-
-    expect(filesReducer(prevState, listFoldersAction)).toEqual(expected)
-  })
-})
 describe("filesReducer", () => {
   it("should change the state for listFiles action", () => {
     const prevState = [
