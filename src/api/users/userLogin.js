@@ -1,11 +1,10 @@
-import { storeToken } from "./localStorageToken"
+import { storeToken, removeToken } from "./localStorageToken"
 
 export const userLogin = (mail, password) => {
   const user = {
     mail,
     password
   }
-  console.log(user)
   const request = {
     method: "POST",
     headers: {
@@ -19,10 +18,11 @@ export const userLogin = (mail, password) => {
     .then(res => res.json())
     .then(response => {
       //stock token in localStorage storeToken()
-      if (response.success === true) {
+      if (response.success) {
         storeToken(response.data.token)
+      } else {
+        removeToken()
       }
-      console.log(`userLogin`)
       return response
     })
 }

@@ -3,15 +3,14 @@ import {
   FETCH_FILES_SUCCESS,
   ADD_A_FILE_SUCCESS,
   DELETE_A_FILE_SUCCESS,
-  RETRIEVE_DIR_SUCCESS,
-  FILTER_ALL_DIRS
+  RETRIEVE_DIR_SUCCESS
 } from "../actions/filesActions"
 
 const initialState = []
 
 const filesReducer = (prevState = initialState, action) => {
   if (action.type === FETCH_FILES_SUCCESS) {
-    return prevState
+    return { type: action.type, response: action.response }
   }
   if (action.type === UPDATE_A_FILE_SUCCESS) {
     return action.response

@@ -21,7 +21,6 @@ export class NavbarTopFilter extends Component {
   }
 
   render() {
-    console.log(this.state.value)
     return (
       <div>
         <NavbarTopSearch

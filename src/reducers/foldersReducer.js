@@ -4,7 +4,7 @@ import {
   RETRIEVE_DIR_SUCCESS,
   UPDATE_A_FOLDER_SUCCESS,
   DELETE_A_FOLDER_SUCCESS,
-  FILTER_ALL_DIRS
+  LIST_ALL_DIRS
 } from "../actions/foldersActions"
 
 const initialState = []
@@ -25,8 +25,8 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === DELETE_A_FOLDER_SUCCESS) {
     return prevState.filter(folder => action.folderId !== folder._id)
   }
-  if (action.type === FILTER_ALL_DIRS) {
-    return action.filter
+  if (action.type === LIST_ALL_DIRS) {
+    return action.response
   }
   return prevState
 }

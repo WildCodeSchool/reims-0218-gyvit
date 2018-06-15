@@ -4,15 +4,15 @@ export const CONNECT_USER_FAIL = "CONNECT_USER_FAIL"
 
 export const connectUserSuccessAction = response => ({
   type: CONNECT_USER_SUCCESS,
-  user: response
+  response
 })
 
 export const connectUserFailAction = response => ({
   type: CONNECT_USER_FAIL,
-  user: ""
+  response
 })
 
-export const disconnectUserSuccessAction = () => ({
+export const disconnectUserSuccessAction = response => ({
   type: DISCONNECT_USER_SUCCESS,
-  user: ""
+  response
 })

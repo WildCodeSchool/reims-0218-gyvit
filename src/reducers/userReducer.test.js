@@ -5,7 +5,9 @@ import userReducer from "./userReducer"
 describe("userReducer", () => {
   it("should not change the state for unhandled action", () => {
     const prevState = {
-      user: "romain@meduza-studio.com"
+      mail: "romain@meduza-studio.com",
+      lastname: "Duflot",
+      firstname: "Romain"
     }
 
     const anyAction = {
@@ -15,24 +17,23 @@ describe("userReducer", () => {
     expect(userReducer(prevState, anyAction)).toEqual(prevState)
   })
 
-  it("should handle test user", () => {
+  it("should set user when connect successful", () => {
     const prevState = {}
 
     const response = {
-      success: true,
-      data: {
-        user: "romain@meduza-studio.com",
-        token:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcxMDI4MX0.M1Ce6GdsMovZEqP1JwX4_fWo_O4zRsTUz82aStr4Rak"
-      }
+      mail: "romain@meduza-studio.com",
+      lastname: "Duflot",
+      firstname: "Romain"
     }
 
     const expectedState = {
-      user: "romain@meduza-studio.com"
+      mail: "romain@meduza-studio.com",
+      lastname: "Duflot",
+      firstname: "Romain"
     }
 
-    const testUser = connectUserSuccessAction(response)
-
-    expect(userReducer(prevState, testUser)).toEqual(expectedState)
+    expect(userReducer(prevState, connectUserSuccessAction(response))).toEqual(
+      expectedState
+    )
   })
 })
