@@ -2,6 +2,7 @@ import {
   makeFetchFilesSuccess,
   makeUpdateAFileSuccess,
   makeDeleteAFileSuccess,
+  FETCH_FILES_SUCCESS,
   makeAddAFileSuccess
 } from "../actions/filesActions"
 

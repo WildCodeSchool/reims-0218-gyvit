@@ -10,7 +10,7 @@ const initialState = []
 
 const filesReducer = (prevState = initialState, action) => {
   if (action.type === FETCH_FILES_SUCCESS) {
-    return prevState
+    return { type: action.type, response: action.response }
   }
   if (action.type === UPDATE_A_FILE_SUCCESS) {
     return action.response

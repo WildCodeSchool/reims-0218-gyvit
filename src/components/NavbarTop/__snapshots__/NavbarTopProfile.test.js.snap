@@ -12,10 +12,12 @@ exports[`renders correctly 1`] = `
       <img
         alt="kevin"
         className="rounded-circle media-object"
-        src="http://via.placeholder.com/40x40"
+        src="img/kevinMarlot.jpeg"
         style={
           Object {
+            "height": "40px",
             "marginTop": "25px",
+            "width": "40px",
           }
         }
       />

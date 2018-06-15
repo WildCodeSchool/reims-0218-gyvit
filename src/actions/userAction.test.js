@@ -8,16 +8,29 @@ import {
 describe("action make User in State", () => {
   it("should return an action CONNECT_USER_SUCCESS", () => {
     const response = {
-      success: true,
-      data: {
-        user: "romain@meduza-studio.com",
-        token:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyODcxMDI4MX0.M1Ce6GdsMovZEqP1JwX4_fWo_O4zRsTUz82aStr4Rak"
-      }
+      _id: "acct_I9eMdLN3o9e2Ju78lKeN",
+      object: "account",
+      mail: "romain@meduza-studio.com",
+      lastname: "Duflot",
+      firstname: "Romain",
+      role: "user",
+      active: 1,
+      created: "2018-03-29T00:00:00+00:00",
+      modified: "2018-03-29T00:00:00+00:00"
     }
     const expected = {
       type: CONNECT_USER_SUCCESS,
-      user: "romain@meduza-studio.com"
+      response: {
+        _id: "acct_I9eMdLN3o9e2Ju78lKeN",
+        object: "account",
+        mail: "romain@meduza-studio.com",
+        lastname: "Duflot",
+        firstname: "Romain",
+        role: "user",
+        active: 1,
+        created: "2018-03-29T00:00:00+00:00",
+        modified: "2018-03-29T00:00:00+00:00"
+      }
     }
     expect(connectUserSuccessAction(response)).toEqual(expected)
   })
@@ -25,10 +38,13 @@ describe("action make User in State", () => {
 
 describe("action emptying user in state", () => {
   it("should empty user in state", () => {
+    const response = { success: false }
+
     const expected = {
       type: DISCONNECT_USER_SUCCESS,
-      user: ""
+      response: { success: false }
     }
-    expect(disconnectUserSuccessAction()).toEqual(expected)
+
+    expect(disconnectUserSuccessAction(response)).toEqual(expected)
   })
 })

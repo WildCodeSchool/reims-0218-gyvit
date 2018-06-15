@@ -2,48 +2,48 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="row"
-  style={
-    Object {
-      "backgroundColor": "#ffffff",
-      "border": "solid 1px #E5E8F4",
-      "height": "90px",
-    }
-  }
+  className="container"
 >
   <div
-    className="col-7"
+    className="row"
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "border": "solid 1px #E5E8F4",
+        "height": "90px",
+      }
+    }
   >
-    <div>
-      <div
-        className="form-group"
-      >
-        <span
-          className="fa fa-search"
-        />
-        <input
-          className="form-control"
-          id="exampleSearch"
-          name="search"
-          placeholder="Search..."
-          style={
-            Object {
-              "backgroundColor": "#fbfcfd",
-              "border": "none",
-              "borderRadius": "2px",
-              "height": "46px",
-              "marginLeft": "6px",
-              "marginTop": "22px",
+    <div
+      className="col-7"
+    >
+      <div>
+        <div
+          className="form-group"
+        >
+          <span
+            className="fa fa-search"
+          />
+          <input
+            className="form-control"
+            id="exampleSearch"
+            name="search"
+            placeholder="Search..."
+            style={
+              Object {
+                "backgroundColor": "#fbfcfd",
+                "border": "none",
+                "borderRadius": "2px",
+                "height": "46px",
+                "marginLeft": "6px",
+                "marginTop": "22px",
+              }
             }
-          }
-          type="search"
-        />
+            type="search"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="col-2"
-  >
     <div>
       <img
         alt="iconNotif"
@@ -59,71 +59,74 @@ exports[`renders correctly 1`] = `
         style={
           Object {
             "backgroundColor": "#ff007e",
-            "height": "25px",
-            "width": "25px",
+            "height": "20px",
+            "marginTop": "-50px",
+            "width": "35px",
           }
         }
       >
         6
       </span>
     </div>
-  </div>
-  <div
-    className="col-3"
-  >
-    <div>
-      <div
-        className="media"
-      >
+    <div
+      className="col-3"
+    >
+      <div>
         <div
           className="media"
-          href="#"
         >
-          <img
-            alt="Romain"
-            className="rounded-circle media-object"
-            src="http://via.placeholder.com/40x40"
-            style={
-              Object {
-                "marginTop": "25px",
-              }
-            }
-          />
-        </div>
-        <div
-          className="media-body"
-        >
-          <h4
-            className="media-heading"
-            style={
-              Object {
-                "color": "#231b56",
-                "fontSize": "16px",
-                "marginLeft": "21px",
-                "marginTop": "28px",
-              }
-            }
-          >
-            <span>
-              Romain
-            </span>
-             
-            <span>
-              Duflot
-            </span>
-          </h4>
           <div
             className="media"
-            style={
-              Object {
-                "color": "#372c78",
-                "fontSize": "14px",
-                "marginLeft": "21px",
-                "marginTop": "5px",
-              }
-            }
+            href="#"
           >
-            Notoriety
+            <img
+              alt="Kevin"
+              className="rounded-circle media-object"
+              src="img/kevinMarlot.jpeg"
+              style={
+                Object {
+                  "height": "40px",
+                  "marginTop": "25px",
+                  "width": "40px",
+                }
+              }
+            />
+          </div>
+          <div
+            className="media-body"
+          >
+            <h4
+              className="media-heading"
+              style={
+                Object {
+                  "color": "#231b56",
+                  "fontSize": "16px",
+                  "marginLeft": "21px",
+                  "marginTop": "28px",
+                }
+              }
+            >
+              <span>
+                Kevin
+              </span>
+               
+              <span>
+                Marlot
+              </span>
+            </h4>
+            <div
+              className="media"
+              style={
+                Object {
+                  "color": "#372c78",
+                  "fontSize": "14px",
+                  "marginLeft": "21px",
+                  "marginTop": "5px",
+                }
+              }
+            >
+              Meduza
+            </div>
           </div>
         </div>
       </div>

@@ -5,7 +5,6 @@ export const userLogin = (mail, password) => {
     mail,
     password
   }
-  console.log(user)
   const request = {
     method: "POST",
     headers: {
@@ -22,7 +21,7 @@ export const userLogin = (mail, password) => {
       if (response.success === true) {
         storeToken(response.data.token)
       }
-      console.log(`userLogin`)
+
       return response
     })
 }
