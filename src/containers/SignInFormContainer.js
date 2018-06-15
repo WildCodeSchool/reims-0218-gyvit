@@ -102,7 +102,7 @@ class SignInFormWrap extends Component {
                   if (response.success) {
                     return retrieveMe()
                   } else {
-                    console.log("log failed")
+                    // TODO put response.message in a popup
                     return response
                   }
                 })
