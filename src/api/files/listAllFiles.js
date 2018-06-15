@@ -1,5 +1,5 @@
 export const listAllFiles = () =>
-  fetch("https://dev.gyvit.io/api/storage/files/list", {
+  fetch("https://dev.gyvit.io/api/storage/files/list ", {
     method: "GET",
     headers: {
       Accept: "application/json",

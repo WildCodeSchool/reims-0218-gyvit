@@ -3,6 +3,7 @@ import { Button, Row, Container, Col } from "reactstrap"
 
 const SignInContent = () => (
   <div
+    class="d-none d-xl-block d-lg-none"
     style={{
       width: "max-width",
       height: "100%",
@@ -11,7 +12,7 @@ const SignInContent = () => (
       position: "relative"
     }}
   >
-    <Container >
+    <Container>
       <Row>
         <Col xs="7">
           <p
@@ -24,7 +25,7 @@ const SignInContent = () => (
               textAlign: "left",
               color: "#3b425d",
               position: "absolute",
-              marginLeft: "50%"
+              marginLeft: "70%"
             }}
           >
             Don't have an account ?
