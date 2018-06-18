@@ -38,11 +38,9 @@ class ModalErrorContainer extends Component {
   render() {
     return (
       <div>
-        <Button color="danger" onClick={this.toggleErrorModal}>
-          {this.props.buttonLabel}
-        </Button>
+        {"test modal"}
         <Modal
-          isOpen={this.state.visibilityError}
+          isOpen={this.props.visibilityError}
           toggleErrorModal={this.toggleErrorModal}
           className={this.props.className}
         >

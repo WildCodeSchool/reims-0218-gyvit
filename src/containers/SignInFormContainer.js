@@ -15,12 +15,16 @@ import {
   connectUserSuccessAction,
   connectUserFailAction
 } from "../actions/userAction"
+import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
 import ModalErrorContainer from "./ModalErrorContainer"
 
 //dispatch connectUserSuccessAction
 const mapDispatchToProps = dispatch => ({
-  onUserFailed: response => dispatch(connectUserFailAction(response)),
+  onUserFailed: response => {
+    dispatch(connectUserFailAction(response))
+    dispatch(makeShowModalError(response.error))
+  },
   onUserConnected: response => dispatch(connectUserSuccessAction(response))
 })
 
@@ -31,7 +35,9 @@ class SignInFormWrap extends Component {
     this.state = {
       //value default of "email" & "password"
       mail: "",
-      password: ""
+      password: "",
+      visibilityError: false,
+      message: ""
     }
     this.handleChange = this.handleChange.bind(this) //create new function identical
   }
@@ -95,6 +101,7 @@ class SignInFormWrap extends Component {
               placeholder="Password"
             />
           </FormGroup>
+          <ModalErrorContainer />
           <Button
             type="button"
             onClick={() =>
@@ -107,14 +114,19 @@ class SignInFormWrap extends Component {
                   }
                 })
                 .then(response => {
-                  console.log(response)
+                  console.log(
+                    "response second then: " + JSON.stringify(response)
+                  )
                   if (response._id !== undefined) {
-                    this.props.onUserConnected(response)
-                  } else {
+                    return this.props.onUserConnected(response)
+                  } else if (!response.success) {
                     this.setState({
-                      visibilityError: !this.state.visibilityError
+                      visibilityError: true,
+                      message: response.error
                     })
-                    return <ModalErrorContainer message={response.error} />
+                    // emptying user AND fill errors in props when connect failed
+                    this.props.onUserFailed(response)
+                    console.log("apres vidage")
                   }
                 })
             }
