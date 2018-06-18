@@ -6,7 +6,42 @@ import NavbarLeftItem from "./NavbarLeftItem"
 import { Nav, NavItem, Container, Row } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
 
-const NavbarLeft = ({ dataLinks = [] }) => (
+const dataLinks = [
+  {
+    nameLink: "Home",
+    icon: "/img/icon_home.png"
+  },
+  {
+    nameLink: "Files",
+    icon: "/img/icon_files.png"
+  },
+  {
+    nameLink: "Shares",
+    icon: "/img/icon_shares.png"
+  },
+  {
+    nameLink: "Templates",
+    icon: "/img/icon_templates.png"
+  },
+  {
+    nameLink: "Requests",
+    icon: "/img/icon_requests.png"
+  },
+  {
+    nameLink: "Public links",
+    icon: "/img/icon_shares.png"
+  },
+  {
+    nameLink: "Contacts",
+    icon: "/img/icon_contacts.png"
+  },
+  {
+    nameLink: "Settings",
+    icon: "/img/icon_settings.png"
+  }
+]
+
+const NavbarLeft = () => (
   <div>
     <Container>
       <Row>
