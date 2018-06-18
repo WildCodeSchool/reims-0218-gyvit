@@ -1,13 +1,15 @@
 import React, { Component } from "react"
 import "./App.css"
 import logo from "./logo.svg"
-import PageDashboard from "./components/PageDashboard/PageDashboard"
+import FoldersTableWrap from "./containers/FoldersTableContainer"
+import NavbarTopFilter from "./containers/SearchContainer"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <PageDashboard />
+        <NavbarTopFilter />
+        <FoldersTableWrap />
       </div>
     )
   }
