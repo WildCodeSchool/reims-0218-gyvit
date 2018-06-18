@@ -4,8 +4,8 @@ import React from "react"
 import { Row, Col, Container } from "reactstrap"
 import PropTypes from "prop-types"
 import NavbarTopNotif from "./NavbarTopNotif"
-import NavbarTopSearch from "./NavbarTopSearch"
-import NavbarTopProfile from "./NavbarTopProfile"
+import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContainer"
+import SearchContainer from "../../containers/SearchContainer"
 
 const NavbarTop = () => (
   <Container>
@@ -17,24 +17,15 @@ const NavbarTop = () => (
       }}
     >
       <Col xs="7">
-        <NavbarTopSearch />
+        <SearchContainer />
       </Col>
       <NavbarTopNotif notifsCount={66} />
 
       <Col xs="3">
-        <NavbarTopProfile
-          firstname="Pierre"
-          lastname="Dumay"
-          business="Wild Code School"
-        />
+        <NavbarTopProfileContainer />
       </Col>
     </Row>
   </Container>
 )
-
-NavbarTop.propTypes = {
-  notif: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired
-}
 
 export default NavbarTop

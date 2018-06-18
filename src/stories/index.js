@@ -299,4 +299,4 @@ storiesOf("Redux", module)
   .add("Page Sign container", () => <SignInFormContainer />)
   .add("Page NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
   .add("Page foldersTableContainer", () => <FoldersTableContainer />)
-  .add("Page dashboardContainers", () => <PageDashboardContainer />)
+/*   .add("Page dashboardContainers", () => <PageDashboardContainer />) */
