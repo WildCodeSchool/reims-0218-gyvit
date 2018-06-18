@@ -9,8 +9,8 @@ import {
 
 const mapStateToProps = state => {
   return {
-    visibilityError: state.visibilityError,
-    message: state.message
+    visibilityError: state.errors.visibilityError,
+    message: state.errors.message
   }
 }
 
@@ -38,7 +38,7 @@ class ModalErrorContainer extends Component {
   render() {
     return (
       <div>
-        {"test modal"}
+        {`test modal: this.state.visibilityError ${this.state.visibilityError}`}
         <Modal
           isOpen={this.props.visibilityError}
           toggleErrorModal={this.toggleErrorModal}

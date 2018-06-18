@@ -120,10 +120,6 @@ class SignInFormWrap extends Component {
                   if (response._id !== undefined) {
                     return this.props.onUserConnected(response)
                   } else if (!response.success) {
-                    this.setState({
-                      visibilityError: true,
-                      message: response.error
-                    })
                     // emptying user AND fill errors in props when connect failed
                     this.props.onUserFailed(response)
                     console.log("apres vidage")
