@@ -15,7 +15,10 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onErrorToDisplay: () => dispatch(makeShowModalError()),
+  onErrorToDisplay: () => {
+    dispatch(makeShowModalError())
+    dispatch(makeHideModalError())
+  },
   onErrorToHide: () => dispatch(makeHideModalError())
 })
 
@@ -30,9 +33,11 @@ class ModalErrorContainer extends Component {
   }
 
   toggleErrorModal() {
-    this.setState({
-      visibilityError: !this.state.visibilityError
-    })
+    if (this.props.visibilityError) {
+      this.props.onErrorToDisplay()
+    } else {
+      this.props.onErrorToHide()
+    }
   }
 
   render() {
@@ -44,16 +49,11 @@ class ModalErrorContainer extends Component {
           toggleErrorModal={this.toggleErrorModal}
           className={this.props.className}
         >
-          <ModalHeader toggleErrorModal={this.toggleErrorModal}>
-            Modal Error
-          </ModalHeader>
+          <ModalHeader toggle={this.toggleErrorModal}>Modal Error</ModalHeader>
           <ModalBody>{this.props.message}</ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggleErrorModal}>
               Ok
-            </Button>{" "}
-            <Button color="secondary" onClick={this.toggleErrorModal}>
-              Cancel
             </Button>
           </ModalFooter>
         </Modal>
