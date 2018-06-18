@@ -114,15 +114,11 @@ class SignInFormWrap extends Component {
                   }
                 })
                 .then(response => {
-                  console.log(
-                    "response second then: " + JSON.stringify(response)
-                  )
                   if (response._id !== undefined) {
                     return this.props.onUserConnected(response)
                   } else if (!response.success) {
                     // emptying user AND fill errors in props when connect failed
                     this.props.onUserFailed(response)
-                    console.log("apres vidage")
                   }
                 })
             }
