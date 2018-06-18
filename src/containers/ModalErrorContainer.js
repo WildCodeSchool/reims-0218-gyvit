@@ -7,6 +7,13 @@ import {
   makeHideModalError
 } from "../actions/errorsActions"
 
+const mapStateToProps = state => {
+  return {
+    visibilityError: state.visibilityError,
+    message: state.message
+  }
+}
+
 const mapDispatchToProps = dispatch => ({
   onErrorToDisplay: () => dispatch(makeShowModalError()),
   onErrorToHide: () => dispatch(makeHideModalError())
@@ -19,10 +26,10 @@ class ModalErrorContainer extends Component {
       visibilityError: false
     }
 
-    this.toggle = this.toggle.bind(this)
+    this.toggleErrorModal = this.toggleErrorModal.bind(this)
   }
 
-  toggle() {
+  toggleErrorModal() {
     this.setState({
       visibilityError: !this.state.visibilityError
     })
@@ -31,21 +38,23 @@ class ModalErrorContainer extends Component {
   render() {
     return (
       <div>
-        <Button color="danger" onClick={this.toggle}>
+        <Button color="danger" onClick={this.toggleErrorModal}>
           {this.props.buttonLabel}
         </Button>
         <Modal
           isOpen={this.state.visibilityError}
-          toggle={this.toggle}
+          toggleErrorModal={this.toggleErrorModal}
           className={this.props.className}
         >
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalHeader toggleErrorModal={this.toggleErrorModal}>
+            Modal Error
+          </ModalHeader>
           <ModalBody>{this.props.message}</ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>
-              Do Something
+            <Button color="primary" onClick={this.toggleErrorModal}>
+              Ok
             </Button>{" "}
-            <Button color="secondary" onClick={this.toggle}>
+            <Button color="secondary" onClick={this.toggleErrorModal}>
               Cancel
             </Button>
           </ModalFooter>
@@ -55,4 +64,4 @@ class ModalErrorContainer extends Component {
   }
 }
 
-export default connect(null, mapDispatchToProps)(ModalErrorContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(mapStateToProps, mapDispatchToProps)(ModalErrorContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.

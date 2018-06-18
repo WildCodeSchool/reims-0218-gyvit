@@ -4,10 +4,12 @@ export const UPDATE_A_FILE_SUCCESS = "UPDATE_A_FILE_SUCCESS"
 export const DELETE_A_FILE_SUCCESS = "DELETE_A_FILE_SUCCESS"
 export const RETRIEVE_DIR_SUCCESS = "RETRIEVE_DIR_SUCCESS"
 
-export const makeFetchFilesSuccess = response => ({
-  type: FETCH_FILES_SUCCESS,
-  response
-})
+export const makeFetchFilesSuccess = response => [
+  {
+    type: FETCH_FILES_SUCCESS,
+    response
+  }
+]
 
 export const makeAddAFileSuccess = response => ({
   type: ADD_A_FILE_SUCCESS,

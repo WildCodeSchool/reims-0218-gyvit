@@ -108,9 +108,12 @@ class SignInFormWrap extends Component {
                 })
                 .then(response => {
                   console.log(response)
-                  if (response.success) {
+                  if (response._id !== undefined) {
                     this.props.onUserConnected(response)
                   } else {
+                    this.setState({
+                      visibilityError: !this.state.visibilityError
+                    })
                     return <ModalErrorContainer message={response.error} />
                   }
                 })

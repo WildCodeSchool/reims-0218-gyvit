@@ -15,7 +15,7 @@ describe("errorsReducer", () => {
       message: "Votre mot de passe est incorrect"
     }
     expect(
-      errorsReducer(prevState, makeShowModalError(response)).toEqual(expected)
-    )
+      errorsReducer(prevState, makeShowModalError(response.error))
+    ).toEqual(expected)
   })
 })
