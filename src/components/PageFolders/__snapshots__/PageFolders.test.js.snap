@@ -46,7 +46,280 @@ exports[`renders link html 1`] = `
             </a>
             <li
               className="text-center nav-item"
-            />
+            >
+              <div>
+                <div
+                  className="container"
+                >
+                  <div
+                    className="row"
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "color": "white",
+                          "opacity": 0.5,
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="/img/house_38533.ico"
+                        style={
+                          Object {
+                            "opacity": 0.8,
+                            "paddingRight": 10,
+                          }
+                        }
+                      />
+                      Home
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div>
+                <div
+                  className="container"
+                >
+                  <div
+                    className="row"
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "color": "white",
+                          "opacity": 0.5,
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="/img/files.ico"
+                        style={
+                          Object {
+                            "opacity": 0.8,
+                            "paddingRight": 10,
+                          }
+                        }
+                      />
+                      Files
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div>
+                <div
+                  className="container"
+                >
+                  <div
+                    className="row"
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "color": "white",
+                          "opacity": 0.5,
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="/img/share.ico"
+                        style={
+                          Object {
+                            "opacity": 0.8,
+                            "paddingRight": 10,
+                          }
+                        }
+                      />
+                      Shares
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div>
+                <div
+                  className="container"
+                >
+                  <div
+                    className="row"
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "color": "white",
+                          "opacity": 0.5,
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="/img/templates.ico"
+                        style={
+                          Object {
+                            "opacity": 0.8,
+                            "paddingRight": 10,
+                          }
+                        }
+                      />
+                      Templates
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div>
+                <div
+                  className="container"
+                >
+                  <div
+                    className="row"
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "color": "white",
+                          "opacity": 0.5,
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="/img/request.ico"
+                        style={
+                          Object {
+                            "opacity": 0.8,
+                            "paddingRight": 10,
+                          }
+                        }
+                      />
+                      Requests
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div>
+                <div
+                  className="container"
+                >
+                  <div
+                    className="row"
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "color": "white",
+                          "opacity": 0.5,
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="/img/links.ico"
+                        style={
+                          Object {
+                            "opacity": 0.8,
+                            "paddingRight": 10,
+                          }
+                        }
+                      />
+                      Public links
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div>
+                <div
+                  className="container"
+                >
+                  <div
+                    className="row"
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "color": "white",
+                          "opacity": 0.5,
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="/img/contact.ico"
+                        style={
+                          Object {
+                            "opacity": 0.8,
+                            "paddingRight": 10,
+                          }
+                        }
+                      />
+                      Contacts
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <div>
+                <div
+                  className="container"
+                >
+                  <div
+                    className="row"
+                  >
+                    <a
+                      className="nav-link"
+                      href="#"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "color": "white",
+                          "opacity": 0.5,
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="/img/settings.ico"
+                        style={
+                          Object {
+                            "opacity": 0.8,
+                            "paddingRight": 10,
+                          }
+                        }
+                      />
+                      Settings
+                    </a>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -81,6 +354,7 @@ exports[`renders link html 1`] = `
                   className="form-control"
                   id="exampleSearch"
                   name="search"
+                  onChange={undefined}
                   placeholder="Search..."
                   style={
                     Object {
@@ -93,6 +367,7 @@ exports[`renders link html 1`] = `
                     }
                   }
                   type="search"
+                  value={undefined}
                 />
               </div>
             </div>
@@ -114,11 +389,11 @@ exports[`renders link html 1`] = `
                   "backgroundColor": "#ff007e",
                   "height": "20px",
                   "marginTop": "-50px",
-                  "width": "35px",
+                  "width": "auto",
                 }
               }
             >
-              0
+              8
             </span>
           </div>
           <div
@@ -133,7 +408,7 @@ exports[`renders link html 1`] = `
                   href="#"
                 >
                   <img
-                    alt=""
+                    alt="Pierre"
                     className="rounded-circle media-object"
                     src="img/kevinMarlot.jpeg"
                     style={
@@ -160,11 +435,11 @@ exports[`renders link html 1`] = `
                     }
                   >
                     <span>
-                      
+                      Pierre
                     </span>
                      
                     <span>
-                      
+                      Dumay
                     </span>
                   </h4>
                   <div
@@ -178,7 +453,7 @@ exports[`renders link html 1`] = `
                       }
                     }
                   >
-                    
+                    Wild Code School
                   </div>
                 </div>
               </div>

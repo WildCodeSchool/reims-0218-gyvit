@@ -8,10 +8,10 @@ exports[`renders correctly 1`] = `
       "backgroundColor": "#ff007e",
       "height": "20px",
       "marginTop": "-50px",
-      "width": "35px",
+      "width": "auto",
     }
   }
 >
-  6
+  8
 </span>
 `;

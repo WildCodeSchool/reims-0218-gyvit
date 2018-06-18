@@ -11,6 +11,7 @@ import NavbarLeftItem from "../components/NavbarLeft/NavbarLeftItem"
 import NavbarTop from "../components/NavbarTop/NavbarTop"
 import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 import NavbarLeftLogo from "../components/NavbarLeft/NavbarLeftLogo"
+import NavbarTopNotif from "../components/NavbarTop/NavbarTopNotif"
 import NavbarTopProfile from "../components/NavbarTop/NavbarTopProfile"
 import NavbarTopNotifBubble from "../components/NavbarTop/NavbarTopNotifBubble"
 import FoldersTable from "../components/PageFolders/FoldersTable"
@@ -40,8 +41,8 @@ import GetStartedSignInContent from "../components/PageGetStarted/GetStartedSign
 
 import SignInFormContainer from "../containers/SignInFormContainer"
 import NavbarTopProfileContainer from "../containers/NavbarTopProfileContainer"
-import NavbarTopNotif from "../components/NavbarTop/NavbarTopNotif"
 import FoldersTableContainer from "../containers/FoldersTableContainer"
+import PageDashboardContainer from "../containers/PageDashboardContainer"
 
 const props = {
   notif: {
@@ -298,4 +299,4 @@ storiesOf("Redux", module)
   .add("Page Sign container", () => <SignInFormContainer />)
   .add("Page NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
   .add("Page foldersTableContainer", () => <FoldersTableContainer />)
-  .add("f", () => <NavbarTopNotif />)
+  .add("Page dashboardContainers", () => <PageDashboardContainer />)
