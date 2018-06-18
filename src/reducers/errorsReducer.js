@@ -6,17 +6,15 @@ const initialState = {}
 const errorsReducer = (prevState = initialState, action) => {
   if (action.type === SHOW_MODAL_ERROR) {
     return {
-      ...prevState,
-      visibilityError: action.visibilityError,
+      visibilityError: true,
       message: action.message
     }
   }
   if (action.type === HIDE_MODAL_ERROR) {
     // we modify the visibility in the store
     return {
-      ...prevState,
-      visibilityError: action.visibilityError,
-      message: action.message
+      visibilityError: false,
+      message: ""
     }
   }
   return prevState

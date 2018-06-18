@@ -17,16 +17,21 @@ import {
 } from "../actions/userAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
-import ModalErrorContainer from "./ModalErrorContainer"
 
-//dispatch connectUserSuccessAction
-const mapDispatchToProps = dispatch => ({
+const mapStateToProps = state => {
+  return {
+    visibilityError: state.visibilityError,
+    message: state.message
+  }
+}
+
+/* const mapDispatchToProps = dispatch => ({
   onUserFailed: response => {
     dispatch(connectUserFailAction(response))
     dispatch(makeShowModalError(response.error))
   },
   onUserConnected: response => dispatch(connectUserSuccessAction(response))
-})
+}) */
 
 class SignInFormWrap extends Component {
   //add constructor for two input "email" & "password"
@@ -101,11 +106,12 @@ class SignInFormWrap extends Component {
               placeholder="Password"
             />
           </FormGroup>
-          <ModalErrorContainer />
           <Button
             type="button"
             onClick={() =>
               userLogin(this.state.mail, this.state.password)
+                // catch response:  if not desired response, response.message
+                //                  if desired: response.success
                 .then(response => {
                   if (response.success) {
                     return retrieveMe()
@@ -121,6 +127,7 @@ class SignInFormWrap extends Component {
                     this.props.onUserFailed(response)
                   }
                 })
+                .catch(response => console.log("catch form ", response.message))
             }
             style={{
               width: "192px",
@@ -139,4 +146,4 @@ class SignInFormWrap extends Component {
   }
 }
 
-export default connect(null, mapDispatchToProps)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(mapStateToProps, null)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
