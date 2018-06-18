@@ -1,5 +1,7 @@
 import React from "react"
-
+import { Provider } from "react-redux"
+import { createStore } from "redux"
+import reducers from "../reducers"
 import { storiesOf } from "@storybook/react"
 
 // for having bootstrap styles
@@ -26,7 +28,7 @@ import PageDashboard from "../components/PageDashboard/PageDashboard"
 import PageSignIn from "../components/PageSignIn/PageSignIn"
 import SignInBarLeft from "../components/PageSignIn/SignInBarLeft"
 import SignInContent from "../components/PageSignIn/SignInContent"
-import SignInForm from "../components/PageSignIn/SignInForm"
+import SignInFormContainer from "../containers/SignInFormContainer"
 import SignInTitle from "../components/PageSignIn/SignInTitle"
 import SignInGetStarted from "../components/PageSignIn/SignInGetStarted"
 import DashboardListCards from "../components/PageDashboard/DashboardListCards"
@@ -181,7 +183,7 @@ const listLinksProps = {
   ]
 }
 
-const homeLinkProps = {
+/* const homeLinkProps = {
   nameLink: "Home",
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
@@ -234,7 +236,7 @@ storiesOf("NavbarTopNotifBubble", module).add(
 
 storiesOf("Components Page Sign In", module)
   .add("SignInTitle", () => <SignInTitle />)
-  .add("SignInForm", () => <SignInForm />)
+  .add("SignInForm", () => <SignInFormContainer />)
   .add("SignInGetStarted", () => <SignInGetStarted />)
   .add("SignInContent", () => <SignInContent />)
 
@@ -285,4 +287,11 @@ storiesOf("PageDashboard", module).add("PageDashboard", () => (
     elements={listCardsInHome}
     name={name}
   />
-))
+)) */
+const store = createStore(
+  reducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+storiesOf("Redux", module)
+  .addDecorator(getStory => <Provider store={store}>{getStory()}</Provider>)
+  .add("Sign form container", () => <SignInFormContainer />)

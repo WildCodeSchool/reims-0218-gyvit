@@ -5,8 +5,9 @@ import NavbarTop from "../NavbarTop/NavbarTop"
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
 import FoldersTable from "./FoldersTable"
 
+import links from "../../links"
+
 const PageFolders = ({
-  dataLinks,
   files = [],
   dirs = [],
   profile = { firstname: "", lastname: "", business: "" },
@@ -14,7 +15,7 @@ const PageFolders = ({
 }) => (
   <Container fluid>
     <Row>
-      <NavbarLeft dataLinks={dataLinks} />
+      <NavbarLeft dataLinks={links} />
       <Col md="10">
         <NavbarTop profile={profile} notif={notif} />
         <FoldersBarTop />
