@@ -16,7 +16,7 @@ import {
   connectUserFailAction
 } from "../actions/userAction"
 import { retrieveMe } from "../api/users/retrieveMe"
-import modalErrorContainer from "./modalErrorContainer"
+import ModalErrorContainer from "./ModalErrorContainer"
 
 //dispatch connectUserSuccessAction
 const mapDispatchToProps = dispatch => ({
@@ -103,10 +103,17 @@ class SignInFormWrap extends Component {
                   if (response.success) {
                     return retrieveMe()
                   } else {
-                    return <modalErrorContainer message={response.error} />
+                    return response
                   }
                 })
-                .then(response => this.props.onUserConnected(response))
+                .then(response => {
+                  console.log(response)
+                  if (response.success) {
+                    this.props.onUserConnected(response)
+                  } else {
+                    return <ModalErrorContainer message={response.error} />
+                  }
+                })
             }
             style={{
               width: "192px",
