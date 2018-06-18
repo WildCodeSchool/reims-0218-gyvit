@@ -7,8 +7,7 @@ export const makeShowModalError = message => ({
   message
 })
 
-export const makeHideModalError = message => ({
+export const makeHideModalError = () => ({
   type: HIDE_MODAL_ERROR,
-  visibilityError: false,
-  message
+  visibilityError: false
 })

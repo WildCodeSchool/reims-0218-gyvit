@@ -2,7 +2,6 @@ import {
   makeFetchFilesSuccess,
   makeUpdateAFileSuccess,
   makeDeleteAFileSuccess,
-  FETCH_FILES_SUCCESS,
   makeAddAFileSuccess
 } from "../actions/filesActions"
 
@@ -77,8 +76,9 @@ describe("filesReducer", () => {
         }
       }
     ]
-    const litAllFiles = makeFetchFilesSuccess(response)
-    expect(filesReducer(prevState, litAllFiles).toEqual(expected))
+    expect(
+      filesReducer(prevState, makeFetchFilesSuccess(response)).toEqual(expected)
+    )
   })
 
   it("should change the STATE with a new file (action ADD_A_FILE_SUCCESS)", () => {
