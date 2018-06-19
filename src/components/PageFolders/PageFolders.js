@@ -10,6 +10,7 @@ import FoldersTableContainer from "../../containers/FoldersTableContainer"
 const PageFolders = () => (
   <Container fluid>
     <Row>
+      {/*no props here (import links in NavbarLeft)*/}
       <NavbarLeft dataLinks={links} />
       <Col md="10">
         <NavbarTop />

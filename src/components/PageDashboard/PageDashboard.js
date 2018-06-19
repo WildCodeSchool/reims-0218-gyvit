@@ -9,10 +9,12 @@ const PageDashboard = ({ dataLinks, notif, profile, elements, name }) => (
   <Container fluid>
     <Row>
       <Col xs="2">
+        {/*no props here (import links in NavbarLeft)*/}
         <NavbarLeft dataLinks={dataLinks} />
       </Col>
       <Col xs="10">
         <NavbarTop notif={notif} profile={profile} />
+        {/*no props here (import links in DashboardListCards)*/}
         <DashboardListCards elements={elements} name={name} />
       </Col>
     </Row>

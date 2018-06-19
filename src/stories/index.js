@@ -296,7 +296,7 @@ const store = createStore(
 )
 storiesOf("Redux", module) // return map is undefined in storybook , dont't know why
   .addDecorator(getStory => <Provider store={store}>{getStory()}</Provider>)
-  .add("Page Sign container", () => <SignInFormContainer />) 
-  .add("Page NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
-  .add("Page foldersTableContainer", () => <FoldersTableContainer />)
-  .add("Page dashboardContainers", () => <PageDashboardContainer />) 
+  .add("SignIn container", () => <SignInFormContainer />) 
+  .add("NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
+  .add("FoldersTableContainer", () => <FoldersTableContainer />)
+  .add("PageDashboardContainer", () => <PageDashboardContainer />) 
