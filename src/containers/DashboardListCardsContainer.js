@@ -1,10 +1,15 @@
-import React from "react"
+import React, {Component}from "react"
 import { Container, Row, Col } from "reactstrap"
-import PropTypes from "prop-types"
+import { connect } from "react-redux"
 
-import DashboardCard from "./DashboardCard"
+const mapStateToProps = state => ({
+  elements: state.elements,
+  name: state.name
+})
 
-const DashboardListCards = ({ elements, name }) => (
+class DashboardListCardsContainer extends Component {
+render(){
+  return (
   <Container>
     <Row className="App">
       <Col md="12" sm="4">
@@ -16,7 +21,7 @@ const DashboardListCards = ({ elements, name }) => (
             textAlign: "center"
           }}
         >
-          Welcome to Gyvit, {name}.
+          Welcome to Gyvit, {this.state.name}.
         </p>
       </Col>
       <Col sm="12" md={{ size: 4, offset: 3 }}>
@@ -35,16 +40,17 @@ const DashboardListCards = ({ elements, name }) => (
       </Col>
     </Row>
     <Row>
-      {elements.map(element => {
-        return <DashboardCard key={element.id} {...element} />
-      })}
+      {/* {elements.map(element => (
+         <DashboardCard key={element.id} {...element} />
+      ))} */}
+      elements={this.state.elements}
     </Row>
   </Container>
-)
-
-DashboardListCards.propTypes = {
-  elements: PropTypes.array.isRequired,
-  name: PropTypes.string.isRequired
+  )
 }
+}
+export default connect(
+  mapStateToProps
+)(DashboardListCardsContainer)
 
-export default DashboardListCards
+
