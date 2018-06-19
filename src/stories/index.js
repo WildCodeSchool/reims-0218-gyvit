@@ -43,6 +43,7 @@ import SignInFormContainer from "../containers/SignInFormContainer"
 import NavbarTopProfileContainer from "../containers/NavbarTopProfileContainer"
 import FoldersTableContainer from "../containers/FoldersTableContainer"
 import PageDashboardContainer from "../containers/PageDashboardContainer"
+import PageFolders from "../components/PageFolders/PageFolders"
 
 const props = {
   notif: {
@@ -296,7 +297,8 @@ const store = createStore(
 )
 storiesOf("Redux", module) // return map is undefined in storybook , dont't know why
   .addDecorator(getStory => <Provider store={store}>{getStory()}</Provider>)
-  .add("SignIn container", () => <SignInFormContainer />) 
+  .add("SignIn container", () => <SignInFormContainer />)
   .add("NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
   .add("FoldersTableContainer", () => <FoldersTableContainer />)
-  .add("PageDashboardContainer", () => <PageDashboardContainer />) 
+  .add("PageDashboardContainer", () => <PageDashboardContainer />)
+  .add("Page Folders", () => <PageFolders />)
