@@ -4,10 +4,8 @@ import { createStore } from "redux"
 import reducers from "../reducers"
 import { storiesOf } from "@storybook/react"
 
-// for having bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css"
-
-import DashboardCard from "../components/PageDashboard/DashboardCard"
+/* import DashboardCard from "../components/PageDashboard/DashboardCard"
 import NavbarLeft from "../components/NavbarLeft/NavbarLeft"
 import NavbarLeftItem from "../components/NavbarLeft/NavbarLeftItem"
 import NavbarTop from "../components/NavbarTop/NavbarTop"
@@ -27,8 +25,7 @@ import PageFolders from "../components/PageFolders/PageFolders"
 import PageDashboard from "../components/PageDashboard/PageDashboard"
 import PageSignIn from "../components/PageSignIn/PageSignIn"
 import SignInBarLeft from "../components/PageSignIn/SignInBarLeft"
-import SignInContent from "../components/PageSignIn/SignInContent"
-import SignInFormContainer from "../containers/SignInFormContainer"
+import SignInContent from "../components/PageSignIn/SignInContent" 
 import SignInTitle from "../components/PageSignIn/SignInTitle"
 import SignInGetStarted from "../components/PageSignIn/SignInGetStarted"
 import DashboardListCards from "../components/PageDashboard/DashboardListCards"
@@ -40,11 +37,16 @@ import ForgotPasswordContent from "../components/PageForgotPassword/ForgotPasswo
 import ForgotPasswordBackToSignIn from "../components/PageForgotPassword/ForgotPasswordBackToSignIn"
 import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassword"
 import ForgotPasswordGetStarted from "../components/PageForgotPassword/ForgotPasswordGetStarted"
-import GetStartedSignInContent from "../components/PageGetStarted/GetStartedSignInContent"
+import GetStartedSignInContent from "../components/PageGetStarted/GetStartedSignInContent" */
+
+import SignInFormContainer from "../containers/SignInFormContainer"
+import NavbarTopProfileContainer from "../containers/NavbarTopProfileContainer"
+import FoldersTableContainer from "../containers/FoldersTableContainer"
+import PageDashboardContainer from "../containers/PageDashboardContainer"
 
 const props = {
   notif: {
-    notifsCount: 6
+    notifsCount: 666
   },
   profile: {
     lastname: "Marlot ",
@@ -294,4 +296,7 @@ const store = createStore(
 )
 storiesOf("Redux", module)
   .addDecorator(getStory => <Provider store={store}>{getStory()}</Provider>)
-  .add("Sign form container", () => <SignInFormContainer />)
+  .add("Page Sign container", () => <SignInFormContainer />)
+  .add("Page NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
+  .add("Page foldersTableContainer", () => <FoldersTableContainer />)
+/*   .add("Page dashboardContainers", () => <PageDashboardContainer />) */

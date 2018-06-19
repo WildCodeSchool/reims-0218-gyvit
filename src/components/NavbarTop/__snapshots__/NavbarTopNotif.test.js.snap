@@ -22,7 +22,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-    6
+    8
   </span>
 </div>
 `;

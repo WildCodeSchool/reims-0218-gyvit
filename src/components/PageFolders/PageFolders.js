@@ -3,23 +3,18 @@ import { Container, Row, Col } from "reactstrap"
 import FoldersBarTop from "./FoldersBarTop"
 import NavbarTop from "../NavbarTop/NavbarTop"
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
-import FoldersTable from "./FoldersTable"
 
 import links from "../../links"
+import FoldersTableContainer from "../../containers/FoldersTableContainer"
 
-const PageFolders = ({
-  files = [],
-  dirs = [],
-  profile = { firstname: "", lastname: "", business: "" },
-  notif = { notifsCount: 0 }
-}) => (
+const PageFolders = () => (
   <Container fluid>
     <Row>
       <NavbarLeft dataLinks={links} />
       <Col md="10">
-        <NavbarTop profile={profile} notif={notif} />
+        <NavbarTop />
         <FoldersBarTop />
-        <FoldersTable files={files} dirs={dirs} />
+        <FoldersTableContainer />
       </Col>
     </Row>
   </Container>
