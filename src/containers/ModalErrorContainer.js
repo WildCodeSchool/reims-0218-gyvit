@@ -15,9 +15,14 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onErrorToDisplay: () => {
-    dispatch(makeShowModalError())
-    dispatch(makeHideModalError())
+  onErrorToDisplay: response => {
+    const visu =
+      typeof response.message === undefined ? response.error : response.message
+    console.log("visualisation response de l'erreur", visu)
+    dispatch(
+      // ternaire pour afficher la propriété error ou la propriété message suivant celui qui est définit
+      makeShowModalError(visu)
+    )
   },
   onErrorToHide: () => dispatch(makeHideModalError())
 })
@@ -25,16 +30,12 @@ const mapDispatchToProps = dispatch => ({
 class ModalErrorContainer extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      visibilityError: false
-    }
-
     this.toggleErrorModal = this.toggleErrorModal.bind(this)
   }
 
   toggleErrorModal() {
     if (this.props.visibilityError) {
-      this.props.onErrorToDisplay()
+      this.props.onErrorToDisplay(this.props.message)
     } else {
       this.props.onErrorToHide()
     }

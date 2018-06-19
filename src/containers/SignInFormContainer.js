@@ -25,13 +25,13 @@ const mapStateToProps = state => {
   }
 }
 
-/* const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   onUserFailed: response => {
     dispatch(connectUserFailAction(response))
     dispatch(makeShowModalError(response.error))
   },
   onUserConnected: response => dispatch(connectUserSuccessAction(response))
-}) */
+})
 
 class SignInFormWrap extends Component {
   //add constructor for two input "email" & "password"
@@ -146,4 +146,4 @@ class SignInFormWrap extends Component {
   }
 }
 
-export default connect(mapStateToProps, null)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(mapStateToProps, mapDispatchToProps)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.

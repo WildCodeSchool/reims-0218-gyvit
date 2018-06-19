@@ -1,14 +1,15 @@
 import { SHOW_MODAL_ERROR, HIDE_MODAL_ERROR } from "../actions/errorsActions"
 
-const initialState = {}
+const initialState = { visibilityError: false, message: "" }
 
 // initialState is the default value of prevState
 const errorsReducer = (prevState = initialState, action) => {
   if (action.type === SHOW_MODAL_ERROR) {
-    return {
+    const brancheError = {
       visibilityError: true,
       message: action.message
     }
+    return brancheError
   }
   if (action.type === HIDE_MODAL_ERROR) {
     // we modify the visibility in the store
