@@ -42,6 +42,8 @@ import GetStartedSignInContent from "../components/PageGetStarted/GetStartedSign
 import SignInFormContainer from "../containers/SignInFormContainer"
 import NavbarTopProfileContainer from "../containers/NavbarTopProfileContainer"
 import FoldersTableContainer from "../containers/FoldersTableContainer"
+import PageDashboardContainer from "../containers/PageDashboardContainer"
+import PageFolders from "../components/PageFolders/PageFolders"
 
 const props = {
   notif: {
@@ -295,6 +297,8 @@ const store = createStore(
 )
 storiesOf("Redux", module)
   .addDecorator(getStory => <Provider store={store}>{getStory()}</Provider>)
-  .add("Page Sign container", () => <SignInFormContainer />)
-  .add("Page NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
-  .add("Page foldersTableContainer", () => <FoldersTableContainer />)
+  .add("SignIn container", () => <SignInFormContainer />)
+  .add("NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
+  .add("FoldersTableContainer", () => <FoldersTableContainer />)
+  .add("PageDashboardContainer", () => <PageDashboardContainer />)
+  .add("Page Folders", () => <PageFolders />)
