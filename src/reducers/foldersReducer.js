@@ -5,7 +5,7 @@ import {
   UPDATE_A_FOLDER_SUCCESS,
   DELETE_A_FOLDER_SUCCESS,
   LIST_ALL_DIRS,
-  REPLACE_FOLDERS_AND_FILE
+  REPLACE_FOLDERS_BY_FILE
 } from "../actions/foldersActions"
 
 const initialState = []
@@ -29,10 +29,9 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === LIST_ALL_DIRS) {
     return action.response
   }
-  if (action.type === REPLACE_FOLDERS_AND_FILE) {
+  if (action.type === REPLACE_FOLDERS_BY_FILE) {
     return action.response
   }
-
   return prevState
 }
 
