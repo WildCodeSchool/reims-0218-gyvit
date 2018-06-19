@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import "./App.css"
-import logo from "./logo.svg"
-import NavbarTopFilter from "./containers/SearchContainer"
+// import logo from "./logo.svg"
+// import NavbarTopFilter from "./containers/SearchContainer"
 import PageFolders from "./components/PageFolders/PageFolders"
 
 class App extends Component {

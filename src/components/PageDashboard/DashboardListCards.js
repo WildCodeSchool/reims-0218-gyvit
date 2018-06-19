@@ -35,9 +35,9 @@ const DashboardListCards = ({ elements, name }) => (
       </Col>
     </Row>
     <Row>
-      {elements.map(element => {
-        return <DashboardCard key={element.id} {...element} />
-      })}
+      {elements.map((element, index) => (
+        <DashboardCard key={index} {...element} />
+      ))}
     </Row>
   </Container>
 )

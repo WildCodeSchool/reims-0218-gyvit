@@ -42,7 +42,7 @@ import GetStartedSignInContent from "../components/PageGetStarted/GetStartedSign
 import SignInFormContainer from "../containers/SignInFormContainer"
 import NavbarTopProfileContainer from "../containers/NavbarTopProfileContainer"
 import FoldersTableContainer from "../containers/FoldersTableContainer"
-import PageDashboardContainer from "../containers/PageDashboardContainer"
+// import PageDashboardContainer from "../containers/PageDashboardContainer"
 
 const props = {
   notif: {
@@ -299,4 +299,4 @@ storiesOf("Redux", module)
   .add("Page Sign container", () => <SignInFormContainer />)
   .add("Page NavbarTopProfileContainer", () => <NavbarTopProfileContainer />)
   .add("Page foldersTableContainer", () => <FoldersTableContainer />)
-/*   .add("Page dashboardContainers", () => <PageDashboardContainer />) */
+// .add("Page dashboardContainers", () => <PageDashboardContainer />)
