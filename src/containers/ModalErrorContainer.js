@@ -2,10 +2,7 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
 
-import {
-  makeShowModalError,
-  makeHideModalError
-} from "../actions/errorsActions"
+import { makeHideModalError } from "../actions/errorsActions"
 
 const mapStateToProps = state => {
   return {
@@ -15,9 +12,6 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onErrorToDisplay: message => {
-    dispatch(makeShowModalError(message))
-  },
   onErrorToHide: () => dispatch(makeHideModalError())
 })
 
