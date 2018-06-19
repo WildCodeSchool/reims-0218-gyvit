@@ -34,7 +34,7 @@ class ModalErrorContainer extends Component {
   }
 
   toggleErrorModal() {
-    if (this.props.visibilityError) {
+    if (!this.props.visibilityError) {
       this.props.onErrorToDisplay(this.props.message)
     } else {
       this.props.onErrorToHide()
