@@ -9,5 +9,5 @@ export default combineReducers({
   folders: foldersReducer,
   files: filesReducer,
   user: userReducer,
-  errors: errorsReducer
+  error: errorsReducer
 })

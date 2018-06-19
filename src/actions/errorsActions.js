@@ -9,5 +9,6 @@ export const makeShowModalError = message => ({
 
 export const makeHideModalError = () => ({
   type: HIDE_MODAL_ERROR,
-  visibilityError: false
+  visibilityError: false,
+  message: ""
 })

@@ -9,50 +9,32 @@ import {
 
 const mapStateToProps = state => {
   return {
-    visibilityError: state.errors.visibilityError,
-    message: state.errors.message
+    visibilityError: state.error.visibilityError,
+    message: state.error.message
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  onErrorToDisplay: response => {
-    const visu =
-      typeof response.message === undefined ? response.error : response.message
-    console.log("visualisation response de l'erreur", visu)
-    dispatch(
-      // ternaire pour afficher la propriété error ou la propriété message suivant celui qui est définit
-      makeShowModalError(visu)
-    )
+  onErrorToDisplay: message => {
+    dispatch(makeShowModalError(message))
   },
   onErrorToHide: () => dispatch(makeHideModalError())
 })
 
 class ModalErrorContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.toggleErrorModal = this.toggleErrorModal.bind(this)
-  }
-
-  toggleErrorModal() {
-    if (!this.props.visibilityError) {
-      this.props.onErrorToDisplay(this.props.message)
-    } else {
-      this.props.onErrorToHide()
-    }
-  }
-
   render() {
     return (
       <div>
         <Modal
           isOpen={this.props.visibilityError}
-          toggleErrorModal={this.toggleErrorModal}
           className={this.props.className}
         >
-          <ModalHeader toggle={this.toggleErrorModal}>Modal Error</ModalHeader>
+          <ModalHeader toggle={() => this.onErrorToHide()}>
+            Modal Error
+          </ModalHeader>
           <ModalBody>{this.props.message}</ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggleErrorModal}>
+            <Button color="primary" onClick={() => this.props.onErrorToHide()}>
               Ok
             </Button>
           </ModalFooter>
