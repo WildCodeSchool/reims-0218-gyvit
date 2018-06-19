@@ -2,9 +2,10 @@ import React from "react"
 import { Container, Row, Col } from "reactstrap"
 import PropTypes from "prop-types"
 
-// import DashboardCard from "./DashboardCard"
+import DashboardCard from "./DashboardCard"
+import { elements } from "../../links/elements"
 
-const DashboardListCards = ({ elements, name }) => (
+const DashboardListCards = ({ name }) => (
   <Container>
     <Row className="App">
       <Col md="12" sm="4">
@@ -34,11 +35,11 @@ const DashboardListCards = ({ elements, name }) => (
         </p>
       </Col>
     </Row>
-    {/* <Row>
+    <Row>
       {elements.map(element => {
         return <DashboardCard key={element.id} {...element} />
       })}
-    </Row> */}
+    </Row>
   </Container>
 )
 

@@ -5,7 +5,7 @@ import NavbarLeft from "../NavbarLeft/NavbarLeft"
 import DashboardListCards from "../PageDashboard/DashboardListCards"
 import NavbarTop from "../NavbarTop/NavbarTop"
 
-const PageDashboard = ({ notif, profile, elements, name }) => (
+const PageDashboard = ({ notif, profile, name }) => (
   <Container fluid>
     <Row>
       <Col xs="2">
@@ -14,7 +14,7 @@ const PageDashboard = ({ notif, profile, elements, name }) => (
       <Col xs="10">
         <NavbarTop notif={notif} profile={profile} />
         {/*no props here (import links in DashboardListCards)*/}
-        <DashboardListCards elements={elements} name={name} />
+        <DashboardListCards {...name} />
       </Col>
     </Row>
   </Container>
