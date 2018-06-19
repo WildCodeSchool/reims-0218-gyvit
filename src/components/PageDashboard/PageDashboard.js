@@ -5,7 +5,7 @@ import NavbarLeft from "../NavbarLeft/NavbarLeft"
 import DashboardListCards from "../PageDashboard/DashboardListCards"
 import NavbarTop from "../NavbarTop/NavbarTop"
 
-const PageDashboard = ({ datalink, notif, profile, elements, name }) => (
+const PageDashboard = ({ notif, profile, elements, name }) => (
   <Container fluid>
     <Row>
       <Col xs="2">
