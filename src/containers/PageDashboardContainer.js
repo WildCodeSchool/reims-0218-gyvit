@@ -11,6 +11,7 @@ const mapStateToProps = state => ({
   profile: state.profile,
   notif: state.notif
 })
+
 // const mapDispatchToProps = dispatch => ({
 //   onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response))
 // })
