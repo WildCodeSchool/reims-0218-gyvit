@@ -10,6 +10,14 @@ const convertDateFromJsonToFrench = dateToTransform =>
 const FoldersTableTbody = ({ files = [], dirs = [], onDirclick }) => {
   return (
     <tbody>
+      {dirs.map(
+        dir =>
+          console.log(dir) && (
+            <button type="button" onClick={() => onDirclick(dirs._id)}>
+              {" "}
+            </button>
+          )
+      )}
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
@@ -56,7 +64,7 @@ const FoldersTableTbody = ({ files = [], dirs = [], onDirclick }) => {
                 }}
                 className="rounded-circle"
                 object
-                src="img/kevinMarlot.jpeg"
+                src=""
                 alt="avatar"
               />
             </td>

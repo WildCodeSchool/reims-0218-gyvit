@@ -32,6 +32,7 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === REPLACE_FOLDERS_BY_FILE) {
     return action.response
   }
+
   return prevState
 }
 
