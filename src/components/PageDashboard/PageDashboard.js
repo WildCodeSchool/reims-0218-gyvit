@@ -3,15 +3,13 @@ import { Container, Row, Col } from "reactstrap"
 
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
 import DashboardListCards from "../PageDashboard/DashboardListCards"
-import NavbarTop from "../NavbrTop/NavbarTop"
-import links from "../../links"
+import NavbarTop from "../NavbarTop/NavbarTop"
 
 const PageDashboard = ({ datalink, notif, profile, elements, name }) => (
   <Container fluid>
     <Row>
       <Col xs="2">
-        {/*no props here (import links in NavbarLeft)*/}
-        <NavbarLeft dataLinks={links} />
+        <NavbarLeft />
       </Col>
       <Col xs="10">
         <NavbarTop notif={notif} profile={profile} />
