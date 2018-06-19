@@ -7,16 +7,18 @@ const convertDateFromJsonToFrench = dateToTransform =>
     .setLocale("fr-FR")
     .toLocaleString(DateTime.DATETIME_SHORT)
 
-const FoldersTableTbody = ({ files = [], dirs = [], onDirclick }) => {
+const FoldersTableTbody = ({
+  files = [],
+  dirs = [],
+  onDirclick,
+  parent = {}
+}) => {
   return (
     <tbody>
-      {dirs.map(
-        dir =>
-          console.log(dir) && (
-            <button type="button" onClick={() => onDirclick(dirs._id)}>
-              {" "}
-            </button>
-          )
+      {parent && (
+        <button type="button" onClick={() => onDirclick(dirs._id)}>
+          {" "}
+        </button>
       )}
       {dirs.map(dir => {
         return (

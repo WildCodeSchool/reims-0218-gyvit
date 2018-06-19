@@ -6,7 +6,8 @@ import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 
 const mapStateToProps = state => ({
   folders: state.folders,
-  files: state.files
+  files: state.files,
+  parent: state.parent
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -17,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
     ),
   onBackclick: parent =>
     retrieveDir(parent).then(response =>
-      dispatch(makeRetrieveDirSuccess(response))
+      dispatch(makeRetrieveDirSuccess(response.parent._id))
     )
 })
 
