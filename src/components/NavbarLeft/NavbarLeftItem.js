@@ -19,6 +19,7 @@ const NavbarLeftItem = ({ icon, nameLink }) => (
             alt=""
             src={icon}
             style={{
+              text: "center",
               opacity: 0.8,
               paddingRight: 10
             }}

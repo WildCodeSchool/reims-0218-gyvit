@@ -4,7 +4,7 @@ import { Button, Row, Container, Col } from "reactstrap"
 const GetStartedSignInContent = () => (
   <div
     style={{
-      height: "100vh",
+      height: "100%",
       backgroundImage:
         "url('https://www.onecomputer.fr/wp-content/uploads/2016/01/blurred-background-81.jpg')",
       position: "relative"

@@ -6,6 +6,6 @@ export const listAllDir = value =>
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "http://localhost:3000",
       Authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyOTA0NzczMX0.4-eMh0BZWtR0pZeRrnT2ddD1xr6pFhjodM-Cut2cFIA"
+        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTUyOTkyNDQ3OH0.VlEg1kHkXr7xnQmy1TFcw7lNRLvMLtUDY9bpTMYA7dA"
     }
   }).then(res => res.json())

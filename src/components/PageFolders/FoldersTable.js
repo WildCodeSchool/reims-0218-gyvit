@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import FoldersTableTbody from "./FoldersTableTbody"
 import FoldersTableCategory from "./FoldersTableCategory"
 
-const FoldersTable = ({ files = [], dirs = [], name }) => (
+const FoldersTable = ({ files = [], dirs = [], onDirclick }) => (
   <div>
     <Table borderless striped>
       <thead>
@@ -21,7 +21,7 @@ const FoldersTable = ({ files = [], dirs = [], name }) => (
           <th />
         </tr>
       </thead>
-      <FoldersTableTbody files={files} dirs={dirs} />
+      <FoldersTableTbody onDirclick={onDirclick} files={files} dirs={dirs} />
     </Table>
   </div>
 )
