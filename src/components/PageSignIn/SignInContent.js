@@ -3,7 +3,7 @@ import { Button, Row, Container, Col } from "reactstrap"
 
 const SignInContent = () => (
   <div
-    class="d-none d-xl-block d-lg-none"
+    className="d-none d-xl-block d-lg-none"
     style={{
       width: "max-width",
       height: "100%",
