@@ -1,35 +1,43 @@
 const link = [
   {
     nameLink: "Home",
-    icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
+    icon: process.env.PUBLIC_URL + "/img/house_38533.ico",
+    link: "/dashboard"
   },
   {
     nameLink: "Files",
-    icon: process.env.PUBLIC_URL + "/img/files.ico"
+    icon: process.env.PUBLIC_URL + "/img/files.ico",
+    link: "/folders"
   },
   {
     nameLink: "Shares",
-    icon: process.env.PUBLIC_URL + "/img/share.ico"
+    icon: process.env.PUBLIC_URL + "/img/share.ico",
+    link: "/folders"
   },
   {
     nameLink: "Templates",
-    icon: process.env.PUBLIC_URL + "/img/templates.ico"
+    icon: process.env.PUBLIC_URL + "/img/templates.ico",
+    link: "#"
   },
   {
     nameLink: "Requests",
-    icon: process.env.PUBLIC_URL + "/img/request.ico"
+    icon: process.env.PUBLIC_URL + "/img/request.ico",
+    link: "#"
   },
   {
     nameLink: "Public links",
-    icon: process.env.PUBLIC_URL + "/img/links.ico"
+    icon: process.env.PUBLIC_URL + "/img/links.ico",
+    link: "#"
   },
   {
     nameLink: "Contacts",
-    icon: process.env.PUBLIC_URL + "/img/contact.ico"
+    icon: process.env.PUBLIC_URL + "/img/contact.ico",
+    link: "#"
   },
   {
     nameLink: "Settings",
-    icon: process.env.PUBLIC_URL + "/img/settings.ico"
+    icon: process.env.PUBLIC_URL + "/img/settings.ico",
+    link: "#"
   }
 ]
 
