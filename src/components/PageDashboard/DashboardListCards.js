@@ -2,9 +2,10 @@ import React from "react"
 import { Container, Row, Col } from "reactstrap"
 import PropTypes from "prop-types"
 
-// import DashboardCard from "./DashboardCard"
+import DashboardCard from "./DashboardCard"
+import { elements } from "../../links/elements"
 
-const DashboardListCards = ({ elements, name }) => (
+const DashboardListCards = () => (
   <Container>
     <Row className="App">
       <Col md="12" sm="4">
@@ -16,7 +17,7 @@ const DashboardListCards = ({ elements, name }) => (
             textAlign: "center"
           }}
         >
-          Welcome to Gyvit, {name}.
+          Welcome to Gyvit, .
         </p>
       </Col>
       <Col sm="12" md={{ size: 4, offset: 3 }}>
@@ -34,11 +35,11 @@ const DashboardListCards = ({ elements, name }) => (
         </p>
       </Col>
     </Row>
-    {/* <Row>
+    <Row>
       {elements.map(element => {
         return <DashboardCard key={element.id} {...element} />
       })}
-    </Row> */}
+    </Row>
   </Container>
 )
 
