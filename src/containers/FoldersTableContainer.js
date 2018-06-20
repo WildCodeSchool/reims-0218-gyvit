@@ -22,14 +22,14 @@ class FoldersTableWrap extends Component {
     return (
       <FoldersTable
         files={this.props.files}
-        dirs={this.props.folders}
+        dirs={this.props.dirs}
         onDirclick={this.props.onDirclick}
       />
     )
   }
 
   componentDidMount() {
-    retrieveDir().then(dirs => this.props.onRetrieveDirSuccess(dirs))
+    retrieveDir().then(root => this.props.onRetrieveDirSuccess(root))
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(FoldersTableWrap)
