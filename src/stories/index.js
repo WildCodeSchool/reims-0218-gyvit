@@ -183,7 +183,7 @@ const listLinksProps = {
   ]
 }
 
-/* const homeLinkProps = {
+/*const homeLinkProps = {
   nameLink: "Home",
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
 }
@@ -245,11 +245,11 @@ storiesOf("Component SignInBarLeft", module).add("SignInBarLeft", () => (
 ))
 
 storiesOf("Page SignIn", module).add("PageSignIn", () => <PageSignIn />)
-
+*/
 storiesOf("Components Page Folders", module)
   .add("FoldersBarTop", () => <FoldersBarTop />)
   .add("FoldersTable", () => <FoldersTable files={files} dirs={dirs} />)
-
+/*
 storiesOf("Page Folders", module).add("PageFolders", () => (
   <PageFolders {...listLinksProps} {...props} files={files} dirs={dirs} />
 ))
