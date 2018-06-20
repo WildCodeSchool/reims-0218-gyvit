@@ -27,7 +27,7 @@ export default class GetStartedSignInEmail extends React.Component {
           >
             Email{" "}
           </Label>
-          <Input type="email" name="email" id="IdEmail" placeholder="Email" />
+          <Input type="email" name="email" id="email" placeholder="Email" />
         </FormGroup>
         <FormGroup>
           <Label
@@ -46,7 +46,7 @@ export default class GetStartedSignInEmail extends React.Component {
           >
             Name{" "}
           </Label>
-          <Input type="email" name="name" id="IdEmail" placeholder="Name" />
+          <Input type="text" name="name" id="name" placeholder="Name" />
         </FormGroup>
         <FormGroup>
           <Label
@@ -68,7 +68,7 @@ export default class GetStartedSignInEmail extends React.Component {
           <Input
             type="password"
             name="password"
-            id="IdPassword"
+            id="password"
             placeholder="Password"
           />
         </FormGroup>

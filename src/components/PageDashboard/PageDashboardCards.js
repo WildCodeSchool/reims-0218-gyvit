@@ -1,6 +1,6 @@
 import React from "react"
 import { Row, Col, Container } from "reactstrap"
-import NavbarTop from "./NavbarTop"
+import NavbarTop from "../NavbarTop/NavbarTop"
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
 import DashboardListCards from "./DashboardListCards"
 
