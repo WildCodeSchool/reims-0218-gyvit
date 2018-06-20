@@ -16,10 +16,7 @@ const mapDispatchToProps = dispatch => ({
     retrieveDir(id).then(response =>
       dispatch(makeRetrieveDirSuccess(response))
     ),
-  onBackclick: parent =>
-    retrieveDir(parent).then(response =>
-      dispatch(makeRetrieveDirSuccess(response.parent._id))
-    )
+  onBackclick: response => dispatch(makeRetrieveDirSuccess(response.parent))
 })
 
 class FoldersTableWrap extends Component {
