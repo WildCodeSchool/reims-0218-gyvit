@@ -44,6 +44,8 @@ import NavbarTopProfileContainer from "../containers/NavbarTopProfileContainer"
 import FoldersTableContainer from "../containers/FoldersTableContainer"
 import PageFolders from "../components/PageFolders/PageFolders"
 import PageDashboardCards from "../components/PageDashboard/PageDashboardCards"
+import PageSignIn from "../components/PageSignIn/PageSignIn"
+
 
 const props = {
   notif: {
@@ -302,3 +304,5 @@ storiesOf("Redux", module)
   .add("FoldersTableContainer", () => <FoldersTableContainer />)
   .add("Page Folders", () => <PageFolders />)
   .add("PageDashboardCards", () => <PageDashboardCards />)
+  .add("PageSignIn", () => <PageSignIn />)
+
