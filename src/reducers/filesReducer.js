@@ -24,7 +24,6 @@ const filesReducer = (prevState = initialState, action) => {
   if (action.type === RETRIEVE_DIR_SUCCESS) {
     return action.response.files
   }
-
   return prevState
 }
 

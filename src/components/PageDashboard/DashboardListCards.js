@@ -13,14 +13,13 @@ const DashboardListCards = () => (
           style={{
             fontSize: "24px",
             height: "33px",
-            marginTop: "120px",
+            marginTop: "20%",
             textAlign: "center"
           }}
         >
           Welcome to Gyvit, .
         </p>
-      </Col>
-      <Col sm="12" md={{ size: 4, offset: 3 }}>
+
         <p
           style={{
             fontSize: "18px",
@@ -35,10 +34,8 @@ const DashboardListCards = () => (
         </p>
       </Col>
     </Row>
-    <Row>
-      {elements.map(element => {
-        return <DashboardCard key={element.id} {...element} />
-      })}
+    <Row className="d-flex justify-content-around">
+      {elements.map(element => <DashboardCard {...element} />)}
     </Row>
   </Container>
 )
