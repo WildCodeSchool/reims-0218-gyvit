@@ -16,15 +16,15 @@ const mapStateToProps = state => ({
 //   onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response))
 // })
 
-const PageDashboard = ({ dataLinks, notif, profile, elements, name }) => (
+const PageDashboard = () => (
   <Container fluid>
     <Row>
       <Col xs="2">
-        <NavbarLeft dataLinks={dataLinks} />
+        <NavbarLeft />
       </Col>
       <Col xs="10">
-        <NavbarTop notif={notif} profile={profile} />
-        <DashboardListCards elements={elements} name={name} />
+        <NavbarTop />
+        <DashboardListCards />
       </Col>
     </Row>
   </Container>

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Container, Row, Col } from "reactstrap"
 import { connect } from "react-redux"
+import DashboardCard from "../components/PageDashboard/DashboardCard"
 
 const mapStateToProps = state => ({
   elements: state.elements,
@@ -40,13 +41,13 @@ class DashboardListCardsContainer extends Component {
           </Col>
         </Row>
         <Row>
-          {elements.map(element => (
+          {this.props.elements.map(element => (
             <DashboardCard key={element.id} {...element} />
           ))}
-          elements={this.state.elements}
+          elements={this.props.elements}
         </Row>
       </Container>
     )
   }
 }
-export default connect(mapStateToProps)(DashboardListCardsContainer)
+export default connect(mapStateToProps, null)(DashboardListCardsContainer)
