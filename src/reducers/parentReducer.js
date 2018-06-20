@@ -4,8 +4,7 @@ const initialState = {}
 
 const parentReducer = (prevState = initialState, action) => {
   if (action.type === RETRIEVE_DIR_SUCCESS) {
-    console.log("parent=" + action.response._id)
-    return action.response
+    return action.response.parent
   }
   return prevState
 }

@@ -16,10 +16,11 @@ const FoldersTableTbody = ({
 }) => {
   return (
     <tbody>
-      <button type="button" onClick={() => onDirclick(dirs._id)}>
-        {parent.name}
-      </button>
-
+      {parent._id && (
+        <button type="button" onClick={() => onBackclick(parent._id)}>
+          {parent.name}
+        </button>
+      )}
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
