@@ -6,10 +6,9 @@ import FoldersTableCategory from "./FoldersTableCategory"
 
 const FoldersTable = ({ files = [], dirs = [], onDirclick }) => (
   <div>
-    <Table>
+    <Table borderless striped>
       <thead>
         <tr>
-          <th />
           <th>
             <FoldersTableCategory name="Name" direction={null} />
           </th>

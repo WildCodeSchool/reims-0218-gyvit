@@ -25,7 +25,4 @@ export const userLogin = (mail, password) => {
       }
       return response
     })
-    .catch(response => {
-      // TODO erreur fetch
-    })
 }
