@@ -11,6 +11,7 @@ const FoldersTableTbody = ({
   files = [],
   dirs = [],
   onDirclick,
+  onBackclick,
   parent = {}
 }) => {
   return (
