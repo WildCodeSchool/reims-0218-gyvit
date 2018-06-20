@@ -4,7 +4,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Badge } from "reactstrap"
 
-const NavbarTopNotifBubble = ({ notifsCount }) => {
+const NavbarTopNotifBubble = () => {
   return (
     <Badge
       style={{
@@ -15,7 +15,7 @@ const NavbarTopNotifBubble = ({ notifsCount }) => {
       }}
       pill
     >
-      {notifsCount}
+      8
     </Badge>
   )
 }

@@ -13,34 +13,33 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
-            <th />
-            <th>
+            <td>
               <img
                 style={{
-                  width: "30px",
-                  height: "29px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                  marginRight: "19.1px"
+                  width: "12%",
+                  height: "9%",
+                  marginTop: "7%",
+                  marginBottom: "9%",
+                  marginRight: "7%"
                 }}
                 src={process.env.PUBLIC_URL + "Icons/icon_folder.png"}
                 alt="Directory Icon"
               />
               {dir.name}
-            </th>
-            <td
-              style={{
-                width: "170px",
-                height: "14px",
-                fontFamily: "DepotNew",
-                fontSize: "14px",
-                marginTop: "28px",
-                marginBottom: "28px",
-                textAlign: "center",
-                color: "#a5a0c2"
-              }}
-            >
-              {convertDateFromJsonToFrench(dir.modified)}
+            </td>
+            <td>
+              <div
+                style={{
+                  width: "60%",
+                  height: "9%",
+                  fontSize: "14px",
+                  marginTop: "11%",
+                  fontFamily: "DepotNew",
+                  color: "#a5a0c2"
+                }}
+              >
+                {convertDateFromJsonToFrench(dir.modified)}
+              </div>
             </td>
             <td>
               {dir.shares.map((share, key) => (
@@ -48,9 +47,9 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
               ))}
               <img
                 style={{
-                  marginTop: "25px",
-                  width: "30px",
-                  height: "30px"
+                  marginTop: "8%",
+                  width: "10%",
+                  height: "10%"
                 }}
                 className="rounded-circle"
                 object
@@ -60,7 +59,7 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
             </td>
             <img
               style={{
-                marginTop: "33px"
+                marginTop: "120%"
               }}
               src="Assets/icon_dots_more.png"
               alt=""
@@ -72,37 +71,39 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
       {files.map(file => {
         return (
           <tr key={file._id}>
-            <th />
-            <th>
+            <td>
               <img
                 style={{
-                  width: "26.2px",
-                  height: "32px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                  marginRight: "19.1px"
+                  width: "14%",
+                  height: "16%",
+                  marginTop: "8%",
+                  marginBottom: "8%",
+                  marginRight: "7%"
                 }}
                 src={process.env.PUBLIC_URL + "Icons/icon_file_image.svg"}
                 alt="file Icon"
               />
               {file.name}
-            </th>
-            <td
-              style={{
-                width: "104px",
-                height: "14px",
-                fontFamily: "DepotNew",
-                fontSize: "14px",
-                fontWeight: "normal",
-                fontStyle: "normal",
-                fontStretch: "normal",
-                lineHeight: "normal",
-                letterSpacing: "normal",
-                textAlign: "left",
-                color: "#a5a0c2"
-              }}
-            >
-              {convertDateFromJsonToFrench(file.modified)}
+            </td>
+            <td>
+              <div
+                style={{
+                  width: "60%",
+                  height: "9%",
+                  fontFamily: "DepotNew",
+                  fontSize: "14px",
+                  marginTop: "14%",
+                  fontWeight: "normal",
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  lineHeight: "normal",
+                  letterSpacing: "normal",
+                  textAlign: "left",
+                  color: "#a5a0c2"
+                }}
+              >
+                {convertDateFromJsonToFrench(file.modified)}
+              </div>
             </td>
             <td>
               {file.shares.map((share, key) => (

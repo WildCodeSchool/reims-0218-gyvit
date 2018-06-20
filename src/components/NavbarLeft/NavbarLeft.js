@@ -5,8 +5,9 @@ import PropTypes from "prop-types"
 import NavbarLeftItem from "./NavbarLeftItem"
 import { Nav, NavItem, Container, Row } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
+import links from "../../links"
 
-const NavbarLeft = ({ dataLinks = [] }) => (
+const NavbarLeft = ({ dataLinks = links }) => (
   <div>
     <Container>
       <Row>
