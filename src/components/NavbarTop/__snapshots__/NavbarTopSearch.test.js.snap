@@ -12,6 +12,7 @@ exports[`renders correctly 1`] = `
       className="form-control"
       id="exampleSearch"
       name="search"
+      onChange={undefined}
       placeholder="Search..."
       style={
         Object {
@@ -24,6 +25,7 @@ exports[`renders correctly 1`] = `
         }
       }
       type="search"
+      value={undefined}
     />
   </div>
 </div>

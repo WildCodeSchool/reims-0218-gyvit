@@ -9,7 +9,7 @@ export const connectUserSuccessAction = response => ({
 
 export const connectUserFailAction = response => ({
   type: CONNECT_USER_FAIL,
-  response
+  message: response.error
 })
 
 export const disconnectUserSuccessAction = response => ({
