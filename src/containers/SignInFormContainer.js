@@ -11,10 +11,7 @@ import { connect } from "react-redux"
 import { Form, FormGroup, Label, Input, NavLink, Button } from "reactstrap"
 
 import { userLogin } from "../api/users/userLogin"
-import {
-  connectUserSuccessAction,
-  connectUserFailAction
-} from "../actions/userAction"
+import { connectUserSuccessAction } from "../actions/userAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
 
@@ -26,11 +23,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onUserFailed: response => {
-    dispatch(connectUserFailAction(response))
-    dispatch(makeShowModalError(response.error))
-  },
-  onUserConnected: response => dispatch(connectUserSuccessAction(response))
+  onUserConnected: response => dispatch(connectUserSuccessAction(response)),
+  onError: message => dispatch(makeShowModalError(message))
 })
 
 class SignInFormWrap extends Component {
@@ -124,10 +118,10 @@ class SignInFormWrap extends Component {
                     return this.props.onUserConnected(response)
                   } else if (!response.success) {
                     // emptying user AND fill errors in props when connect failed
-                    this.props.onUserFailed(response)
+                    this.props.onError(response.error)
                   }
                 })
-                .catch(response => console.log("catch form ", response.message))
+                .catch(response => this.props.onError(response.message))
             }
             style={{
               width: "192px",
