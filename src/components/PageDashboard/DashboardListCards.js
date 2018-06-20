@@ -4,7 +4,37 @@ import PropTypes from "prop-types"
 
 import DashboardCard from "./DashboardCard"
 
-const DashboardListCards = ({ elements, name }) => (
+const listCardsInHome = [
+  {
+    id: 0,
+    image: "/img/request.png",
+    titre: "Documents requests",
+    bio:
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
+    buttonText: "Create first request",
+    link: "lien0"
+  },
+  {
+    id: 1,
+    image: "/img/share.png",
+    titre: "Share documents",
+    bio:
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
+    buttonText: "Share documents",
+    link: "lien1"
+  },
+  {
+    id: 2,
+    image: "/img/store.png",
+    titre: "Store files",
+    bio:
+      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
+    buttonText: "Upload documents",
+    link: "lien2"
+  }
+]
+
+const DashboardListCards = ({ name }) => (
   <Container>
     <Row className="App">
       <Col md="12" sm="4">
@@ -12,14 +42,13 @@ const DashboardListCards = ({ elements, name }) => (
           style={{
             fontSize: "24px",
             height: "33px",
-            marginTop: "120px",
+            marginTop: "20%",
             textAlign: "center"
           }}
         >
           Welcome to Gyvit, {name}.
         </p>
-      </Col>
-      <Col sm="12" md={{ size: 4, offset: 3 }}>
+
         <p
           style={{
             fontSize: "18px",
@@ -34,10 +63,8 @@ const DashboardListCards = ({ elements, name }) => (
         </p>
       </Col>
     </Row>
-    <Row>
-      {elements.map(element => {
-        return <DashboardCard key={element.id} {...element} />
-      })}
+    <Row className="d-flex justify-content-around">
+      {listCardsInHome.map(element => <DashboardCard {...element} />)}
     </Row>
   </Container>
 )
