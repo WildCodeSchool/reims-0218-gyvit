@@ -23,7 +23,6 @@ const NavbarLeftItem = ({ icon, nameLink }) => (
               paddingRight: 10
             }}
           />
-
           {nameLink}
         </NavLink>
       </Row>

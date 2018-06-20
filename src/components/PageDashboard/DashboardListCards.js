@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import DashboardCard from "./DashboardCard"
 import { elements } from "../../links/elements"
 
-const DashboardListCards = ({ name }) => (
+const DashboardListCards = () => (
   <Container>
     <Row className="App">
       <Col md="12" sm="4">
@@ -17,7 +17,7 @@ const DashboardListCards = ({ name }) => (
             textAlign: "center"
           }}
         >
-          Welcome to Gyvit, {name}.
+          Welcome to Gyvit, .
         </p>
       </Col>
       <Col sm="12" md={{ size: 4, offset: 3 }}>
