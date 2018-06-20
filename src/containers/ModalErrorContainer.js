@@ -23,7 +23,7 @@ class ModalErrorContainer extends Component {
           isOpen={this.props.visibilityError}
           className={this.props.className}
         >
-          <ModalHeader toggle={() => this.onErrorToHide()}>
+          <ModalHeader toggle={() => this.props.onErrorToHide()}>
             Modal Error
           </ModalHeader>
           <ModalBody>{this.props.message}</ModalBody>
