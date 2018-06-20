@@ -20,24 +20,26 @@ exports[`renders link html 1`] = `
           }
         }
       >
-        <a
-          className="navbar-brand"
-          href="/"
+        <p
+          className="d-flex align-items-center"
           style={
             Object {
               "backgroundColor": "#181048",
               "color": "white",
+              "fontSize": "20px",
               "fontWeight": "bold",
               "height": "90px",
+              "margin-bottom": "0px",
               "textAlign": "center",
-              "width": "220px",
             }
           }
         >
-          <p>
-            GYVIT
-          </p>
-        </a>
+          <div
+            className="col"
+          >
+            GYVIT 
+          </div>
+        </p>
         <li
           className="text-center nav-item"
         >
@@ -61,11 +63,12 @@ exports[`renders link html 1`] = `
                 >
                   <img
                     alt=""
-                    src="/img/house_38533.ico"
+                    src="/img/icon_home.png"
                     style={
                       Object {
                         "opacity": 0.8,
                         "paddingRight": 10,
+                        "text": "center",
                       }
                     }
                   />
@@ -95,11 +98,12 @@ exports[`renders link html 1`] = `
                 >
                   <img
                     alt=""
-                    src="/img/files.ico"
+                    src="/img/icon_files.png"
                     style={
                       Object {
                         "opacity": 0.8,
                         "paddingRight": 10,
+                        "text": "center",
                       }
                     }
                   />
@@ -129,11 +133,12 @@ exports[`renders link html 1`] = `
                 >
                   <img
                     alt=""
-                    src="/img/share.ico"
+                    src="/img/icon_shares.png"
                     style={
                       Object {
                         "opacity": 0.8,
                         "paddingRight": 10,
+                        "text": "center",
                       }
                     }
                   />
@@ -163,11 +168,12 @@ exports[`renders link html 1`] = `
                 >
                   <img
                     alt=""
-                    src="/img/templates.ico"
+                    src="/img/icon_templates.png"
                     style={
                       Object {
                         "opacity": 0.8,
                         "paddingRight": 10,
+                        "text": "center",
                       }
                     }
                   />
@@ -197,11 +203,12 @@ exports[`renders link html 1`] = `
                 >
                   <img
                     alt=""
-                    src="/img/request.ico"
+                    src="/img/icon_requests.png"
                     style={
                       Object {
                         "opacity": 0.8,
                         "paddingRight": 10,
+                        "text": "center",
                       }
                     }
                   />
@@ -231,11 +238,12 @@ exports[`renders link html 1`] = `
                 >
                   <img
                     alt=""
-                    src="/img/links.ico"
+                    src="/img/icon_shares.png"
                     style={
                       Object {
                         "opacity": 0.8,
                         "paddingRight": 10,
+                        "text": "center",
                       }
                     }
                   />
@@ -265,11 +273,12 @@ exports[`renders link html 1`] = `
                 >
                   <img
                     alt=""
-                    src="/img/contact.ico"
+                    src="/img/icon_contacts.png"
                     style={
                       Object {
                         "opacity": 0.8,
                         "paddingRight": 10,
+                        "text": "center",
                       }
                     }
                   />
@@ -299,11 +308,12 @@ exports[`renders link html 1`] = `
                 >
                   <img
                     alt=""
-                    src="/img/settings.ico"
+                    src="/img/icon_settings.png"
                     style={
                       Object {
                         "opacity": 0.8,
                         "paddingRight": 10,
+                        "text": "center",
                       }
                     }
                   />

@@ -15,7 +15,7 @@ exports[`renders link html 1`] = `
           Object {
             "fontSize": "24px",
             "height": "33px",
-            "marginTop": "120px",
+            "marginTop": "20%",
             "textAlign": "center",
           }
         }
@@ -24,10 +24,6 @@ exports[`renders link html 1`] = `
         Kevin
         .
       </p>
-    </div>
-    <div
-      className="col-sm-12 col-md-4 offset-md-3"
-    >
       <p
         style={
           Object {
@@ -45,7 +41,7 @@ exports[`renders link html 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="d-flex justify-content-around row"
   >
     <div>
       <div
@@ -67,14 +63,14 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src=""
+              src="/img/request.png"
               style={
                 Object {
                   "height": "120px",
                   "marginLeft": "72px",
                   "marginRight": "64.8px",
                   "marginTop": "31px",
-                  "width": "151.2px",
+                  "width": "151px",
                 }
               }
             />
@@ -121,7 +117,7 @@ exports[`renders link html 1`] = `
                   }
                 }
               >
-                Take the first step to launching your store. Add physical items, digital downloads you can dream up
+                Take the first step to launching your store. Add physical items, digital downloads you can dream up.
               </p>
               <button
                 className="btn btn-secondary"
@@ -168,14 +164,14 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src=""
+              src="/img/share.png"
               style={
                 Object {
                   "height": "120px",
                   "marginLeft": "72px",
                   "marginRight": "64.8px",
                   "marginTop": "31px",
-                  "width": "151.2px",
+                  "width": "151px",
                 }
               }
             />
@@ -222,7 +218,7 @@ exports[`renders link html 1`] = `
                   }
                 }
               >
-                Take the first step to launching your store. Add physical items, digital downloads you can dream up
+                Take the first step to launching your store. Add physical items, digital downloads you can dream up.
               </p>
               <button
                 className="btn btn-secondary"
@@ -269,14 +265,14 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src=""
+              src="/img/store.png"
               style={
                 Object {
                   "height": "120px",
                   "marginLeft": "72px",
                   "marginRight": "64.8px",
                   "marginTop": "31px",
-                  "width": "151.2px",
+                  "width": "151px",
                 }
               }
             />
@@ -323,7 +319,7 @@ exports[`renders link html 1`] = `
                   }
                 }
               >
-                Take the first step to launching your store. Add physical items, digital downloads you can dream up
+                Take the first step to launching your store. Add physical items, digital downloads you can dream up.
               </p>
               <button
                 className="btn btn-secondary"

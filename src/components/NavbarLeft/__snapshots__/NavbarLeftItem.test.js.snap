@@ -26,6 +26,7 @@ exports[`renders link html 1`] = `
             Object {
               "opacity": 0.8,
               "paddingRight": 10,
+              "text": "center",
             }
           }
         />
