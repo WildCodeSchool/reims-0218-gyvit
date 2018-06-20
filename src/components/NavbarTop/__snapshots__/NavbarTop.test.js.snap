@@ -28,6 +28,7 @@ exports[`renders correctly 1`] = `
             className="form-control"
             id="exampleSearch"
             name="search"
+            onChange={undefined}
             placeholder="Search..."
             style={
               Object {
@@ -40,6 +41,7 @@ exports[`renders correctly 1`] = `
               }
             }
             type="search"
+            value={undefined}
           />
         </div>
       </div>
@@ -61,11 +63,11 @@ exports[`renders correctly 1`] = `
             "backgroundColor": "#ff007e",
             "height": "20px",
             "marginTop": "-50px",
-            "width": "35px",
+            "width": "auto",
           }
         }
       >
-        6
+        8
       </span>
     </div>
     <div
@@ -80,7 +82,7 @@ exports[`renders correctly 1`] = `
             href="#"
           >
             <img
-              alt="Kevin"
+              alt="Pierre"
               className="rounded-circle media-object"
               src="img/kevinMarlot.jpeg"
               style={
@@ -107,11 +109,11 @@ exports[`renders correctly 1`] = `
               }
             >
               <span>
-                Kevin
+                Pierre
               </span>
                
               <span>
-                Marlot
+                Dumay
               </span>
             </h4>
             <div
@@ -125,7 +127,7 @@ exports[`renders correctly 1`] = `
                 }
               }
             >
-              Meduza
+              Wild Code School
             </div>
           </div>
         </div>

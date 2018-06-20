@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import FoldersTable from "../components/PageFolders/FoldersTable"
 import { makeRetrieveDirSuccess } from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
+
+import FoldersTable from "../components/PageFolders/FoldersTable"
 
 const mapStateToProps = state => ({
   folders: state.folders,
@@ -38,4 +39,7 @@ class FoldersTableWrap extends Component {
     retrieveDir().then(dirs => this.props.onRetrieveDirSuccess(dirs))
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(FoldersTableWrap)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FoldersTableWrap)

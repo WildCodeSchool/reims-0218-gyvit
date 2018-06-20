@@ -4,7 +4,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import NavbarTopNotifBubble from "./NavbarTopNotifBubble"
 
-const NavbarTopNotif = ({ notifsCount }) => {
+const NavbarTopNotif = () => {
   return (
     <div>
       <img
@@ -14,7 +14,7 @@ const NavbarTopNotif = ({ notifsCount }) => {
         src={process.env.PUBLIC_URL + "img/icon_notification.png"}
         alt="iconNotif"
       />
-      <NavbarTopNotifBubble notifsCount={notifsCount} />
+      <NavbarTopNotifBubble notifsCount={66} />
     </div>
   )
 }
