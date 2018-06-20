@@ -6,7 +6,7 @@ import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 import FoldersTable from "../components/PageFolders/FoldersTable"
 
 const mapStateToProps = state => ({
-  folders: state.folders,
+  dirs: state.dirs,
   files: state.files,
   parent: state.parent
 })
@@ -14,13 +14,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response)),
   onDirclick: id =>
-    retrieveDir(id).then(response =>
-      dispatch(makeRetrieveDirSuccess(response))
-    ),
-  onBackclick: parent =>
-    retrieveDir(parent).then(response =>
-      dispatch(makeRetrieveDirSuccess(response.parent._id))
-    )
+    retrieveDir(id).then(response => dispatch(makeRetrieveDirSuccess(response)))
 })
 
 class FoldersTableWrap extends Component {
@@ -30,7 +24,6 @@ class FoldersTableWrap extends Component {
         files={this.props.files}
         dirs={this.props.folders}
         onDirclick={this.props.onDirclick}
-        onBackclick={this.props.onBackclick}
       />
     )
   }
@@ -39,7 +32,4 @@ class FoldersTableWrap extends Component {
     retrieveDir().then(dirs => this.props.onRetrieveDirSuccess(dirs))
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FoldersTableWrap)
+export default connect(mapStateToProps, mapDispatchToProps)(FoldersTableWrap)
