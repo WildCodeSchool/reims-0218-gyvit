@@ -19,7 +19,7 @@ import {
 
 const mapStateToProps = state => {
   return {
-    destination: state.parentDir._id,
+    destination: state.parent._id,
     modalCreateDir: state.modalCreateDir.visibilityCreateDir
   }
 }
