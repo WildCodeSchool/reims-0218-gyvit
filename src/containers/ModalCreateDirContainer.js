@@ -12,10 +12,8 @@ import {
   Input
 } from "reactstrap"
 
-import {
-  makeHideModalCreateDir,
-  makeValidateModalCreateDir
-} from "../actions/modalCreateDirAction"
+import { makeHideModalCreateDir } from "../actions/modalCreateDirAction"
+import { createDir } from "../api/CreateDir"
 
 const mapStateToProps = state => {
   return {
@@ -26,13 +24,22 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   // function for cancelling
-  onModalCreateDirToHide: () => dispatch(makeHideModalCreateDir()),
-  // function for validating the form
-  onModalCreateDirToValidate: (name, parent_id) =>
-    dispatch(makeValidateModalCreateDir(name, parent_id))
+  onModalCreateDirToHide: () => {
+    createDir(this.name, this.state.parent._id)
+    dispatch(makeHideModalCreateDir())
+  }
 })
 
 class ModalCreateDirContainer extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { name: "" }
+
+    this.handleClick = this.handleChange.bind(this)
+  }
+  handleClick(event) {
+    this.setState({ name: event.target.value })
+  }
   render() {
     return (
       <div>
@@ -43,23 +50,17 @@ class ModalCreateDirContainer extends Component {
           <ModalBody>
             <Form>
               <FormGroup>
-                <Label for="exampleEmail">Nom: </Label>
+                <Label for="name">Nom: </Label>
                 <Input
                   type="text"
                   name="name"
                   id="name"
                   placeholder="Enter the name of the new Directory"
                 />
-                <Input
-                  type="hidden"
-                  name="destination"
-                  id="destination"
-                  value={this.props.destination}
-                />
               </FormGroup>
               <Button
                 type="button"
-                onClick={() => this.props.onModalCreateDirToValidate()}
+                onClick={() => this.props.onModalCreateDirToHide()}
               >
                 Submit
               </Button>

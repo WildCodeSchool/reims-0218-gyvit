@@ -8,9 +8,3 @@ export const makeShowModalCreateDir = () => ({
 export const makeHideModalCreateDir = () => ({
   type: HIDE_MODAL_CREATE_DIR
 })
-
-export const makeValidateModalCreateDir = (name, destination) => ({
-  type: HIDE_MODAL_CREATE_DIR,
-  name: name,
-  destination: destination
-})
