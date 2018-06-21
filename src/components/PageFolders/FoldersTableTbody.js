@@ -54,20 +54,19 @@ const FoldersTableTbody = ({
             </td>
             <td>
               {dir.shares &&
-                dir.shares.map((share, key) => (
-                  <i src="" alt={`icone Share n° ${key}`} />
+                dir.shares.map((share, index) => (
+                  <i
+                    style={{
+                      marginTop: "8%",
+                      width: "10%",
+                      height: "10%"
+                    }}
+                    src=""
+                    object
+                    className="rounded-circle"
+                    alt={`icone Share n° ${index}`}
+                  />
                 ))}
-              <img
-                style={{
-                  marginTop: "8%",
-                  width: "10%",
-                  height: "10%"
-                }}
-                className="rounded-circle"
-                object
-                src=""
-                alt="avatar"
-              />
             </td>
             <img
               style={{
