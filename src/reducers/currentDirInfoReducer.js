@@ -2,12 +2,11 @@ import { RETRIEVE_DIR_SUCCESS } from "../actions/filesActions"
 
 const initialState = []
 
-const filesReducer = (prevState = initialState, action) => {
+const currentDirInfoReducer = (prevState = initialState, action) => {
   if (action.type === RETRIEVE_DIR_SUCCESS) {
-    return action.response.files
+    return action.response
   }
-
   return prevState
 }
 
-export default filesReducer
+export default currentDirInfoReducer
