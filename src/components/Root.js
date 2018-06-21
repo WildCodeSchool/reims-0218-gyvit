@@ -16,10 +16,14 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={props =>
-      hasToken() === true ? (
-        <Redirect to="/dashboard" />
+      hasToken() ? (
+        <Component {...props} />
       ) : (
-        <Redirect to="/sign-in" />
+        <Redirect
+          to={{
+            pathname: "/sign-in"
+          }}
+        />
       )
     }
   />

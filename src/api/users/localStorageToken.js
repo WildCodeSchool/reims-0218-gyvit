@@ -18,13 +18,7 @@ export const getToken = () => localStorage.getItem("token")
 
 export const removeToken = () => localStorage.removeItem("token")
 
-//function hasToken true or false token
-export const hasToken = () => {
-  if (localStorage.getItem("token")) {
-    console.log("token")
-    return "true"
-  } else {
-    console.log("no token")
-    return "false"
-  }
-}
+/**
+ * @returns token true or false for private routes
+ */
+export const hasToken = () => localStorage.getItem("token")
