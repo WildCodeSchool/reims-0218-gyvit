@@ -34,10 +34,11 @@ const Root = ({ store }) => (
       <div>
         <Route path="/" component={App} />
         <Route path="/sign-in" component={PageSignIn} />
-        <Route path="/sign-up" component={PageSignIn} />
+        <Route path="/sign-up" component={PageSignIn} />{" "}
+        {/* TODO: PAGE SIGN UP */}
         <Route path="/forgot-password" component={PageForgetPassword} />
         <PrivateRoute path="/dashboard" component={PageDashboard} />
-        <PrivateRoute path="/folders" component={PageFolders} />
+        <PrivateRoute path="/dirs" component={PageFolders} />
         <PrivateRoute path="/get-started" component={PageGetStarted} />
       </div>
     </Router>

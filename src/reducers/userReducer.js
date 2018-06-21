@@ -9,7 +9,7 @@ const initialState = {}
 // initialState is the default value of prevState
 const userReducer = (prevState = initialState, action) => {
   if (action.type === CONNECT_USER_SUCCESS) {
-    return { success: true, response: action.response }
+    return action.response
   }
   if (
     action.type === DISCONNECT_USER_SUCCESS ||
