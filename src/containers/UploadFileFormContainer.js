@@ -6,6 +6,10 @@ import { uploadFile } from "../api/files/uploadFile"
 import { makeAddAFileSuccess } from "../actions/filesActions"
 // import { makeAddAFileSuccess } from "../actions/filesActions"
 
+const mapStateToProps = state => ({
+  currentDir: state.currentDir
+})
+
 const mapDispatchToProps = dispatch => ({
   onFileUpload: response => dispatch(makeAddAFileSuccess(response))
 })
@@ -26,7 +30,7 @@ class UploadFileFormContainer extends Component {
 
   onNameUploadFile(event) {
     this.setState({ [event.target.name]: event.target.value }) //dynamique value email or password
-    console.log(event.target.value)
+    console.log("name tapé" + event.target.value)
   }
 
   onUploadLocalFile() {
@@ -74,4 +78,6 @@ class UploadFileFormContainer extends Component {
   }
 }
 
-export default connect(null, mapDispatchToProps)(UploadFileFormContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  UploadFileFormContainer
+)

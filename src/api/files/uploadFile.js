@@ -6,6 +6,7 @@ export const uploadFile = (name, destination, file) => {
     destination,
     file
   }
+  const data = new FormData()
 
   const request = {
     method: "POST",
@@ -16,7 +17,7 @@ export const uploadFile = (name, destination, file) => {
         "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
       "Access-Control-Allow-Origin": "http://localhost:3000"
     },
-    body: JSON.stringify(createFile)
+    body: data
   }
 
   return fetch("https://dev.gyvit.io/api/storage/files", request).then(res =>
