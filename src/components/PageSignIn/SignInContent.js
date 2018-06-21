@@ -15,7 +15,8 @@ const SignInContent = () => (
     <Container>
       <Row>
         <Col xs="7">
-          <p
+          <a
+            href="/sign-up"
             style={{
               marginTop: "10%",
               fontSize: "16px",
@@ -29,10 +30,11 @@ const SignInContent = () => (
             }}
           >
             Don't have an account ?
-          </p>
+          </a>
         </Col>
         <Col xs="5">
           <Button
+            href="sign-up"
             outline
             style={{
               width: "156px",
