@@ -3,9 +3,11 @@ import { connect } from "react-redux"
 import { makeListAllDirs } from "../actions/foldersActions"
 import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 import { listAllDir } from "../api/directorys/listAllDirectorys"
+import { makeShowModalError } from "../actions/errorsActions"
 
 const mapDispatchToProps = dispatch => ({
-  onFilesSearch: response => dispatch(makeListAllDirs(response))
+  onFilesSearch: response => dispatch(makeListAllDirs(response)),
+  onError: message => dispatch(makeShowModalError(message))
 })
 
 export class NavbarTopFilter extends Component {
@@ -17,7 +19,9 @@ export class NavbarTopFilter extends Component {
   onSearchType(event) {
     this.setState({ value: event.target.value })
     const value = event.target.value
-    listAllDir(value).then(response => this.props.onFilesSearch(response))
+    listAllDir(value)
+      .then(response => this.props.onFilesSearch(response))
+      .catch(response => this.props.onError(response.message))
   }
 
   render() {

@@ -51,109 +51,91 @@ exports[`renders correctly 1`] = `
        
     </p>
   </div>
-  <div>
-    <form
-      className=""
-      style={
-        Object {
-          "marginBottom": "40px",
-          "marginTop": "60px",
-        }
+  <form
+    className=""
+    style={
+      Object {
+        "marginBottom": "40px",
+        "marginTop": "60px",
       }
+    }
+  >
+    <div
+      className="form-group"
     >
-      <div
-        className="form-group"
+      <label
+        className=""
+        htmlFor="email"
       >
-        <label
-          className=""
-          htmlFor="mail"
-        >
-          Email 
-        </label>
-        <input
-          className="form-control"
-          id="Idmail"
-          name="mail"
-          onChange={undefined}
-          placeholder="Mail"
-          style={
-            Object {
-              "width": "80%",
-            }
+        Email 
+      </label>
+      <input
+        className="form-control"
+        id="IdEmail"
+        name="email"
+        placeholder="Email"
+        type="email"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label
+        className=""
+        htmlFor="password"
+        style={
+          Object {
+            "marginTop": "30px",
           }
-          type="email"
-          value={undefined}
-        />
-      </div>
-      <div
-        className="form-group"
+        }
       >
-        <label
-          className=""
-          htmlFor="password"
-          style={
-            Object {
-              "marginTop": "30px",
-            }
+        Password
+      </label>
+      <a
+        className="nav-link"
+        href="#"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#7a57d1",
+            "display": "inline",
+            "fontSize": "14px",
+            "fontStretch": "normal",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "letterSpacing": "normal",
+            "lineHeight": "normal",
+            "paddingLeft": "130px",
+            "textAlign": "right",
           }
-        >
-          Password
-        </label>
-        <a
-          className="nav-link"
-          href="#"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "#7a57d1",
-              "display": "inline",
-              "fontSize": "14px",
-              "fontStretch": "normal",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-              "letterSpacing": "normal",
-              "lineHeight": "normal",
-              "paddingLeft": "10px",
-              "textAlign": "right",
-              "width": "50%",
-            }
-          }
-        >
-          Forgot password?
-        </a>
-        <input
-          className="form-control"
-          id="IdPassword"
-          name="password"
-          onChange={undefined}
-          placeholder="Password"
-          style={
-            Object {
-              "width": "80%",
-            }
-          }
-          type="password"
-          value={undefined}
-        />
-      </div>
+        }
+      >
+        Forgot password?
+      </a>
+      <input
+        className="form-control"
+        id="IdPassword"
+        name="password"
+        placeholder="Password"
+        type="password"
+      />
       <button
-        className="btn btn-secondary"
+        className="btn btn-info"
         onClick={[Function]}
         style={
           Object {
             "backgroundImage": "linear-gradient(to left, #57aad1, #7a57d1)",
             "borderRadius": "100px",
             "height": "54px",
-            "marginTop": "40px",
             "width": "192px",
           }
         }
-        type="button"
+        type={undefined}
       >
         Sign in
       </button>
-    </form>
-  </div>
+    </div>
+  </form>
   <div
     style={
       Object {

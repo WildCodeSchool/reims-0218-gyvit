@@ -2,7 +2,9 @@ import {
   CONNECT_USER_SUCCESS,
   DISCONNECT_USER_SUCCESS,
   disconnectUserSuccessAction,
-  connectUserSuccessAction
+  connectUserSuccessAction,
+  CONNECT_USER_FAIL,
+  connectUserFailAction
 } from "./userAction"
 
 describe("action make User in State", () => {
@@ -46,5 +48,21 @@ describe("action emptying user in state", () => {
     }
 
     expect(disconnectUserSuccessAction(response)).toEqual(expected)
+  })
+})
+
+describe("action connect fail", () => {
+  it("should return an error message in state", () => {
+    const response = {
+      success: false,
+      error: "Votre mot de passe est incorrect"
+    }
+
+    const expected = {
+      type: CONNECT_USER_FAIL,
+      message: "Votre mot de passe est incorrect"
+    }
+
+    expect(connectUserFailAction(response)).toEqual(expected)
   })
 })
