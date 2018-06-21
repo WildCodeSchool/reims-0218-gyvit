@@ -6,7 +6,6 @@ import SignInContent from "./SignInContent"
 const PageSignIn = () => (
   <Container fluid>
     <Row>
-      
       <Col md="6" lg="6" sm="6">
         <SignInBarLeft />
       </Col>

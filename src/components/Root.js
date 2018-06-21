@@ -12,6 +12,7 @@ import PageDashboard from "../components/PageDashboard/PageDashboard"
 import { hasToken } from "../api/users/localStorageToken"
 import App from "../App"
 
+//function test token true or false for protect routes
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
@@ -28,6 +29,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     }
   />
 )
+//Routes for NavBarLeft
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
