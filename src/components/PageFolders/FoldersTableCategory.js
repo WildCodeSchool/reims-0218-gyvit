@@ -18,21 +18,7 @@ const FoldersTableCategory = ({ name = "", direction = null }) => {
       break
   }
   return (
-    <div
-      style={{
-        width: "60%",
-        height: "10%",
-        fontFamily: "DepotNew",
-        fontSize: "14px",
-        fontWeight: "normal",
-        fontStyle: "normal",
-        fontStretch: "normal",
-        lineHeight: "normal",
-        letterSpacing: "normal",
-        textAlign: "left",
-        color: "#181048"
-      }}
-    >
+    <div>
       {name}
       <img src={source} alt={alter} />
     </div>
