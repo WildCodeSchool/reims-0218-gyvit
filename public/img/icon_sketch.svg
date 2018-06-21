@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="34px" viewBox="0 0 28 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_sketch</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8,1.1594482e-07 L11.0818535,0 L13.7455761,1.16261848 L16,4.01416984 L8,15 L0,4.01416984 L2.25442387,1.16261848 L4.91814655,0 L8,1.1594482e-07 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Folders" transform="translate(-437.000000, -903.000000)">
+            <g id="1-copy-9" transform="translate(220.000000, 884.000000)">
+                <g id="icon_sketch" transform="translate(218.000000, 20.000000)">
+                    <path d="M24.7272727,32 L1.45454545,32 C0.651222255,32 0,31.3487771 0,30.5454545 L0,1.45454545 C0,0.651222255 0.651222255,0 1.45454545,0 L17.4545552,0 L26.1818182,8.72727273 L26.1818182,30.5454545 C26.1818182,31.3487771 25.5305953,32 24.7272727,32 Z" id="Shape" stroke="#E5E8F4" stroke-linejoin="round"></path>
+                    <polyline id="Shape" stroke="#E5E8F4" stroke-linejoin="round" points="17.4545455 0.727272727 17.4545455 8.72727273 26.1818182 8.72727273"></polyline>
+                    <g id="5" transform="translate(5.000000, 12.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#F7782E" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_document_big</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Share" transform="translate(-435.000000, -259.000000)">
+            <g id="1" transform="translate(220.000000, 240.000000)">
+                <g id="icon_document_big" transform="translate(215.000000, 20.000000)">
+                    <path d="M31,10 L31,4.28571429 L16,4.28571429 L13.1428571,0 L1,0 L1,27.8571429 C1,28.6461204 1.63959329,29.2857143 2.42857143,29.2857143 L4.57142857,29.2857143 L4.57142857,10.7142857 C4.57142857,9.92530686 5.21102186,9.28571429 6,9.28571429 L31,9.28571429 L31,27.8571429 C31,28.6461204 30.3604061,29.2857143 29.5714286,29.2857143 L2.42857143,29.2857143" id="Shape" stroke="#725FE3" stroke-width="2"></path>
+                    <polygon id="Path-2" fill="#725FE3" points="1.57788086 0.00390625 12.7951885 0.00390625 15.9492187 4.74951172 30.9211426 4.74951172 30.9211426 27.9677734 29.1560059 29.0219727 2.70385742 29.0219727 1.15771484 27.9677734 0.881835938 0.00390625"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
