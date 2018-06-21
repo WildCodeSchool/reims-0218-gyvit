@@ -13,5 +13,5 @@ export default combineReducers({
   files: filesReducer,
   user: userReducer,
   parent: parentReducer,
-  visibilityModalCreateDir: modalCreateDirReducer
+  modalCreateDir: modalCreateDirReducer
 })

@@ -3,16 +3,22 @@ import {
   HIDE_MODAL_CREATE_DIR
 } from "../actions/modalCreateDirAction"
 
-const initialState = false
+const initialState = {
+  visibilityCreateDir : false
+}
 
 // initialState is the default value of prevState
 const modalCreateDirReducer = (prevState = initialState, action) => {
   if (action.type === SHOW_MODAL_CREATE_DIR) {
-    return true
+    return {
+      visibilityCreateDir : true
+   }
   }
   if (action.type === HIDE_MODAL_CREATE_DIR) {
-    // we modify the visibility in the store
-    return false
+    // we modify the visibilityCreateDir in the store
+    return {
+      visibilityCreateDir : false
+   }
   }
   return prevState
 }

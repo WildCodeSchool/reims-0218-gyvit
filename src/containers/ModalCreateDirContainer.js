@@ -6,7 +6,7 @@ import { makeHideModalCreateDir } from "../actions/modalCreateDirAction"
 
 const mapStateToProps = state => {
   return {
-    visibilityModalCreateDir: state.visibilityModalCreateDir
+    modalCreateDir: state.modalCreateDir.visibilityCreateDir
   }
 }
 
@@ -20,7 +20,6 @@ class ModalCreateDirContainer extends Component {
       <div>
         <Modal
           isOpen={this.props.visibilityModalCreateDir}
-          className={this.props.className}
         >
           <ModalHeader toggle={() => this.props.onModalCreateDirToHide()}>
             Add a directory
