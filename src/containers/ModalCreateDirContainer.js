@@ -23,7 +23,7 @@ class ModalCreateDirContainer extends Component {
           className={this.props.className}
         >
           <ModalHeader toggle={() => this.props.onModalCreateDirToHide()}>
-            Modal Error
+            Add a directory
           </ModalHeader>
           <ModalBody>Ici s'affichera le formulaire de création</ModalBody>
           <ModalFooter>
