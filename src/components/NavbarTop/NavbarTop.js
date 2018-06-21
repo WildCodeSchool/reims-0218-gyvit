@@ -3,7 +3,7 @@
 import React from "react"
 import { Row, Col, Container } from "reactstrap"
 // import PropTypes from "prop-types"
-import NavbarTopNotif from "./NavbarTopNotif"
+import NavbarTopNotifContainer from "../../containers/NavbarTopNotifContainer"
 import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContainer"
 import SearchContainer from "../../containers/SearchContainer"
 
@@ -19,7 +19,7 @@ const NavbarTop = () => (
       <Col xs="7">
         <SearchContainer />
       </Col>
-      <NavbarTopNotif />
+      <NavbarTopNotifContainer />
       <Col xs="3">
         <NavbarTopProfileContainer />
       </Col>
