@@ -1,12 +1,12 @@
 export const SHOW_MODAL_CREATE_DIR = "SHOW_MODAL_CREATE_DIR"
 export const HIDE_MODAL_CREATE_DIR = "HIDE_MODAL_CREATE_DIR"
 
-export const makeShowModalError = () => ({
+export const makeShowModalCreateDir = () => ({
   type: SHOW_MODAL_CREATE_DIR,
   visibilityModalCreateDir: true
 })
 
-export const makeHideModalError = () => ({
+export const makeHideModalCreateDir = () => ({
   type: HIDE_MODAL_CREATE_DIR,
   visibilityModalCreateDir: false
 })
