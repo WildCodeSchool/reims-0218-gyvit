@@ -1,13 +1,13 @@
 import { getToken } from "../users/localStorageToken"
 
 export const uploadFile = (name, destination, file) => {
-  const file = {
+  const createFile = {
     name,
     destination,
     file
   }
 
-  fetch("https://dev.gyvit.io/api/storage/ ", {
+  const request = {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -15,6 +15,10 @@ export const uploadFile = (name, destination, file) => {
       "Content-Type":
         "Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
     },
-    body: JSON.stringify(file)
-  }).then(res => res.json())
+    body: JSON.stringify(createFile)
+  }
+
+  return fetch("https://dev.gyvit.io/api/storage/files", request).then(res =>
+    res.json()
+  )
 }
