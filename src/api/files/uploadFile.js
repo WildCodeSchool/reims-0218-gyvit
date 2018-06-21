@@ -13,7 +13,8 @@ export const uploadFile = (name, destination, file) => {
       Accept: "application/json",
       Authorization: `Bearer ${getToken()}`,
       "Content-Type":
-        "Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
+        "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
+      "Access-Control-Allow-Origin": "http://localhost:3000"
     },
     body: JSON.stringify(createFile)
   }

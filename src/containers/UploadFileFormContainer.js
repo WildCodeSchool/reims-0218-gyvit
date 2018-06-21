@@ -1,14 +1,6 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import {
-  Col,
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText
-} from "reactstrap"
+import { Col, Button, Form, FormGroup, Label, Input } from "reactstrap"
 
 import { uploadFile } from "../api/files/uploadFile"
 import { makeAddAFileSuccess } from "../actions/filesActions"
@@ -18,7 +10,7 @@ const mapDispatchToProps = dispatch => ({
   onFileUpload: response => dispatch(makeAddAFileSuccess(response))
 })
 
-class ModalUploadFileFormContainer extends Component {
+class UploadFileFormContainer extends Component {
   //add constructor for two input "email" & "password"
   constructor() {
     super()
@@ -38,7 +30,9 @@ class ModalUploadFileFormContainer extends Component {
   }
 
   onUploadLocalFile() {
-    uploadFile(this.state.name, this.state.destination, this.state.file).then()
+    uploadFile(this.state.name, this.state.destination, this.state.file).then(
+      file => this.props.onFileUpload(file)
+    )
   }
   render() {
     return (
@@ -65,20 +59,12 @@ class ModalUploadFileFormContainer extends Component {
           </Label>
           <Col sm={10}>
             <Input type="file" name="file" id="exampleFile" />
-            <FormText color="muted">
-              This is some placeholder block-level help text for the above
-              input. It's a bit lighter and easily wraps to a new line.
-            </FormText>
           </Col>
         </FormGroup>
 
-        <FormGroup check row>
+        <FormGroup row>
           <Col sm={{ size: 10, offset: 2 }}>
-            <Button
-              type="button"
-              onClick={this.onUploadLocalFile}
-              encType="multipart/form-data"
-            >
+            <Button type="button" onClick={this.onUploadLocalFile}>
               Submit
             </Button>
           </Col>
@@ -88,4 +74,4 @@ class ModalUploadFileFormContainer extends Component {
   }
 }
 
-export default connect(null, mapDispatchToProps)(ModalUploadFileFormContainer)
+export default connect(null, mapDispatchToProps)(UploadFileFormContainer)
