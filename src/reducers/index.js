@@ -8,7 +8,7 @@ import errorsReducer from "./errorsReducer"
 
 export default combineReducers({
   error: errorsReducer,
-  folders: foldersReducer,
+  dirs: foldersReducer,
   files: filesReducer,
   user: userReducer,
   parent: parentReducer
