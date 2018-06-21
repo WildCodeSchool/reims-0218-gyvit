@@ -1,7 +1,9 @@
 import React from "react"
 
 const ForgotPasswordBackToSignIn = () => (
-  <p style={{ marginTop: "10%" }}>Back to Sign in</p>
+  <a style={{ marginTop: "10%" }} href="/sign-in">
+    Back to Sign in
+  </a>
 )
 
 export default ForgotPasswordBackToSignIn

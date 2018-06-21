@@ -1,8 +1,8 @@
 import React from "react"
 import { Container } from "reactstrap"
 import SignInTitle from "./SignInTitle"
-import SignInForm from "./SignInForm"
 import SignInGetStarted from "./SignInGetStarted"
+import SignInFormContainer from "../../containers/SignInFormContainer"
 
 const PageSignIn = () => (
   <Container
@@ -14,8 +14,8 @@ const PageSignIn = () => (
     }}
   >
     <SignInTitle />
-    <SignInForm />
-  
+    <SignInFormContainer />
+
     <SignInGetStarted />
   </Container>
 )

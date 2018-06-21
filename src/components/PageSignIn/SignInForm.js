@@ -1,12 +1,3 @@
-//TODO: Rename this SigninForm
-// Add the signin button
-// Make it a presentational (function) componenent
-// 3 function props onEmailChange, onPasswordChange, onSubmit
-// 2 value props email and password
-// Create a SigninContainer that will have a this.state.email and this.state.password value
-// and functions handleEmailChange and handlePasswordChange that will do setState
-// submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
-
 import React from "react"
 import { Form, FormGroup, Button, Label, Input, NavLink } from "reactstrap"
 
@@ -40,7 +31,7 @@ export default class SignInEmail extends React.Component {
               color: "#7a57d1",
               paddingLeft: "130px"
             }}
-            href="#"
+            href="/forgot-password"
           >
             Forgot password?
           </NavLink>

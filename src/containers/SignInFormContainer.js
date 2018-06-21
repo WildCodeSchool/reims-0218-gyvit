@@ -1,24 +1,19 @@
-//TODO: Rename this SigninForm done
-// Add the signin button  done
-// Make it a presentational (function) componenent
-// 3 function props onEmailChange, onPasswordChange, onSubmit
-// 2 value props email and password
-// Create a SigninContainer that will have a this.state.email and this.state.password value
-// and functions handleEmailChange and handlePasswordChange that will do setState
-// submitLogin that will do login fetch then stores token and do retrieveMe fetch then dispatch retrieveMeSuccess
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import { Form, FormGroup, Label, Input, NavLink, Button } from "reactstrap"
+import { Redirect } from "react-router"
 
 import { userLogin } from "../api/users/userLogin"
 import { connectUserSuccessAction } from "../actions/userAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
 
+//verify on store with redirect if user mail is present on this
 const mapStateToProps = state => {
   return {
     visibilityError: state.visibilityError,
-    message: state.message
+    message: state.message,
+    redirect: state.user.mail
   }
 }
 
@@ -31,8 +26,8 @@ class SignInFormWrap extends Component {
   //add constructor for two input "email" & "password"
   constructor() {
     super()
+    //value default of "email" & "password"
     this.state = {
-      //value default of "email" & "password"
       mail: "",
       password: "",
       visibilityError: false,
@@ -47,6 +42,10 @@ class SignInFormWrap extends Component {
   }
 
   render() {
+    //if mail on the store, so redirect on page dashboard
+    if (this.props.redirect) {
+      return <Redirect to="/dashboard" />
+    }
     return (
       <div>
         <Form
@@ -56,7 +55,7 @@ class SignInFormWrap extends Component {
           }}
         >
           <FormGroup>
-            <Label for="mail">Email </Label>
+            <Label for="mail">Email</Label>
             <Input
               style={{ width: "80%" }}
               value={this.state.mail}
@@ -86,7 +85,7 @@ class SignInFormWrap extends Component {
                 paddingLeft: "10px",
                 width: "50%"
               }}
-              href="#"
+              href="/forgot-password"
             >
               Forgot password?
             </NavLink>
@@ -96,7 +95,7 @@ class SignInFormWrap extends Component {
               onChange={this.handleChange}
               type="password"
               name="password"
-              id="IdPassword"
+              id="password"
               placeholder="Password"
             />
           </FormGroup>
@@ -115,7 +114,8 @@ class SignInFormWrap extends Component {
                 })
                 .then(response => {
                   if (response._id !== undefined) {
-                    return this.props.onUserConnected(response)
+                    this.props.onUserConnected(response)
+                    // redirect dashboard here
                   } else if (!response.success) {
                     // emptying user AND fill errors in props when connect failed
                     this.props.onError(response.error)
@@ -140,4 +140,7 @@ class SignInFormWrap extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
