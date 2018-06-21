@@ -17,7 +17,7 @@ const FoldersTableTbody = ({
     <tbody>
       {parent && (
         <button type="button" onClick={() => onDirclick(dirs._id)}>
-          {" "}
+          {" ..."}
         </button>
       )}
       {dirs.map(dir => {
