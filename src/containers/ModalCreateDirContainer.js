@@ -1,17 +1,35 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Form,
+  FormGroup,
+  Label,
+  Input
+} from "reactstrap"
 
-import { makeHideModalCreateDir } from "../actions/modalCreateDirAction"
+import {
+  makeHideModalCreateDir,
+  makeValidateModalCreateDir
+} from "../actions/modalCreateDirAction"
 
 const mapStateToProps = state => {
   return {
+    destination: state.parentDir._id,
     modalCreateDir: state.modalCreateDir.visibilityCreateDir
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  onModalCreateDirToHide: () => dispatch(makeHideModalCreateDir())
+  // function for cancelling
+  onModalCreateDirToHide: () => dispatch(makeHideModalCreateDir()),
+  // function for validating the form
+  onModalCreateDirToValidate: (name, parent_id) =>
+    dispatch(makeValidateModalCreateDir(name, parent_id))
 })
 
 class ModalCreateDirContainer extends Component {
@@ -22,15 +40,32 @@ class ModalCreateDirContainer extends Component {
           <ModalHeader toggle={() => this.props.onModalCreateDirToHide()}>
             Add a directory
           </ModalHeader>
-          <ModalBody>Ici s'affichera le formulaire de création</ModalBody>
-          <ModalFooter>
-            <Button
-              color="primary"
-              onClick={() => this.props.onModalCreateDirToHide()}
-            >
-              Ok
-            </Button>
-          </ModalFooter>
+          <ModalBody>
+            <Form>
+              <FormGroup>
+                <Label for="exampleEmail">Nom: </Label>
+                <Input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter the name of the new Directory"
+                />
+                <Input
+                  type="hidden"
+                  name="destination"
+                  id="destination"
+                  value={this.props.destination}
+                />
+              </FormGroup>
+              <Button
+                type="button"
+                onClick={() => this.props.onModalCreateDirToValidate()}
+              >
+                Submit
+              </Button>
+            </Form>
+          </ModalBody>
+          <ModalFooter />
         </Modal>
       </div>
     )

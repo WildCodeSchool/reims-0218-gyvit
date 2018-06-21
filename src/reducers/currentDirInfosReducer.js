@@ -1,9 +1,9 @@
-import { FETCH_FOLDERS_SUCCESS } from "../actions/foldersActions"
+import { RETRIEVE_DIR_SUCCESS } from "../actions/foldersActions"
 
 const initialState = {}
 
 const currentDirInfosReducer = (prevState = initialState, action) => {
-  if (action.type === FETCH_FOLDERS_SUCCESS) {
+  if (action.type === RETRIEVE_DIR_SUCCESS) {
     return action.response
   }
 
