@@ -7,12 +7,12 @@ const link = [
   {
     nameLink: "Files",
     icon: process.env.PUBLIC_URL + "/img/files.ico",
-    link: "/folders"
+    link: "/dirs"
   },
   {
     nameLink: "Shares",
     icon: process.env.PUBLIC_URL + "/img/share.ico",
-    link: "/folders"
+    link: "/dirs"
   },
   {
     nameLink: "Templates",
