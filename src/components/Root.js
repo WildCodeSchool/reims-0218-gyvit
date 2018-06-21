@@ -9,33 +9,21 @@ import PageFolders from "../components/PageFolders/PageFolders"
 import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageForgetPassword from "../components/PageForgotPassword/PageForgotPassword"
 import PageDashboard from "../components/PageDashboard/PageDashboard"
+import { hasToken } from "../api/users/localStorageToken"
 import App from "../App"
-
-const fakeAuth = {
-  isAuthenticated: false,
-  authenticate(cb) {
-    this.isAuthenticated = true
-    setTimeout(cb, 100)
-  },
-  signout(cb) {
-    this.isAuthenticated = false
-    setTimeout(cb, 100)
-  }
-}
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={props =>
-      fakeAuth.isAuthenticated === true ? (
-        <Component {...props} />
+      hasToken() === true ? (
+        <Redirect to="/dashboard" />
       ) : (
         <Redirect to="/sign-in" />
       )
     }
   />
 )
-
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
