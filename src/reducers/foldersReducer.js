@@ -19,6 +19,7 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === RETRIEVE_DIR_SUCCESS) {
     return action.response.dirs
   }
+
   if (action.type === UPDATE_A_FOLDER_SUCCESS) {
     return action.response
   }
@@ -28,6 +29,7 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === LIST_ALL_DIRS) {
     return action.response
   }
+
   return prevState
 }
 

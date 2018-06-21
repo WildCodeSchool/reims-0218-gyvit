@@ -1,25 +1,44 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import FoldersTable from "../components/PageFolders/FoldersTable"
 import { makeRetrieveDirSuccess } from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 
+import FoldersTable from "../components/PageFolders/FoldersTable"
+
 const mapStateToProps = state => ({
-  folders: state.folders,
-  files: state.files
+  dirs: state.dirs,
+  files: state.files,
+  parent: state.parent
 })
 
 const mapDispatchToProps = dispatch => ({
-  onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response))
+  onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response)),
+  onDirclick: id =>
+    retrieveDir(id).then(response =>
+      dispatch(makeRetrieveDirSuccess(response))
+    ),
+  onBackclick: idParent =>
+    retrieveDir(idParent).then(response =>
+      dispatch(makeRetrieveDirSuccess(response))
+    )
 })
 
 class FoldersTableWrap extends Component {
   render() {
-    return <FoldersTable files={this.props.files} dirs={this.props.folders} />
+    const { parent, files, folders, onDirclick, onBackclick } = this.props
+    return (
+      <FoldersTable
+        parent={parent}
+        files={files}
+        dirs={folders}
+        onDirclick={onDirclick}
+        onBackclick={onBackclick}
+      />
+    )
   }
 
   componentDidMount() {
-    retrieveDir().then(files => this.props.onRetrieveDirSuccess(files))
+    retrieveDir().then(root => this.props.onRetrieveDirSuccess(root))
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(FoldersTableWrap)

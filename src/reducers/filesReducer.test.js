@@ -2,7 +2,6 @@ import {
   makeFetchFilesSuccess,
   makeUpdateAFileSuccess,
   makeDeleteAFileSuccess,
-  FETCH_FILES_SUCCESS,
   makeAddAFileSuccess
 } from "../actions/filesActions"
 
@@ -10,28 +9,7 @@ import filesReducer from "./filesReducer"
 
 describe("filesReducer", () => {
   it("should change the state for listFiles action", () => {
-    const prevState = [
-      {
-        _id: "file_7F2jhzx5RlO8u5C1SP3c",
-        object: "file",
-        name: "TEST FOR POST",
-        size: 0,
-        ext: "",
-        type: "",
-        remove: 0,
-        created: "2018-04-22T08:34:26+00:00",
-        modified: "2018-04-22T08:34:26+00:00",
-        removed: null,
-        shares: [],
-        dir: {
-          _id: "dir_r4V13RVeHFFVvOLctpPe",
-          object: "directory",
-          name: "Sketchs & Photoshops",
-          created: "2018-03-30T11:53:23+00:00",
-          modified: "2018-03-30T12:11:15+00:00"
-        }
-      }
-    ]
+    const prevState = []
 
     const response = [
       {
@@ -77,8 +55,9 @@ describe("filesReducer", () => {
         }
       }
     ]
-    const litAllFiles = makeFetchFilesSuccess(response)
-    expect(filesReducer(prevState, litAllFiles).toEqual(expected))
+    expect(filesReducer(prevState, makeFetchFilesSuccess(response))).toEqual(
+      expected
+    )
   })
 
   it("should change the STATE with a new file (action ADD_A_FILE_SUCCESS)", () => {

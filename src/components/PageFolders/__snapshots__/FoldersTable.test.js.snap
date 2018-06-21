@@ -3,13 +3,28 @@
 exports[`renders link html 1`] = `
 <div>
   <table
-    className="table"
+    className="table table-borderless table-striped"
   >
     <thead>
       <tr>
-        <th />
         <th>
-          <div>
+          <div
+            style={
+              Object {
+                "color": "#181048",
+                "fontFamily": "DepotNew",
+                "fontSize": "14px",
+                "fontStretch": "normal",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "height": "10%",
+                "letterSpacing": "normal",
+                "lineHeight": "normal",
+                "textAlign": "left",
+                "width": "60%",
+              }
+            }
+          >
             Name
             <img
               alt="upDown"
@@ -18,7 +33,23 @@ exports[`renders link html 1`] = `
           </div>
         </th>
         <th>
-          <div>
+          <div
+            style={
+              Object {
+                "color": "#181048",
+                "fontFamily": "DepotNew",
+                "fontSize": "14px",
+                "fontStretch": "normal",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "height": "10%",
+                "letterSpacing": "normal",
+                "lineHeight": "normal",
+                "textAlign": "left",
+                "width": "60%",
+              }
+            }
+          >
             Last update
             <img
               alt="upDown"
@@ -27,7 +58,23 @@ exports[`renders link html 1`] = `
           </div>
         </th>
         <th>
-          <div>
+          <div
+            style={
+              Object {
+                "color": "#181048",
+                "fontFamily": "DepotNew",
+                "fontSize": "14px",
+                "fontStretch": "normal",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "height": "10%",
+                "letterSpacing": "normal",
+                "lineHeight": "normal",
+                "textAlign": "left",
+                "width": "60%",
+              }
+            }
+          >
             Users
             <img
               alt="down"

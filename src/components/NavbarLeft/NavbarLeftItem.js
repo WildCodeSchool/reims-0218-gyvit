@@ -4,12 +4,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { NavLink, Container, Row } from "reactstrap"
 
-const NavbarLeftItem = ({ icon, nameLink }) => (
+const NavbarLeftItem = ({ icon, nameLink, link }) => (
   <div>
     <Container>
       <Row>
         <NavLink
-          href="#"
+          href={link}
           style={{
             color: "white",
             opacity: 0.5
@@ -19,11 +19,11 @@ const NavbarLeftItem = ({ icon, nameLink }) => (
             alt=""
             src={icon}
             style={{
+              text: "center",
               opacity: 0.8,
               paddingRight: 10
             }}
           />
-
           {nameLink}
         </NavLink>
       </Row>

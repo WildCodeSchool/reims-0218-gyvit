@@ -7,15 +7,27 @@ const convertDateFromJsonToFrench = dateToTransform =>
     .setLocale("fr-FR")
     .toLocaleString(DateTime.DATETIME_SHORT)
 
-const FoldersTableTbody = ({ files = [], dirs = [] }) => {
+const FoldersTableTbody = ({
+  files = [],
+  dirs = [],
+  onDirclick,
+  onBackclick,
+  parent = {}
+}) => {
   return (
     <tbody>
+      {parent._id && (
+        <button type="button" onClick={() => onBackclick(parent._id)}>
+          {"..."}
+        </button>
+      )}
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
             <th />
             <th>
               <img
+                onClick={() => onDirclick(dir._id)}
                 style={{
                   width: "30px",
                   height: "29px",
@@ -43,9 +55,10 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
               {convertDateFromJsonToFrench(dir.modified)}
             </td>
             <td>
-              {dir.shares.map((share, key) => (
-                <i src="" alt={`icone Share n° ${key}`} />
-              ))}
+              {dir.shares &&
+                dir.shares.map((share, key) => (
+                  <i src="" alt={`icone Share n° ${key}`} />
+                ))}
               <img
                 style={{
                   marginTop: "25px",
@@ -54,7 +67,7 @@ const FoldersTableTbody = ({ files = [], dirs = [] }) => {
                 }}
                 className="rounded-circle"
                 object
-                src="img/kevinMarlot.jpeg"
+                src=""
                 alt="avatar"
               />
             </td>

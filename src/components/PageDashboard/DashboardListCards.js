@@ -3,8 +3,9 @@ import { Container, Row, Col } from "reactstrap"
 import PropTypes from "prop-types"
 
 import DashboardCard from "./DashboardCard"
+import { elements } from "../../links/elements"
 
-const DashboardListCards = ({ elements, name }) => (
+const DashboardListCards = () => (
   <Container>
     <Row className="App">
       <Col md="12" sm="4">
@@ -12,14 +13,13 @@ const DashboardListCards = ({ elements, name }) => (
           style={{
             fontSize: "24px",
             height: "33px",
-            marginTop: "120px",
+            marginTop: "20%",
             textAlign: "center"
           }}
         >
-          Welcome to Gyvit, {name}.
+          Welcome to Gyvit, .
         </p>
-      </Col>
-      <Col sm="12" md={{ size: 4, offset: 3 }}>
+
         <p
           style={{
             fontSize: "18px",
@@ -34,10 +34,8 @@ const DashboardListCards = ({ elements, name }) => (
         </p>
       </Col>
     </Row>
-    <Row>
-      {elements.map(element => {
-        return <DashboardCard key={element.id} {...element} />
-      })}
+    <Row className="d-flex justify-content-around">
+      {elements.map(element => <DashboardCard {...element} />)}
     </Row>
   </Container>
 )

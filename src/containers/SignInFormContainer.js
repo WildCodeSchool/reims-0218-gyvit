@@ -11,16 +11,20 @@ import { connect } from "react-redux"
 import { Form, FormGroup, Label, Input, NavLink, Button } from "reactstrap"
 
 import { userLogin } from "../api/users/userLogin"
-import {
-  connectUserSuccessAction,
-  connectUserFailAction
-} from "../actions/userAction"
+import { connectUserSuccessAction } from "../actions/userAction"
+import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
 
-//dispatch connectUserSuccessAction
+const mapStateToProps = state => {
+  return {
+    visibilityError: state.visibilityError,
+    message: state.message
+  }
+}
+
 const mapDispatchToProps = dispatch => ({
-  onUserFailed: response => dispatch(connectUserFailAction(response)),
-  onUserConnected: response => dispatch(connectUserSuccessAction(response))
+  onUserConnected: response => dispatch(connectUserSuccessAction(response)),
+  onError: message => dispatch(makeShowModalError(message))
 })
 
 class SignInFormWrap extends Component {
@@ -30,7 +34,9 @@ class SignInFormWrap extends Component {
     this.state = {
       //value default of "email" & "password"
       mail: "",
-      password: ""
+      password: "",
+      visibilityError: false,
+      message: ""
     }
     this.handleChange = this.handleChange.bind(this) //create new function identical
   }
@@ -98,15 +104,24 @@ class SignInFormWrap extends Component {
             type="button"
             onClick={() =>
               userLogin(this.state.mail, this.state.password)
+                // catch response:  if not desired response, response.message
+                //                  if desired: response.success
                 .then(response => {
                   if (response.success) {
                     return retrieveMe()
                   } else {
-                    // TODO put response.message in a popup
                     return response
                   }
                 })
-                .then(response => this.props.onUserConnected(response))
+                .then(response => {
+                  if (response._id !== undefined) {
+                    return this.props.onUserConnected(response)
+                  } else if (!response.success) {
+                    // emptying user AND fill errors in props when connect failed
+                    this.props.onError(response.error)
+                  }
+                })
+                .catch(response => this.props.onError(response.message))
             }
             style={{
               width: "192px",
@@ -125,4 +140,4 @@ class SignInFormWrap extends Component {
   }
 }
 
-export default connect(null, mapDispatchToProps)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(mapStateToProps, mapDispatchToProps)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
