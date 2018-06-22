@@ -3,319 +3,332 @@
 exports[`renders link html 1`] = `
 <div>
   <div
-    className="container"
+    className="row"
   >
-    <div
-      className="row"
+    <ul
+      className="nav flex-column"
+      expand="md"
+      style={
+        Object {
+          "backgroundColor": "#231b56",
+          "color": "white",
+          "height": "1024px",
+          "width": "220px",
+        }
+      }
     >
-      <ul
-        className="nav flex-column"
-        expand="md"
+      <div
+        className="d-flex align-items-center"
         style={
           Object {
-            "backgroundColor": "#231b56",
+            "backgroundColor": "#181048",
             "color": "white",
-            "height": "1024px",
-            "width": "220px",
+            "fontSize": "20px",
+            "fontWeight": "bold",
+            "height": "90px",
+            "margin-bottom": "0px",
+            "textAlign": "center",
           }
         }
       >
-        <a
-          className="navbar-brand"
-          href="/"
-          style={
-            Object {
-              "backgroundColor": "#181048",
-              "color": "white",
-              "fontWeight": "bold",
-              "height": "90px",
-              "textAlign": "center",
-              "width": "220px",
-            }
+        <div
+          className="col"
+        >
+          GYVIT 
+        </div>
+      </div>
+      <li
+        className="align-center nav-item"
+        style={
+          Object {
+            "fontSize": "16px",
+            "marginLeft": "30px",
+            "marginTop": "80px",
           }
-        >
-          <p>
-            GYVIT
-          </p>
-        </a>
-        <li
-          className="text-center nav-item"
-        >
-          <div>
+        }
+      >
+        <div>
+          <div
+            className="container"
+          >
             <div
-              className="container"
+              className="row"
             >
-              <div
-                className="row"
+              <a
+                className="nav-link"
+                href={undefined}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "white",
+                    "opacity": 0.5,
+                  }
+                }
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={[Function]}
+                <img
+                  alt=""
+                  src="/img/house_38533.ico"
                   style={
                     Object {
-                      "color": "white",
-                      "opacity": 0.5,
+                      "opacity": 0.8,
+                      "paddingRight": 10,
+                      "text": "center",
                     }
                   }
-                >
-                  <img
-                    alt=""
-                    src="/img/house_38533.ico"
-                    style={
-                      Object {
-                        "opacity": 0.8,
-                        "paddingRight": 10,
-                      }
-                    }
-                  />
-                  Home
-                </a>
-              </div>
+                />
+                Home
+              </a>
             </div>
-            <hr />
           </div>
-          <div>
+          <hr />
+        </div>
+        <div>
+          <div
+            className="container"
+          >
             <div
-              className="container"
+              className="row"
             >
-              <div
-                className="row"
+              <a
+                className="nav-link"
+                href={undefined}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "white",
+                    "opacity": 0.5,
+                  }
+                }
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={[Function]}
+                <img
+                  alt=""
+                  src="/img/files.ico"
                   style={
                     Object {
-                      "color": "white",
-                      "opacity": 0.5,
+                      "opacity": 0.8,
+                      "paddingRight": 10,
+                      "text": "center",
                     }
                   }
-                >
-                  <img
-                    alt=""
-                    src="/img/files.ico"
-                    style={
-                      Object {
-                        "opacity": 0.8,
-                        "paddingRight": 10,
-                      }
-                    }
-                  />
-                  Files
-                </a>
-              </div>
+                />
+                Files
+              </a>
             </div>
-            <hr />
           </div>
-          <div>
+          <hr />
+        </div>
+        <div>
+          <div
+            className="container"
+          >
             <div
-              className="container"
+              className="row"
             >
-              <div
-                className="row"
+              <a
+                className="nav-link"
+                href={undefined}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "white",
+                    "opacity": 0.5,
+                  }
+                }
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={[Function]}
+                <img
+                  alt=""
+                  src="/img/share.ico"
                   style={
                     Object {
-                      "color": "white",
-                      "opacity": 0.5,
+                      "opacity": 0.8,
+                      "paddingRight": 10,
+                      "text": "center",
                     }
                   }
-                >
-                  <img
-                    alt=""
-                    src="/img/share.ico"
-                    style={
-                      Object {
-                        "opacity": 0.8,
-                        "paddingRight": 10,
-                      }
-                    }
-                  />
-                  Shares
-                </a>
-              </div>
+                />
+                Shares
+              </a>
             </div>
-            <hr />
           </div>
-          <div>
+          <hr />
+        </div>
+        <div>
+          <div
+            className="container"
+          >
             <div
-              className="container"
+              className="row"
             >
-              <div
-                className="row"
+              <a
+                className="nav-link"
+                href={undefined}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "white",
+                    "opacity": 0.5,
+                  }
+                }
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={[Function]}
+                <img
+                  alt=""
+                  src="/img/templates.ico"
                   style={
                     Object {
-                      "color": "white",
-                      "opacity": 0.5,
+                      "opacity": 0.8,
+                      "paddingRight": 10,
+                      "text": "center",
                     }
                   }
-                >
-                  <img
-                    alt=""
-                    src="/img/templates.ico"
-                    style={
-                      Object {
-                        "opacity": 0.8,
-                        "paddingRight": 10,
-                      }
-                    }
-                  />
-                  Templates
-                </a>
-              </div>
+                />
+                Templates
+              </a>
             </div>
-            <hr />
           </div>
-          <div>
+          <hr />
+        </div>
+        <div>
+          <div
+            className="container"
+          >
             <div
-              className="container"
+              className="row"
             >
-              <div
-                className="row"
+              <a
+                className="nav-link"
+                href={undefined}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "white",
+                    "opacity": 0.5,
+                  }
+                }
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={[Function]}
+                <img
+                  alt=""
+                  src="/img/request.ico"
                   style={
                     Object {
-                      "color": "white",
-                      "opacity": 0.5,
+                      "opacity": 0.8,
+                      "paddingRight": 10,
+                      "text": "center",
                     }
                   }
-                >
-                  <img
-                    alt=""
-                    src="/img/request.ico"
-                    style={
-                      Object {
-                        "opacity": 0.8,
-                        "paddingRight": 10,
-                      }
-                    }
-                  />
-                  Requests
-                </a>
-              </div>
+                />
+                Requests
+              </a>
             </div>
-            <hr />
           </div>
-          <div>
+          <hr />
+        </div>
+        <div>
+          <div
+            className="container"
+          >
             <div
-              className="container"
+              className="row"
             >
-              <div
-                className="row"
+              <a
+                className="nav-link"
+                href={undefined}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "white",
+                    "opacity": 0.5,
+                  }
+                }
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={[Function]}
+                <img
+                  alt=""
+                  src="/img/links.ico"
                   style={
                     Object {
-                      "color": "white",
-                      "opacity": 0.5,
+                      "opacity": 0.8,
+                      "paddingRight": 10,
+                      "text": "center",
                     }
                   }
-                >
-                  <img
-                    alt=""
-                    src="/img/links.ico"
-                    style={
-                      Object {
-                        "opacity": 0.8,
-                        "paddingRight": 10,
-                      }
-                    }
-                  />
-                  Public links
-                </a>
-              </div>
+                />
+                Public links
+              </a>
             </div>
-            <hr />
           </div>
-          <div>
+          <hr />
+        </div>
+        <div>
+          <div
+            className="container"
+          >
             <div
-              className="container"
+              className="row"
             >
-              <div
-                className="row"
+              <a
+                className="nav-link"
+                href={undefined}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "white",
+                    "opacity": 0.5,
+                  }
+                }
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={[Function]}
+                <img
+                  alt=""
+                  src="/img/contact.ico"
                   style={
                     Object {
-                      "color": "white",
-                      "opacity": 0.5,
+                      "opacity": 0.8,
+                      "paddingRight": 10,
+                      "text": "center",
                     }
                   }
-                >
-                  <img
-                    alt=""
-                    src="/img/contact.ico"
-                    style={
-                      Object {
-                        "opacity": 0.8,
-                        "paddingRight": 10,
-                      }
-                    }
-                  />
-                  Contacts
-                </a>
-              </div>
+                />
+                Contacts
+              </a>
             </div>
-            <hr />
           </div>
-          <div>
+          <hr />
+        </div>
+        <div>
+          <div
+            className="container"
+          >
             <div
-              className="container"
+              className="row"
             >
-              <div
-                className="row"
+              <a
+                className="nav-link"
+                href={undefined}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "color": "white",
+                    "opacity": 0.5,
+                  }
+                }
               >
-                <a
-                  className="nav-link"
-                  href="#"
-                  onClick={[Function]}
+                <img
+                  alt=""
+                  src="/img/settings.ico"
                   style={
                     Object {
-                      "color": "white",
-                      "opacity": 0.5,
+                      "opacity": 0.8,
+                      "paddingRight": 10,
+                      "text": "center",
                     }
                   }
-                >
-                  <img
-                    alt=""
-                    src="/img/settings.ico"
-                    style={
-                      Object {
-                        "opacity": 0.8,
-                        "paddingRight": 10,
-                      }
-                    }
-                  />
-                  Settings
-                </a>
-              </div>
+                />
+                Settings
+              </a>
             </div>
-            <hr />
           </div>
-        </li>
-      </ul>
-    </div>
+          <hr />
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 `;

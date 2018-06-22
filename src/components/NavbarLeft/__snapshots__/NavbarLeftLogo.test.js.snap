@@ -1,22 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<a
-  className="navbar-brand"
-  href="/"
+<div
+  className="d-flex align-items-center"
   style={
     Object {
       "backgroundColor": "#181048",
       "color": "white",
+      "fontSize": "20px",
       "fontWeight": "bold",
       "height": "90px",
+      "margin-bottom": "0px",
       "textAlign": "center",
-      "width": "220px",
     }
   }
 >
-  <p>
-    GYVIT
-  </p>
-</a>
+  <div
+    className="col"
+  >
+    GYVIT 
+  </div>
+</div>
 `;
