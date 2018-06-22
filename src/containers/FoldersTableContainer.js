@@ -14,16 +14,24 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response)),
   onDirclick: id =>
-    retrieveDir(id).then(response => dispatch(makeRetrieveDirSuccess(response)))
+    retrieveDir(id).then(response =>
+      dispatch(makeRetrieveDirSuccess(response))
+    ),
+  onBackclick: idParent =>
+    retrieveDir(idParent).then(response =>
+      dispatch(makeRetrieveDirSuccess(response))
+    )
 })
 
 class FoldersTableWrap extends Component {
   render() {
     return (
       <FoldersTable
+        parent={this.props.parent}
         files={this.props.files}
         dirs={this.props.dirs}
         onDirclick={this.props.onDirclick}
+        onBackclick={this.props.onBackclick}
       />
     )
   }
