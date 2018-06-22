@@ -16,7 +16,6 @@ const FoldersTable = ({
       <Table>
         <thead>
           <tr>
-            <th />
             <th>
               <FoldersTableCategory name="Name" direction={null} />
             </th>
@@ -26,7 +25,6 @@ const FoldersTable = ({
             <th>
               <FoldersTableCategory name="Users" direction={"asc"} />
             </th>
-            <th />
           </tr>
         </thead>
         <FoldersTableTbody

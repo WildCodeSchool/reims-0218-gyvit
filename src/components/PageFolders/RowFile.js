@@ -8,7 +8,6 @@ const convertDateFromJsonToFrench = dateToTransform =>
 
 const RowFile = ({ _id, name, modified, shares }) => (
   <tr key={_id}>
-    <th />
     <th>
       <img
         style={{

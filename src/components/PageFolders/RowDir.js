@@ -8,7 +8,6 @@ const convertDateFromJsonToFrench = dateToTransform =>
 
 const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
   <tr key={_id}>
-    <th />
     <th>
       <img
         onClick={() => onDirclick(_id)}
@@ -60,7 +59,6 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
       src="Assets/icon_dots_more.png"
       alt=""
     />
-    <td />
   </tr>
 )
 
