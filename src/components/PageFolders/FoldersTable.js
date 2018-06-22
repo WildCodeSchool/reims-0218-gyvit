@@ -14,19 +14,17 @@ const FoldersTable = ({
   <div>
     <Container>
       <Table borderless striped>
-        <thead>
-          <tr>
-            <th>
-              <FoldersTableCategory name="Name" direction={null} />
-            </th>
-            <th>
-              <FoldersTableCategory name="Last update" direction={null} />
-            </th>
-            <th>
-              <FoldersTableCategory name="Users" direction={"asc"} />
-            </th>
-          </tr>
-        </thead>
+        <tr>
+          <th>
+            <FoldersTableCategory name="Name" direction={null} />
+          </th>
+          <th>
+            <FoldersTableCategory name="Last update" direction={null} />
+          </th>
+          <th>
+            <FoldersTableCategory name="Users" direction={"asc"} />
+          </th>
+        </tr>
         <FoldersTableTbody
           onDirclick={onDirclick}
           onBackclick={onBackclick}

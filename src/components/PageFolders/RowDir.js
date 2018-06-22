@@ -10,7 +10,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
   <tr key={_id}>
     <th>
       <img
-        onClick={() => onDirclick(onDirclick)}
+        onClick={() => onDirclick(_id)}
         style={{
           width: "30px",
           height: "29px",
@@ -29,7 +29,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
         height: "14px",
         fontFamily: "DepotNew",
         fontSize: "14px",
-        marginTop: "28px",
+        marginTop: "50px",
         marginBottom: "28px",
         textAlign: "center",
         color: "#a5a0c2"
@@ -57,7 +57,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
         marginTop: "33px"
       }}
       src="Assets/icon_dots_more.png"
-      alt=""
+      alt="Button Dropdown"
     />
   </tr>
 )
