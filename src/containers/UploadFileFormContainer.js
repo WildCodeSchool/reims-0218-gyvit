@@ -14,13 +14,10 @@ const mapDispatchToProps = dispatch => ({
 })
 
 class UploadFileFormContainer extends Component {
-  //add constructor for two input "name" & "file"
   constructor(props) {
     super(props)
     this.state = {
-      //value default of "name" & "file"
-      name: "",
-      file: {}
+      name: ""
     }
     this.onHandleName = this.onHandleName.bind(this)
     this.onHandleFileUpload = this.onHandleFileUpload.bind(this)
