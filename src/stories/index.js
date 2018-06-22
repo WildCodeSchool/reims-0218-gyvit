@@ -50,6 +50,7 @@ import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassw
 import FoldersTable from "../components/PageFolders/FoldersTable"
 
 import RowDir from "../components/PageFolders/RowDir"
+import RowFile from "../components/PageFolders/RowFile"
 import { Table } from "reactstrap"
 
 /* const homeLinkProps = {
@@ -221,7 +222,6 @@ const tableProps = {
 storiesOf("component RowDir", module).add("RowDir", () => (
   <Table>
     <tbody>
-      {" "}
       <RowDir {...dir} />
     </tbody>
   </Table>
@@ -249,6 +249,13 @@ const dir = {
   ]
 }
 
+storiesOf("component RowFile", module).add("RowFile", () => (
+  <Table>
+    <tbody>
+      <RowFile {...file} />
+    </tbody>
+  </Table>
+))
 // <RowDir {...dir} />
 // PR
 // replace line 24 <tr>...</tr> by  <RowDir {...dir} />
