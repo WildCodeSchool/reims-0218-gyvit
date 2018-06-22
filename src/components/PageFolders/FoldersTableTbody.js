@@ -24,7 +24,7 @@ const FoldersTableTbody = ({
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
-            <th>
+            <td>
               <img
                 onClick={() => onDirclick(dir._id)}
                 style={{
@@ -38,25 +38,25 @@ const FoldersTableTbody = ({
                 alt="Directory Icon"
               />
               {dir.name}
-            </th>
-            <td
-              style={{
-                width: "170px",
-                height: "14px",
-                fontFamily: "DepotNew",
-                fontSize: "14px",
-                marginTop: "28px",
-                marginBottom: "28px",
-                textAlign: "center",
-                color: "#a5a0c2"
-              }}
-            >
-              {convertDateFromJsonToFrench(dir.modified)}
+            </td>
+            <td>
+              <div
+                style={{
+                  width: "60%",
+                  height: "9%",
+                  fontSize: "14px",
+                  marginTop: "11%",
+                  fontFamily: "DepotNew",
+                  color: "#a5a0c2"
+                }}
+              >
+                {convertDateFromJsonToFrench(dir.modified)}
+              </div>
             </td>
             <td>
               {dir.shares &&
                 dir.shares.map((share, key) => (
-                  <i src="" alt={`icone Share n° ${key}`} />
+                  <img src="" alt={`icone Share n° ${key}`} />
                 ))}
               <img
                 style={{
@@ -66,7 +66,7 @@ const FoldersTableTbody = ({
                 }}
                 className="rounded-circle"
                 object
-                src=""
+                src="img/kevinMarlot.jpeg"
                 alt="avatar"
               />
             </td>
@@ -84,8 +84,7 @@ const FoldersTableTbody = ({
       {files.map(file => {
         return (
           <tr key={file._id}>
-            <th />
-            <th>
+            <td>
               <img
                 style={{
                   width: "26.2px",
@@ -98,29 +97,43 @@ const FoldersTableTbody = ({
                 alt="file Icon"
               />
               {file.name}
-            </th>
-            <td
-              style={{
-                width: "104px",
-                height: "14px",
-                fontFamily: "DepotNew",
-                fontSize: "14px",
-                fontWeight: "normal",
-                fontStyle: "normal",
-                fontStretch: "normal",
-                lineHeight: "normal",
-                letterSpacing: "normal",
-                textAlign: "left",
-                color: "#a5a0c2"
-              }}
-            >
-              {convertDateFromJsonToFrench(file.modified)}
+            </td>
+            <td>
+              <div
+                style={{
+                  width: "60%",
+                  height: "9%",
+                  fontFamily: "DepotNew",
+                  fontSize: "14px",
+                  marginTop: "14%",
+                  fontWeight: "normal",
+                  fontStyle: "normal",
+                  fontStretch: "normal",
+                  lineHeight: "normal",
+                  letterSpacing: "normal",
+                  textAlign: "left",
+                  color: "#a5a0c2"
+                }}
+              >
+                {convertDateFromJsonToFrench(file.modified)}
+              </div>
             </td>
             <td>
               {file.shares &&
                 file.shares.map((share, key) => (
                   <img src="" alt={`icone Share n° ${key}`} />
                 ))}
+              <img
+                style={{
+                  marginTop: "25px",
+                  width: "30px",
+                  height: "30px"
+                }}
+                className="rounded-circle"
+                object
+                src="img/kevinMarlot.jpeg"
+                alt="avatar"
+              />
             </td>
           </tr>
         )
