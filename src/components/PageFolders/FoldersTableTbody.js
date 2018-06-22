@@ -24,7 +24,6 @@ const FoldersTableTbody = ({
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
-            <th />
             <th>
               <img
                 onClick={() => onDirclick(dir._id)}

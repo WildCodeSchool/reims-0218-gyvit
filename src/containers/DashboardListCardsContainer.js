@@ -13,12 +13,11 @@ class DashboardListCardsContainer extends Component {
     return (
       <Container>
         <Row className="App">
-          <Col md="12" sm="4">
+          <Col>
             <p
               style={{
                 fontSize: "24px",
                 height: "33px",
-                marginTop: "120px",
                 textAlign: "center"
               }}
             >

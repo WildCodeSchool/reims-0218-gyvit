@@ -3,6 +3,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { NavLink, Container, Row } from "reactstrap"
+import link from "../../links/index"
 
 const NavbarLeftItem = ({ icon, nameLink, link }) => (
   <div>

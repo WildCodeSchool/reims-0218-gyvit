@@ -3,7 +3,7 @@ import "./App.css"
 
 class App extends Component {
   render() {
-    return <div>coucou</div>
+    return <div />
   }
 }
 export default App
