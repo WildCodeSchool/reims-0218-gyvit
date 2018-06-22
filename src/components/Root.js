@@ -34,7 +34,7 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
       <div>
-        <Route path="/" component={App} />
+        <PrivateRoute path="/" exact component={PageDashboard} />
         <Route path="/sign-in" component={PageSignIn} />
         <Route path="/sign-up" component={PageSignIn} />{" "}
         {/* TODO: PAGE SIGN UP */}
