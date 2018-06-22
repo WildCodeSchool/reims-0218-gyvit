@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="34px" viewBox="0 0 28 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_adobe acrobat</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Folders" transform="translate(-437.000000, -553.000000)">
+            <g id="1-copy-4" transform="translate(220.000000, 534.000000)">
+                <g id="icon_adobe-acrobat" transform="translate(218.000000, 20.000000)">
+                    <path d="M13.8142228,12.2113939 C14.0404316,9.34479942 10.9467565,9.19142495 11.6363636,12.3594804 C12.3410769,15.5969308 16.0374783,22.3713212 19.6363636,23.9958441 C22.8916543,25.465271 23.0909091,21.0462896 13.4863031,21.0462896 C4.63545433,21.0462896 4.18181818,28.4958441 8.18199985,25.4503895 C12.4105932,22.2310403 13.5909091,15.0412986 13.8142228,12.2113939 Z" id="Shape" stroke="#FB001F"></path>
+                    <path d="M24.7272727,32 L1.45454545,32 C0.651222255,32 0,31.3487771 0,30.5454545 L0,1.45454545 C0,0.651222255 0.651222255,0 1.45454545,0 L17.4545552,0 L26.1818182,8.72727273 L26.1818182,30.5454545 C26.1818182,31.3487771 25.5305953,32 24.7272727,32 Z" id="Shape" stroke="#E5E8F4"></path>
+                    <polyline id="Shape" stroke="#E5E8F4" points="17.4545455 0.727272727 17.4545455 8.72727273 26.1818182 8.72727273"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

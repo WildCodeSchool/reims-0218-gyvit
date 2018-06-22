@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="9px" viewBox="0 0 14 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_create_public_access</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Folders" transform="translate(-1289.000000, -358.000000)" fill="#181048">
+            <g id="Group-5" transform="translate(1269.000000, 300.000000)">
+                <g id="Group-20" transform="translate(20.000000, 55.000000)">
+                    <g id="icon_create_public_access" transform="translate(0.000000, 3.000000)">
+                        <path d="M7.875,7.7315 C7.875,7.203 7.643125,6.699875 7.22925,6.37175 C6.596625,5.8695 5.499375,5.25 3.9375,5.25 C2.375625,5.25 1.278375,5.8695 0.64575,6.37175 C0.231875,6.699875 0,7.203 0,7.7315 L0,8.75 L7.875,8.75 L7.875,7.7315 Z" id="Fill-53"></path>
+                        <path d="M3.9375,0 C5.145875,0 6.125,0.979125 6.125,2.1875 C6.125,3.395875 5.145875,4.375 3.9375,4.375 C2.729125,4.375 1.75,3.395875 1.75,2.1875 C1.75,0.979125 2.729125,0 3.9375,0" id="Fill-54"></path>
+                        <path d="M10.0625,0 C11.270875,0 12.25,0.979125 12.25,2.1875 C12.25,3.395875 11.270875,4.375 10.0625,4.375 C8.854125,4.375 7.875,3.395875 7.875,2.1875 C7.875,0.979125 8.854125,0 10.0625,0" id="Fill-55"></path>
+                        <path d="M13.35425,6.37175 C12.721625,5.8695 11.624375,5.25 10.0625,5.25 C9.571625,5.25 9.132375,5.315625 8.733375,5.415375 C9.296875,6.045375 9.625,6.8565 9.625,7.7315 L9.625,8.75 L14,8.75 L14,7.7315 C14,7.203 13.768125,6.699875 13.35425,6.37175" id="Fill-56"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

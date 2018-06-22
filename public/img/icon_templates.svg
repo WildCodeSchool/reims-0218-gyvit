@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_templates</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Template-live-edit" transform="translate(-40.000000, -451.000000)" fill="#776CBA">
+            <g id="Sidebar">
+                <g id="Group-Copy-2" transform="translate(40.000000, 451.000000)">
+                    <g id="icon_templates">
+                        <polygon id="Fill-70" points="2.7071 4.8078 6.9501 0.5648 15.4351 9.0508 11.1921 13.2928"></polygon>
+                        <path d="M1.293,6.222 L0.586,6.929 C-0.195,7.71 -0.195,8.976 0.586,9.757 L2,11.172 L0.586,12.586 C-0.195,13.367 -0.195,14.633 0.586,15.414 C1.367,16.195 2.633,16.195 3.414,15.414 L4.828,14 L6.242,15.414 C7.023,16.195 8.289,16.195 9.07,15.414 L9.777,14.707 L1.293,6.222 Z" id="Fill-71"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
