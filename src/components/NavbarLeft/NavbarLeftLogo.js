@@ -15,7 +15,7 @@ const NavbarLeftLogo = () => {
         fontSize: "20px"
       }}
     >
-      <Col>GYVIT </Col>
+      <Col>GYVIT</Col>
     </div>
   )
 }
