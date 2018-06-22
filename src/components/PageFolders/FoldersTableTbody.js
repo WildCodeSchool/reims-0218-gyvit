@@ -57,9 +57,9 @@ const FoldersTableTbody = ({
             <td>
               {dir.shares &&
                 dir.shares.map((share, key) => (
-                  <i src="" alt={`icone Share n° ${key}`} />
+                  <img src="" alt={`icone Share n° ${key}`} />
                 ))}
-              <img
+              {/* <img
                 style={{
                   marginTop: "25px",
                   width: "30px",
@@ -78,7 +78,8 @@ const FoldersTableTbody = ({
               src="Assets/icon_dots_more.png"
               alt=""
             />
-            <td />
+            */}
+            </td>
           </tr>
         )
       })}

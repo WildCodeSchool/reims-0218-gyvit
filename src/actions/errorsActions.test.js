@@ -29,7 +29,8 @@ describe("action hide modal error", () => {
 
     const expected = {
       type: HIDE_MODAL_ERROR,
-      visibilityError: false
+      visibilityError: false,
+      message: ""
     }
 
     expect(makeHideModalError(response)).toEqual(expected)

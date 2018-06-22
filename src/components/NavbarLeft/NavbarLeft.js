@@ -3,7 +3,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import NavbarLeftItem from "./NavbarLeftItem"
-import { Nav, NavItem, Container, Row } from "reactstrap"
+import { Nav, NavItem, Row } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
 import links from "../../links"
 

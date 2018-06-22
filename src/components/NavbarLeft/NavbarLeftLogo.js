@@ -9,7 +9,7 @@ const NavbarLeftLogo = () => {
         color: "white",
         fontWeight: "bold",
         height: "90px",
-        "margin-bottom": "0px",
+        marginBottom: "0px",
         textAlign: "center",
         backgroundColor: "#181048",
         fontSize: "20px"

@@ -8,7 +8,7 @@ import {
 import filesReducer from "./filesReducer"
 
 describe("filesReducer", () => {
-  it("should change the state for listFiles action", () => {
+  it("should change the state for fetchfiles action", () => {
     const prevState = []
 
     const response = [

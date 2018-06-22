@@ -35,7 +35,7 @@ const DashboardListCards = ({ firstname }) => (
       </Col>
     </Row>
     <Row className="d-flex justify-content-around">
-      {elements.map(element => <DashboardCard {...element} />)}
+      {elements.map(element => <DashboardCard key={element.id} {...element} />)}
     </Row>
   </Container>
 )
