@@ -49,6 +49,8 @@ import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassword"
 import FoldersTable from "../components/PageFolders/FoldersTable"
 
+import RowDir from "../components/PageFolders/RowDir"
+
 /* const homeLinkProps = {
   nameLink: "Home",
   icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
@@ -215,8 +217,9 @@ const tableProps = {
     }
   ]
 }
+storiesOf("component RowDir", module).add("RowDir", () => <RowDir />)
 
-// make RowDir
+// créer un composant (fonction) RowDir => {_id, name, shares}
 // pass this prop
 const dir = {
   _id: "dir_DOl2kN3n9lMeedN90kL9",
@@ -239,8 +242,8 @@ const dir = {
 }
 
 // <RowDir {...dir} />
-// replace line 24 <tr>...</tr> by  <RowDir {...dir} />
 // PR
+// replace line 24 <tr>...</tr> by  <RowDir {...dir} />
 
 const file = {
   _id: "file_7F2jhzx5RlO8u5C1SP3c",
