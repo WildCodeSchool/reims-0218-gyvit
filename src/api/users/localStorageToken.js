@@ -17,3 +17,8 @@ export const getToken = () => localStorage.getItem("token")
  */
 
 export const removeToken = () => localStorage.removeItem("token")
+
+/**
+ * @returns token true or false for private routes
+ */
+export const hasToken = () => localStorage.getItem("token")
