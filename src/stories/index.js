@@ -50,6 +50,7 @@ import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassw
 import FoldersTable from "../components/PageFolders/FoldersTable"
 
 import RowDir from "../components/PageFolders/RowDir"
+import { Table } from "reactstrap"
 
 /* const homeLinkProps = {
   nameLink: "Home",
@@ -217,7 +218,14 @@ const tableProps = {
     }
   ]
 }
-storiesOf("component RowDir", module).add("RowDir", () => <RowDir />)
+storiesOf("component RowDir", module).add("RowDir", () => (
+  <Table>
+    <tbody>
+      {" "}
+      <RowDir {...dir} />
+    </tbody>
+  </Table>
+))
 
 // créer un composant (fonction) RowDir => {_id, name, shares}
 // pass this prop
