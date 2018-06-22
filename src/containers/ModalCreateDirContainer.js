@@ -12,8 +12,9 @@ import {
   Input
 } from "reactstrap"
 
+import { makeHideModalCreateDir } from "../actions/modalCreateDirAction"
 import { makeCreateDirSuccess } from "../actions/foldersActions"
-import { createDir } from "../api/CreateDir"
+import { createDir } from "../api/directorys/createDir"
 
 const mapStateToProps = state => {
   return {
@@ -28,24 +29,21 @@ const mapDispatchToProps = dispatch => ({
     createDir(name, this.props.currentDirInfo._id).then(response =>
       dispatch(makeCreateDirSuccess(response))
     )
-  }
+  },
+  onHideModal: () => dispatch(makeHideModalCreateDir())
 })
 
 class ModalCreateDirContainer extends Component {
   constructor(props) {
     super(props)
     this.state = { name: "" }
+  }
 
-    this.handleClick = this.handleChange.bind(this)
-  }
-  handleClick(event) {
-    this.setState({ name: event.target.value })
-  }
   render() {
     return (
       <div>
         <Modal isOpen={this.props.modalCreateDir}>
-          <ModalHeader toggle={() => this.props.onModalCreateDirToHide()}>
+          <ModalHeader toggle={() => this.props.onHideModal() /*cancel modal*/}>
             Add a directory
           </ModalHeader>
           <ModalBody>
