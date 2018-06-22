@@ -15,13 +15,14 @@ const NavbarLeft = ({ dataLinks = links }) => (
         expand="md"
         style={{
           width: "220px",
-          height: "1024px",
+          height: "100vw",
           backgroundColor: "#231b56",
           color: "white"
         }}
       >
         <NavbarLeftLogo />
         <NavItem
+          activeClassName="is-active"
           style={{ marginLeft: "30px", marginTop: "80px", fontSize: "16px" }}
           className="align-center"
         >
