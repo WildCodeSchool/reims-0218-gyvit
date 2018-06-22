@@ -25,16 +25,6 @@ const link = [
     link: "#"
   },
   {
-    nameLink: "Public links",
-    icon: process.env.PUBLIC_URL + "/img/icon_links.svg",
-    link: "#"
-  },
-  {
-    nameLink: "Contacts",
-    icon: process.env.PUBLIC_URL + "/img/icon_contact.svg",
-    link: "#"
-  },
-  {
     nameLink: "Settings",
     icon: process.env.PUBLIC_URL + "/img/icon_settings.svg",
     link: "#"
