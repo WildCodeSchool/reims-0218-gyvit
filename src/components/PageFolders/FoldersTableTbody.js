@@ -11,13 +11,13 @@ const FoldersTableTbody = ({
   files = [],
   dirs = [],
   onDirclick,
-  onBackclick,
+
   parent = {}
 }) => {
   return (
     <tbody>
       {parent._id && (
-        <button type="button" onClick={() => onBackclick(parent._id)}>
+        <button type="button" onClick={() => onDirclick(parent._id)}>
           {"..."}
         </button>
       )}
