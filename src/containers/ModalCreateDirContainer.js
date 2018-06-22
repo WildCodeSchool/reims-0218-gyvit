@@ -12,7 +12,7 @@ import {
   Input
 } from "reactstrap"
 
-import { makeHideModalCreateDir } from "../actions/modalCreateDirAction"
+import { makeCreateDirSuccess } from "../actions/foldersActions"
 import { createDir } from "../api/CreateDir"
 
 const mapStateToProps = state => {
@@ -24,9 +24,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   // function for cancelling
-  onModalCreateDirToHide: () => {
-    createDir(this.name, this.state.parent._id)
-    dispatch(makeHideModalCreateDir())
+  onCreateDir: name => {
+    createDir(name, this.props.currentDirInfo._id).then(response =>
+      dispatch(makeCreateDirSuccess(response))
+    )
   }
 })
 
@@ -48,7 +49,7 @@ class ModalCreateDirContainer extends Component {
             Add a directory
           </ModalHeader>
           <ModalBody>
-            <Form>
+            <Form name="formCreateDir">
               <FormGroup>
                 <Label for="name">Nom: </Label>
                 <Input
@@ -60,7 +61,11 @@ class ModalCreateDirContainer extends Component {
               </FormGroup>
               <Button
                 type="button"
-                onClick={() => this.props.onModalCreateDirToHide()}
+                onClick={() =>
+                  this.props.onCreateDir(
+                    document.forms["formCreateDir"].elements["name"]
+                  )
+                }
               >
                 Submit
               </Button>
