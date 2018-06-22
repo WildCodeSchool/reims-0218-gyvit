@@ -11,6 +11,7 @@ const NavbarTop = () => (
   <Container>
     <Row
       style={{
+        width: "1160px",
         height: "90px",
         backgroundColor: "#ffffff",
         border: "solid 1px #E5E8F4"

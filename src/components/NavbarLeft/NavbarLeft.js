@@ -9,27 +9,28 @@ import links from "../../links"
 
 const NavbarLeft = ({ dataLinks = links }) => (
   <div>
-    <Container>
-      <Row>
-        <Nav
-          vertical
-          expand="md"
-          style={{
-            width: "220px",
-            height: "1024px",
-            backgroundColor: "#231b56",
-            color: "white"
-          }}
+    <Row>
+      <Nav
+        vertical
+        expand="md"
+        style={{
+          width: "220px",
+          height: "1024px",
+          backgroundColor: "#231b56",
+          color: "white"
+        }}
+      >
+        <NavbarLeftLogo />
+        <NavItem
+          style={{ marginLeft: "30px", marginTop: "80px", fontSize: "16px" }}
+          className="align-center"
         >
-          <NavbarLeftLogo />
-          <NavItem className="text-center">
-            {dataLinks.map((link, index) => (
-              <NavbarLeftItem key={index} {...link} />
-            ))}
-          </NavItem>
-        </Nav>
-      </Row>
-    </Container>
+          {dataLinks.map((link, index) => (
+            <NavbarLeftItem key={index} {...link} />
+          ))}
+        </NavItem>
+      </Nav>
+    </Row>
   </div>
 )
 
