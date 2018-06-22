@@ -8,5 +8,5 @@ export const createDir = (name, destination) =>
       "Content-Type": "application/json",
       Authorization: `Bearer ${getToken()}`
     },
-    body: { name, destination }
+    body: JSON.stringify({ name, destination })
   }).then(res => res.json())
