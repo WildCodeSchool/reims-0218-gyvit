@@ -10,7 +10,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
   <tr key={_id}>
     <th>
       <img
-        onClick={() => onDirclick(_id)}
+        onClick={() => onDirclick(onDirclick)}
         style={{
           width: "30px",
           height: "29px",
@@ -48,7 +48,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
         }}
         className="rounded-circle"
         object
-        src=""
+        src="img/kevinMarlot.jpeg"
         alt="avatar"
       />
     </td>
