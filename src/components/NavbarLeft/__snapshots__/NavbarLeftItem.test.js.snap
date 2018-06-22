@@ -10,7 +10,7 @@ exports[`renders link html 1`] = `
     >
       <a
         className="nav-link"
-        href="#"
+        href={undefined}
         onClick={[Function]}
         style={
           Object {
@@ -26,6 +26,7 @@ exports[`renders link html 1`] = `
             Object {
               "opacity": 0.8,
               "paddingRight": 10,
+              "text": "center",
             }
           }
         />
