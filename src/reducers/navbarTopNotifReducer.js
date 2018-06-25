@@ -1,14 +1,19 @@
  //import   from
 
 
-const initialState = []
+const initialState = [{
+  id: "1",
+  message: "Coucou"
+},
+{
+  id: "2",
+  message:"Salut"
+}]
 
 const navbarTopNotifReducer = (prevState= initialState, action)=> {
-  if (action.type ===     ) {
-    return action.response
-  }
+ 
   return prevState
 
 }
-
+console.log((prevState))
 export default navbarTopNotifReducer
