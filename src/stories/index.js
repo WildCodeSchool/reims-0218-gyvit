@@ -292,7 +292,7 @@ const file = {
 
 // Button Dropdown
 // PR
-
+// Button Dropdown
 storiesOf("FolderTable", module).add("Table", () => (
   <FoldersTable {...tableProps} />
 ))

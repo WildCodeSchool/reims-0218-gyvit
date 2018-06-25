@@ -41,6 +41,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
     <td>
       {shares &&
         shares.map((share, key) => <Share {...share} key={share.id} />)}
+      {/* <Share /> */}
     </td>
     <img
       style={{
