@@ -23,6 +23,7 @@ const RowFile = ({ _id, name, modified, shares }) => (
       {name}
     </td>
     <td
+      className="align-middle"
       style={{
         width: "60%",
         height: "9%",
@@ -35,8 +36,7 @@ const RowFile = ({ _id, name, modified, shares }) => (
         lineHeight: "normal",
         letterSpacing: "normal",
         textAlign: "left",
-        color: "#a5a0c2",
-        verticalAlign: "middle"
+        color: "#a5a0c2"
       }}
     >
       {convertDateFromJsonToFrench(modified)}
