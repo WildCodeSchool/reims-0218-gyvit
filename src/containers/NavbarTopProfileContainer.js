@@ -9,6 +9,7 @@ import {
   DropdownItem,
   DropdownToggle
 } from "reactstrap"
+import { removeToken } from "../../src/api/users/localStorageToken"
 
 //map the props profile to the user branch of the state
 const mapStateToProps = state => {
@@ -32,6 +33,11 @@ class NavbarTopProfileContainer extends Component {
       dropdownOpen: !prevState.dropdownOpen
     }))
   }
+
+  onDeconnect() {
+    removeToken()
+  }
+
   render() {
     return (
       <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
