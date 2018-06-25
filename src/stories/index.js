@@ -52,6 +52,9 @@ import FoldersTable from "../components/PageFolders/FoldersTable"
 import RowDir from "../components/PageFolders/RowDir"
 import RowFile from "../components/PageFolders/RowFile"
 import { Table } from "reactstrap"
+//import NotifReducer from "../reducers/NotifReducer";
+import NotifContainer from "../containers/NotifContainer"
+
 
 /* const homeLinkProps = {
   nameLink: "Home",
@@ -172,6 +175,8 @@ storiesOf("Redux", module)
   .add("PageSignIn", () => <PageSignIn />)
   .add("Page GetStarted", () => <PageGetStarted />)
   .add("Page ForgotPassword", () => <PageForgotPassword />)
+  .add("Notif", () => <NotifContainer/>)
+
 
 const tableProps = {
   dirs: [
@@ -280,7 +285,6 @@ const file = {
     modified: "2018-03-30T12:11:15+00:00"
   }
 }
-
 // make RowFile
 
 // <RowFile {...file} />
@@ -296,3 +300,7 @@ const file = {
 storiesOf("FolderTable", module).add("Table", () => (
   <FoldersTable {...tableProps} />
 ))
+
+
+
+

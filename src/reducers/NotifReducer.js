@@ -10,10 +10,9 @@ const initialState = [{
 
 //console.log(initialState)
 
-const NotifReducer = (prevState= initialState, action)=> {
- 
+const NotifReducer = (prevState = initialState, action)=> {
+
   return prevState
 }
-
 
 export default NotifReducer
