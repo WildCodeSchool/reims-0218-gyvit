@@ -37,7 +37,14 @@ class ModalCreateDirContainer extends Component {
   constructor(props) {
     super(props)
     this.state = { name: "" }
-    //  props.onCreateDir = props.onCreateDir.bind(this)
+    // this.props.onCreateDir = this.props.onCreateDir.bind(this)
+  }
+
+  handleClick(event) {
+    this.setState({ name: event.target.form[0].attributes.value })
+    this.props
+      .onCreateDir(this.state.name)
+      .then(response => this.props.onHideModal()) // after creating dir, i hide the modal
   }
 
   render() {
@@ -58,15 +65,7 @@ class ModalCreateDirContainer extends Component {
                   placeholder="Enter the name of the new Directory"
                 />
               </FormGroup>
-              <Button
-                type="button"
-                onClick={() =>
-                  this.props.onCreateDir(
-                    document.forms["formCreateDir"].elements["name"],
-                    this.props.destination
-                  )
-                }
-              >
+              <Button type="button" onClick={event => this.handleClick(event)}>
                 Submit
               </Button>
             </Form>
