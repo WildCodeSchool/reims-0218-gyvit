@@ -8,20 +8,21 @@ import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContaine
 import SearchContainer from "../../containers/SearchContainer"
 
 const NavbarTop = () => (
-  <Container>
+  <Container fluid>
     <Row
       style={{
-        width: "1160px",
         height: "90px",
         backgroundColor: "#ffffff",
         border: "solid 1px #E5E8F4"
       }}
     >
-      <Col xs="7">
+      <Col xs="10">
         <SearchContainer />
       </Col>
-      <NavbarTopNotif />
-      <Col xs="3">
+      <Col xs="1">
+        <NavbarTopNotif />
+      </Col>
+      <Col xs="1">
         <NavbarTopProfileContainer />
       </Col>
     </Row>
