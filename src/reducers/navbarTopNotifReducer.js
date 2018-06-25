@@ -1,4 +1,4 @@
- //import   from
+ //import   from  "../actions/userAction"
 
 
 const initialState = [{
@@ -13,7 +13,7 @@ const initialState = [{
 const navbarTopNotifReducer = (prevState= initialState, action)=> {
  
   return prevState
-
 }
-console.log((prevState))
+console.log(this.prevState)
+
 export default navbarTopNotifReducer
