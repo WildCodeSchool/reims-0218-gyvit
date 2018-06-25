@@ -8,7 +8,6 @@ const convertDateFromJsonToFrench = dateToTransform =>
 
 const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
   <tr key={_id}>
-    <th />
     <th>
       <img
         onClick={() => onDirclick(_id)}
@@ -30,7 +29,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
         height: "14px",
         fontFamily: "DepotNew",
         fontSize: "14px",
-        marginTop: "28px",
+        marginTop: "50px",
         marginBottom: "28px",
         textAlign: "center",
         color: "#a5a0c2"
@@ -49,7 +48,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
         }}
         className="rounded-circle"
         object
-        src=""
+        src="img/kevinMarlot.jpeg"
         alt="avatar"
       />
     </td>
@@ -58,9 +57,8 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
         marginTop: "33px"
       }}
       src="Assets/icon_dots_more.png"
-      alt=""
+      alt="Button Dropdown"
     />
-    <td />
   </tr>
 )
 
