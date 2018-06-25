@@ -1,6 +1,6 @@
 import React from "react"
 import { DateTime } from "luxon"
-import ShareInDir from "./ShareInDir"
+import Share from "./Share"
 
 const convertDateFromJsonToFrench = dateToTransform =>
   DateTime.fromMillis(Date.parse(dateToTransform))
@@ -38,7 +38,10 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
     >
       {convertDateFromJsonToFrench(modified)}
     </td>
-    <ShareInDir />
+    <td>
+      {shares &&
+        shares.map((share, key) => <Share {...share} key={share.id} />)}
+    </td>
     <img
       style={{
         marginTop: "33px"
