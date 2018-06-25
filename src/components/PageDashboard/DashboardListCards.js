@@ -7,8 +7,8 @@ import { elements } from "../../links/elements"
 
 const DashboardListCards = ({ mail, firstname }) => (
   <Container fluid>
-    <Row className="App ">
-      <Col md="12" sm="4">
+    <Row>
+      <Col md="12">
         <p
           style={{
             fontSize: "24px",

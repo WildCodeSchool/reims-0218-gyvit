@@ -19,7 +19,7 @@ const mapStateToProps = state => ({
 const PageDashboard = () => (
   <Container fluid>
     <Row>
-      <Col xs="2">
+      <Col>
         <NavbarLeft />
       </Col>
       <Col xs="10">

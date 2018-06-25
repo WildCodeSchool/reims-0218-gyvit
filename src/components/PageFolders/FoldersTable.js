@@ -13,17 +13,17 @@ const FoldersTable = ({
 }) => (
   <div>
     <Container>
-      <Table>
+      <Table borderless striped>
         <thead>
           <tr>
             <th>
-              <FoldersTableCategory name="Name" direction={null} />
+              <FoldersTableCategory name="Name  " direction={null} />
             </th>
             <th>
-              <FoldersTableCategory name="Last update" direction={null} />
+              <FoldersTableCategory name="Last update  " direction={null} />
             </th>
             <th>
-              <FoldersTableCategory name="Users" direction={"asc"} />
+              <FoldersTableCategory name="Users  " direction={"asc"} />
             </th>
             <th />
           </tr>
