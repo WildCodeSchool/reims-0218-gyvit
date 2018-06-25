@@ -1,25 +1,9 @@
 import React from "react"
 
-// const share = ({ key, mail }) => (
-//   <div>
-//     <i src="" alt={mail} key={key} />
-//     <img
-//       style={{
-//         marginTop: "25px",
-//         width: "30px",
-//         height: "30px"
-//       }}
-//       className="rounded-circle"
-//       object
-//       src="img/kevinMarlot.jpeg"
-//       alt="avatar"
-//     />
-//   </div>
-// )
-const share = ({ key }) => (
+const share = ({ _id, account }) => (
   <img
-    src=""
-    alt={`icone Share n° ${key}`}
+    src={account.pic}
+    alt={`icone Share n° ${_id}`}
     style={{
       marginTop: "25px",
       width: "30px",
