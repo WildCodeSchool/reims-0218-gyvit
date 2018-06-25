@@ -1,5 +1,5 @@
 import React from "react"
-import { Table } from "reactstrap"
+import { Table, Container } from "reactstrap"
 import PropTypes from "prop-types"
 import FoldersTableTbody from "./FoldersTableTbody"
 import FoldersTableCategory from "./FoldersTableCategory"
@@ -12,30 +12,31 @@ const FoldersTable = ({
   onBackclick
 }) => (
   <div>
-    <Table>
-      <thead>
-        <tr>
-          <th />
-          <th>
-            <FoldersTableCategory name="Name" direction={null} />
-          </th>
-          <th>
-            <FoldersTableCategory name="Last update" direction={null} />
-          </th>
-          <th>
-            <FoldersTableCategory name="Users" direction={"asc"} />
-          </th>
-          <th />
-        </tr>
-      </thead>
-      <FoldersTableTbody
-        onDirclick={onDirclick}
-        onBackclick={onBackclick}
-        files={files}
-        parent={parent}
-        dirs={dirs}
-      />
-    </Table>
+    <Container>
+      <Table>
+        <thead>
+          <tr>
+            <th>
+              <FoldersTableCategory name="Name" direction={null} />
+            </th>
+            <th>
+              <FoldersTableCategory name="Last update" direction={null} />
+            </th>
+            <th>
+              <FoldersTableCategory name="Users" direction={"asc"} />
+            </th>
+            <th />
+          </tr>
+        </thead>
+        <FoldersTableTbody
+          onDirclick={onDirclick}
+          onBackclick={onBackclick}
+          files={files}
+          parent={parent}
+          dirs={dirs}
+        />
+      </Table>
+    </Container>
   </div>
 )
 

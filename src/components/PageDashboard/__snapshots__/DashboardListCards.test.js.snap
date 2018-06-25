@@ -15,19 +15,14 @@ exports[`renders link html 1`] = `
           Object {
             "fontSize": "24px",
             "height": "33px",
-            "marginTop": "120px",
+            "marginTop": "20%",
             "textAlign": "center",
           }
         }
       >
         Welcome to Gyvit, 
-        Kevin
         .
       </p>
-    </div>
-    <div
-      className="col-sm-12 col-md-4 offset-md-3"
-    >
       <p
         style={
           Object {
@@ -45,7 +40,7 @@ exports[`renders link html 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="d-flex justify-content-around row"
   >
     <div>
       <div
@@ -67,14 +62,14 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src=""
+              src="/img/request_document.png"
               style={
                 Object {
                   "height": "120px",
                   "marginLeft": "72px",
                   "marginRight": "64.8px",
                   "marginTop": "31px",
-                  "width": "151.2px",
+                  "width": "151px",
                 }
               }
             />
@@ -168,14 +163,14 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src=""
+              src="/img/document_share.png"
               style={
                 Object {
                   "height": "120px",
                   "marginLeft": "72px",
                   "marginRight": "64.8px",
                   "marginTop": "31px",
-                  "width": "151.2px",
+                  "width": "151px",
                 }
               }
             />
@@ -269,14 +264,14 @@ exports[`renders link html 1`] = `
             <img
               alt="folder"
               className="card-img"
-              src=""
+              src="/img/files_store.png"
               style={
                 Object {
                   "height": "120px",
                   "marginLeft": "72px",
                   "marginRight": "64.8px",
                   "marginTop": "31px",
-                  "width": "151.2px",
+                  "width": "151px",
                 }
               }
             />

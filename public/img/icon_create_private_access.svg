@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="14px" viewBox="0 0 13 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_create_private_access</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Folders" transform="translate(-1290.000000, -391.000000)" fill="#181048">
+            <g id="Group-5" transform="translate(1269.000000, 300.000000)">
+                <g id="Group-18" transform="translate(21.000000, 90.000000)">
+                    <path d="M7.875,5.375 L4.375,5.375 L4.375,4.5 C4.375,3.5375 5.1625,2.75 6.125,2.75 C7.0875,2.75 7.875,3.5375 7.875,4.5 L7.875,5.375 Z M7,11.2375 L7,12.375 L5.25,12.375 L5.25,11.2375 C4.725,10.975 4.375,10.3625 4.375,9.75 C4.375,8.7875 5.1625,8 6.125,8 C7.0875,8 7.875,8.7875 7.875,9.75 C7.875,10.3625 7.525,10.975 7,11.2375 L7,11.2375 Z M6.125,1 C4.2,1 2.625,2.575 2.625,4.5 L2.625,5.375 L0.875,5.375 C0.35,5.375 0,5.725 0,6.25 L0,14.125 C0,14.65 0.35,15 0.875,15 L11.375,15 C11.9,15 12.25,14.65 12.25,14.125 L12.25,6.25 C12.25,5.725 11.9,5.375 11.375,5.375 L9.625,5.375 L9.625,4.5 C9.625,2.575 8.05,1 6.125,1 L6.125,1 Z" id="icon_create_private_access"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

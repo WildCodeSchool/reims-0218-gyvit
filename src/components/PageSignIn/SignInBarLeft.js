@@ -7,10 +7,9 @@ import SignInFormContainer from "../../containers/SignInFormContainer"
 const PageSignIn = () => (
   <Container
     style={{
-      paddingTop: "290px",
+      paddingTop: "20%",
       marginLeft: "10%",
-      backgroundColor: "#ffffff",
-      marginRight: "50px"
+      backgroundColor: "#ffffff"
     }}
   >
     <SignInTitle />

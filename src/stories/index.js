@@ -47,6 +47,11 @@ import PageDashboardCards from "../components/PageDashboard/PageDashboardCards"
 import PageSignIn from "../components/PageSignIn/PageSignIn"
 import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageForgotPassword from "../components/PageForgotPassword/PageForgotPassword"
+import FoldersTable from "../components/PageFolders/FoldersTable"
+
+import RowDir from "../components/PageFolders/RowDir"
+import RowFile from "../components/PageFolders/RowFile"
+import { Table } from "reactstrap"
 
 /* const homeLinkProps = {
   nameLink: "Home",
@@ -167,3 +172,127 @@ storiesOf("Redux", module)
   .add("PageSignIn", () => <PageSignIn />)
   .add("Page GetStarted", () => <PageGetStarted />)
   .add("Page ForgotPassword", () => <PageForgotPassword />)
+
+const tableProps = {
+  dirs: [
+    {
+      _id: "dir_DOl2kN3n9lMeedN90kL9",
+      object: "directory",
+      name: "SammTrading",
+      created: "2018-03-29T00:00:00+00:00",
+      modified: "2018-03-29T00:00:00+00:00",
+      shares: [],
+      files: [],
+      dirs: [
+        {
+          _id: "dir_EoeInRgUgzMPh0aLN2nz",
+          object: "directory",
+          name: "Webshop",
+          created: "2018-03-29T11:36:42+00:00",
+          modified: "2018-03-29T11:36:42+00:00",
+          shares: []
+        }
+      ]
+    }
+  ],
+
+  files: [
+    {
+      _id: "file_7F2jhzx5RlO8u5C1SP3c",
+      object: "file",
+      name: "TEST FOR POST",
+      size: 0,
+      ext: "",
+      type: "",
+      remove: 0,
+      created: "2018-04-22T08:34:26+00:00",
+      modified: "2018-04-22T08:34:26+00:00",
+      removed: null,
+      shares: [],
+      dir: {
+        _id: "dir_r4V13RVeHFFVvOLctpPe",
+        object: "directory",
+        name: "Sketchs & Photoshops",
+        created: "2018-03-30T11:53:23+00:00",
+        modified: "2018-03-30T12:11:15+00:00"
+      }
+    }
+  ]
+}
+storiesOf("component RowDir", module).add("RowDir", () => (
+  <Table>
+    <tbody>
+      <RowDir {...dir} />
+    </tbody>
+  </Table>
+))
+
+// créer un composant (fonction) RowDir => {_id, name, shares}
+// pass this prop
+const dir = {
+  _id: "dir_DOl2kN3n9lMeedN90kL9",
+  object: "directory",
+  name: "SammTrading",
+  created: "2018-03-29T00:00:00+00:00",
+  modified: "2018-03-29T00:00:00+00:00",
+  shares: [],
+  files: [],
+  dirs: [
+    {
+      _id: "dir_EoeInRgUgzMPh0aLN2nz",
+      object: "directory",
+      name: "Webshop",
+      created: "2018-03-29T11:36:42+00:00",
+      modified: "2018-03-29T11:36:42+00:00",
+      shares: []
+    }
+  ]
+}
+
+storiesOf("component RowFile", module).add("RowFile", () => (
+  <Table>
+    <tbody>
+      <RowFile {...file} />
+    </tbody>
+  </Table>
+))
+// <RowDir {...dir} />
+// PR
+// replace line 24 <tr>...</tr> by  <RowDir {...dir} />
+
+const file = {
+  _id: "file_7F2jhzx5RlO8u5C1SP3c",
+  object: "file",
+  name: "TEST FOR POST",
+  size: 0,
+  ext: "",
+  type: "",
+  remove: 0,
+  created: "2018-04-22T08:34:26+00:00",
+  modified: "2018-04-22T08:34:26+00:00",
+  removed: null,
+  shares: [],
+  dir: {
+    _id: "dir_r4V13RVeHFFVvOLctpPe",
+    object: "directory",
+    name: "Sketchs & Photoshops",
+    created: "2018-03-30T11:53:23+00:00",
+    modified: "2018-03-30T12:11:15+00:00"
+  }
+}
+
+// make RowFile
+
+// <RowFile {...file} />
+// replace line 85 <tr>...</tr> by  <RowFile {...file} />
+// PR
+
+// FIX CSS
+//PR
+
+// Button Dropdown
+// PR
+
+storiesOf("FolderTable", module).add("Table", () => (
+  <FoldersTable {...tableProps} />
+))

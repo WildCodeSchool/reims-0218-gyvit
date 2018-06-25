@@ -8,7 +8,7 @@ import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContaine
 import SearchContainer from "../../containers/SearchContainer"
 
 const NavbarTop = () => (
-  <Container>
+  <Container fluid>
     <Row
       style={{
         height: "90px",
@@ -16,11 +16,13 @@ const NavbarTop = () => (
         border: "solid 1px #E5E8F4"
       }}
     >
-      <Col xs="7">
+      <Col xs="10">
         <SearchContainer />
       </Col>
-      <NavbarTopNotif />
-      <Col xs="3">
+      <Col xs="1">
+        <NavbarTopNotif />
+      </Col>
+      <Col xs="1">
         <NavbarTopProfileContainer />
       </Col>
     </Row>

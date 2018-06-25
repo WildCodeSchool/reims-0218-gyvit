@@ -31,9 +31,9 @@ export const makeReplaceFolder = response => ({
   response
 })
 
-export const makeDeleteAFolderSuccess = folderId => ({
+export const makeDeleteAFolderSuccess = dirId => ({
   type: DELETE_A_FOLDER_SUCCESS,
-  folderId
+  dirId
 })
 
 export const makeListAllDirs = response => ({

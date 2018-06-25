@@ -24,7 +24,6 @@ const FoldersTableTbody = ({
       {dirs.map(dir => {
         return (
           <tr key={dir._id}>
-            <th />
             <th>
               <img
                 onClick={() => onDirclick(dir._id)}
@@ -118,9 +117,10 @@ const FoldersTableTbody = ({
               {convertDateFromJsonToFrench(file.modified)}
             </td>
             <td>
-              {file.shares.map((share, key) => (
-                <img src="" alt={`icone Share n° ${key}`} />
-              ))}
+              {file.shares &&
+                file.shares.map((share, key) => (
+                  <img src="" alt={`icone Share n° ${key}`} />
+                ))}
             </td>
           </tr>
         )

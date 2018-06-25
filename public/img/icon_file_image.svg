@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="34px" viewBox="0 0 28 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_file_image</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Folders" transform="translate(-437.000000, -693.000000)">
+            <g id="1-copy-6" transform="translate(220.000000, 674.000000)">
+                <g id="icon_file_image" transform="translate(218.000000, 20.000000)">
+                    <path d="M24.7272727,32 L1.45454545,32 C0.651222255,32 0,31.3487771 0,30.5454545 L0,1.45454545 C0,0.651222255 0.651222255,0 1.45454545,0 L17.4545552,0 L26.1818182,8.72727273 L26.1818182,30.5454545 C26.1818182,31.3487771 25.5305953,32 24.7272727,32 Z" id="Shape" stroke="#E5E8F4"></path>
+                    <polyline id="Shape" stroke="#E5E8F4" points="17.4545455 0.727272727 17.4545455 8.72727273 26.1818182 8.72727273"></polyline>
+                    <polygon id="Shape" stroke="#909DAA" points="20.3636364 24.7272727 4.36363636 24.7272727 8.72727273 17.4545455 13.0909091 22.5454545 16.7272727 19.6363636"></polygon>
+                    <circle id="Oval" stroke="#909DAA" cx="9.09090909" cy="11.2727273" r="2.54545455"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

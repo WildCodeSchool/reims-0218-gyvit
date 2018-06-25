@@ -3,9 +3,9 @@ import { combineReducers } from "redux"
 import userReducer from "./userReducer"
 import foldersReducer from "./foldersReducer"
 import filesReducer from "./filesReducer"
-import currentDirInfosReducer from "./currentDirInfosReducer"
 import parentReducer from "./parentReducer"
 import errorsReducer from "./errorsReducer"
+import currentDirReducer from "./currentDirReducer"
 import modalCreateDirReducer from "./modalCreateDirReducer"
 
 export default combineReducers({
@@ -13,7 +13,7 @@ export default combineReducers({
   dirs: foldersReducer,
   files: filesReducer,
   user: userReducer,
-  currentDirInfo: currentDirInfosReducer,
   parent: parentReducer,
+  currentDir: currentDirReducer,
   modalCreateDir: modalCreateDirReducer
 })

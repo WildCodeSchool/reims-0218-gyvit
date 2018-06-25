@@ -10,6 +10,7 @@ import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageForgetPassword from "../components/PageForgotPassword/PageForgotPassword"
 import PageDashboard from "../components/PageDashboard/PageDashboard"
 import { hasToken } from "../api/users/localStorageToken"
+import ModalErrorContainer from "../containers/ModalCreateDirContainer"
 import App from "../App"
 
 //function test token true or false for protect routes
@@ -34,7 +35,7 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
       <div>
-        <Route path="/" component={App} />
+        <PrivateRoute path="/" exact component={PageDashboard} />
         <Route path="/sign-in" component={PageSignIn} />
         <Route path="/sign-up" component={PageSignIn} />{" "}
         {/* TODO: PAGE SIGN UP */}
