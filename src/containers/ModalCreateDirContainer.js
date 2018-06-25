@@ -24,12 +24,12 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  // function for cancelling
   onCreateDir: name => {
-    createDir(name, this.props.currentDirInfo._id).then(response =>
+    createDir(name, this.state.currentDirInfo._id).then(response =>
       dispatch(makeCreateDirSuccess(response))
     )
   },
+  // function for cancelling
   onHideModal: () => dispatch(makeHideModalCreateDir())
 })
 
@@ -37,6 +37,7 @@ class ModalCreateDirContainer extends Component {
   constructor(props) {
     super(props)
     this.state = { name: "" }
+    //  props.onCreateDir = props.onCreateDir.bind(this)
   }
 
   render() {
@@ -61,7 +62,8 @@ class ModalCreateDirContainer extends Component {
                 type="button"
                 onClick={() =>
                   this.props.onCreateDir(
-                    document.forms["formCreateDir"].elements["name"]
+                    document.forms["formCreateDir"].elements["name"],
+                    this.props.destination
                   )
                 }
               >
