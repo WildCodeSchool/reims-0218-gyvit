@@ -23,11 +23,13 @@ const RowFile = ({ _id, name, modified, shares }) => (
       {name}
     </td>
     <td
+      className="align-middle"
       style={{
-        width: "104px",
-        height: "14px",
+        width: "60%",
+        height: "9%",
         fontFamily: "DepotNew",
         fontSize: "14px",
+        marginTop: "14%",
         fontWeight: "normal",
         fontStyle: "normal",
         fontStretch: "normal",

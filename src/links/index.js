@@ -1,34 +1,33 @@
-const link = [
+export const link = [
   {
-    nameLink: "Home",
+    nameLink: " Home",
     icon: process.env.PUBLIC_URL + "/img/icon_home.svg",
     link: "/dashboard"
   },
   {
-    nameLink: "Files",
+    nameLink: " Files",
     icon: process.env.PUBLIC_URL + "/img/icon_files.svg",
     link: "/dirs"
   },
   {
-    nameLink: "Shares",
+    nameLink: " Shares",
     icon: process.env.PUBLIC_URL + "/img/icon_shares.svg",
     link: "/dirs"
   },
   {
-    nameLink: "Templates",
+    nameLink: " Templates",
     icon: process.env.PUBLIC_URL + "/img/icon_templates.svg",
     link: "#"
   },
   {
-    nameLink: "Requests",
+    nameLink: " Requests",
     icon: process.env.PUBLIC_URL + "/img/icon_requests.svg",
-    link: "#"
-  },
-  {
-    nameLink: "Settings",
-    icon: process.env.PUBLIC_URL + "/img/icon_settings.svg",
     link: "#"
   }
 ]
 
-export default link
+export const settings = {
+  nameLink: " Settings",
+  icon: process.env.PUBLIC_URL + "/img/icon_settings.svg",
+  link: "#"
+}

@@ -9,7 +9,7 @@ const convertDateFromJsonToFrench = dateToTransform =>
 
 const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
   <tr key={_id}>
-    <th>
+    <th style={{ width: "40%" }}>
       <img
         onClick={() => onDirclick(_id)}
         style={{
@@ -25,20 +25,25 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
       {name}
     </th>
     <td
+      className="align-middle"
       style={{
-        width: "170px",
-        height: "14px",
+        width: "45%",
+        height: "9%",
         fontFamily: "DepotNew",
         fontSize: "14px",
-        marginTop: "50px",
-        marginBottom: "28px",
-        textAlign: "center",
+        marginTop: "14%",
+        fontWeight: "normal",
+        fontStyle: "normal",
+        fontStretch: "normal",
+        lineHeight: "normal",
+        letterSpacing: "normal",
+        textAlign: "left",
         color: "#a5a0c2"
       }}
     >
       {convertDateFromJsonToFrench(modified)}
     </td>
-    <td>
+    <td className="align-middle">
       {shares &&
         shares.map((share, key) => <Share {...share} key={share._id} />)}
     </td>
