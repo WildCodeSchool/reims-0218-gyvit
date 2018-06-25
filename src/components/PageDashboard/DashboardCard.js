@@ -19,8 +19,7 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
           <Card
             style={{
               width: "288px",
-              height: "423px",
-              marginRight: "32px"
+              height: "423px"
             }}
           >
             <CardImg
