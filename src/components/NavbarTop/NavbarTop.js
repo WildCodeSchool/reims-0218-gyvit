@@ -16,13 +16,13 @@ const NavbarTop = () => (
         border: "solid 1px #E5E8F4"
       }}
     >
-      <Col xs="10">
+      <Col xs="9">
         <SearchContainer />
       </Col>
       <Col xs="1">
         <NavbarTopNotif />
       </Col>
-      <Col xs="1">
+      <Col xs="2">
         <NavbarTopProfileContainer />
       </Col>
     </Row>
