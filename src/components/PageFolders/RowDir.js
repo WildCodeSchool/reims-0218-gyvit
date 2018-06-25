@@ -1,5 +1,6 @@
 import React from "react"
 import { DateTime } from "luxon"
+import ShareInDir from "./ShareInDir"
 
 const convertDateFromJsonToFrench = dateToTransform =>
   DateTime.fromMillis(Date.parse(dateToTransform))
@@ -37,21 +38,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
     >
       {convertDateFromJsonToFrench(modified)}
     </td>
-    <td>
-      {shares &&
-        shares.map((share, key) => <i src="" alt={`icone Share n° ${key}`} />)}
-      <img
-        style={{
-          marginTop: "25px",
-          width: "30px",
-          height: "30px"
-        }}
-        className="rounded-circle"
-        object
-        src="img/kevinMarlot.jpeg"
-        alt="avatar"
-      />
-    </td>
+    <ShareInDir />
     <img
       style={{
         marginTop: "33px"
