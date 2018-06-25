@@ -13,7 +13,7 @@ const FoldersTable = ({
 }) => (
   <div>
     <Container>
-      <Table>
+      <Table borderless striped>
         <thead>
           <tr>
             <th>
