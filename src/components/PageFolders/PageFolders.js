@@ -1,10 +1,10 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
-import FoldersBarTop from "./FoldersBarTop"
 import NavbarTop from "../NavbarTop/NavbarTop"
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
 
 import FoldersTableContainer from "../../containers/FoldersTableContainer"
+import FoldersBarTopContainer from "../../containers/FoldersBarTopContainer"
 
 const PageFolders = () => (
   <Container fluid>
@@ -12,7 +12,7 @@ const PageFolders = () => (
       <NavbarLeft />
       <Col md="10">
         <NavbarTop />
-        <FoldersBarTop />
+        <FoldersBarTopContainer />
         <FoldersTableContainer />
       </Col>
     </Row>

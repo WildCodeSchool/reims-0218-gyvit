@@ -18,14 +18,14 @@ import { createDir } from "../api/directorys/createDir"
 
 const mapStateToProps = state => {
   return {
-    destination: state.parent._id,
+    destination: state.currentDir._id,
     modalCreateDir: state.modalCreateDir.visibilityCreateDir
   }
 }
 
 const mapDispatchToProps = dispatch => ({
   onCreateDir: name => {
-    createDir(name, this.state.currentDirInfo._id).then(response =>
+    createDir(name, this.state.currentDir._id).then(response =>
       dispatch(makeCreateDirSuccess(response))
     )
   },
