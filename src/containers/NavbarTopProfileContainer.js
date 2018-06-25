@@ -10,6 +10,7 @@ import {
   DropdownToggle
 } from "reactstrap"
 import { removeToken } from "../../src/api/users/localStorageToken"
+import { disconnectUserSuccessAction } from "../actions/userAction"
 
 //map the props profile to the user branch of the state
 const mapStateToProps = state => {
@@ -17,6 +18,11 @@ const mapStateToProps = state => {
     profile: state.user
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  onDisconnectedUser: response =>
+    dispatch(disconnectUserSuccessAction(response))
+})
 
 class NavbarTopProfileContainer extends Component {
   constructor(props) {
@@ -32,10 +38,6 @@ class NavbarTopProfileContainer extends Component {
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
     }))
-  }
-
-  onDeconnect() {
-    removeToken()
   }
 
   render() {
@@ -81,7 +83,6 @@ class NavbarTopProfileContainer extends Component {
                   <Media
                     style={{
                       color: "#372c78",
-
                       fontSize: "14px"
                     }}
                   >
@@ -94,16 +95,30 @@ class NavbarTopProfileContainer extends Component {
         </DropdownToggle>
         <DropdownMenu
           style={{
-            width: "80%",
+            width: "90%",
             padding: "auto",
             fontSize: "14px"
           }}
         >
-          <DropdownItem>Déconnexion</DropdownItem>
+          <DropdownItem>
+            <a
+              href="/"
+              outline
+              color="primary"
+              size="xs"
+              onClick={() =>
+                removeToken().then(() => this.props.onDisconnectedUser())
+              }
+            >
+              Déconnexion
+            </a>
+          </DropdownItem>
         </DropdownMenu>
       </Dropdown>
     )
   }
 }
 
-export default connect(mapStateToProps)(NavbarTopProfileContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  NavbarTopProfileContainer
+)
