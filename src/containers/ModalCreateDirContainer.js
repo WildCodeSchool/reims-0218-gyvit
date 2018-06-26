@@ -24,12 +24,9 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onCreateDir: name => {
-    createDir(name, this.state.currentDir._id).then(response =>
-      dispatch(makeCreateDirSuccess(response))
-    )
-  },
-  // function for cancelling
+  // function to store the new dir
+  onSubmitCreateDir: response => dispatch(makeCreateDirSuccess(response)),
+  // function for cancelling modal
   onHideModal: () => dispatch(makeHideModalCreateDir())
 })
 
@@ -37,14 +34,19 @@ class ModalCreateDirContainer extends Component {
   constructor(props) {
     super(props)
     this.state = { name: "" }
-    // this.props.onCreateDir = this.props.onCreateDir.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.onCreateDir = this.onCreateDir.bind(this)
   }
 
-  handleClick(event) {
-    this.setState({ name: event.target.form[0].attributes.value })
-    this.props
-      .onCreateDir(this.state.name)
-      .then(response => this.props.onHideModal()) // after creating dir, i hide the modal
+  handleChange(event) {
+    this.setState({ name: event.target.value })
+  }
+
+  onCreateDir(name) {
+    console.log(this.state)
+    createDir(name, this.props.destination).then(response =>
+      this.props.onSubmitCreateDir(response)
+    )
   }
 
   render() {
@@ -63,9 +65,13 @@ class ModalCreateDirContainer extends Component {
                   name="name"
                   id="name"
                   placeholder="Enter the name of the new Directory"
+                  onChange={event => this.handleChange(event)} // controlled seizure of input for new name
                 />
               </FormGroup>
-              <Button type="button" onClick={event => this.handleClick(event)}>
+              <Button
+                type="button"
+                onClick={() => this.onCreateDir(this.state.name)}
+              >
                 Submit
               </Button>
             </Form>
