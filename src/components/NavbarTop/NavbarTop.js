@@ -2,8 +2,7 @@
 
 import React from "react"
 import { Row, Col, Container } from "reactstrap"
-// import PropTypes from "prop-types"
-import NavbarTopNotif from "./NavbarTopNotif"
+
 import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContainer"
 import SearchContainer from "../../containers/SearchContainer"
 import NotifContainer from "../../containers/NotifContainer"
