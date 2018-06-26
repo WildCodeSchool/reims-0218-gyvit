@@ -12,6 +12,8 @@ import {
   Container
 } from "reactstrap"
 import ModalCreateDirContainer from "../../containers/ModalCreateDirContainer"
+import DragNDropContainers from "../../containers/DragNDropContainers"
+
 
 const FoldersBarTop = () => {
   return (
@@ -28,8 +30,11 @@ const FoldersBarTop = () => {
             <NavbarBrand>Folders</NavbarBrand>
             <NavbarToggler />
             <Collapse navbar>
+            <DragNDropContainers/>
               <Nav className="ml-auto" navbar>
                 <NavItem>
+                
+
                   <Button
                     style={{
                       borderRadius: "50%",
