@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="13px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_share</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Folders" transform="translate(-1289.000000, -321.000000)" fill="#181048">
+            <g id="Group-5" transform="translate(1269.000000, 300.000000)">
+                <g id="Group-21" transform="translate(20.000000, 20.000000)">
+                    <path d="M7,4.5 C2.45,4.5 0,7.825 0,13.25 C1.3125,11.15 2.3625,9.75 7,9.75 L7,13.25 L14,7.125 L7,1 L7,4.5 Z" id="icon_share"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
