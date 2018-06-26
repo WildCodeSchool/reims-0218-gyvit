@@ -208,9 +208,9 @@ const tableProps = {
           account: {
             _id: "acct_I3o9e2Ju78lKeN9eMdLN",
             object: "account",
-            mail: "kevin@meduza-studio.com",
-            lastname: "Marlot",
-            firstname: "kevin",
+            mail: "romain@meduza-studio.com",
+            lastname: "romain",
+            firstname: "duflot",
             role: "user",
             active: 1,
             created: "2018-03-29T00:00:00+00:00",
