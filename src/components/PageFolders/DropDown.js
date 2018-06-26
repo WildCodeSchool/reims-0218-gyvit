@@ -25,7 +25,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle>
+        <DropdownToggle color="white">
           <img
             style={{
               marginTop: "33px"
@@ -33,25 +33,99 @@ export default class Example extends React.Component {
             src="Assets/icon_dots_more.png"
             alt="Button Dropdown"
           />
-          {/* <i className="Assets/icon_dots_more.png" /> */}
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem img="Assets/icon_shares.png">Share</DropdownItem>
-          <DropdownItem tag="a" href="/sign-in">
-            Create public access
-          </DropdownItem>
-          <DropdownItem icon="Assets/icon_shares.png">
-            Create prive access Action
-          </DropdownItem>
-          <DropdownItem>
-            <i className="Assets/icon_shares.png" />
-            <span> Informatins</span>
-          </DropdownItem>
+          <div>
+            <a
+              style={{
+                color: "black"
+              }}
+              className="dropdown-item"
+              href=""
+            >
+              <img
+                style={{
+                  marginRight: "16px"
+                }}
+                src="Assets/icon_shares.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span>Share</span>
+            </a>
+            <a
+              style={{
+                color: "black"
+              }}
+              className="dropdown-item"
+              href=""
+            >
+              <img
+                style={{
+                  marginRight: "16px"
+                }}
+                src="Assets/icon_create_public_access.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span>Create public access</span>
+            </a>
+            <a
+              style={{
+                color: "black"
+              }}
+              className="dropdown-item"
+              href=""
+            >
+              <img
+                style={{
+                  marginRight: "16px"
+                }}
+                src="Assets/icon_create_private_access.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span>Create private access</span>
+            </a>
+            <a
+              style={{
+                color: "black"
+              }}
+              className="dropdown-item"
+              href=""
+            >
+              <img
+                style={{
+                  marginRight: "16px"
+                }}
+                src="Assets/icon_informations.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span>Informations</span>
+            </a>
+          </div>
           <DropdownItem divider />
-          <DropdownItem>
-            <i className="Assets/icon_Share" />Rename
-          </DropdownItem>
-          <DropdownItem>Delete</DropdownItem>
+          <div>
+            <a
+              style={{
+                color: "black"
+              }}
+              className="dropdown-item"
+              href=""
+            >
+              <span>Rename</span>
+            </a>
+            <a
+              style={{
+                color: "black"
+              }}
+              className="dropdown-item"
+              href=""
+            >
+              <span>Delete</span>
+            </a>
+          </div>
         </DropdownMenu>
       </ButtonDropdown>
     )
