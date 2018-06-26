@@ -159,7 +159,3 @@ const file = {
 storiesOf("FolderTable", module).add("Table", () => (
   <FoldersTable {...tableProps} />
 ))
-
-storiesOf("FolderTable", module).add("Table", () => (
-  <FoldersTable {...tableProps} />
-))

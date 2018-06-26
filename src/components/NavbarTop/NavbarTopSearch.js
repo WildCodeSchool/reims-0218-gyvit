@@ -19,7 +19,7 @@ const NavbarTopSearch = ({ search, onSearchType }) => (
           borderRadius: "2px",
           border: "none"
         }}
-        type="search"
+        type="multiple"
         name="search"
         id="exampleSearch"
         placeholder="Search..."
