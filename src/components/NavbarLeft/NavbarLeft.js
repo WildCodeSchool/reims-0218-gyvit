@@ -22,7 +22,6 @@ const NavbarLeft = ({ dataLinks = link }) => (
       >
         <NavbarLeftLogo />
         <NavItem
-          activeClassName="is-active"
           style={{
             marginRight: "0px",
             marginLeft: "0%",
@@ -38,7 +37,6 @@ const NavbarLeft = ({ dataLinks = link }) => (
         </NavItem>
 
         <NavItem
-          activeClassName="is-active"
           style={{
             marginRight: "0px",
             marginLeft: "0%",
