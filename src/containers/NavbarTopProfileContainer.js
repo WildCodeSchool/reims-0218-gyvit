@@ -103,7 +103,6 @@ class NavbarTopProfileContainer extends Component {
           <DropdownItem>
             <a
               href="/"
-              outline
               color="primary"
               size="xs"
               onClick={() =>
@@ -119,6 +118,7 @@ class NavbarTopProfileContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  NavbarTopProfileContainer
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavbarTopProfileContainer)
