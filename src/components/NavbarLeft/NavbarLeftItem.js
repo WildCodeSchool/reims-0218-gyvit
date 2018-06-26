@@ -3,13 +3,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { NavLink, Row, Col } from "reactstrap"
+import { Link } from "react-router-dom"
 
 const NavbarLeftItem = ({ icon, nameLink, link }) => (
   <div>
     <Row>
       <Col xs="12">
-        <NavLink
-          href={link}
+        <Link
+          to={link}
+          className="nav-link"
           style={{
             color: "white",
             opacity: 0.5
@@ -24,7 +26,7 @@ const NavbarLeftItem = ({ icon, nameLink, link }) => (
             }}
           />
           {nameLink}
-        </NavLink>
+        </Link>
       </Col>
     </Row>
     <hr />

@@ -2,9 +2,9 @@ import React from "react"
 import { Container, Row, Col } from "reactstrap"
 import NavbarTop from "../NavbarTop/NavbarTop"
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
+import FoldersBarTopContainer from "../../containers/FoldersBarTopContainer"
 
 import FoldersTableContainer from "../../containers/FoldersTableContainer"
-import FoldersBarTopContainer from "../../containers/FoldersBarTopContainer"
 
 const PageFolders = () => (
   <Container fluid>
@@ -27,6 +27,7 @@ const PageFolders = () => (
       >
         <NavbarTop />
         <FoldersBarTopContainer />
+
         <FoldersTableContainer />
       </Col>
     </Row>
