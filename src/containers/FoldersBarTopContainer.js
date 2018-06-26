@@ -1,4 +1,5 @@
-import React, { Component } from "react"
+import React from "react"
+import { connect } from "react-redux"
 import {
   Col,
   Navbar,
@@ -11,16 +12,27 @@ import {
   Row,
   Container
 } from "reactstrap"
-import { connect } from "react-redux"
+import ModalCreateDirContainer from "./ModalCreateDirContainer"
+import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
+
+const mapDispatchToProps = dispatch => ({
+  onShowCreateDir: () => dispatch(makeShowModalCreateDir())
+})
 
 const mapStateToProps = state => ({
   path: state.currentDir.path
 })
 
-class FoldersBarTopContainer extends Component {
+class FoldersBarTopContainer extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { name: "" }
+  }
+
   render() {
     return (
       <Container>
+        <ModalCreateDirContainer />
         <Row>
           <Col xs="12">
             <Navbar
@@ -29,18 +41,20 @@ class FoldersBarTopContainer extends Component {
                 marginTop: "54px"
               }}
             >
-              <NavbarBrand>{this.props.path}</NavbarBrand>
+              <NavbarBrand>{this.props.path[0].name}</NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
                     <Button
+                      type="button"
                       style={{
                         borderRadius: "50%",
                         height: "50px",
                         width: "50px",
                         backgroundColor: "#725fe3"
                       }}
+                      onClick={() => this.props.onShowCreateDir()}
                     >
                       +
                     </Button>
@@ -55,4 +69,6 @@ class FoldersBarTopContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, null)(FoldersBarTopContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  FoldersBarTopContainer
+)
