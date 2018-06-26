@@ -1,6 +1,5 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
-import PropTypes from "prop-types"
 
 import DashboardCard from "./DashboardCard"
 import { elements } from "../../links/elements"
@@ -35,7 +34,9 @@ const DashboardListCards = ({ mail, firstname }) => (
       </Col>
     </Row>
     <Row className="d-flex justify-content-around">
-      {elements.map(element => <DashboardCard {...element} />)}
+      {elements.map((element, index) => (
+        <DashboardCard key={index} {...element} />
+      ))}
     </Row>
   </Container>
 )
