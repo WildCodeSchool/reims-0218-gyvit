@@ -37,8 +37,7 @@ class DragNDropContainers
   }
 }
 
-    <DragNDropContainers />
 
 
-export default connect (DragNDropContainers)
+export default connect () (DragNDropContainers)
 

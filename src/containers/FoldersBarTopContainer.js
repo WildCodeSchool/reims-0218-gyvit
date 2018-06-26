@@ -14,6 +14,9 @@ import {
 } from "reactstrap"
 import ModalCreateDirContainer from "./ModalCreateDirContainer"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
+import Dropzone from 'react-dropzone'
+import DragNDropContainers from "../containers/DragNDropContainers"
+
 
 const mapDispatchToProps = dispatch => ({
   onShowCreateDir: () => dispatch(makeShowModalCreateDir())
@@ -42,6 +45,7 @@ class FoldersBarTopContainer extends React.Component {
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
+                    <DragNDropContainers />
                     <Button
                       type="button"
                       style={{
