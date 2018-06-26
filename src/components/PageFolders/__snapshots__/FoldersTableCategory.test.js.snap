@@ -1,23 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders link html 1`] = `
-<div
-  style={
-    Object {
-      "color": "#181048",
-      "fontFamily": "DepotNew",
-      "fontSize": "14px",
-      "fontStretch": "normal",
-      "fontStyle": "normal",
-      "fontWeight": "normal",
-      "height": "10%",
-      "letterSpacing": "normal",
-      "lineHeight": "normal",
-      "textAlign": "left",
-      "width": "60%",
-    }
-  }
->
+<div>
   Kevin
   <img
     alt="upDown"

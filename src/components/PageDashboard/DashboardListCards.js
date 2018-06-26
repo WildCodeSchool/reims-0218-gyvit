@@ -5,19 +5,19 @@ import PropTypes from "prop-types"
 import DashboardCard from "./DashboardCard"
 import { elements } from "../../links/elements"
 
-const DashboardListCards = ({ firstname }) => (
-  <Container>
-    <Row className="App">
-      <Col md="12" sm="4">
+const DashboardListCards = ({ mail, firstname }) => (
+  <Container fluid>
+    <Row>
+      <Col md="12">
         <p
           style={{
             fontSize: "24px",
             height: "33px",
-            marginTop: "20%",
+            marginTop: "5%",
             textAlign: "center"
           }}
         >
-          Welcome to Gyvit, {firstname}.
+          Welcome to Gyvit, Romain.
         </p>
 
         <p

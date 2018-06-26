@@ -28,7 +28,7 @@ exports[`renders link html 1`] = `
               "marginLeft": "72px",
               "marginRight": "64.8px",
               "marginTop": "31px",
-              "width": "151.2px",
+              "width": "151px",
             }
           }
         />

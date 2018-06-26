@@ -2,32 +2,34 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { NavLink, Container, Row } from "reactstrap"
+import { NavLink, Row, Col } from "reactstrap"
+import { Link } from "react-router-dom"
 
 const NavbarLeftItem = ({ icon, nameLink, link }) => (
   <div>
-    <Container>
-      <Row>
-        <NavLink
-          href={link}
-          style={{
-            color: "white",
-            opacity: 0.5
-          }}
-        >
-          <img
-            alt=""
-            src={icon}
+    <Row>
+      <Col xs="12">
+        <Link to={link}>
+          <NavLink
+            href={link}
             style={{
-              text: "center",
-              opacity: 0.8,
-              paddingRight: 10
+              color: "white",
+              opacity: 0.5
             }}
-          />
-          {nameLink}
-        </NavLink>
-      </Row>
-    </Container>
+          >
+            <img
+              alt=""
+              src={icon}
+              style={{
+                text: "center",
+                opacity: 0.8
+              }}
+            />
+            {nameLink}
+          </NavLink>
+        </Link>
+      </Col>
+    </Row>
     <hr />
   </div>
 )
