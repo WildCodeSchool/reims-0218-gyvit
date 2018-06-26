@@ -21,8 +21,8 @@ const NavbarTopSearch = ({ options, search, onSearchType }) => (
           borderRadius: "2px",
           border: "none"
         }}
-        type="search"
-        name="name"
+        type="text"
+        name="search"
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}

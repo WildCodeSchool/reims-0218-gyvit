@@ -1,5 +1,6 @@
 import React from "react"
 import { DateTime } from "luxon"
+import Share from "./Share"
 
 const convertDateFromJsonToFrench = dateToTransform =>
   DateTime.fromMillis(Date.parse(dateToTransform))
@@ -24,6 +25,7 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
       {name}
     </th>
     <td
+      className="align-middle"
       style={{
         width: "45%",
         height: "9%",
@@ -36,29 +38,14 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
         lineHeight: "normal",
         letterSpacing: "normal",
         textAlign: "left",
-        color: "#a5a0c2",
-        verticalAlign: "middle"
+        color: "#a5a0c2"
       }}
     >
       {convertDateFromJsonToFrench(modified)}
     </td>
-    <td
-      style={{
-        verticalAlign: "middle"
-      }}
-    >
+    <td className="align-middle">
       {shares &&
-        shares.map((share, key) => <i src="" alt={`icone Share n° ${key}`} />)}
-      <img
-        style={{
-          width: "30px",
-          height: "30px"
-        }}
-        className="rounded-circle"
-        object
-        src="img/kevinMarlot.jpeg"
-        alt="avatar"
-      />
+        shares.map((share, key) => <Share {...share} key={share._id} />)}
     </td>
     <img
       style={{

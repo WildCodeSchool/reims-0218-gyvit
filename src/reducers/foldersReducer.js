@@ -1,6 +1,6 @@
 import {
   FETCH_FOLDERS_SUCCESS,
-  ADD_A_FOLDER_SUCCESS,
+  CREATE_DIR_SUCCESS,
   RETRIEVE_DIR_SUCCESS,
   UPDATE_A_FOLDER_SUCCESS,
   DELETE_A_FOLDER_SUCCESS,
@@ -13,7 +13,7 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === FETCH_FOLDERS_SUCCESS) {
     return prevState
   }
-  if (action.type === ADD_A_FOLDER_SUCCESS) {
+  if (action.type === CREATE_DIR_SUCCESS) {
     return [...prevState, action.response]
   }
   if (action.type === RETRIEVE_DIR_SUCCESS) {

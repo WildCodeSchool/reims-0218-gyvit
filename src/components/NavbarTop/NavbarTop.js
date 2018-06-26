@@ -2,10 +2,10 @@
 
 import React from "react"
 import { Row, Col, Container } from "reactstrap"
-// import PropTypes from "prop-types"
-import NavbarTopNotif from "./NavbarTopNotif"
+
 import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContainer"
 import SearchContainer from "../../containers/SearchContainer"
+import NotifContainer from "../../containers/NotifContainer"
 
 const NavbarTop = () => (
   <Container fluid>
@@ -16,13 +16,13 @@ const NavbarTop = () => (
         border: "solid 1px #E5E8F4"
       }}
     >
-      <Col xs="10">
+      <Col xs="9">
         <SearchContainer />
       </Col>
       <Col xs="1">
-        <NavbarTopNotif />
+        <NotifContainer />
       </Col>
-      <Col xs="1">
+      <Col xs="2">
         <NavbarTopProfileContainer />
       </Col>
     </Row>

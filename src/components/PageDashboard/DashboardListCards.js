@@ -1,14 +1,13 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
-import PropTypes from "prop-types"
 
 import DashboardCard from "./DashboardCard"
 import { elements } from "../../links/elements"
 
 const DashboardListCards = ({ mail, firstname }) => (
   <Container fluid>
-    <Row className="App ">
-      <Col md="12" sm="4">
+    <Row>
+      <Col md="12">
         <p
           style={{
             fontSize: "24px",
@@ -35,14 +34,11 @@ const DashboardListCards = ({ mail, firstname }) => (
       </Col>
     </Row>
     <Row className="d-flex justify-content-around">
-      {elements.map(element => <DashboardCard {...element} />)}
+      {elements.map((element, index) => (
+        <DashboardCard key={index} {...element} />
+      ))}
     </Row>
   </Container>
 )
-
-DashboardListCards.propTypes = {
-  elements: PropTypes.array.isRequired,
-  name: PropTypes.string.isRequired
-}
 
 export default DashboardListCards
