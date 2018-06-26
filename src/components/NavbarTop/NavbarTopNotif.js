@@ -1,21 +1,40 @@
 //TODO: create component notif
 
 import React from "react"
+import { Row, Col } from "reactstrap"
 import PropTypes from "prop-types"
-import NavbarTopNotifBubble from "./NavbarTopNotifBubble"
+import NotifContainer from "../../containers/NotifContainer"
 
 const NavbarTopNotif = () => {
   return (
-    <div>
-      <img
+    <Row style={{ height: "90px" }}>
+      <Col
+        md={{ size: 1, offset: 5 }}
         style={{
-          marginTop: "37px"
+          backgroundColor: "green",
+          margin: "auto",
+          paddingRight: "0px"
         }}
-        src={process.env.PUBLIC_URL + "img/icon_notification.png"}
-        alt="iconNotif"
-      />
-      <NavbarTopNotifBubble notifsCount={66} />
-    </div>
+      >
+        <img
+          style={{
+            backgroundColor: "green"
+          }}
+          src={process.env.PUBLIC_URL + "img/icon_notification.png"}
+          alt="iconNotif"
+        />
+      </Col>
+      <Col
+        md={{ size: 6, offset: 0 }}
+        style={{
+          backgroundColor: "yellow",
+          marginTop: "19%",
+          paddingLeft: "0px"
+        }}
+      >
+        <NotifContainer />
+      </Col>
+    </Row>
   )
 }
 

@@ -21,7 +21,7 @@ const NavbarTop = () => (
         <SearchContainer />
       </Col>
       <Col xs="1">
-        <NotifContainer />
+        <NavbarTopNotif />
       </Col>
       <Col xs="2">
         <NavbarTopProfileContainer />

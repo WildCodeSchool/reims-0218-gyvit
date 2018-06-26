@@ -9,6 +9,7 @@ import PageFolders from "../components/PageFolders/PageFolders"
 import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageForgetPassword from "../components/PageForgotPassword/PageForgotPassword"
 import PageDashboard from "../components/PageDashboard/PageDashboard"
+import UploadFileFormContainer from "../containers/UploadFileFormContainer"
 import { hasToken } from "../api/users/localStorageToken"
 import ModalErrorContainer from "../containers/ModalCreateDirContainer"
 import App from "../App"
@@ -35,13 +36,14 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
       <div>
-        <PrivateRoute path="/" exact component={PageDashboard} />
+        <PrivateRoute path="/" exact component={PageSignIn} />
         <Route path="/sign-in" component={PageSignIn} />
         <Route path="/sign-up" component={PageSignIn} />{" "}
         {/* TODO: PAGE SIGN UP */}
         <Route path="/forgot-password" component={PageForgetPassword} />
         <PrivateRoute path="/dashboard" component={PageDashboard} />
         <PrivateRoute path="/dirs" component={PageFolders} />
+        <PrivateRoute path="/form" component={UploadFileFormContainer} />
         <PrivateRoute path="/get-started" component={PageGetStarted} />
       </div>
     </Router>
