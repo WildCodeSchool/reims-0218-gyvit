@@ -28,8 +28,8 @@ class SignInFormWrap extends Component {
     super()
     //value default of "email" & "password"
     this.state = {
-      mail: "romain@meduza-studio.com",
-      password: "meduza",
+      mail: "",
+      password: "",
       visibilityError: false,
       message: ""
     }

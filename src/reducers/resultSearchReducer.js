@@ -1,9 +1,9 @@
-import { RETRIEVE_DIR_SUCCESS } from "../actions/filesActions"
+import { LIST_ALL_DIRS } from "../actions/foldersActions"
 
 const initialState = []
 
 const resultSearchReducer = (prevState = initialState, action) => {
-  if (action.type === RETRIEVE_DIR_SUCCESS) {
+  if (action.type === LIST_ALL_DIRS) {
     return action.response
   }
   return prevState
