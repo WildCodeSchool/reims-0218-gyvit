@@ -40,9 +40,4 @@ const DashboardListCards = ({ mail, firstname }) => (
   </Container>
 )
 
-DashboardListCards.propTypes = {
-  elements: PropTypes.array.isRequired,
-  name: PropTypes.string.isRequired
-}
-
 export default DashboardListCards
