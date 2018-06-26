@@ -11,7 +11,7 @@ const request = {
 
 /**
  *
- * @returns: acct object for user
+ * @returns {{object:"account",_id:{string},mail:{string},firstname:{string},lastname:{string},role:{string},active:{number},created:{string},modified:{string}}}: acct object for user
  */
 
 export const retrieveMe = () =>

@@ -11,10 +11,12 @@ import {
   Row,
   Container
 } from "reactstrap"
+import ModalCreateDirContainer from "../../containers/ModalCreateDirContainer"
 
 const FoldersBarTop = () => {
   return (
     <Container>
+      <ModalCreateDirContainer />
       <Row>
         <Col xs="12">
           <Navbar
