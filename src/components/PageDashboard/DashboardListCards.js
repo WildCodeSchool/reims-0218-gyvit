@@ -1,6 +1,5 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
-import PropTypes from "prop-types"
 
 import DashboardCard from "./DashboardCard"
 import { elements } from "../../links/elements"
