@@ -60,6 +60,24 @@ const tableProps = {
             modified: "2018-03-29T00:00:00+00:00",
             pic: "img/kevinMarlot.jpeg"
           }
+        },
+        {
+          _id: "share_ILiwSET05VPFsAVTPZMi",
+          object: "share",
+          created: "2018-06-25T12:30:06+00:00",
+          modified: "2018-06-25T12:30:06+00:00",
+          account: {
+            _id: "acct_I3o9e2Ju78lKeN9eMdLN",
+            object: "account",
+            mail: "romain@meduza-studio.com",
+            lastname: "romain",
+            firstname: "duflot",
+            role: "user",
+            active: 1,
+            created: "2018-03-29T00:00:00+00:00",
+            modified: "2018-03-29T00:00:00+00:00",
+            pic: "img/romainDuflot.jpg"
+          }
         }
       ],
       files: [],
