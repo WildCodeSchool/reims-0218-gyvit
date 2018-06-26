@@ -5,6 +5,16 @@ import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 import { listAllDir } from "../api/directorys/listAllDirectorys"
 import { makeShowModalError } from "../actions/errorsActions"
 
+// PR 1
+// resultSearch reducer handling listAllDirs action
+// mapStateToProps connect options to resultSearch reducer
+
+// PR 2
+// on dir click retrieve dir
+
+// PR3
+// highlight letters
+
 const mapDispatchToProps = dispatch => ({
   onFilesSearch: response => dispatch(makeListAllDirs(response)),
   onError: message => dispatch(makeShowModalError(message))

@@ -28,8 +28,8 @@ class SignInFormWrap extends Component {
     super()
     //value default of "email" & "password"
     this.state = {
-      mail: "",
-      password: "",
+      mail: "romain@meduza-studio.com",
+      password: "meduza",
       visibilityError: false,
       message: ""
     }
@@ -140,7 +140,4 @@ class SignInFormWrap extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(mapStateToProps, mapDispatchToProps)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
