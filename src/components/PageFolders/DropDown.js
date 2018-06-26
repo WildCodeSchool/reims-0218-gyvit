@@ -6,7 +6,7 @@ import {
   DropdownItem
 } from "reactstrap"
 
-export default class Dropdown extends React.Component {
+export default class DropDown extends React.Component {
   constructor(props) {
     super(props)
 
@@ -24,10 +24,13 @@ export default class Dropdown extends React.Component {
 
   render() {
     return (
-      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <ButtonDropdown
+        style={{ marginTop: "30px" }}
+        isOpen={this.state.dropdownOpen}
+        toggle={this.toggle}
+      >
         <DropdownToggle color="white">
           <img
-            style={{ marginTop: "60px" }}
             src="Assets/icon_dots_more.png"
             alt="Button Dropdown"
             aria-hidden="true"
@@ -46,7 +49,7 @@ export default class Dropdown extends React.Component {
                 style={{
                   marginRight: "6%"
                 }}
-                src="Assets/icon_shares.png"
+                src="Assets/icon_share_dropdown.png"
                 alt=""
                 aria-hidden="true"
               />
