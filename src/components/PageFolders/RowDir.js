@@ -49,13 +49,6 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
         shares.map((share, key) => <Share {...share} key={share._id} />)}
     </td>
     <DropDown />
-    {/* <img
-      style={{
-        marginTop: "33px"
-      }}
-      src="Assets/icon_dots_more.png"
-      alt="Button Dropdown"
-    /> */}
   </tr>
 )
 

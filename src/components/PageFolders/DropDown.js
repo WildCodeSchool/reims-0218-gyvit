@@ -27,11 +27,10 @@ export default class Example extends React.Component {
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle color="white">
           <img
-            style={{
-              marginTop: "33px"
-            }}
+            style={{ marginTop: "60px" }}
             src="Assets/icon_dots_more.png"
             alt="Button Dropdown"
+            aria-hidden="true"
           />
         </DropdownToggle>
         <DropdownMenu>
@@ -45,7 +44,7 @@ export default class Example extends React.Component {
             >
               <img
                 style={{
-                  marginRight: "16px"
+                  marginRight: "6%"
                 }}
                 src="Assets/icon_shares.png"
                 alt=""
@@ -62,7 +61,7 @@ export default class Example extends React.Component {
             >
               <img
                 style={{
-                  marginRight: "16px"
+                  marginRight: "8%"
                 }}
                 src="Assets/icon_create_public_access.png"
                 alt=""
@@ -79,7 +78,7 @@ export default class Example extends React.Component {
             >
               <img
                 style={{
-                  marginRight: "16px"
+                  marginRight: "8%"
                 }}
                 src="Assets/icon_create_private_access.png"
                 alt=""
@@ -96,7 +95,7 @@ export default class Example extends React.Component {
             >
               <img
                 style={{
-                  marginRight: "16px"
+                  marginRight: "8%"
                 }}
                 src="Assets/icon_informations.png"
                 alt=""
