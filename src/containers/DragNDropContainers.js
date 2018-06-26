@@ -2,33 +2,38 @@ import React from "react"
 import Dropzone from 'react-dropzone'
 import { connect } from "react-redux"
 
-
-class DragNDropContainers
- extends React.Component {
+class DragNDropContainers extends React.Component {
   constructor() {
     super()
-    this.state = { files: [] }
+    this.state = {
+      accepted: [],
+      rejected: []
+    }
   }
 
-  onDrop(files) {
-    this.setState({
-      files
-      
-    });
-  }
   render() {
     return (
       <section>
         <div className="dropzone">
-          <Dropzone onDrop={this.onDrop.bind(this)}>
+          <Dropzone
+            accept="image/jpeg, image/png"
+            onDrop={(accepted, rejected) => { this.setState({ accepted, rejected }); }}
+          >
             <p>Try dropping some files here, or click to select files to upload.</p>
+            <p>Only *.jpeg and *.png images will be accepted</p>
           </Dropzone>
         </div>
         <aside>
-          <h2>Dropped files</h2>
+          <h2>Accepted files</h2>
           <ul>
             {
-              this.state.files.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
+              this.state.accepted.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
+            }
+          </ul>
+          <h2>Rejected files</h2>
+          <ul>
+            {
+              this.state.rejected.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
             }
           </ul>
         </aside>
@@ -36,6 +41,7 @@ class DragNDropContainers
     );
   }
 }
+
 
 
 
