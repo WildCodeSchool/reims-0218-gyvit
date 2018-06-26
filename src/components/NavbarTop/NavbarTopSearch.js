@@ -5,28 +5,28 @@
 
 import React from "react"
 import { FormGroup, Input } from "reactstrap"
+import Async from "react-select"
+import "react-select/dist/react-select.css"
 
 const NavbarTopSearch = ({ search, onSearchType }) => (
   <div>
-    <FormGroup>
-      <span className="fa fa-search" />
-      <Input
-        style={{
-          marginTop: "22px",
-          marginLeft: "6px",
-          height: "46px",
-          backgroundColor: "#fbfcfd",
-          borderRadius: "2px",
-          border: "none"
-        }}
-        type="search"
-        name="search"
-        id="exampleSearch"
-        placeholder="Search..."
-        onChange={onSearchType}
-        value={search}
-      />
-    </FormGroup>
+    <Async
+      style={{
+        marginTop: "22px",
+        marginLeft: "6px",
+        height: "46px",
+        backgroundColor: "#fbfcfd",
+        borderRadius: "2px",
+        border: "none"
+      }}
+      type="search"
+      name="form-field-name"
+      id="exampleSearch"
+      placeholder="Search..."
+      onChange={onSearchType}
+      value={search}
+      options={this.onSearchType}
+    />
   </div>
 )
 
