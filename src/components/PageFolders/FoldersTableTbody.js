@@ -22,8 +22,8 @@ const FoldersTableTbody = ({
           {"..."}
         </a>
       )}
-      {dirs.map(dir => {
-        return <RowDir {...dir} onDirclick={onDirclick} />
+      {dirs.map((dir, index) => {
+        return <RowDir key={index} {...dir} onDirclick={onDirclick} />
       })}
       {files.map(file => {
         return <RowFile {...file} />
