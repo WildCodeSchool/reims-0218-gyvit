@@ -34,11 +34,11 @@ class ModalCreateDirContainer extends Component {
   constructor(props) {
     super(props)
     this.state = { name: "" }
-    this.handleChange = this.handleChange.bind(this)
+    this.handleNameChange = this.handleNameChange.bind(this)
     this.onCreateDir = this.onCreateDir.bind(this)
   }
 
-  handleChange(event) {
+  handleNameChange(event) {
     this.setState({ name: event.target.value })
   }
 
@@ -63,8 +63,9 @@ class ModalCreateDirContainer extends Component {
                   type="text"
                   name="name"
                   id="name"
+                  value={this.state.name}
                   placeholder="Enter the name of the new Directory"
-                  onChange={event => this.handleChange(event)} // controlled seizure of input for new name
+                  onChange={event => this.handleNameChange(event)} // controlled seizure of input for new name
                 />
               </FormGroup>
               <Button

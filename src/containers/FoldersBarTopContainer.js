@@ -23,7 +23,6 @@ class FoldersBarTopContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = { name: "" }
-    //  props.onCreateDir = props.onCreateDir.bind(this)
   }
 
   render() {
