@@ -10,8 +10,6 @@ import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageForgetPassword from "../components/PageForgotPassword/PageForgotPassword"
 import PageDashboard from "../components/PageDashboard/PageDashboard"
 import { hasToken } from "../api/users/localStorageToken"
-import ModalErrorContainer from "../containers/ModalCreateDirContainer"
-import App from "../App"
 
 //function test token true or false for protect routes
 const PrivateRoute = ({ component: Component, ...rest }) => (
