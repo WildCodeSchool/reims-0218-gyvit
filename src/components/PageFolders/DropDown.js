@@ -49,7 +49,7 @@ export default class DropDown extends React.Component {
                 style={{
                   marginRight: "6%"
                 }}
-                src="Assets/icon_share_DropDown.png"
+                src="Assets/icon_share_dropdown.png"
                 alt=""
                 aria-hidden="true"
               />
