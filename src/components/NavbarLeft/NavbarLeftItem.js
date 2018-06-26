@@ -2,13 +2,13 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { NavLink, Container, Row } from "reactstrap"
+import { NavLink, Row, Col } from "reactstrap"
 import { Link } from "react-router-dom"
 
 const NavbarLeftItem = ({ icon, nameLink, link }) => (
   <div>
-    <Container>
-      <Row>
+    <Row>
+      <Col xs="12">
         <Link to={link}>
           <NavLink
             href={link}
@@ -22,15 +22,14 @@ const NavbarLeftItem = ({ icon, nameLink, link }) => (
               src={icon}
               style={{
                 text: "center",
-                opacity: 0.8,
-                paddingRight: 10
+                opacity: 0.8
               }}
             />
             {nameLink}
           </NavLink>
         </Link>
-      </Row>
-    </Container>
+      </Col>
+    </Row>
     <hr />
   </div>
 )

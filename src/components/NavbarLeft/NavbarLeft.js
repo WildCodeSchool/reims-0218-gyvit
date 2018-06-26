@@ -3,19 +3,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 import NavbarLeftItem from "./NavbarLeftItem"
-import { Nav, NavItem, Container, Row } from "reactstrap"
+import { Nav, NavItem, Row, Container } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
-import links from "../../links"
+import { link, settings } from "../../links"
 
-const NavbarLeft = ({ dataLinks = links }) => (
-  <div>
+const NavbarLeft = ({ dataLinks = link }) => (
+  <Container>
     <Row>
       <Nav
         vertical
         expand="md"
         style={{
-          width: "220px",
-          height: "100vw",
+          width: "100%",
+          height: "100vh",
           backgroundColor: "#231b56",
           color: "white"
         }}
@@ -23,16 +23,36 @@ const NavbarLeft = ({ dataLinks = links }) => (
         <NavbarLeftLogo />
         <NavItem
           activeClassName="is-active"
-          style={{ marginLeft: "30px", marginTop: "80px", fontSize: "16px" }}
+          style={{
+            marginRight: "0px",
+            marginLeft: "0%",
+            marginTop: "80%",
+            fontSize: "16px",
+            textAlign: "center"
+          }}
           className="align-center"
         >
           {dataLinks.map((link, index) => (
             <NavbarLeftItem key={index} {...link} />
           ))}
         </NavItem>
+
+        <NavItem
+          activeClassName="is-active"
+          style={{
+            marginRight: "0px",
+            marginLeft: "0%",
+            fontSize: "16px",
+            textAlign: "center",
+            marginTop: "auto"
+          }}
+          className="align-center"
+        >
+          <NavbarLeftItem {...settings} />
+        </NavItem>
       </Nav>
     </Row>
-  </div>
+  </Container>
 )
 
 NavbarLeft.propTypes = {

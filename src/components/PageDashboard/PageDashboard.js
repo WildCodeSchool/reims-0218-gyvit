@@ -8,10 +8,23 @@ import DashboardListCards from "../PageDashboard/DashboardListCards"
 const PageDashboard = () => (
   <Container fluid>
     <Row>
-      <Col xs="2">
+      <Col
+        xs="2"
+        style={{
+          paddingLeft: 0,
+          paddingRight: 0,
+          height: "100%"
+        }}
+      >
         <NavbarLeft />
       </Col>
-      <Col xs="10">
+      <Col
+        xs="10"
+        style={{
+          paddingLeft: 0,
+          paddingRight: 0
+        }}
+      >
         <NavbarTop />
         <DashboardListCards />
       </Col>

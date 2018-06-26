@@ -32,7 +32,7 @@ storiesOf("Redux", module)
   .add("PageSignIn", () => <PageSignIn />)
   .add("Page GetStarted", () => <PageGetStarted />)
   .add("Page ForgotPassword", () => <PageForgotPassword />)
-  .add("Notif", () => <NotifContainer/>)
+  .add("Notif", () => <NotifContainer />)
 
 const tableProps = {
   dirs: [
@@ -42,7 +42,26 @@ const tableProps = {
       name: "SammTrading",
       created: "2018-03-29T00:00:00+00:00",
       modified: "2018-03-29T00:00:00+00:00",
-      shares: [],
+      shares: [
+        {
+          _id: "share_ILiwSET05VPFsAVTPZMi",
+          object: "share",
+          created: "2018-06-25T12:30:06+00:00",
+          modified: "2018-06-25T12:30:06+00:00",
+          account: {
+            _id: "acct_I3o9e2Ju78lKeN9eMdLN",
+            object: "account",
+            mail: "kevin@meduza-studio.com",
+            lastname: "Marlot",
+            firstname: "kevin",
+            role: "user",
+            active: 1,
+            created: "2018-03-29T00:00:00+00:00",
+            modified: "2018-03-29T00:00:00+00:00",
+            pic: "img/kevinMarlot.jpeg"
+          }
+        }
+      ],
       files: [],
       dirs: [
         {
@@ -87,7 +106,6 @@ storiesOf("component RowDir", module).add("RowDir", () => (
     </tbody>
   </Table>
 ))
-
 
 const dir = {
   _id: "dir_DOl2kN3n9lMeedN90kL9",
@@ -142,6 +160,6 @@ storiesOf("FolderTable", module).add("Table", () => (
   <FoldersTable {...tableProps} />
 ))
 
-
-
-
+storiesOf("FolderTable", module).add("Table", () => (
+  <FoldersTable {...tableProps} />
+))
