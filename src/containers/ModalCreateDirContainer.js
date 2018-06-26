@@ -42,8 +42,8 @@ class ModalCreateDirContainer extends Component {
     this.setState({ name: event.target.value })
   }
 
-  onCreateDir(name) {
-    createDir(name, this.props.destination)
+  onCreateDir() {
+    createDir(this.state.name, this.props.destination)
       .then(response => this.props.onSubmitCreateDir(response))
       .then(() => this.props.onHideModal()) // close modal after creating a dir
   }
@@ -68,10 +68,7 @@ class ModalCreateDirContainer extends Component {
                   onChange={event => this.handleNameChange(event)} // controlled seizure of input for new name
                 />
               </FormGroup>
-              <Button
-                type="button"
-                onClick={() => this.onCreateDir(this.state.name)}
-              >
+              <Button type="button" onClick={() => this.onCreateDir()}>
                 Submit
               </Button>
             </Form>
