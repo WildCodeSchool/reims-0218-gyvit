@@ -3,14 +3,14 @@ import { connect } from "react-redux"
 import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 import { listAllDir } from "../api/directorys/listAllDirectorys"
 import { makeShowModalError } from "../actions/errorsActions"
-
+import { makeListAllDirs } from "../actions/foldersActions"
 // PR 1
 // resultSearch reducer handling listAllDirs action
 // mapStateToProps connect options to resultSearch reducer
 
-// const mapStateToProps = state => ({
-//   options: state.resultSearch
-// })
+const mapStateToProps = state => ({
+  options: state.resultSearch
+})
 
 // PR 2
 // on dir click retrieve dir
@@ -19,7 +19,7 @@ import { makeShowModalError } from "../actions/errorsActions"
 // highlight letters
 
 const mapDispatchToProps = dispatch => ({
-  onFilesSearch: response => dispatch(response),
+  onFilesSearch: response => dispatch(makeListAllDirs(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
 
@@ -43,11 +43,11 @@ export class NavbarTopFilter extends Component {
         <NavbarTopSearch
           onSearchType={this.onSearchType}
           value={this.state.search}
-          // options={this.props.options}
+          options={this.props.options}
         />
       </div>
     )
   }
 }
 
-export default connect(null, mapDispatchToProps)(NavbarTopFilter)
+export default connect(mapStateToProps, mapDispatchToProps)(NavbarTopFilter)
