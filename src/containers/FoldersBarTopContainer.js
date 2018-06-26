@@ -13,6 +13,7 @@ import {
   Container
 } from "reactstrap"
 import ModalCreateDirContainer from "./ModalCreateDirContainer"
+import PathElement from "../components/PageFolders/PathElement"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
 
 const mapDispatchToProps = dispatch => ({
@@ -41,7 +42,11 @@ class FoldersBarTopContainer extends React.Component {
                 marginTop: "54px"
               }}
             >
-              <NavbarBrand>Folders</NavbarBrand>
+              <NavbarBrand>
+                {this.props.path.map(pathElement => (
+                  <PathElement name={pathElement.name} />
+                ))}
+              </NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
