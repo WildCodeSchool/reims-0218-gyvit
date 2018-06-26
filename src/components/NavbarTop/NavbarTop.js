@@ -6,6 +6,7 @@ import { Row, Col, Container } from "reactstrap"
 import NavbarTopNotif from "./NavbarTopNotif"
 import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContainer"
 import SearchContainer from "../../containers/SearchContainer"
+import NotifContainer from "../../containers/NotifContainer"
 
 const NavbarTop = () => (
   <Container fluid>
@@ -20,7 +21,7 @@ const NavbarTop = () => (
         <SearchContainer />
       </Col>
       <Col xs="1">
-        <NavbarTopNotif />
+        <NotifContainer />
       </Col>
       <Col xs="2">
         <NavbarTopProfileContainer />
