@@ -5,8 +5,10 @@
 
 import React from "react"
 import { FormGroup, Input } from "reactstrap"
+import Select from "react-select"
+import "react-select/dist/react-select.css"
 
-const NavbarTopSearch = ({ search, onSearchType }) => (
+const NavbarTopSearch = ({ options, search, onSearchType }) => (
   <div>
     <FormGroup>
       <span className="fa fa-search" />
@@ -19,12 +21,13 @@ const NavbarTopSearch = ({ search, onSearchType }) => (
           borderRadius: "2px",
           border: "none"
         }}
-        type="multiple"
+        type="text"
         name="search"
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
         value={search}
+        options={options}
       />
     </FormGroup>
   </div>
