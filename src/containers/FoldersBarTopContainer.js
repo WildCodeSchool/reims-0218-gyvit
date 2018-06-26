@@ -41,7 +41,7 @@ class FoldersBarTopContainer extends React.Component {
                 marginTop: "54px"
               }}
             >
-              <NavbarBrand>{this.props.path[0].name}</NavbarBrand>
+              <NavbarBrand>Folders</NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
