@@ -26,11 +26,11 @@ const mapDispatchToProps = dispatch => ({
 export class NavbarTopFilter extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: "" }
+    this.state = { search: "" }
     this.onSearchType = this.onSearchType.bind(this)
   }
   onSearchType(event) {
-    this.setState({ value: event.target.value })
+    this.setState({ search: event.target.value })
     const value = event.target.value
     listAllDir(value)
       .then(response => this.props.onFilesSearch(response))
@@ -42,7 +42,7 @@ export class NavbarTopFilter extends Component {
       <div>
         <NavbarTopSearch
           onSearchType={this.onSearchType}
-          value={this.state.search}
+          search={this.state.search}
           options={this.props.options}
         />
       </div>
