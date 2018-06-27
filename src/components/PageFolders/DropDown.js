@@ -139,6 +139,7 @@ class DropDown extends React.Component {
                     .then(response =>
                       console.log(`notre reesponse: ${response}`)
                     )
+                    .catch(response => console.log(response))
                 )
               }}
             >
