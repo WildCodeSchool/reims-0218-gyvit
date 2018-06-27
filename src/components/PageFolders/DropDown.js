@@ -1,3 +1,4 @@
+import { connect } from "react-redux"
 import React from "react"
 import {
   ButtonDropdown,
@@ -6,8 +7,19 @@ import {
   DropdownItem,
   Button
 } from "reactstrap"
+import { makeDeleteAFolderSuccess } from "../../actions/foldersActions"
+import { deleteDirectory } from "../../api/directorys/deleteDirectory"
 
-export default class DropDown extends React.Component {
+const mapStateToProps = state => {
+  return {
+    dirs: state.dirs
+  }
+}
+const mapDispatchToProps = dispatch => ({
+  onDeleteFolders: dirId => dispatch(makeDeleteAFolderSuccess(dirId))
+})
+
+class DropDown extends React.Component {
   constructor(props) {
     super(props)
 
@@ -125,7 +137,8 @@ export default class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                console.log(this.props.dirId)
+                console.log("dir._id")
+                deleteDirectory().then(() => this.props.onDeleteFolders())
               }}
             >
               <span>Delete</span>
@@ -136,3 +149,4 @@ export default class DropDown extends React.Component {
     )
   }
 }
+export default connect(mapStateToProps, mapDispatchToProps(DropDown))
