@@ -7,6 +7,7 @@ import parentReducer from "./parentReducer"
 import errorsReducer from "./errorsReducer"
 import currentDirReducer from "./currentDirReducer"
 import modalCreateDirReducer from "./modalCreateDirReducer"
+import resultSearchReducer from "./resultSearchReducer"
 import NotifReducer from "./NotifReducer"
 
 export default combineReducers({
@@ -17,5 +18,6 @@ export default combineReducers({
   parent: parentReducer,
   currentDir: currentDirReducer,
   modalCreateDir: modalCreateDirReducer,
+  resultSearch: resultSearchReducer,
   notif: NotifReducer
 })

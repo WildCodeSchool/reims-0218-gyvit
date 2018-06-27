@@ -140,7 +140,4 @@ class SignInFormWrap extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(mapStateToProps, mapDispatchToProps)(SignInFormWrap) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.

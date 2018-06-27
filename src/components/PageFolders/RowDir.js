@@ -1,5 +1,6 @@
 import React from "react"
 import { DateTime } from "luxon"
+import DropDown from "./DropDown"
 import Share from "./Share"
 
 const convertDateFromJsonToFrench = dateToTransform =>
@@ -46,8 +47,8 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
     <td>
       {shares &&
         shares.map((share, key) => <Share {...share} key={share._id} />)}
-      <img src="Assets/icon_dots_more.png" alt="Button Dropdown" />
     </td>
+    <td><DropDown /></td>
   </tr>
 )
 
