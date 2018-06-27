@@ -21,7 +21,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const mapStateToProps = state => ({
-  path: state.currentDir.path
+  currentDir: state.currentDir
 })
 
 class FoldersBarTopContainer extends React.Component {
@@ -43,9 +43,11 @@ class FoldersBarTopContainer extends React.Component {
               }}
             >
               <NavbarBrand>
-                {this.props.path.map(pathElement => (
-                  <PathElement name={pathElement.name} />
-                ))}
+                {typeof this.props.currentDir.path !== undefined
+                  ? this.props.currentDir.path.map(pathElement => (
+                      <PathElement name={pathElement.name} />
+                    ))
+                  : ""}
               </NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
