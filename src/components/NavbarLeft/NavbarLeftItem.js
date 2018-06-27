@@ -2,7 +2,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { NavLink, Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap"
 import { Link } from "react-router-dom"
 
 const NavbarLeftItem = ({ icon, nameLink, link }) => (

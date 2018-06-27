@@ -44,11 +44,13 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
     >
       {convertDateFromJsonToFrench(modified)}
     </td>
-    <td className="align-middle">
+    <td>
       {shares &&
         shares.map((share, key) => <Share {...share} key={share._id} />)}
     </td>
-    <DropDown dirId={_id} />
+    <td>
+      <DropDown dirId={_id} />
+    </td>
   </tr>
 )
 
