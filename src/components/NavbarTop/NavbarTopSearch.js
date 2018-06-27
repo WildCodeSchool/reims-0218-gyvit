@@ -4,15 +4,20 @@
 // faire un SearchContainer, qui stockera dans son state, un search
 
 import React from "react"
-import { FormGroup, Input } from "reactstrap"
-import Select from "react-select"
-import "react-select/dist/react-select.css"
+import {
+  FormGroup,
+  Input,
+  DropdownMenu,
+  DropdownItem,
+  Dropdown,
+  DropdownToggle
+} from "reactstrap"
 
 const NavbarTopSearch = ({ options, search, onSearchType }) => (
   <div>
     <FormGroup>
-      <span className="fa fa-search" />
       <Input
+        class="typeahead form-control"
         style={{
           marginTop: "22px",
           marginLeft: "6px",
@@ -21,14 +26,35 @@ const NavbarTopSearch = ({ options, search, onSearchType }) => (
           borderRadius: "2px",
           border: "none"
         }}
-        type="text"
-        name="search"
+        type="search"
+        name="form-field-name"
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
-        value={search}
         options={options}
+        value={search}
       />
+
+      <Dropdown isOpen={search && true}>
+        <DropdownMenu
+          style={{
+            transform: "none",
+            marginLeft: "5px",
+            width: "100%"
+          }}
+        >
+          <DropdownToggle
+            style={{ visibility: "hidden" }}
+            onClick={() => console.log("fire pew pew")}
+          />
+          {search !== "" &&
+            options.map(option => (
+              <DropdownItem key={option.value} value={option.value}>
+                {option.name}
+              </DropdownItem>
+            ))}
+        </DropdownMenu>
+      </Dropdown>
     </FormGroup>
   </div>
 )
