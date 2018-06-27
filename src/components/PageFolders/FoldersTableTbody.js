@@ -13,17 +13,17 @@ const FoldersTableTbody = ({
   return (
     <tbody>
       {parent._id && (
-        <a
+        <tr
           rel="nofollow"
           title="Go to parent directory"
           className="js-navigation-open"
           onClick={() => onBackclick(parent._id)}
         >
-          {"..."}
-        </a>
+          <td>{"..."}</td>
+        </tr>
       )}
-      {dirs.map(dir => {
-        return <RowDir {...dir} onDirclick={onDirclick} />
+      {dirs.map((dir, index) => {
+        return <RowDir key={index} {...dir} onDirclick={onDirclick} />
       })}
       {files.map(file => {
         return <RowFile {...file} />
