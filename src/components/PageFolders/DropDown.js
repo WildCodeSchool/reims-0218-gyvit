@@ -3,7 +3,8 @@ import {
   ButtonDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Button
 } from "reactstrap"
 
 export default class DropDown extends React.Component {
@@ -118,15 +119,17 @@ export default class DropDown extends React.Component {
             >
               <span>Rename</span>
             </a>
-            <a
+            <Button
               style={{
                 color: "black"
               }}
               className="dropdown-item"
-              href=""
+              onClick={() => {
+                console.log(this.props.dirId)
+              }}
             >
               <span>Delete</span>
-            </a>
+            </Button>
           </div>
         </DropdownMenu>
       </ButtonDropdown>

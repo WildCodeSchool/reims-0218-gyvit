@@ -48,7 +48,9 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
       {shares &&
         shares.map((share, key) => <Share {...share} key={share._id} />)}
     </td>
-    <td><DropDown /></td>
+    <td>
+      <DropDown dirId={_id} />
+    </td>
   </tr>
 )
 
