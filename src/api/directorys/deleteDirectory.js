@@ -1,7 +1,7 @@
 import { getToken } from "../users/localStorageToken"
 
-export const deleteDirectory = (_id = "dir_y62kpDwkqmS2oD2USqc8") =>
-  fetch(`https://dev.gyvit.io/api/storage/directorys/${_id}`, {
+export const deleteDirectory = (dir_id = "dir_y62kpDwkqmS2oD2USqc8") =>
+  fetch(`https://dev.gyvit.io/api/storage/directorys/${dir_id}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",
