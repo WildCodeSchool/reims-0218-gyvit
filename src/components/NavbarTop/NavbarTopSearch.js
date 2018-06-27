@@ -13,7 +13,13 @@ import {
   DropdownToggle
 } from "reactstrap"
 
-const NavbarTopSearch = ({ options, search, onSearchType }) => (
+const NavbarTopSearch = ({
+  onDirclick,
+  _id,
+  options,
+  search,
+  onSearchType
+}) => (
   <div>
     <FormGroup>
       <Input
@@ -35,7 +41,7 @@ const NavbarTopSearch = ({ options, search, onSearchType }) => (
         value={search}
       />
 
-      <Dropdown isOpen={search && true}>
+      <Dropdown isOpen={search}>
         <DropdownMenu
           style={{
             transform: "none",
@@ -43,10 +49,7 @@ const NavbarTopSearch = ({ options, search, onSearchType }) => (
             width: "100%"
           }}
         >
-          <DropdownToggle
-            style={{ visibility: "hidden" }}
-            onClick={() => console.log("fire pew pew")}
-          />
+          <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
             options.map(option => (
               <DropdownItem key={option.value} value={option.value}>

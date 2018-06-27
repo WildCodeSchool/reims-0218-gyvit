@@ -25,9 +25,6 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === DELETE_A_FOLDER_SUCCESS) {
     return prevState.filter(folder => action.folderId !== folder._id)
   }
-  if (action.type === LIST_ALL_DIRS) {
-    return action.response
-  }
 
   return prevState
 }
