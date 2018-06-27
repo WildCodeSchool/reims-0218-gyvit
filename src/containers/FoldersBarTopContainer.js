@@ -43,7 +43,8 @@ class FoldersBarTopContainer extends React.Component {
               }}
             >
               <NavbarBrand>
-                {typeof this.props.currentDir.path !== undefined
+                Folders
+                {this.props.currentDir.path !== undefined
                   ? this.props.currentDir.path.map(pathElement => (
                       <PathElement name={pathElement.name} />
                     ))
