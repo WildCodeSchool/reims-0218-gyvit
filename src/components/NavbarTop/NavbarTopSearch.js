@@ -13,13 +13,7 @@ import {
   DropdownToggle
 } from "reactstrap"
 
-const NavbarTopSearch = ({
-  onDirclick,
-  _id,
-  options,
-  search,
-  onSearchType
-}) => (
+const NavbarTopSearch = ({ options, search, onSearchType }) => (
   <div>
     <FormGroup>
       <Input
