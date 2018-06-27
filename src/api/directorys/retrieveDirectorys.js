@@ -1,6 +1,6 @@
 import { getToken } from "../users/localStorageToken"
 
-export const retrieveDir = (_id = "dir_y62kpDwkqmS2oD2USqc8") =>
+export const retrieveDir = (_id = "dir_k8G3aBS8TSWv9zEDj5ao") =>
   fetch(`https://dev.gyvit.io/api/storage/directorys/${_id}`, {
     method: "GET",
     headers: {
