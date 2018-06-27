@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Col, Button, Form, FormGroup, Label, Input } from "reactstrap"
+import { Col, Button, Form, FormGroup, Label } from "reactstrap"
 
 import { uploadFile } from "../api/files/uploadFile"
 import { makeAddAFileSuccess } from "../actions/filesActions"
@@ -17,19 +17,20 @@ class UploadFileFormContainer extends Component {
   constructor(props) {
     super(props)
 
-    this.onHandleName = this.onHandleName.bind(this)
     this.onHandleFileUpload = this.onHandleFileUpload.bind(this)
   }
 
-  onHandleName(event) {
-    this.setState({ name: event.target.value }) //dynamique value email or password
-  }
-
   onHandleFileUpload() {
-    const data = new FormData()
-    data.append("file", this.fileInput.files[0])
-    data.append("destination", this.props.destination)
+    //  const data = new FormData(document.querySelector("Form"))
+    console.log(this.fileInput.files)
+    //data.append("file", this.fileInput.files[0])
+    //data.append("destination", this.props.destination)
+    //console.log(data.entries())
     console.log(this.props.destination)
+    const data = {
+      destination: this.props.destination,
+      file: this.fileInput.files[0]
+    }
     //build data
     uploadFile(data).then(response => this.props.onFileUpload(response))
   }

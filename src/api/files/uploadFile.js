@@ -8,7 +8,7 @@ export const uploadFile = data => {
       "Content-Type": "multipart/form-data",
       "Access-Control-Allow-Origin": "http://localhost:3000"
     },
-    body: data
+    body: JSON.stringify(data)
   }
 
   return fetch("https://dev.gyvit.io/api/storage/files", request).then(res =>
