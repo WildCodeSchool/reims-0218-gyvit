@@ -44,13 +44,13 @@ class FoldersBarTopContainer extends React.Component {
             >
               <NavbarBrand>
                 Folders/
-                {// condition to display a path, only if a path exist
-                this.props.currentDir.path !== undefined
-                  ? this.props.currentDir.path.map(pathElement => {
-                      return <PathElement name={pathElement.name} />
-                    })
-                  : ""}
-                <a>{this.props.currentDir.name}</a>
+                {this.props.currentDir.path &&
+                  this.props.currentDir.path.map(pathElement => (
+                    <PathElement name={pathElement.name} />
+                  ))}
+                <a>
+                  {this.props.currentDir.name && this.props.currentDir.name}
+                </a>
               </NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
