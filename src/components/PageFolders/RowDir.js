@@ -43,17 +43,11 @@ const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
     >
       {convertDateFromJsonToFrench(modified)}
     </td>
-    <td className="align-middle">
+    <td>
       {shares &&
         shares.map((share, key) => <Share {...share} key={share._id} />)}
+      <img src="Assets/icon_dots_more.png" alt="Button Dropdown" />
     </td>
-    <img
-      style={{
-        marginTop: "33px"
-      }}
-      src="Assets/icon_dots_more.png"
-      alt="Button Dropdown"
-    />
   </tr>
 )
 
