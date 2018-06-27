@@ -45,7 +45,6 @@ class FoldersBarTopContainer extends React.Component {
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <DragNDropContainers />
                     <Button
                       type="button"
                       style={{
@@ -64,7 +63,11 @@ class FoldersBarTopContainer extends React.Component {
             </Navbar>
           </Col>
         </Row>
+        <DragNDropContainers />
+
       </Container>
+      
+      
     )
   }
 }
