@@ -5,8 +5,6 @@
 
 import React from "react"
 import { FormGroup, Input } from "reactstrap"
-import Select from "react-select"
-import "react-select/dist/react-select.css"
 
 const NavbarTopSearch = ({ options, search, onSearchType }) => (
   <div>
