@@ -10,13 +10,8 @@ import {
 import { makeDeleteAFolderSuccess } from "../../actions/foldersActions"
 import { deleteDirectory } from "../../api/directorys/deleteDirectory"
 
-const mapStateToProps = state => {
-  return {
-    dirs: state.dirs
-  }
-}
 const mapDispatchToProps = dispatch => ({
-  onDeleteFolders: dirId => dispatch(makeDeleteAFolderSuccess(dirId))
+  onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId))
 })
 
 class DropDown extends React.Component {
@@ -137,8 +132,14 @@ class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                console.log("dir._id")
-                deleteDirectory().then(() => this.props.onDeleteFolders())
+                console.log(this.props.dirId)
+                deleteDirectory(this.props.dirId).then(dirId =>
+                  this.props
+                    .onDeleteFolders(dirId)
+                    .then(response =>
+                      console.log(`notre reesponse: ${response}`)
+                    )
+                )
               }}
             >
               <span>Delete</span>
@@ -149,4 +150,4 @@ class DropDown extends React.Component {
     )
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps(DropDown))
+export default connect(null, mapDispatchToProps)(DropDown)
