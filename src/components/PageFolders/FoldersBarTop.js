@@ -12,10 +12,15 @@ import {
   Container
 } from "reactstrap"
 import ModalCreateDirContainer from "../../containers/ModalCreateDirContainer"
+import DragNDropContainers from "../../containers/DragNDropContainers"
+import Dropzone from 'react-dropzone'
+
+
 
 const FoldersBarTop = () => {
   return (
     <Container>
+      
       <ModalCreateDirContainer />
       <Row>
         <Col xs="12">
@@ -28,6 +33,7 @@ const FoldersBarTop = () => {
             <NavbarBrand>Folders</NavbarBrand>
             <NavbarToggler />
             <Collapse navbar>
+            <DragNDropContainers/>
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <Button
