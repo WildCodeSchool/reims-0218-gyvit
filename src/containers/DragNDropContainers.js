@@ -2,6 +2,17 @@ import React from "react"
 import Dropzone from "react-dropzone"
 import { connect } from "react-redux"
 import FoldersTableContainer from "../containers/FoldersTableContainer"
+import { uploadFile } from "../api/files/uploadFile"
+import { makeAddAFileSuccess } from "../actions/filesActions"
+const mapStateToProps = state => {
+  return {
+    destination: state.currentDir._id
+  }
+}
+const mapDispatchToProps = dispatch => ({
+  // function to store the new dir
+  onSubmitUploadFile: response => dispatch(makeAddAFileSuccess(response))
+})
 
 class DragNDropContainers extends React.Component {
   constructor() {
@@ -26,6 +37,9 @@ class DragNDropContainers extends React.Component {
   }
 
   onDrop(files) {
+    uploadFile(this.state.name, this.props.destination).then(response =>
+      this.props.onSubmitUploadFile(response)
+    )
     this.setState({
       files,
       dropzoneActive: false
@@ -63,10 +77,14 @@ class DragNDropContainers extends React.Component {
         {dropzoneActive && <div style={overlayStyle}>Drop files...</div>}
         <div>
           <FoldersTableContainer />
+          <ul>{files.map(f => <li>{f.name}</li>)}</ul>
         </div>
       </Dropzone>
     )
   }
 }
 
-export default connect()(DragNDropContainers)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DragNDropContainers)
