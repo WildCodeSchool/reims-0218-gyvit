@@ -1,60 +1,40 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Col, Button, Form, FormGroup, Label, Input } from "reactstrap"
+import { Col, Button, Form, FormGroup, Label } from "reactstrap"
 
 import { uploadFile } from "../api/files/uploadFile"
 import { makeAddAFileSuccess } from "../actions/filesActions"
+import { makeHideModalCreateFile } from "../actions/modalCreateFileAction"
 
 const mapStateToProps = state => ({
   destination: state.currentDir._id
 })
 
 const mapDispatchToProps = dispatch => ({
-  onFileUpload: response => dispatch(makeAddAFileSuccess(response))
+  onFileUpload: response => dispatch(makeAddAFileSuccess(response)),
+  onHideModal: () => dispatch(makeHideModalCreateFile())
 })
 
 class UploadFileFormContainer extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      name: ""
-    }
-    this.onHandleName = this.onHandleName.bind(this)
-    this.onHandleFileUpload = this.onHandleFileUpload.bind(this)
-  }
 
-  onHandleName(event) {
-    this.setState({ name: event.target.value }) //dynamique value email or password
+    this.onHandleFileUpload = this.onHandleFileUpload.bind(this)
   }
 
   onHandleFileUpload() {
     const data = new FormData()
     data.append("file", this.fileInput.files[0])
-    data.append("name", this.state.name)
     data.append("destination", this.props.destination)
+    data.append("name", this.fileInput.files[0].name)
     //build data
     uploadFile(data).then(response => this.props.onFileUpload(response))
+    this.props.onHideModal()
   }
 
   render() {
     return (
       <Form>
-        <FormGroup row>
-          <Label for="nameFile" sm={2}>
-            Nom du fichier
-          </Label>
-          <Col sm={4}>
-            <Input
-              type="text"
-              value={this.state.name}
-              name="name"
-              id="nameFile"
-              onChange={this.onHandleName}
-              placeholder="Votre nom de fichier"
-            />
-          </Col>
-        </FormGroup>
-
         <FormGroup row>
           <Label for="inputFile" sm={2}>
             File

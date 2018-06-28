@@ -3,8 +3,7 @@ import {
   CREATE_DIR_SUCCESS,
   RETRIEVE_DIR_SUCCESS,
   UPDATE_A_FOLDER_SUCCESS,
-  DELETE_A_FOLDER_SUCCESS,
-  LIST_ALL_DIRS
+  DELETE_A_FOLDER_SUCCESS
 } from "../actions/foldersActions"
 
 const initialState = []
