@@ -20,15 +20,14 @@ class DragNDropContainers extends React.Component {
         <div className="dropzone">
           <Dropzone  style={{
               width: "800px",
-              height: "423px",
-              border: "dashed 1px red"
+              height: "60px",
+              border: "dashed 1px "
             
             }}
              onDrop={this.onDrop.bind(this)}>
-            <p>Try dropping some files here, or click to select files to upload.</p>
         
         <aside>
-          <h2>Dropped files</h2>
+          <h4>Dropped files</h4>
           <ul>
             {
               this.state.files.map(f => <li key={f.name}>{f.name} : {f.size} bytes</li>)
