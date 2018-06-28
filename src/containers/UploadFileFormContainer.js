@@ -27,7 +27,6 @@ class UploadFileFormContainer extends Component {
     data.append("file", this.fileInput.files[0])
     data.append("destination", this.props.destination)
     data.append("name", this.fileInput.files[0].name)
-    console.log(this.fileInput.files[0], this.fileInput.files[0].name)
     //build data
     uploadFile(data).then(response => this.props.onFileUpload(response))
     this.props.onHideModal()

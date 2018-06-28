@@ -1,20 +1,9 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Form,
-  FormGroup,
-  Label,
-  Input
-} from "reactstrap"
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
 
 import { makeHideModalCreateFile } from "../actions/modalCreateFileAction"
 import { makeAddAFileSuccess } from "../actions/filesActions"
-import { uploadFile } from "../api/files/uploadFile"
 import UploadFileFormContainer from "./UploadFileFormContainer"
 
 const mapStateToProps = state => {
@@ -25,30 +14,13 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  // function to store the new dir
+  // function to store the new file
   onSubmitCreateFile: response => dispatch(makeAddAFileSuccess(response)),
   // function for cancelling modal
   onHideModal: () => dispatch(makeHideModalCreateFile())
 })
 
 class ModalCreateFileContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { name: "" }
-    this.handleNameChange = this.handleNameChange.bind(this)
-    this.onCreateFile = this.onCreateFile.bind(this)
-  }
-
-  handleNameChange(event) {
-    this.setState({ name: event.target.value })
-  }
-
-  onCreateFile() {
-    uploadFile(this.state.name, this.props.destination)
-      .then(response => this.props.onSubmitCreateFile(response))
-      .then(() => this.props.onHideModal()) // close modal after creating a file
-  }
-
   render() {
     return (
       <div>
