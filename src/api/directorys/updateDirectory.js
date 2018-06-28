@@ -1,7 +1,8 @@
 import { getToken } from "../users/localStorageToken"
 
-export const updateDirectory = (_id = "dir_y62kpDwkqmS2oD2USqc8", name) =>
-  fetch(`https://dev.gyvit.io/api/storage/directorys/${_id}`, {
+export const updateDirectory = name => {
+  const destination = this.state.currentDir._id
+  fetch(`https://dev.gyvit.io/api/storage/directorys/${destination}`, {
     method: "PATCH",
     headers: {
       Accept: "application/json",
@@ -10,3 +11,4 @@ export const updateDirectory = (_id = "dir_y62kpDwkqmS2oD2USqc8", name) =>
     },
     body: JSON.stringify({ name })
   }).then(res => res.json())
+}
