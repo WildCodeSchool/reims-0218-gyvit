@@ -136,7 +136,7 @@ class DropDown extends React.Component {
               onClick={() => {
                 deleteDirectory(this.props.dirId, this.props.dirName)
                   .then(response => {
-                    this.props.onError("En attente d'une reponse du serveur")
+                    // if response isn't with _id, error is catched
                     return this.props.onDeleteDir(response._id)
                   })
                   // errors not wanted
