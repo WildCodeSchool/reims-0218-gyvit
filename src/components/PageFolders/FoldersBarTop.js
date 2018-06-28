@@ -12,8 +12,6 @@ import {
   Container
 } from "reactstrap"
 import ModalCreateDirContainer from "../../containers/ModalCreateDirContainer"
-import DragNDropContainers from "../../containers/DragNDropContainers"
-import Dropzone from "react-dropzone"
 
 const FoldersBarTop = () => {
   return (
