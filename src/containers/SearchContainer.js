@@ -5,12 +5,13 @@ import { listAllDir } from "../api/directorys/listAllDirectorys"
 import { makeShowModalError } from "../actions/errorsActions"
 import { makeRetrieveDirSuccess } from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
+import { makeListAllDirs } from "../actions/foldersActions"
 // PR 1
 // resultSearch reducer handling listAllDirs action
 // mapStateToProps connect options to resultSearch reducer
 
 const mapStateToProps = state => ({
-  dirs: state.resultSearch
+  searchResults: state.resultSearch
 })
 
 // PR 2
@@ -46,7 +47,7 @@ export class NavbarTopFilter extends Component {
         <NavbarTopSearch
           onSearchType={this.onSearchType}
           search={this.state.search}
-          dirs={this.props.dirs}
+          searchResults={this.props.searchResults}
           onDirclick={this.props.onDirclick}
         />
       </div>
