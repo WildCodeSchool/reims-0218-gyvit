@@ -3,13 +3,15 @@ import { connect } from "react-redux"
 import NavbarTopSearch from "../components/NavbarTop/NavbarTopSearch"
 import { listAllDir } from "../api/directorys/listAllDirectorys"
 import { makeShowModalError } from "../actions/errorsActions"
+import { makeRetrieveDirSuccess } from "../actions/foldersActions"
+import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 import { makeListAllDirs } from "../actions/foldersActions"
 // PR 1
 // resultSearch reducer handling listAllDirs action
 // mapStateToProps connect options to resultSearch reducer
 
 const mapStateToProps = state => ({
-  options: state.resultSearch
+  searchResults: state.resultSearch
 })
 
 // PR 2
@@ -20,17 +22,19 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onFilesSearch: response => dispatch(makeListAllDirs(response)),
-  onError: message => dispatch(makeShowModalError(message))
+  onError: message => dispatch(makeShowModalError(message)),
+  onDirclick: id =>
+    retrieveDir(id).then(response => dispatch(makeRetrieveDirSuccess(response)))
 })
 
 export class NavbarTopFilter extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: "" }
+    this.state = { search: "" }
     this.onSearchType = this.onSearchType.bind(this)
   }
   onSearchType(event) {
-    this.setState({ value: event.target.value })
+    this.setState({ search: event.target.value })
     const value = event.target.value
     listAllDir(value)
       .then(response => this.props.onFilesSearch(response))
@@ -42,8 +46,9 @@ export class NavbarTopFilter extends Component {
       <div>
         <NavbarTopSearch
           onSearchType={this.onSearchType}
-          value={this.state.search}
-          options={this.props.options}
+          search={this.state.search}
+          searchResults={this.props.searchResults}
+          onDirclick={this.props.onDirclick}
         />
       </div>
     )
