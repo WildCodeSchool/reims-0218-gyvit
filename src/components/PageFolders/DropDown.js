@@ -134,14 +134,11 @@ class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                console.log(this.props.dirId, this.props.dirName)
                 deleteDirectory(this.props.dirId, this.props.dirName)
-                  .then(dirId =>
-                    this.props
-                      .onDeleteDir(dirId)
-                      .then(response => this.props.onError(response))
-                      .catch(response => this.props.onError(response.message))
-                  )
+                  .then(response => {
+                    this.props.onerror("En attente d'une reponse du serveur")
+                    return this.props.onDeleteDir(response._id)
+                  })
                   .catch(response => this.props.onError(response.message))
               }}
             >
