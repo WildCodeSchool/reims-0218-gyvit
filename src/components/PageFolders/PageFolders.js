@@ -27,8 +27,6 @@ const PageFolders = () => (
       >
         <NavbarTop />
         <FoldersBarTopContainer />
-
-        <FoldersTableContainer />
       </Col>
     </Row>
   </Container>

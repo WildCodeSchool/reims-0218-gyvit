@@ -14,9 +14,7 @@ import {
 } from "reactstrap"
 import ModalCreateDirContainer from "./ModalCreateDirContainer"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
-import Dropzone from 'react-dropzone'
 import DragNDropContainers from "../containers/DragNDropContainers"
-
 
 const mapDispatchToProps = dispatch => ({
   onShowCreateDir: () => dispatch(makeShowModalCreateDir())
@@ -64,12 +62,12 @@ class FoldersBarTopContainer extends React.Component {
           </Col>
         </Row>
         <DragNDropContainers />
-
       </Container>
-      
-      
     )
   }
 }
 
-export default connect(null, mapDispatchToProps)(FoldersBarTopContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(
+  null,
+  mapDispatchToProps
+)(FoldersBarTopContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
