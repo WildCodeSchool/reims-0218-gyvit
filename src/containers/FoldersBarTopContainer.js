@@ -13,11 +13,16 @@ import {
   Container
 } from "reactstrap"
 import ModalCreateDirContainer from "./ModalCreateDirContainer"
+import PathElement from "../components/PageFolders/PathElement"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
 import DragNDropContainers from "../containers/DragNDropContainers"
 
 const mapDispatchToProps = dispatch => ({
   onShowCreateDir: () => dispatch(makeShowModalCreateDir())
+})
+
+const mapStateToProps = state => ({
+  currentDir: state.currentDir
 })
 
 class FoldersBarTopContainer extends React.Component {
@@ -38,7 +43,16 @@ class FoldersBarTopContainer extends React.Component {
                 marginTop: "54px"
               }}
             >
-              <NavbarBrand>Folders</NavbarBrand>
+              <NavbarBrand>
+                Folders
+                {this.props.currentDir.path &&
+                  this.props.currentDir.path.map(pathElement => (
+                    <PathElement name={pathElement.name} />
+                  ))}
+                {this.props.currentDir.name && (
+                  <PathElement name={this.props.currentDir.name} />
+                )}
+              </NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
@@ -67,7 +81,6 @@ class FoldersBarTopContainer extends React.Component {
   }
 }
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(FoldersBarTopContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(mapStateToProps, mapDispatchToProps)(
+  FoldersBarTopContainer
+)

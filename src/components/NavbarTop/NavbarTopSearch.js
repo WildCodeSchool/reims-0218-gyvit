@@ -13,7 +13,13 @@ import {
   DropdownToggle
 } from "reactstrap"
 
-const NavbarTopSearch = ({ options, search, onSearchType }) => (
+const NavbarTopSearch = ({
+  _id,
+  onDirclick,
+  searchResults,
+  search,
+  onSearchType
+}) => (
   <div>
     <FormGroup>
       <Input
@@ -31,7 +37,7 @@ const NavbarTopSearch = ({ options, search, onSearchType }) => (
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
-        options={options}
+        searchResults={searchResults}
         value={search}
       />
 
@@ -45,9 +51,15 @@ const NavbarTopSearch = ({ options, search, onSearchType }) => (
         >
           <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
-            options.map(option => (
-              <DropdownItem key={option.value} value={option.value}>
-                {option.name}
+            searchResults.map(searchResult => (
+              <DropdownItem
+                onClick={() => onDirclick(searchResult._id)}
+                toggle={false}
+                key={searchResult.value}
+                value={searchResult.value}
+                {...searchResult}
+              >
+                {searchResult.name}
               </DropdownItem>
             ))}
         </DropdownMenu>
