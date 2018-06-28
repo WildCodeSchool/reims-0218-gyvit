@@ -136,7 +136,6 @@ class DropDown extends React.Component {
               onClick={() => {
                 console.log(this.props.dirId, this.props.dirName)
                 deleteDirectory(this.props.dirId, this.props.dirName)
-                  .then(response => console.log(response))
                   .then(dirId =>
                     this.props
                       .onDeleteDir(dirId)
