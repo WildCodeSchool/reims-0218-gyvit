@@ -43,14 +43,14 @@ class FoldersBarTopContainer extends React.Component {
               }}
             >
               <NavbarBrand>
-                Folders/
+                Folders
                 {this.props.currentDir.path &&
                   this.props.currentDir.path.map(pathElement => (
                     <PathElement name={pathElement.name} />
                   ))}
-                <a>
-                  {this.props.currentDir.name && this.props.currentDir.name}
-                </a>
+                {this.props.currentDir.name && (
+                  <PathElement name={this.props.currentDir.name} />
+                )}
               </NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
