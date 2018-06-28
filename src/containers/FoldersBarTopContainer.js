@@ -13,11 +13,14 @@ import {
   Container
 } from "reactstrap"
 import ModalCreateDirContainer from "./ModalCreateDirContainer"
+import ModalCreateFileContainer from "./ModalCreateFileContainer"
 import PathElement from "../components/PageFolders/PathElement"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
+import { makeShowModalCreateFile } from "../actions/modalCreateFileAction"
 
 const mapDispatchToProps = dispatch => ({
-  onShowCreateDir: () => dispatch(makeShowModalCreateDir())
+  onShowCreateDir: () => dispatch(makeShowModalCreateDir()),
+  onShowCreateFile: () => dispatch(makeShowModalCreateFile())
 })
 
 const mapStateToProps = state => ({
@@ -34,6 +37,7 @@ class FoldersBarTopContainer extends React.Component {
     return (
       <Container>
         <ModalCreateDirContainer />
+        <ModalCreateFileContainer />
         <Row>
           <Col xs="12">
             <Navbar
@@ -67,6 +71,18 @@ class FoldersBarTopContainer extends React.Component {
                       onClick={() => this.props.onShowCreateDir()}
                     >
                       +
+                    </Button>
+                    <Button
+                      type="button"
+                      style={{
+                        borderRadius: "50%",
+                        height: "50px",
+                        width: "50px",
+                        backgroundColor: "black"
+                      }}
+                      onClick={() => this.props.onShowCreateFile()}
+                    >
+                      File
                     </Button>
                   </NavItem>
                 </Nav>
