@@ -9,5 +9,5 @@ export const deleteDirectory = (dirId, dirName) =>
       "Access-Control-Allow-Origin": "http://localhost:3000",
       Authorization: `Bearer ${getToken()}`
     },
-    body: JSON.stringify(dirName)
+    body: JSON.stringify({ dirName })
   }).then(res => res.json())

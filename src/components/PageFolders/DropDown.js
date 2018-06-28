@@ -8,10 +8,12 @@ import {
   Button
 } from "reactstrap"
 import { makeDeleteAFolderSuccess } from "../../actions/foldersActions"
+import { makeShowModalError } from "../../actions/errorsActions"
 import { deleteDirectory } from "../../api/directorys/deleteDirectory"
 
 const mapDispatchToProps = dispatch => ({
-  onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId))
+  onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
+  onError: message => dispatch(makeShowModalError(message))
 })
 
 class DropDown extends React.Component {
@@ -133,14 +135,15 @@ class DropDown extends React.Component {
               className="dropdown-item"
               onClick={() => {
                 console.log(this.props.dirId, this.props.dirName)
-                deleteDirectory(this.props.dirId).then(dirId =>
-                  this.props
-                    .onDeleteFolders(dirId)
-                    .then(response =>
-                      console.log(`notre reesponse: ${response}`)
-                    )
-                    .catch(response => console.log(response))
-                )
+                deleteDirectory(this.props.dirId)
+                  .then(response => console.log(response))
+                  .then(dirId =>
+                    this.props
+                      .onDeleteDir(dirId)
+                      .then(response => this.props.onError(response))
+                      .catch(response => this.props.onError(response.message))
+                  )
+                  .catch(response => this.props.onError(response.message))
               }}
             >
               <span>Delete</span>
