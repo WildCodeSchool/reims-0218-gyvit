@@ -15,6 +15,7 @@ import {
 import ModalCreateDirContainer from "./ModalCreateDirContainer"
 import PathElement from "../components/PageFolders/PathElement"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
+import DragNDropContainers from "../containers/DragNDropContainers"
 
 const mapDispatchToProps = dispatch => ({
   onShowCreateDir: () => dispatch(makeShowModalCreateDir())
@@ -74,6 +75,7 @@ class FoldersBarTopContainer extends React.Component {
             </Navbar>
           </Col>
         </Row>
+        <DragNDropContainers />
       </Container>
     )
   }

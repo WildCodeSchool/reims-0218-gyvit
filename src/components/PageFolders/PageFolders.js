@@ -4,8 +4,6 @@ import NavbarTop from "../NavbarTop/NavbarTop"
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
 import FoldersBarTopContainer from "../../containers/FoldersBarTopContainer"
 
-import FoldersTableContainer from "../../containers/FoldersTableContainer"
-
 const PageFolders = () => (
   <Container fluid>
     <Row>
@@ -27,8 +25,6 @@ const PageFolders = () => (
       >
         <NavbarTop />
         <FoldersBarTopContainer />
-
-        <FoldersTableContainer />
       </Col>
     </Row>
   </Container>
