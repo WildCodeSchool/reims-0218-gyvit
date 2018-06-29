@@ -1,6 +1,13 @@
 import React from "react"
 
 const PathElement = ({ name }) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  console.log(process.env.PUBLIC_URL.concat("Icons/icon_arrow_right.png"))
+>>>>>>> displayPathWell
+>>>>>>> displayPathWell
   return (
     <a>
       <img
