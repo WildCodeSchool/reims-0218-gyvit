@@ -14,15 +14,13 @@ import {
 
 import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
 import { makeUpdateAFolderSuccess } from "../actions/foldersActions"
-import { updateDirectory } from "../api/directorys/updateDirectory"
+import { updateDir } from "../api/directorys/updateDir"
 
 const mapStateToProps = state => {
   return {
     name: state.name,
     destination: state.currentDir._id,
     modalUpdateDir: state.modalUpdateDir.visibilityUpdateDir
-
-    // modalCreateDir: state.modalCreateDir.visibilityCreateDir
   }
 }
 
@@ -43,7 +41,7 @@ class ModalUpdateDirContainer extends Component {
     this.setState({ name: event.target.value })
   }
   onUpdateDir() {
-    updateDirectory(this.state.name)
+    updateDir(this.state.name)
       .then(response => this.props.onSubmitUpdateDir(response))
       .then(() => this.props.onHideModal()) // close modal after creating a dir
   }

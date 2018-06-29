@@ -11,12 +11,15 @@ import {
   makeDeleteAFolderSuccess,
   makeUpdateAFolderSuccess
 } from "../../actions/foldersActions"
+import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
+import { makeShowModalUpdateDir } from "../../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../../actions/errorsActions"
 import { deleteDirectory } from "../../api/directorys/deleteDirectory"
-import { updateDir } from "../../api/directorys/updateDir"
+//import { updateDir } from "../../api/directorys/updateDir"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
+  onShowUpdateDir: () => dispatch(makeShowModalUpdateDir()),
   onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
@@ -44,6 +47,7 @@ class DropDown extends React.Component {
         isOpen={this.state.dropdownOpen}
         toggle={this.toggle}
       >
+        <ModalUpdateDirContainer />
         <DropdownToggle color="white">
           <img
             src="Assets/icon_dots_more.png"
@@ -129,9 +133,7 @@ class DropDown extends React.Component {
                 color: "black"
               }}
               className="dropdown-item"
-              onClick={() =>
-                console.log(`tu as cliqué sur ${this.props.dirId}`)
-              }
+              onClick={() => this.props.onShowUpdateDir()}
             >
               <span>Rename</span>
             </a>
