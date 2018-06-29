@@ -25,7 +25,6 @@ const PageFolders = () => (
           paddingRight: "0%"
         }}
       >
-        <ModalErrorContainer />
         <NavbarTop />
         <FoldersBarTopContainer />
         <ModalErrorContainer />
