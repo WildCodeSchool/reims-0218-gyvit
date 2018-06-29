@@ -13,7 +13,7 @@ import {
 } from "reactstrap"
 
 //function to split with search criteria
-const Highlight = (text, search) => {
+const highlight = (text, search) => {
   const highlightSuggestion = text.toLowerCase().split(search.toLowerCase())
   return highlightSuggestion
 }
@@ -57,7 +57,7 @@ const NavbarTopSearch = ({
           {search !== "" &&
             searchResults.map(searchResult => {
               // transform a string to display in several spans
-              const searchResultString = Highlight(searchResult.name, search)
+              const searchResultString = highlight(searchResult.name, search)
               return (
                 <DropdownItem
                   onClick={() => onDirclick(searchResult._id)}
