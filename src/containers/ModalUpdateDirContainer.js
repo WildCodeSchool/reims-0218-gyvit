@@ -12,19 +12,21 @@ import {
   Input
 } from "reactstrap"
 
-import { makeHideModalCreateDir } from "../actions/modalCreateDirAction"
+import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
 import { makeUpdateAFolderSuccess } from "../actions/foldersActions"
 import { updateDirectory } from "../api/directorys/updateDirectory"
 
 const mapStateToProps = state => {
   return {
-    name: state.name
+    name: state.name,
+    modalUpdateDir: state.modalUpdateDir.visibilityUpdateDir
+    // modalCreateDir: state.modalCreateDir.visibilityCreateDir
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
-  onHideModal: () => dispatch(makeHideModalCreateDir())
+  onSubmitUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
+  onHideModal: () => dispatch(makeShowModalUpdateDir())
 })
 
 class ModalUpdateDirContainer extends Component {
@@ -41,12 +43,12 @@ class ModalUpdateDirContainer extends Component {
   onUpdateDir() {
     updateDirectory(this.state.name)
       .then(response => this.props.onSubmitUpdateDir(response))
-      .then(() => this.props.onHideModal())
+      .then(() => this.props.onHideModal()) // close modal after creating a dir
   }
   render() {
     return (
       <div>
-        <Modal isOpen={this.props.modalUpadteDir}>
+        <Modal isOpen={this.props.modalUpdateDir}>
           <ModalHeader toggle={() => this.props.onHideModal()}>
             Rename the directory
           </ModalHeader>

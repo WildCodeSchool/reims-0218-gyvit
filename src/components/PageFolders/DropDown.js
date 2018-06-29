@@ -6,7 +6,7 @@ import {
   DropdownItem,
   Button
 } from "reactstrap"
-import ModalUpdateDirContainer from "../containers/ModalUpdateDirContainer"
+import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
 
 export default class DropDown extends React.Component {
   constructor(props) {
@@ -112,7 +112,7 @@ export default class DropDown extends React.Component {
           <DropdownItem divider />
           <div>
             <ModalUpdateDirContainer />
-            <a
+            <Button
               style={{
                 color: "black"
               }}
@@ -120,7 +120,7 @@ export default class DropDown extends React.Component {
               href=""
             >
               <span>Rename</span>
-            </a>
+            </Button>
             <Button
               style={{
                 color: "black"

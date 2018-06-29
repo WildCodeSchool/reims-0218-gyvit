@@ -13,19 +13,25 @@ import {
 } from "reactstrap"
 
 import { makeHideModalCreateDir } from "../actions/modalCreateDirAction"
-import { makeCreateDirSuccess } from "../actions/foldersActions"
+import {
+  makeCreateDirSuccess
+  // makeUpdateAFolderSuccess
+} from "../actions/foldersActions"
 import { createDir } from "../api/directorys/createDir"
+// import { updateDirectory } from "../api/directorys/updateDirectory"
 
 const mapStateToProps = state => {
   return {
     destination: state.currentDir._id,
     modalCreateDir: state.modalCreateDir.visibilityCreateDir
+    // modalUpdateDir: state.modalUpdateDir.visibilityUpdateDir
   }
 }
 
 const mapDispatchToProps = dispatch => ({
   // function to store the new dir
   onSubmitCreateDir: response => dispatch(makeCreateDirSuccess(response)),
+  // onSubmitUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   // function for cancelling modal
   onHideModal: () => dispatch(makeHideModalCreateDir())
 })
@@ -47,7 +53,11 @@ class ModalCreateDirContainer extends Component {
       .then(response => this.props.onSubmitCreateDir(response))
       .then(() => this.props.onHideModal()) // close modal after creating a dir
   }
-
+  // onUpdateDir() {
+  //   updateDirectory(this.state.name)
+  //     .then(response => this.props.onSubmitateDir(response))
+  //     .then(() => this.props.onHideModal()) // close modal after creating a dir
+  // }
   render() {
     return (
       <div>

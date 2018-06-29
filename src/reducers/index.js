@@ -19,7 +19,7 @@ export default combineReducers({
   parent: parentReducer,
   currentDir: currentDirReducer,
   modalCreateDir: modalCreateDirReducer,
-  modalUpdateir: modalUpdateDirReducer,
+  modalUpdateDir: modalUpdateDirReducer,
   resultSearch: resultSearchReducer,
   notif: NotifReducer
 })
