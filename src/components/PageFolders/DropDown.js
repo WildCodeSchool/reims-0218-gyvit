@@ -7,12 +7,17 @@ import {
   DropdownItem,
   Button
 } from "reactstrap"
-import { makeDeleteAFolderSuccess } from "../../actions/foldersActions"
+import {
+  makeDeleteAFolderSuccess,
+  makeUpdateAFolderSuccess
+} from "../../actions/foldersActions"
 import { makeShowModalError } from "../../actions/errorsActions"
 import { deleteDirectory } from "../../api/directorys/deleteDirectory"
+import { updateDir } from "../../api/directorys/updateDir"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
+  onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
 
@@ -124,7 +129,9 @@ class DropDown extends React.Component {
                 color: "black"
               }}
               className="dropdown-item"
-              href=""
+              onClick={() =>
+                console.log(`tu as cliqué sur ${this.props.dirId}`)
+              }
             >
               <span>Rename</span>
             </a>
