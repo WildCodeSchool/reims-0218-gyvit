@@ -28,7 +28,7 @@ const NavbarTopSearch = ({
   <div>
     <FormGroup>
       <Input
-        class="typeahead form-control"
+        className="typeahead form-control"
         style={{
           marginTop: "22px",
           marginLeft: "6px",
