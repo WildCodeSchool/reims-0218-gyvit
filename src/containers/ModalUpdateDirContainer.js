@@ -18,15 +18,19 @@ import { updateDir } from "../api/directorys/updateDir"
 
 const mapStateToProps = state => {
   return {
-    name: state.name,
-    id: state.dir,
+    name: state.modalUpdateDir.name,
+    id: state.modalUpdateDir.dir,
     destination: state.currentDir._id,
     modalUpdateDir: state.modalUpdateDir.visibilityUpdateDir
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  onSubmitUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
+  onSubmitUpdateDir: (name, dir) => {
+    updateDir(name, dir).then(response =>
+      dispatch(makeUpdateAFolderSuccess(response))
+    )
+  },
   onHideModal: () => dispatch(makeHideModalUpdateDir())
 })
 
@@ -44,7 +48,7 @@ class ModalUpdateDirContainer extends Component {
   }
 
   onUpdateDir() {
-    updateDir(this.state.name)
+    updateDir(this.state.name, this.props.id)
       .then(response => this.props.onSubmitUpdateDir(response))
       .then(() => this.props.onHideModal()) // close modal after creating a dir
   }
@@ -54,7 +58,7 @@ class ModalUpdateDirContainer extends Component {
       <div>
         <Modal isOpen={this.props.modalUpdateDir}>
           <ModalHeader toggle={() => this.props.onHideModal()}>
-            Rename the directory {this.dirName}
+            Rename the directory {this.props.name}
           </ModalHeader>
           <ModalBody>
             <Form name="formUpdateDir">
@@ -72,7 +76,8 @@ class ModalUpdateDirContainer extends Component {
               <Button
                 type="button"
                 onClick={() => {
-                  console.log("inside modal", this.props.name, this.props.dir)
+                  this.props.onSubmitUpdateDir(this.state.name, this.props.id)
+                  console.log("inside modal", this.state.name, this.props.id)
                   this.props.onHideModal()
                 }}
               >
