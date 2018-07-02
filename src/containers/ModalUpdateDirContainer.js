@@ -39,18 +39,11 @@ class ModalUpdateDirContainer extends Component {
     super(props)
     this.state = { name: "" }
     this.handleNameChange = this.handleNameChange.bind(this)
-    this.onUpdateDir = this.onUpdateDir.bind(this)
   }
 
   // controlled seizure
   handleNameChange(event) {
     this.setState({ name: event.target.value })
-  }
-
-  onUpdateDir() {
-    updateDir(this.state.name, this.props.id)
-      .then(response => this.props.onSubmitUpdateDir(response))
-      .then(() => this.props.onHideModal()) // close modal after creating a dir
   }
 
   render() {
