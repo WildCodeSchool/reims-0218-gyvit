@@ -63,6 +63,7 @@ class UploadFileFormContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  UploadFileFormContainer
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UploadFileFormContainer)

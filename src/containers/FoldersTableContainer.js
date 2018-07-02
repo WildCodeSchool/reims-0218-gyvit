@@ -42,4 +42,7 @@ class FoldersTableWrap extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FoldersTableWrap)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FoldersTableWrap)

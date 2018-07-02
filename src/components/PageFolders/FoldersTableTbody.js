@@ -25,15 +25,15 @@ const FoldersTableTbody = ({
       {dirs.map((dir, index) => {
         return <RowDir key={index} {...dir} onDirclick={onDirclick} />
       })}
-      {files.map(file => {
-        return <RowFile {...file} />
+      {files.map((file, index) => {
+        return <RowFile key={index} {...file} />
       })}
     </tbody>
   )
 }
 
 FoldersTableTbody.propTypes = {
-  files: PropTypes.array,
+  file: PropTypes.array,
   dir: PropTypes.array
 }
 
