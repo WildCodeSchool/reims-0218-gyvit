@@ -11,7 +11,9 @@ const initialState = {
 const modalUpdateDirReducer = (prevState = initialState, action) => {
   if (action.type === SHOW_MODAL_UPDATE_DIR) {
     return {
-      visibilityUpdateDir: true
+      visibilityUpdateDir: true,
+      dir: action.dir,
+      name: action.name
     }
   }
   if (action.type === HIDE_MODAL_UPDATE_DIR) {

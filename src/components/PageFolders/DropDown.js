@@ -130,13 +130,17 @@ class DropDown extends React.Component {
           </div>
           <DropdownItem divider />
           <div>
-            <a
+            <Button
               style={{
                 color: "black"
               }}
               className="dropdown-item"
               onClick={() => {
-                console.log(this.props.dirId, this.props.dirName)
+                console.log(
+                  "before button rename",
+                  this.props.dirId,
+                  this.props.dirName
+                )
                 return this.props.onShowUpdateDir(
                   this.props.dirId,
                   this.props.dirName
@@ -144,7 +148,7 @@ class DropDown extends React.Component {
               }}
             >
               <span>Renommer {this.state.dirName}</span>
-            </a>
+            </Button>
             <Button
               style={{
                 color: "black"

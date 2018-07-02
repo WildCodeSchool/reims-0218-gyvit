@@ -12,13 +12,14 @@ import {
   Input
 } from "reactstrap"
 
-import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
+import { makeHideModalUpdateDir } from "../actions/modalUpdateDirAction"
 import { makeUpdateAFolderSuccess } from "../actions/foldersActions"
 import { updateDir } from "../api/directorys/updateDir"
 
 const mapStateToProps = state => {
   return {
     name: state.name,
+    id: state.dir,
     destination: state.currentDir._id,
     modalUpdateDir: state.modalUpdateDir.visibilityUpdateDir
   }
@@ -26,7 +27,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   onSubmitUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
-  onHideModal: () => dispatch(makeShowModalUpdateDir())
+  onHideModal: () => dispatch(makeHideModalUpdateDir())
 })
 
 class ModalUpdateDirContainer extends Component {
@@ -37,6 +38,7 @@ class ModalUpdateDirContainer extends Component {
     this.onUpdateDir = this.onUpdateDir.bind(this)
   }
 
+  // controlled seizure
   handleNameChange(event) {
     this.setState({ name: event.target.value })
   }
@@ -69,7 +71,10 @@ class ModalUpdateDirContainer extends Component {
               </FormGroup>
               <Button
                 type="button"
-                onClick={() => console.log(this.state.name, this.state.dirName)}
+                onClick={() => {
+                  console.log("inside modal", this.props.name, this.props.dir)
+                  this.props.onHideModal()
+                }}
               >
                 Submit
               </Button>
