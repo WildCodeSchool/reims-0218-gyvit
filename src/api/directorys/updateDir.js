@@ -8,6 +8,6 @@ export const updateDir = (name, dirId) => {
       "Content-Type": "application/json",
       Authorization: `Bearer ${getToken()}`
     },
-    body: JSON.stringify({ name })
+    body: JSON.stringify({ name, dirId })
   }).then(res => res.json())
 }

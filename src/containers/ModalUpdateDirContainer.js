@@ -40,17 +40,19 @@ class ModalUpdateDirContainer extends Component {
   handleNameChange(event) {
     this.setState({ name: event.target.value })
   }
+
   onUpdateDir() {
     updateDir(this.state.name)
       .then(response => this.props.onSubmitUpdateDir(response))
       .then(() => this.props.onHideModal()) // close modal after creating a dir
   }
+
   render() {
     return (
       <div>
         <Modal isOpen={this.props.modalUpdateDir}>
           <ModalHeader toggle={() => this.props.onHideModal()}>
-            Rename the directory
+            Rename the directory {this.dirName}
           </ModalHeader>
           <ModalBody>
             <Form name="formUpdateDir">
@@ -65,7 +67,10 @@ class ModalUpdateDirContainer extends Component {
                   onChange={event => this.handleNameChange(event)}
                 />
               </FormGroup>
-              <Button type="button" onClick={() => this.onUpdateDir()}>
+              <Button
+                type="button"
+                onClick={() => console.log(this.state.name, this.state.dirName)}
+              >
                 Submit
               </Button>
             </Form>

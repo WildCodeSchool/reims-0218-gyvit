@@ -91,7 +91,6 @@ class FoldersBarTopContainer extends React.Component {
             </Navbar>
           </Col>
         </Row>
-        <DragNDropContainers />
       </Container>
     )
   }

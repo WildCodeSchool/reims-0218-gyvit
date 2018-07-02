@@ -19,7 +19,8 @@ import { deleteDirectory } from "../../api/directorys/deleteDirectory"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
-  onShowUpdateDir: () => dispatch(makeShowModalUpdateDir()),
+  onShowUpdateDir: (dirId, dirName) =>
+    dispatch(makeShowModalUpdateDir(dirId, dirName)),
   onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
@@ -30,7 +31,8 @@ class DropDown extends React.Component {
 
     this.toggle = this.toggle.bind(this)
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      dirName: this.props.dirName
     }
   }
 
@@ -133,9 +135,15 @@ class DropDown extends React.Component {
                 color: "black"
               }}
               className="dropdown-item"
-              onClick={() => this.props.onShowUpdateDir()}
+              onClick={() => {
+                console.log(this.props.dirId, this.props.dirName)
+                return this.props.onShowUpdateDir(
+                  this.props.dirId,
+                  this.props.dirName
+                )
+              }}
             >
-              <span>Rename</span>
+              <span>Renommer {this.state.dirName}</span>
             </a>
             <Button
               style={{
