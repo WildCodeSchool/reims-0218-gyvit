@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => ({
   onSubmitUploadFile: response => dispatch(makeAddAFileSuccess(response))
 })
 
-class DragNDropContainers extends React.Component {
+class DragNDropContainer extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -87,4 +87,4 @@ class DragNDropContainers extends React.Component {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DragNDropContainers)
+)(DragNDropContainer)

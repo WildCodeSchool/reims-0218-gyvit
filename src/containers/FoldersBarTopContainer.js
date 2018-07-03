@@ -17,11 +17,16 @@ import ModalCreateFileContainer from "./ModalCreateFileContainer"
 import PathElement from "../components/PageFolders/PathElement"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
 import { makeShowModalCreateFile } from "../actions/modalCreateFileAction"
-import DragNDropContainers from "../containers/DragNDropContainers"
+import DragNDropContainer from "../containers/DragNDropContainer"
+
+import { makeRetrieveDirSuccess } from "../actions/foldersActions"
+import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 
 const mapDispatchToProps = dispatch => ({
   onShowCreateDir: () => dispatch(makeShowModalCreateDir()),
-  onShowCreateFile: () => dispatch(makeShowModalCreateFile())
+  onShowCreateFile: () => dispatch(makeShowModalCreateFile()),
+  onSelectPathElement: id =>
+    retrieveDir(id).then(response => dispatch(makeRetrieveDirSuccess(response)))
 })
 
 const mapStateToProps = state => ({
@@ -51,7 +56,12 @@ class FoldersBarTopContainer extends React.Component {
                 Folders
                 {this.props.currentDir.path &&
                   this.props.currentDir.path.map(pathElement => (
-                    <PathElement name={pathElement.name} />
+                    <PathElement
+                      name={pathElement.name}
+                      onClick={() =>
+                        this.props.onSelectPathElement(pathElement._id)
+                      }
+                    />
                   ))}
                 {this.props.currentDir.name && (
                   <PathElement name={this.props.currentDir.name} />
@@ -91,6 +101,7 @@ class FoldersBarTopContainer extends React.Component {
             </Navbar>
           </Col>
         </Row>
+        <DragNDropContainer />
       </Container>
     )
   }
