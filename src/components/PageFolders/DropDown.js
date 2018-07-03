@@ -10,7 +10,8 @@ import {
 import {
   makeDeleteAFolderSuccess,
   makeUpdateAFolderSuccess,
-  makeRetrieveDirSuccess
+  makeRetrieveDirSuccess,
+  makeInformationsDir
 } from "../../actions/foldersActions"
 import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
 import ModalInformationsDirContainer from "../../containers/ModalInformationsDirContainer"
@@ -27,6 +28,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(makeShowModalUpdateDir(dirId, dirName)),
   onShowInformationsDir: (dirId, dirName) =>
     dispatch(makeShowModalInformationsDir(dirId, dirName)),
+  onListInformationsDir: dirId => dispatch(makeInformationsDir(dirId)),
   onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
@@ -124,15 +126,11 @@ class DropDown extends React.Component {
                 }}
                 className="dropdown-item"
                 onClick={() => {
-                  console.log(
-                    "before button rename",
+                  this.props.onShowInformationsDir(
                     this.props.dirId,
                     this.props.dirName
                   )
-                  return this.props.onShowInformationsDir(
-                    this.props.dirId,
-                    this.props.dirName
-                  )
+                  this.props.onListInformationsDir(this.props.dirId)
                 }}
               >
                 <img

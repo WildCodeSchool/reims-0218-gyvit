@@ -13,8 +13,7 @@ const modalInformationsDirReducer = (prevState = initialState, action) => {
     return {
       visibilityInformationsDir: true,
       dir: action.dir,
-      name: action.name,
-      response: action.response
+      name: action.name
     }
   }
   if (action.type === HIDE_MODAL_INFORMATIONS_DIR) {

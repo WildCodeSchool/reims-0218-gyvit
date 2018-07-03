@@ -6,6 +6,7 @@ import filesReducer from "./filesReducer"
 import parentReducer from "./parentReducer"
 import errorsReducer from "./errorsReducer"
 import currentDirReducer from "./currentDirReducer"
+import selectedDirReducer from "./selectedDirReducer"
 import modalCreateDirReducer from "./modalCreateDirReducer"
 import resultSearchReducer from "./resultSearchReducer"
 import NotifReducer from "./NotifReducer"
@@ -20,6 +21,7 @@ export default combineReducers({
   user: userReducer,
   parent: parentReducer,
   currentDir: currentDirReducer,
+  selectedDir: selectedDirReducer,
   modalCreateDir: modalCreateDirReducer,
   modalCreateFile: modalCreateFileReducer,
   modalUpdateDir: modalUpdateDirReducer,
