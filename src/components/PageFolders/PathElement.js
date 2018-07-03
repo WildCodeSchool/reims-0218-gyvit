@@ -6,11 +6,11 @@ class PathElement extends React.Component {
     this.state = { style: "" }
   }
 
-  onMouseEnter(underlined) {
-    if (underlined) this.setState({ style: "underline" })
+  onMouseEnter() {
+    if (this.props.isCurrent) this.setState({ style: "underline" })
   }
 
-  onMouseLeave(underlined) {
+  onMouseLeave() {
     this.setState({ style: "none" })
   }
 
@@ -19,13 +19,11 @@ class PathElement extends React.Component {
       <span
         onClick={this.props.onClick}
         onMouseEnter={() => {
-          console.log("Enter, underlined: ", this.props.underlined)
-          this.onMouseEnter(this.props.underlined)
+          this.onMouseEnter()
         }}
         style={{ textDecoration: this.state.style }}
         onMouseLeave={() => {
-          console.log("Leave, underlined: ", this.props.underlined)
-          this.onMouseLeave(this.props.underlined)
+          this.onMouseLeave()
         }}
       >
         <img
