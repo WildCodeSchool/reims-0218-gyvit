@@ -45,14 +45,13 @@ class DropDown extends React.Component {
   render() {
     return (
       <ButtonDropdown
-        style={{ marginTop: "30px" }}
+        style={{ marginTop: "15px" }}
         isOpen={this.state.dropdownOpen}
         toggle={this.toggle}
       >
-        <ModalUpdateDirContainer />
-        <DropdownToggle color="white">
+        <DropdownToggle color="link">
           <img
-            src="Assets/icon_dots_more.png"
+            src="Assets/icon_dots_more.svg"
             alt="Button Dropdown"
             aria-hidden="true"
           />
