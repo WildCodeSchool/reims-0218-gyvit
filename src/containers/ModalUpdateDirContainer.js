@@ -26,7 +26,6 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onSubmitUpdateDir: (name, dir) => updateDir(name, dir),
   onHideModal: () => dispatch(makeHideModalUpdateDir()),
   onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response))
 })
@@ -65,9 +64,8 @@ class ModalUpdateDirContainer extends Component {
               </FormGroup>
               <Button
                 type="button"
-                onClick={response => {
-                  const fonc = this.props.onSubmitUpdateDir
-                  fonc(this.state.name, this.props.id).then(res =>
+                onClick={() => {
+                  updateDir(this.state.name, this.props.id).then(res =>
                     this.props.onUpdateDir(res)
                   )
                   console.log("inside modal", this.state.name, this.props.id)
