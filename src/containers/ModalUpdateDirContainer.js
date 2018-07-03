@@ -67,11 +67,11 @@ class ModalUpdateDirContainer extends Component {
               </FormGroup>
               <Button
                 type="button"
-                onClick={() => {
+                onClick={response => {
                   this.props.onSubmitUpdateDir(this.state.name, this.props.id)
                   console.log("inside modal", this.state.name, this.props.id)
                   this.props.onHideModal()
-                  this.props.onUpdateDir(this.state.name, this.props.id)
+                  this.props.onUpdateDir(response)
                 }}
               >
                 Submit
