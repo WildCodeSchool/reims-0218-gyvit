@@ -4,7 +4,7 @@ import NavbarTop from "../NavbarTop/NavbarTop"
 import NavbarLeft from "../NavbarLeft/NavbarLeft"
 import FoldersBarTopContainer from "../../containers/FoldersBarTopContainer"
 import ModalErrorContainer from "../../containers/ModalErrorContainer"
-// import FoldersTableContainer from "../../containers/FoldersTableContainer"
+import FoldersTableContainer from "../../containers/FoldersTableContainer"
 
 const PageFolders = () => (
   <Container fluid>
@@ -28,7 +28,7 @@ const PageFolders = () => (
         <NavbarTop />
         <FoldersBarTopContainer />
         <ModalErrorContainer />
-        {/* <FoldersTableContainer /> */}
+        <FoldersTableContainer />
       </Col>
     </Row>
   </Container>

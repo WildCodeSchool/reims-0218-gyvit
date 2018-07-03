@@ -2,7 +2,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Row, Col } from "reactstrap"
+import { Container, Row, Col } from "reactstrap"
 
 import NotifContainer from "../../containers/NotifContainer"
 
@@ -11,8 +11,8 @@ const NavbarTopNotif = () => {
     <div>
       <img
         style={{
-          marginTop: "50%",
-          marginBotton: "50%"
+          marginTop: "35%",
+          marginBotton: "40%"
         }}
         src={process.env.PUBLIC_URL + "img/icon_notification.svg"}
         alt="iconNotif"

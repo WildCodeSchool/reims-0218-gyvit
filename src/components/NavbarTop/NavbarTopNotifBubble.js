@@ -8,15 +8,12 @@ const NavbarTopNotifBubble = () => {
     <Badge
       style={{
         backgroundColor: "#ff007e",
-        width: "1.7em",
-        height: "1.7em",
-        marginTop: "23%",
-        marginBotton: "71%"
+        marginTop: "8%",
+        marginBotton: "60%"
       }}
-      className="center"
       pill
     >
-      <p style={{ wigth: "0.5%", height: "0.7%" }}>6</p>
+      6
     </Badge>
   )
 }
