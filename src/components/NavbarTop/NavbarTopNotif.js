@@ -10,8 +10,7 @@ const NavbarTopNotif = () => {
     <div>
       <img
         style={{
-          marginTop: "35%",
-          marginBotton: "40%"
+          marginTop: "40%"
         }}
         src={process.env.PUBLIC_URL + "img/icon_notification.svg"}
         alt="iconNotif"
@@ -19,10 +18,6 @@ const NavbarTopNotif = () => {
       <NotifContainer />
     </div>
   )
-}
-
-NavbarTopNotif.propTypes = {
-  notifsCount: PropTypes.number.isRequired
 }
 
 export default NavbarTopNotif
