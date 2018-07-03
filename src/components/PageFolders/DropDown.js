@@ -7,12 +7,21 @@ import {
   DropdownItem,
   Button
 } from "reactstrap"
-import { makeDeleteAFolderSuccess } from "../../actions/foldersActions"
+import {
+  makeDeleteAFolderSuccess,
+  makeUpdateAFolderSuccess
+} from "../../actions/foldersActions"
+import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
+import { makeShowModalUpdateDir } from "../../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../../actions/errorsActions"
 import { deleteDirectory } from "../../api/directorys/deleteDirectory"
+//import { updateDir } from "../../api/directorys/updateDir"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
+  onShowUpdateDir: (dirId, dirName) =>
+    dispatch(makeShowModalUpdateDir(dirId, dirName)),
+  onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
 
@@ -22,7 +31,8 @@ class DropDown extends React.Component {
 
     this.toggle = this.toggle.bind(this)
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      dirName: this.props.dirName
     }
   }
 
@@ -39,6 +49,7 @@ class DropDown extends React.Component {
         isOpen={this.state.dropdownOpen}
         toggle={this.toggle}
       >
+        <ModalUpdateDirContainer />
         <DropdownToggle color="white">
           <img
             src="Assets/icon_dots_more.png"
@@ -119,15 +130,25 @@ class DropDown extends React.Component {
           </div>
           <DropdownItem divider />
           <div>
-            <a
+            <Button
               style={{
                 color: "black"
               }}
               className="dropdown-item"
-              href=""
+              onClick={() => {
+                console.log(
+                  "before button rename",
+                  this.props.dirId,
+                  this.props.dirName
+                )
+                return this.props.onShowUpdateDir(
+                  this.props.dirId,
+                  this.props.dirName
+                )
+              }}
             >
-              <span>Rename</span>
-            </a>
+              <span>Renommer {this.state.dirName}</span>
+            </Button>
             <Button
               style={{
                 color: "black"
