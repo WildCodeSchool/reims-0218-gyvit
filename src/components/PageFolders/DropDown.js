@@ -9,18 +9,24 @@ import {
 } from "reactstrap"
 import {
   makeDeleteAFolderSuccess,
-  makeUpdateAFolderSuccess
+  makeUpdateAFolderSuccess,
+  makeRetrieveDirSuccess
 } from "../../actions/foldersActions"
 import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
+import ModalInformationsDirContainer from "../../containers/ModalInformationsDirContainer"
 import { makeShowModalUpdateDir } from "../../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../../actions/errorsActions"
 import { deleteDirectory } from "../../api/directorys/deleteDirectory"
+import { makeShowModalInformationsDir } from "../../actions/modalInformationsDirAction"
 //import { updateDir } from "../../api/directorys/updateDir"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
+  onRetrieveDir: response => dispatch(makeRetrieveDirSuccess(response)),
   onShowUpdateDir: (dirId, dirName) =>
     dispatch(makeShowModalUpdateDir(dirId, dirName)),
+  onShowInformationsDir: (dirId, dirName) =>
+    dispatch(makeShowModalInformationsDir(dirId, dirName)),
   onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
@@ -50,6 +56,7 @@ class DropDown extends React.Component {
         toggle={this.toggle}
       >
         <ModalUpdateDirContainer />
+        <ModalInformationsDirContainer />
         <DropdownToggle color="white">
           <img
             src="Assets/icon_dots_more.png"
@@ -110,23 +117,35 @@ class DropDown extends React.Component {
               />
               <span>Create private access</span>
             </a>
-            <a
-              style={{
-                color: "black"
-              }}
-              className="dropdown-item"
-              href=""
-            >
-              <img
+            <div>
+              <Button
                 style={{
-                  marginRight: "8%"
+                  color: "black"
                 }}
-                src="Assets/icon_informations.png"
-                alt=""
-                aria-hidden="true"
-              />
-              <span>Informations</span>
-            </a>
+                className="dropdown-item"
+                onClick={() => {
+                  console.log(
+                    "before button rename",
+                    this.props.dirId,
+                    this.props.dirName
+                  )
+                  return this.props.onShowInformationsDir(
+                    this.props.dirId,
+                    this.props.dirName
+                  )
+                }}
+              >
+                <img
+                  style={{
+                    marginRight: "8%"
+                  }}
+                  src="Assets/icon_informations.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>Informations</span>
+              </Button>
+            </div>
           </div>
           <DropdownItem divider />
           <div>
