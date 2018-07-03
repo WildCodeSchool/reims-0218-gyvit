@@ -28,7 +28,7 @@ const NavbarTopSearch = ({
   <div>
     <FormGroup>
       <Input
-        class="typeahead form-control"
+        className="typeahead form-control"
         style={{
           marginTop: "22px",
           marginLeft: "6px",
@@ -45,7 +45,7 @@ const NavbarTopSearch = ({
         value={search}
       />
 
-      <Dropdown isOpen={search}>
+      <Dropdown isOpen={true}>
         <DropdownMenu
           style={{
             transform: "none",
@@ -61,10 +61,8 @@ const NavbarTopSearch = ({
               return (
                 <DropdownItem
                   onClick={() => onDirclick(searchResult._id)}
-                  toggle={false}
                   key={searchResult.value}
                   value={searchResult.value}
-                  {...searchResult}
                 >
                   <span>{searchResultString[0]}</span>
                   <span style={{ color: "red" }}>{search}</span>
