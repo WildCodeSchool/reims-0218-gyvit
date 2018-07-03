@@ -11,12 +11,10 @@ const NavbarTopNotif = () => {
     <div>
       <img
         style={{
-          width: " 16px",
-          height: "16px",
-          marginTop: "37px",
-          marginBotton: "37px"
+          marginTop: "50%",
+          marginBotton: "50%"
         }}
-        src={process.env.PUBLIC_URL + "img/icon_notification.png"}
+        src={process.env.PUBLIC_URL + "img/icon_notification.svg"}
         alt="iconNotif"
       />
       <NotifContainer />
