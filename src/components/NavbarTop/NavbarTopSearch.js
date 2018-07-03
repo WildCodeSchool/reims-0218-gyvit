@@ -61,10 +61,8 @@ const NavbarTopSearch = ({
               return (
                 <DropdownItem
                   onClick={() => onDirclick(searchResult._id)}
-                  toggle={false}
                   key={searchResult.value}
                   value={searchResult.value}
-                  {...searchResult}
                 >
                   <span>{searchResultString[0]}</span>
                   <span style={{ color: "red" }}>{search}</span>
