@@ -3,46 +3,38 @@ import { Button, Row, Container, Col } from "reactstrap"
 
 const SignInContent = () => (
   <div
-    className="d-none d-xl-block d-lg-none"
+    className="d-none d-md-block d-xl-block d-lg-none"
     style={{
       width: "max-width",
-      height: "100%",
+      height: "100vh",
       backgroundImage:
         "url('https://www.onecomputer.fr/wp-content/uploads/2016/01/blurred-background-81.jpg')",
       position: "relative"
     }}
   >
-    <Container>
-      <Row>
-        <Col xs="7">
+    <Container className="d-md-none  d-xl-block d-lg-none">
+      <Row style={{ paddingTop: "2vh" }}>
+        <Col xs="8" className="d-flex align-items-center">
           <a
             href="/sign-up"
             style={{
-              marginTop: "10%",
+              paddingLeft: "50%",
               fontSize: "16px",
-              fontWeight: "normal",
-              fontStyle: "normal",
-              letterSpacing: "normal",
-              textAlign: "left",
-              color: "#3b425d",
-              position: "absolute",
-              marginLeft: "70%"
+              width: "100vw",
+              color: "#3b425d"
             }}
           >
             Don't have an account ?
           </a>
         </Col>
-        <Col xs="5">
+        <Col xs="4">
           <Button
             href="sign-up"
             outline
             style={{
-              width: "156px",
-              height: "54px",
               borderRadius: "100px",
               border: "solid 1px #7a57d1",
-              color: "#7a57d1",
-              marginTop: "10%"
+              color: "#7a57d1"
             }}
           >
             Get Started

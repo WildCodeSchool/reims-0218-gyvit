@@ -1,5 +1,6 @@
 import React from "react"
 import { Col } from "reactstrap"
+import { NavLink } from "react-router-dom"
 
 const NavbarLeftLogo = () => {
   return (
@@ -15,7 +16,11 @@ const NavbarLeftLogo = () => {
         fontSize: "20px"
       }}
     >
-      <Col>GYVIT</Col>
+      <Col>
+        <NavLink style={{ color: "white" }} to="/Home">
+          GYVIT
+        </NavLink>
+      </Col>
     </div>
   )
 }
