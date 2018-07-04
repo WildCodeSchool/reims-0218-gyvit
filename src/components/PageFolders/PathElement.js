@@ -17,6 +17,7 @@ class PathElement extends React.Component {
   render() {
     return (
       <span
+        style={{ cursor: "pointer" }}
         onClick={this.props.onClick}
         onMouseEnter={() => {
           this.onMouseEnter()
