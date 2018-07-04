@@ -5,7 +5,10 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Button
+  Button,
+  Popover,
+  PopoverHeader,
+  PopoverBody
 } from "reactstrap"
 import {
   makeDeleteAFolderSuccess,
@@ -16,7 +19,7 @@ import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
 import { makeShowModalUpdateDir } from "../../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../../actions/errorsActions"
 import { deleteDirectory } from "../../api/directorys/deleteDirectory"
-import ModalInformationsDirContainer from "../../containers/ModalInformationsDirContainer"
+//import ModalInformationsDirContainer from "../../containers/ModalInformationsDirContainer"
 //import { updateDir } from "../../api/directorys/updateDir"
 
 const mapDispatchToProps = dispatch => ({
@@ -30,6 +33,10 @@ const mapDispatchToProps = dispatch => ({
   onError: message => dispatch(makeShowModalError(message))
 })
 
+const mapStateToProps = state => ({
+  selectedDir: state.selectedDir
+})
+
 class DropDown extends React.Component {
   constructor(props) {
     super(props)
@@ -38,6 +45,7 @@ class DropDown extends React.Component {
     this.toggle = this.toggle.bind(this)
     this.state = {
       dropdownOpen: false,
+      popoverInformationsOpen: false,
       dirName: name
     }
   }
@@ -45,6 +53,12 @@ class DropDown extends React.Component {
   toggle() {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
+    })
+  }
+
+  onToggleInformationsPopover() {
+    this.setState({
+      popoverInformationsOpen: !this.state.popoverInformationsOpen
     })
   }
 
@@ -56,8 +70,12 @@ class DropDown extends React.Component {
         toggle={this.toggle}
       >
         <ModalUpdateDirContainer />
-        <ModalInformationsDirContainer />
-        <DropdownToggle color="link">
+        <DropdownToggle
+          color="link"
+          onClick={() => {
+            this.props.onListInformationsDir(this.props.dir)
+          }}
+        >
           <img
             src="Assets/icon_dots_more.svg"
             alt="Button Dropdown"
@@ -118,14 +136,28 @@ class DropDown extends React.Component {
               <span>Create private access</span>
             </a>
             <div>
+              <div>
+                <Popover
+                  placement="left"
+                  isOpen={this.state.popoverInformationsOpen}
+                  target="popoverInformations"
+                  toggle={this.onToggleInformationsPopover}
+                >
+                  <PopoverHeader>
+                    Informations of {this.props.selectedDir.name}
+                  </PopoverHeader>
+                  <PopoverBody>
+                    Created: {this.props.selectedDir.created}
+                  </PopoverBody>
+                </Popover>
+              </div>
               <Button
+                id="popoverInformations"
                 style={{
                   color: "black"
                 }}
                 className="dropdown-item"
-                onClick={() => {
-                  this.props.onListInformationsDir(this.props.dir)
-                }}
+                onClick={() => this.onToggleInformationsPopover()}
               >
                 <img
                   style={{
@@ -176,4 +208,4 @@ class DropDown extends React.Component {
     )
   }
 }
-export default connect(null, mapDispatchToProps)(DropDown)
+export default connect(mapStateToProps, mapDispatchToProps)(DropDown)
