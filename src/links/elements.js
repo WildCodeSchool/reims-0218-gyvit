@@ -24,6 +24,6 @@ export const elements = [
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
     buttonText: "Upload documents",
-    link: "lien2"
+    link: "/dirs"
   }
 ]
