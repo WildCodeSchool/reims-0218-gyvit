@@ -25,7 +25,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(makeShowModalUpdateDir(dirId, dirName)),
   onShowInformationsDir: (dirId, dirName) =>
     dispatch(makeShowModalUpdateDir(dirId, dirName)),
-  onListInformationsDir: dirId => dispatch(makeInformationsDir(dirId)),
+  onListInformationsDir: response => dispatch(makeInformationsDir(response)),
   onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
@@ -34,10 +34,11 @@ class DropDown extends React.Component {
   constructor(props) {
     super(props)
 
+    const { _id, name, created, modified, shares } = props.dir
     this.toggle = this.toggle.bind(this)
     this.state = {
       dropdownOpen: false,
-      dirName: this.props.dirName
+      dirName: name
     }
   }
 
@@ -123,10 +124,7 @@ class DropDown extends React.Component {
                 }}
                 className="dropdown-item"
                 onClick={() => {
-                  this.props.onListInformationsDir(
-                    this.props.dirId,
-                    this.props.dirName
-                  )
+                  this.props.onListInformationsDir(this.props.dir)
                 }}
               >
                 <img
@@ -149,18 +147,11 @@ class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                console.log(
-                  "before button rename",
-                  this.props.dirId,
-                  this.props.dirName
-                )
-                return this.props.onShowUpdateDir(
-                  this.props.dirId,
-                  this.props.dirName
-                )
+                console.log("before button rename", this._id, this.name)
+                return this.props.onShowUpdateDir(this._id, this.name)
               }}
             >
-              <span>Renommer {this.state.dirName}</span>
+              <span>Renommer {this.name}</span>
             </Button>
             <Button
               style={{
@@ -168,7 +159,7 @@ class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                deleteDirectory(this.props.dirId, this.props.dirName)
+                deleteDirectory(this._id, this.name)
                   .then(response => {
                     // if response isn't with _id, error is catched
                     return this.props.onDeleteDir(response._id)
