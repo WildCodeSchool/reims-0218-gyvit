@@ -2,12 +2,12 @@ export const link = [
   {
     nameLink: " Home",
     icon: process.env.PUBLIC_URL + "/img/icon_home.svg",
-    link: "/dashboard"
+    link: "/Home"
   },
   {
     nameLink: " Files",
     icon: process.env.PUBLIC_URL + "/img/icon_files.svg",
-    link: "/dirs"
+    link: "/Files"
   },
   {
     nameLink: " Shares",
