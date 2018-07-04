@@ -3,7 +3,7 @@ import { Table, Container } from "reactstrap"
 import PropTypes from "prop-types"
 import FoldersTableTbody from "./FoldersTableTbody"
 import FoldersTableCategory from "./FoldersTableCategory"
-
+import { Scrollbars } from "react-custom-scrollbars"
 const FoldersTable = ({
   files = [],
   dirs = [],
@@ -12,12 +12,11 @@ const FoldersTable = ({
   onBackclick
 }) => (
   <div>
-    <Container
+    <Scrollbars
       style={{
         padding: "15px",
         width: "100%",
-        height: "650px",
-        overflow: " auto"
+        height: "70vh"
       }}
     >
       <Table borderless striped>
@@ -43,7 +42,7 @@ const FoldersTable = ({
           dirs={dirs}
         />
       </Table>
-    </Container>
+    </Scrollbars>
   </div>
 )
 
