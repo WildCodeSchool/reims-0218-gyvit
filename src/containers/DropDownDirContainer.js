@@ -10,7 +10,6 @@ import {
   PopoverHeader,
   PopoverBody,
   Card,
-  CardImg,
   CardText,
   CardBody,
   CardTitle,
