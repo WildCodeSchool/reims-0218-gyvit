@@ -74,23 +74,28 @@ class FoldersBarTopContainer extends React.Component {
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
-                <img
-                src={process.env.PUBLIC_URL.concat("../Icons/addfolder.png")}
-                alt="add directory"
-                onClick={() => this.props.onShowCreateDir()}
-          />
-                    <Button
+                <Button
                       type="button"
                       style={{
                         borderRadius: "50%",
                         height: "50px",
                         width: "50px",
-                        backgroundColor: "black"
+                        backgroundColor: "#725fe3"
                       }}
-                      onClick={() => this.props.onShowCreateFile()}
+                      onClick={() => this.props.onShowCreateDir()}
                     >
-                      File
+                      + 
                     </Button>
+                    <img
+                src={process.env.PUBLIC_URL.concat("../Icons/file.svg")}
+                style={{
+                  height: "50px",
+                  width: "50px",
+                 // backgroundColor: "#725fe3"
+                }}
+                alt="add directory"
+                onClick={() => this.props.onShowCreateFile()}
+                 />
                   
                 </Nav>
               </Collapse>
