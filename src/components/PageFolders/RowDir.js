@@ -1,12 +1,7 @@
 import React from "react"
-import { DateTime } from "luxon"
 import DropDown from "./DropDown"
 import Share from "./Share"
-
-const convertDateFromJsonToFrench = dateToTransform =>
-  DateTime.fromMillis(Date.parse(dateToTransform))
-    .setLocale("fr-FR")
-    .toLocaleString(DateTime.DATETIME_SHORT)
+import { convertDateFromJsonToFrench } from "../../functions/dirs"
 
 const RowDir = ({ dir, onDirclick }) => {
   const { _id, name, modified, shares } = dir

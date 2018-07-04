@@ -19,14 +19,11 @@ import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
 import { makeShowModalUpdateDir } from "../../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../../actions/errorsActions"
 import { deleteDirectory } from "../../api/directorys/deleteDirectory"
-//import ModalInformationsDirContainer from "../../containers/ModalInformationsDirContainer"
-//import { updateDir } from "../../api/directorys/updateDir"
+import { convertDateFromJsonToFrench } from "../../functions/dirs"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
   onShowUpdateDir: (dirId, dirName) =>
-    dispatch(makeShowModalUpdateDir(dirId, dirName)),
-  onShowInformationsDir: (dirId, dirName) =>
     dispatch(makeShowModalUpdateDir(dirId, dirName)),
   onListInformationsDir: response => dispatch(makeInformationsDir(response)),
   onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
@@ -40,13 +37,10 @@ const mapStateToProps = state => ({
 class DropDown extends React.Component {
   constructor(props) {
     super(props)
-
-    const { _id, name, created, modified, shares } = props.dir
     this.toggle = this.toggle.bind(this)
     this.state = {
       dropdownOpen: false,
-      popoverInformationsOpen: false,
-      dirName: name
+      popoverInformationsOpen: false
     }
   }
 
@@ -63,11 +57,13 @@ class DropDown extends React.Component {
   }
 
   render() {
+    const { _id, name, created, modified, shares } = this.props.dir
     return (
       <ButtonDropdown
         style={{ marginTop: "15px" }}
         isOpen={this.state.dropdownOpen}
         toggle={this.toggle}
+        direction="left"
       >
         <ModalUpdateDirContainer />
         <DropdownToggle
@@ -138,16 +134,15 @@ class DropDown extends React.Component {
             <div>
               <div>
                 <Popover
-                  placement="left"
+                  placement="left-start"
                   isOpen={this.state.popoverInformationsOpen}
                   target="popoverInformations"
                   toggle={this.onToggleInformationsPopover}
                 >
-                  <PopoverHeader>
-                    Informations of {this.props.selectedDir.name}
-                  </PopoverHeader>
+                  <PopoverHeader>Informations of {name}</PopoverHeader>
                   <PopoverBody>
-                    Created: {this.props.selectedDir.created}
+                    Created: {convertDateFromJsonToFrench(created)}
+                    Modified: {convertDateFromJsonToFrench(modified)}
                   </PopoverBody>
                 </Popover>
               </div>
@@ -179,11 +174,10 @@ class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                console.log("before button rename", this._id, this.name)
-                return this.props.onShowUpdateDir(this._id, this.name)
+                return this.props.onShowUpdateDir(_id, name)
               }}
             >
-              <span>Renommer {this.name}</span>
+              <span>Renommer {name}</span>
             </Button>
             <Button
               style={{
@@ -191,7 +185,7 @@ class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                deleteDirectory(this._id, this.name)
+                deleteDirectory(_id, name)
                   .then(response => {
                     // if response isn't with _id, error is catched
                     return this.props.onDeleteDir(response._id)
