@@ -57,6 +57,7 @@ class FoldersBarTopContainer extends React.Component {
                 {this.props.currentDir.path &&
                   this.props.currentDir.path.map(pathElement => (
                     <PathElement
+                      isCurrent={true}
                       name={pathElement.name}
                       onClick={() =>
                         this.props.onSelectPathElement(pathElement._id)
@@ -64,7 +65,10 @@ class FoldersBarTopContainer extends React.Component {
                     />
                   ))}
                 {this.props.currentDir.name && (
-                  <PathElement name={this.props.currentDir.name} />
+                  <PathElement
+                    isCurrent={false}
+                    name={this.props.currentDir.name}
+                  />
                 )}
               </NavbarBrand>
               <NavbarToggler />
