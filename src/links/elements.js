@@ -6,7 +6,7 @@ export const elements = [
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
     buttonText: "Create first request",
-    link: "lien0"
+    link: "/requests"
   },
   {
     id: 1,
@@ -15,7 +15,7 @@ export const elements = [
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
     buttonText: "Share documents",
-    link: "lien1"
+    link: "/shares"
   },
   {
     id: 2,
@@ -24,6 +24,6 @@ export const elements = [
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
     buttonText: "Upload documents",
-    link: "/dirs"
+    link: "/files"
   }
 ]

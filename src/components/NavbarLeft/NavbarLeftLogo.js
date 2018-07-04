@@ -17,7 +17,7 @@ const NavbarLeftLogo = () => {
       }}
     >
       <Col>
-        <NavLink style={{ color: "white" }} to="/Home">
+        <NavLink style={{ color: "white" }} to="/home">
           GYVIT
         </NavLink>
       </Col>
