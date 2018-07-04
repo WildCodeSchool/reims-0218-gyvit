@@ -9,10 +9,9 @@ const convertDateFromJsonToFrench = dateToTransform =>
     .toLocaleString(DateTime.DATETIME_SHORT)
 
 const RowDir = ({ _id, name, shares, onDirclick, modified }) => (
-  <tr key={_id}>
+  <tr onClick={() => onDirclick(_id)} style={{ cursor: "pointer" }} key={_id}>
     <th style={{ width: "40%" }}>
       <img
-        onClick={() => onDirclick(_id)}
         style={{
           width: "30px",
           height: "29px",
