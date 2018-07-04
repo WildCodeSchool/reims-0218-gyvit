@@ -42,7 +42,9 @@ const Root = ({ store }) => (
         <PrivateRoute path="/dashboard" component={PageDashboard} />
         <PrivateRoute path="/dirs" component={PageFolders} />
         <PrivateRoute path="/get-started" component={PageGetStarted} />
-        <PrivateRoute path="/InConstruction" component={InConstruction} />
+        <PrivateRoute path="/templates" component={InConstruction} />
+        <PrivateRoute path="/requests" component={InConstruction} />
+        <PrivateRoute path="/settings" component={InConstruction} />
       </div>
     </Router>
   </Provider>
