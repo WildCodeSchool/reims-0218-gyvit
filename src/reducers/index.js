@@ -2,6 +2,7 @@ import { combineReducers } from "redux"
 
 import userReducer from "./userReducer"
 import foldersReducer from "./foldersReducer"
+import selectedDirReducer from "./selectedDirReducer"
 import filesReducer from "./filesReducer"
 import parentReducer from "./parentReducer"
 import errorsReducer from "./errorsReducer"
@@ -19,6 +20,7 @@ export default combineReducers({
   user: userReducer,
   parent: parentReducer,
   currentDir: currentDirReducer,
+  selectedDir: selectedDirReducer,
   modalCreateDir: modalCreateDirReducer,
   modalCreateFile: modalCreateFileReducer,
   modalUpdateDir: modalUpdateDirReducer,

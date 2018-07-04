@@ -5,6 +5,7 @@ export const UPDATE_A_FOLDER_SUCCESS = "UPDATE_A_FOLDER_SUCCESS"
 export const DELETE_A_FOLDER_SUCCESS = "DELETE_A_FOLDER_SUCCESS"
 export const LIST_ALL_DIRS = "LIST_ALL_DIRS"
 export const REPLACE_FOLDERS_BY_FILE = "REPLACE_FOLDERS_BY_FILE"
+export const LIST_INFORMATIONS_DIR_SUCCESS = "LIST_INFORMATIONS_DIR_SUCCESS"
 
 export const makeFetchFoldersSuccess = response => ({
   type: FETCH_FOLDERS_SUCCESS,
@@ -38,5 +39,11 @@ export const makeDeleteAFolderSuccess = dirId => ({
 
 export const makeListAllDirs = response => ({
   type: LIST_ALL_DIRS,
+  response
+})
+
+//like makeRetrieveDirSuccess but currentDir stay inchanged
+export const makeInformationsDir = response => ({
+  type: LIST_INFORMATIONS_DIR_SUCCESS,
   response
 })
