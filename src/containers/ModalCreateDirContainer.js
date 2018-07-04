@@ -12,8 +12,10 @@ import {
   Input
 } from "reactstrap"
 
+import ModalErrorContainer from "./ModalErrorContainer"
 import { makeHideModalCreateDir } from "../actions/modalCreateDirAction"
 import { makeCreateDirSuccess } from "../actions/foldersActions"
+import { makeShowModalError } from "../actions/errorsActions"
 import { createDir } from "../api/directorys/createDir"
 
 const mapStateToProps = state => {
@@ -27,13 +29,14 @@ const mapDispatchToProps = dispatch => ({
   // function to store the new dir
   onSubmitCreateDir: response => dispatch(makeCreateDirSuccess(response)),
   // function for cancelling modal
-  onHideModal: () => dispatch(makeHideModalCreateDir())
+  onHideModal: () => dispatch(makeHideModalCreateDir()),
+  onError: message => dispatch(makeShowModalError(message))
 })
 
 class ModalCreateDirContainer extends Component {
   constructor(props) {
     super(props)
-    this.state = { name: "" }
+    this.state = { name: "", visibilityError: false }
     this.handleNameChange = this.handleNameChange.bind(this)
     this.onCreateDir = this.onCreateDir.bind(this)
   }
@@ -46,6 +49,7 @@ class ModalCreateDirContainer extends Component {
     createDir(this.state.name, this.props.destination)
       .then(response => this.props.onSubmitCreateDir(response))
       .then(() => this.props.onHideModal()) // close modal after creating a dir
+      .catch(response => this.props.onError(response.message))
   }
 
   render() {
@@ -55,6 +59,7 @@ class ModalCreateDirContainer extends Component {
           <ModalHeader toggle={() => this.props.onHideModal() /*cancel modal*/}>
             Add a directory
           </ModalHeader>
+          <ModalErrorContainer />
           <ModalBody>
             <Form name="formCreateDir">
               <FormGroup>
