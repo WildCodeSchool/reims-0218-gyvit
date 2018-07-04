@@ -10,7 +10,10 @@ import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageForgetPassword from "../components/PageForgotPassword/PageForgotPassword"
 import PageDashboard from "../components/PageDashboard/PageDashboard"
 import { hasToken } from "../api/users/localStorageToken"
-import InConstruction from "../components/InConstruction"
+import PageShares from "../components/ComingSoon/PageShares"
+import PageTemplates from "../components/ComingSoon/PageTemplates"
+import PageRequests from "../components/ComingSoon/PageRequests"
+import PageSettings from "../components/ComingSoon/PageSettings"
 
 //function test token true or false for protect routes
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -39,12 +42,13 @@ const Root = ({ store }) => (
         <Route path="/sign-up" component={PageSignIn} />{" "}
         {/* TODO: PAGE SIGN UP */}
         <Route path="/forgot-password" component={PageForgetPassword} />
-        <PrivateRoute path="/Home" component={PageDashboard} />
-        <PrivateRoute path="/Files" component={PageFolders} />
+        <PrivateRoute path="/home" component={PageDashboard} />
+        <PrivateRoute path="/files" component={PageFolders} />
+        <PrivateRoute path="/shares" component={PageShares} />
+        <PrivateRoute path="/templates" component={PageTemplates} />
+        <PrivateRoute path="/requests" component={PageRequests} />
+        <PrivateRoute path="/settings" component={PageSettings} />
         <PrivateRoute path="/get-started" component={PageGetStarted} />
-        <PrivateRoute path="/templates" component={InConstruction} />
-        <PrivateRoute path="/requests" component={InConstruction} />
-        <PrivateRoute path="/settings" component={InConstruction} />
       </div>
     </Router>
   </Provider>
