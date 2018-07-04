@@ -90,6 +90,7 @@ class FoldersBarTopContainer extends React.Component {
                 src={process.env.PUBLIC_URL.concat("../Icons/file.svg")}
                 style={{
                   height: "50px",
+                  
                   width: "50px",
                  // backgroundColor: "#725fe3"
                 }}
