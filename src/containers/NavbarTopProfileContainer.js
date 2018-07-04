@@ -105,9 +105,7 @@ class NavbarTopProfileContainer extends Component {
               href="/"
               color="primary"
               size="xs"
-              onClick={() =>
-                removeToken().then(() => this.props.onDisconnectedUser())
-              }
+              onClick={() => this.props.onDisconnectedUser().removeToken()}
             >
               Déconnexion
             </a>
@@ -118,7 +116,6 @@ class NavbarTopProfileContainer extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NavbarTopProfileContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  NavbarTopProfileContainer
+)
