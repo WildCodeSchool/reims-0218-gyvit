@@ -12,7 +12,14 @@ const FoldersTable = ({
   onBackclick
 }) => (
   <div>
-    <Container>
+    <Container
+      style={{
+        padding: "15px",
+        width: "100%",
+        height: "650px",
+        overflow: " auto"
+      }}
+    >
       <Table borderless striped>
         <thead>
           <tr>
