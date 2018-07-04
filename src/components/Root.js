@@ -10,6 +10,7 @@ import PageGetStarted from "../components/PageGetStarted/PageGetStarted"
 import PageForgetPassword from "../components/PageForgotPassword/PageForgotPassword"
 import PageDashboard from "../components/PageDashboard/PageDashboard"
 import { hasToken } from "../api/users/localStorageToken"
+import InConstruction from "../components/InConstruction"
 
 //function test token true or false for protect routes
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -41,6 +42,7 @@ const Root = ({ store }) => (
         <PrivateRoute path="/dashboard" component={PageDashboard} />
         <PrivateRoute path="/dirs" component={PageFolders} />
         <PrivateRoute path="/get-started" component={PageGetStarted} />
+        <PrivateRoute path="/InConstruction" component={InConstruction} />
       </div>
     </Router>
   </Provider>

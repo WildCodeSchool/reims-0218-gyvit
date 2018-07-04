@@ -17,17 +17,17 @@ export const link = [
   {
     nameLink: " Templates",
     icon: process.env.PUBLIC_URL + "/img/icon_templates.svg",
-    link: "#"
+    link: "/InConstruction"
   },
   {
     nameLink: " Requests",
     icon: process.env.PUBLIC_URL + "/img/icon_requests.svg",
-    link: "#"
+    link: "/InConstruction"
   }
 ]
 
 export const settings = {
   nameLink: " Settings",
   icon: process.env.PUBLIC_URL + "/img/icon_settings.svg",
-  link: "#"
+  link: "/InConstruction"
 }
