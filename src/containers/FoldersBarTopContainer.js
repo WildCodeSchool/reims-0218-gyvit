@@ -77,6 +77,7 @@ class FoldersBarTopContainer extends React.Component {
                 <img
                 src={process.env.PUBLIC_URL.concat("../Icons/addfolder.png")}
                 alt="add directory"
+                onClick={() => this.props.onShowCreateDir()}
           />
                     <Button
                       type="button"
