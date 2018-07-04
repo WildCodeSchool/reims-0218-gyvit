@@ -10,6 +10,7 @@ import {
   Row
 } from "reactstrap"
 import PropTypes from "prop-types"
+import { NavLink } from "react-router-dom"
 
 const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
   return (
@@ -69,20 +70,28 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
               >
                 {bio}
               </CardText>
-              <Button
-                style={{
-                  width: "170px",
-                  height: "44px",
-                  fontSize: "16px",
-                  borderRadius: "2px",
-                  marginRight: "59px",
-                  marginLeft: "59px ",
-                  marginBottom: "30px",
-                  padding: "0px"
-                }}
-                src={link}
-              >
-                {buttonText}
+              <Button>
+                <NavLink
+                  style={{
+                    width: "170px",
+                    height: "44px",
+                    fontSize: "16px",
+                    borderRadius: "2px",
+                    marginRight: "59px",
+                    marginLeft: "59px ",
+                    marginBottom: "30px",
+                    padding: "0px",
+                    color: "white"
+                  }}
+                  to={link}
+                  activeClassName="selected"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
+                >
+                  {buttonText}
+                </NavLink>
               </Button>
             </CardBody>
           </Card>

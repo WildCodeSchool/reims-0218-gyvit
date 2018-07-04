@@ -18,6 +18,7 @@ const FoldersTableTbody = ({
           title="Go to parent directory"
           className="js-navigation-open"
           onClick={() => onBackclick(parent._id)}
+          style={{ cursor: "pointer" }}
         >
           <td>{"..."}</td>
         </tr>

@@ -2,32 +2,32 @@ export const link = [
   {
     nameLink: " Home",
     icon: process.env.PUBLIC_URL + "/img/icon_home.svg",
-    link: "/dashboard"
+    link: "/Home"
   },
   {
     nameLink: " Files",
     icon: process.env.PUBLIC_URL + "/img/icon_files.svg",
-    link: "/dirs"
+    link: "/Files"
   },
   {
     nameLink: " Shares",
     icon: process.env.PUBLIC_URL + "/img/icon_shares.svg",
-    link: "/dirs"
+    link: "/Shares"
   },
   {
     nameLink: " Templates",
     icon: process.env.PUBLIC_URL + "/img/icon_templates.svg",
-    link: "#"
+    link: "/Templates"
   },
   {
     nameLink: " Requests",
     icon: process.env.PUBLIC_URL + "/img/icon_requests.svg",
-    link: "#"
+    link: "/Requests"
   }
 ]
 
 export const settings = {
   nameLink: " Settings",
   icon: process.env.PUBLIC_URL + "/img/icon_settings.svg",
-  link: "#"
+  link: "/Settings"
 }
