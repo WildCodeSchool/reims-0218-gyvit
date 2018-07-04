@@ -8,7 +8,13 @@ import {
   Button,
   Popover,
   PopoverHeader,
-  PopoverBody
+  PopoverBody,
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle
 } from "reactstrap"
 import {
   makeDeleteAFolderSuccess,
@@ -139,10 +145,22 @@ class DropDown extends React.Component {
                   target="popoverInformations"
                   toggle={this.onToggleInformationsPopover}
                 >
-                  <PopoverHeader>Informations of {name}</PopoverHeader>
-                  <PopoverBody>
-                    Created: {convertDateFromJsonToFrench(created)}
-                    Modified: {convertDateFromJsonToFrench(modified)}
+                  <PopoverHeader style={{ textAlign: "center" }}>
+                    <span>Informations</span>
+                  </PopoverHeader>
+                  <PopoverBody style={{ textAlign: "center" }}>
+                    <Card>
+                      <CardBody>
+                        <CardTitle>{name}</CardTitle>
+                        <CardSubtitle />
+                        <CardText>
+                          created: {convertDateFromJsonToFrench(created)}
+                        </CardText>
+                        <CardText>
+                          modified: {convertDateFromJsonToFrench(modified)}
+                        </CardText>
+                      </CardBody>
+                    </Card>
                   </PopoverBody>
                 </Popover>
               </div>
