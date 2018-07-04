@@ -1,5 +1,6 @@
 import React from "react"
 import { Col } from "reactstrap"
+import { Link } from "react-router-dom"
 
 const NavbarLeftLogo = () => {
   return (
@@ -15,7 +16,11 @@ const NavbarLeftLogo = () => {
         fontSize: "20px"
       }}
     >
-      <Col>GYVIT</Col>
+      <Col>
+        <Link style={{ color: "white" }} to="/dashboard">
+          GYVIT
+        </Link>
+      </Col>
     </div>
   )
 }
