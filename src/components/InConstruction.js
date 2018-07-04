@@ -12,7 +12,7 @@ class InConstruction extends Component {
               marginTop: "12%"
             }}
             src="img/MeduzaIcon.png"
-            alt=""
+            alt="meduza icon"
           />
           <p
             style={{
@@ -22,7 +22,7 @@ class InConstruction extends Component {
               marginLeft: "40%"
             }}
           >
-            Coming Soon !!{" "}
+            Coming Soon !!
           </p>
         </Container>
       </div>
