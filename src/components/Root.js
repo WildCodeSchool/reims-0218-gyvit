@@ -38,8 +38,8 @@ const Root = ({ store }) => (
         <Route path="/sign-up" component={PageSignIn} />{" "}
         {/* TODO: PAGE SIGN UP */}
         <Route path="/forgot-password" component={PageForgetPassword} />
-        <PrivateRoute path="/dashboard" component={PageDashboard} />
-        <PrivateRoute path="/dirs" component={PageFolders} />
+        <PrivateRoute path="/Home" component={PageDashboard} />
+        <PrivateRoute path="/Files" component={PageFolders} />
         <PrivateRoute path="/get-started" component={PageGetStarted} />
       </div>
     </Router>

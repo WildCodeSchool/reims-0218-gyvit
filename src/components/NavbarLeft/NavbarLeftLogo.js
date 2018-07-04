@@ -1,6 +1,6 @@
 import React from "react"
 import { Col } from "reactstrap"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const NavbarLeftLogo = () => {
   return (
@@ -17,9 +17,9 @@ const NavbarLeftLogo = () => {
       }}
     >
       <Col>
-        <Link style={{ color: "white" }} to="/dashboard">
+        <NavLink style={{ color: "white" }} to="/Home">
           GYVIT
-        </Link>
+        </NavLink>
       </Col>
     </div>
   )

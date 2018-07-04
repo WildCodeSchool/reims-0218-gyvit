@@ -84,6 +84,11 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
                     color: "white"
                   }}
                   to={link}
+                  activeClassName="selected"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
                 >
                   {buttonText}
                 </NavLink>
