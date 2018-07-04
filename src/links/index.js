@@ -12,22 +12,22 @@ export const link = [
   {
     nameLink: " Shares",
     icon: process.env.PUBLIC_URL + "/img/icon_shares.svg",
-    link: "/dirs"
+    link: "/Shares"
   },
   {
     nameLink: " Templates",
     icon: process.env.PUBLIC_URL + "/img/icon_templates.svg",
-    link: "/templates"
+    link: "/Templates"
   },
   {
     nameLink: " Requests",
     icon: process.env.PUBLIC_URL + "/img/icon_requests.svg",
-    link: "/requests"
+    link: "/Requests"
   }
 ]
 
 export const settings = {
   nameLink: " Settings",
   icon: process.env.PUBLIC_URL + "/img/icon_settings.svg",
-  link: "/settings"
+  link: "/Settings"
 }
