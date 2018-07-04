@@ -92,7 +92,6 @@ class FoldersBarTopContainer extends React.Component {
                   height: "50px",
                   
                   width: "50px",
-                 // backgroundColor: "#725fe3"
                 }}
                 alt="add directory"
                 onClick={() => this.props.onShowCreateFile()}
