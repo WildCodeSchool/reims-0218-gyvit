@@ -45,7 +45,7 @@ const NavbarTopSearch = ({
         value={search}
       />
 
-      <Dropdown isOpen={search}>
+      <Dropdown isOpen={true}>
         <DropdownMenu
           style={{
             transform: "none",
