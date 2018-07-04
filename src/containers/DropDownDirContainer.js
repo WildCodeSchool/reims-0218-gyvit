@@ -14,12 +14,12 @@ import {
   makeDeleteAFolderSuccess,
   makeUpdateAFolderSuccess,
   makeInformationsDir
-} from "../../actions/foldersActions"
-import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
-import { makeShowModalUpdateDir } from "../../actions/modalUpdateDirAction"
-import { makeShowModalError } from "../../actions/errorsActions"
-import { deleteDirectory } from "../../api/directorys/deleteDirectory"
-import { convertDateFromJsonToFrench } from "../../functions/dirs"
+} from "../actions/foldersActions"
+import ModalUpdateDirContainer from "./ModalUpdateDirContainer"
+import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
+import { makeShowModalError } from "../actions/errorsActions"
+import { deleteDirectory } from "../api/directorys/deleteDirectory"
+import { convertDateFromJsonToFrench } from "../functions/dirs"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
@@ -57,7 +57,7 @@ class DropDown extends React.Component {
   }
 
   render() {
-    const { _id, name, created, modified, shares } = this.props.dir
+    const { _id, name, created, modified } = this.props.dir
     return (
       <ButtonDropdown
         style={{ marginTop: "15px" }}

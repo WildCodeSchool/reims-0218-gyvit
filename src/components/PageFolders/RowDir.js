@@ -1,5 +1,5 @@
 import React from "react"
-import DropDown from "./DropDown"
+import DropDownDirContainer from "../../containers/DropDownDirContainer"
 import Share from "./Share"
 import { convertDateFromJsonToFrench } from "../../functions/dirs"
 
@@ -45,7 +45,7 @@ const RowDir = ({ dir, onDirclick }) => {
         {shares && shares.map(share => <Share {...share} key={share._id} />)}
       </td>
       <td>
-        <DropDown dir={dir} />
+        <DropDownDirContainer dir={dir} />
       </td>
     </tr>
   )
