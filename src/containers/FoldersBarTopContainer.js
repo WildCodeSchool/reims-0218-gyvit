@@ -74,8 +74,7 @@ class FoldersBarTopContainer extends React.Component {
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <Button
+                <Button
                       type="button"
                       style={{
                         borderRadius: "50%",
@@ -85,21 +84,19 @@ class FoldersBarTopContainer extends React.Component {
                       }}
                       onClick={() => this.props.onShowCreateDir()}
                     >
-                      +
+                      + 
                     </Button>
-                    <Button
-                      type="button"
-                      style={{
-                        borderRadius: "50%",
-                        height: "50px",
-                        width: "50px",
-                        backgroundColor: "black"
-                      }}
-                      onClick={() => this.props.onShowCreateFile()}
-                    >
-                      File
-                    </Button>
-                  </NavItem>
+                    <img
+                src={process.env.PUBLIC_URL.concat("../Icons/file.svg")}
+                style={{
+                  height: "50px",
+                  
+                  width: "50px",
+                }}
+                alt="add directory"
+                onClick={() => this.props.onShowCreateFile()}
+                 />
+                  
                 </Nav>
               </Collapse>
             </Navbar>
