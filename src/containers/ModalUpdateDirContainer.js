@@ -29,6 +29,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   onSubmitUpdateDir: (name, dir) => {
+    //need a response with a body to use then or catch
     updateDir(name, dir)
   },
   onHideModal: () => dispatch(makeHideModalUpdateDir()),
@@ -72,13 +73,9 @@ class ModalUpdateDirContainer extends Component {
               <Button
                 type="button"
                 onClick={response => {
-                  this.props
-                    .onSubmitUpdateDir(this.state.name, this.props.id)
-                    .catch(response => this.props.onError(response.message))
+                  this.props.onSubmitUpdateDir(this.state.name, this.props.id)
                   this.props.onHideModal()
-                  this.props
-                    .onUpdateDir(response)
-                    .catch(response => this.props.onError(response.message))
+                  this.props.onUpdateDir(response)
                 }}
               >
                 Submit

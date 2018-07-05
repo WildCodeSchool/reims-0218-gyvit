@@ -24,7 +24,7 @@ class ModalErrorContainer extends Component {
           className={this.props.className}
         >
           <ModalHeader toggle={() => this.props.onErrorToHide()}>
-            Modal Error
+            You encountered a failure
           </ModalHeader>
           <ModalBody>{this.props.message}</ModalBody>
           <ModalFooter>
