@@ -1,26 +1,25 @@
-/* .meduza-logo {
-  border-style: solid;
-  border-width: 1px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-color: #0000ff;
-  -webkit-transition: width 2s, height 2s, background-color 2s,
-    -webkit-transform 2s;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
+.App {
+  text-align: center;
 }
 
-.meduza-logo:hover {
-  background-color: #ffcccc;
-  width: 200px;
-  height: 200px;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-} */
-/* 
-.meduza-logo {
-  animation: App-logo-spin infinite 5s linear;
-  height: 200px;
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
 }
 
 @keyframes App-logo-spin {
@@ -30,4 +29,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
