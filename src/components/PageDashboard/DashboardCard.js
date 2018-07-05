@@ -52,7 +52,7 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
                   "border-radius": "2px",
                   border: "solid 1px #dce1e6",
                   backgroundColor: "white",
-                  marginTop: "15%"
+                  marginTop: "25%"
                 }}
               >
                 <NavLink
