@@ -14,6 +14,7 @@ import PageShares from "../components/ComingSoon/PageShares"
 import PageTemplates from "../components/ComingSoon/PageTemplates"
 import PageRequests from "../components/ComingSoon/PageRequests"
 import PageSettings from "../components/ComingSoon/PageSettings"
+import PageInConstruction from "../components/ComingSoon/PageInConstruction"
 
 //function test token true or false for protect routes
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -49,6 +50,7 @@ const Root = ({ store }) => (
         <PrivateRoute path="/requests" component={PageRequests} />
         <PrivateRoute path="/settings" component={PageSettings} />
         <PrivateRoute path="/get-started" component={PageGetStarted} />
+        <PrivateRoute path="/inConstruction" component={PageInConstruction} />
       </div>
     </Router>
   </Provider>
