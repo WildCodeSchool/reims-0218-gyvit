@@ -20,7 +20,7 @@ import {
   makeUpdateAFileSuccess,
   makeInformationsFile
 } from "../actions/filesActions"
-import ModalUpdateDirContainer from "./ModalUpdateDirContainer"
+import ModalUpdateFileContainer from "./ModalUpdateFileContainer"
 import { makeShowModalUpdateFile } from "../actions/modalUpdateFileAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { deleteFile } from "../api/files/deleteFile"
@@ -70,7 +70,7 @@ class DropDownFileContainer extends React.Component {
         toggle={this.toggle}
         direction="left"
       >
-        <ModalUpdateDirContainer />
+        <ModalUpdateFileContainer />
         <DropdownToggle
           color="link"
           onClick={() => {

@@ -2,10 +2,11 @@ import React from "react"
 import { convertDateFromJsonToFrench } from "../../functions/dirs"
 import DropDownFileContainer from "../../containers/DropDownFileContainer"
 
-const RowFile = props => {
-  const { _id, name, modified, shares } = props
+
+const RowFile = ({ file, key }) => {
+  const { _id, name, modified, shares } = file
   return (
-    <tr key={_id}>
+    <tr key={key}>
       <td>
         <img
           style={{
