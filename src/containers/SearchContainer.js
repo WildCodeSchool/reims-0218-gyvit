@@ -6,25 +6,18 @@ import { makeShowModalError } from "../actions/errorsActions"
 import { makeRetrieveDirSuccess } from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 import { makeListAllDirs } from "../actions/foldersActions"
-// PR 1
-// resultSearch reducer handling listAllDirs action
-// mapStateToProps connect options to resultSearch reducer
 
 const mapStateToProps = state => ({
   searchResults: state.resultSearch
 })
 
-// PR 2
-// on dir click retrieve dir
-
-// PR3
-// highlight letters
-
 const mapDispatchToProps = dispatch => ({
   onFilesSearch: response => dispatch(makeListAllDirs(response)),
   onError: message => dispatch(makeShowModalError(message)),
   onDirclick: id =>
-    retrieveDir(id).then(response => dispatch(makeRetrieveDirSuccess(response)))
+    retrieveDir(id)
+      .then(response => dispatch(makeRetrieveDirSuccess(response)))
+      .catch(response => dispatch(makeShowModalError(response.message)))
 })
 
 export class NavbarTopFilter extends Component {
