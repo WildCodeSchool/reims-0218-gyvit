@@ -105,6 +105,18 @@ class SignInFormWrap extends Component {
               userLogin(this.state.mail, this.state.password)
                 // catch response:  if not desired response, response.message
                 //                  if desired: response.success
+                // .then(response => {
+                //   if (response.success){
+                //     return retrieveMe()
+                //   }else{
+                //     return                   <div>
+                //   {this.props.redirect ? (
+                //   <Redirect to="/home" />
+                //   ) : (
+                //   <div>Loading</div>)}
+                //   </div>
+                //   }
+                // })
                 .then(response => {
                   if (response.success) {
                     return retrieveMe()

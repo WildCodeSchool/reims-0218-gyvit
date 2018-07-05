@@ -30,3 +30,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* .logo {
+  font-size: 300px;
+  color: #e00;
+  animation: beat 0.4s infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.3);
+  }
+} */
