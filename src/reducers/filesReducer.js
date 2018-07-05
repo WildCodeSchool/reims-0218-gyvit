@@ -13,8 +13,17 @@ const filesReducer = (prevState = initialState, action) => {
     return { type: action.type, response: action.response }
   }
   if (action.type === UPDATE_A_FILE_SUCCESS) {
-    return action.response
+    return prevState.map(file => {
+      if (file._id === action.response._id) {
+        return {
+          ...file,
+          name: action.response.name
+        }
+      }
+      return file
+    })
   }
+
   if (action.type === ADD_A_FILE_SUCCESS) {
     return [...prevState, action.response]
   }

@@ -7,10 +7,10 @@ const convertDateFromJsonToFrench = dateToTransform =>
     .setLocale("fr-FR")
     .toLocaleString(DateTime.DATETIME_SHORT)
 
-const RowFile = ({ file }) => {
+const RowFile = ({ file, key }) => {
   const { _id, name, modified, shares } = file
   return (
-    <tr key={_id}>
+    <tr key={key}>
       <td>
         <img
           style={{
