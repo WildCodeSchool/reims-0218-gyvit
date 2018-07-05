@@ -1,5 +1,6 @@
 import React from "react"
 import { convertDateFromJsonToFrench } from "../../functions/dirs"
+import DropDownFileContainer from "../../containers/DropDownFileContainer"
 
 const RowFile = props => {
   const { _id, name, modified, shares } = props
@@ -43,6 +44,9 @@ const RowFile = props => {
           shares.map((share, key) => (
             <img src="" alt={`icone Share n° ${key}`} />
           ))}
+      </td>
+      <td>
+        <DropDownFileContainer file={file} />
       </td>
     </tr>
   )

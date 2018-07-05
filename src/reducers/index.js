@@ -12,6 +12,7 @@ import resultSearchReducer from "./resultSearchReducer"
 import NotifReducer from "./NotifReducer"
 import modalCreateFileReducer from "./modalCreateFileReducer"
 import modalUpdateDirReducer from "./modalUpdateDirReducer"
+import selectedFileReducer from "./selectedFileReducer"
 
 export default combineReducers({
   error: errorsReducer,
@@ -25,5 +26,6 @@ export default combineReducers({
   modalCreateFile: modalCreateFileReducer,
   modalUpdateDir: modalUpdateDirReducer,
   resultSearch: resultSearchReducer,
-  notif: NotifReducer
+  notif: NotifReducer,
+  selectedFile: selectedFileReducer
 })

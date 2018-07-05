@@ -44,7 +44,7 @@ class SignInFormWrap extends Component {
   render() {
     //if mail on the store, so redirect on page dashboard
     if (this.props.redirect) {
-      return <Redirect to="/Home" />
+      return <Redirect to="/home" />
     }
     return (
       <div>
