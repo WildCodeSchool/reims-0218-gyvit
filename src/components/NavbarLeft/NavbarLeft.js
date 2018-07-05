@@ -24,10 +24,10 @@ const NavbarLeft = ({ dataLinks = link }) => (
         <NavItem
           style={{
             marginRight: "0px",
-            marginLeft: "0%",
-            marginTop: "80%",
+            marginLeft: "25%",
+            marginTop: "30%",
             fontSize: "16px",
-            textAlign: "center"
+            textAlign: "left"
           }}
           className="align-center"
         >
