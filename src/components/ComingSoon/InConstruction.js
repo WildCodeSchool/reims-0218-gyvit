@@ -5,25 +5,7 @@ import "../../App.css"
 const ComingSoon = () => {
   return (
     <Container>
-      <img
-        style={{
-          marginLeft: "40%",
-          marginTop: "12%"
-        }}
-        src="img/MeduzaIcon.png"
-        alt="meduza icon"
-      />
-      <p
-        style={{
-          color: "#231b56",
-          fontSize: "50px",
-          fontStyle: "gras",
-          marginLeft: "35%"
-        }}
-      >
-        Coming Soon !!
-      </p>
-      {/* <div>
+      <div>
         <img
           style={{
             marginLeft: "38%",
@@ -44,7 +26,7 @@ const ComingSoon = () => {
         >
           Coming Soon !!
         </h1>
-      </div> */}
+      </div>
     </Container>
   )
 }
