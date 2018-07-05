@@ -52,15 +52,15 @@ class DropDown extends React.Component {
   }
 
   toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    })
+    this.setState((prevState, props) => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }))
   }
 
   onToggleInformationsPopover() {
-    this.setState({
-      popoverInformationsOpen: !this.state.popoverInformationsOpen
-    })
+    this.setState((prevState, props) => ({
+      popoverInformationsOpen: !prevState.popoverInformationsOpen
+    }))
   }
 
   render() {
