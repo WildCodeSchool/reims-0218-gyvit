@@ -108,9 +108,15 @@ class SignInFormWrap extends Component {
                 //                  if desired: response.success
                 .then(response => {
                   if (response.success) {
-                    return retrieveMe().catch(response =>
-                      this.props.onError(response.message)
-                    )
+                    return retrieveMe().catch(response => {
+                      if (response.message) {
+                        // display an error AFTER retrieveMe() not prevented in the API
+                        this.props.onError(response.message)
+                      } else {
+                        // display an error AFTER retrieveMe() prevented in the API
+                        this.props.onError(response.error)
+                      }
+                    })
                   } else {
                     return response
                   }
@@ -124,7 +130,15 @@ class SignInFormWrap extends Component {
                     this.props.onError(response.error)
                   }
                 })
-                .catch(response => this.props.onError(response.message))
+                .catch(response => {
+                  if (response.message) {
+                    // display an error AFTER userLogin() not prevented in the API
+                    this.props.onError(response.message)
+                  } else {
+                    // display an error AFTER userLogin() prevented in the API
+                    this.props.onError(response.error)
+                  }
+                })
             }
             style={{
               width: "192px",
