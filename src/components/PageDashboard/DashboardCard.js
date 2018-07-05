@@ -17,71 +17,50 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
     <div>
       <Container>
         <Row>
-          <Card
-            style={{
-              width: "288px",
-              height: "423px"
-            }}
-          >
+          <Card style={{ width: "40vh", height: "55vh" }}>
             <CardImg
               src={process.env.PUBLIC_URL + image}
               alt="folder"
               style={{
-                width: "151px",
-                height: "120px",
-                marginTop: "31px",
-                marginLeft: "72px",
-                marginRight: "64.8px"
+                width: "50%",
+                marginLeft: "25%"
               }}
             />
-            <CardBody
-              style={{
-                padding: "0px"
-              }}
-            >
+            <CardBody d-flex flex-column>
               <CardTitle
                 style={{
-                  width: "175px",
-                  height: "24px",
-                  fontSize: "18px",
-                  textAlign: "center",
-                  paddingLeft: "0px",
-                  paddingRight: "0px",
-                  marginTop: "15px",
-                  marginLeft: "57px",
-                  marginRight: "56px"
+                  "font-size": "18px",
+                  "text-align": "center"
                 }}
               >
                 {titre}
               </CardTitle>
               <CardText
                 style={{
-                  width: "228px",
-                  height: "96px",
                   fontSize: "15px",
-                  opacity: 0.45,
+                  opacity: "0.45",
+                  lineHeight: "3vh",
                   textAlign: "center",
-                  marginTop: "13px",
-                  marginLeft: "30px",
-                  marginRight: "30px",
-                  marginBottom: "50px",
-                  lineHeight: "24px"
+                  marginTop: "5vh"
                 }}
               >
                 {bio}
               </CardText>
-              <Button>
+              <Button
+                style={{
+                  width: "100%",
+                  "border-radius": "2px",
+                  border: "solid 1px #dce1e6",
+                  backgroundColor: "white",
+                  marginTop: "15%"
+                }}
+              >
                 <NavLink
                   style={{
-                    width: "170px",
-                    height: "44px",
-                    fontSize: "16px",
-                    borderRadius: "2px",
-                    marginRight: "59px",
-                    marginLeft: "59px ",
-                    marginBottom: "30px",
-                    padding: "0px",
-                    color: "white"
+                    "font-size": "16px",
+                    "font-weight": "500",
+                    "text-align": "left",
+                    color: "#725fe3"
                   }}
                   to={link}
                   activeClassName="selected"
