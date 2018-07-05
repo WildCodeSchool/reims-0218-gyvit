@@ -2,11 +2,11 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { Form, FormGroup, Label, Input, NavLink, Button } from "reactstrap"
 import { Redirect } from "react-router"
-
 import { userLogin } from "../api/users/userLogin"
 import { connectUserSuccessAction } from "../actions/userAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
+import ModalErrorContainer from "./ModalErrorContainer"
 
 //verify on store with redirect if user mail is present on this
 const mapStateToProps = state => {
@@ -48,6 +48,7 @@ class SignInFormWrap extends Component {
     }
     return (
       <div>
+        <ModalErrorContainer />
         <Form
           style={{
             marginBottom: "40px",
@@ -107,7 +108,9 @@ class SignInFormWrap extends Component {
                 //                  if desired: response.success
                 .then(response => {
                   if (response.success) {
-                    return retrieveMe()
+                    return retrieveMe().catch(response =>
+                      this.props.onError(response.message)
+                    )
                   } else {
                     return response
                   }
