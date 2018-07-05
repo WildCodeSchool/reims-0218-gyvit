@@ -21,6 +21,7 @@ import {
   makeInformationsDir
 } from "../actions/foldersActions"
 import ModalUpdateDirContainer from "./ModalUpdateDirContainer"
+import ModalErrorContainer from "./ModalErrorContainer"
 import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { deleteDirectory } from "../api/directorys/deleteDirectory"
@@ -45,20 +46,21 @@ class DropDown extends React.Component {
     this.toggle = this.toggle.bind(this)
     this.state = {
       dropdownOpen: false,
-      popoverInformationsOpen: false
+      popoverInformationsOpen: false,
+      visibilityError: false
     }
   }
 
   toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    })
+    this.setState((prevState, props) => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }))
   }
 
   onToggleInformationsPopover() {
-    this.setState({
-      popoverInformationsOpen: !this.state.popoverInformationsOpen
-    })
+    this.setState((prevState, props) => ({
+      popoverInformationsOpen: !prevState.popoverInformationsOpen
+    }))
   }
 
   render() {
@@ -71,6 +73,7 @@ class DropDown extends React.Component {
         direction="left"
       >
         <ModalUpdateDirContainer />
+        <ModalErrorContainer />
         <DropdownToggle
           color="link"
           onClick={() => {

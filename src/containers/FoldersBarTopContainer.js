@@ -14,9 +14,11 @@ import {
 } from "reactstrap"
 import ModalCreateDirContainer from "./ModalCreateDirContainer"
 import ModalCreateFileContainer from "./ModalCreateFileContainer"
+import ModalErrorContainer from "./ModalErrorContainer"
 import PathElement from "../components/PageFolders/PathElement"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
 import { makeShowModalCreateFile } from "../actions/modalCreateFileAction"
+import { makeShowModalError } from "../actions/errorsActions"
 import DragNDropContainer from "../containers/DragNDropContainer"
 
 import { makeRetrieveDirSuccess } from "../actions/foldersActions"
@@ -26,7 +28,10 @@ const mapDispatchToProps = dispatch => ({
   onShowCreateDir: () => dispatch(makeShowModalCreateDir()),
   onShowCreateFile: () => dispatch(makeShowModalCreateFile()),
   onSelectPathElement: id =>
-    retrieveDir(id).then(response => dispatch(makeRetrieveDirSuccess(response)))
+    retrieveDir(id).then(response =>
+      dispatch(makeRetrieveDirSuccess(response))
+    ),
+  onError: message => dispatch(makeShowModalError(message))
 })
 
 const mapStateToProps = state => ({
@@ -36,12 +41,13 @@ const mapStateToProps = state => ({
 class FoldersBarTopContainer extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { name: "" }
+    this.state = { name: "", visibilityError: false }
   }
 
   render() {
     return (
       <Container>
+        <ModalErrorContainer />
         <ModalCreateDirContainer />
         <ModalCreateFileContainer />
         <Row>
@@ -60,7 +66,11 @@ class FoldersBarTopContainer extends React.Component {
                       isCurrent={true}
                       name={pathElement.name}
                       onClick={() =>
-                        this.props.onSelectPathElement(pathElement._id)
+                        this.props
+                          .onSelectPathElement(pathElement._id)
+                          .catch(response =>
+                            this.props.onError(response.message)
+                          )
                       }
                     />
                   ))}

@@ -1,14 +1,9 @@
 import React from "react"
-import { DateTime } from "luxon"
+import { convertDateFromJsonToFrench } from "../../functions/dirs"
 import DropDownFileContainer from "../../containers/DropDownFileContainer"
 
-const convertDateFromJsonToFrench = dateToTransform =>
-  DateTime.fromMillis(Date.parse(dateToTransform))
-    .setLocale("fr-FR")
-    .toLocaleString(DateTime.DATETIME_SHORT)
-
-const RowFile = ({ file }) => {
-  const { _id, name, modified, shares } = file
+const RowFile = props => {
+  const { _id, name, modified, shares } = props
   return (
     <tr key={_id}>
       <td>
