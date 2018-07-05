@@ -95,7 +95,7 @@ class DropDown extends React.Component {
             >
               <img
                 style={{
-                  marginRight: "6%"
+                  marginRight: "8%"
                 }}
                 src="Assets/icon_share_dropdown.png"
                 alt=""
