@@ -13,7 +13,7 @@ const NavbarTop = () => (
       style={{
         height: "90px",
         backgroundColor: "#ffffff",
-        border: "solid 1px #E5E8F4"
+        border: "solid 2px #E5E8F4"
       }}
     >
       <Col xs="9">

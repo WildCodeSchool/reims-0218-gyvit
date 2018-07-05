@@ -30,7 +30,8 @@ class NavbarTopProfileContainer extends Component {
 
     this.toggle = this.toggle.bind(this)
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      business: "Meduza"
     }
   }
 
@@ -42,13 +43,19 @@ class NavbarTopProfileContainer extends Component {
 
   render() {
     return (
-      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <Dropdown
+        color="none"
+        isOpen={this.state.dropdownOpen}
+        toggle={this.toggle}
+      >
         <DropdownToggle
+          color="none"
           style={{
-            height: "89px",
+            height: "86px",
             padding: "auto",
             backgroundColor: "#ffffff",
-            whiteSpace: "normal"
+            borderColor: "none",
+            border: "0px"
           }}
         >
           <Media>
@@ -61,7 +68,7 @@ class NavbarTopProfileContainer extends Component {
                     }}
                     className="rounded-circle"
                     object
-                    src="img/kevinMarlot.jpeg"
+                    src="img/romainDuflot.jpg"
                     alt={this.props.profile.firstname}
                   />
                 </Media>
@@ -70,7 +77,7 @@ class NavbarTopProfileContainer extends Component {
                 <Media body>
                   <Media
                     style={{
-                      color: "#231b56",
+                      color: "#372c78",
                       fontSize: "16px",
                       marginTop: "auto"
                     }}
@@ -83,10 +90,13 @@ class NavbarTopProfileContainer extends Component {
                   <Media
                     style={{
                       color: "#372c78",
-                      fontSize: "14px"
+                      fontSize: "14px",
+                      opacity: 0.45,
+                      paddingLeft: "30px"
                     }}
                   >
-                    {this.props.profile.business}
+                    {this.state.business}{" "}
+                    {/*this.props.profile.business we have put this.state.business because we don't have this information inside a User (API)*/}
                   </Media>
                 </Media>
               </Col>
@@ -95,8 +105,9 @@ class NavbarTopProfileContainer extends Component {
         </DropdownToggle>
         <DropdownMenu
           style={{
-            width: "90%",
+            width: "95%",
             padding: "auto",
+            textAlign: "center",
             fontSize: "14px"
           }}
         >
@@ -105,6 +116,7 @@ class NavbarTopProfileContainer extends Component {
               href="/"
               color="primary"
               size="xs"
+              padding="auto"
               onClick={() =>
                 removeToken().then(() => this.props.onDisconnectedUser())
               }
@@ -118,7 +130,6 @@ class NavbarTopProfileContainer extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NavbarTopProfileContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  NavbarTopProfileContainer
+)
