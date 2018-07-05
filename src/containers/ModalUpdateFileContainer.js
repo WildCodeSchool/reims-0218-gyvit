@@ -12,34 +12,31 @@ import {
   Input
 } from "reactstrap"
 
-import { makeHideModalUpdateDir } from "../actions/modalUpdateDirAction"
-import { makeUpdateAFolderSuccess } from "../actions/foldersActions"
-import { makeShowModalError } from "../actions/errorsActions"
-import { updateDir } from "../api/directorys/updateDir"
-import ModalErrorContainer from "./ModalErrorContainer"
+import { makeHideModalUpdateFile } from "../actions/modalUpdateFileAction"
+import { makeUpdateAFileSuccess } from "../actions/filesActions"
+import { updateFile } from "../api/files/updateFile"
 
 const mapStateToProps = state => {
   return {
-    name: state.modalUpdateDir.name,
-    id: state.modalUpdateDir.dir,
-    destination: state.currentDir._id,
-    modalUpdateDir: state.modalUpdateDir.visibilityUpdateDir
+    name: state.modalUpdateFile.name,
+    id: state.modalUpdateFile.file,
+    destination: state.currentFile._id,
+    modalUpdateFile: state.modalUpdateFile.visibilityUpdateFile
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  onSubmitUpdateDir: (name, dir) => {
-    updateDir(name, dir)
+  onSubmitUpdateFile: (name, file) => {
+    updateFile(name, file)
   },
-  onHideModal: () => dispatch(makeHideModalUpdateDir()),
-  onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
-  onError: message => dispatch(makeShowModalError(message))
+  onHideModal: () => dispatch(makeHideModalUpdateFile()),
+  onUpdateFile: response => dispatch(makeUpdateAFileSuccess(response))
 })
 
-class ModalUpdateDirContainer extends Component {
+class ModalUpdateFileContainer extends Component {
   constructor(props) {
     super(props)
-    this.state = { name: "", visibilityError: false }
+    this.state = { name: "" }
     this.handleNameChange = this.handleNameChange.bind(this)
   }
 
@@ -51,8 +48,7 @@ class ModalUpdateDirContainer extends Component {
   render() {
     return (
       <div>
-        <Modal isOpen={this.props.modalUpdateDir}>
-          <ModalErrorContainer />
+        <Modal isOpen={this.props.modalUpdateFile}>
           <ModalHeader toggle={() => this.props.onHideModal()}>
             Rename the directory {this.props.name}
           </ModalHeader>
@@ -72,13 +68,10 @@ class ModalUpdateDirContainer extends Component {
               <Button
                 type="button"
                 onClick={response => {
-                  this.props
-                    .onSubmitUpdateDir(this.state.name, this.props.id)
-                    .catch(response => this.props.onError(response.message))
+                  this.props.onSubmitUpdateFile(this.state.name, this.props.id)
+                  console.log("inside modal", this.state.name, this.props.id)
                   this.props.onHideModal()
-                  this.props
-                    .onUpdateDir(response)
-                    .catch(response => this.props.onError(response.message))
+                  this.props.onUpdateFile(response)
                 }}
               >
                 Submit
@@ -93,5 +86,5 @@ class ModalUpdateDirContainer extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(
-  ModalUpdateDirContainer
+  ModalUpdateFileContainer
 )

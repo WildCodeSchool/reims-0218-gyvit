@@ -17,7 +17,7 @@ const ComingSoon = () => {
           color: "#231b56",
           fontSize: "40px",
           fontStyle: "gras",
-          marginLeft: "35%"
+          marginLeft: "32%"
         }}
       >
         Coming Soon !!

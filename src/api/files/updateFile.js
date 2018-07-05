@@ -1,12 +1,13 @@
 import { getToken } from "../users/localStorageToken"
 
-export const deleteFile = (fileId, fileName) =>
+export const updateFile = (name, fileId) => {
   fetch(`https://dev.gyvit.io/api/storage/files/${fileId}`, {
-    method: "DELETE",
+    method: "PATCH",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
       Authorization: `Bearer ${getToken()}`
     },
-    body: JSON.stringify({ name: fileName })
+    body: JSON.stringify({ name, fileId })
   }).then(res => res.json())
+}
