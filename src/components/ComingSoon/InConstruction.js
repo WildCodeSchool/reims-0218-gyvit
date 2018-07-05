@@ -6,7 +6,7 @@ const ComingSoon = () => {
     <Container>
       <img
         style={{
-          marginLeft: "43%",
+          marginLeft: "35%",
           marginTop: "12%"
         }}
         src="img/MeduzaIcon.png"
@@ -17,7 +17,7 @@ const ComingSoon = () => {
           color: "#231b56",
           fontSize: "40px",
           fontStyle: "gras",
-          marginLeft: "40%"
+          marginLeft: "32%"
         }}
       >
         Coming Soon !!

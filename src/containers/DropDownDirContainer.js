@@ -15,12 +15,14 @@ import {
   CardTitle,
   CardSubtitle
 } from "reactstrap"
+import { Link } from "react-router-dom"
 import {
   makeDeleteAFolderSuccess,
   makeUpdateAFolderSuccess,
   makeInformationsDir
 } from "../actions/foldersActions"
 import ModalUpdateDirContainer from "./ModalUpdateDirContainer"
+import ModalErrorContainer from "./ModalErrorContainer"
 import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { deleteDirectory } from "../api/directorys/deleteDirectory"
@@ -45,20 +47,21 @@ class DropDown extends React.Component {
     this.toggle = this.toggle.bind(this)
     this.state = {
       dropdownOpen: false,
-      popoverInformationsOpen: false
+      popoverInformationsOpen: false,
+      visibilityError: false
     }
   }
 
   toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    })
+    this.setState((prevState, props) => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }))
   }
 
   onToggleInformationsPopover() {
-    this.setState({
-      popoverInformationsOpen: !this.state.popoverInformationsOpen
-    })
+    this.setState((prevState, props) => ({
+      popoverInformationsOpen: !prevState.popoverInformationsOpen
+    }))
   }
 
   render() {
@@ -71,6 +74,7 @@ class DropDown extends React.Component {
         direction="left"
       >
         <ModalUpdateDirContainer />
+        <ModalErrorContainer />
         <DropdownToggle
           color="link"
           onClick={() => {
@@ -94,13 +98,22 @@ class DropDown extends React.Component {
             >
               <img
                 style={{
-                  marginRight: "6%"
+                  marginRight: "8%"
                 }}
                 src="Assets/icon_share_dropdown.png"
                 alt=""
                 aria-hidden="true"
               />
-              <span>Share</span>
+              <span>
+                <Link
+                  to="/inConstruction"
+                  style={{
+                    color: "black"
+                  }}
+                >
+                  Share
+                </Link>
+              </span>
             </a>
             <a
               style={{
@@ -117,7 +130,16 @@ class DropDown extends React.Component {
                 alt=""
                 aria-hidden="true"
               />
-              <span>Create public access</span>
+              <span>
+                <Link
+                  to="/inConstruction"
+                  style={{
+                    color: "black"
+                  }}
+                >
+                  Create public access
+                </Link>
+              </span>
             </a>
             <a
               style={{
@@ -134,7 +156,16 @@ class DropDown extends React.Component {
                 alt=""
                 aria-hidden="true"
               />
-              <span>Create private access</span>
+              <span>
+                <Link
+                  to="/inConstruction"
+                  style={{
+                    color: "black"
+                  }}
+                >
+                  Create private access
+                </Link>
+              </span>
             </a>
             <div>
               <div>
