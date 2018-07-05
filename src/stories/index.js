@@ -121,7 +121,7 @@ const tableProps = {
 storiesOf("component RowDir", module).add("RowDir", () => (
   <Table>
     <tbody>
-      <RowDir {...dir} />
+      <RowDir dir={dir} onDirClick={() => {}} />
     </tbody>
   </Table>
 ))

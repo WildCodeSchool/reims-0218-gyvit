@@ -5,34 +5,47 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Button
+  Button,
+  Popover,
+  PopoverHeader,
+  PopoverBody,
+  Card,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle
 } from "reactstrap"
 import {
   makeDeleteAFolderSuccess,
-  makeUpdateAFolderSuccess
-} from "../../actions/foldersActions"
-import ModalUpdateDirContainer from "../../containers/ModalUpdateDirContainer"
-import { makeShowModalUpdateDir } from "../../actions/modalUpdateDirAction"
-import { makeShowModalError } from "../../actions/errorsActions"
-import { deleteDirectory } from "../../api/directorys/deleteDirectory"
-//import { updateDir } from "../../api/directorys/updateDir"
+  makeUpdateAFolderSuccess,
+  makeInformationsDir
+} from "../actions/foldersActions"
+import ModalUpdateDirContainer from "./ModalUpdateDirContainer"
+import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
+import { makeShowModalError } from "../actions/errorsActions"
+import { deleteDirectory } from "../api/directorys/deleteDirectory"
+import { convertDateFromJsonToFrench } from "../functions/dirs"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
   onShowUpdateDir: (dirId, dirName) =>
     dispatch(makeShowModalUpdateDir(dirId, dirName)),
+  onListInformationsDir: response => dispatch(makeInformationsDir(response)),
   onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
+})
+
+const mapStateToProps = state => ({
+  selectedDir: state.selectedDir
 })
 
 class DropDown extends React.Component {
   constructor(props) {
     super(props)
-
     this.toggle = this.toggle.bind(this)
     this.state = {
       dropdownOpen: false,
-      dirName: this.props.dirName
+      popoverInformationsOpen: false
     }
   }
 
@@ -42,14 +55,28 @@ class DropDown extends React.Component {
     })
   }
 
+  onToggleInformationsPopover() {
+    this.setState({
+      popoverInformationsOpen: !this.state.popoverInformationsOpen
+    })
+  }
+
   render() {
+    const { _id, name, created, modified } = this.props.dir
     return (
       <ButtonDropdown
         style={{ marginTop: "15px" }}
         isOpen={this.state.dropdownOpen}
         toggle={this.toggle}
+        direction="left"
       >
-        <DropdownToggle color="link">
+        <ModalUpdateDirContainer />
+        <DropdownToggle
+          color="link"
+          onClick={() => {
+            this.props.onListInformationsDir(this.props.dir)
+          }}
+        >
           <img
             src="Assets/icon_dots_more.svg"
             alt="Button Dropdown"
@@ -109,23 +136,52 @@ class DropDown extends React.Component {
               />
               <span>Create private access</span>
             </a>
-            <a
-              style={{
-                color: "black"
-              }}
-              className="dropdown-item"
-              href=""
-            >
-              <img
+            <div>
+              <div>
+                <Popover
+                  placement="left-start"
+                  isOpen={this.state.popoverInformationsOpen}
+                  target="popoverInformations"
+                  toggle={this.onToggleInformationsPopover}
+                >
+                  <PopoverHeader style={{ textAlign: "center" }}>
+                    <span>Informations</span>
+                  </PopoverHeader>
+                  <PopoverBody style={{ textAlign: "center" }}>
+                    <Card>
+                      <CardBody>
+                        <CardTitle>{name}</CardTitle>
+                        <CardSubtitle />
+                        <CardText>
+                          created: {convertDateFromJsonToFrench(created)}
+                        </CardText>
+                        <CardText>
+                          modified: {convertDateFromJsonToFrench(modified)}
+                        </CardText>
+                      </CardBody>
+                    </Card>
+                  </PopoverBody>
+                </Popover>
+              </div>
+              <Button
+                id="popoverInformations"
                 style={{
-                  marginRight: "8%"
+                  color: "black"
                 }}
-                src="Assets/icon_informations.png"
-                alt=""
-                aria-hidden="true"
-              />
-              <span>Informations</span>
-            </a>
+                className="dropdown-item"
+                onClick={() => this.onToggleInformationsPopover()}
+              >
+                <img
+                  style={{
+                    marginRight: "8%"
+                  }}
+                  src="Assets/icon_informations.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>Informations</span>
+              </Button>
+            </div>
           </div>
           <DropdownItem divider />
           <div>
@@ -135,18 +191,10 @@ class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                console.log(
-                  "before button rename",
-                  this.props.dirId,
-                  this.props.dirName
-                )
-                return this.props.onShowUpdateDir(
-                  this.props.dirId,
-                  this.props.dirName
-                )
+                return this.props.onShowUpdateDir(_id, name)
               }}
             >
-              <span>Renommer {this.state.dirName}</span>
+              <span>Renommer {name}</span>
             </Button>
             <Button
               style={{
@@ -154,7 +202,7 @@ class DropDown extends React.Component {
               }}
               className="dropdown-item"
               onClick={() => {
-                deleteDirectory(this.props.dirId, this.props.dirName)
+                deleteDirectory(_id, name)
                   .then(response => {
                     // if response isn't with _id, error is catched
                     return this.props.onDeleteDir(response._id)
@@ -171,4 +219,4 @@ class DropDown extends React.Component {
     )
   }
 }
-export default connect(null, mapDispatchToProps)(DropDown)
+export default connect(mapStateToProps, mapDispatchToProps)(DropDown)
