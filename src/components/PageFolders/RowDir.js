@@ -5,6 +5,9 @@ import { convertDateFromJsonToFrench } from "../../functions/dirs"
 
 const RowDir = ({ dir, onDirclick }) => {
   const { _id, name, modified, shares } = dir
+  const pict = [] // i'm filling a pict's array with same pictures
+  pict.fill("Icons/person-icon.png", 0, shares.length - 1)
+  console.log(pict)
   return (
     <tr style={{ cursor: "pointer" }} key={_id}>
       <th onClick={() => onDirclick(_id)} style={{ width: "40%" }}>
@@ -42,8 +45,7 @@ const RowDir = ({ dir, onDirclick }) => {
         {convertDateFromJsonToFrench(modified)}
       </td>
       <td>
-        {shares &&
-          shares.map((share, key) => <Share {...share} key={share._id} />)}
+        {shares && shares.map((share, key) => <Share {...share} key={key} />)}
       </td>
       <td>
         <DropDownDirContainer dir={dir} />

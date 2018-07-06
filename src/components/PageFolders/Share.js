@@ -1,17 +1,19 @@
 import React from "react"
 
-const share = ({ _id, account }) => (
-  <img
-    src={account.pic}
-    alt={`icone Share n° ${_id}`}
-    style={{
-      marginTop: "25px",
-      width: "30px",
-      height: "30px"
-    }}
-    className="rounded-circle"
-    object
-  />
-)
+const Share = ({ account, key }) => {
+  return (
+    <img
+      src={account.pict}
+      alt={`icone Share n° ${key}`}
+      style={{
+        marginTop: "25px",
+        width: "30px",
+        height: "30px"
+      }}
+      className="rounded-circle"
+      object
+    />
+  )
+}
 
-export default share
+export default Share

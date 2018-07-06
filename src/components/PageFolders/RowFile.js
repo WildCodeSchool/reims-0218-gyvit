@@ -1,10 +1,13 @@
 import React from "react"
 import { convertDateFromJsonToFrench } from "../../functions/dirs"
 import DropDownFileContainer from "../../containers/DropDownFileContainer"
-
+import Share from "./Share"
 
 const RowFile = ({ file, key }) => {
-  const { _id, name, modified, shares } = file
+  const { name, modified, shares } = file
+  const pict = [] // i'm filling a pict's array with same pictures
+  pict.fill("Icons/person-icon.png", 0, shares.length - 1)
+  console.log(pict)
   return (
     <tr key={key}>
       <td>
@@ -41,10 +44,7 @@ const RowFile = ({ file, key }) => {
         {convertDateFromJsonToFrench(modified)}
       </td>
       <td>
-        {shares &&
-          shares.map((share, key) => (
-            <img src="" alt={`icone Share n° ${key}`} />
-          ))}
+        {shares && shares.map((share, key) => <Share key={key} {...share} />)}
       </td>
       <td>
         <DropDownFileContainer file={file} />
