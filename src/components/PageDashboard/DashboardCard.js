@@ -48,11 +48,13 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
               </CardText>
               <Button
                 style={{
-                  width: "100%",
+                  width: "170px",
+                  height: "44px",
                   "border-radius": "2px",
                   border: "solid 1px #dce1e6",
                   backgroundColor: "white",
-                  marginTop: "25%"
+                  marginTop: "25%",
+                  marginLeft: "15%"
                 }}
               >
                 <NavLink
