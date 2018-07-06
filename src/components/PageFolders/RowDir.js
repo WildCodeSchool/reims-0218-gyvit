@@ -5,7 +5,7 @@ import { convertDateFromJsonToFrench } from "../../functions/dirs"
 
 const RowDir = ({ dir, onDirclick }) => {
   const { _id, name, modified, shares } = dir
-  const pict = [] // i'm filling a pict's array with same pictures
+  const pict = [] // i'm filling a pict's array with a placeHolder picture
   pict.fill("Icons/person-icon.png", 0, shares.length - 1)
   console.log(pict)
   return (
