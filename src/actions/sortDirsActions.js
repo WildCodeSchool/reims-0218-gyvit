@@ -4,22 +4,22 @@ export const SORT_DIRS_BY_DATE_ASC = "SORT_DIRS_BY_DATE_ASC"
 export const SORT_DIRS_BY_DATE_DESC = "SORT_DIRS_BY_DATE_DESC"
 
 
-export const makeSortDirsByNameAsc = () =>({
+export const makeSortDirsByNameAsc = action =>({
   type: SORT_DIRS_BY_NAME_ASC, 
-  
+  action
 })
 
-export const makeSortDirsByNameDesc = () => ({
+export const makeSortDirsByNameDesc = action => ({
   type: SORT_DIRS_BY_NAME_DESC,
-
+  action
 })
 
-export const makeSortDirsByDateAsc = () => ({
+export const makeSortDirsByDateAsc = action => ({
   type: SORT_DIRS_BY_DATE_ASC,
-
+  action
 })
 
-export const makeSortDirsByDateDesc = () => ({
+export const makeSortDirsByDateDesc = action => ({
   type: SORT_DIRS_BY_DATE_DESC,
-
+  action
 })
