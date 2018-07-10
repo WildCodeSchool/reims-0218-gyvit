@@ -1,9 +1,12 @@
 import React from "react"
 
 const Share = ({ account, key }) => {
+  const pict = process.env.PUBLIC_URL + "Icons/person-icon.png"
+  //account has no picture now
+  const accountModified = { ...account, pict: pict }
   return (
     <img
-      src={account.pict}
+      src={accountModified.pict}
       alt={`icone Share n° ${key}`}
       style={{
         marginTop: "25px",
