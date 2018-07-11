@@ -28,12 +28,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onSubmitUpdateDir: (name, dir) => {
-    //need a response with a body to use then or catch
-    updateDir(name, dir)
-  },
+  onSubmitUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onHideModal: () => dispatch(makeHideModalUpdateDir()),
-  onUpdateDir: response => dispatch(makeUpdateAFolderSuccess(response)),
   onError: message => dispatch(makeShowModalError(message))
 })
 
@@ -47,6 +43,13 @@ class ModalUpdateDirContainer extends Component {
   // controlled seizure
   handleNameChange(event) {
     this.setState({ name: event.target.value })
+  }
+
+  onUpdateDir() {
+    updateDir(this.state.name, this.props.id)
+      .then(response => this.props.onSubmitUpdateDir(response))
+      .then(() => this.props.onHideModal()) // close modal after creating a dir
+      .catch(response => this.props.onError(response.message))
   }
 
   render() {
@@ -70,15 +73,8 @@ class ModalUpdateDirContainer extends Component {
                   onChange={event => this.handleNameChange(event)}
                 />
               </FormGroup>
-              <Button
-                type="button"
-                onClick={response => {
-                  this.props.onSubmitUpdateDir(this.state.name, this.props.id)
-                  this.props.onHideModal()
-                  this.props.onUpdateDir(response)
-                }}
-              >
-                Submit
+              <Button type="button" onClick={() => this.onUpdateDir()}>
+                > Submit
               </Button>
             </Form>
           </ModalBody>
