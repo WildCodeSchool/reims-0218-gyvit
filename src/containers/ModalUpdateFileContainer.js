@@ -26,9 +26,6 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onSubmitUpdateFile: (name, file) => {
-    updateFile(name, file)
-  },
   onHideModal: () => dispatch(makeHideModalUpdateFile()),
   onUpdateFile: response => dispatch(makeUpdateAFileSuccess(response))
 })
@@ -43,6 +40,12 @@ class ModalUpdateFileContainer extends Component {
   // controlled seizure
   handleNameChange(event) {
     this.setState({ name: event.target.value })
+  }
+
+  onSubmitUpdateFile() {
+    updateFile(this.state.name, this.props.id)
+      .then(response => this.props.onUpdateFile(response))
+      .then(this.props.onHideModal)
   }
 
   render() {
@@ -67,11 +70,8 @@ class ModalUpdateFileContainer extends Component {
               </FormGroup>
               <Button
                 type="button"
-                onClick={response => {
-                  this.props.onSubmitUpdateFile(this.state.name, this.props.id)
-                  console.log("inside modal", this.state.name, this.props.id)
-                  this.props.onHideModal()
-                  this.props.onUpdateFile(response)
+                onClick={() => {
+                  this.onSubmitUpdateFile()
                 }}
               >
                 Submit
