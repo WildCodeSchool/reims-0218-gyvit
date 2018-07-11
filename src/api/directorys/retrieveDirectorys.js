@@ -1,6 +1,5 @@
 import { getToken } from "../users/localStorageToken"
 const axios = require("axios")
-const root = "dir_k8G3aBS8TSWv9zEDj5ao"
 
 const config = {
   baseURL: "https://dev.gyvit.io/api/",
@@ -13,8 +12,8 @@ const config = {
   }
 }
 
-export const retrieveDir = (_id = root) =>
+export const retrieveDir = (_id = "dir_k8G3aBS8TSWv9zEDj5ao") =>
   axios({
     ...config,
-    url: `storage/directorys/list?name=${_id}`
+    url: `storage/directorys/${_id}`
   }).then(res => res.data)
