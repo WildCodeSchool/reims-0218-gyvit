@@ -57,8 +57,10 @@ class DropDown extends React.Component {
   }
 
   toggle() {
+    console.log("toggle")
     this.setState((prevState, props) => ({
-      dropdownOpen: !prevState.dropdownOpen
+      dropdownOpen: !prevState.dropdownOpen,
+      popoverInformationsOpen: false
     }))
   }
 
@@ -172,8 +174,37 @@ class DropDown extends React.Component {
               </span>
             </a>
             <div>
+              <div>
+                <Popover
+                  placement="left"
+                  isOpen={
+                    this.state.popoverInformationsOpen &&
+                    this.state.dropdownOpen
+                  }
+                  target={"popoverInformations" + _id}
+                  toggle={this.onToggleInformationsPopover}
+                >
+                  <PopoverHeader style={{ textAlign: "center" }}>
+                    <span>Informations</span>
+                  </PopoverHeader>
+                  <PopoverBody style={{ textAlign: "center" }}>
+                    <Card>
+                      <CardBody>
+                        <CardTitle>{name}</CardTitle>
+                        <CardSubtitle />
+                        <CardText>
+                          created: {convertDateFromJsonToFrench(created)}
+                        </CardText>
+                        <CardText>
+                          modified: {convertDateFromJsonToFrench(modified)}
+                        </CardText>
+                      </CardBody>
+                    </Card>
+                  </PopoverBody>
+                </Popover>
+              </div>
               <Button
-                id="popoverInformations"
+                id={"popoverInformations" + _id}
                 style={{
                   color: "black"
                 }}
@@ -190,30 +221,7 @@ class DropDown extends React.Component {
                 />
                 <span>Informations</span>
               </Button>
-              <Popover
-                placement="left-start"
-                isOpen={this.state.popoverInformationsOpen}
-                target="popoverInformations"
-                toggle={this.onToggleInformationsPopover}
-              >
-                <PopoverHeader style={{ textAlign: "center" }}>
-                  <span>Informations</span>
-                </PopoverHeader>
-                <PopoverBody style={{ textAlign: "center" }}>
-                  <Card>
-                    <CardBody>
-                      <CardTitle>{name}</CardTitle>
-                      <CardSubtitle />
-                      <CardText>
-                        created: {convertDateFromJsonToFrench(created)}
-                      </CardText>
-                      <CardText>
-                        modified: {convertDateFromJsonToFrench(modified)}
-                      </CardText>
-                    </CardBody>
-                  </Card>
-                </PopoverBody>
-              </Popover>
+
               {/* <PoppersInformationsContainer /> */}
             </div>
           </div>
