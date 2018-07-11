@@ -27,6 +27,7 @@ import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { deleteDirectory } from "../api/directorys/deleteDirectory"
 import { convertDateFromJsonToFrench } from "../functions/dirs"
+// import PoppersInformationsContainer from "./PoppersInformationsContainer"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
@@ -45,6 +46,9 @@ class DropDown extends React.Component {
   constructor(props) {
     super(props)
     this.toggle = this.toggle.bind(this)
+    this.onToggleInformationsPopover = this.onToggleInformationsPopover.bind(
+      this
+    )
     this.state = {
       dropdownOpen: false,
       popoverInformationsOpen: false,
@@ -168,39 +172,13 @@ class DropDown extends React.Component {
               </span>
             </a>
             <div>
-              <div>
-                <Popover
-                  placement="left-start"
-                  isOpen={this.state.popoverInformationsOpen}
-                  target="popoverInformations"
-                  toggle={this.onToggleInformationsPopover}
-                >
-                  <PopoverHeader style={{ textAlign: "center" }}>
-                    <span>Informations</span>
-                  </PopoverHeader>
-                  <PopoverBody style={{ textAlign: "center" }}>
-                    <Card>
-                      <CardBody>
-                        <CardTitle>{name}</CardTitle>
-                        <CardSubtitle />
-                        <CardText>
-                          created: {convertDateFromJsonToFrench(created)}
-                        </CardText>
-                        <CardText>
-                          modified: {convertDateFromJsonToFrench(modified)}
-                        </CardText>
-                      </CardBody>
-                    </Card>
-                  </PopoverBody>
-                </Popover>
-              </div>
               <Button
                 id="popoverInformations"
                 style={{
                   color: "black"
                 }}
                 className="dropdown-item"
-                onClick={() => this.onToggleInformationsPopover()}
+                onClick={this.onToggleInformationsPopover}
               >
                 <img
                   style={{
@@ -212,6 +190,31 @@ class DropDown extends React.Component {
                 />
                 <span>Informations</span>
               </Button>
+              <Popover
+                placement="left-start"
+                isOpen={this.state.popoverInformationsOpen}
+                target="popoverInformations"
+                toggle={this.onToggleInformationsPopover}
+              >
+                <PopoverHeader style={{ textAlign: "center" }}>
+                  <span>Informations</span>
+                </PopoverHeader>
+                <PopoverBody style={{ textAlign: "center" }}>
+                  <Card>
+                    <CardBody>
+                      <CardTitle>{name}</CardTitle>
+                      <CardSubtitle />
+                      <CardText>
+                        created: {convertDateFromJsonToFrench(created)}
+                      </CardText>
+                      <CardText>
+                        modified: {convertDateFromJsonToFrench(modified)}
+                      </CardText>
+                    </CardBody>
+                  </Card>
+                </PopoverBody>
+              </Popover>
+              {/* <PoppersInformationsContainer /> */}
             </div>
           </div>
           <DropdownItem divider />
