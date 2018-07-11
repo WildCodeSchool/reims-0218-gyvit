@@ -16,4 +16,4 @@ export const createDir = (name, destination) =>
   axios({
     ...config,
     data: JSON.stringify({ name, destination })
-  })
+  }).then(res => res.data)
