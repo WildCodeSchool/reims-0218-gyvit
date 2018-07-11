@@ -207,7 +207,7 @@ class DropDown extends React.Component {
                   color: "black"
                 }}
                 className="dropdown-item"
-                onClick={this.onToggleInformationsPopover}
+                onClick={() => this.onToggleInformationsPopover()}
               >
                 <img
                   style={{
