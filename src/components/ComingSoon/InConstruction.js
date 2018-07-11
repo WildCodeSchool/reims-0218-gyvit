@@ -13,7 +13,7 @@ const ComingSoon = () => {
           }}
           src="img/MeduzaIcon.png"
           alt="meduza icon"
-          class="logo"
+          className="logo"
         />
         <h1
           style={{

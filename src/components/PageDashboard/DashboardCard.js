@@ -26,11 +26,11 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
                 marginLeft: "25%"
               }}
             />
-            <CardBody d-flex flex-column>
+            <CardBody d-flex="true" flex-column="true">
               <CardTitle
                 style={{
-                  "font-size": "18px",
-                  "text-align": "center"
+                  fontSize: "18px",
+                  textAlign: "center"
                 }}
               >
                 {titre}
@@ -50,7 +50,7 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
                 style={{
                   width: "170px",
                   height: "44px",
-                  "border-radius": "2px",
+                  borderRadius: "2px",
                   border: "solid 1px #dce1e6",
                   backgroundColor: "white",
                   marginTop: "25%",
@@ -59,9 +59,9 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
               >
                 <NavLink
                   style={{
-                    "font-size": "16px",
-                    "font-weight": "500",
-                    "text-align": "left",
+                    fontSize: "16px",
+                    fontWeight: "500",
+                    textAlign: "left",
                     color: "#725fe3"
                   }}
                   to={link}

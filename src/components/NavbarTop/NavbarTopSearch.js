@@ -37,7 +37,7 @@ const NavbarTopSearch = ({
           borderRadius: "2px",
           border: "none"
         }}
-        type="search"
+        type={search}
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
@@ -45,7 +45,7 @@ const NavbarTopSearch = ({
         value={search}
       />
 
-      <Dropdown isOpen={search}>
+      <Dropdown isOpen={search} toggle="false">
         <DropdownMenu
           style={{
             transform: "none",
@@ -53,7 +53,7 @@ const NavbarTopSearch = ({
             width: "100%"
           }}
         >
-          <DropdownToggle style={{ visibility: "hidden" }} />
+          <DropdownToggle style={{ visibility: "hidden" }} toggle="false" />
           {search !== "" &&
             searchResults.map(searchResult => {
               // transform a string to display in several spans
