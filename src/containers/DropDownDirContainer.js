@@ -27,7 +27,6 @@ import { makeShowModalUpdateDir } from "../actions/modalUpdateDirAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { deleteDirectory } from "../api/directorys/deleteDirectory"
 import { convertDateFromJsonToFrench } from "../functions/dirs"
-// import PoppersInformationsContainer from "./PoppersInformationsContainer"
 
 const mapDispatchToProps = dispatch => ({
   onDeleteDir: dirId => dispatch(makeDeleteAFolderSuccess(dirId)),
@@ -221,8 +220,6 @@ class DropDown extends React.Component {
                 />
                 <span>Informations</span>
               </Button>
-
-              {/* <PoppersInformationsContainer /> */}
             </div>
           </div>
           <DropdownItem divider />
