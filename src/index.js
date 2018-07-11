@@ -5,7 +5,6 @@ import reducers from "./reducers"
 import Root from "./components/Root"
 
 import "bootstrap/dist/css/bootstrap.min.css"
-import "./index.css"
 import registerServiceWorker from "./registerServiceWorker"
 
 const store = createStore(
