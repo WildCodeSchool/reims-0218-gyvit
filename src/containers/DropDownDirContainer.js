@@ -56,7 +56,6 @@ class DropDown extends React.Component {
   }
 
   toggle() {
-    console.log("toggle")
     this.setState((prevState, props) => ({
       dropdownOpen: !prevState.dropdownOpen,
       popoverInformationsOpen: false
