@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { makeRetrieveDirSuccess } from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
-
+import { Container } from "reactstrap"
 import FoldersTable from "../components/PageFolders/FoldersTable"
 
 const mapStateToProps = state => ({
@@ -27,13 +27,15 @@ class FoldersTableWrap extends Component {
   render() {
     const { parent, files, dirs, onDirclick, onBackclick } = this.props
     return (
-      <FoldersTable
-        parent={parent}
-        files={files}
-        dirs={dirs}
-        onDirclick={onDirclick}
-        onBackclick={onBackclick}
-      />
+      <Container fluid>
+        <FoldersTable
+          parent={parent}
+          files={files}
+          dirs={dirs}
+          onDirclick={onDirclick}
+          onBackclick={onBackclick}
+        />
+      </Container>
     )
   }
 
