@@ -45,6 +45,9 @@ class DropDown extends React.Component {
   constructor(props) {
     super(props)
     this.toggle = this.toggle.bind(this)
+    this.onToggleInformationsPopover = this.onToggleInformationsPopover.bind(
+      this
+    )
     this.state = {
       dropdownOpen: false,
       popoverInformationsOpen: false,
@@ -54,7 +57,8 @@ class DropDown extends React.Component {
 
   toggle() {
     this.setState((prevState, props) => ({
-      dropdownOpen: !prevState.dropdownOpen
+      dropdownOpen: !prevState.dropdownOpen,
+      popoverInformationsOpen: false
     }))
   }
 
@@ -170,9 +174,12 @@ class DropDown extends React.Component {
             <div>
               <div>
                 <Popover
-                  placement="left-start"
-                  isOpen={this.state.popoverInformationsOpen}
-                  target="popoverInformations"
+                  placement="left"
+                  isOpen={
+                    this.state.popoverInformationsOpen &&
+                    this.state.dropdownOpen
+                  }
+                  target={"popoverInformations" + _id}
                   toggle={this.onToggleInformationsPopover}
                 >
                   <PopoverHeader style={{ textAlign: "center" }}>
@@ -195,7 +202,7 @@ class DropDown extends React.Component {
                 </Popover>
               </div>
               <Button
-                id="popoverInformations"
+                id={"popoverInformations" + _id}
                 style={{
                   color: "black"
                 }}
