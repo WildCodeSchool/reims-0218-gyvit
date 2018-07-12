@@ -15,6 +15,7 @@ import modalUpdateDirReducer from "./modalUpdateDirReducer"
 import selectedFileReducer from "./selectedFileReducer"
 import modalUpdateFileReducer from "./modalUpdateFileReducer"
 import currentFileReducer from "./currentFileReducer"
+import sortDirsReducer from "./sortDirsReducer" 
 
 export default combineReducers({
   error: errorsReducer,
@@ -31,5 +32,6 @@ export default combineReducers({
   notif: NotifReducer,
   selectedFile: selectedFileReducer,
   modalUpdateFile: modalUpdateFileReducer,
-  currentFile: currentFileReducer
+  currentFile: currentFileReducer,
+  sortDirs: sortDirsReducer
 })
