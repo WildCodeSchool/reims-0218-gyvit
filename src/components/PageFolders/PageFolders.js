@@ -12,7 +12,9 @@ const PageFolders = () => (
         xs="2"
         style={{
           paddingLeft: "0%",
-          paddingRight: "0%"
+          paddingRight: "0%",
+          marginLeft: 0,
+          marginRight: 0
         }}
       >
         <NavbarLeft />
@@ -21,7 +23,9 @@ const PageFolders = () => (
         xs="10"
         style={{
           paddingLeft: "0%",
-          paddingRight: "0%"
+          paddingRight: "0%",
+          marginLeft: 0,
+          marginRight: 0
         }}
       >
         <NavbarTop />
