@@ -18,10 +18,7 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === RETRIEVE_DIR_SUCCESS) {
     return action.response.dirs
   }
-  prevState.map(
-    dir => (dir.id === action.id ? { ...dir, editing: !dir.editing } : dir)
-  )
-
+  
   if (action.type === UPDATE_A_FOLDER_SUCCESS) {
     return prevState.map(dir => {
       if (dir._id === action.response._id) {
