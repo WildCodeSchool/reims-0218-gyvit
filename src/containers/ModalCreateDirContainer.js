@@ -47,9 +47,11 @@ class ModalCreateDirContainer extends Component {
 
   onCreateDir() {
     createDir(this.state.name, this.props.destination)
-      .then(response => this.props.onSubmitCreateDir(response))
+      .then(res => {
+        this.props.onSubmitCreateDir(res)
+      })
+      .catch(res => this.props.onError(res.message))
       .then(() => this.props.onHideModal()) // close modal after creating a dir
-      .catch(response => this.props.onError(response.message))
   }
 
   render() {

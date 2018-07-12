@@ -1,12 +1,14 @@
 import { getToken } from "./localStorageToken"
+const axios = require("axios")
 
-const request = {
+const config = {
+  baseURL: "https://dev.gyvit.io/api/",
   method: "get",
-  headers: new Headers({
+  headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
     Authorization: `Bearer ${getToken()}`
-  })
+  }
 }
 
 /**
@@ -15,8 +17,7 @@ const request = {
  */
 
 export const retrieveMe = () =>
-  fetch("https://dev.gyvit.io/api/user/me", request)
-    .then(res => res.json())
-    .then(user => {
-      return user
-    })
+  axios({
+    ...config,
+    url: `user/me`
+  }).then(res => res.data)

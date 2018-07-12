@@ -1,12 +1,19 @@
 import { getToken } from "../users/localStorageToken"
+const axios = require("axios")
+
+const config = {
+  baseURL: "https://dev.gyvit.io/api/",
+  method: "delete",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${getToken()}`
+  }
+}
 
 export const deleteDirectory = (dirId, dirName) =>
-  fetch(`https://dev.gyvit.io/api/storage/directorys/${dirId}`, {
-    method: "DELETE",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${getToken()}`
-    },
-    body: JSON.stringify({ name: dirName })
-  }).then(res => res.json())
+  axios({
+    ...config,
+    data: JSON.stringify({ name: dirName }),
+    url: `storage/directorys/${dirId}`
+  }).then(res => res.data)
