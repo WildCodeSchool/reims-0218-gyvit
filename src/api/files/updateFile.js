@@ -1,7 +1,7 @@
 import { getToken } from "../users/localStorageToken"
 
 export const updateFile = (name, fileId) => {
-  fetch(`https://dev.gyvit.io/api/storage/files/${fileId}`, {
+  return fetch(`https://dev.gyvit.io/api/storage/files/${fileId}`, {
     method: "PATCH",
     headers: {
       Accept: "application/json",
