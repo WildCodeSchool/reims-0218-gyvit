@@ -45,7 +45,7 @@ const NavbarTopSearch = ({
         value={search}
       />
 
-      <Dropdown isOpen={search} toggle="false">
+      <Dropdown isOpen={search ? true : false} toggle={() => {}}>
         <DropdownMenu
           style={{
             transform: "none",
@@ -53,7 +53,7 @@ const NavbarTopSearch = ({
             width: "100%"
           }}
         >
-          <DropdownToggle style={{ visibility: "hidden" }} toggle="false" />
+          <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
             searchResults.map(searchResult => {
               // transform a string to display in several spans
