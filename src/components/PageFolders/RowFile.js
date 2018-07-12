@@ -6,7 +6,7 @@ import Share from "./Share"
 const RowFile = ({ file, key }) => {
   const { name, modified, shares } = file
   const pict = [] // i'm filling a pict's array with a placeHolder picture
-  pict.fill("Icons/person-icon.png", 0, shares.length - 1)
+  shares && pict.fill("Icons/person-icon.png", 0, shares.length - 1)
   console.log(pict)
   return (
     <tr key={key}>
