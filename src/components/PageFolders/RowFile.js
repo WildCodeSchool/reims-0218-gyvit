@@ -5,8 +5,11 @@ import Share from "./Share"
 
 const RowFile = ({ file, key }) => {
   const { name, modified, shares } = file
+<<<<<<< Updated upstream
   const pict = [] // i'm filling a pict's array with a placeHolder picture
   shares && pict.fill("Icons/person-icon.png", 0, shares.length - 1)
+=======
+>>>>>>> Stashed changes
   return (
     <tr key={key}>
       <td style={{ width: "40%" }}>
