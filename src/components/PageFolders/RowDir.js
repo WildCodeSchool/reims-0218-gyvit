@@ -42,8 +42,9 @@ const RowDir = ({ dir, onDirclick }) => {
         {convertDateFromJsonToFrench(modified)}
       </td>
       <td>
-        {shares &&
-          shares.map((share, key) => <Share {...share} key={share._id} />)}
+        {shares && shares.map((share, key) => {
+          return <Share {...share} key={key} />}
+        )}
       </td>
       <td>
         <DropDownDirContainer dir={dir} />

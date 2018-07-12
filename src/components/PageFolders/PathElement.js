@@ -17,12 +17,11 @@ class PathElement extends React.Component {
   render() {
     return (
       <span
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer", textDecoration: this.state.style }}
         onClick={this.props.onClick}
         onMouseEnter={() => {
           this.onMouseEnter()
         }}
-        style={{ textDecoration: this.state.style }}
         onMouseLeave={() => {
           this.onMouseLeave()
         }}
