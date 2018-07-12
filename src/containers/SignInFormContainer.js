@@ -115,6 +115,7 @@ class SignInFormWrap extends Component {
                     return response
                   }
                 })
+                .catch(response => this.props.onError(response.message))
                 .then(response => {
                   if (response._id !== undefined) {
                     this.props.onUserConnected(response)
@@ -124,7 +125,6 @@ class SignInFormWrap extends Component {
                     this.props.onError(response.error)
                   }
                 })
-                .catch(response => this.props.onError(response.message))
             }
             style={{
               width: "192px",
