@@ -43,6 +43,9 @@ class DropDownFileContainer extends React.Component {
   constructor(props) {
     super(props)
     this.toggle = this.toggle.bind(this)
+    this.onToggleInformationsPopover = this.onToggleInformationsPopover.bind(
+      this
+    )
     this.state = {
       dropdownOpen: false,
       popoverInformationsOpen: false
@@ -50,9 +53,10 @@ class DropDownFileContainer extends React.Component {
   }
 
   toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    })
+    this.setState((prevState, props) => ({
+      dropdownOpen: !prevState.dropdownOpen,
+      popoverInformationsOpen: false
+    }))
   }
 
   onToggleInformationsPopover() {
@@ -140,8 +144,11 @@ class DropDownFileContainer extends React.Component {
               <div>
                 <Popover
                   placement="left-start"
-                  isOpen={this.state.popoverInformationsOpen}
-                  target="popoverInformations"
+                  isOpen={
+                    this.state.popoverInformationsOpen &&
+                    this.state.dropdownOpen
+                  }
+                  target={"popoverInformations" + _id}
                   toggle={this.onToggleInformationsPopover}
                 >
                   <PopoverHeader style={{ textAlign: "center" }}>
@@ -164,7 +171,7 @@ class DropDownFileContainer extends React.Component {
                 </Popover>
               </div>
               <Button
-                id="popoverInformations"
+                id={"popoverInformations" + _id}
                 style={{
                   color: "black"
                 }}
