@@ -37,7 +37,7 @@ const NavbarTopSearch = ({
           borderRadius: "2px",
           border: "none"
         }}
-        type={search}
+        type="text"
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
@@ -55,12 +55,12 @@ const NavbarTopSearch = ({
         >
           <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
-            results.map((searchResult, index) => {
+            results.map((result, index) => {
               // transform a string to display in several spans
-              const resultString = highlight(searchResult.name, search)
+              const resultString = highlight(result.name, search)
               return (
                 <DropdownItem
-                  onClick={() => onDirclick(searchResult._id)}
+                  onClick={() => onDirclick(result._id)}
                   key={index}
                 >
                   <span>{resultString[0]}</span>

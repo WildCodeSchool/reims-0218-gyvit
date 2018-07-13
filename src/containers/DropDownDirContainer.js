@@ -89,7 +89,7 @@ class DropDown extends React.Component {
         </DropdownToggle>
         <DropdownMenu>
           <div>
-            <Button
+            <div
               style={{
                 color: "black"
               }}
@@ -112,8 +112,8 @@ class DropDown extends React.Component {
               >
                 Share
               </Link>
-            </Button>
-            <Button
+            </div>
+            <div
               style={{
                 color: "black"
               }}
@@ -138,8 +138,8 @@ class DropDown extends React.Component {
                   Create public access
                 </Link>
               </span>
-            </Button>
-            <Button
+            </div>
+            <div
               style={{
                 color: "black"
               }}
@@ -164,7 +164,7 @@ class DropDown extends React.Component {
                   Create private access
                 </Link>
               </span>
-            </Button>
+            </div>
             <div>
               <div>
                 <Popover
