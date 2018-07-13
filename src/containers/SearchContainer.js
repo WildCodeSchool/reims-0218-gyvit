@@ -8,7 +8,7 @@ import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 import { makeListAllDirs } from "../actions/foldersActions"
 
 const mapStateToProps = state => ({
-  searchResults: state.resultSearch
+  results: state.resultSearch
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -40,7 +40,7 @@ export class NavbarTopFilter extends Component {
         <NavbarTopSearch
           onSearchType={this.onSearchType}
           search={this.state.search}
-          searchResults={this.props.searchResults}
+          results={this.props.results}
           onDirclick={this.props.onDirclick}
         />
       </div>

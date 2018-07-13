@@ -41,7 +41,8 @@ const RowFile = ({ file, key }) => {
         {convertDateFromJsonToFrench(modified)}
       </td>
       <td>
-        {shares && shares.map((share, key) => <Share key={key} {...share} />)}
+        {shares &&
+          shares.map((share, index) => <Share key={index} {...share} />)}
       </td>
       <td
         style={{

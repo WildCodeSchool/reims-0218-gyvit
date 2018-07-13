@@ -21,7 +21,7 @@ const highlight = (text, search) => {
 const NavbarTopSearch = ({
   _id,
   onDirclick,
-  searchResults,
+  results,
   search,
   onSearchType
 }) => (
@@ -29,30 +29,28 @@ const NavbarTopSearch = ({
     <FormGroup>
       <Input
         className="search-bar typeahead form-control"
-        type="search"
+        type="text"
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
-        searchResults={searchResults}
         value={search}
       />
 
-      <Dropdown isOpen={search}>
+      <Dropdown isOpen={search ? true : false} toggle={() => {}}>
         <DropdownMenu className="search-dropdown">
           <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
-            searchResults.map(searchResult => {
+            results.map((result, index) => {
               // transform a string to display in several spans
-              const searchResultString = highlight(searchResult.name, search)
+              const resultString = highlight(result.name, search)
               return (
                 <DropdownItem
-                  onClick={() => onDirclick(searchResult._id)}
-                  key={searchResult.value}
-                  value={searchResult.value}
+                  onClick={() => onDirclick(result._id)}
+                  key={index}
                 >
-                  <span>{searchResultString[0]}</span>
+                  <span>{resultString[0]}</span>
                   <span style={{ color: "red" }}>{search}</span>
-                  <span>{searchResultString[1]}</span>
+                  <span>{resultString[1]}</span>
                 </DropdownItem>
               )
             })}

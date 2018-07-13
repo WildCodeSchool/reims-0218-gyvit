@@ -23,15 +23,15 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
               src={process.env.PUBLIC_URL + image}
               alt="folder"
             />
-            <CardBody d-flex flex-column>
+            <CardBody d-flex="true" flex-column="true">
               <CardTitle className="card-title ">{titre}</CardTitle>
               <CardText className="card-text">{bio}</CardText>
               <Button className="card-button">
                 <NavLink
                   style={{
-                    "font-size": "16px",
-                    "font-weight": "500",
-                    "text-align": "left",
+                    fontSize: "16px",
+                    fontWeight: "500",
+                    textAlign: "left",
                     color: "#725fe3"
                   }}
                   to={link}
