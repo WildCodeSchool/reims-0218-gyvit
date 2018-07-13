@@ -41,7 +41,6 @@ const NavbarTopSearch = ({
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
-        results={results}
         value={search}
       />
 
