@@ -23,12 +23,14 @@ const FoldersTableTbody = ({
           <td>{"..."}</td>
         </tr>
       )}
-      {dirs.map((dir, index) => {
-        return <RowDir key={index} dir={dir} onDirclick={onDirclick} />
-      })}
-      {files.map(file => {
-        return <RowFile key={file._id} file={file} />
-      })}
+      {dirs &&
+        dirs.map((dir, index) => {
+          return <RowDir key={index} dir={dir} onDirclick={onDirclick} />
+        })}
+      {files &&
+        files.map(file => {
+          return <RowFile key={file._id} file={file} />
+        })}
     </tbody>
   )
 }

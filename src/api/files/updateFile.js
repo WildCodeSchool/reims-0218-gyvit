@@ -1,13 +1,19 @@
 import { getToken } from "../users/localStorageToken"
+const axios = require("axios")
 
-export const updateFile = (name, fileId) => {
-  return fetch(`https://dev.gyvit.io/api/storage/files/${fileId}`, {
-    method: "PATCH",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${getToken()}`
-    },
-    body: JSON.stringify({ name, fileId })
-  }).then(res => res.json())
+const config = {
+  baseURL: "https://dev.gyvit.io/api/",
+  method: "patch",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${getToken()}`
+  }
 }
+
+export const updateFile = (name, fileId) =>
+  axios({
+    ...config,
+    url: `storage/files/${fileId}`,
+    data: JSON.stringify({ name, fileId })
+  }).then(res => res.data)

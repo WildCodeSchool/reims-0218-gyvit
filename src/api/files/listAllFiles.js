@@ -1,11 +1,18 @@
 import { getToken } from "../users/localStorageToken"
+const axios = require("axios")
+
+const config = {
+  baseURL: "https://dev.gyvit.io/api/",
+  method: "get",
+  headers: {
+    Accept: "application/json",
+    Authorization: `Bearer ${getToken()}`,
+    "Content-Type": "Content-Type: application/json"
+  }
+}
 
 export const listAllFiles = () =>
-  fetch("https://dev.gyvit.io/api/storage/files/list ", {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      Authorization: `Bearer ${getToken()}`,
-      "Content-Type": "Content-Type: application/json"
-    }
-  }).then(res => res.json())
+  axios({
+    ...config,
+    url: `storage/files/list`
+  }).then(res => res.data)
