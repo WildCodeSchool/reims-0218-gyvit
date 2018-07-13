@@ -11,7 +11,7 @@ import {
   Dropdown,
   DropdownToggle
 } from "reactstrap"
-
+import "./styles-navbar-top/navbarTopSearch.css"
 //function to split with search criteria
 const highlight = (text, search) => {
   const highlightSuggestion = text.toLowerCase().split(search.toLowerCase())
@@ -28,15 +28,7 @@ const NavbarTopSearch = ({
   <div>
     <FormGroup>
       <Input
-        className="typeahead form-control"
-        style={{
-          marginTop: "22px",
-          marginLeft: "6px",
-          height: "46px",
-          backgroundColor: "#fbfcfd",
-          borderRadius: "2px",
-          border: "none"
-        }}
+        className="search-bar typeahead form-control"
         type="search"
         id="exampleSearch"
         placeholder="Search..."
@@ -46,13 +38,7 @@ const NavbarTopSearch = ({
       />
 
       <Dropdown isOpen={search}>
-        <DropdownMenu
-          style={{
-            transform: "none",
-            marginLeft: "5px",
-            width: "100%"
-          }}
-        >
+        <DropdownMenu className="search-dropdown">
           <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
             searchResults.map(searchResult => {
