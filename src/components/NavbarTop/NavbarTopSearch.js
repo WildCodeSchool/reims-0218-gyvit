@@ -21,7 +21,7 @@ const highlight = (text, search) => {
 const NavbarTopSearch = ({
   _id,
   onDirclick,
-  searchResults,
+  results,
   search,
   onSearchType
 }) => (
@@ -41,7 +41,7 @@ const NavbarTopSearch = ({
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
-        searchResults={searchResults}
+        results={results}
         value={search}
       />
 
@@ -55,18 +55,17 @@ const NavbarTopSearch = ({
         >
           <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
-            searchResults.map(searchResult => {
+            results.map((searchResult, index) => {
               // transform a string to display in several spans
-              const searchResultString = highlight(searchResult.name, search)
+              const resultString = highlight(searchResult.name, search)
               return (
                 <DropdownItem
                   onClick={() => onDirclick(searchResult._id)}
-                  key={searchResult.value}
-                  value={searchResult.value}
+                  key={index}
                 >
-                  <span>{searchResultString[0]}</span>
+                  <span>{resultString[0]}</span>
                   <span style={{ color: "red" }}>{search}</span>
-                  <span>{searchResultString[1]}</span>
+                  <span>{resultString[1]}</span>
                 </DropdownItem>
               )
             })}
