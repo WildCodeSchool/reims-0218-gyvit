@@ -6,31 +6,15 @@ import NavbarLeftItem from "./NavbarLeftItem"
 import { Nav, NavItem, Row, Container } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
 import { link, settings } from "../../links"
+import "../../styles/NavbarLeft/navbarLeft.css"
+import "../../styles/NavbarLeft/navbarLeftItem.css"
 
 const NavbarLeft = ({ dataLinks = link }) => (
   <Container>
     <Row>
-      <Nav
-        vertical
-        expand="md"
-        style={{
-          width: "100%",
-          height: "100vh",
-          backgroundColor: "#231b56",
-          color: "white"
-        }}
-      >
+      <Nav className="navbar-left" vertical expand="md">
         <NavbarLeftLogo />
-        <NavItem
-          style={{
-            marginRight: "0px",
-            marginLeft: "25%",
-            marginTop: "30%",
-            fontSize: "16px",
-            textAlign: "left"
-          }}
-          className="align-center"
-        >
+        <NavItem className="nav-item">
           {dataLinks.map((link, index) => (
             <NavbarLeftItem key={index} {...link} />
           ))}
