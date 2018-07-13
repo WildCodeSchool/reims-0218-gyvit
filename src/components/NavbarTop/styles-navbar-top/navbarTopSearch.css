@@ -1,0 +1,12 @@
+.search-bar {
+  margin-top: 22px;
+  margin-left: 6px;
+  height: 46px;
+  background-color: #fbfcfd;
+  border-radius: 2px;
+  border: none; }
+
+.search-dropdown {
+  transform: none;
+  margin-left: 5px;
+  width: 100%; }

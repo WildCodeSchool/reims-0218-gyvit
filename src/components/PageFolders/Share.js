@@ -15,7 +15,6 @@ const Share = ({ account, key }) => {
         height: "30px"
       }}
       className="rounded-circle"
-      object
     />
   )
 }
