@@ -5,15 +5,12 @@ import Share from "./Share"
 
 const RowFile = ({ file, key }) => {
   const { name, modified, shares } = file
-  const pict = [] // i'm filling a pict's array with a placeHolder picture
-  pict.fill("Icons/person-icon.png", 0, shares.length - 1)
-  console.log(pict)
   return (
     <tr key={key}>
-      <td>
+      <td style={{ width: "40%" }}>
         <img
           style={{
-            width: "26.2px",
+            width: "30px",
             height: "32px",
             marginTop: "20px",
             marginBottom: "20px",
@@ -27,7 +24,7 @@ const RowFile = ({ file, key }) => {
       <td
         className="align-middle"
         style={{
-          width: "60%",
+          width: "40%",
           height: "9%",
           fontFamily: "DepotNew",
           fontSize: "14px",
@@ -46,7 +43,11 @@ const RowFile = ({ file, key }) => {
       <td>
         {shares && shares.map((share, key) => <Share key={key} {...share} />)}
       </td>
-      <td>
+      <td
+        style={{
+          width: "20%"
+        }}
+      >
         <DropDownFileContainer file={file} />
       </td>
     </tr>
