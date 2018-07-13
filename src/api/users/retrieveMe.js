@@ -16,8 +16,15 @@ const config = {
  * @returns {{object:"account",_id:{string},mail:{string},firstname:{string},lastname:{string},role:{string},active:{number},created:{string},modified:{string}}}: acct object for user
  */
 
-export const retrieveMe = () =>
+export const retrieveMe = () => {
+  console.log("token AVANT axios du retrieveMe: ", getToken())
   axios({
     ...config,
     url: `user/me`
-  }).then(res => res.data)
+  })
+    .then(res => res.data)
+    .catch(res => {
+      console.log("res catch axios retrieveMe: ", getToken())
+      return res
+    })
+}

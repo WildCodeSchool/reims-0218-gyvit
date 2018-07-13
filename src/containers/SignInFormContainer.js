@@ -7,6 +7,7 @@ import { connectUserSuccessAction } from "../actions/userAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
 import ModalErrorContainer from "./ModalErrorContainer"
+import { getToken } from "../api/users/localStorageToken"
 
 //verify on store with redirect if user mail is present on this
 const mapStateToProps = state => {
@@ -102,30 +103,34 @@ class SignInFormWrap extends Component {
           </FormGroup>
           <Button
             type="button"
-            onClick={() =>
-              userLogin(this.state.mail, this.state.password)
-                // catch response:  if not desired response, response.message
-                //                  if desired: response.success
-                .then(response => {
-                  if (response.success) {
-                    return retrieveMe().catch(response =>
-                      this.props.onError(response.message)
-                    )
-                  } else {
-                    return response
-                  }
-                })
-                .catch(response => this.props.onError(response.message))
-                .then(response => {
-                  if (response._id !== undefined) {
-                    this.props.onUserConnected(response)
-                    // redirect dashboard here
-                  } else if (!response.success) {
-                    // emptying user AND fill errors in props when connect failed
-                    this.props.onError(response.error)
-                  }
-                })
-            }
+            onClick={() => {
+              return (
+                userLogin(this.state.mail, this.state.password)
+                  // catch response:  if not desired response, response.message
+                  //                  if desired: response.success
+                  .then(response => {
+                    if (response.success) {
+                      console.log("token AVANT retrieveMe: ", getToken())
+                      return retrieveMe().then(res => {
+                        console.log("res , first then after retrieveMe:  ", res)
+                        return res
+                      })
+                    } else {
+                      return response
+                    }
+                  })
+                  .catch(response => this.props.onError(response.message))
+                  .then(response => {
+                    if (response._id !== undefined) {
+                      this.props.onUserConnected(response)
+                      // redirect dashboard here
+                    } else if (!response.success) {
+                      // emptying user AND fill errors in props when connect failed
+                      this.props.onError(response.error)
+                    }
+                  })
+              )
+            }}
             style={{
               width: "192px",
               height: "54px",
