@@ -6,8 +6,7 @@ import NavbarLeftItem from "./NavbarLeftItem"
 import { Nav, NavItem, Row, Container } from "reactstrap"
 import NavbarLeftLogo from "./NavbarLeftLogo"
 import { link, settings } from "../../links"
-import "../../styles/NavbarLeft/navbarLeft.css"
-import "../../styles/NavbarLeft/navbarLeftItem.css"
+import "./styles-navbar-left/navbarLeft.css"
 
 const NavbarLeft = ({ dataLinks = link }) => (
   <Container>
@@ -20,16 +19,7 @@ const NavbarLeft = ({ dataLinks = link }) => (
           ))}
         </NavItem>
 
-        <NavItem
-          style={{
-            marginRight: "0px",
-            marginLeft: "0%",
-            fontSize: "16px",
-            textAlign: "center",
-            marginTop: "auto"
-          }}
-          className="align-center"
-        >
+        <NavItem className="nav-item-settings">
           <NavbarLeftItem {...settings} />
         </NavItem>
       </Nav>

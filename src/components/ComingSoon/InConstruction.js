@@ -1,6 +1,6 @@
 import React from "react"
 import { Container } from "reactstrap"
-import "../../styles/CommingSoon/inConstruction.css"
+import "./styles-cs/inConstruction.css"
 
 const ComingSoon = () => {
   return (
