@@ -25,7 +25,7 @@ const RowDir = ({ dir, onDirclick }) => {
         onClick={() => onDirclick(_id)}
         className="align-middle"
         style={{
-          width: "45%",
+          width: "40%",
           height: "9%",
           fontFamily: "DepotNew",
           fontSize: "14px",
@@ -41,10 +41,15 @@ const RowDir = ({ dir, onDirclick }) => {
       >
         {convertDateFromJsonToFrench(modified)}
       </td>
-      <td>
-        {shares && shares.map((share, key) => {
-          return <Share {...share} key={key} />}
-        )}
+      <td
+        style={{
+          width: "20%"
+        }}
+      >
+        {shares &&
+          shares.map((share, key) => {
+            return <Share {...share} key={key} />
+          })}
       </td>
       <td>
         <DropDownDirContainer dir={dir} />

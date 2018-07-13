@@ -1,0 +1,27 @@
+.card-home {
+  width: 40vh;
+  height: 55vh; }
+
+.card-img-home {
+  width: 50%;
+  margin-left: 25%; }
+
+.card-title {
+  font-size: 18px;
+  text-align: center; }
+
+.card-text {
+  font-size: 15px;
+  opacity: 0.45;
+  line-height: 3vh;
+  text-align: center;
+  margin-top: 5vh; }
+
+.card-button {
+  width: 170px;
+  height: 44px;
+  border-radius: 2px;
+  border: solid 1px #dce1e6;
+  background-color: white;
+  margin-top: 25%;
+  margin-left: 15%; }

@@ -11,52 +11,22 @@ import {
 } from "reactstrap"
 import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
-
+import "./styles-page-dashboard/dashboardCard.css"
 const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
   return (
     <div>
       <Container>
         <Row>
-          <Card style={{ width: "40vh", height: "55vh" }}>
+          <Card className="card-home">
             <CardImg
+              className="card-img-home"
               src={process.env.PUBLIC_URL + image}
               alt="folder"
-              style={{
-                width: "50%",
-                marginLeft: "25%"
-              }}
             />
             <CardBody d-flex="true" flex-column="true">
-              <CardTitle
-                style={{
-                  fontSize: "18px",
-                  textAlign: "center"
-                }}
-              >
-                {titre}
-              </CardTitle>
-              <CardText
-                style={{
-                  fontSize: "15px",
-                  opacity: "0.45",
-                  lineHeight: "3vh",
-                  textAlign: "center",
-                  marginTop: "5vh"
-                }}
-              >
-                {bio}
-              </CardText>
-              <Button
-                style={{
-                  width: "170px",
-                  height: "44px",
-                  borderRadius: "2px",
-                  border: "solid 1px #dce1e6",
-                  backgroundColor: "white",
-                  marginTop: "25%",
-                  marginLeft: "15%"
-                }}
-              >
+              <CardTitle className="card-title ">{titre}</CardTitle>
+              <CardText className="card-text">{bio}</CardText>
+              <Button className="card-button">
                 <NavLink
                   style={{
                     fontSize: "16px",

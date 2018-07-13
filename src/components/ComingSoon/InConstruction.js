@@ -1,31 +1,13 @@
 import React from "react"
 import { Container } from "reactstrap"
-import "../../App.css"
+import "./styles-cs/inConstruction.css"
 
 const ComingSoon = () => {
   return (
     <Container>
       <div>
-        <img
-          style={{
-            marginLeft: "38%",
-            marginTop: "12%"
-          }}
-          src="img/MeduzaIcon.png"
-          alt="meduza icon"
-          className="logo"
-        />
-        <h1
-          style={{
-            color: "#231b56",
-            fontSize: "40px",
-            fontStyle: "gras",
-            marginLeft: "35%",
-            marginTop: "3%"
-          }}
-        >
-          Coming Soon !!
-        </h1>
+        <img className="logo" src="img/MeduzaIcon.png" alt="meduza icon" />
+        <h1 className="title-css">Coming Soon !!</h1>
       </div>
     </Container>
   )

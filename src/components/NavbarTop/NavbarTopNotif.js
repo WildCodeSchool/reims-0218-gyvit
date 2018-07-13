@@ -3,22 +3,19 @@
 import React from "react"
 
 import NotifContainer from "../../containers/NotifContainer"
+import "./styles-navbar-top/navbarTop.css"
 
 const NavbarTopNotif = () => {
   return (
     <div>
       <img
-        style={{
-          marginTop: "40%"
-        }}
+        className="notif"
         src={process.env.PUBLIC_URL + "img/icon_notification.svg"}
-        alt="iconNotif"
+        alt="notif-icon"
       />
       <NotifContainer />
     </div>
   )
 }
-
-
 
 export default NavbarTopNotif

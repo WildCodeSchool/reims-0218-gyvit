@@ -45,7 +45,7 @@ class FoldersBarTopContainer extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container id="containerBarTop" fluid>
         <ModalErrorContainer />
         <ModalCreateDirContainer />
         <ModalCreateFileContainer />
