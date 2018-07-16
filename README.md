@@ -32,34 +32,32 @@ In your terminal :
 
 4.  Installs a package, and any packages that it depends on :`npm install`
 
-5.  Show the working tree status : `git status`
+5.  Add you frist add and commit for save changes to the repository : `git add <fileName>` or `git add -A` and `git cmmit -m '<commitName>'`
 
-6.  Add you frist add and commit for save changes to the repository : `git add <fileName>` or `git add -A` and `git cmmit -m '<commitName>'`
+6.  For add and modify th code create a new branch: `git checkout -b <branchName>`
 
-7.  For add and modify th code create a new branch: `git checkout -b <branchName>`
-
-8.  Runs the app in development mode : `npm start or yarn start`
+7.  Runs the app in development mode : `npm start or yarn start`
     Open http://localhost:3000 to view it in the browser.
     The page will automatically reload if you make changes to the code.
     You will see the build errors and lint warnings in the console.
 
-9.  Open a nother terminal: right click on the terminal and click in `open a terminal`
+8.  Open a nother terminal
 
-10. For Sass style compile : `npm run watch-css`
-    More information : https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc
+9.  For Sass style compile : `npm run watch-css`
+    [More information](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc)
 
-11. For update remote refs along with associated objects : `git push origin <branchName>`
+10. For update remote refs along with associated objects : `git push origin <branchName>`
 
 ## members
 
 ---
 
-- Arnaud Deschamps : @arnauddchamps
-- Philippe Tarte: @PhilTarte
-- Thibaud Royer : @GautamaB
-- Pierre Dumay : @PierreDmmy
-- Khalid El Idrissi @K-Lid
-- Anthony Fischer : @Anto999
+- Arnaud Deschamps : [@arnauddchamps](https://github.com/arnauddchamps)
+- Philippe Tarte: [@PhilTarte](https://github.com/PhiTarte)
+- Thibaud Royer : [@GautamaB](https://github.com/GautamaB)
+- Pierre Dumay :[ @PierreDmmy](https://github.com/PierreDmyy)
+- Khalid El Idrissi [@K-Lid](https://github.com/K-Lid)
+- Anthony Fischer : [@Anto999](https://github.com/anto999)
 
 ##Acknowledgments
 
