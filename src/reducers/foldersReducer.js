@@ -5,7 +5,9 @@ import {
   UPDATE_A_FOLDER_SUCCESS,
   DELETE_A_FOLDER_SUCCESS,
   SORT_DIRS_BY_NAME_ASC,
-  SORT_DIRS_BY_NAME_DESC
+  SORT_DIRS_BY_NAME_DESC,
+  SORT_DIRS_BY_DATE_ASC,
+  SORT_DIRS_BY_DATE_DESC
 } from "../actions/foldersActions"
 
 const initialState = []
@@ -52,6 +54,22 @@ const foldersReducer = (prevState = initialState, action) => {
       if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
     })
     return sortedArray.reverse()
+  }
+  if (action.type === SORT_DIRS_BY_DATE_ASC) {
+    const sortedArrayByDate = prevState.slice().sort((a, b) => {
+      if (a.modified.toLowerCase() < b.modified.toLowerCase()) return -1
+
+      if (a.modified.toLowerCase() > b.modified.toLowerCase()) return 1
+    })
+    return sortedArrayByDate
+  }
+  if (action.type === SORT_DIRS_BY_DATE_DESC) {
+    const sortedArrayByDate = prevState.slice().sort((a, b) => {
+      if (a.modified.toLowerCase() < b.modified.toLowerCase()) return -1
+
+      if (a.modified.toLowerCase() > b.modified.toLowerCase()) return 1
+    })
+    return sortedArrayByDate.reverse()
   }
 
   return prevState
