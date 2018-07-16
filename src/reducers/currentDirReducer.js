@@ -1,4 +1,4 @@
-import { RETRIEVE_DIR_SUCCESS } from "../actions/filesActions"
+import { RETRIEVE_DIR_SUCCESS } from "../actions/foldersActions"
 
 const initialState = []
 
