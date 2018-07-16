@@ -7,7 +7,6 @@ import { connectUserSuccessAction } from "../actions/userAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
 import ModalErrorContainer from "./ModalErrorContainer"
-import { getToken } from "../api/users/localStorageToken"
 
 //verify on store with redirect if user mail is present on this
 const mapStateToProps = state => {
