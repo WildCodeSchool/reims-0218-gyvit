@@ -9,7 +9,9 @@ const FoldersTable = ({
   dirs = [],
   parent = {},
   onDirclick,
-  onBackclick
+  onBackclick,
+  onSortNameAscClick,
+  onSortDateAscClick
 }) => (
   <div>
     <Scrollbars
@@ -22,10 +24,10 @@ const FoldersTable = ({
       <Table borderless striped>
         <thead>
           <tr>
-            <th>
+            <th onClick={() => onSortNameAscClick()}>
               <FoldersTableCategory name="Name  " direction={null} />
             </th>
-            <th>
+            <th onClick={() => onSortDateAscClick()}>
               <FoldersTableCategory name="Last update  " direction={null} />
             </th>
             <th>
