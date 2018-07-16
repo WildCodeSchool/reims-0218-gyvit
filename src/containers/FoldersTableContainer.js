@@ -6,7 +6,7 @@ import {
   makeSortDirsByDateAsc
 } from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
-import { Container } from "reactstrap"
+import { Container, Button } from "reactstrap"
 import FoldersTable from "../components/PageFolders/FoldersTable"
 
 const mapStateToProps = state => ({
@@ -24,32 +24,37 @@ const mapDispatchToProps = dispatch => ({
   onBackclick: idParent =>
     retrieveDir(idParent).then(response =>
       dispatch(makeRetrieveDirSuccess(response))
-    ),
-  onSortNameAscClick: response => dispatch(makeSortDirsByNameAsc(response)),
-  onSortDateAscClick: response => dispatch(makeSortDirsByDateAsc(response))
+    )
 })
 
 class FoldersTableWrap extends Component {
+  constructor(props) {
+    super(props)
+
+    this.onRadioBtnClick = this.onRadioBtnClick.bind(this)
+  }
+  onRadioBtnClick(rSelected) {
+    this.setState({ rSelected })
+  }
+
   render() {
-    const {
-      onSortNameAscClick,
-      parent,
-      files,
-      dirs,
-      onDirclick,
-      onBackclick,
-      onSortDateAscClick
-    } = this.props
+    const { parent, files, dirs, onDirclick, onBackclick } = this.props
     return (
       <Container fluid>
+        <Button
+          color="primary"
+          onClick={() => this.onRadioBtnClick(1)}
+          active={this.state.rSelected === 1}
+        >
+          <p>Selected: {this.state.rSelected}</p>
+        </Button>
+
         <FoldersTable
           parent={parent}
           files={files}
           dirs={dirs}
           onDirclick={onDirclick}
           onBackclick={onBackclick}
-          onSortNameAscClick={onSortNameAscClick}
-          onSortDateAscClick={onSortDateAscClick}
         />
       </Container>
     )
