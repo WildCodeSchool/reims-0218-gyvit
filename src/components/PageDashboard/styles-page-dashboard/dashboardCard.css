@@ -17,11 +17,17 @@
   text-align: center;
   margin-top: 5vh; }
 
-.card-button {
+.btn .btn-secondary {
   width: 170px;
   height: 44px;
   border-radius: 2px;
-  border: solid 1px #dce1e6;
-  background-color: white;
+  border: solid 1px #007af3;
+  background-color: red;
   margin-top: 25%;
   margin-left: 15%; }
+
+.navlink-button {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #725fe3; }
