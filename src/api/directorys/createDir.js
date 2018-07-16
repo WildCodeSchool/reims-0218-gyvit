@@ -3,7 +3,7 @@ const axios = require("axios")
 
 const config = {
   url: "storage/directorys",
-  baseURL: "https://dev.gyvit.io/api/",
+  baseURL: `${process.env.REACT_APP_BASE_URL}`,
   method: "post",
   headers: {
     Accept: "application/json",

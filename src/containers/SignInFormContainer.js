@@ -7,6 +7,7 @@ import { connectUserSuccessAction } from "../actions/userAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
 import ModalErrorContainer from "./ModalErrorContainer"
+import { getToken } from "../api/users/localStorageToken"
 
 //verify on store with redirect if user mail is present on this
 const mapStateToProps = state => {
@@ -19,7 +20,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   onUserConnected: response => dispatch(connectUserSuccessAction(response)),
-  onError: message => dispatch(makeShowModalError(message))
+  onError: response => dispatch(makeShowModalError(response))
 })
 
 class SignInFormWrap extends Component {
@@ -102,17 +103,19 @@ class SignInFormWrap extends Component {
           </FormGroup>
           <Button
             type="button"
-            onClick={() =>
-              userLogin(this.state.mail, this.state.password)
-                // catch response:  if not desired response, response.message
-                //                  if desired: response.success
+            onClick={() => {
+              return userLogin(this.state.mail, this.state.password)
                 .then(response => {
                   if (response.success) {
-                    return retrieveMe().catch(response =>
-                      this.props.onError(response.message)
-                    )
+                    console.log("token AVANT retrieveMe: ", getToken())
+                    return retrieveMe()
+                      .then(res => {
+                        console.log("res , first then after retrieveMe:  ", res)
+                        return res
+                      })
+                      .catch(response => this.props.onError(response))
                   } else {
-                    return response
+                    this.props.onError(response)
                   }
                 })
                 .then(response => {
@@ -121,11 +124,11 @@ class SignInFormWrap extends Component {
                     // redirect dashboard here
                   } else if (!response.success) {
                     // emptying user AND fill errors in props when connect failed
-                    this.props.onError(response.error)
+                    this.props.onError(response)
                   }
                 })
-                .catch(response => this.props.onError(response.message))
-            }
+                .catch(response => this.props.onError(response))
+            }}
             style={{
               width: "192px",
               height: "54px",

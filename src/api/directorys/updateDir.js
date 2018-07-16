@@ -2,7 +2,7 @@ import { getToken } from "../users/localStorageToken"
 const axios = require("axios")
 
 const config = {
-  baseURL: "https://dev.gyvit.io/api/",
+  baseURL: `${process.env.REACT_APP_BASE_URL}`,
   method: "patch",
   headers: {
     Accept: "application/json",
