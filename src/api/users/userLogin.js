@@ -1,4 +1,4 @@
-import { getToken, storeToken, removeToken } from "./localStorageToken"
+import { storeToken, removeToken } from "./localStorageToken"
 const axios = require("axios")
 
 export const userLogin = (mail, password) => {
@@ -23,11 +23,9 @@ export const userLogin = (mail, password) => {
       return res.data
     })
     .then(response => {
-      console.log("response deuxieme then du userLogin: ", response)
       //stock token in localStorage storeToken()
       if (response.success) {
         storeToken(response.data.token)
-        console.log("token APRES storeToken du userLogin: ", getToken())
       } else {
         removeToken()
       }

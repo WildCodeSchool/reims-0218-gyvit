@@ -107,10 +107,8 @@ class SignInFormWrap extends Component {
               return userLogin(this.state.mail, this.state.password)
                 .then(response => {
                   if (response.success) {
-                    console.log("token AVANT retrieveMe: ", getToken())
                     return retrieveMe()
                       .then(res => {
-                        console.log("res , first then after retrieveMe:  ", res)
                         return res
                       })
                       .catch(response => this.props.onError(response))
