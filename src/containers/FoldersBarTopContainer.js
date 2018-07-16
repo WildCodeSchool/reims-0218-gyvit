@@ -67,9 +67,7 @@ class FoldersBarTopContainer extends React.Component {
                       onClick={() =>
                         this.props
                           .onSelectPathElement(pathElement._id)
-                          .catch(response =>
-                            this.props.onError(response.message)
-                          )
+                          .catch(response => this.props.onError(response))
                       }
                     />
                   ))}
