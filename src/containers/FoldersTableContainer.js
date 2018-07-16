@@ -1,6 +1,10 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { makeRetrieveDirSuccess } from "../actions/foldersActions"
+import {
+  makeRetrieveDirSuccess,
+  makeSortDirsByNameAsc,
+  makeSortDirsByDateAsc
+} from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 import { Container } from "reactstrap"
 import FoldersTable from "../components/PageFolders/FoldersTable"
@@ -20,12 +24,22 @@ const mapDispatchToProps = dispatch => ({
   onBackclick: idParent =>
     retrieveDir(idParent).then(response =>
       dispatch(makeRetrieveDirSuccess(response))
-    )
+    ),
+  onSortNameAscClick: response => dispatch(makeSortDirsByNameAsc(response)),
+  onSortDateAscClick: response => dispatch(makeSortDirsByDateAsc(response))
 })
 
 class FoldersTableWrap extends Component {
   render() {
-    const { parent, files, dirs, onDirclick, onBackclick } = this.props
+    const {
+      onSortNameAscClick,
+      parent,
+      files,
+      dirs,
+      onDirclick,
+      onBackclick,
+      onSortDateAscClick
+    } = this.props
     return (
       <Container fluid>
         <FoldersTable
@@ -34,6 +48,8 @@ class FoldersTableWrap extends Component {
           dirs={dirs}
           onDirclick={onDirclick}
           onBackclick={onBackclick}
+          onSortNameAscClick={onSortNameAscClick}
+          onSortDateAscClick={onSortDateAscClick}
         />
       </Container>
     )
