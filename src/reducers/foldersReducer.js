@@ -37,8 +37,7 @@ const foldersReducer = (prevState = initialState, action) => {
   }
 
   if (action.type === SORT_DIRS_BY_NAME_ASC) {
-    const array = prevState
-    const sortedArray = array.slice().sort((a, b) => {
+    const sortedArray = prevState.slice().sort((a, b) => {
       if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
 
       if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
@@ -47,13 +46,12 @@ const foldersReducer = (prevState = initialState, action) => {
   }
 
   if (action.type === SORT_DIRS_BY_NAME_DESC) {
-    const array = prevState
-    const sortedArray = array.slice().sort((a, b) => {
+    const sortedArray = prevState.slice().sort((a, b) => {
       if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
 
       if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
     })
-    return sortedArray
+    return sortedArray.reverse()
   }
 
   return prevState
