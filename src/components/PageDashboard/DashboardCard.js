@@ -26,14 +26,9 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
             <CardBody d-flex="true" flex-column="true">
               <CardTitle className="card-title ">{titre}</CardTitle>
               <CardText className="card-text">{bio}</CardText>
-              <Button className="card-button">
+              <Button className="navlink-button" color="false">
                 <NavLink
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: "500",
-                    textAlign: "left",
-                    color: "#725fe3"
-                  }}
+                  className="navlink-button"
                   to={link}
                   activeClassName="selected"
                   activeStyle={{

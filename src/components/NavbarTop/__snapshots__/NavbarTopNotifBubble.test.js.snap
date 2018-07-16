@@ -2,16 +2,8 @@
 
 exports[`renders correctly 1`] = `
 <span
-  className="badge badge-secondary badge-pill"
-  style={
-    Object {
-      "backgroundColor": "#ff007e",
-      "height": "20px",
-      "marginTop": "-50px",
-      "width": "auto",
-    }
-  }
+  className="notif-color badge badge-secondary badge-pill"
 >
-  8
+  6
 </span>
 `;
