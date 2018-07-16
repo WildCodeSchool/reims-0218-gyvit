@@ -20,7 +20,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   onUserConnected: response => dispatch(connectUserSuccessAction(response)),
-  onError: message => dispatch(makeShowModalError(message))
+  onError: response => dispatch(makeShowModalError(response))
 })
 
 class SignInFormWrap extends Component {
@@ -104,32 +104,30 @@ class SignInFormWrap extends Component {
           <Button
             type="button"
             onClick={() => {
-              return (
-                userLogin(this.state.mail, this.state.password)
-                  // catch response:  if not desired response, response.message
-                  //                  if desired: response.success
-                  .then(response => {
-                    if (response.success) {
-                      console.log("token AVANT retrieveMe: ", getToken())
-                      return retrieveMe().then(res => {
+              return userLogin(this.state.mail, this.state.password)
+                .then(response => {
+                  if (response.success) {
+                    console.log("token AVANT retrieveMe: ", getToken())
+                    return retrieveMe()
+                      .then(res => {
                         console.log("res , first then after retrieveMe:  ", res)
                         return res
                       })
-                    } else {
-                      return response
-                    }
-                  })
-                  .catch(response => this.props.onError(response.message))
-                  .then(response => {
-                    if (response._id !== undefined) {
-                      this.props.onUserConnected(response)
-                      // redirect dashboard here
-                    } else if (!response.success) {
-                      // emptying user AND fill errors in props when connect failed
-                      this.props.onError(response.error)
-                    }
-                  })
-              )
+                      .catch(response => this.props.onError(response))
+                  } else {
+                    this.props.onError(response)
+                  }
+                })
+                .then(response => {
+                  if (response._id !== undefined) {
+                    this.props.onUserConnected(response)
+                    // redirect dashboard here
+                  } else if (!response.success) {
+                    // emptying user AND fill errors in props when connect failed
+                    this.props.onError(response)
+                  }
+                })
+                .catch(response => this.props.onError(response))
             }}
             style={{
               width: "192px",

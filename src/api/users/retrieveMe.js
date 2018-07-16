@@ -3,6 +3,7 @@ const axios = require("axios")
 
 const config = {
   baseURL: "https://dev.gyvit.io/api/",
+  url: `user/me`,
   method: "get",
   headers: {
     Accept: "application/json",
@@ -18,13 +19,13 @@ const config = {
 
 export const retrieveMe = () => {
   console.log("token AVANT axios du retrieveMe: ", getToken())
-  axios({
-    ...config,
-    url: `user/me`
-  })
-    .then(res => res.data)
+  return axios(config)
+    .then(res => {
+      console.log("res then APRES axios retrieveMe: ", res)
+      return res.data // returning the account
+    })
     .catch(res => {
-      console.log("res catch axios retrieveMe: ", getToken())
+      console.log("res catch axios retrieveMe: ", res)
       return res
     })
 }
