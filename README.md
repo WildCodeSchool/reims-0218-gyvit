@@ -59,6 +59,6 @@ In your terminal :
 - Khalid El Idrissi [@K-Lid](https://github.com/K-Lid)
 - Anthony Fischer : [@Anto999](https://github.com/anto999)
 
-##Acknowledgments
+## Acknowledgments
 
 - Thomas Culdaut
