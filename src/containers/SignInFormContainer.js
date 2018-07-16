@@ -106,15 +106,15 @@ class SignInFormWrap extends Component {
               return userLogin(this.state.mail, this.state.password)
                 .then(response => {
                   if (response.success) {
-                    return retrieveMe()
-                      .then(res => {
-                        return res
-                      })
-                      .catch(response => this.props.onError(response))
+                    return retrieveMe().catch(response =>
+                      this.props.onError(response)
+                    )
                   } else {
                     this.props.onError(response)
+                    return response
                   }
                 })
+                .catch(response => this.props.onError(response))
                 .then(response => {
                   if (response._id !== undefined) {
                     this.props.onUserConnected(response)
@@ -124,7 +124,6 @@ class SignInFormWrap extends Component {
                     this.props.onError(response)
                   }
                 })
-                .catch(response => this.props.onError(response))
             }}
             style={{
               width: "192px",
