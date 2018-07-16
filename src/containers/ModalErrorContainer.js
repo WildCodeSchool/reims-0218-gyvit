@@ -7,7 +7,8 @@ import { makeHideModalError } from "../actions/errorsActions"
 const mapStateToProps = state => {
   return {
     visibilityError: state.error.visibilityError,
-    message: state.error.message
+    message: state.error.message,
+    error: state.error.error
   }
 }
 
@@ -24,9 +25,11 @@ class ModalErrorContainer extends Component {
           className={this.props.className}
         >
           <ModalHeader toggle={() => this.props.onErrorToHide()}>
-            You encountered a failure
+            Dommage, une erreur:
           </ModalHeader>
-          <ModalBody>{this.props.message}</ModalBody>
+          <ModalBody>
+            {this.props.message ? this.props.message : this.props.error}
+          </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={() => this.props.onErrorToHide()}>
               Ok
