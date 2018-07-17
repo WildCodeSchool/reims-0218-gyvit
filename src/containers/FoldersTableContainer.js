@@ -50,16 +50,12 @@ class FoldersTableWrap extends Component {
           onDirclick={onDirclick}
           onBackclick={onBackclick}
           onSortDate={() => {
-            console.log("SortDate")
             this.props.onSortDate(this.props.directionDate)
           }}
           onSortName={() => {
-            console.log("SortName")
             this.props.onSortName(this.props.directionName)
           }}
-          onSortShare={() => {
-            console.log("SortShare")
-          }}
+          onSortShare={() => {}}
           directionDate={this.props.directionDate}
           directionName={this.props.directionName}
           directionShare={""}

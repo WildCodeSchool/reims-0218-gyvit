@@ -37,7 +37,6 @@ const foldersReducer = (prevState = initialState, action) => {
   }
 
   if (action.type === SORT_DIRS_BY_NAME_SUCCESS) {
-    console.log("sort by name: ", action)
     //copying dirs in prevState, then sort them by name
     const sortedDirsByName = [...prevState].sort((dirA, dirB) => {
       if (dirA.name.toLowerCase() < dirB.name.toLowerCase()) {
