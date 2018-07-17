@@ -2,32 +2,30 @@ import React, { Component } from "react"
 import { Button, ButtonGroup } from "reactstrap"
 
 class Example extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
 
-    this.state = { rSelected: "" }
+    this.state = { count: 0 }
 
-    this.onRadioBtnClick = this.onRadioBtnClick.bind(this)
+    this.onButtonClick = this.onButtonClick.bind(this)
   }
 
-  onRadioBtnClick(rSelected) {
-    this.setState({ rSelected })
+  onButtonClick() {
+    this.setState(prevState => ({
+      count: prevState.count + 1
+    }))
   }
 
   render() {
+    console.log(this.state.count, "render")
     return (
       <div>
-        <h5>Radio Buttons</h5>
         <ButtonGroup>
-          <Button
-            color="primary"
-            onClick={() => this.onRadioBtnClick(1)}
-            active={this.state.rSelected === 1}
-          >
+          <Button color="primary" onClick={() => this.onButtonClick()}>
             One
           </Button>
         </ButtonGroup>
-        <p>Selected: {this.state.rSelected}</p>
+        <p>Selected: {this.state.count}</p>
       </div>
     )
   }
