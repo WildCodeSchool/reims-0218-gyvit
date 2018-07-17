@@ -1,13 +1,10 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import {
-  makeRetrieveDirSuccess,
-  makeSortDirsByNameAsc,
-  makeSortDirsByDateAsc
-} from "../actions/foldersActions"
+import { makeRetrieveDirSuccess } from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
-import { Container, Button } from "reactstrap"
+import { Container } from "reactstrap"
 import FoldersTable from "../components/PageFolders/FoldersTable"
+import Example from "./ButtonFolders"
 
 const mapStateToProps = state => ({
   dirs: state.dirs,
@@ -28,27 +25,11 @@ const mapDispatchToProps = dispatch => ({
 })
 
 class FoldersTableWrap extends Component {
-  constructor(props) {
-    super(props)
-
-    this.onRadioBtnClick = this.onRadioBtnClick.bind(this)
-  }
-  onRadioBtnClick(rSelected) {
-    this.setState({ rSelected })
-  }
-
   render() {
     const { parent, files, dirs, onDirclick, onBackclick } = this.props
     return (
       <Container fluid>
-        <Button
-          color="primary"
-          onClick={() => this.onRadioBtnClick(1)}
-          active={this.state.rSelected === 1}
-        >
-          <p>Selected: {this.state.rSelected}</p>
-        </Button>
-
+        <Example />
         <FoldersTable
           parent={parent}
           files={files}

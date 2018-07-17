@@ -26,13 +26,6 @@ const FoldersTable = ({
           <tr>
             <th>
               <FoldersTableCategory name="Name  " direction={null} />
-              <Button
-                color="primary"
-                onClick={() => this.onRadioBtnClick(1)}
-                active={this.state.rSelected === 1}
-              >
-                <p>Selected: {this.state.rSelected}</p>
-              </Button>
             </th>
             <th onClick={() => onSortDateAscClick()}>
               <FoldersTableCategory name="Last update  " direction={null} />
