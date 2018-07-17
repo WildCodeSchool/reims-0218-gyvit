@@ -19,7 +19,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   onUserConnected: response => dispatch(connectUserSuccessAction(response)),
-  onError: message => dispatch(makeShowModalError(message))
+  onError: response => dispatch(makeShowModalError(response))
 })
 
 class SignInFormWrap extends Component {
@@ -102,30 +102,29 @@ class SignInFormWrap extends Component {
           </FormGroup>
           <Button
             type="button"
-            onClick={() =>
-              userLogin(this.state.mail, this.state.password)
-                // catch response:  if not desired response, response.message
-                //                  if desired: response.success
+            onClick={() => {
+              return userLogin(this.state.mail, this.state.password)
                 .then(response => {
                   if (response.success) {
                     return retrieveMe().catch(response =>
-                      this.props.onError(response.message)
+                      this.props.onError(response)
                     )
                   } else {
+                    this.props.onError(response)
                     return response
                   }
                 })
+                .catch(response => this.props.onError(response))
                 .then(response => {
                   if (response._id !== undefined) {
                     this.props.onUserConnected(response)
                     // redirect dashboard here
                   } else if (!response.success) {
                     // emptying user AND fill errors in props when connect failed
-                    this.props.onError(response.error)
+                    this.props.onError(response)
                   }
                 })
-                .catch(response => this.props.onError(response.message))
-            }
+            }}
             style={{
               width: "192px",
               height: "54px",

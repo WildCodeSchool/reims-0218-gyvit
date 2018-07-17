@@ -7,14 +7,13 @@ export const userLogin = (mail, password) => {
     password
   }
   const config = {
-    baseURL: "https://dev.gyvit.io/api/",
+    baseURL: `${process.env.REACT_APP_BASE_URL}`,
     method: "post",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json"
     }
   }
-
   return axios({
     ...config,
     url: `user/token`,

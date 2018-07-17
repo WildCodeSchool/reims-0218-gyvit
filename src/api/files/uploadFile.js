@@ -3,7 +3,7 @@ const axios = require("axios")
 
 export const uploadFile = data => {
   const config = {
-    baseURL: "https://dev.gyvit.io/api/",
+    baseURL: `${process.env.REACT_APP_BASE_URL}`,
     method: "post",
     headers: {
       Accept: "multipart/form-data",

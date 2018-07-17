@@ -215,7 +215,7 @@ class DropDownFileContainer extends React.Component {
                     return this.props.onDeleteFile(response._id)
                   })
                   // errors not wanted
-                  .catch(response => this.props.onError(response.message))
+                  .catch(response => this.props.onError(response))
               }}
             >
               <span>Delete</span>
