@@ -39,31 +39,38 @@ const foldersReducer = (prevState = initialState, action) => {
   if (action.type === SORT_DIRS_BY_NAME_SUCCESS) {
     //copying dirs in prevState, then sort them by name
     const sortedDirsByName = [...prevState].sort((dirA, dirB) => {
-      if (dirA.name.toLowerCase() < dirB.name.toLowerCase()) return -1
-      if (dirA.name.toLowerCase() > dirB.name.toLowerCase()) return 1
-      return 0
+      if (dirA.name.toLowerCase() < dirB.name.toLowerCase()) {
+        if (action.direction === "asc") {
+          return -1
+        } else if (action.direction === "desc") {
+          return 1
+        }
+      }
+      if (dirA.name.toLowerCase() > dirB.name.toLowerCase()) {
+        if (action.direction === "asc") {
+          return 1
+        } else if (action.direction === "desc") {
+          return -1
+        }
+      }
+      return 0 // direction==""
     })
     return sortedDirsByName
   }
 
   if (action.type === SORT_DIRS_BY_DATE_SUCCESS) {
     //copying dirs in prevState, then sort them by date
-    const sortedDirsByName = [...prevState].sort((dirA, dirB) => {
-      if (Date.parse(dirA.modified) < Date.parse(dirB.modified)) return -1
-      if (Date.parse(dirA.modified) > Date.parse(dirB.modified)) return 1
+    const sortedDirsByDate = [...prevState].sort((dirA, dirB) => {
+      if (Date.parse(dirA.modified) < Date.parse(dirB.modified)) {
+        return -1
+      }
+      if (Date.parse(dirA.modified) > Date.parse(dirB.modified)) {
+        return 1
+      }
       return 0
     })
-    return sortedDirsByName
+    return sortedDirsByDate
   }
-
-  // if (action.type === SORT_DIRS_BY_NAME_ASC) {
-  //   const sortedArray = prevState.slice().sort((a, b) => {
-  //     if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
-
-  //     if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
-  //   })
-  //   return sortedArray
-  // }
 
   return prevState
 }

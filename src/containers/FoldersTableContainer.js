@@ -8,17 +8,18 @@ import {
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 import { Container } from "reactstrap"
 import FoldersTable from "../components/PageFolders/FoldersTable"
-import Example from "./ButtonFolders"
 
 const mapStateToProps = state => ({
   dirs: state.dirs,
   files: state.files,
-  parent: state.parent
+  parent: state.parent,
+  directionName: state.directionName,
+  directionDate: state.directionDate
 })
 
 const mapDispatchToProps = dispatch => ({
-  onSortDate: () => dispatch(makeSortDirsByDateSuccess()),
-  onSortName: () => dispatch(makeSortDirsByNameSuccess()),
+  onSortDate: direction => dispatch(makeSortDirsByDateSuccess(direction)),
+  onSortName: direction => dispatch(makeSortDirsByNameSuccess(direction)),
   onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response)),
   onDirclick: id =>
     retrieveDir(id).then(response =>
@@ -31,11 +32,17 @@ const mapDispatchToProps = dispatch => ({
 })
 
 class FoldersTableWrap extends Component {
+  constructor() {
+    super()
+    this.state = {
+      directionName: "",
+      directionDate: ""
+    }
+  }
   render() {
     const { parent, files, dirs, onDirclick, onBackclick } = this.props
     return (
       <Container fluid>
-        <Example />
         <FoldersTable
           parent={parent}
           files={files}
@@ -44,16 +51,18 @@ class FoldersTableWrap extends Component {
           onBackclick={onBackclick}
           onSortDate={() => {
             console.log("SortDate")
+            this.props.onSortDate(this.props.directionDate)
           }}
           onSortName={() => {
             console.log("SortName")
+            this.props.onSortName(this.props.directionName)
           }}
           onSortShare={() => {
             console.log("SortShare")
           }}
-          directionDate={null}
-          directionName={null}
-          directionShar={null}
+          directionDate={this.props.directionDate}
+          directionName={this.props.directionName}
+          directionShare={""}
         />
       </Container>
     )

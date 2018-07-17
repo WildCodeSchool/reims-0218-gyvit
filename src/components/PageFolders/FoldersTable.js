@@ -1,5 +1,5 @@
 import React from "react"
-import { Table, Button } from "reactstrap"
+import { Table } from "reactstrap"
 import PropTypes from "prop-types"
 import FoldersTableTbody from "./FoldersTableTbody"
 import FoldersTableCategory from "./FoldersTableCategory"
@@ -13,9 +13,9 @@ const FoldersTable = ({
   onSortName = () => {},
   onSortDate = () => {},
   onSortShare = () => {},
-  directionName = null,
-  directionDate = null,
-  directionshare = null
+  directionName = "",
+  directionDate = "",
+  directionshare = ""
 }) => (
   <div>
     <Scrollbars

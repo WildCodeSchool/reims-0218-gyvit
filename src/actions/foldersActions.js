@@ -9,12 +9,14 @@ export const LIST_INFORMATIONS_DIR_SUCCESS = "LIST_INFORMATIONS_DIR_SUCCESS"
 export const SORT_DIRS_BY_NAME_SUCCESS = "SORT_DIRS_BY_NAME_SUCCESS"
 export const SORT_DIRS_BY_DATE_SUCCESS = "SORT_DIRS_BY_DATE_SUCCESS"
 
-export const makeSortDirsByNameSuccess = () => ({
-  type: SORT_DIRS_BY_NAME_SUCCESS
+export const makeSortDirsByNameSuccess = direction => ({
+  type: SORT_DIRS_BY_NAME_SUCCESS,
+  direction
 })
 
-export const makeSortDirsByDateSuccess = () => ({
-  type: SORT_DIRS_BY_DATE_SUCCESS
+export const makeSortDirsByDateSuccess = direction => ({
+  type: SORT_DIRS_BY_DATE_SUCCESS,
+  direction
 })
 
 export const makeFetchFoldersSuccess = response => ({
