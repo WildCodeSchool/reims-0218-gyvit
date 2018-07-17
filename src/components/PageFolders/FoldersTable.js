@@ -10,8 +10,12 @@ const FoldersTable = ({
   parent = {},
   onDirclick,
   onBackclick,
-  onSortNameAscClick,
-  onSortDateAscClick
+  onSortName = () => {},
+  onSortDate = () => {},
+  onSortShare = () => {},
+  directionName = null,
+  directionDate = null,
+  directionshare = null
 }) => (
   <div>
     <Scrollbars
@@ -24,14 +28,17 @@ const FoldersTable = ({
       <Table borderless striped>
         <thead>
           <tr>
-            <th>
-              <FoldersTableCategory name="Name  " direction={null} />
+            <th onClick={onSortName}>
+              <FoldersTableCategory name="Name" direction={directionName} />
             </th>
-            <th onClick={() => onSortDateAscClick()}>
-              <FoldersTableCategory name="Last update  " direction={null} />
+            <th onClick={onSortDate}>
+              <FoldersTableCategory
+                name="Last update"
+                direction={directionDate}
+              />
             </th>
-            <th>
-              <FoldersTableCategory name="Users  " direction={"asc"} />
+            <th onClick={onSortShare}>
+              <FoldersTableCategory name="Users" direction={directionshare} />
             </th>
             <th />
           </tr>

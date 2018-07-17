@@ -36,6 +36,18 @@ class FoldersTableWrap extends Component {
           dirs={dirs}
           onDirclick={onDirclick}
           onBackclick={onBackclick}
+          onSortDate={() => {
+            console.log("SortDate")
+          }}
+          onSortName={() => {
+            console.log("SortName")
+          }}
+          onSortShare={() => {
+            console.log("SortShare")
+          }}
+          directionDate={null}
+          directionName={null}
+          directionShar={null}
         />
       </Container>
     )

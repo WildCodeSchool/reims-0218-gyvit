@@ -6,11 +6,15 @@ export const DELETE_A_FOLDER_SUCCESS = "DELETE_A_FOLDER_SUCCESS"
 export const LIST_ALL_DIRS = "LIST_ALL_DIRS"
 export const REPLACE_FOLDERS_BY_FILE = "REPLACE_FOLDERS_BY_FILE"
 export const LIST_INFORMATIONS_DIR_SUCCESS = "LIST_INFORMATIONS_DIR_SUCCESS"
-export const SORT_DIRS_SUCCESS = "SORT_DIRS_SUCCESS"
+export const SORT_DIRS_BY_NAME_SUCCESS = "SORT_DIRS_BY_NAME_SUCCESS"
+export const SORT_DIRS_BY_DATE_SUCCESS = "SORT_DIRS_BY_DATE_SUCCESS"
 
-export const makeSortDirsSuccess = response => ({
-  type: SORT_DIRS_SUCCESS,
-  response
+export const makeSortDirsByNameSuccess = () => ({
+  type: SORT_DIRS_BY_NAME_SUCCESS
+})
+
+export const makeSortDirsByDateSuccess = () => ({
+  type: SORT_DIRS_BY_DATE_SUCCESS
 })
 
 export const makeFetchFoldersSuccess = response => ({

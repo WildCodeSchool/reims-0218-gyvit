@@ -19,7 +19,7 @@ const FoldersTableCategory = ({ name = "", direction = null }) => {
   }
   return (
     <div>
-      {name}
+      <span>{name + "    "}</span>
       <img src={source} alt={alter} />
     </div>
   )
