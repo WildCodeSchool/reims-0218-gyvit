@@ -37,6 +37,7 @@ const foldersReducer = (prevState = initialState, action) => {
   }
 
   if (action.type === SORT_DIRS_BY_NAME_SUCCESS) {
+    console.log("sort by name: ", action)
     //copying dirs in prevState, then sort them by name
     const sortedDirsByName = [...prevState].sort((dirA, dirB) => {
       if (dirA.name.toLowerCase() < dirB.name.toLowerCase()) {
@@ -62,10 +63,18 @@ const foldersReducer = (prevState = initialState, action) => {
     //copying dirs in prevState, then sort them by date
     const sortedDirsByDate = [...prevState].sort((dirA, dirB) => {
       if (Date.parse(dirA.modified) < Date.parse(dirB.modified)) {
-        return -1
+        if (action.direction === "asc") {
+          return -1
+        } else if (action.direction === "desc") {
+          return 1
+        }
       }
       if (Date.parse(dirA.modified) > Date.parse(dirB.modified)) {
-        return 1
+        if (action.direction === "asc") {
+          return 1
+        } else if (action.direction === "desc") {
+          return -1
+        }
       }
       return 0
     })

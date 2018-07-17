@@ -13,8 +13,8 @@ const mapStateToProps = state => ({
   dirs: state.dirs,
   files: state.files,
   parent: state.parent,
-  directionName: state.directionName,
-  directionDate: state.directionDate
+  directionName: state.sortDirections.directionName,
+  directionDate: state.sortDirections.directionDate
 })
 
 const mapDispatchToProps = dispatch => ({

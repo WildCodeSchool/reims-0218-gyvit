@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const FoldersTableCategory = ({ name = "", direction = null }) => {
+const FoldersTableCategory = ({ name = "", direction = "" }) => {
   let source, alter
   switch (direction) {
     case "asc":
