@@ -1,6 +1,10 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { makeRetrieveDirSuccess } from "../actions/foldersActions"
+import {
+  makeRetrieveDirSuccess,
+  makeSortDirsByDateSuccess,
+  makeSortDirsByNameSuccess
+} from "../actions/foldersActions"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 import { Container } from "reactstrap"
 import FoldersTable from "../components/PageFolders/FoldersTable"
@@ -13,6 +17,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
+  onSortDate: () => dispatch(makeSortDirsByDateSuccess()),
+  onSortName: () => dispatch(makeSortDirsByNameSuccess()),
   onRetrieveDirSuccess: response => dispatch(makeRetrieveDirSuccess(response)),
   onDirclick: id =>
     retrieveDir(id).then(response =>
