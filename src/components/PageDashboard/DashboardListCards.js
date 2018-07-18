@@ -10,7 +10,7 @@ const DashboardListCards = () => (
     <Row>
       <DashboardDisplayNameContainer />
     </Row>
-    <Row className="d-flex justify-content-around">
+    <Row className="d-flex justify-content-center">
       {elements.map((element, index) => (
         <DashboardCard key={index} {...element} />
       ))}

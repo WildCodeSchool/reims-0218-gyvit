@@ -7,7 +7,8 @@ const NavbarTopNotif = () => {
     <div>
       <img
         style={{
-          marginTop: "40%"
+          marginTop: "1em",
+          paddingLeft: "0%"
         }}
         src={process.env.PUBLIC_URL + "img/icon_notification.svg"}
         alt="iconNotif"

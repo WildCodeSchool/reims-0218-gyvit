@@ -6,7 +6,7 @@ const NavbarTopNotifBubble = () => {
     <Badge
       style={{
         backgroundColor: "#ff007e",
-        marginTop: "10%"
+        marginTop: "2em"
       }}
       pill
     >

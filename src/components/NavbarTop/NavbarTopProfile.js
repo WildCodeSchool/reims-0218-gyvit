@@ -25,7 +25,7 @@ const NavbarTopProfile = ({ firstname, lastname, business }) => (
             color: "#231b56",
             fontSize: "16px",
             marginTop: "28px",
-            marginLeft: "21px"
+            marginLeft: "0"
           }}
           heading
         >

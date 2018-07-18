@@ -16,20 +16,28 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
   return (
     <div>
       <Container>
-        <Card style={{ width: "40vh", height: "45vh" }}>
+        <Card
+          style={{
+            width: "40vh",
+            height: "55vh"
+          }}
+        >
           <CardImg
             src={process.env.PUBLIC_URL + image}
             alt="folder"
             style={{
               width: "50%",
-              marginLeft: "25%"
+              marginLeft: "25%",
+              height: "5em",
+              marginTop: "0.5em"
             }}
           />
           <CardBody d-flex flex-column>
             <CardTitle
               style={{
                 "font-size": "18px",
-                "text-align": "center"
+                "text-align": "center",
+                paddingBottom: "5%"
               }}
             >
               {titre}
@@ -40,7 +48,7 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
                 opacity: "0.45",
                 lineHeight: "3vh",
                 textAlign: "center",
-                marginBottom: "20%"
+                paddingBottom: "25%"
               }}
             >
               {bio}
