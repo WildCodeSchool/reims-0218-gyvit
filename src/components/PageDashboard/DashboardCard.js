@@ -19,22 +19,24 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
         <Row>
           <Card className="card-home">
             <CardImg
-              className="card-img-home"
+              style={{
+                width: "151.2px",
+                height: "135px",
+                marginLeft: "24%",
+                marginTop: "5%",
+                marginRight: "24%"
+              }}
               src={process.env.PUBLIC_URL + image}
               alt="folder"
             />
             <CardBody d-flex="true" flex-column="true">
               <CardTitle className="card-title ">{titre}</CardTitle>
               <CardText className="card-text">{bio}</CardText>
-              <Button className="navlink-button" color="false">
+              <Button className="card-button" color="false">
                 <NavLink
                   className="navlink-button"
                   to={link}
                   activeClassName="selected"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "red"
-                  }}
                 >
                   {buttonText}
                 </NavLink>

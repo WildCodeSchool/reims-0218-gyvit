@@ -1,46 +1,55 @@
 .card-home {
   width: 38.5vh;
-  height: 56.4vh;
-}
-
-.card-img-home {
-  width: 30%;
-  margin-left: 0%;
-}
+  height: 56.4vh; }
 
 .card-title {
+  width: 175px;
+  height: 24px;
+  font-family: OpenSans;
   font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
   text-align: center;
-}
+  color: #000000;
+  margin-left: 15%; }
 
 .card-text {
-  width: 218px;
+  width: 190px;
   height: 96px;
-  font-size: 15px;
   opacity: 0.45;
-  text-align: center;
-  margin-top: 5vh;
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
   line-height: 1.6;
   letter-spacing: normal;
-  margin-right: 0%;
-  margin-bottom: 0%;
-  margin-left: 5%;
-}
+  text-align: center;
+  color: #000000;
+  margin-left: 14%; }
 
-.btn {
+.card-button {
   width: 170px;
   height: 44px;
   border-radius: 2px;
   border: solid 1px #dce1e6;
   background-color: #ffffff;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.05);
-  margin-top: 25%;
   margin-left: 15%;
-}
+  margin-top: 15%; }
 
 .navlink-button {
+  width: 125px;
+  height: 16px;
+  font-family: DepotNew;
   font-size: 16px;
   font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
   text-align: left;
-  color: #725fe3;
-}
+  color: #725fe3; }
