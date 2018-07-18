@@ -12,6 +12,7 @@ class NotifContainer extends Component {
   }
 }
 
-//console.log ("mon state :" (this.state))
-
-export default connect(mapStateToProps, null)(NotifContainer)
+export default connect(
+  mapStateToProps,
+  null
+)(NotifContainer)
