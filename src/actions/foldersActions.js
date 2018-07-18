@@ -6,29 +6,17 @@ export const DELETE_A_FOLDER_SUCCESS = "DELETE_A_FOLDER_SUCCESS"
 export const LIST_ALL_DIRS = "LIST_ALL_DIRS"
 export const REPLACE_FOLDERS_BY_FILE = "REPLACE_FOLDERS_BY_FILE"
 export const LIST_INFORMATIONS_DIR_SUCCESS = "LIST_INFORMATIONS_DIR_SUCCESS"
-export const SORT_DIRS_BY_NAME_ASC = "SORT_DIRS_BY_NAME_ASC"
-export const SORT_DIRS_BY_NAME_DESC = "SORT_DIRS_BY_NAME_DESC"
-export const SORT_DIRS_BY_DATE_ASC = "SORT_DIRS_BY_DATE_ASC"
-export const SORT_DIRS_BY_DATE_DESC = "SORT_DIRS_BY_DATE_DESC"
+export const SORT_DIRS_BY_NAME_SUCCESS = "SORT_DIRS_BY_NAME_SUCCESS"
+export const SORT_DIRS_BY_DATE_SUCCESS = "SORT_DIRS_BY_DATE_SUCCESS"
 
-export const makeSortDirsByNameAsc = response => ({
-  type: SORT_DIRS_BY_NAME_ASC,
-  response
+export const makeSortDirsByNameSuccess = direction => ({
+  type: SORT_DIRS_BY_NAME_SUCCESS,
+  direction
 })
 
-export const makeSortDirsByNameDesc = response => ({
-  type: SORT_DIRS_BY_NAME_DESC,
-  response
-})
-
-export const makeSortDirsByDateAsc = response => ({
-  type: SORT_DIRS_BY_DATE_ASC,
-  response
-})
-
-export const makeSortDirsByDateDesc = response => ({
-  type: SORT_DIRS_BY_DATE_DESC,
-  response
+export const makeSortDirsByDateSuccess = direction => ({
+  type: SORT_DIRS_BY_DATE_SUCCESS,
+  direction
 })
 
 export const makeFetchFoldersSuccess = response => ({

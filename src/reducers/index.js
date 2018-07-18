@@ -2,6 +2,7 @@ import { combineReducers } from "redux"
 
 import userReducer from "./userReducer"
 import foldersReducer from "./foldersReducer"
+import sortDirsReducer from "./sortDirsReducer"
 import selectedDirReducer from "./selectedDirReducer"
 import filesReducer from "./filesReducer"
 import parentReducer from "./parentReducer"
@@ -19,6 +20,7 @@ import currentFileReducer from "./currentFileReducer"
 export default combineReducers({
   error: errorsReducer,
   dirs: foldersReducer,
+  sortDirections: sortDirsReducer,
   files: filesReducer,
   user: userReducer,
   parent: parentReducer,
