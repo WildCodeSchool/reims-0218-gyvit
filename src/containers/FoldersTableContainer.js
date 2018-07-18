@@ -5,7 +5,9 @@ import {
   makeSortDirsByDateSuccess,
   makeSortDirsByNameSuccess
 } from "../actions/foldersActions"
+import { connectUserSuccessAction } from "../actions/userAction"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
+import { retrieveMe } from "../api/users/retrieveMe"
 import { Container } from "reactstrap"
 import FoldersTable from "../components/PageFolders/FoldersTable"
 
@@ -28,7 +30,8 @@ const mapDispatchToProps = dispatch => ({
   onBackclick: idParent =>
     retrieveDir(idParent).then(response =>
       dispatch(makeRetrieveDirSuccess(response))
-    )
+    ),
+  onRetrieveMe: response => dispatch(connectUserSuccessAction(response))
 })
 
 class FoldersTableWrap extends Component {
@@ -66,6 +69,7 @@ class FoldersTableWrap extends Component {
 
   componentDidMount() {
     retrieveDir().then(root => this.props.onRetrieveDirSuccess(root))
+    retrieveMe().then(response => this.props.onRetrieveMe(response))
   }
 }
 
