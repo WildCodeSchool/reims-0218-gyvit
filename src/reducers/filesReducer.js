@@ -39,6 +39,7 @@ const filesReducer = (prevState = initialState, action) => {
       return [
         ...prevState,
         {
+          // making a new "virtual" file
           name: action.response.name,
           object: "file",
           _id: "file_idAuHasard",
