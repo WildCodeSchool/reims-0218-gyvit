@@ -29,7 +29,14 @@ const filesReducer = (prevState = initialState, action) => {
   }
 
   if (action.type === ADD_A_FILE_SUCCESS) {
-    return [...prevState, action.response]
+    // response is a file
+    if (action.response.object) {
+      return [...prevState, action.response]
+    }
+    // response is a temporary file (uploaded)
+    if (action.response.file) {
+      return [...prevState, action.response]
+    }
   }
   if (action.type === DELETE_A_FILE_SUCCESS) {
     return prevState.filter(file => action.fileId !== file._id)
