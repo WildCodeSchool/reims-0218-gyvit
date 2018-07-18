@@ -35,7 +35,21 @@ const filesReducer = (prevState = initialState, action) => {
     }
     // response is a temporary file (uploaded)
     if (action.response.file) {
-      return [...prevState, action.response]
+      const dateMaintenant = Date.now()
+      return [
+        ...prevState,
+        {
+          name: action.response.name,
+          object: "file",
+          _id: "file_idAuHasard",
+          size: "1000",
+          ext: "ext",
+          created: dateMaintenant,
+          modified: dateMaintenant,
+          remove: 0,
+          removed: null
+        }
+      ]
     }
   }
   if (action.type === DELETE_A_FILE_SUCCESS) {
