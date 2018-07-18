@@ -1,7 +1,9 @@
 import { getToken } from "../users/localStorageToken"
+const axios = require("axios")
 
-export const listAllDir = value =>
-  fetch(`https://dev.gyvit.io/api/storage/directorys/list?name=${value}`, {
+export const listAllDir = value => {
+  const config = {
+    baseURL: `${process.env.REACT_APP_BASE_URL}`,
     method: "get",
     headers: {
       Accept: "application/json",
@@ -9,4 +11,10 @@ export const listAllDir = value =>
       "Access-Control-Allow-Origin": "http://localhost:3000",
       Authorization: `Bearer ${getToken()}`
     }
-  }).then(res => res.json())
+  }
+
+  return axios({
+    ...config,
+    url: `storage/directorys/list?name=${value}`
+  }).then(res => res.data)
+}

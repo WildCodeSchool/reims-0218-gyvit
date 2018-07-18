@@ -1,16 +1,40 @@
 import React from "react"
 
-const PathElement = ({ name }) => {
-  return (
-    <a>
-      <img
-        style={{ width: "0.2em", margin: "0.4em" }}
-        src={process.env.PUBLIC_URL.concat("Icons/icon_arrow_right.png")}
-        alt="icon right arrow"
-      />
-      {`  ${name} `}
-    </a>
-  )
+class PathElement extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { style: "" }
+  }
+
+  onMouseEnter() {
+    if (this.props.isCurrent) this.setState({ style: "underline" })
+  }
+
+  onMouseLeave() {
+    this.setState({ style: "none" })
+  }
+
+  render() {
+    return (
+      <span
+        style={{ cursor: "pointer", textDecoration: this.state.style }}
+        onClick={this.props.onClick}
+        onMouseEnter={() => {
+          this.onMouseEnter()
+        }}
+        onMouseLeave={() => {
+          this.onMouseLeave()
+        }}
+      >
+        <img
+          style={{ width: "0.2em", margin: "0.5em" }}
+          src={process.env.PUBLIC_URL.concat("Icons/icon_arrow_right.png")}
+          alt="icon right arrow"
+        />
+        <span>{this.props.name}</span>
+      </span>
+    )
+  }
 }
 
 export default PathElement

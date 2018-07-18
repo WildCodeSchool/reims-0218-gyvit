@@ -11,7 +11,7 @@ import {
   Dropdown,
   DropdownToggle
 } from "reactstrap"
-
+import "./styles-navbar-top/navbarTopSearch.css"
 //function to split with search criteria
 const highlight = (text, search) => {
   const highlightSuggestion = text.toLowerCase().split(search.toLowerCase())
@@ -21,54 +21,36 @@ const highlight = (text, search) => {
 const NavbarTopSearch = ({
   _id,
   onDirclick,
-  searchResults,
+  results,
   search,
   onSearchType
 }) => (
   <div>
     <FormGroup>
       <Input
-        class="typeahead form-control"
-        style={{
-          marginTop: "22px",
-          marginLeft: "6px",
-          height: "46px",
-          backgroundColor: "#fbfcfd",
-          borderRadius: "2px",
-          border: "none"
-        }}
-        type="search"
+        className="search-bar typeahead form-control"
+        type="text"
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
-        searchResults={searchResults}
         value={search}
       />
 
-      <Dropdown isOpen={search}>
-        <DropdownMenu
-          style={{
-            transform: "none",
-            marginLeft: "5px",
-            width: "100%"
-          }}
-        >
+      <Dropdown isOpen={search ? true : false} toggle={() => {}}>
+        <DropdownMenu className="search-dropdown">
           <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
-            searchResults.map(searchResult => {
+            results.map((result, index) => {
               // transform a string to display in several spans
-              const searchResultString = highlight(searchResult.name, search)
+              const resultString = highlight(result.name, search)
               return (
                 <DropdownItem
-                  onClick={() => onDirclick(searchResult._id)}
-                  toggle={false}
-                  key={searchResult.value}
-                  value={searchResult.value}
-                  {...searchResult}
+                  onClick={() => onDirclick(result._id)}
+                  key={index}
                 >
-                  <span>{searchResultString[0]}</span>
+                  <span>{resultString[0]}</span>
                   <span style={{ color: "red" }}>{search}</span>
-                  <span>{searchResultString[1]}</span>
+                  <span>{resultString[1]}</span>
                 </DropdownItem>
               )
             })}

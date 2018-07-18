@@ -12,34 +12,31 @@ const mapStateToProps = state => {
 class DashboardDisplayNameContainer extends Component {
   render() {
     return (
-      console.log(this.props.profile),
-      (
-        <Col md="12">
-          <p
-            style={{
-              fontSize: "24px",
-              height: "33px",
-              marginTop: "5%",
-              textAlign: "center"
-            }}
-          >
-            Welcome to Gyvit, {this.props.profile.firstname}
-          </p>
+      <Col md="12">
+        <p
+          style={{
+            fontSize: "24px",
+            height: "33px",
+            marginTop: "5%",
+            textAlign: "center"
+          }}
+        >
+          Welcome to Gyvit, {this.props.profile.firstname}
+        </p>
 
-          <p
-            style={{
-              fontSize: "18px",
-              height: "24px",
-              textAlign: "center",
-              color: "#000000",
-              opacity: 0.45,
-              marginBottom: "60px"
-            }}
-          >
-            What would you like to do ?
-          </p>
-        </Col>
-      )
+        <p
+          style={{
+            fontSize: "18px",
+            height: "24px",
+            textAlign: "center",
+            color: "#000000",
+            opacity: 0.45,
+            marginBottom: "60px"
+          }}
+        >
+          What would you like to do ?
+        </p>
+      </Col>
     )
   }
 }

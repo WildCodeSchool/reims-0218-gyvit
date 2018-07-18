@@ -2,19 +2,12 @@
 
 import React from "react"
 import { Badge } from "reactstrap"
+import "./styles-navbar-top/navbarTopNotifBubble.css"
 
 const NavbarTopNotifBubble = () => {
   return (
-    <Badge
-      style={{
-        backgroundColor: "#ff007e",
-
-        width: "auto",
-        height: "20px"
-      }}
-      pill
-    >
-      8
+    <Badge pill className="notif-color">
+      6
     </Badge>
   )
 }

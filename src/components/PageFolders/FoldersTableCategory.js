@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const FoldersTableCategory = ({ name = "", direction = null }) => {
+const FoldersTableCategory = ({ name = "", direction = "" }) => {
   let source, alter
   switch (direction) {
     case "asc":
@@ -19,7 +19,7 @@ const FoldersTableCategory = ({ name = "", direction = null }) => {
   }
   return (
     <div>
-      {name}
+      <span>{name + "    "}</span>
       <img src={source} alt={alter} />
     </div>
   )

@@ -2,11 +2,11 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { Form, FormGroup, Label, Input, NavLink, Button } from "reactstrap"
 import { Redirect } from "react-router"
-
 import { userLogin } from "../api/users/userLogin"
 import { connectUserSuccessAction } from "../actions/userAction"
 import { makeShowModalError } from "../actions/errorsActions"
 import { retrieveMe } from "../api/users/retrieveMe"
+import ModalErrorContainer from "./ModalErrorContainer"
 
 //verify on store with redirect if user mail is present on this
 const mapStateToProps = state => {
@@ -19,7 +19,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   onUserConnected: response => dispatch(connectUserSuccessAction(response)),
-  onError: message => dispatch(makeShowModalError(message))
+  onError: response => dispatch(makeShowModalError(response))
 })
 
 class SignInFormWrap extends Component {
@@ -44,10 +44,11 @@ class SignInFormWrap extends Component {
   render() {
     //if mail on the store, so redirect on page dashboard
     if (this.props.redirect) {
-      return <Redirect to="/dashboard" />
+      return <Redirect to="/home" />
     }
     return (
       <div>
+        <ModalErrorContainer />
         <Form
           style={{
             marginBottom: "40px",
@@ -101,28 +102,29 @@ class SignInFormWrap extends Component {
           </FormGroup>
           <Button
             type="button"
-            onClick={() =>
-              userLogin(this.state.mail, this.state.password)
-                // catch response:  if not desired response, response.message
-                //                  if desired: response.success
+            onClick={() => {
+              return userLogin(this.state.mail, this.state.password)
                 .then(response => {
                   if (response.success) {
-                    return retrieveMe()
+                    return retrieveMe().catch(response =>
+                      this.props.onError(response)
+                    )
                   } else {
+                    this.props.onError(response)
                     return response
                   }
                 })
+                .catch(response => this.props.onError(response))
                 .then(response => {
                   if (response._id !== undefined) {
                     this.props.onUserConnected(response)
                     // redirect dashboard here
                   } else if (!response.success) {
                     // emptying user AND fill errors in props when connect failed
-                    this.props.onError(response.error)
+                    this.props.onError(response)
                   }
                 })
-                .catch(response => this.props.onError(response.message))
-            }
+            }}
             style={{
               width: "192px",
               height: "54px",

@@ -7,21 +7,30 @@ import {
   NavbarBrand,
   NavbarToggler,
   Collapse,
-  NavItem,
   Button,
   Row,
   Container
 } from "reactstrap"
 import ModalCreateDirContainer from "./ModalCreateDirContainer"
 import ModalCreateFileContainer from "./ModalCreateFileContainer"
+import ModalErrorContainer from "./ModalErrorContainer"
 import PathElement from "../components/PageFolders/PathElement"
 import { makeShowModalCreateDir } from "../actions/modalCreateDirAction"
 import { makeShowModalCreateFile } from "../actions/modalCreateFileAction"
+import { makeShowModalError } from "../actions/errorsActions"
 import DragNDropContainer from "../containers/DragNDropContainer"
+
+import { makeRetrieveDirSuccess } from "../actions/foldersActions"
+import { retrieveDir } from "../api/directorys/retrieveDirectorys"
 
 const mapDispatchToProps = dispatch => ({
   onShowCreateDir: () => dispatch(makeShowModalCreateDir()),
-  onShowCreateFile: () => dispatch(makeShowModalCreateFile())
+  onShowCreateFile: () => dispatch(makeShowModalCreateFile()),
+  onSelectPathElement: id =>
+    retrieveDir(id).then(response =>
+      dispatch(makeRetrieveDirSuccess(response))
+    ),
+  onError: message => dispatch(makeShowModalError(message))
 })
 
 const mapStateToProps = state => ({
@@ -31,12 +40,13 @@ const mapStateToProps = state => ({
 class FoldersBarTopContainer extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { name: "" }
+    this.state = { name: "", visibilityError: false }
   }
 
   render() {
     return (
-      <Container>
+      <Container id="containerBarTop" fluid>
+        <ModalErrorContainer />
         <ModalCreateDirContainer />
         <ModalCreateFileContainer />
         <Row>
@@ -50,42 +60,50 @@ class FoldersBarTopContainer extends React.Component {
               <NavbarBrand>
                 Folders
                 {this.props.currentDir.path &&
-                  this.props.currentDir.path.map(pathElement => (
-                    <PathElement name={pathElement.name} />
+                  this.props.currentDir.path.map((pathElement, index) => (
+                    <PathElement
+                      key={index}
+                      isCurrent={true}
+                      name={pathElement.name}
+                      onClick={() =>
+                        this.props
+                          .onSelectPathElement(pathElement._id)
+                          .catch(response => this.props.onError(response))
+                      }
+                    />
                   ))}
                 {this.props.currentDir.name && (
-                  <PathElement name={this.props.currentDir.name} />
+                  <PathElement
+                    isCurrent={false}
+                    name={this.props.currentDir.name}
+                  />
                 )}
               </NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <Button
-                      type="button"
-                      style={{
-                        borderRadius: "50%",
-                        height: "50px",
-                        width: "50px",
-                        backgroundColor: "#725fe3"
-                      }}
-                      onClick={() => this.props.onShowCreateDir()}
-                    >
-                      +
-                    </Button>
-                    <Button
-                      type="button"
-                      style={{
-                        borderRadius: "50%",
-                        height: "50px",
-                        width: "50px",
-                        backgroundColor: "black"
-                      }}
-                      onClick={() => this.props.onShowCreateFile()}
-                    >
-                      File
-                    </Button>
-                  </NavItem>
+                  <Button
+                    type="button"
+                    style={{
+                      borderRadius: "50%",
+                      height: "50px",
+                      width: "50px",
+                      backgroundColor: "#725fe3"
+                    }}
+                    onClick={() => this.props.onShowCreateDir()}
+                  >
+                    +
+                  </Button>
+                  <img
+                    src={process.env.PUBLIC_URL.concat("../Icons/file.svg")}
+                    style={{
+                      height: "50px",
+
+                      width: "50px"
+                    }}
+                    alt="add directory"
+                    onClick={() => this.props.onShowCreateFile()}
+                  />
                 </Nav>
               </Collapse>
             </Navbar>

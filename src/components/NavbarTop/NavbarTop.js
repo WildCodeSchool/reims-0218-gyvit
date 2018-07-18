@@ -6,16 +6,11 @@ import { Row, Col, Container } from "reactstrap"
 import NavbarTopProfileContainer from "../../containers/NavbarTopProfileContainer"
 import SearchContainer from "../../containers/SearchContainer"
 import NavbarTopNotif from "./NavbarTopNotif"
+import "./styles-navbar-top/navbarTop.css"
 
 const NavbarTop = () => (
   <Container fluid>
-    <Row
-      style={{
-        height: "90px",
-        backgroundColor: "#ffffff",
-        border: "solid 1px #E5E8F4"
-      }}
-    >
+    <Row className="navbar-top">
       <Col xs="9">
         <SearchContainer />
       </Col>

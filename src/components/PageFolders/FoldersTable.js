@@ -1,29 +1,44 @@
 import React from "react"
-import { Table, Container } from "reactstrap"
+import { Table } from "reactstrap"
 import PropTypes from "prop-types"
 import FoldersTableTbody from "./FoldersTableTbody"
 import FoldersTableCategory from "./FoldersTableCategory"
-
+import { Scrollbars } from "react-custom-scrollbars"
 const FoldersTable = ({
   files = [],
   dirs = [],
   parent = {},
   onDirclick,
-  onBackclick
+  onBackclick,
+  onSortName = () => {},
+  onSortDate = () => {},
+  onSortShare = () => {},
+  directionName = "",
+  directionDate = "",
+  directionshare = ""
 }) => (
   <div>
-    <Container>
+    <Scrollbars
+      style={{
+        padding: "15px",
+        width: "100%",
+        height: "65vh"
+      }}
+    >
       <Table borderless striped>
         <thead>
           <tr>
-            <th>
-              <FoldersTableCategory name="Name  " direction={null} />
+            <th onClick={onSortName}>
+              <FoldersTableCategory name="Name" direction={directionName} />
             </th>
-            <th>
-              <FoldersTableCategory name="Last update  " direction={null} />
+            <th onClick={onSortDate}>
+              <FoldersTableCategory
+                name="Last update"
+                direction={directionDate}
+              />
             </th>
-            <th>
-              <FoldersTableCategory name="Users  " direction={"asc"} />
+            <th onClick={onSortShare}>
+              <FoldersTableCategory name="Users" direction={directionshare} />
             </th>
             <th />
           </tr>
@@ -36,7 +51,7 @@ const FoldersTable = ({
           dirs={dirs}
         />
       </Table>
-    </Container>
+    </Scrollbars>
   </div>
 )
 

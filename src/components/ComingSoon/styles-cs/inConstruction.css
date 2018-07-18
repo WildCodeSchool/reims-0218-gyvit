@@ -1,0 +1,17 @@
+.title-css {
+  color: #231b56;
+  font-size: 40px;
+  font-style: gras;
+  margin-left: 36%;
+  margin-top: 3%; }
+
+.logo {
+  font-size: 300px;
+  animation: beat 0.5s infinite alternate;
+  transform-origin: center;
+  margin-left: 40%;
+  margin-top: 10%; }
+
+@keyframes beat {
+  to {
+    transform: scale(1.2); } }

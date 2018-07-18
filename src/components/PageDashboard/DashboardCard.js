@@ -10,79 +10,39 @@ import {
   Row
 } from "reactstrap"
 import PropTypes from "prop-types"
-
+import { NavLink } from "react-router-dom"
+import "./styles-page-dashboard/dashboardCard.css"
 const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
   return (
     <div>
       <Container>
         <Row>
-          <Card
-            style={{
-              width: "288px",
-              height: "423px"
-            }}
-          >
+          <Card className="card-home">
             <CardImg
+              className="card-img-home"
               src={process.env.PUBLIC_URL + image}
               alt="folder"
-              style={{
-                width: "151px",
-                height: "120px",
-                marginTop: "31px",
-                marginLeft: "72px",
-                marginRight: "64.8px"
-              }}
             />
-            <CardBody
-              style={{
-                padding: "0px"
-              }}
-            >
-              <CardTitle
-                style={{
-                  width: "175px",
-                  height: "24px",
-                  fontSize: "18px",
-                  textAlign: "center",
-                  paddingLeft: "0px",
-                  paddingRight: "0px",
-                  marginTop: "15px",
-                  marginLeft: "57px",
-                  marginRight: "56px"
-                }}
-              >
-                {titre}
-              </CardTitle>
-              <CardText
-                style={{
-                  width: "228px",
-                  height: "96px",
-                  fontSize: "15px",
-                  opacity: 0.45,
-                  textAlign: "center",
-                  marginTop: "13px",
-                  marginLeft: "30px",
-                  marginRight: "30px",
-                  marginBottom: "50px",
-                  lineHeight: "24px"
-                }}
-              >
-                {bio}
-              </CardText>
-              <Button
-                style={{
-                  width: "170px",
-                  height: "44px",
-                  fontSize: "16px",
-                  borderRadius: "2px",
-                  marginRight: "59px",
-                  marginLeft: "59px ",
-                  marginBottom: "30px",
-                  padding: "0px"
-                }}
-                src={link}
-              >
-                {buttonText}
+            <CardBody d-flex="true" flex-column="true">
+              <CardTitle className="card-title ">{titre}</CardTitle>
+              <CardText className="card-text">{bio}</CardText>
+              <Button className="card-button">
+                <NavLink
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: "500",
+                    textAlign: "left",
+                    color: "#725fe3"
+                  }}
+                  to={link}
+                  activeClassName="selected"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
+                >
+                  {buttonText}
+                </NavLink>
               </Button>
             </CardBody>
           </Card>

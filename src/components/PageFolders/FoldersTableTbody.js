@@ -8,6 +8,7 @@ const FoldersTableTbody = ({
   dirs = [],
   onDirclick,
   onBackclick,
+  onRadioBtnClick,
   parent = {}
 }) => {
   return (
@@ -18,16 +19,26 @@ const FoldersTableTbody = ({
           title="Go to parent directory"
           className="js-navigation-open"
           onClick={() => onBackclick(parent._id)}
+          style={{ cursor: "pointer" }}
         >
           <td>{"..."}</td>
         </tr>
       )}
-      {dirs.map((dir, index) => {
-        return <RowDir key={index} {...dir} onDirclick={onDirclick} />
-      })}
-      {files.map((file, index) => {
-        return <RowFile key={index} {...file} />
-      })}
+      {dirs &&
+        dirs.map((dir, index) => {
+          return (
+            <RowDir
+              key={index}
+              dir={dir}
+              onDirclick={onDirclick}
+              onRadioBtnClick={onRadioBtnClick}
+            />
+          )
+        })}
+      {files &&
+        files.map(file => {
+          return <RowFile key={file._id} file={file} />
+        })}
     </tbody>
   )
 }

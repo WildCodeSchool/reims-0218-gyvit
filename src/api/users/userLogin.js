@@ -1,21 +1,27 @@
 import { storeToken, removeToken } from "./localStorageToken"
+const axios = require("axios")
 
 export const userLogin = (mail, password) => {
   const user = {
     mail,
     password
   }
-  const request = {
-    method: "POST",
+  const config = {
+    baseURL: `${process.env.REACT_APP_BASE_URL}`,
+    method: "post",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json"
-    },
-    body: JSON.stringify(user)
+    }
   }
-
-  return fetch("https://dev.gyvit.io/api/user/token", request)
-    .then(res => res.json())
+  return axios({
+    ...config,
+    url: `user/token`,
+    data: JSON.stringify(user)
+  })
+    .then(res => {
+      return res.data
+    })
     .then(response => {
       //stock token in localStorage storeToken()
       if (response.success) {

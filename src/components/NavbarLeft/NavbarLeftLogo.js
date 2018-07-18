@@ -1,21 +1,16 @@
 import React from "react"
 import { Col } from "reactstrap"
+import { NavLink } from "react-router-dom"
+import "./styles-navbar-left/navbarLeftLogo.css"
 
 const NavbarLeftLogo = () => {
   return (
-    <div
-      className="d-flex align-items-center"
-      style={{
-        color: "white",
-        fontWeight: "bold",
-        height: "90px",
-        marginBottom: "0px",
-        textAlign: "center",
-        backgroundColor: "#181048",
-        fontSize: "20px"
-      }}
-    >
-      <Col>GYVIT</Col>
+    <div className=" logo-gyvit d-flex align-items-center">
+      <Col>
+        <NavLink className="logo-link-home" to="/home">
+          GYVIT
+        </NavLink>
+      </Col>
     </div>
   )
 }

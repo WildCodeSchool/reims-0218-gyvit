@@ -17,6 +17,7 @@ import RowDir from "../components/PageFolders/RowDir"
 import RowFile from "../components/PageFolders/RowFile"
 import { Table } from "reactstrap"
 import NotifContainer from "../containers/NotifContainer"
+import InConstruction from "../components/InConstruction"
 
 const store = createStore(
   reducers,
@@ -120,7 +121,7 @@ const tableProps = {
 storiesOf("component RowDir", module).add("RowDir", () => (
   <Table>
     <tbody>
-      <RowDir {...dir} />
+      <RowDir dir={dir} onDirClick={() => {}} />
     </tbody>
   </Table>
 ))
@@ -177,3 +178,5 @@ const file = {
 storiesOf("FolderTable", module).add("Table", () => (
   <FoldersTable {...tableProps} />
 ))
+
+storiesOf("InConstruction", module).add("Table", () => <InConstruction />)

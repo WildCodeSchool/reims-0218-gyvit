@@ -1,18 +1,22 @@
 import { getToken } from "../users/localStorageToken"
+const axios = require("axios")
 
 export const uploadFile = data => {
-  const request = {
-    method: "POST",
+  const config = {
+    baseURL: `${process.env.REACT_APP_BASE_URL}`,
+    method: "post",
     headers: {
       Accept: "multipart/form-data",
       Authorization: `Bearer ${getToken()}`,
       "Content-Type": "multipart/form-data",
       "Access-Control-Allow-Origin": "http://localhost:3000"
     },
-    body: data
+    data: data
   }
 
-  return fetch("https://dev.gyvit.io/api/storage/files", request).then(res =>
-    res.json()
-  )
+  return axios({
+    ...config,
+    url: `storage/files`,
+    data: JSON.stringify({ data })
+  }).then(res => res.data)
 }
