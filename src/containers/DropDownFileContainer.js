@@ -201,7 +201,7 @@ class DropDownFileContainer extends React.Component {
                 return this.props.onShowUpdateFile(_id, name)
               }}
             >
-              <span>Renommer {name}</span>
+              <span>Rename {name}</span>
             </Button>
             <Button
               style={{
@@ -226,6 +226,7 @@ class DropDownFileContainer extends React.Component {
     )
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(
-  DropDownFileContainer
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DropDownFileContainer)

@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Col, Button, Form, FormGroup, Label } from "reactstrap"
+import { Col, Button, Form, FormGroup, Label, CustomInput } from "reactstrap"
 
 import ModalErrorContainer from "./ModalErrorContainer"
 import { uploadFile } from "../api/files/uploadFile"
@@ -43,17 +43,12 @@ class UploadFileFormContainer extends Component {
       <Form>
         <ModalErrorContainer />
         <FormGroup row>
-          <Label for="inputFile" sm={2}>
-            File
-          </Label>
           <Col sm={10}>
-            <input
+            <Label for="exampleCustomFileBrowser">File:</Label>
+            <CustomInput
               type="file"
-              name="file"
-              id="inputFile"
-              ref={input => {
-                this.fileInput = input
-              }}
+              id="exampleCustomFileBrowser"
+              name="customFile"
             />
           </Col>
         </FormGroup>
@@ -70,6 +65,7 @@ class UploadFileFormContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  UploadFileFormContainer
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UploadFileFormContainer)
