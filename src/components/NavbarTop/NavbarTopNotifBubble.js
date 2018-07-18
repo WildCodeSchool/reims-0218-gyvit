@@ -1,12 +1,15 @@
-//TODO: create component notif bubble icon
-
 import React from "react"
 import { Badge } from "reactstrap"
-import "./styles-navbar-top/navbarTopNotifBubble.css"
 
 const NavbarTopNotifBubble = () => {
   return (
-    <Badge pill className="notif-color">
+    <Badge
+      style={{
+        backgroundColor: "#ff007e",
+        marginTop: "10%"
+      }}
+      pill
+    >
       6
     </Badge>
   )

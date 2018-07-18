@@ -1,7 +1,3 @@
-//TODO: create component search bar
-// 2 props: search a afficher dans value de l'input
-//          onSearchType a appelé sur l'évenement onchange de l'input
-// faire un SearchContainer, qui stockera dans son state, un search
 import React from "react"
 import {
   FormGroup,
@@ -11,7 +7,7 @@ import {
   Dropdown,
   DropdownToggle
 } from "reactstrap"
-import "./styles-navbar-top/navbarTopSearch.css"
+
 //function to split with search criteria
 const highlight = (text, search) => {
   const highlightSuggestion = text.toLowerCase().split(search.toLowerCase())
@@ -21,36 +17,52 @@ const highlight = (text, search) => {
 const NavbarTopSearch = ({
   _id,
   onDirclick,
-  results,
+  searchResults,
   search,
   onSearchType
 }) => (
   <div>
     <FormGroup>
       <Input
-        className="search-bar typeahead form-control"
-        type="text"
+        className="typeahead form-control"
+        style={{
+          marginTop: "22px",
+          marginLeft: "6px",
+          height: "46px",
+          backgroundColor: "#fbfcfd",
+          borderRadius: "2px",
+          border: "none"
+        }}
+        type="search"
         id="exampleSearch"
         placeholder="Search..."
         onChange={onSearchType}
+        searchResults={searchResults}
         value={search}
       />
 
-      <Dropdown isOpen={search ? true : false} toggle={() => {}}>
-        <DropdownMenu className="search-dropdown">
+      <Dropdown isOpen={search}>
+        <DropdownMenu
+          style={{
+            transform: "none",
+            marginLeft: "5px",
+            width: "100%"
+          }}
+        >
           <DropdownToggle style={{ visibility: "hidden" }} />
           {search !== "" &&
-            results.map((result, index) => {
+            searchResults.map(searchResult => {
               // transform a string to display in several spans
-              const resultString = highlight(result.name, search)
+              const searchResultString = highlight(searchResult.name, search)
               return (
                 <DropdownItem
-                  onClick={() => onDirclick(result._id)}
-                  key={index}
+                  onClick={() => onDirclick(searchResult._id)}
+                  key={searchResult.value}
+                  value={searchResult.value}
                 >
-                  <span>{resultString[0]}</span>
+                  <span>{searchResultString[0]}</span>
                   <span style={{ color: "red" }}>{search}</span>
-                  <span>{resultString[1]}</span>
+                  <span>{searchResultString[1]}</span>
                 </DropdownItem>
               )
             })}
