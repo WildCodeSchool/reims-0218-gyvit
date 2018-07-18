@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Col, Button, Form, FormGroup, Label, CustomInput } from "reactstrap"
+import { Col, Button, Form, FormGroup, Label } from "reactstrap"
 
 import ModalErrorContainer from "./ModalErrorContainer"
 import { uploadFile } from "../api/files/uploadFile"
@@ -28,9 +28,9 @@ class UploadFileFormContainer extends Component {
 
   onHandleFileUpload() {
     const data = new FormData()
-    data.append("file", this.fileInput.files[0])
+    data.append("file", this.inputFile.files[0])
     data.append("destination", this.props.destination)
-    data.append("name", this.fileInput.files[0].name)
+    data.append("name", this.inputFile.files[0].name)
     //build data
     uploadFile(data)
       .then(response => this.props.onFileUpload(response))
@@ -43,12 +43,17 @@ class UploadFileFormContainer extends Component {
       <Form>
         <ModalErrorContainer />
         <FormGroup row>
+          <Label for="inputFile" sm={2}>
+            File
+          </Label>
           <Col sm={10}>
-            <Label for="exampleCustomFileBrowser">File:</Label>
-            <CustomInput
+            <input
               type="file"
-              id="exampleCustomFileBrowser"
-              name="customFile"
+              name="file"
+              id="inputFile"
+              ref={input => {
+                this.inputFile = input
+              }}
             />
           </Col>
         </FormGroup>
@@ -65,7 +70,6 @@ class UploadFileFormContainer extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(UploadFileFormContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  UploadFileFormContainer
+)
