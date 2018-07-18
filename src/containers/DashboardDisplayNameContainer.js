@@ -1,6 +1,8 @@
 import { connect } from "react-redux"
 import React, { Component } from "react"
 import { Col } from "reactstrap"
+import { connectUserSuccessAction } from "../actions/userAction"
+import { retrieveMe } from "../api/users/retrieveMe"
 
 //map the props profile to the user branch of the state
 const mapStateToProps = state => {
@@ -8,6 +10,9 @@ const mapStateToProps = state => {
     profile: state.user
   }
 }
+const mapDispatchToProps = dispatch => ({
+  onRetrieveMe: response => dispatch(connectUserSuccessAction(response))
+})
 
 class DashboardDisplayNameContainer extends Component {
   render() {
@@ -39,6 +44,11 @@ class DashboardDisplayNameContainer extends Component {
       </Col>
     )
   }
+  componentDidMount() {
+    retrieveMe().then(response => this.props.onRetrieveMe(response))
+  }
 }
 
-export default connect(mapStateToProps)(DashboardDisplayNameContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  DashboardDisplayNameContainer
+)
