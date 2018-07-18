@@ -12,6 +12,7 @@ import {
   Container
 } from "reactstrap"
 import ModalCreateDirContainer from "../../containers/ModalCreateDirContainer"
+import "./styles-page-folders/folderBarTop.css"
 
 const FoldersBarTop = () => {
   return (
@@ -30,16 +31,7 @@ const FoldersBarTop = () => {
             <Collapse navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <Button
-                    style={{
-                      borderRadius: "50%",
-                      height: "50px",
-                      width: "50px",
-                      backgroundColor: "#725fe3"
-                    }}
-                  >
-                    +
-                  </Button>
+                  <Button className="ButtonFoldersBarTop">+</Button>
                 </NavItem>
               </Nav>
             </Collapse>
