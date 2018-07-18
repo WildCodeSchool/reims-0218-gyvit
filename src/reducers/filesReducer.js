@@ -39,6 +39,10 @@ const filesReducer = (prevState = initialState, action) => {
       return [
         ...prevState,
         {
+<<<<<<< refs/remotes/origin/putUploadFileInState
+=======
+          // making a new "virtual" file
+>>>>>>> returning a file from axios, or a homeMade file
           name: action.response.name,
           object: "file",
           _id: "file_idAuHasard",
