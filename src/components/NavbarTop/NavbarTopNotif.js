@@ -1,17 +1,17 @@
-//TODO: create component notif
-
 import React from "react"
 
 import NotifContainer from "../../containers/NotifContainer"
-import "./styles-navbar-top/navbarTop.css"
 
 const NavbarTopNotif = () => {
   return (
     <div>
       <img
-        className="notif"
+        style={{
+          marginTop: "1em",
+          paddingLeft: "0%"
+        }}
         src={process.env.PUBLIC_URL + "img/icon_notification.svg"}
-        alt="notif-icon"
+        alt="iconNotif"
       />
       <NotifContainer />
     </div>
