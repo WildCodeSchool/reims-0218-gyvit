@@ -1,0 +1,11 @@
+.signInContent {
+  width: "max-width";
+  height: 100vh;
+  background-image: url("https://www.onecomputer.fr/wp-content/uploads/2016/01/blurred-background-81.jpg");
+  position: "relative"; }
+
+.textAccount {
+  padding-left: 50%;
+  font-size: 16px;
+  width: 100vw;
+  color: #3b425d; }

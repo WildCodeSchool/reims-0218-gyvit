@@ -1,0 +1,23 @@
+.titleSignIn {
+  height: 24px;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3b425d; }
+
+.textTitleSignIn {
+  width: 200px;
+  height: 18px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #9da5c9;
+  margin-top: 15px; }
