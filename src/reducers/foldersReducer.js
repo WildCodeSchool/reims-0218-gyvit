@@ -4,10 +4,8 @@ import {
   RETRIEVE_DIR_SUCCESS,
   UPDATE_A_FOLDER_SUCCESS,
   DELETE_A_FOLDER_SUCCESS,
-  SORT_DIRS_BY_NAME_ASC,
-  SORT_DIRS_BY_NAME_DESC,
-  SORT_DIRS_BY_DATE_ASC,
-  SORT_DIRS_BY_DATE_DESC
+  SORT_DIRS_BY_NAME_SUCCESS,
+  SORT_DIRS_BY_DATE_SUCCESS
 } from "../actions/foldersActions"
 
 const initialState = []
@@ -38,38 +36,48 @@ const foldersReducer = (prevState = initialState, action) => {
     return prevState.filter(dir => action.dirId !== dir._id)
   }
 
-  if (action.type === SORT_DIRS_BY_NAME_ASC) {
-    const sortedArray = prevState.slice().sort((a, b) => {
-      if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
-
-      if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
+  if (action.type === SORT_DIRS_BY_NAME_SUCCESS) {
+    //copying dirs in prevState, then sort them by name
+    const sortedDirsByName = [...prevState].sort((dirA, dirB) => {
+      if (dirA.name.toLowerCase() < dirB.name.toLowerCase()) {
+        if (action.direction === "asc") {
+          return -1
+        } else if (action.direction === "desc") {
+          return 1
+        }
+      }
+      if (dirA.name.toLowerCase() > dirB.name.toLowerCase()) {
+        if (action.direction === "asc") {
+          return 1
+        } else if (action.direction === "desc") {
+          return -1
+        }
+      }
+      return 0 // direction==""
     })
-    return sortedArray
+    return sortedDirsByName
   }
 
-  if (action.type === SORT_DIRS_BY_NAME_DESC) {
-    const sortedArray = prevState.slice().sort((a, b) => {
-      if (a.name.toLowerCase() < b.name.toLowerCase()) return -1
-
-      if (a.name.toLowerCase() > b.name.toLowerCase()) return 1
+  if (action.type === SORT_DIRS_BY_DATE_SUCCESS) {
+    //copying dirs in prevState, then sort them by date
+    const sortedDirsByDate = [...prevState].sort((dirA, dirB) => {
+      if (Date.parse(dirA.modified) < Date.parse(dirB.modified)) {
+        if (action.direction === "asc") {
+          return -1
+        } else if (action.direction === "desc") {
+          return 1
+        }
+      }
+      if (Date.parse(dirA.modified) > Date.parse(dirB.modified)) {
+        if (action.direction === "asc") {
+          return 1
+        } else if (action.direction === "desc") {
+          return -1
+        }
+      }
+      return 0
     })
-    return sortedArray.reverse()
-  }
-  if (action.type === SORT_DIRS_BY_DATE_ASC) {
-    const sortedArrayByDate = prevState.slice().sort((a, b) => {
-      if (a.modified.toLowerCase() < b.modified.toLowerCase()) return -1
-
-      if (a.modified.toLowerCase() > b.modified.toLowerCase()) return 1
-    })
-    return sortedArrayByDate
-  }
-  if (action.type === SORT_DIRS_BY_DATE_DESC) {
-    const sortedArrayByDate = prevState.slice().sort((a, b) => {
-      if (a.modified.toLowerCase() < b.modified.toLowerCase()) return -1
-
-      if (a.modified.toLowerCase() > b.modified.toLowerCase()) return 1
-    })
-    return sortedArrayByDate.reverse()
+    return sortedDirsByDate
   }
 
   return prevState

@@ -8,6 +8,7 @@ const FoldersTableTbody = ({
   dirs = [],
   onDirclick,
   onBackclick,
+  onRadioBtnClick,
   parent = {}
 }) => {
   return (
@@ -25,7 +26,14 @@ const FoldersTableTbody = ({
       )}
       {dirs &&
         dirs.map((dir, index) => {
-          return <RowDir key={index} dir={dir} onDirclick={onDirclick} />
+          return (
+            <RowDir
+              key={index}
+              dir={dir}
+              onDirclick={onDirclick}
+              onRadioBtnClick={onRadioBtnClick}
+            />
+          )
         })}
       {files &&
         files.map(file => {
