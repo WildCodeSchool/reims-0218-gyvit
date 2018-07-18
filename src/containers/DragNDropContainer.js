@@ -37,7 +37,6 @@ class DragNDropContainer extends React.Component {
   }
 
   onDrop(files) {
-    console.log("drop file", files)
     uploadFile(this.props.destination).then(response =>
       this.props.onSubmitUploadFile(response)
     )
