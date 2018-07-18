@@ -11,30 +11,15 @@ exports[`renders correctly 1`] = `
     >
       <img
         alt="kevin"
-        className="rounded-circle media-object"
+        className="pic-profile rounded-circle media-object"
         src="img/kevinMarlot.jpeg"
-        style={
-          Object {
-            "height": "40px",
-            "marginTop": "25px",
-            "width": "40px",
-          }
-        }
       />
     </div>
     <div
       className="media-body"
     >
       <h4
-        className="media-heading"
-        style={
-          Object {
-            "color": "#231b56",
-            "fontSize": "16px",
-            "marginLeft": "21px",
-            "marginTop": "28px",
-          }
-        }
+        className="id-profile media-heading"
       >
         <span>
           kevin
@@ -45,15 +30,7 @@ exports[`renders correctly 1`] = `
         </span>
       </h4>
       <div
-        className="media"
-        style={
-          Object {
-            "color": "#372c78",
-            "fontSize": "14px",
-            "marginLeft": "21px",
-            "marginTop": "5px",
-          }
-        }
+        className="business-profile media"
       >
         Meduza
       </div>
