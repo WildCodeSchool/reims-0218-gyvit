@@ -65,7 +65,7 @@ class ModalCreateDirContainer extends Component {
           <ModalBody>
             <Form name="formCreateDir">
               <FormGroup>
-                <Label for="name">Nom: </Label>
+                <Label for="name">Name: </Label>
                 <Input
                   type="text"
                   name="name"
@@ -87,6 +87,7 @@ class ModalCreateDirContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  ModalCreateDirContainer
-) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ModalCreateDirContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
