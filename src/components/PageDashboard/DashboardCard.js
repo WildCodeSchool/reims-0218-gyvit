@@ -7,8 +7,7 @@ import {
   CardTitle,
   Button,
   Container,
-  Row,
-  Col
+  Row
 } from "reactstrap"
 import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
