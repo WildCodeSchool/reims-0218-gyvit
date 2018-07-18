@@ -98,7 +98,7 @@ class FoldersBarTopContainer extends React.Component {
                     src={process.env.PUBLIC_URL.concat("../Icons/file.svg")}
                     style={{
                       height: "50px",
-
+                      cursor: "pointer",
                       width: "50px"
                     }}
                     alt="add directory"
