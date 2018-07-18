@@ -3,15 +3,10 @@ import { Container } from "reactstrap"
 import SignInTitle from "./SignInTitle"
 import SignInGetStarted from "./SignInGetStarted"
 import SignInFormContainer from "../../containers/SignInFormContainer"
+import "./styles-page-sign-in/signInBarLeft.css"
 
 const PageSignIn = () => (
-  <Container
-    style={{
-      paddingTop: "20%",
-      marginLeft: "10%",
-      backgroundColor: "#ffffff"
-    }}
-  >
+  <Container className="pageSignIn">
     <SignInTitle />
     <SignInFormContainer />
 

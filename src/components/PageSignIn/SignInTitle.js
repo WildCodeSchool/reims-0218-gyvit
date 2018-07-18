@@ -1,40 +1,11 @@
 //TODO CREATE SIGN IN TITLE
 import React from "react"
+import "./styles-page-sign-in/signInTitle.css"
 
 const SignInTitle = () => (
   <div>
-    <h1
-      style={{
-        height: "24px",
-        fontSize: "24px",
-        fontWeight: "normal",
-        fontStyle: "normal",
-        fontStretch: "normal",
-        lineHeight: "normal",
-        letterSpacing: "normal",
-        textAlign: "left",
-        color: "#3b425d"
-      }}
-    >
-      Sign it to Gyvit
-    </h1>
-    <p
-      style={{
-        width: "200px",
-        height: "18px",
-        fontSize: "18px",
-        fontWeight: "normal",
-        fontStyle: "normal",
-        fontStretch: "normal",
-        lineHeight: "normal",
-        letterSpacing: "normal",
-        textAlign: "left",
-        color: "#9da5c9",
-        marginTop: "15px"
-      }}
-    >
-      Enter your details below{" "}
-    </p>
+    <h1 className="titleSignIn">Sign it to Gyvit</h1>
+    <p className="textTitleSignIn">Enter your details below </p>
   </div>
 )
 
