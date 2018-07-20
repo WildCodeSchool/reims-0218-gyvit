@@ -6,11 +6,11 @@ import ModalErrorContainer from "../../containers/ModalErrorContainer"
 const PageSignIn = () => (
   <Container fluid>
     <ModalErrorContainer />
-    <Row>
-      <Col md="6" lg="6" sm="6">
+    <Row style={{ height: "100vh" }}>
+      <Col md="5" lg="5" sm="5">
         <SignInBarLeft />
       </Col>
-      <Col md="6" lg="6" sm="6">
+      <Col md="7" lg="7" sm="7">
         <SignInContent />
       </Col>
     </Row>
