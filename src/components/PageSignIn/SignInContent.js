@@ -22,7 +22,9 @@ const SignInContent = () => (
         </Col>
         <Col xs="3">
           <Button
-            className="buttonContent"
+            outline
+            color="info"
+            className="buttonContent  "
             style={{
               borderRadius: "100px",
               border: "solid 1px #7a57d1",
