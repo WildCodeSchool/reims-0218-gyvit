@@ -26,9 +26,9 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
             src={process.env.PUBLIC_URL + image}
             alt="folder"
             style={{
-              width: "50%",
-              marginLeft: "25%",
-              height: "5em",
+              width: "60%",
+              margin: "auto",
+              height: "30%",
               marginTop: "0.5em"
             }}
           />
@@ -47,8 +47,7 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
                 fontSize: "15px",
                 opacity: "0.45",
                 lineHeight: "3vh",
-                textAlign: "center",
-                paddingBottom: "25%"
+                textAlign: "center"
               }}
             >
               {bio}
@@ -58,14 +57,15 @@ const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
                 style={{
                   borderRadius: "2px",
                   border: "solid 1px #dce1e6",
-                  backgroundColor: "white"
+                  backgroundColor: "white",
+                  margin: "2em"
                 }}
               >
                 <NavLink
                   style={{
                     fontSize: "16px",
-
-                    color: "#725fe3"
+                    color: "#725fe3",
+                    marginBottom: 0
                   }}
                   to={link}
                   activeClassName="selected"
