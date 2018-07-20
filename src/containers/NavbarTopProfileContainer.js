@@ -56,6 +56,7 @@ class NavbarTopProfileContainer extends Component {
             backgroundColor: "#ffffff",
             borderColor: "none",
             border: "0px"
+            
           }}
         >
           <Media>
@@ -105,23 +106,35 @@ class NavbarTopProfileContainer extends Component {
         </DropdownToggle>
         <DropdownMenu
           style={{
-            width: "95%",
+            width: "70%",
             padding: "auto",
             textAlign: "center",
             fontSize: "14px"
+            
+            
+           
           }}
         >
-          <DropdownItem>
+          <DropdownItem   style={{
+            width: "auto",
+            padding: "auto",
+           
+            
+           
+          }}>
             <a
               href="/"
               color="primary"
               size="xs"
               padding="auto"
+              width= "auto"
               onClick={() =>
                 removeToken().then(() => this.props.onDisconnectedUser())
               }
             >
               Déconnexion
+
+
             </a>
           </DropdownItem>
         </DropdownMenu>
