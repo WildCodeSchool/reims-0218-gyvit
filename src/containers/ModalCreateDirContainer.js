@@ -63,7 +63,10 @@ class ModalCreateDirContainer extends Component {
           </ModalHeader>
           <ModalErrorContainer />
           <ModalBody>
-            <Form name="formCreateDir">
+            <Form
+              name="formCreateDir"
+              onSubmit={event => event.preventDefault()}
+            >
               <FormGroup>
                 <Label for="name">Name: </Label>
                 <Input
@@ -87,7 +90,6 @@ class ModalCreateDirContainer extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ModalCreateDirContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(mapStateToProps, mapDispatchToProps)(
+  ModalCreateDirContainer
+) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
