@@ -19,7 +19,10 @@ const NavbarLeftItem = ({ icon, nameLink, link }) => (
         style = {{
             textDecoration : "none",
         }} className="navbar-left-item">
-          <img alt="" src={icon} className="navbar-left-icon" />
+          <img alt="" src={icon} className="navbar-left-icon" style ={{
+            paddingBottom :"5px",
+            marginLeft :"10px"
+          }} />
           {nameLink}
         </NavLink>
       </Col>
