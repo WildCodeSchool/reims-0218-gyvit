@@ -18,16 +18,23 @@ const NavbarLeftItem = ({ icon, nameLink, link }) => (
         <NavLink to={link} activeStyle={style} 
         style = {{
             textDecoration : "none",
+            border :"none"
         }} className="navbar-left-item">
           <img alt="" src={icon} className="navbar-left-icon" style ={{
             paddingBottom :"5px",
-            marginLeft :"10px"
+            marginLeft :"0px",
+            border:"none",
+            paddingRight :"5px"
           }} />
           {nameLink}
         </NavLink>
       </Col>
     </Row>
-    <hr />
+    <hr  style = {{
+            textDecoration : "none",
+            border :"none",
+            paddingBottom:"4px"
+        }}/>
   </div>
 )
 
