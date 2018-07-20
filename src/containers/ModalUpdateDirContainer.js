@@ -61,7 +61,10 @@ class ModalUpdateDirContainer extends Component {
             Rename the directory {this.props.name}
           </ModalHeader>
           <ModalBody>
-            <Form name="formUpdateDir">
+            <Form
+              name="formUpdateDir"
+              onSubmit={event => event.preventDefault()}
+            >
               <FormGroup>
                 <Label for="name">Nom: </Label>
                 <Input
@@ -74,7 +77,7 @@ class ModalUpdateDirContainer extends Component {
                 />
               </FormGroup>
               <Button type="button" onClick={() => this.onUpdateDir()}>
-                > Submit
+                Submit
               </Button>
             </Form>
           </ModalBody>
