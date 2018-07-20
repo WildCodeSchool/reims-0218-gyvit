@@ -7,7 +7,9 @@ const NavbarLeftLogo = () => {
   return (
     <div className=" logo-gyvit d-flex align-items-center">
       <Col>
-        <NavLink className="logo-link-home" to="/home">
+        <NavLink className="logo-link-home" to="/home" style = {{
+            border : "none"
+        }}>
           GYVIT
         </NavLink>
       </Col>
