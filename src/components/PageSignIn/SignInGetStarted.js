@@ -3,7 +3,7 @@ import React from "react"
 import { NavLink } from "reactstrap"
 
 const SignInGetStarted = () => (
-  <div style={{ marginTop: "120px" }}>
+  <div style={{ marginTop: "2em" }}>
     <p>
       Don't have an account ?
       <NavLink
