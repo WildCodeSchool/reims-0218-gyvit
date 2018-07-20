@@ -7,14 +7,18 @@ import { NavLink } from "react-router-dom"
 import "./styles-navbar-left/navbarLeftItem.css"
 
 const style = {
-  color: "cyan"
+  color: "#00BFFF",
+ // textDecoration: "none"
 }
 
 const NavbarLeftItem = ({ icon, nameLink, link }) => (
   <div>
     <Row>
       <Col xs="12">
-        <NavLink to={link} activeStyle={style} className="navbar-left-item">
+        <NavLink to={link} activeStyle={style} 
+        style = {{
+            textDecoration : "none",
+        }} className="navbar-left-item">
           <img alt="" src={icon} className="navbar-left-icon" />
           {nameLink}
         </NavLink>
