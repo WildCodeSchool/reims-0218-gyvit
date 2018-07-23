@@ -29,6 +29,7 @@ const filesReducer = (prevState = initialState, action) => {
   }
 
   if (action.type === ADD_A_FILE_SUCCESS) {
+    console.log(action)
     // response is a file
     if (action.response.object) {
       return [...prevState, action.response]
@@ -36,7 +37,7 @@ const filesReducer = (prevState = initialState, action) => {
     // response is a temporary file (uploaded)
     if (action.response.file) {
       const dateMaintenant = Date.now()
-      return [
+      const newState = [
         ...prevState,
         {
           // making a new "virtual" file
@@ -51,6 +52,8 @@ const filesReducer = (prevState = initialState, action) => {
           removed: null
         }
       ]
+      console.log(newState)
+      return newState
     }
   }
   if (action.type === DELETE_A_FILE_SUCCESS) {

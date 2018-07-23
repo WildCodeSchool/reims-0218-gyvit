@@ -18,5 +18,8 @@ export const uploadFile = data => {
     ...config,
     url: `storage/files`,
     data: JSON.stringify({ data })
-  }).then(res => res.data)
+  }).then(res => {
+    console.log("res end of uploadFile: ", res)
+    return res.data
+  })
 }

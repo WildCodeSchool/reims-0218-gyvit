@@ -33,7 +33,10 @@ class UploadFileFormContainer extends Component {
     data.append("name", this.inputFile.files[0].name)
     //build data
     uploadFile(data)
-      .then(response => this.props.onFileUpload(response))
+      .then(response => {
+        console.log("response after uploadFile: ", response)
+        return this.props.onFileUpload(response)
+      })
       .catch(response => this.props.onError(response.message))
     this.props.onHideModal()
   }
