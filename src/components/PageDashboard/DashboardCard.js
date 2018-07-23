@@ -11,39 +11,75 @@ import {
 } from "reactstrap"
 import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
-import "./styles-page-dashboard/dashboardCard.css"
+
 const DashboardCard = ({ id, image, titre, bio, buttonText, link }) => {
   return (
     <div>
       <Container>
-        <Row>
-          <Card className="card-home">
-            <CardImg
+        <Card
+          style={{
+            width: "40vh",
+            height: "55vh"
+          }}
+        >
+          <CardImg
+            src={process.env.PUBLIC_URL + image}
+            alt="folder"
+            style={{
+              width: "60%",
+              margin: "auto",
+              height: "30%",
+              marginTop: "0.5em"
+            }}
+          />
+          <CardBody d-flex flex-column>
+            <CardTitle
               style={{
-                width: "151.2px",
-                height: "135px",
-                marginLeft: "24%",
-                marginTop: "5%",
-                marginRight: "24%"
+                "font-size": "18px",
+                "text-align": "center",
+                paddingBottom: "5%"
               }}
-              src={process.env.PUBLIC_URL + image}
-              alt="folder"
-            />
-            <CardBody d-flex="true" flex-column="true">
-              <CardTitle className="card-title ">{titre}</CardTitle>
-              <CardText className="card-text">{bio}</CardText>
-              <Button className="card-button" color="false">
+            >
+              {titre}
+            </CardTitle>
+            <CardText
+              style={{
+                fontSize: "15px",
+                opacity: "0.45",
+                lineHeight: "3vh",
+                textAlign: "center"
+              }}
+            >
+              {bio}
+            </CardText>
+            <Row className="d-flex justify-content-center" style={{}}>
+              <Button
+                style={{
+                  borderRadius: "2px",
+                  border: "solid 1px #dce1e6",
+                  backgroundColor: "white",
+                  margin: "2em"
+                }}
+              >
                 <NavLink
-                  className="navlink-button"
+                  style={{
+                    fontSize: "16px",
+                    color: "#725fe3",
+                    marginBottom: 0
+                  }}
                   to={link}
                   activeClassName="selected"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
                 >
                   {buttonText}
                 </NavLink>
               </Button>
-            </CardBody>
-          </Card>
-        </Row>
+            </Row>
+          </CardBody>
+        </Card>
       </Container>
     </div>
   )

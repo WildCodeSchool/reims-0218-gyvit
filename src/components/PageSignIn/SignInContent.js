@@ -3,26 +3,33 @@ import { Button, Row, Container, Col } from "reactstrap"
 import "./styles-page-sign-in/signInContent.css"
 
 const SignInContent = () => (
-  <div className="d-none d-md-block d-xl-block d-lg-none signInContent">
-    <Container className="d-md-none  d-xl-block d-lg-none">
+  <div className="d-none d-md-block d-xl-block  signInContent">
+    <Container>
       <Row style={{ paddingTop: "2vh" }}>
-        <Col xs="8" className="d-flex align-items-center">
-          <a className="textAccount" style={{
-              paddingLeft: "50%",
+        <Col xs="9" className="d-flex align-items-center">
+          <a
+            className="textAccount"
+            style={{
+              paddingLeft: "20em",
               fontsize: "16px",
               width: "100vw",
               color: "#3b425d"
-            }}  href="/sign-up">
+            }}
+            href="/sign-up"
+          >
             Don't have an account ?
           </a>
         </Col>
-        <Col xs="4">
+        <Col xs="3">
           <Button
-            className="buttonContent"
+            outline
+            color="info"
+            className="buttonContent  "
             style={{
               borderRadius: "100px",
               border: "solid 1px #7a57d1",
-              color: "#7a57d1"
+              color: "#7a57d1",
+              marginRight: "5px"
             }}
             href="sign-up"
             outline

@@ -51,6 +51,7 @@ class NavbarTopProfileContainer extends Component {
         <DropdownToggle
           color="none"
           style={{
+            width: "98%",
             height: "86px",
             padding: "auto",
             backgroundColor: "#ffffff",
@@ -105,18 +106,24 @@ class NavbarTopProfileContainer extends Component {
         </DropdownToggle>
         <DropdownMenu
           style={{
-            width: "95%",
+            width: "70%",
             padding: "auto",
             textAlign: "center",
             fontSize: "14px"
           }}
         >
-          <DropdownItem>
+          <DropdownItem
+            style={{
+              width: "auto",
+              padding: "auto"
+            }}
+          >
             <a
               href="/"
               color="primary"
               size="xs"
               padding="auto"
+              width="auto"
               onClick={() =>
                 removeToken().then(() => this.props.onDisconnectedUser())
               }

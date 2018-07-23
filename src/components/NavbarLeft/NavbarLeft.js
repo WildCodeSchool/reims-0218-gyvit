@@ -11,14 +11,15 @@ import "./styles-navbar-left/navbarLeft.css"
 const NavbarLeft = ({ dataLinks = link }) => (
   <Container>
     <Row>
-      <Nav className="navbar-left" vertical expand="md">
+      <Nav className="navbar-left" vertical expand="md" >
         <NavbarLeftLogo />
-        <NavItem className="nav-item">
+        <NavItem className="nav-item"  >
           {dataLinks.map((link, index) => (
-            <NavbarLeftItem key={index} {...link} />
+            <NavbarLeftItem key={index} {...link} 
+          />
           ))}
         </NavItem>
-
+        <span className="border-0 border-dark"></span>
         <NavItem className="nav-item-settings">
           <NavbarLeftItem {...settings} />
         </NavItem>
