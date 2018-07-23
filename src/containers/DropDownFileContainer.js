@@ -212,7 +212,7 @@ class DropDownFileContainer extends React.Component {
                 deleteFile(_id, name)
                   .then(response => {
                     // if response isn't with _id, error is catched
-                    return this.props.onDeleteFile(response._id)
+                    return this.props.onDeleteFile(_id)
                   })
                   // errors not wanted
                   .catch(response => this.props.onError(response))
@@ -226,7 +226,6 @@ class DropDownFileContainer extends React.Component {
     )
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DropDownFileContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  DropDownFileContainer
+)

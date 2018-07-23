@@ -37,7 +37,7 @@ class UploadFileFormContainer extends Component {
         ext: "php",
         type: "",
         remove: 0,
-        created: "2018-03-29T00:00:00+00:00",
+        created: `${currentTime}`,
         modified: `${currentTime}`,
         removed: null
       }

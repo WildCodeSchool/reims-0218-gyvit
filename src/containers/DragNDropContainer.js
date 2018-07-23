@@ -4,6 +4,8 @@ import { connect } from "react-redux"
 import FoldersTableContainer from "../containers/FoldersTableContainer"
 import { uploadFile } from "../api/files/uploadFile"
 import { makeAddAFileSuccess } from "../actions/filesActions"
+import { DateTime } from "luxon"
+
 const mapStateToProps = state => {
   return {
     destination: state.currentDir._id
@@ -17,9 +19,23 @@ const mapDispatchToProps = dispatch => ({
 class DragNDropContainer extends React.Component {
   constructor() {
     super()
+    const currentTime = DateTime.local()
+      .setLocale("en-US")
+      .toLocaleString(DateTime.DATETIME_FULL)
+
     this.state = {
       accept: "",
-      files: [],
+      files: {
+        _id: "file_odd9OMeNdsds2lE3ePeN02N9",
+        object: "file",
+        name: "Carte d'identité",
+        size: "1000",
+        ext: "php",
+        type: "",
+        remove: 0,
+        created: `${currentTime}`,
+        modified: `${currentTime}`
+      },
       dropzoneActive: false
     }
   }
@@ -36,10 +52,18 @@ class DragNDropContainer extends React.Component {
     })
   }
 
+  // onDrop(files) {
+  //   uploadFile(this.state.name, this.props.destination).then(response =>
+  //     this.props.onSubmitUploadFile(response)
+  //   )
+  //   this.setState({
+  //     files,
+  //     dropzoneActive: false
+  //   })
+  // }
+
   onDrop(files) {
-    uploadFile(this.state.name, this.props.destination).then(response =>
-      this.props.onSubmitUploadFile(response)
-    )
+    this.props.onSubmitUploadFile(this.state.files)
     this.setState({
       files,
       dropzoneActive: false
@@ -77,14 +101,10 @@ class DragNDropContainer extends React.Component {
         {dropzoneActive && <div style={overlayStyle}>Drop files...</div>}
         <div>
           <FoldersTableContainer />
-          <ul>{files.map(f => <li>{f.name}</li>)}</ul>
         </div>
       </Dropzone>
     )
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DragNDropContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(DragNDropContainer)
