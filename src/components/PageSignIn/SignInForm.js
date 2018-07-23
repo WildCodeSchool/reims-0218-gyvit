@@ -23,9 +23,7 @@ export default class SignInEmail extends React.Component {
             id="IdPassword"
             placeholder="Password"
           />
-          <Button className="buttonForm" color="info">
-            Connexion
-          </Button>
+          <Button>Connexion</Button>
         </FormGroup>
       </Form>
     )

@@ -102,7 +102,6 @@ class SignInFormWrap extends Component {
           </FormGroup>
           <Button
             outline
-            color="info"
             type="button"
             onClick={() => {
               return userLogin(this.state.mail, this.state.password)
@@ -128,8 +127,8 @@ class SignInFormWrap extends Component {
                 })
             }}
             style={{
-              color: "#7a57d1",
-              border: "solid 1px #7a57d1",
+              color: "white",
+              backgroundColor: "#7a57d1",
               width: "192px",
               height: "54px",
               marginTop: "40px",
