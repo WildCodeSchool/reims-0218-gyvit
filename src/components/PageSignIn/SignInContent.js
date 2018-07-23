@@ -23,12 +23,12 @@ const SignInContent = () => (
         <Col xs="3">
           <Button
             outline
-            color="info"
             className="buttonContent  "
             style={{
+              backgroundColor: "#7a57d1",
               borderRadius: "100px",
               border: "solid 1px #7a57d1",
-              color: "#7a57d1",
+              color: "white",
               marginRight: "5px"
             }}
             href="sign-up"
