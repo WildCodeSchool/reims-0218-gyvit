@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Col, Button, Form, FormGroup, Label } from "reactstrap"
+import { Col, Button, Form, FormGroup, Label, Input } from "reactstrap"
 
 import { DateTime } from "luxon"
 import ModalErrorContainer from "./ModalErrorContainer"
@@ -23,26 +23,26 @@ const mapDispatchToProps = dispatch => ({
 class UploadFileFormContainer extends Component {
   constructor(props) {
     super(props)
-    const CurrentTime = DateTime.fromMillis(Date.now())
+    const currentTime = DateTime.local()
       .setLocale("en-US")
-      .toLocaleString()
+      .toLocaleString(DateTime.DATETIME_FULL)
+
     this.state = {
       visibilityError: false,
-
       file: {
         _id: "file_odd9OMeNdsds2lE3ePeN02N9",
         object: "file",
-        name: "Sksdfdsfetch",
+        name: "Assurance responsabilité civile",
         size: "1000",
         ext: "php",
         type: "",
         remove: 0,
         created: "2018-03-29T00:00:00+00:00",
-        modified: `${CurrentTime}`,
+        modified: `${currentTime}`,
         removed: null
       }
     }
-
+    //INFO: right code for upload when API will return a file
     // this.onHandleFileUpload = this.onHandleFileUpload.bind(this)
   }
 
@@ -62,27 +62,18 @@ class UploadFileFormContainer extends Component {
     return (
       <Form>
         <ModalErrorContainer />
-        <FormGroup row>
-          <Label for="inputFile" sm={2}>
-            File
-          </Label>
-          <Col sm={10}>
-            <input
-              type="file"
-              name="file"
-              id="inputFile"
-              ref={input => {
-                this.fileInput = input
-              }}
-            />
-          </Col>
+        <FormGroup>
+          <Label for="fileInput">File</Label>
+          <Input type="file" name="file" id="fileInput" />
         </FormGroup>
 
         <FormGroup row>
           <Col sm={{ size: 10, offset: 2 }}>
             <Button
               type="button"
-              onClick={() => this.props.onFileUpload(this.state.file)}
+              onClick={() => {
+                return this.props.onFileUpload(this.state.file)
+              }}
             >
               Submit
             </Button>
