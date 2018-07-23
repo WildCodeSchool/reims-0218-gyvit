@@ -4,11 +4,10 @@ import { Col, Button, Form, FormGroup, Label } from "reactstrap"
 
 import { DateTime } from "luxon"
 import ModalErrorContainer from "./ModalErrorContainer"
-import { uploadFile } from "../api/files/uploadFile"
+// import { uploadFile } from "../api/files/uploadFile"
 import { makeAddAFileSuccess } from "../actions/filesActions"
 import { makeHideModalCreateFile } from "../actions/modalCreateFileAction"
 import { makeShowModalError } from "../actions/errorsActions"
-import { convertDateFromJsonToFrench } from "../functions/dirs"
 
 const mapStateToProps = state => ({
   destination: state.currentDir._id

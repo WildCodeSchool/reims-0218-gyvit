@@ -32,7 +32,6 @@ const SignInContent = () => (
               marginRight: "5px"
             }}
             href="sign-up"
-            outline
           >
             Get Started
           </Button>
