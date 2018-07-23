@@ -41,8 +41,10 @@ export class NavbarTopFilter extends Component {
           onSearchType={this.onSearchType}
           search={this.state.search}
           results={this.props.results}
-          onDirclick={() =>
-            this.props.onDirclick().then(() => this.setState({ search: "" }))
+          onDirclick={idSelected =>
+            this.props
+              .onDirclick(idSelected)
+              .then(() => this.setState({ search: "" }))
           }
         />
       </div>
