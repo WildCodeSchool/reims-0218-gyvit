@@ -8,16 +8,16 @@ const elements = [
   {
     id: 0,
     image: "",
-    titre: "Documents requests",
+    titre: "Demande de documents",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
-    buttonText: "Create first request",
+      "Faites le premier pas pour lancer votre stockage: ajoutez des objets physiques, des téléchargements numériques dont vous pouvez rêver",
+    buttonText: "Créer la première requête",
     link: "lien0"
   },
   {
     id: 1,
     image: "",
-    titre: "Share documents",
+    titre: "Partage de documents",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
     buttonText: "Share documents",
@@ -26,7 +26,7 @@ const elements = [
   {
     id: 2,
     image: "",
-    titre: "Store files",
+    titre: "Mes documents",
     bio:
       "Take the first step to launching your store. Add physical items, digital downloads you can dream up",
     buttonText: "Upload documents",

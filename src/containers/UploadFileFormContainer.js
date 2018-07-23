@@ -44,7 +44,7 @@ class UploadFileFormContainer extends Component {
         <ModalErrorContainer />
         <FormGroup row>
           <Col sm={10}>
-            <Label for="exampleCustomFileBrowser">File:</Label>
+            <Label for="exampleCustomFileBrowser">Fichier:</Label>
             <CustomInput
               type="file"
               id="exampleCustomFileBrowser"
@@ -56,7 +56,7 @@ class UploadFileFormContainer extends Component {
         <FormGroup row>
           <Col sm={{ size: 10, offset: 2 }}>
             <Button type="button" onClick={this.onHandleFileUpload}>
-              Submit
+              Envoyez
             </Button>
           </Col>
         </FormGroup>

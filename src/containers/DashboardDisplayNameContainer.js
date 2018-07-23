@@ -26,7 +26,7 @@ class DashboardDisplayNameContainer extends Component {
             textAlign: "center"
           }}
         >
-          Welcome to Gyvit, {this.props.profile.firstname}
+          Bienvenue sur Gyvit, {this.props.profile.firstname}
         </p>
 
         <p
@@ -39,7 +39,7 @@ class DashboardDisplayNameContainer extends Component {
             marginBottom: "60px"
           }}
         >
-          What would you like to do ?
+          Que voulez-vous faire?
         </p>
       </Col>
     )
@@ -49,6 +49,7 @@ class DashboardDisplayNameContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  DashboardDisplayNameContainer
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DashboardDisplayNameContainer)

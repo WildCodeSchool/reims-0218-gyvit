@@ -7,15 +7,15 @@ export default class SignInEmail extends React.Component {
     return (
       <Form className="formSignIn">
         <FormGroup>
-          <Label for="email">Email </Label>
+          <Label for="email">Email:</Label>
           <Input type="email" name="email" id="IdEmail" placeholder="Email" />
         </FormGroup>
         <FormGroup>
           <Label style={{ marginTop: "30px" }} for="password">
-            Password
+            Mot de passe:
           </Label>
           <NavLink className="navLink" href="/forgot-password">
-            Forgot password?
+            Mot de passe oublié?
           </NavLink>
           <Input
             type="password"
@@ -24,7 +24,7 @@ export default class SignInEmail extends React.Component {
             placeholder="Password"
           />
           <Button className="buttonForm" color="info">
-            Sign in
+            Connexion
           </Button>
         </FormGroup>
       </Form>

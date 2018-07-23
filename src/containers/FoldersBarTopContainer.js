@@ -58,7 +58,7 @@ class FoldersBarTopContainer extends React.Component {
               }}
             >
               <NavbarBrand>
-                Folders
+                Mes documents
                 {this.props.currentDir.path &&
                   this.props.currentDir.path.map((pathElement, index) => (
                     <PathElement
@@ -97,6 +97,7 @@ class FoldersBarTopContainer extends React.Component {
                   <img
                     src={process.env.PUBLIC_URL.concat("../Icons/file.svg")}
                     style={{
+                      cursor: "pointer",
                       height: "50px",
 
                       width: "50px"
@@ -115,6 +116,7 @@ class FoldersBarTopContainer extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  FoldersBarTopContainer
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FoldersBarTopContainer)

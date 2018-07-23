@@ -16,7 +16,7 @@ const GetStartedSignInTitle = () => (
         color: "#3b425d"
       }}
     >
-      Get started absolutely free
+      Commencez dès maintenant, gratuitement !
     </p>
     <p
       style={{
@@ -30,7 +30,7 @@ const GetStartedSignInTitle = () => (
         color: "#9da5c9"
       }}
     >
-      Free forever. No credit card needed.
+      Aucune carte de crédit nécessaire.
     </p>
   </div>
 )

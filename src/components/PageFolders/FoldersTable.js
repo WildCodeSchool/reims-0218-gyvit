@@ -29,16 +29,19 @@ const FoldersTable = ({
         <thead>
           <tr>
             <th style={{ cursor: "pointer" }} onClick={onSortName}>
-              <FoldersTableCategory name="Name" direction={directionName} />
+              <FoldersTableCategory name="Nom" direction={directionName} />
             </th>
             <th style={{ cursor: "pointer" }} onClick={onSortDate}>
               <FoldersTableCategory
-                name="Last update"
+                name="Dernière modification"
                 direction={directionDate}
               />
             </th>
             <th style={{ cursor: "pointer" }} onClick={onSortShare}>
-              <FoldersTableCategory name="Users" direction={directionshare} />
+              <FoldersTableCategory
+                name="Utilisateurs"
+                direction={directionshare}
+              />
             </th>
             <th />
           </tr>

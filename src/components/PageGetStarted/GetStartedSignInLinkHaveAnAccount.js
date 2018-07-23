@@ -17,14 +17,14 @@ const GetStartedSignInLinkHaveAnAccount = () => (
     }}
   >
     <p>
-      Already have an account ?
+      Déjà un compte ?
       <NavLink
         href="#"
         style={{
           display: "inline"
         }}
       >
-        Sign in
+        Se connecter
       </NavLink>
     </p>
   </div>

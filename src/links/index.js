@@ -1,33 +1,33 @@
 export const link = [
   {
-    nameLink: " Home",
+    nameLink: "Accueil",
     icon: process.env.PUBLIC_URL + "/img/icon_home.svg",
     link: "/home"
   },
   {
-    nameLink: " Files",
+    nameLink: "Fichiers",
     icon: process.env.PUBLIC_URL + "/img/icon_files.svg",
     link: "/files"
   },
   {
-    nameLink: " Shares",
+    nameLink: "Partages",
     icon: process.env.PUBLIC_URL + "/img/icon_shares.svg",
     link: "/shares"
   },
   {
-    nameLink: " Templates",
+    nameLink: "Modèles",
     icon: process.env.PUBLIC_URL + "/img/icon_templates.svg",
     link: "/templates"
   },
   {
-    nameLink: " Requests",
+    nameLink: "Demandes",
     icon: process.env.PUBLIC_URL + "/img/icon_requests.svg",
     link: "/requests"
   }
 ]
 
 export const settings = {
-  nameLink: " Settings",
+  nameLink: " Paramètres",
   icon: process.env.PUBLIC_URL + "/img/icon_settings.svg",
   link: "/settings"
 }

@@ -2,28 +2,28 @@ export const elements = [
   {
     id: 0,
     image: "/img/request_document.png",
-    titre: "Documents requests",
+    titre: "Demande de documents",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
-    buttonText: "Create first request",
+      "Lancez vous dans la demande de documents. Dès maintenant faites vos demande de fichiers.",
+    buttonText: "Demande de documents",
     link: "/requests"
   },
   {
     id: 1,
     image: "/img/document_share.png",
-    titre: "Share documents",
+    titre: "Partage de documents",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
-    buttonText: "Share documents",
+      "Lancez vous dans le partage de documents. Partager vos fichiers en toute sérénité à qui vous voulez où que vous soyez.",
+    buttonText: "Partage de documents",
     link: "/shares"
   },
   {
     id: 2,
     image: "/img/files_store.png",
-    titre: "Store files",
+    titre: "Mes documents",
     bio:
-      "Take the first step to launching your store. Add physical items, digital downloads you can dream up.",
-    buttonText: "Upload documents",
+      "Lancez vous dans le stockage de vos documents. Télécharger et sauvegarder tous vos fichiers et documents quand vous voulez où que vous soyez !",
+    buttonText: "Télécharger des documents",
     link: "/files"
   }
 ]

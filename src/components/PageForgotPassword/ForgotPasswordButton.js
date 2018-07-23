@@ -12,7 +12,7 @@ const ForgotPasswordButton = () => (
       }}
       color="info"
     >
-      Request reset link
+      Demande d'un nouveau mot de passe
     </Button>
   </div>
 )
