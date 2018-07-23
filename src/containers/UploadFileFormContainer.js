@@ -72,7 +72,8 @@ class UploadFileFormContainer extends Component {
             <Button
               type="button"
               onClick={() => {
-                return this.props.onFileUpload(this.state.file)
+                this.props.onFileUpload(this.state.file)
+                return this.props.onHideModal()
               }}
             >
               Submit
