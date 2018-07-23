@@ -1,6 +1,6 @@
 import { SHOW_MODAL_ERROR, HIDE_MODAL_ERROR } from "../actions/errorsActions"
 
-const initialState = { visibilityError: false, message: "" }
+const initialState = { visibilityError: false, message: "", error: "" }
 
 // initialState is the default value of prevState
 // if error was foreseen: message else error
