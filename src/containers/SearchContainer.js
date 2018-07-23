@@ -17,7 +17,6 @@ const mapDispatchToProps = dispatch => ({
   onDirclick: id =>
     retrieveDir(id)
       .then(response => dispatch(makeRetrieveDirSuccess(response)))
-      .then(() => this.setState({ search: "" }))
       .catch(response => dispatch(makeShowModalError(response)))
 })
 
@@ -42,7 +41,9 @@ export class NavbarTopFilter extends Component {
           onSearchType={this.onSearchType}
           search={this.state.search}
           results={this.props.results}
-          onDirclick={this.props.onDirclick}
+          onDirclick={() =>
+            this.props.onDirclick().then(() => this.setState({ search: "" }))
+          }
         />
       </div>
     )
