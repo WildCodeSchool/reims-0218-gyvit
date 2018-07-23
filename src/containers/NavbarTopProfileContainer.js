@@ -106,7 +106,6 @@ class NavbarTopProfileContainer extends Component {
         </DropdownToggle>
         <DropdownMenu
           style={{
-            margin: "-1%",
             width: "100%",
             padding: "auto",
             textAlign: "center",
