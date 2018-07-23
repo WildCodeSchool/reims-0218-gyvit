@@ -77,12 +77,21 @@ class ModalCreateDirContainer extends Component {
                   onChange={event => this.handleNameChange(event)} // controlled seizure of input for new name
                 />
               </FormGroup>
-              <Button type="button" onClick={() => this.onCreateDir()}>
+              <Button
+                style={{
+                  backgroundColor: "#7a57d1",
+                  borderRadius: "100px",
+                  border: "solid 1px #7a57d1",
+                  color: "white",
+                  marginRight: "5px"
+                }}
+                type="button"
+                onClick={() => this.onCreateDir()}
+              >
                 Envoyez
               </Button>
             </Form>
           </ModalBody>
-          <ModalFooter />
         </Modal>
       </div>
     )

@@ -76,7 +76,17 @@ class ModalUpdateDirContainer extends Component {
                   onChange={event => this.handleNameChange(event)}
                 />
               </FormGroup>
-              <Button type="button" onClick={() => this.onUpdateDir()}>
+              <Button
+                style={{
+                  backgroundColor: "#7a57d1",
+                  borderRadius: "100px",
+                  border: "solid 1px #7a57d1",
+                  color: "white",
+                  marginRight: "5px"
+                }}
+                type="button"
+                onClick={() => this.onUpdateDir()}
+              >
                 Envoyez
               </Button>
             </Form>
