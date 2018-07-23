@@ -16,7 +16,7 @@ const FoldersTableTbody = ({
       {parent._id && (
         <tr
           rel="nofollow"
-          title="Go to parent directory"
+          title="Revenir au parent"
           className="js-navigation-open"
           onClick={() => onBackclick(parent._id)}
           style={{ cursor: "pointer" }}

@@ -7,7 +7,7 @@ const ComingSoon = () => {
     <Container>
       <div>
         <img className="logo" src="img/MeduzaIcon.png" alt="meduza icon" />
-        <h1 className="title-css">Coming Soon !</h1>
+        <h1 className="title-css">Bientôt disponible!</h1>
       </div>
     </Container>
   )

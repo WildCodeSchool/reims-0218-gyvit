@@ -114,7 +114,7 @@ class DropDown extends React.Component {
                   color: "black"
                 }}
               >
-                Share
+                Partager {name}
               </Link>
             </div>
             <div
@@ -139,7 +139,7 @@ class DropDown extends React.Component {
                     color: "black"
                   }}
                 >
-                  Create public access
+                  Créer un accès public
                 </Link>
               </span>
             </div>
@@ -165,7 +165,7 @@ class DropDown extends React.Component {
                     color: "black"
                   }}
                 >
-                  Create private access
+                  Créer un accès privé
                 </Link>
               </span>
             </div>
@@ -247,7 +247,7 @@ class DropDown extends React.Component {
                   .catch(response => this.props.onError(response))
               }}
             >
-              <span>Delete</span>
+              <span>Supprimer</span>
             </Button>
           </div>
         </DropdownMenu>
@@ -255,4 +255,7 @@ class DropDown extends React.Component {
     )
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(DropDown)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DropDown)

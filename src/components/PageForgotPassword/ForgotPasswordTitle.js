@@ -16,7 +16,7 @@ const ForgotPasswordTitle = () => (
         color: "#3b425d"
       }}
     >
-      Forgot your password ?
+      Mot de passe oublié ?
     </p>
     <p
       style={{
@@ -31,7 +31,8 @@ const ForgotPasswordTitle = () => (
         marginTop: "15px"
       }}
     >
-      Enter your email address below and we'll get you back on track.{" "}
+      Entrez votre adresse e-mail ci-dessous et nous vous ramènerons sur la
+      bonne voie.{" "}
     </p>
   </div>
 )

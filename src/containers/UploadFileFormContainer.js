@@ -63,7 +63,7 @@ class UploadFileFormContainer extends Component {
       <Form>
         <ModalErrorContainer />
         <FormGroup>
-          <Label for="fileInput">File</Label>
+          <Label for="fileInput">Fichier:</Label>
           <Input type="file" name="file" id="fileInput" />
         </FormGroup>
 
@@ -76,7 +76,7 @@ class UploadFileFormContainer extends Component {
                 return this.props.onHideModal()
               }}
             >
-              Submit
+              Envoyez
             </Button>
           </Col>
         </FormGroup>

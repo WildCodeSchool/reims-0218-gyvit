@@ -58,7 +58,7 @@ class ModalUpdateDirContainer extends Component {
         <Modal isOpen={this.props.modalUpdateDir}>
           <ModalErrorContainer />
           <ModalHeader toggle={() => this.props.onHideModal()}>
-            Rename the directory {this.props.name}
+            Renommer le dossier {this.props.name}
           </ModalHeader>
           <ModalBody>
             <Form
@@ -71,13 +71,13 @@ class ModalUpdateDirContainer extends Component {
                   type="text"
                   name="name"
                   id="name"
-                  value={this.state.name}
-                  placeholder="Change the name of the Directory"
+                  value={this.props.name}
+                  placeholder="Changer le nom de ce dossier"
                   onChange={event => this.handleNameChange(event)}
                 />
               </FormGroup>
               <Button type="button" onClick={() => this.onUpdateDir()}>
-                Submit
+                Envoyez
               </Button>
             </Form>
           </ModalBody>
@@ -88,6 +88,7 @@ class ModalUpdateDirContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  ModalUpdateDirContainer
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ModalUpdateDirContainer)

@@ -17,7 +17,7 @@ const SignInContent = () => (
             }}
             href="/sign-up"
           >
-            Don't have an account ?
+            Pas encore inscrit ?
           </a>
         </Col>
         <Col xs="3">
@@ -32,9 +32,8 @@ const SignInContent = () => (
               marginRight: "5px"
             }}
             href="sign-up"
-            outline
           >
-            Get Started
+            S'inscrire
           </Button>
         </Col>
       </Row>

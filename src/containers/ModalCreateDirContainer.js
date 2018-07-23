@@ -59,7 +59,7 @@ class ModalCreateDirContainer extends Component {
       <div>
         <Modal isOpen={this.props.modalCreateDir}>
           <ModalHeader toggle={() => this.props.onHideModal() /*cancel modal*/}>
-            Add a directory
+            Ajout d'un dossier :
           </ModalHeader>
           <ModalErrorContainer />
           <ModalBody>
@@ -68,18 +68,17 @@ class ModalCreateDirContainer extends Component {
               onSubmit={event => event.preventDefault()}
             >
               <FormGroup>
-                <Label for="name">Name: </Label>
+                <Label for="name">Nom: </Label>
                 <Input
                   type="text"
                   name="name"
                   id="name"
-                  value={this.state.name}
-                  placeholder="Enter the name of the new Directory"
+                  placeholder="Entrez le nom du nouveau dossier"
                   onChange={event => this.handleNameChange(event)} // controlled seizure of input for new name
                 />
               </FormGroup>
               <Button type="button" onClick={() => this.onCreateDir()}>
-                Submit
+                Envoyez
               </Button>
             </Form>
           </ModalBody>
@@ -90,6 +89,7 @@ class ModalCreateDirContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  ModalCreateDirContainer
-) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ModalCreateDirContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.

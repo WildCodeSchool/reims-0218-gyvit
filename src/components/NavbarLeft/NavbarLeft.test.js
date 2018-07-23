@@ -8,27 +8,27 @@ import NavbarLeft from "./NavbarLeft"
 const listLinksProps = {
   dataLinks: [
     {
-      nameLink: "Home",
+      nameLink: "Accueil",
       icon: process.env.PUBLIC_URL + "/img/house_38533.ico"
     },
     {
-      nameLink: "Files",
+      nameLink: "Fichiers",
       icon: process.env.PUBLIC_URL + "/img/files.ico"
     },
     {
-      nameLink: "Shares",
+      nameLink: "Partages",
       icon: process.env.PUBLIC_URL + "/img/share.ico"
     },
     {
-      nameLink: "Templates",
+      nameLink: "Modèles",
       icon: process.env.PUBLIC_URL + "/img/templates.ico"
     },
     {
-      nameLink: "Requests",
+      nameLink: "Demandes",
       icon: process.env.PUBLIC_URL + "/img/request.ico"
     },
     {
-      nameLink: "Public links",
+      nameLink: "Liens public",
       icon: process.env.PUBLIC_URL + "/img/links.ico"
     },
     {
@@ -36,7 +36,7 @@ const listLinksProps = {
       icon: process.env.PUBLIC_URL + "/img/contact.ico"
     },
     {
-      nameLink: "Settings",
+      nameLink: "Paramètres",
       icon: process.env.PUBLIC_URL + "/img/settings.ico"
     }
   ]

@@ -5,14 +5,14 @@ import { NavLink } from "reactstrap"
 const SignInGetStarted = () => (
   <div style={{ marginTop: "2em" }}>
     <p>
-      Don't have an account ?
+      Pas encore inscrit ?
       <NavLink
         href="#"
         style={{
           display: "inline"
         }}
       >
-        Get started
+        S'inscrire
       </NavLink>
     </p>
   </div>

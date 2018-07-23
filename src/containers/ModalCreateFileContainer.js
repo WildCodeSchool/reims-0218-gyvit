@@ -26,7 +26,7 @@ class ModalCreateFileContainer extends Component {
       <div>
         <Modal isOpen={this.props.modalCreateFile}>
           <ModalHeader toggle={() => this.props.onHideModal() /*cancel modal*/}>
-            Add a file
+            Ajout d'un fichier :
           </ModalHeader>
           <ModalBody>
             <UploadFileFormContainer />
@@ -38,6 +38,7 @@ class ModalCreateFileContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  ModalCreateFileContainer
-) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ModalCreateFileContainer) // If you want to use mapDispatchToProps without a mapStateToProps just use null for the first argument.
