@@ -17,7 +17,8 @@ const mapDispatchToProps = dispatch => ({
   onDirclick: id =>
     retrieveDir(id)
       .then(response => dispatch(makeRetrieveDirSuccess(response)))
-      .catch(response => dispatch(makeShowModalError(response.message)))
+      .then(() => this.setState({ search: "" }))
+      .catch(response => dispatch(makeShowModalError(response)))
 })
 
 export class NavbarTopFilter extends Component {
@@ -31,7 +32,7 @@ export class NavbarTopFilter extends Component {
     const value = event.target.value
     listAllDir(value)
       .then(response => this.props.onFilesSearch(response))
-      .catch(response => this.props.onError(response.message))
+      .catch(response => this.props.onError(response))
   }
 
   render() {
