@@ -72,7 +72,7 @@ class ModalUpdateDirContainer extends Component {
                   name="name"
                   id="name"
                   defaultValue={this.props.name}
-                  placeholder="Changer le nom de ce dossier"
+                  placeholder="Saisir ici le nouveau nom"
                   onChange={event => this.handleNameChange(event)}
                 />
               </FormGroup>
@@ -98,7 +98,6 @@ class ModalUpdateDirContainer extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ModalUpdateDirContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(
+  ModalUpdateDirContainer
+)

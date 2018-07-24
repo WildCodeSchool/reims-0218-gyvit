@@ -160,10 +160,10 @@ class DropDownFileContainer extends React.Component {
                         <CardTitle>{name}</CardTitle>
                         <CardSubtitle />
                         <CardText>
-                          created: {convertDateFromJsonToFrench(created)}
+                          créé le: {convertDateFromJsonToFrench(created)}
                         </CardText>
                         <CardText>
-                          modified: {convertDateFromJsonToFrench(modified)}
+                          modifié le: {convertDateFromJsonToFrench(modified)}
                         </CardText>
                       </CardBody>
                     </Card>

@@ -53,7 +53,7 @@ class ModalUpdateFileContainer extends Component {
       <div>
         <Modal isOpen={this.props.modalUpdateFile}>
           <ModalHeader toggle={() => this.props.onHideModal()}>
-            Rename the directory {this.props.name}
+            Renommer le fichier {this.props.name}
           </ModalHeader>
           <ModalBody>
             <Form name="formUpdateDir">
@@ -64,7 +64,7 @@ class ModalUpdateFileContainer extends Component {
                   name="name"
                   id="name"
                   value={this.state.name}
-                  placeholder="Change the name of the Directory"
+                  placeholder="Saisir ici le nouveau nom"
                   onChange={event => this.handleNameChange(event)}
                 />
               </FormGroup>
@@ -74,7 +74,7 @@ class ModalUpdateFileContainer extends Component {
                   this.onSubmitUpdateFile()
                 }}
               >
-                Submit
+                Envoyer
               </Button>
             </Form>
           </ModalBody>
