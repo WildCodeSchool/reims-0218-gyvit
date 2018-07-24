@@ -31,7 +31,6 @@ class ModalCreateFileContainer extends Component {
           <ModalBody>
             <UploadFileFormContainer />
           </ModalBody>
-          <ModalFooter />
         </Modal>
       </div>
     )

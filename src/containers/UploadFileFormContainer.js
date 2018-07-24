@@ -68,23 +68,29 @@ class UploadFileFormContainer extends Component {
         </FormGroup>
 
         <FormGroup row>
-          <Col sm={{ size: 10, offset: 2 }}>
-            <Button
-              type="button"
-              onClick={() => {
-                this.props.onFileUpload(this.state.file)
-                return this.props.onHideModal()
-              }}
-            >
-              Envoyez
-            </Button>
-          </Col>
+          <Button
+            style={{
+              backgroundColor: "#7a57d1",
+              borderRadius: "100px",
+              border: "solid 1px #7a57d1",
+              color: "white",
+              marginLeft: "2%"
+            }}
+            type="button"
+            onClick={() => {
+              this.props.onFileUpload(this.state.file)
+              return this.props.onHideModal()
+            }}
+          >
+            Envoyez
+          </Button>
         </FormGroup>
       </Form>
     )
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  UploadFileFormContainer
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UploadFileFormContainer)
