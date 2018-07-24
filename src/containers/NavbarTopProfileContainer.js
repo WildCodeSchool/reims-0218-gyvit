@@ -51,7 +51,7 @@ class NavbarTopProfileContainer extends Component {
         <DropdownToggle
           color="none"
           style={{
-            width: "98%",
+            width: "100%",
             height: "86px",
             padding: "auto",
             backgroundColor: "#ffffff",
