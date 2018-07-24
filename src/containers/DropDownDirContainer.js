@@ -189,10 +189,10 @@ class DropDown extends React.Component {
                         <CardTitle>{name}</CardTitle>
                         <CardSubtitle />
                         <CardText>
-                          created: {convertDateFromJsonToFrench(created)}
+                          créé le: {convertDateFromJsonToFrench(created)}
                         </CardText>
                         <CardText>
-                          modified: {convertDateFromJsonToFrench(modified)}
+                          modifié le: {convertDateFromJsonToFrench(modified)}
                         </CardText>
                       </CardBody>
                     </Card>
@@ -255,7 +255,4 @@ class DropDown extends React.Component {
     )
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DropDown)
+export default connect(mapStateToProps, mapDispatchToProps)(DropDown)

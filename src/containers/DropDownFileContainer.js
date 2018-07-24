@@ -104,7 +104,7 @@ class DropDownFileContainer extends React.Component {
                 alt=""
                 aria-hidden="true"
               />
-              <span>Share</span>
+              <span>Partager </span>
             </a>
             <a
               style={{
@@ -121,7 +121,7 @@ class DropDownFileContainer extends React.Component {
                 alt=""
                 aria-hidden="true"
               />
-              <span>Create public access</span>
+              <span>Créer un accès public</span>
             </a>
             <a
               style={{
@@ -138,7 +138,7 @@ class DropDownFileContainer extends React.Component {
                 alt=""
                 aria-hidden="true"
               />
-              <span>Create private access</span>
+              <span>Créer un accès privé</span>
             </a>
             <div>
               <div>
@@ -160,10 +160,10 @@ class DropDownFileContainer extends React.Component {
                         <CardTitle>{name}</CardTitle>
                         <CardSubtitle />
                         <CardText>
-                          created: {convertDateFromJsonToFrench(created)}
+                          créé le: {convertDateFromJsonToFrench(created)}
                         </CardText>
                         <CardText>
-                          modified: {convertDateFromJsonToFrench(modified)}
+                          modifié le: {convertDateFromJsonToFrench(modified)}
                         </CardText>
                       </CardBody>
                     </Card>
@@ -201,7 +201,7 @@ class DropDownFileContainer extends React.Component {
                 return this.props.onShowUpdateFile(_id, name)
               }}
             >
-              <span>Rename {name}</span>
+              <span>Renommer {name}</span>
             </Button>
             <Button
               style={{
@@ -218,7 +218,7 @@ class DropDownFileContainer extends React.Component {
                   .catch(response => this.props.onError(response))
               }}
             >
-              <span>Delete</span>
+              <span>Supprimer</span>
             </Button>
           </div>
         </DropdownMenu>

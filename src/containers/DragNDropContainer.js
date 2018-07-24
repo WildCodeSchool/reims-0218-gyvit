@@ -26,7 +26,7 @@ class DragNDropContainer extends React.Component {
     this.state = {
       accept: "",
       files: {
-        _id: "file_odd9OMeNdsds2lE3ePeN02N9",
+        _id: "file_odMeNdsds2lE3ePeN02N9",
         object: "file",
         name: "Carte d'identité",
         size: "1000",
@@ -34,7 +34,8 @@ class DragNDropContainer extends React.Component {
         type: "",
         remove: 0,
         created: `${currentTime}`,
-        modified: `${currentTime}`
+        modified: `${currentTime}`,
+        shares: [{ account: "fsdfdsf" }]
       },
       dropzoneActive: false
     }
