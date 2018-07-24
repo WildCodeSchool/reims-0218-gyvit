@@ -71,7 +71,7 @@ class ModalUpdateDirContainer extends Component {
                   type="text"
                   name="name"
                   id="name"
-                  value={this.props.name}
+                  defaultValue={this.props.name}
                   placeholder="Changer le nom de ce dossier"
                   onChange={event => this.handleNameChange(event)}
                 />
