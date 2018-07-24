@@ -7,6 +7,7 @@ import {
 } from "../actions/foldersActions"
 import { connectUserSuccessAction } from "../actions/userAction"
 import { retrieveDir } from "../api/directorys/retrieveDirectorys"
+import { retrieveRoot } from "../api/directorys/retrieveRoot"
 import { retrieveMe } from "../api/users/retrieveMe"
 import { Container } from "reactstrap"
 import FoldersTable from "../components/PageFolders/FoldersTable"
@@ -68,7 +69,7 @@ class FoldersTableWrap extends Component {
   }
 
   componentDidMount() {
-    retrieveDir().then(root => this.props.onRetrieveDirSuccess(root))
+    retrieveRoot().then(root => this.props.onRetrieveDirSuccess(root))
     retrieveMe().then(response => this.props.onRetrieveMe(response))
   }
 }

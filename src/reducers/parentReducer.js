@@ -4,7 +4,10 @@ const initialState = {}
 
 const parentReducer = (prevState = initialState, action) => {
   if (action.type === RETRIEVE_DIR_SUCCESS) {
-    return action.response.parent
+    // if object is root, no parent
+    if (action.response.parent) {
+      return action.response.parent
+    }
   }
   return prevState
 }
