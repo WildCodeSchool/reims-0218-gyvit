@@ -1,7 +1,7 @@
 import { getToken } from "../users/localStorageToken"
 const axios = require("axios")
 
-export const retrieveDir = (_id = "dir_k8G3aBS8TSWv9zEDj5ao") => {
+export const retrieveDir = (_id = "dir_kL9D9lMe3ndN90eOl2kN") => {
   const config = {
     baseURL: `${process.env.REACT_APP_BASE_URL}`,
     method: "get",
