@@ -37,7 +37,10 @@ const FoldersTable = ({
                 direction={directionDate}
               />
             </th>
-            <th style={{ cursor: "pointer" }} onClick={onSortShare}>
+            <th
+              style={{ cursor: "pointer", width: "20%" }}
+              onClick={onSortShare}
+            >
               <FoldersTableCategory
                 name="Utilisateurs"
                 direction={directionshare}

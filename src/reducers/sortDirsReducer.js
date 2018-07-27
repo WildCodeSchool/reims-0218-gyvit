@@ -7,11 +7,11 @@ const initialState = { directionDate: "", directionName: "" }
 
 const swapOrder = order => {
   switch (order) {
+    case "":
+      return "desc"
     case "asc":
       return "desc"
     case "desc":
-      return "asc"
-    case "":
       return "asc"
     default:
       return ""
